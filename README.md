@@ -1,2 +1,2 @@
 # Chocolatey-packages
-Packages for chocolatey.org
+Packages for [chocolatey.org]
