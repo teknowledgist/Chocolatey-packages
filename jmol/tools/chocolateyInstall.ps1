@@ -8,9 +8,9 @@ $JavaExe = 'C:\ProgramData\Oracle\Java\javapath\javaw.exe'
 $target = (Get-ChildItem $scriptPath -filter jmol.jar -Recurse).fullname
 $icon = Join-Path $scriptPath "Jmol_icon13.ico"
 $launcher = Join-Path $scriptPath 'Jmol Launcher.exe'
-$ShimGen = Join-Path "$helpersPath" '..\tools\shimgen.exe'
+$SG = Join-Path $env:ChocolateyInstall 'tools\shimgen.exe'
 
-& $ShimGen -o $launcher -p $JavaExe -c "-jar '$target'" -i $icon --gui
+& $SG -o $launcher -p $JavaExe -c "-jar '$target'" -i $icon --gui
 
 $shortcut = Join-Path ([Environment]::GetFolderPath("Desktop")) 'Jmol.lnk'
 
