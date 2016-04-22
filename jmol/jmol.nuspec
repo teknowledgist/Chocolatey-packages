@@ -6,14 +6,19 @@
     <title>Jmol</title>
     <authors>The Jmol Development Team</authors>
     <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/jmol</packageSourceUrl>
     <projectUrl>http://jmol.sourceforge.net/</projectUrl>
     <iconUrl>http://wiki.jmol.org/images/1/1c/Jmol_icon13.png</iconUrl>
+    <docsUrl>http://jmol.sourceforge.net/docs/</docsUrl>
+    <projectSourceUrl>https://sourceforge.net/p/jmol/code/HEAD/tree/</projectSourceUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <licenseUrl>http://www.gnu.org/licenses/lgpl.html</licenseUrl>
+    <mailingListUrl>http://lists.sourceforge.net/lists/listinfo/jmol-users</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/jmol/bugs/</bugTrackerUrl>
     <description>Jmol is a free, open source molecule viewer for students, educators, and researchers in chemistry and biochemistry.</description>
     <tags>jmol chemistry molecule image viewer java</tags>
     <dependencies>
-      <dependency id="jre8" />
+      <dependency id="jre8" version="8.0"/>
     </dependencies>
     <copyright>Copyright 1998-2007 The Jmol Development Team</copyright>
   </metadata>
