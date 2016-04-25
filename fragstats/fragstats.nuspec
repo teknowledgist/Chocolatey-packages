@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>fragstats</id>
+    <version>4.2</version>
+    <title>FRAGSTATS</title>
+    <authors>[Dr. Kevin McGarigal](http://www.umass.edu/landeco/people/mcgarigal.html) and [Dr. Sam Cushman](http://www.umass.edu/landeco/people/cushman.html) with programming by [Eduard Ene](http://www.umass.edu/landeco/people/ene.html)</authors>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/fragstats</packageSourceUrl>
+    <licenseUrl>http://www.umass.edu/landeco/research/fragstats/downloads/fragstats_downloads.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://www.umass.edu/landeco/research/fragstats/fragstats.html</projectUrl>
+    <mailingListUrl>http://www.umass.edu/landeco/research/fragstats/downloads/fragstats_downloads.html</mailingListUrl>
+    <bugTrackerUrl>http://www.umass.edu/landeco/research/fragstats/downloads/fragstats_downloads.html</bugTrackerUrl>
+    <description>FRAGSTATS is a computer software program designed to compute a wide variety of landscape metrics for categorical map patterns.The original software (version 2) was released in the public domain during 1995 in association with the publication of a USDA Forest Service General Technical Report (McGarigal and Marks 1995). Since then, hundreds of professionals have enjoyed the use of FRAGSTATS. Due to its popularity, the program was completely revamped in 2002 (version 3). Recently, the program was upgraded to accommodate ArcGIS10 (version 3.4). The latest release (version 4) reflects a major revamping of the software, with a completely redesigned architecture intended to support the addition of cell-level metrics and surface pattern metrics, among other things. The current release of version 4 (v4.2) has essentially the same functionality as version 3, but with a new user interface that reflects the redesign of the model architecture, support for additional image formats, and a variety of sampling methods for analyzing sub-landscapes.</description>
+    <summary>A program that serves as an introduction to spatial data analysis.</summary>
+    <releaseNotes>http://www.umass.edu/landeco/research/fragstats/fragstats_release.html</releaseNotes>
+    <copyright>Copyright © 1995-2015 McGarigal, K., SA Cushman, and E Ene</copyright>
+    <tags>fragstats landscape metrics maps gis arcgis admin</tags>
+  </metadata>
+</package>
