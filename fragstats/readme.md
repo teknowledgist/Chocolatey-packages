@@ -1,4 +1,4 @@
-### Fragstats
+### FRAGSTATS
 
 http://www.umass.edu/landeco/research/fragstats/fragstats.html
 
