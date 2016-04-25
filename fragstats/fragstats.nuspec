@@ -4,7 +4,7 @@
     <id>fragstats</id>
     <version>4.2</version>
     <title>FRAGSTATS</title>
-    <authors>[Dr. Kevin McGarigal](http://www.umass.edu/landeco/people/mcgarigal.html) and [Dr. Sam Cushman](http://www.umass.edu/landeco/people/cushman.html) with programming by [Eduard Ene](http://www.umass.edu/landeco/people/ene.html)</authors>
+    <authors>Dr. Kevin McGarigal, Dr. Sam Cushman, Eduard Ene</authors>
     <owners>Teknowledgist</owners>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/fragstats</packageSourceUrl>
     <licenseUrl>http://www.umass.edu/landeco/research/fragstats/downloads/fragstats_downloads.html</licenseUrl>
