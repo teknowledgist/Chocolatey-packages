@@ -10,12 +10,16 @@
     <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://geodacenter.asu.edu/projects/opengeoda</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/geoda/GeoDa_icon.png</iconUrl>
     <projectSourceUrl>https://github.com/lixun910/geoda</projectSourceUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/openspace-list</mailingListUrl>
     <bugTrackerUrl>https://geodacenter.asu.edu/support/community</bugTrackerUrl>
     <description>GeoDa is a free, open source, cross-platform software program that serves as an introduction to spatial data analysis.  GeoDa is the flagship program of the GeoDa Center, following a long line of software tools developed by Dr. Luc Anselin. It is designed to implement techniques for exploratory spatial data analysis (ESDA) on lattice data (points and polygons). The free program provides a user friendly and graphical interface to methods of descriptive spatial data analysis, such as spatial autocorrelation statistics, as well as basic spatial regression functionality. The latest version contains several new features such as full space-time data support in all views, a new cartogram, a refined map movie, parallel coordinate plot, 3D visualization, conditional plots (and maps) and spatial regression.</description>
     <summary>A program that serves as an introduction to spatial data analysis.</summary>
     <releaseNotes>https://geodacenter.org/downloads/unprotected/GeoDa-1.6.7-Release-Notes.txt</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2010" version="10.0"/>
+    </dependencies>
     <copyright>Copyright © 1998-2003 Luc Anselin and The Regents of the University of Illinois</copyright>
     <tags>geoda esda spatial statistics maps gis admin</tags>
   </metadata>
