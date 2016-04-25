@@ -5,7 +5,7 @@
     <version>4.00.03.05</version>
     <title>Tinn-R</title>
     <authors>
-    [José Cláudio Faria](http://nbcgib.uesc.br/lec/professores/jcfaria/pag-pessoal) - Brazil/UESC/DCET (Coordinator, development and programming in Object Pascal)
+    [JosÃ© ClÃ¡udio Faria](http://nbcgib.uesc.br/lec/professores/jcfaria/pag-pessoal) - Brazil/UESC/DCET (Coordinator, development and programming in Object Pascal)
     [Philippe Grosjean](http://website.informer.com/visit?domain=sciviews.org) - Belgium/UMH/EcoNum (R programming, experience in developing GUIs for R, excellent ideas and suggestions, guidance and project documentation in the English language). In fact, much of the project's success is due to good suggestions - over the years - from Phil: Thank you! (Some were very difficult to implement.)
     [Enio Galinkin Jelihovschi](http://nbcgib.uesc.br/lec/professores/enio/pag-pessoal) - Brazil/UESC/DCET (Documentation in English language)
     Philipe Silva Farias - Brazil/UESC (Development)
@@ -15,6 +15,7 @@
     <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>http://nbcgib.uesc.br/lec/software/editores/tinn-r/en</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/tinn-r/Tinn-R_icon.png</iconUrl>
     <projectSourceUrl>https://github.com/jcfaria/Tinn-R</projectSourceUrl>
     <mailingListUrl>https://groups.google.com/forum/?hl=en#!forum/tinn-r</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/tinn-r/bugs/</bugTrackerUrl>
@@ -41,7 +42,7 @@
     </description>
     <summary>A GUI/IDE for R development.</summary>
     <releaseNotes>http://nbcgib.uesc.br/lec/software/editores/tinn-r/en#h9-what-is-new</releaseNotes>
-    <copyright>Copyright © 2001-2016</copyright>
+    <copyright>Copyright Â© 2001-2016</copyright>
     <tags>tinn-r tinnr r.project statistics gui ide admin</tags>
   </metadata>
 </package>
