@@ -1,15 +1,10 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>tinn-r</id>
-    <version>4.00.03.05</version>
+    <version>4.0.3.5</version>
     <title>Tinn-R</title>
-    <authors>
-    [José Cláudio Faria](http://nbcgib.uesc.br/lec/professores/jcfaria/pag-pessoal) - Brazil/UESC/DCET (Coordinator, development and programming in Object Pascal)
-    [Philippe Grosjean](http://website.informer.com/visit?domain=sciviews.org) - Belgium/UMH/EcoNum (R programming, experience in developing GUIs for R, excellent ideas and suggestions, guidance and project documentation in the English language). In fact, much of the project's success is due to good suggestions - over the years - from Phil: Thank you! (Some were very difficult to implement.)
-    [Enio Galinkin Jelihovschi](http://nbcgib.uesc.br/lec/professores/enio/pag-pessoal) - Brazil/UESC/DCET (Documentation in English language)
-    Philipe Silva Farias - Brazil/UESC (Development)
-    </authors>
+    <authors>José Cláudio Faria, Philippe Grosjean, Enio Galinkin Jelihovschi, Philipe Silva Farias</authors>
     <owners>Teknowledgist</owners>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/tinn-r</packageSourceUrl>
     <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
