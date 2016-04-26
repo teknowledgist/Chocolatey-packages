@@ -1,4 +1,4 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>jmol</id>
@@ -20,6 +20,6 @@
     <dependencies>
       <dependency id="jre8" version="8.0"/>
     </dependencies>
-    <copyright>Copyright 1998-2007 The Jmol Development Team</copyright>
+    <copyright>Copyright © 1998-2007 The Jmol Development Team</copyright>
   </metadata>
 </package>
