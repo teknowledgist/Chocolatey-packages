@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>deepview</id>
+    <version>4.10</version>
+    <title>DeepView - Swiss PdbViewer</title>
+    <authors>Nicolas Guex, Alexandre Diemand, Manuel C. Peitsch, and Torsten Schwede</authors>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/geoda</packageSourceUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <licenseUrl>http://spdbv.vital-it.ch/disclaim.html</licenseUrl>
+    <projectUrl>http://spdbv.vital-it.ch/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/deepview/DeepView_icon.png</iconUrl>
+    <mailingListUrl>http://spdbv.vital-it.ch/feedback.html</mailingListUrl>
+    <bugTrackerUrl>http://spdbv.vital-it.ch/feedback.html</bugTrackerUrl>
+    <description>Swiss-PdbViewer (aka DeepView) is an application that provides a user friendly interface allowing to analyze several proteins at the same time. The proteins can be superimposed in order to deduce structural alignments and compare their active sites or any other relevant parts. Amino acid mutations, H-bonds, angles and distances between atoms are easy to obtain thanks to the intuitive graphic and menu interface.</description>
+    <summary>Comparitive protein analysis</summary>
+    <tags>deepview pdbviewer chemistry protein modeling</tags>
+  </metadata>
+</package>
