@@ -6,7 +6,7 @@
     <title>DeepView - Swiss PdbViewer</title>
     <authors>Nicolas Guex, Alexandre Diemand, Manuel C. Peitsch, and Torsten Schwede</authors>
     <owners>Teknowledgist</owners>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/geoda</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/deepview</packageSourceUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <licenseUrl>http://spdbv.vital-it.ch/disclaim.html</licenseUrl>
     <projectUrl>http://spdbv.vital-it.ch/</projectUrl>
