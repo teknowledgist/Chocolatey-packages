@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>ortep3</id>
+    <version>2014.1</version>
+    <title>Ortep3</title>
+    <authors>Louis J. Farrugia</authors>
+    <owners>Erich</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/ortep3</packageSourceUrl>
+    <licenseUrl>http://www.chem.gla.ac.uk/~louis/software/licenseform.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectUrl>http://www.chem.gla.ac.uk/~louis/software/ortep/index.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/ortep3/ortep_icon.png</iconUrl>
+    <bugTrackerUrl>http://www.chem.gla.ac.uk/~louis/software/bf.html</bugTrackerUrl>
+    <description>Ortep-3 for Windows is a MS-Windows version of the current release of [ORTEP-III (1.0.3)](http://web.ornl.gov/sci/ortep/ortep.html), which incorporates a Graphical User Interface (GUI) to make production of thermal ellipsoid plots much easier. 
+
+#### License
+Ortep-3 for Windows is provided free of charge for academic, scientific, educational and non-commercial users, provided its use is acknowledged. A licence is required and [may be requested](http://www.chem.gla.ac.uk/~louis/software/licenseform.html).  If you do not yet have a license file, this package will still install, but Ortep3 will not start.
+
+#### Helper programs
+Ortep can call other programs.  These are not dependencies.  This package will pre-set for Ortep-3 the paths for these programs.  It will use the default install paths for the following applications (whether they are installed or not), but the paths (and programs) can be changed with parameters (see below):
+
+* [notepad](http://windows.microsoft.com/en-us/windows/notepad-faq)
+* [pov-ray](https://chocolatey.org/packages/pov-ray)
+* [gsview](https://chocolatey.org/packages/GSView)
+* [irfanview](https://chocolatey.org/packages/IrfanView)
+* [hpglviewer](https://chocolatey.org/packages/hpglviewer)
+
+#### Package Parameters
+The following package parameters can be set:
+
+ * `/installDir:&lt;path&gt;`
+    
+	The default location for Ortep3 is C:\Ortep3.  This package by default will install to a more standard, "%ProgramFiles(x86)%\Ortep3", but the directory can be customized.
+	
+ * `/LicensePath:&lt;path&gt;`
+
+    If you have a license file, "ORTEP3-License.txt", you can place it in "C:\Temp" (default) and this package will copy it to the proper location.  Adjust the location with this parameter.  The path can be a file path or URL.
+
+ * `/editor:&lt;path&gt;` - Assign a text editor helper program other than Notepad.
+ * `/povray:&lt;path&gt;` - Assign an alternate path for POV-ray.
+ * `/gsview:&lt;path&gt;` - Assign an alternate path for GhostScript View or another PS file viewer.
+ * `/graphics:&lt;path&gt;` - Assign a graphics viewer helper program other than IrfanView (for example, XnView).
+ * `/hpgl:&lt;path&gt;` - Assign an alternate path for HP-GL View or another HP-GL file viewer.
+
+These parameters can be passed to the installer with the use of `-params`.
+For example: 
+	`-params '"/LicensePath:http://localsite.org/ortep3license.txt /editor:""C:\Program Files (x86)\Notepad++\notepad++.exe"""'`.
+
+#### Features
+
+* Ortep-3 for Windows can directly read many of the common ASCII crystallographic file formats which hold information on the anisotropic displacement parameters. Currently supported formats are SHELX, GX, CIF, SPF, CRYSTALS, CSSR-XR, CSD-FDAT, GSAS, Sybyl MOL, XYZ, PDB, Rietica-(LHPM) and Fullprof.
+* Ortep-3 for Windows will also read any legal ORTEP-III instruction file.
+* Up to 999 atoms may be present in the asymmetric unit. Covalent radii for the first 94 elements are stored internally, and may be modified by the user.
+* Several style-templates are supplied, but the graphical representations of thermal ellipsoids for any specific atom, or the bonds between any specified pairs of atoms can be individually chosen. Over 120 different colours are stored internally and up to 200 colours may be defined. All graphical objects may be drawn in any colour.
+* The viewpoint can be rotated by dragging the left mouse button, in the standard Windows fashion.
+* A mouse labelling routine is provided by the GUI. Any number of selected atoms may be labelled, and any available Windows font may be used for the labels.
+* Graphic output in the following formats is supported : HPGL and PostScript, BMP. Direct printing to an on-line printer is also supported. It is also possible to prepare drawings of the correct size for direct reproduction in journals (many leading journals are now requesting this).
+* Ray-traced output is available using the Raster3D or POV-Ray formats. Several representations are available from the POV-Ray interface, including thermal ellipsoids (standard ORTEP, RMSD and MSD surfaces) and van der Waals plots.
+* A simple text-editor is provided, so that input files may be modified without leaving the program.
+* Symmetry expansion of the asymmetric unit to give complete connected molecules may be carried out easily.
+* Automatic unit cell packing diagrams. 
+    </description>
+    <summary>Windows GUI version of the Oak Ridge Thermal Ellipsoid Plot Program for Crystal Structure Illustrations</summary>
+    <releaseNotes>
+    </releaseNotes>
+    <copyright>Copyright © 2001-2014  Louis J. Farrugia</copyright>
+    <tags>ortep3 ortep chemistry crystallography admin</tags>
+  </metadata>
+</package>
