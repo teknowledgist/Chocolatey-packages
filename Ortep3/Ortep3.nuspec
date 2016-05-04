@@ -49,17 +49,7 @@ For example:
 
 #### Features
 
-* Ortep-3 for Windows can directly read many of the common ASCII crystallographic file formats which hold information on the anisotropic displacement parameters. Currently supported formats are SHELX, GX, CIF, SPF, CRYSTALS, CSSR-XR, CSD-FDAT, GSAS, Sybyl MOL, XYZ, PDB, Rietica-(LHPM) and Fullprof.
-* Ortep-3 for Windows will also read any legal ORTEP-III instruction file.
-* Up to 999 atoms may be present in the asymmetric unit. Covalent radii for the first 94 elements are stored internally, and may be modified by the user.
-* Several style-templates are supplied, but the graphical representations of thermal ellipsoids for any specific atom, or the bonds between any specified pairs of atoms can be individually chosen. Over 120 different colours are stored internally and up to 200 colours may be defined. All graphical objects may be drawn in any colour.
-* The viewpoint can be rotated by dragging the left mouse button, in the standard Windows fashion.
-* A mouse labelling routine is provided by the GUI. Any number of selected atoms may be labelled, and any available Windows font may be used for the labels.
-* Graphic output in the following formats is supported : HPGL and PostScript, BMP. Direct printing to an on-line printer is also supported. It is also possible to prepare drawings of the correct size for direct reproduction in journals (many leading journals are now requesting this).
-* Ray-traced output is available using the Raster3D or POV-Ray formats. Several representations are available from the POV-Ray interface, including thermal ellipsoids (standard ORTEP, RMSD and MSD surfaces) and van der Waals plots.
-* A simple text-editor is provided, so that input files may be modified without leaving the program.
-* Symmetry expansion of the asymmetric unit to give complete connected molecules may be carried out easily.
-* Automatic unit cell packing diagrams. 
+Ortep-3 for Windows has the following [facilities and features](http://www.chem.gla.ac.uk/~louis/software/ortep/features.html).
     </description>
     <summary>Windows GUI version of the Oak Ridge Thermal Ellipsoid Plot Program for Crystal Structure Illustrations</summary>
     <releaseNotes>
