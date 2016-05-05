@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>wingx</id>
+    <version>2014.1</version>
+    <title>WinGX</title>
+    <authors>Louis J. Farrugia</authors>
+    <owners>Erich</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/wingx</packageSourceUrl>
+    <licenseUrl>http://www.chem.gla.ac.uk/~louis/software/licenseform.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectUrl>http://www.chem.gla.ac.uk/~louis/software/wingx/index.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/wingx/wingx_icon.png</iconUrl>
+    <bugTrackerUrl>http://www.chem.gla.ac.uk/~louis/software/bf.html</bugTrackerUrl>
+    <description>Ortep-3 for Windows is a MS-Windows version of the current release of [ORTEP-III (1.0.3)](http://web.ornl.gov/sci/ortep/ortep.html), which incorporates a Graphical User Interface (GUI) to make production of thermal ellipsoid plots much easier. 
+
+#### License
+WinGX is provided free of charge for academic, scientific, educational and non-commercial users, provided its use is acknowledged. A licence is required and [may be requested](http://www.chem.gla.ac.uk/~louis/software/licenseform.html).  If you do not yet have a license file, this package will still install, but WinGX will not start.
+
+#### Package Parameters
+The following package parameters can be set:
+
+ * `/installDir:directory-path`
+    
+	The default location for WinGX is C:\wingx.  This package by default will install to a more standard, "%ProgramFiles(x86)%\WinGX", but the directory can be customized.
+	
+ * `/LicensePath:path-to-license-file`
+
+    If you have a license file, "WinGX-License.txt", you can place it in "C:\Temp" (default) and this package will copy it to the proper location.  Adjust the location with this parameter.  The path can be a file path or URL.
+
+These parameters can be passed to the installer with the use of `-params`.
+For example: 
+	`-params '"/LicensePath:http://localsite.org/wingxlicense.txt"'`.
+
+#### Features
+
+WinGX uses SHELX format ASCII files, and contains the following [facilities and features](http://www.chem.gla.ac.uk/~louis/software/wingx/features.html).
+</description>
+    <summary>Windows GUI version of the Oak Ridge Thermal Ellipsoid Plot Program for Crystal Structure Illustrations</summary>
+    <releaseNotes>http://www.chem.gla.ac.uk/~louis/software/wingx/modif.html</releaseNotes>
+    <copyright>Copyright © 2001-2014  Louis J. Farrugia</copyright>
+    <tags>WinGX shelx xray diffraction chemistry crystallography admin</tags>
+  </metadata>
+</package>
