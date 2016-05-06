@@ -56,7 +56,9 @@ _enCIFer is available to the scientific community free of charge. In order to do
     * Resolved an issue with graphical corruption with some graphics cards on Mac OSX
     * Resolved issue with crashes with certain high-end NVidia Quadro graphics cards 
     </releaseNotes>
-    <dependencies></dependencies>
+    <dependencies>
+      <dependency id="vcredist2010" />
+	</dependencies>
     <copyright>Copyright © 2015 Cambridge Crystallographic Data Centre</copyright>
     <tags>enCIFer cif crystallography chemistry admin</tags>
   </metadata>
