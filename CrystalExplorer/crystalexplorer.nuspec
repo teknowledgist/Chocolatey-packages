@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://www.hirshfeldsurface.net/wiki</docsUrl>
     <projectUrl>http://crystalexplorer.scb.uwa.edu.au/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/crystalexplorer/crystalexplorer_icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/crystalexplorer_icon.png</iconUrl>
     <description>CrystalExplorer is a versatile and powerful tool for investigating intermolecular interactions and packing in crystalline materials using the full suite of Hirshfeld surface tools and ab initio quantum mechanical calculations.  It can be used to investigate many areas of solid-state chemistry including:
 
 * Intermolecular interactions
