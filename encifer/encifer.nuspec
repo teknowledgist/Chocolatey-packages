@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>encifer</id>
+    <version>1.5.1</version>
+    <title>CCDC enCIFer 1.5.1 Windows</title>
+    <authors>Cambridge Crystallographic Data Centre</authors>
+    <owners>Erich</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/encifer</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/encifer/encifer_icon.png</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/encifer/enCIFer1.5.1WindowsLicense.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectUrl>http://www.ccdc.cam.ac.uk/Community/csd-community/encifer/</projectUrl>
+    <docsUrl>http://www.ccdc.cam.ac.uk/support-and-resources/CCDCResources/D17-encifer_helpfile.pdf</docsUrl>
+    <mailingListUrl>http://www.ccdc.cam.ac.uk/support-and-resources/Support/search?p=f31867a5-368b-47ca-9655-ea6b3f50daab</mailingListUrl>
+    <description>The Crystallographic Information File (CIF) is the internationally agreed standard file format for information exchange in crystallography. The CIF standard is supported, maintained and developed by the International Union of Crystallography (IUCr) and most major journals require electronic data depositions in CIF format.
+
+enCIFer enables users to validate CIFs and ensure their files are format-compliant for deposition with journals and databases or for storage in laboratory archives. enCIFer should also be used to add information safely to CIFs without corrupting the strict syntax.
+
+enCIFer operates on single or multi-block CIFs allowing you to:
+
+* Identify and correct syntax/format violations
+* Safely edit information to your CIF without corrupting the strict syntax, for both single data items and data loops
+* Supplement the data in your CIF via two data entry wizards, one for publication details and the other for chemical, physical and crystallographic properties
+* Select from a choice of CIF dictionaries and check against a user-customisable list of mandatory data items
+* Visualise structure(s) in a CIF, including displacement ellipsoids
+
+### License Agreement
+
+_enCIFer is available to the scientific community free of charge. In order to download this version of enCIFer, you must first read and accept the [terms of the licence agreement](https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/encifer/enCIFer1.5.1WindowsLicense.md) (copied from a modal dialog for accessibility)._
+
+</description>
+    <summary>Safely check and edit crystallographic information files (CIFs) without compromising the syntax</summary>
+    <releaseNotes>
+#### Encifer 1.5.1 - Released: November 2014
+
+* CIF Validation and File Handling
+    * Updated to the latest CIF core dictionary from IUCr.
+
+#### Encifer 1.5 - Released: July 2014
+
+* CIF Validation and File Handling
+    * Support for file names containing 'extended' characters
+    * Updated to the latest CIF dictionaries from IUCr.
+    * Added SHELX data items to cif_third_party.dic 
+    * Added twinning dictionary
+    * Warn user when opening an mmCIF
+    * Support for line continuation convention within semicolon delimited values
+    * Improved validation of numeric fields
+* Visualiser
+    * Update for new space group item names when visualising structures
+    * The 3D drawing engine has been completely re-written, for better 
+    * display quality and performance.
+    * Improved ease of atom picking in both wireframe and capped sticks modes
+    * Improved visualisation of highly anisotropic displacement ellipsoids
+    * Resolved an issue with graphical corruption with some graphics cards on Mac OSX
+    * Resolved issue with crashes with certain high-end NVidia Quadro graphics cards 
+    </releaseNotes>
+    <dependencies></dependencies>
+    <copyright>Copyright © 2015 Cambridge Crystallographic Data Centre</copyright>
+    <tags>enCIFer cif crystallography chemistry admin</tags>
+  </metadata>
+</package>
