@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>GSView</id>
+        <version>5.0.0.001</version>
+        <authors>Russel Lang</authors>
+        <projectUrl>http://pages.cs.wisc.edu/~ghost/gsview/</projectUrl>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A graphical interface for Ghostscript (a Postscript interpreter)</description>
+    </metadata>
+</package>

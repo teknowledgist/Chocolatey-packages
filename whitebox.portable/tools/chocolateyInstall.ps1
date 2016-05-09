@@ -12,15 +12,16 @@ $logs = Join-Path (Split-Path $target) "logs"
 
 # All users need modify rights to the logs directory or Whitebox won't start.  
 # By default, only the installing user has modify rights
-if (Test-Path $logs) {
-   Remove-Item "$logs\*" -Recurse
-   $Acl = get-acl $logs
-   $InheritanceFlag = [System.Security.AccessControl.InheritanceFlags]::ContainerInherit -bor [System.Security.AccessControl.InheritanceFlags]::ObjectInherit
-   $PropagationFlag = [System.Security.AccessControl.PropagationFlags]::InheritOnly
-   $rule = New-Object  system.security.accesscontrol.filesystemaccessrule('Authenticated Users','Modify',$InheritanceFlag,$PropagationFlag,'Allow')
-   $Acl.setaccessrule($rule)
-   set-acl $logs $Acl
-} 
+if (-not (Test-Path $logs)) {
+   New-Item $logs -ItemType Directory
+}
+Remove-Item "$logs\*" -Recurse
+$Acl = get-acl $logs
+$InheritanceFlag = [System.Security.AccessControl.InheritanceFlags]::ContainerInherit -bor [System.Security.AccessControl.InheritanceFlags]::ObjectInherit
+$PropagationFlag = [System.Security.AccessControl.PropagationFlags]::InheritOnly
+$rule = New-Object  system.security.accesscontrol.filesystemaccessrule('Authenticated Users','Modify',$InheritanceFlag,$PropagationFlag,'Allow')
+$Acl.setaccessrule($rule)
+set-acl $logs $Acl
 
 # The program author offered an icon when contacted.
 $icon = Join-Path $InstallArgs.UnzipLocation 'tools\TDAP_Home.ico'
