@@ -15,7 +15,7 @@
     <description>Ortep-3 for Windows is a MS-Windows version of the current release of [ORTEP-III (1.0.3)](http://web.ornl.gov/sci/ortep/ortep.html), which incorporates a Graphical User Interface (GUI) to make production of thermal ellipsoid plots much easier. 
 
 #### License
-Ortep-3 for Windows is provided free of charge for academic, scientific, educational and non-commercial users, provided its use is acknowledged. A licence is required and [may be requested](http://www.chem.gla.ac.uk/~louis/software/licenseform.html).  If you do not yet have a license file, this package will still install, but Ortep3 will not start.
+Ortep-3 for Windows is provided free of charge for academic, scientific, educational and non-commercial users, provided its use is acknowledged. A license is required and [may be requested](http://www.chem.gla.ac.uk/~louis/software/licenseform.html).  If you do not yet have a license file, this package will still install, but Ortep3 will not start.
 
 #### Helper programs
 Ortep can call other programs.  These are not dependencies.  This package will pre-set for Ortep-3 the paths for these programs.  It will use the default install paths for the following applications (whether they are installed or not), but the paths (and programs) can be changed with parameters (see below):
@@ -29,23 +29,24 @@ Ortep can call other programs.  These are not dependencies.  This package will p
 #### Package Parameters
 The following package parameters can be set:
 
- * `/installDir:&lt;path&gt;`
-    
+* `/installDir:`_&lt;path&gt;_
+
 	The default location for Ortep3 is C:\Ortep3.  This package by default will install to a more standard, "%ProgramFiles(x86)%\Ortep3", but the directory can be customized.
 	
- * `/LicensePath:&lt;path&gt;`
+ * `/LicensePath:`_&lt;path&gt;_
 
-    If you have a license file, "ORTEP3-License.txt", you can place it in "C:\Temp" (default) and this package will copy it to the proper location.  Adjust the location with this parameter.  The path can be a file path or URL.
+    If you have a license file, "ORTEP3-License.txt", you can place it in "C:\Temp" (default) and this package will copy it to the proper location.  Adjust the location with this parameter.  The _path_ can be a file path or URL.
 
- * `/editor:&lt;path&gt;` - Assign a text editor helper program other than Notepad.
- * `/povray:&lt;path&gt;` - Assign an alternate path for POV-ray.
- * `/gsview:&lt;path&gt;` - Assign an alternate path for GhostScript View or another PS file viewer.
- * `/graphics:&lt;path&gt;` - Assign a graphics viewer helper program other than IrfanView (for example, XnView).
- * `/hpgl:&lt;path&gt;` - Assign an alternate path for HP-GL View or another HP-GL file viewer.
+ * `/editor:`_&lt;path&gt;_ - Assign a text editor helper program other than Notepad.
+ * `/povray:`_&lt;path&gt;_ - Assign an alternate path for POV-ray.
+ * `/gsview:`_&lt;path&gt;_ - Assign an alternate path for GhostScript View or another PS file viewer.
+ * `/graphics:`_&lt;path&gt;_ - Assign a graphics viewer helper program other than IrfanView (for example, XnView).
+ * `/hpgl:`_&lt;path&gt;_ - Assign an alternate path for HP-GL View or another HP-GL file viewer.
 
 These parameters can be passed to the installer with the use of `-params`.
-For example: 
+For example : 
 	`-params '"/LicensePath:http://localsite.org/ortep3license.txt /editor:""C:\Program Files (x86)\Notepad++\notepad++.exe"""'`.
+_(note: the double-double quotes around the path are only needed if it contains spaces)_
 
 #### Features
 

@@ -11,7 +11,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://www.hirshfeldsurface.net/wiki</docsUrl>
     <projectUrl>http://crystalexplorer.scb.uwa.edu.au/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/crystalexplorer_icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/CrystalExplorer_icon.png</iconUrl>
     <description>CrystalExplorer is a versatile and powerful tool for investigating intermolecular interactions and packing in crystalline materials using the full suite of Hirshfeld surface tools and ab initio quantum mechanical calculations.  It can be used to investigate many areas of solid-state chemistry including:
 
 * Intermolecular interactions
@@ -25,14 +25,13 @@ By mapping the ab initio quantum mechanical property densities and other distanc
 
 A recent feature in this version is the ability to display and quantify voids in crystal structures. 
 
-### License Conditions
+### License required
 
-CrystalExplorer 3.1 is licensed free-of-charge under the following conditions:
+CrystalExplorer requires a license to run.  One will be provided free with [email sign-up](http://crystalexplorer.scb.uwa.edu.au/licence.html) under the following conditions:
 * You must be conducting research for peer-reviewed publication at a bone fide degree-granting institution to qualify.
 * You must not use the free version of CrystalExplorer to conduct commercial research, confidential research, or research that is not likely to be published in a peer-reviewed publication.
 * If you publish research including results from CrystalExplorer, you must cite CrystalExplorer as described in the About→CrystalExplorer window in the Application.
-* CrystalExplorer is provided as-is, and without warranty of any kind. 
-* [Fill in the form](http://crystalexplorer.scb.uwa.edu.au/licence.html) to be sent a licence code for CrystalExplorer.  This program will not start without a license code.
+* CrystalExplorer is provided as-is, and without warranty of any kind.
 	</description>
     <summary>CrystalExplorer is a full-featured molecular crystal visualization tool. </summary>
     <releaseNotes>http://www.hirshfeldsurface.net/wiki/index.php/CrystalExplorer_3.1_Release_Notes</releaseNotes>

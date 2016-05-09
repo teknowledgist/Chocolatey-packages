@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>chrlauncher</id>
+    <version>1.9.1</version>
+    <title>chrlauncher</title>
+    <authors>Henry++</authors>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/chrlauncher</packageSourceUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>https://github.com/henrypp/chrlauncher/blob/master/LICENSE</licenseUrl>
+    <projectUrl>http://www.henrypp.org/product/chrlauncher</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/chrlauncher_icon.png</iconUrl>
+    <bugTrackerUrl>https://github.com/henrypp/chrlauncher/issues</bugTrackerUrl>
+    <description> A small and very fast portable launcher and updater for Chromium.
+	
+	#### Package Parameters
+The following package parameters can be set:
+
+ * `/Flash`  - Include the Adobe Flash Player Pepper Plugin API (PPAPI) DLL.  [see here](http://effect8.ru/soft/media/adobe-flash-player-portable.html)
+	
+ * `/Default`  - Make chrlauncher the default "browser".  This option requires installing with admin rights.
+
+These parameters can be passed to the installer with the use of `-params`.
+For example: 
+	`-params '"/Default"'`.
+
+	</description>
+    <releaseNotes>https://github.com/henrypp/chrlauncher/blob/master/CHANGELOG.md</releaseNotes>
+	<summary>Small and very fast portable launcher and updater for Chromium.</summary>
+    <copyright>Copyright (c) 2016, Henry++</copyright>
+	<tags>chrlauncher chromium chrome updater portable</tags>
+  </metadata>
+</package>

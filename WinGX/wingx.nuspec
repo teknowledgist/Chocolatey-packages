@@ -10,7 +10,7 @@
     <licenseUrl>http://www.chem.gla.ac.uk/~louis/software/licenseform.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>http://www.chem.gla.ac.uk/~louis/software/wingx/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/wingx/wingx_icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/wingx_icon.png</iconUrl>
     <bugTrackerUrl>http://www.chem.gla.ac.uk/~louis/software/bf.html</bugTrackerUrl>
     <description>Ortep-3 for Windows is a MS-Windows version of the current release of [ORTEP-III (1.0.3)](http://web.ornl.gov/sci/ortep/ortep.html), which incorporates a Graphical User Interface (GUI) to make production of thermal ellipsoid plots much easier. 
 
@@ -20,13 +20,13 @@ WinGX is provided free of charge for academic, scientific, educational and non-c
 #### Package Parameters
 The following package parameters can be set:
 
- * `/installDir:directory-path`
+ * `/installDir:`_&lt;directory-path&gt;_
     
 	The default location for WinGX is C:\wingx.  This package by default will install to a more standard, "%ProgramFiles(x86)%\WinGX", but the directory can be customized.
 	
- * `/LicensePath:path-to-license-file`
+ * `/LicensePath:`_&lt;path-to-license-file&gt;_
 
-    If you have a license file, "WinGX-License.txt", you can place it in "C:\Temp" (default) and this package will copy it to the proper location.  Adjust the location with this parameter.  The path can be a file path or URL.
+    If you have a license file, "WinGX-License.txt", you can place it in "C:\Temp" (default) and this package will copy it to the proper location.  Adjust the location with this parameter.  The _path_ can be a file path or URL.
 
 These parameters can be passed to the installer with the use of `-params`.
 For example: 

@@ -21,6 +21,7 @@ $UninstallArgs = @{
 
 Uninstall-ChocolateyPackage @UninstallArgs
 
+Remove-Item (Split-Path $unexe) -Recurse -Force
 
 
 
