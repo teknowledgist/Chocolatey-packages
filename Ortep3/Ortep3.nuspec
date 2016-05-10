@@ -5,12 +5,13 @@
     <version>2014.1</version>
     <title>Ortep3</title>
     <authors>Louis J. Farrugia</authors>
-    <owners>Erich</owners>
+    <owners>Teknowledgist</owners>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/ortep3</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/ortep_icon.png</iconUrl>
     <licenseUrl>http://www.chem.gla.ac.uk/~louis/software/licenseform.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>http://www.chem.gla.ac.uk/~louis/software/ortep/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/ortep_icon.png</iconUrl>
+    <docsUrl>http://www.chem.gla.ac.uk/~louis/software/ortep/ortep3.pdf</docsUrl>
     <bugTrackerUrl>http://www.chem.gla.ac.uk/~louis/software/bf.html</bugTrackerUrl>
     <description>Ortep-3 for Windows is a MS-Windows version of the current release of [ORTEP-III (1.0.3)](http://web.ornl.gov/sci/ortep/ortep.html), which incorporates a Graphical User Interface (GUI) to make production of thermal ellipsoid plots much easier. 
 
@@ -53,8 +54,7 @@ _(note: the double-double quotes around the path are only needed if it contains 
 Ortep-3 for Windows has the following [facilities and features](http://www.chem.gla.ac.uk/~louis/software/ortep/features.html).
     </description>
     <summary>Windows GUI version of the Oak Ridge Thermal Ellipsoid Plot Program for Crystal Structure Illustrations</summary>
-    <releaseNotes>
-    </releaseNotes>
+    <releaseNotes>http://www.chem.gla.ac.uk/~louis/software/ortep/modif.html</releaseNotes>
     <copyright>Copyright © 2001-2014  Louis J. Farrugia</copyright>
     <tags>ortep3 ortep chemistry crystallography admin</tags>
   </metadata>

@@ -5,7 +5,7 @@
     <version>1.5.1</version>
     <title>CCDC enCIFer 1.5.1 Windows</title>
     <authors>Cambridge Crystallographic Data Centre</authors>
-    <owners>Erich</owners>
+    <owners>Teknowledgist</owners>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/encifer</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/encifer_icon.png</iconUrl>
     <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/encifer/enCIFer1.5.1WindowsLicense.md</licenseUrl>

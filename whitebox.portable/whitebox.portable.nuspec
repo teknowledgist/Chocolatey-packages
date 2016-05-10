@@ -2,22 +2,24 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>whitebox.portable</id>
-    <version>3.2.2.20160509</version>
+    <version>3.2.2.20160510</version>
     <title>Whitebox Geospatial Analysis Tools (Portable)</title>
     <authors>John Lindsay</authors>
     <owners>teknowledgist</owners>
-	<packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/whitebox.portable</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/whitebox.portable</packageSourceUrl>
     <licenseUrl>http://www.uoguelph.ca/~hydrogeo/Whitebox/gpl-3_0.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <iconUrl>http://www.uoguelph.ca/~hydrogeo/Whitebox/img/WhiteboxLogoSmall.png</iconUrl>
-	<projectUrl>http://www.uoguelph.ca/~hydrogeo/Whitebox/index.html</projectUrl>
-	<projectSourceUrl>https://github.com/jblindsay/whitebox-geospatial-analysis-tools</projectSourceUrl>
+    <projectUrl>http://www.uoguelph.ca/~hydrogeo/Whitebox/index.html</projectUrl>
+    <projectSourceUrl>https://github.com/jblindsay/whitebox-geospatial-analysis-tools</projectSourceUrl>
     <mailingListUrl><![CDATA[http://www.lsoft.com/scripts/wl.exe?SL1=WHITEBOX-GAT&H=LISTSERV.UOGUELPH.CA]]></mailingListUrl>
-	<description>Whitebox GAT is an open source, well documented, and extendable software for geomatics with its roots originating from Terrain Analysis System (TAS).  It as a desktop GIS and remote sensing software package for general applications of geospatial analysis and data visualization. Whitebox GAT is intended to provide a platform for advanced geospatial data analysis with applications in both environmental research and the geomatics industry more broadly. It was envisioned from the outset as providing an ideal platform for experimenting with novel geospatial analysis methods. Equally important is the project’s goal of providing a tool that can be used for geomatics-based education. </description>
+    <description>Whitebox GAT is an open source, well documented, and extendable software for geomatics with its roots originating from Terrain Analysis System (TAS).  It as a desktop GIS and remote sensing software package for general applications of geospatial analysis and data visualization. Whitebox GAT is intended to provide a platform for advanced geospatial data analysis with applications in both environmental research and the geomatics industry more broadly. It was envisioned from the outset as providing an ideal platform for experimenting with novel geospatial analysis methods. Equally important is the project’s goal of providing a tool that can be used for geomatics-based education. </description>
+    <summary>An open-source desktop GIS and remote sensing software package</summary>
     <dependencies>
-      <dependency id="jre8" />
+      <dependency id="jre8" version="8.0"/>
     </dependencies>
-	<copyright>Copyright © John Lindsay, 2015-2016</copyright>
+    <releaseNotes>https://whiteboxgeospatial.wordpress.com/2015/04/12/whitebox-geospatial-analysis-tools-v-3-2-2-released/</releaseNotes>
+    <copyright>Copyright © John Lindsay, 2015-2016</copyright>
     <tags>whitebox gis geomatics</tags>
   </metadata>
 </package>

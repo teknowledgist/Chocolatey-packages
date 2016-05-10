@@ -6,20 +6,22 @@ If ($BitLevel -eq '64') {
    $RegistryLocation = 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
 }
 
-$unexe = Get-ItemProperty "$RegistryLocation\*" | 
+$unexe = (Get-ItemProperty "$RegistryLocation\*" | 
                      Where-Object { $_.displayname -match 'ortep'} |
-                     Select-Object -ExpandProperty UninstallString
+                     Select-Object -ExpandProperty UninstallString).trim('"')
 
-$UninstallArgs = @{
-   packageName = 'ortep3'
-   fileType = 'exe'
-   file = $unexe
-   silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-   validExitCodes = @(0)
-}
+if (test-path $unexe) {
+   $UninstallArgs = @{
+      packageName = 'ortep3'
+      fileType = 'exe'
+      file = $unexe
+      silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+      validExitCodes = @(0)
+   }
 
-Uninstall-ChocolateyPackage @UninstallArgs
-Remove-Item (Split-Path $unexe) -Recurse -Force
+   Uninstall-ChocolateyPackage @UninstallArgs
+   Remove-Item (Split-Path $unexe) -Recurse -Force
+} else { Write-Host "no uninstaller found!"}
 
 # remove the environment variable
 Install-ChocolateyEnvironmentVariable 'ORTEP3DIR' $null 'Machine'

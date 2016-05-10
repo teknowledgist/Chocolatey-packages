@@ -5,10 +5,10 @@
     <version>3.8</version>
     <title>CCDC Mercury 3.8 (incl. enCIFer 1.5.2)</title>
     <authors>Cambridge Crystallographic Data Centre</authors>
-    <owners>Erich</owners>
+    <owners>Teknowledgist</owners>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/ccdcmercury</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/ccdcmercury_icon.png</iconUrl>
-    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/ccdcmercury/Mercury3.8WindowsLicense.md</licenseUrl>
+    <licenseUrl>http://www.ccdc.cam.ac.uk/solutions/csd-system/components/mercury/licence/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectUrl>https://www.ccdc.cam.ac.uk/Community/csd-community/freemercury/</projectUrl>
     <docsUrl>https://www.ccdc.cam.ac.uk/support-and-resources/CCDCResources/mercury.pdf</docsUrl>
@@ -25,7 +25,7 @@ Mercury is available as a free download. The version of Mercury provided to CSD 
 
 ### License Agreement
 
-_In order to download this version of Mercury, you must first read and accept the [terms of the licence agreement](https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/ccdcmercury/Mercury3.8WindowsLicense.md) (copied from a modal dialog for accessibility)._
+_In order to download this version of Mercury, you must first read and accept the [terms of the licence agreement](http://www.ccdc.cam.ac.uk/solutions/csd-system/components/mercury/licence/)._
 
 ### Included software
 

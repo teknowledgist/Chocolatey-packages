@@ -7,7 +7,6 @@
 Install-ChocolateyZipPackage @InstallArgs
 
 $target = (Get-ChildItem $InstallArgs.UnzipLocation -filter whiteboxgis.jar -Recurse).fullname
-
 $logs = Join-Path (Split-Path $target) "logs"
 
 # All users need modify rights to the logs directory or Whitebox won't start.  
@@ -15,13 +14,17 @@ $logs = Join-Path (Split-Path $target) "logs"
 if (-not (Test-Path $logs)) {
    New-Item $logs -ItemType Directory
 }
-Remove-Item "$logs\*" -Recurse
-$Acl = get-acl $logs
-$InheritanceFlag = [System.Security.AccessControl.InheritanceFlags]::ContainerInherit -bor [System.Security.AccessControl.InheritanceFlags]::ObjectInherit
-$PropagationFlag = [System.Security.AccessControl.PropagationFlags]::InheritOnly
-$rule = New-Object  system.security.accesscontrol.filesystemaccessrule('Authenticated Users','Modify',$InheritanceFlag,$PropagationFlag,'Allow')
-$Acl.setaccessrule($rule)
-set-acl $logs $Acl
+if (Test-Path $logs) {
+   Remove-Item "$logs\*" -Recurse
+   $Acl = get-acl $logs
+   $InheritanceFlag = [System.Security.AccessControl.InheritanceFlags]::ContainerInherit -bor [System.Security.AccessControl.InheritanceFlags]::ObjectInherit
+   $PropagationFlag = [System.Security.AccessControl.PropagationFlags]::InheritOnly
+   $rule = New-Object  system.security.accesscontrol.filesystemaccessrule('Authenticated Users','Modify',$InheritanceFlag,$PropagationFlag,'Allow')
+   $Acl.setaccessrule($rule)
+   set-acl $logs $Acl
+} else {
+   throw "Logs folder does not exist!"
+}
 
 # The program author offered an icon when contacted.
 $icon = Join-Path $InstallArgs.UnzipLocation 'tools\TDAP_Home.ico'

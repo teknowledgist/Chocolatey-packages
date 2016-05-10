@@ -1,11 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
-    <metadata>
-        <id>GSView</id>
-        <version>5.0.0.001</version>
-        <authors>Russel Lang</authors>
-        <projectUrl>http://pages.cs.wisc.edu/~ghost/gsview/</projectUrl>
-        <requireLicenseAcceptance>false</requireLicenseAcceptance>
-        <description>A graphical interface for Ghostscript (a Postscript interpreter)</description>
-    </metadata>
+  <metadata>
+    <id>GSView</id>
+    <version>5.0.0.20160510</version>
+    <title>GSView</title>
+    <authors>Russel Lang</authors>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/GSView</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/GSView_icon.png</iconUrl>
+    <licenseUrl>http://web.archive.org/web/20021010015844/http://www.artifex.com/downloads/doc/Public.htm</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://pages.cs.wisc.edu/~ghost/gsview/index.htm</projectUrl>
+    <projectSourceUrl>http://pages.cs.wisc.edu/~ghost/gsview/download/gsv50src.zip</projectSourceUrl>
+    <description>GSview is a graphical interface for Ghostscript. Ghostscript is an interpreter for the PostScript page description language used by laser printers. For documents following the Adobe PostScript Document Structuring Conventions, GSview allows selected pages to be viewed or printed. GSview requires Ghostscript. 
+### Registering GSview  
+
+If you wish to support the development of GSview or wish to disable the GSview nag screen, please consider registering GSview. There is no requirement for you to register GSview. According to the terms of the GSview licence, you can use GSview without any payment. The registration fee is AUD$40 (approx. USD$40). GSview can be [registered online](https://www.cardgate.net/~ghostgum/) at an external secure site. 
+
+GSview can also be registered by faxing or mailing a [registration form](http://www.ghostgum.com.au/regorder.txt). Ghostgum Software prefers that you use the online registration method. A [site registration](http://www.ghostgum.com.au/sitereg.htm) for multiple computers is also available. 
+
+    </description>
+    <releaseNotes>http://pages.cs.wisc.edu/~ghost/gsview/get50.htm</releaseNotes>
+    <dependencies>
+      <dependency id="Ghostscript.app"  version="9.04"/>
+    </dependencies>
+    <copyright>Copyright © Ghostgum Software Pty Ltd.</copyright>
+    <tags>gsview Ghostscript PostScript gui admin</tags>
+  </metadata>
 </package>

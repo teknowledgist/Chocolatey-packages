@@ -5,7 +5,7 @@
     <version>2014.1</version>
     <title>WinGX</title>
     <authors>Louis J. Farrugia</authors>
-    <owners>Erich</owners>
+    <owners>Teknowledgist</owners>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/wingx</packageSourceUrl>
     <licenseUrl>http://www.chem.gla.ac.uk/~louis/software/licenseform.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
