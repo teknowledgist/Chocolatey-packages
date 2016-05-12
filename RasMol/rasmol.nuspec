@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>rasmol</id>
+    <version>2.7.5.2</version>
+    <title>RasMol Molecular Graphics Visualisation Tool</title>
+    <authors>Herbert J. Bernstein</authors>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/RasMol</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/rasmol_icon.png</iconUrl>
+    <licenseUrl>http://www.rasmol.org/software/RasMol_2.7.5/doc/NOTICE.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://www.rasmol.org/</projectUrl>
+    <projectSourceUrl>http://www.rasmol.org/software/RasMol_Latest.tar.gz</projectSourceUrl>
+    <description>RasMol is an important scientific tool created by Roger Sayle in 1992 and intended for the visualisation of proteins, nucleic acids and small molecules. RasMol is used by hundreds of thousands of users world-wide to view macromolecules and to prepare publication-quality images. The program is aimed at display, teaching and generation of publication quality images. </description>
+    <summary>A program for molecular graphics visualisation.</summary>
+    <copyright>Copyright © Herbert J. Bernstein 1998-2009</copyright>
+    <tags>rasmol chemistry molecular visualisation graphics</tags>
+  </metadata>
+</package>

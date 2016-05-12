@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>GSView</id>
-    <version>5.0.0.20160510</version>
-    <title>GSView</title>
+    <version>5.0.0.20160511</version>
+    <title>GSView -- GUI for Ghostscript</title>
     <authors>Russel Lang</authors>
     <owners>Teknowledgist</owners>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/GSView</packageSourceUrl>
@@ -12,6 +12,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>http://pages.cs.wisc.edu/~ghost/gsview/index.htm</projectUrl>
     <projectSourceUrl>http://pages.cs.wisc.edu/~ghost/gsview/download/gsv50src.zip</projectSourceUrl>
+    <summary>A graphical interface for Ghostscript.</summary>
     <description>GSview is a graphical interface for Ghostscript. Ghostscript is an interpreter for the PostScript page description language used by laser printers. For documents following the Adobe PostScript Document Structuring Conventions, GSview allows selected pages to be viewed or printed. GSview requires Ghostscript. 
 ### Registering GSview  
 
