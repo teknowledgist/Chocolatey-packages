@@ -3,7 +3,7 @@
   <metadata>
     <id>GSView</id>
     <version>5.0.0.20160511</version>
-    <title>GSView -- GUI for Ghostscript</title>
+    <title>GSView GhostScript preViewer</title>
     <authors>Russel Lang</authors>
     <owners>Teknowledgist</owners>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/GSView</packageSourceUrl>

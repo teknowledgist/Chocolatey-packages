@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>contextconsole</id>
+    <version>2.1.0</version>
+    <title>Context Console Shell Extension</title>
+    <authors>Kai Liu</authors>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/ContextConsole</packageSourceUrl>
+    <licenseUrl>http://code.kliu.org/cmdopen/license.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://code.kliu.org/cmdopen/</projectUrl>
+    <projectSourceUrl>http://code.kliu.org/cmdopen/downloads/CmdOpenSource-latest.7z</projectSourceUrl>
+    <bugTrackerUrl>http://code.kliu.org/tracker/</bugTrackerUrl>
+    <description>### Features
+* Open a command prompt in the current directory and in multiple directories at once.
+
+  You can open a command prompt in the directory that you are currently in by right-clicking on any empty screen space in the directory. This eliminates the need to navigate up a level in order to open a command prompt in the current directory, which was one of the biggest shortcomings of [Microsoft's Open Command Window Here PowerToy](http://www.microsoft.com/windowsxp/downloads/powertoys/xppowertoys.mspx).
+
+  You can also open multiple command prompts by selecting a group of directories and invoking the command prompt.
+
+* Support for elevated command prompts
+
+  On versions of Windows that have UAC (Windows Vista, Windows 7, etc.), the ContextConsole Shell Extension can be used to open elevated command prompts.
+
+* Tiny footprint
+
+  Compared to similar shell extensions, the ContextConsole Shell Extension has an extremely small memory and disk footprint (the 32-bit version consumes less than 16 KiB of disk space).
+
+* Free and open-source
+
+  The ContextConsole Shell Extension is open-source, licensed under a [BSD-style license](http://code.kliu.org/cmdopen/license.txt), so that anyone with some knowledge of C can easily build their own customized version of this shell extension.
+  
+* Compatibility: international support and 64-bit-compatible
+  
+  The user interface text has been translated into [many languages](http://code.kliu.org/cmdopen/#translations), so that it will blend in seamlessly with most systems. Additionally, this shell extension is natively Unicode and can thus support a wide range of directory names.
+
+  Both x86-32 and x86-64 systems are natively supported, so you can use this with the increasingly common 64-bit versions of Windows.
+  
+* Support for network paths
+
+  You can even open directories from [network paths](http://code.kliu.org/cmdopen/screenshots/network_prompt.png) (UNC paths).
+</description>
+    <summary>Adds an "Open Command Prompt" contextual menu item.</summary>
+    <releaseNotes>http://code.kliu.org/cmdopen/changelog.html</releaseNotes>
+    <copyright>Copyright © 2007-2011 Kai Liu</copyright>
+    <tags>contextconsole context menu cmd dos windows explorer</tags>
+  </metadata>
+</package>

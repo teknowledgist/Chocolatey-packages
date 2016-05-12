@@ -5,7 +5,7 @@
     <version>3.14.3</version>
     <title>QCAD - 2D CAD </title>
     <authors>RibbonSoft, GmbH</authors>
-    <owners>Teknowledgist</owners>
+    <owners>Teknowledgist,petervbeck</owners>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/QCAD</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/qcad_icon.png</iconUrl>
     <licenseUrl>http://www.qcad.org/en/license</licenseUrl>
@@ -16,15 +16,17 @@
     <mailingListUrl>http://www.qcad.org/rsforum/</mailingListUrl>
     <description>QCAD is a free, open source application for computer aided drafting (CAD) in two dimensions (2D). With QCAD you can create technical drawings such as plans for buildings, interiors, mechanical parts or schematics and diagrams. 
     
-    QCAD was designed with modularity, extensibility and portability in mind. But what people notice most often about QCAD is its intuitive user interface. QCAD is an easy to use but powerful 2D CAD system for everyone. You don't need any CAD experience to get started with QCAD immediately. 
+QCAD was designed with modularity, extensibility and portability in mind. But what people notice most often about QCAD is its intuitive user interface. QCAD is an easy to use but powerful 2D CAD system for everyone. You don't need any CAD experience to get started with QCAD immediately. 
     
-    [A complete list of features is here](http://www.qcad.org/en/qcad-documentation/qcad-features)
+[A complete list of features is here](http://www.qcad.org/en/qcad-documentation/qcad-features)
     
-#### Note
-The uninstall of QCAD is not silent.  It will ask for confirmation.  Canceling the uninstall will keep the program installed, but remove the package from Chocolatey.  Agreeing to uninstall will also open an announcement of success.
+#### Notes
+
+* The default download/install of QCAD includes two trial-ware, commercial plugins.  This package removes those to leave a fully GPLv3 compliant install.
+* **The uninstall of QCAD is not silent.**  It will ask for confirmation.  Canceling the uninstall will keep the program installed, but remove the package from Chocolatey.  Agreeing to uninstall will also open an announcement of success.
     </description>
     <summary>The Open Source CAD System For Everyone</summary>
     <releaseNotes>http://www.qcad.org/en/changelog</releaseNotes>
-    <tags>qcad cad 2d drafting admin notsilent</tags>
+    <tags>qcad cad 2d drawing drafting admin notsilent</tags>
   </metadata>
 </package>
