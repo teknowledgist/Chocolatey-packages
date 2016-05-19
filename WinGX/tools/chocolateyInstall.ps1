@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'  # stop on all errors
 
-$packageName  = 'WinGX'
+$packageName  = 'wingx'
 $toolsDir     = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $DownloadUrl  = 'http://www.chem.gla.ac.uk/~louis/software/downloads/wingx_2014.1.zip'
  

@@ -2,8 +2,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>GSView</id>
-    <version>5.0.0.20160511</version>
-    <title>GSView GhostScript preViewer</title>
+    <version>5.0.0.20160513</version>
+    <title>GhostScript preViewer</title>
     <authors>Russel Lang</authors>
     <owners>Teknowledgist</owners>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/GSView</packageSourceUrl>

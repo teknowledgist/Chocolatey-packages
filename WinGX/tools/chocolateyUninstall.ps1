@@ -10,15 +10,18 @@ $unexe = Get-ItemProperty "$RegistryLocation\*" |
                      Where-Object { $_.displayname -match 'wingx'} |
                      Select-Object -ExpandProperty UninstallString
 
-$UninstallArgs = @{
-   packageName = 'wingx'
-   fileType = 'exe'
-   file = $unexe
-   silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-   validExitCodes = @(0)
-}
+if (Test-Path $unexe) {
+   $UninstallArgs = @{
+      packageName = 'wingx'
+      fileType = 'exe'
+      file = $unexe
+      silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+      validExitCodes = @(0)
+   }
 
-Uninstall-ChocolateyPackage @UninstallArgs
+   Uninstall-ChocolateyPackage @UninstallArgs
+   Remove-Item (Split-Path $unexe) -Recurse -Force
+}
 
 # remove the environment variable
 Install-ChocolateyEnvironmentVariable 'WINGXDIR' $null 'Machine'

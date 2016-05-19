@@ -1,4 +1,6 @@
-﻿$RegistryLocation = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall'
+﻿$packageName = 'ccdcmercury'
+
+$RegistryLocation = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall'
 
 # different key for 32-bit installs on 64-bit systems
 $BitLevel = Get-ProcessorBits
@@ -11,18 +13,19 @@ $unexe = Get-ItemProperty "$RegistryLocation\*" |
                      Select-Object -ExpandProperty UninstallString
 
 
-$UninstallArgs = @{
-   packageName = 'ccdcmercury'
-   fileType = 'exe'
-   file = $unexe
-   silentArgs = '--mode unattended'
-   validExitCodes = @(0)
+if (Test-Path $unexe) {
+  $UninstallArgs = @{
+     packageName = $packageName
+     fileType = 'exe'
+     file = $unexe
+     silentArgs = '--mode unattended'
+     validExitCodes = @(0)
+  }
+  Uninstall-ChocolateyPackage @UninstallArgs
+  Remove-Item (Split-Path $unexe) -Recurse -Force
+} else {
+  Throw "$packageName uninstaller not found!"
 }
-
-Uninstall-ChocolateyPackage @UninstallArgs
-
-Remove-Item (Split-Path $unexe) -Recurse -Force
-
 
 
 

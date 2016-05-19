@@ -32,21 +32,21 @@ The following package parameters can be set:
 
 * `/installDir:`_&lt;path&gt;_
 
-	The default location for Ortep3 is C:\Ortep3.  This package by default will install to a more standard, "%ProgramFiles(x86)%\Ortep3", but the directory can be customized.
-	
- * `/LicensePath:`_&lt;path&gt;_
+  The default location for Ortep3 is C:\Ortep3.  This package by default will install to a more standard, "%ProgramFiles(x86)%\Ortep3", but the directory can be customized.
+  
+* `/LicensePath:`_&lt;path&gt;_
 
     If you have a license file, "ORTEP3-License.txt", you can place it in "C:\Temp" (default) and this package will copy it to the proper location.  Adjust the location with this parameter.  The _path_ can be a file path or URL.
 
- * `/editor:`_&lt;path&gt;_ - Assign a text editor helper program other than Notepad.
- * `/povray:`_&lt;path&gt;_ - Assign an alternate path for POV-ray.
- * `/gsview:`_&lt;path&gt;_ - Assign an alternate path for GhostScript View or another PS file viewer.
- * `/graphics:`_&lt;path&gt;_ - Assign a graphics viewer helper program other than IrfanView (for example, XnView).
- * `/hpgl:`_&lt;path&gt;_ - Assign an alternate path for HP-GL View or another HP-GL file viewer.
+* `/editor:`_&lt;path&gt;_ - Assign a text editor helper program other than Notepad.
+* `/povray:`_&lt;path&gt;_ - Assign an alternate path for POV-ray.
+* `/gsview:`_&lt;path&gt;_ - Assign an alternate path for GhostScript View or another PS file viewer.
+* `/graphics:`_&lt;path&gt;_ - Assign a graphics viewer helper program other than IrfanView (for example, XnView).
+* `/hpgl:`_&lt;path&gt;_ - Assign an alternate path for HP-GL View or another HP-GL file viewer.
 
 These parameters can be passed to the installer with the use of `-params`.
 For example : 
-	`-params '"/LicensePath:http://localsite.org/ortep3license.txt /editor:""C:\Program Files (x86)\Notepad++\notepad++.exe"""'`.
+  `-params '"/LicensePath:http://localsite.org/ortep3license.txt /editor:""C:\Program Files (x86)\Notepad++\notepad++.exe"""'`.
 _(note: the double-double quotes around the path are only needed if it contains spaces)_
 
 #### Features

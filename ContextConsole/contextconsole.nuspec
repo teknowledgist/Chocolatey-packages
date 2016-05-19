@@ -12,7 +12,9 @@
     <projectUrl>http://code.kliu.org/cmdopen/</projectUrl>
     <projectSourceUrl>http://code.kliu.org/cmdopen/downloads/CmdOpenSource-latest.7z</projectSourceUrl>
     <bugTrackerUrl>http://code.kliu.org/tracker/</bugTrackerUrl>
-    <description>### Features
+    <description>The ContextConsole Shell Extension adds an "Open Command Prompt" menu item to the context menus (right-click menus) in Windows Explorer so that you can open a command prompt in the selected directory (or directories) or in the current directory that you are viewing.
+
+### Features
 * Open a command prompt in the current directory and in multiple directories at once.
 
   You can open a command prompt in the directory that you are currently in by right-clicking on any empty screen space in the directory. This eliminates the need to navigate up a level in order to open a command prompt in the current directory, which was one of the biggest shortcomings of [Microsoft's Open Command Window Here PowerToy](http://www.microsoft.com/windowsxp/downloads/powertoys/xppowertoys.mspx).
@@ -44,6 +46,6 @@
     <summary>Adds an "Open Command Prompt" contextual menu item.</summary>
     <releaseNotes>http://code.kliu.org/cmdopen/changelog.html</releaseNotes>
     <copyright>Copyright © 2007-2011 Kai Liu</copyright>
-    <tags>contextconsole context menu cmd dos windows explorer</tags>
+    <tags>contextconsole context menu cmd dos windows explorer admin</tags>
   </metadata>
 </package>
