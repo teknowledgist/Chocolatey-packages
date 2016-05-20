@@ -5,7 +5,7 @@ $PackageDir   = Split-Path (Split-Path -parent $MyInvocation.MyCommand.Definitio
 $DownloadDir  = Join-Path $PackageDir 'Download'
 $SupportedApps = 'Firefox','Pale Moon','Cyberfox'
 
-# This is the URL to get it from Mozilla
+# This is the URL to get the "approved" version from Mozilla
 #$DownloadUrl  = 'https://addons.mozilla.org/firefox/downloads/latest/607454/addon-607454-latest.xpi'
 # The following will get the latest release on GitHub
 $request = [System.Net.WebRequest]::Create('https://github.com/gorhill/uBlock/releases/latest')
@@ -37,16 +37,6 @@ if ($env:chocolateyPackageParameters) {
     else { Throw 'Package Parameters were found but were invalid (REGEX Failure)' }
 } else { Write-Debug 'No Package Parameters Passed in' }
 
-if ($UserArguments.ContainsKey('AllUsers')) {
-   Write-Host 'You want to install uBlock Origin for current users (as well as future users).'
-   $SubDir = 'browser\extensions'
-   if ($UserArguments.ContainsKey('AutoEnable')) {
-      Write-Host 'You want application-scope Add-ons to be automatically enabled.'
-   }
-} else {
-   $SubDir = 'Distribution\Extensions'
-}
-
 $InstallFor = $SupportedApps
 
 foreach ($app in $SupportedApps) {
@@ -55,23 +45,6 @@ foreach ($app in $SupportedApps) {
       $InstallFor = $InstallFor | Where-Object {$_ -notmatch $app}
    }
 }
-
-<#
-if ($UserArguments.ContainsKey('NotFirefox')) {
-   Write-Host 'You do not want to install for Firefox.'
-   $InstallFor = $InstallFor | Where-Object {$_ -notmatch 'Firefox'}
-}
-
-if ($UserArguments.ContainsKey('NotPaleMoon')) {
-   Write-Host 'You do not want to install for Pale Moon.'
-   $InstallFor = $InstallFor | Where-Object {$_ -notmatch 'Pale Moon'}
-}
-
-if ($UserArguments.ContainsKey('NotCyberfox')) {
-   Write-Host 'You do not want to install for Cyberfox.'
-   $InstallFor = $InstallFor | Where-Object {$_ -notmatch 'Cyberfox'}
-}
-#>
 
 $AppRegex = $InstallFor -join '|'
 
@@ -91,6 +64,16 @@ If (-not $Browsers) {
 } else {
    # Download plugin
    Get-ChocolateyWebFile $packageName $DownloadDir $DownloadURL
+}
+
+if ($UserArguments.ContainsKey('AllUsers')) {
+   Write-Host 'You want to install uBlock Origin for current users (as well as future users).'
+   $SubDir = 'browser\extensions'
+   if ($UserArguments.ContainsKey('AutoEnable')) {
+      Write-Host 'You want application-scope Add-ons to be automatically enabled.'
+   }
+} else {
+   $SubDir = 'Distribution\Extensions'
 }
 
 foreach ($Browser in $Browsers) {

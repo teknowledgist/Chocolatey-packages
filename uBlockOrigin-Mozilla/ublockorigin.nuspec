@@ -28,31 +28,31 @@ Currently, this package installs the latest uBlock Origin for the following Mozi
 
 If none of those browsers are present, the installer will halt.
 
-### Note
-This package installs uBlock Origin as a default plugin.  This means when a user first starts a supported browser, uBlock Origin will be an installed and enabled add-on for the user.  Each user has the ability to disable or remove uBlock Origin for their profile.  The default install does not affect users who already have a browser profile.
+## Important Subtleties
+Chocolatey is a *machine* package manager, but browser add-ons are profile-based.  The intersection creates some compromises.  
+
+#### Installing
+By default, this package installs uBlock Origin as a *default* plugin.  This means uBlock&#8320; will be an installed and enabled add-on for *new profiles only* and *does not affect existing browser profiles*.  Each new user will have the ability to disable or remove uBlock&#8320; for their profile without affecting the Chocolatey install.
+
+#### Uninstalling
+Removing a default install will *NOT remove uBlock Origin from browser profiles* that have it, but it will prevent future, new, browser profiles from getting it when they are created.  
 
 ### Options
 The following package parameters can be set:
 
 * `/AllUsers`
 
-    uBlock Origin will be additionally be available to users who already have a browser profile.  Without the /`AutoEnable` parameter, uBlock Origin will be disabled at first.  Users will have the option to enable/disable but cannot remove the add-on.
+    uBlock Origin will be additionally be available to users who already have a browser profile.  Without the /`AutoEnable` parameter, uBlock Origin will be disabled, and users will have the option to enable/disable but not remove the add-on.  Uninstalling the package that was installed with this switch will remove uBlock Origin for all users.
 
 * `/AutoEnable`
 
     ublock Origin will be enabled for all users.  This only works in conjunction with the `/AllUsers` parameter, and will modify/create a couple settings files for the browser(s) if needed.  Uninstalling this package should remove the settings.
     
-* `/NoFirefox`
-
-    Don't install for Firefox.
+* `/NoFirefox` -- Don't install for Firefox.
     
-* `/NoPaleMoon`
-
-    Don't install for Pale Moon.
+* `/NoPaleMoon` -- Don't install for Pale Moon.
     
-* `/NoCyberfox`
-
-    Don't install for Cyberfox.
+* `/NoCyberfox` -- Don't install for Cyberfox.
     
 These parameters can be passed to the installer with the use of `-params`.
 For example: 
