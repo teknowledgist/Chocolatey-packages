@@ -130,6 +130,29 @@ foreach ($Browser in $Browsers) {
                      Write-Debug "$cfgPath' file is empty.  Will populate."
                   } else {
                      # Unobscure contents (if needed)
+                     Function Get-rotX {
+                        param (
+                           [Parameter(Mandatory=$true)][string]$String,
+                           [int]$n = 13
+                        )
+
+                        $Alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+                        If ($n%26 -eq 0) { Return $String }
+                        If ($n%26 -lt 0) {$n = 26 + $n%26 }
+                        $Cipher = ($Alphabet[($n%26)..25] + $Alphabet[0..(($n%26)-1)]) -join ''
+
+                        $Alphabet += $Alphabet.ToLower()
+                        $Cipher += $Cipher.ToLower()
+
+                        Foreach($Char in $String.ToCharArray()) {
+                           If ( $Char -match '[A-Za-z]' ) { 
+                              $NewString += $Cipher.Chars($Alphabet.IndexOf($Char))
+                           } else { $NewString += $Char }
+                        }
+                        Return $NewString
+                     } #end Get-rotX function
+
                      if ($n -ne 0) { $cfgfile = $cfgfile | % {Get-rotX $_ $n} }
 
                      if (($cfgfile -join "`n") -match '(.*(extensions\.autoDisableScopes).+?)(?<scopes>\d+)(.*)') {

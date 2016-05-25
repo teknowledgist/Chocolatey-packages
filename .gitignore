@@ -231,3 +231,4 @@ pip-log.txt
 *.nupkg
 
 *.nupkg
+*.db
