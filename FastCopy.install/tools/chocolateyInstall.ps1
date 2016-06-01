@@ -42,6 +42,6 @@ $ScriptDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 # Win7 complains the installer didn't run correctly.  This will prevent that.
 Set-Variable __COMPAT_LAYER=!Vista
 
-& AutoHotKey $(Join-Path $ScriptDir 'chocolateyInstall.ahk') $NoSubs
-& $(Join-Path (Split-Path $ZipPath) 'setup.exe')
+& AutoHotKey $(Join-Path $ScriptDir 'chocolateyInstall.ahk') $(Join-Path (Split-Path $ZipPath) 'setup.exe') $NoSubs
+
 

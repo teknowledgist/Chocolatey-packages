@@ -9,7 +9,6 @@ $PackageDir = Split-Path $ScriptDir
 Set-Variable __COMPAT_LAYER=!Vista
 
 & AutoHotkey.exe $(Join-Path $ScriptDir 'chocolateyUninstall.ahk')
-& $(Join-Path $env:ProgramFiles 'FastCopy\setup.exe')
 
 # It's not clear what uninstall does, but it does not remove the application.
 if (Test-Path (Join-Path $env:ProgramFiles 'FastCopy')) {
