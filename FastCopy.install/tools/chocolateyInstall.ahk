@@ -1,14 +1,13 @@
 ; First, install
-Run, %1%
+Run, %1%, , Min
 winWait, FastCopy Setup
-ControlClick, Start,FastCopy Setup
+ControlClick, Start, FastCopy Setup
 WinWait, Install, Starting
-ControlClick, Button1,Install
+ControlClick, OK, Install
 WinWait, Install, The setup was completed
-ControlClick, Button2,Install
+ControlClick, Launch, Install
 
 ; Next, add/update shell extensions
-Run, c:\Program Files\FastCopy\FastCopy.exe
 WinWait, FastCopy ver
 WinMenuSelectItem, FastCopy ver, ,Option,Extensions,Shell Extension
 WinWait, Shell Extension Settings

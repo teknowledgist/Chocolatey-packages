@@ -1,19 +1,17 @@
-; Uninstall is an option in the installer
-; First, remove shell extensions
-Run, c:\Program Files\FastCopy\FastCopy.exe
-WinWait, FastCopy ver
-WinMenuSelectItem, FastCopy ver, ,Option,Extensions,Shell Extension
-WinWait, Shell Extension Settings
-ControlClick, Uninstall, Shell Extension Settings
-WinClose Shell Extension Settings
-WinClose FastCopy ver
-
-; Second, run the uninstall
-Run, c:\Program Files\FastCoy\setup.exe
+; Uninstall
+Run, c:\Program Files\FastCopy\setup.exe, , Min, setupID
 WinWait, FastCopy Setup
-ControlSend, 2. Uninstall, {space},FastCopy Setup
-ControlSend, Start, {space},FastCopy Setup
-WinWait, UnInstall,Starting
-ControlSend, OK, {space},UnInstall
-WinWait, msg,Uninstallation
-ControlSend, OK, {space},msg
+ControlClick, 2. Uninstall, FastCopy Setup
+ControlClick, Start, FastCopy Setup
+WinWait, UnInstall, Starting
+ControlClick, OK, UnInstall
+WinWait, msg, shell extention
+ControlClick, OK, msg
+
+; and close the windows containing what the user is supposed to manually delete
+WinWait, , %ProgramFiles%\FastCopy, 0
+WinClose, , %ProgramFiles%\FastCopy
+WinWait, , %APPDATA%\FastCopy, 0
+WinClose, , %APPDATA%\FastCopy
+
+Process, WaitClose, setupID, 2

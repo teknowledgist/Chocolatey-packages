@@ -15,6 +15,8 @@ Get-ChocolateyWebFile $packageName $ZipPath $url
 # Extract zip
 Get-ChocolateyUnzip $ZipPath $WorkingDir
 
+$UserArguments = @{}
+
 # Parse the packageParameters using good old regular expression
 if ($env:chocolateyPackageParameters) {
    $match_pattern = "\/(?<option>([a-zA-Z]+)):(?<value>([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)|\/(?<option>([a-zA-Z]+))"
