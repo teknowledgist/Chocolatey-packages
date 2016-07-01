@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>gwr4</id>
+    <version>4.09</version>
+    <title>Geographically Weighted Regression Software</title>
+    <authors>Tomoki Nakaya</authors>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/GWR4</packageSourceUrl>
+    <licenseUrl>https://geodacenter.asu.edu/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>https://geodacenter.asu.edu/gwr_software</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/geoda/gwr4_icon.png</iconUrl>
+    <docsUrl>http://geodacenter.org/downloads/unprotected/GWR4manual_409.pdf</docsUrl>
+    <mailingListUrl>http://gwr.nuim.ie/?q=forum</mailingListUrl>
+    <description>GWR 4.0 is a software tool for modeling varying relationships among variables by calibrating Geographically Weighted Regression (GWR) and Geographically Weighted Generalized Linear Models (GWGLM) with their semi-parametric variants. 
+
+Geographically Weighted Regression (GWR) is a method of analyzing spatially varying relationships. It is increasingly being used in geography and other disciplines who deal with spatial data. GWR allows individuals explore and understand the spatial distribution of variables or processes by fitting a regression equation to any point in space – this provides a powerful framework for exploring spatial heterogeneity and understanding spatial relationships.
+
+You can find a convenient treatment of GWR in the book *Geographically Weighted Regression: the analysis of spatially varying relationships*, available from [Amazon](https://www.amazon.com/Geographically-Weighted-Regression-Spatially-Relationships/dp/0471496162) and [Wiley](http://www.wiley.com/WileyCDA/WileyTitle/productCd-0471496162.html). 
+    </description>
+    <summary>A tool for modeling relationships among variables through Geographically Weighted Regression</summary>
+    <releaseNotes>https://geodacenter.asu.edu/gwr_software</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2013" version="12.0"/>
+      <dependency id="dotnet4.0" version="4.0"/>
+    </dependencies>
+    <copyright>Copyright © 2009-20016 GWR 4 Development Team</copyright>
+    <tags>GWR geospatial modeling statistics maps gis admin</tags>
+  </metadata>
+</package>
