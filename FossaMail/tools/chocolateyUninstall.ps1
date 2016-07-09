@@ -1,19 +1,14 @@
 $packageName = 'fossamail'
 
+# same key on 32-bit and 64-bit systems
 $RegistryLocation = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall'
-
-# different key for 32-bit installs on 64-bit systems
-$BitLevel = Get-ProcessorBits
-If ($BitLevel -eq '64') {
-   $RegistryLocation = 'HKLM:\Software\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall'
-}
-
 $unexe = Get-ItemProperty "$RegistryLocation\*" | 
                      Where-Object { $_.displayname -match 'FossaMail'} |
                      Select-Object -ExpandProperty UninstallString
 
-
-if (Test-Path $unexe) {
+if ([string]::IsNullOrEmpty($unexe)) {
+	Throw "$packageName is not installed!"
+} elseif (Test-Path -Path $unexe) {
   $UninstallArgs = @{
      packageName = $packageName
      fileType = 'exe'
@@ -22,10 +17,6 @@ if (Test-Path $unexe) {
      validExitCodes = @(0)
   }
   Uninstall-ChocolateyPackage @UninstallArgs
-
 } else {
   Throw "$packageName uninstaller not found!"
 }
-
-
-
