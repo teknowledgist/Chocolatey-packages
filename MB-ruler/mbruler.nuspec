@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>mbruler</id>
+    <version>5.3</version>
+    <title>MB-Ruler</title>
+    <authors>Markus Bader</authors>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/MB-Ruler</packageSourceUrl>
+    <licenseUrl>http://www.markus-bader.de/MB-Ruler/purchaselicense.php</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://www.markus-bader.de/MB-Ruler/index.php</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/MB-Ruler_icon.png</iconUrl>
+    <docsUrl>http://www.markus-bader.de/MB-Ruler/tutorial.php</docsUrl>
+    <mailingListUrl>http://www.markus-bader.de/MB-Ruler/maillist.php</mailingListUrl>
+    <bugTrackerUrl>http://mb-ruler.idea.informer.com/</bugTrackerUrl>
+    <description>MB-Ruler helps you to measure distances and angles on the screen and distances on a map.
+
+The set square with integrated protractor is almost transparent, so you can have it on the screen, while you are working with the applications below.
+
+Additionally it has a screen loupe function, a RGB value window and you can place temporary points, lines, rectangles, ellipses, polylines, texts and bitmaps as markers on the screen. 
+    </description>
+    <summary>A triangular screen ruler for on-screen measurements.</summary>
+    <releaseNotes>http://www.markus-bader.de/MB-Ruler/download.php</releaseNotes>
+    <dependencies></dependencies>
+    <copyright>Copyright © 2003-2015 Markus Bader</copyright>
+    <tags>ruler measure distance scale protractor angle notsilent admin</tags>
+  </metadata>
+</package>
