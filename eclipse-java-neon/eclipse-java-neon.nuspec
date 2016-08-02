@@ -15,8 +15,7 @@
     <docsUrl>https://help.eclipse.org/</docsUrl>
     <mailingListUrl>https://dev.eclipse.org/mailman/listinfo</mailingListUrl>
     <bugTrackerUrl>https://bugs.eclipse.org/bugs/enter_bug.cgi</bugTrackerUrl>
-    <description>The essential tools for any Java developer.</description>
-    <summary>The essential tools for any Java developer, including a Java IDE, a Git client, XML Editor, Mylyn, Maven and Gradle integration
+    <description>The essential tools for any Java developer, including a Java IDE, a Git client, XML Editor, Mylyn, Maven and Gradle integration
 
 ####This package includes:
 
@@ -26,7 +25,8 @@
 * Mylyn Task List
 * Code Recommenders Tools for Java Developers
 * Eclipse XML Editors and Tools
-    </summary>
+</description>
+    <summary>The essential tools for any Java developer.</summary>
     <releaseNotes>https://www.eclipse.org/neon/noteworthy/</releaseNotes>
     <copyright />
     <tags>eclipse java development neon admin</tags>

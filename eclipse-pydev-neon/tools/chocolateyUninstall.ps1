@@ -5,7 +5,7 @@ if (Test-Path $InstallDir) {
 }
 
 $desktop = $([Environment]::GetFolderPath([Environment+SpecialFolder]::CommonDesktopDirectory))
-$shortcut = Join-Path $desktop 'Eclipse IDE (neon).lnk'
+$shortcut = Join-Path $desktop 'PyDev IDE (Neon).lnk'
  
 if (Test-Path $shortcut) {
     Write-Debug 'Found the desktop shortcut. Deleting it...'
