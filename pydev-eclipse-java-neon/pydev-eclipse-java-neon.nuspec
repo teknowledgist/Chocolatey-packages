@@ -1,12 +1,12 @@
 <?xml version="1.0"?>
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <id>eclipse-pydev-neon</id>
+    <id>pydev-eclipse-java-neon</id>
     <version>5.1.2</version>
-    <title>Eclipse IDE for Python developers (Neon)</title>
+    <title>Python IDE extension for Eclipse Java Neon</title>
     <authors>Fabio Zadrozny</authors>
     <owners>Teknowledgist</owners>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/eclipse-neon-pydev</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/pydev-eclipse-java-neon</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/eclipse_icon.png</iconUrl>
     <licenseUrl>http://www.eclipse.org/legal/epl-v10.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
