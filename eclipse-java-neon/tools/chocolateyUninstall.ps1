@@ -1,11 +1,3 @@
-<<<<<<< HEAD
-$InstallDir = Join-path (Split-path (Split-Path -parent $MyInvocation.MyCommand.Definition)) 'eclipse'
-if (Test-Path $InstallDir) {
-    Write-Debug 'Removing the application files...'
-    Remove-Item $InstallDir -Recurse -Force
-}
-
-=======
 $packageName = 'eclipse-java-neon'
 
 $zipFileName = 'eclipse-java-neon-R-win32.zip'
@@ -15,9 +7,8 @@ if (Get-OSArchitectureWidth -eq 64) {
 
 Uninstall-ChocolateyZipPackage $packageName $zipFileName
 
->>>>>>> origin/master
-$desktop = $([Environment]::GetFolderPath([Environment+SpecialFolder]::CommonDesktopDirectory))
-$shortcut = Join-Path $desktop 'Eclipse IDE (neon).lnk'
+$desktop = $([Environment]::GetFolderPath('CommonDesktopDirectory'))
+$shortcut = Join-Path $desktop 'Eclipse Java IDE (Neon).lnk'
  
 if (Test-Path $shortcut) {
     Write-Debug 'Found the desktop shortcut. Deleting it...'
