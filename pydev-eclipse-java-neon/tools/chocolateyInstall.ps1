@@ -1,20 +1,21 @@
-$EclipseInstallArgs = @{
-   PackageName = 'eclipse-neon'
-   Url = 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/R/eclipse-java-neon-R-win32.zip&r=1'
-   Url64 = 'https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/neon/R/eclipse-java-neon-R-win32-x86_64.zip&r=1'
-   UnzipLocation = Split-path (Split-Path -parent $MyInvocation.MyCommand.Definition)
-}
-Install-ChocolateyZipPackage @EclipseInstallArgs
+$ErrorActionPreference = 'Stop'  # stop on all errors
 
-$PyDevInstallArgs = @{
+$ZipArgs = @{
    PackageName = 'pydev'
    Url = 'https://sourceforge.net/projects/pydev/files/latest/download'
-   UnzipLocation = (Get-ChildItem $EclipseInstallArgs.UnzipLocation -filter dropins -Recurse).fullname
+   Checksum = 'F8C8258431CDC4B84D4D346902B32F67BF6519D7'
+   ChecksumType = 'sha1'
 }
-Install-ChocolateyZipPackage @PyDevInstallArgs
 
+$HostPackage = 'eclipse-java-neon'
+$HostPackageLocation = "$env:ChocolateyInstall\lib\$HostPackage"
+$HostUnzipLog = Get-ChildItem $HostPackageLocation -Filter "$HostPackage*.zip.txt"
+If ($HostUnzipLog) {
+   $HostInstallLocation = Get-Content $HostUnzipLog.FullName | Select-Object -First 1
+} else {
+   throw "Chocolatey package $HostPackage install location not found!"
+}
 
-$shortcut = Join-Path ([Environment]::GetFolderPath('CommonDesktopDirectory')) 'PyDev IDE (Neon).lnk'
-$target = (Get-ChildItem $EclipseInstallArgs.UnzipLocation -include eclipse.exe -Recurse).fullname
+$ZipArgs.add('UnzipLocation', (Get-ChildItem $HostInstallLocation -filter dropins -Recurse).fullname)
 
-Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $target
+Install-ChocolateyZipPackage @ZipArgs

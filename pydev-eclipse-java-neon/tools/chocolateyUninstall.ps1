@@ -1,9 +1,6 @@
+$packageName = 'pydev-eclipse-java-neon'
 
-$desktop = $([Environment]::GetFolderPath([Environment+SpecialFolder]::CommonDesktopDirectory))
-$shortcut = Join-Path $desktop 'PyDev IDE (Neon).lnk'
- 
-if (Test-Path $shortcut) {
-    Write-Debug 'Found the desktop shortcut. Deleting it...'
-    Remove-Item $shortcut -Force
-}
+# This avoids having to modify uninstall if the zip install file changes names
+$installedZipFile = (Get-ChildItem $env:chocolateyPackageFolder -filter '*.zip.txt').name.trim('.txt')
 
+Uninstall-ChocolateyZipPackage  $packageName $installedZipFile

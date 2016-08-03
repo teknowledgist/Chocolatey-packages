@@ -7,7 +7,7 @@
     <authors>Fabio Zadrozny</authors>
     <owners>Teknowledgist</owners>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/pydev-eclipse-java-neon</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/eclipse_icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/PyDev_icon.png</iconUrl>
     <licenseUrl>http://www.eclipse.org/legal/epl-v10.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>http://www.pydev.org</projectUrl>
@@ -15,7 +15,7 @@
     <docsUrl>http://www.pydev.org/manual.html</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/pydev/mailman/</mailingListUrl>
     <bugTrackerUrl>https://stackoverflow.com/questions/tagged/pydev</bugTrackerUrl>
-    <description>PyDev is a Python IDE for Eclipse which may be used in Python, Jython and IronPython development (and is among the leading tools for Python coding).
+    <description>PyDev is a Python IDE extension for Eclipse which may be used for Python, Jython and IronPython development (and is among the leading tools for Python coding).
 
 It comes with many goodies such as:
 
@@ -36,7 +36,7 @@ It comes with many goodies such as:
 - Find References (Ctrl+Shift+G)
 - and [many others](http://www.pydev.org/manual_adv_features.html).
 
-This package installs Eclipse (Neon) with the PyDev extension preinstalled.  This is independent of any other Eclipse package because as PyDev is installed "inside" Eclipse, PyDev can't be independely managed by Chocolatey. (I.E. Chocolatey updates to Eclipse would break PyDev.)
+**This package installs the PyDev extension into only a Chocolately-installed, *Eclipse-Java-Neon* package.**  
 </description>
     <summary>A Python IDE for Eclipse.</summary>
     <releaseNotes>http://www.pydev.org/history_pydev.html</releaseNotes>
@@ -44,6 +44,7 @@ This package installs Eclipse (Neon) with the PyDev extension preinstalled.  Thi
     <tags>pydev eclipse neon IDE python development admin</tags>
     <dependencies>
       <dependency id="jdk8" version="8.0"/>
+      <dependency id="eclipse-java-neon" version="4.6"/>
     </dependencies>
   </metadata>
 </package>

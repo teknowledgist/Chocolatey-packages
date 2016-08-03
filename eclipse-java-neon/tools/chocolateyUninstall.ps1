@@ -8,11 +8,7 @@ if (Get-OSArchitectureWidth -eq 64) {
 Uninstall-ChocolateyZipPackage $packageName $zipFileName
 
 $desktop = $([Environment]::GetFolderPath('CommonDesktopDirectory'))
-<<<<<<< HEAD
-$shortcut = Join-Path $desktop 'Eclipse IDE (neon).lnk'
-=======
 $shortcut = Join-Path $desktop 'Eclipse Java IDE (Neon).lnk'
->>>>>>> origin/master
  
 if (Test-Path $shortcut) {
     Write-Debug 'Found the desktop shortcut. Deleting it...'
