@@ -23,7 +23,7 @@ Included in LAStools is the open-source LiDAR compressor, LASzip, which is the d
 
 ####[License note](http://www.cs.unc.edu/~isenburg/lastools/LICENSE.txt)
 There are TWO parts to LAStools. One part is OPEN source (LGPL 2.1). The other part is CLOSED source and requires licensing for most commercial or government use. For education and evaluation purposes you can use and test LAStools as much as you need to.
-	</description>
+    </description>
     <summary>Efficient tools for LiDAR processing</summary>
     <releaseNotes>http://www.cs.unc.edu/~isenburg/lastools/download/CHANGES.txt</releaseNotes>
     <copyright>Copyright © 2007-2015, rapidlasso GmbH</copyright>
