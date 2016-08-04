@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>fusion-ldv</id>
+    <version>3.50</version>
+    <title>Fusion LiDAR Data Viewing system</title>
+    <authors>Bob McGaughey</authors>
+    <owners>Teknowledgist</owners>
+    <licenseUrl>http://forsys.cfr.washington.edu/fusion/fusionlatest.html</licenseUrl>
+    <projectUrl>http://forsys.cfr.washington.edu/fusion.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/Fusion-LDV_icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>The Fusion LDV visualization system consists of two main programs, FUSION and LDV (LiDAR data viewer), implemented as Microsoft Windows applications coded in C++ using the Microsoft Foundation Classes. The primary FUSION display presents all project data using a 2D display typical of geographic information systems. It supports a variety of data types and formats but requires that all data be geo-referenced using the same projection system and units of measurement. LDV provides the 3D visualization environment, based on OpenGL, for the examination of spatially-explicit data subsets. 
+    
+    LiDAR technology offers fast, real-time collection of 3-D points that are accurately geo-referenced.</description>
+    <summary>A public domain LiDAR visualization system.</summary>
+    <releaseNotes>http://forsys.cfr.washington.edu/fusion/fusionnotes.txt</releaseNotes>
+    <tags>fusion LiDAR geographic GIS mapping public admin</tags>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/fusion-ldv</packageSourceUrl>
+    <docsUrl>http://forsys.cfr.washington.edu/fusion/FUSION_manual.pdf</docsUrl>
+    <dependencies>
+      <dependency id="lastools" version="2016.7" />
+    </dependencies>
+  </metadata>
+</package>
