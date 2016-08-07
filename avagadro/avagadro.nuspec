@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>avogadro</id>
+    <version>1.2.0</version>
+    <title>Avogadro</title>
+    <authors>Marcus D Hanwell, Tim Vandermeersch, Geoffrey R Hutchison</authors>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/avogadro</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/Avogadro_icon.png</iconUrl>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://avogadro.cc</projectUrl>
+    <projectSourceUrl>https://sourceforge.net/projects/avogadro/files/avogadro/</projectSourceUrl>
+    <docsUrl>http://avogadro.cc/wiki/Documentation</docsUrl>
+    <mailingListUrl>http://avogadro.cc/wiki/Contact</mailingListUrl>
+    <description>Avogadro is an advanced molecule editor and visualizer designed for cross-platform use in computational chemistry, molecular modeling, bioinformatics, materials science, and related areas. It offers flexible high quality rendering and a powerful plugin architecture.
+
+* Cross-Platform: Molecular builder/editor for Windows, Linux, and Mac OS X.
+* Free, Open Source: Easy to install and all source code is available under the GNU GPL.
+* International: Translations into Chinese, French, German, Italian, Russian, Spanish, and others, with more languages to come.
+* Intuitive: Built to work easily for students and advanced researchers both.
+* Fast: Supports multi-threaded rendering and computation.
+* Extensible: Plugin architecture for developers, including rendering, interactive tools, commands, and Python scripts.
+* Flexible: Features include Open Babel import of chemical files, input generation for multiple computational chemistry packages, crystallography, and biomolecules.
+    </description>
+    <summary>An intuitive molecular editor and visualization tool </summary>
+    <releaseNotes>https://sourceforge.net/projects/avogadro/files/avogadro/1.2.0/</releaseNotes>
+    <tags>avogadro chemistry molecular science visualization admin</tags>
+  </metadata>
+</package>
