@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>jana2006</id>
+    <version>2015.10.25</version>
+    <title>Jana2006</title>
+    <authors>Vaclav Petricek, Michal Dusek, Lukas Palatinus</authors>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/jana2006</packageSourceUrl>
+    <licenseUrl></licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://www-xray.fzu.cz/jana/jana.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/jana2006_icon.png</iconUrl>
+    <mailingListUrl>http://www.xrayforum.co.uk/jana</mailingListUrl>
+    <description>Jana2006 is a crystallographic program focused to solution, refinement and interpretation of difficult, especially modulated structures. It calculates structures having up to three modulation vectors from powder as well as single crystal data measured with X-ray or neutron diffraction. The input diffraction data can be unlimitedly combined, the combination of powder neutron data with single crystal X-ray data being a typical example. The structure solution can be done using the built-in charge flipping algorithm or by calling an external direct methods program. Jana can handle multiphase structures (for both powder and single crystal data), merohedric twins as well as twins with partial overlap of diffraction spots, commensurate and composite structures. It contains powerful transformation tools for symmetry (group-subgroup relations), cell parameters and commensurate-supercell relations. Wide scale of constrains and restrains is available including a powerful rigid body approach and possibility to define a local symmetry affecting only part of the structure. 
+</description>
+    <summary>Crystallographic Computing System for Standard and Modulated Structures </summary>
+    <releaseNotes>http://www-xray.fzu.cz/jana/jana.html</releaseNotes>
+    <dependencies></dependencies>
+    <copyright></copyright>
+    <tags>jana crystallography chemistry admin</tags>
+  </metadata>
+</package>

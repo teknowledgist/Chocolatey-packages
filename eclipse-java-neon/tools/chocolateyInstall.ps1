@@ -9,7 +9,9 @@ $InstallArgs = @{
 }
 Install-ChocolateyZipPackage @InstallArgs
 
+$UnzipLog = Get-ChildItem $env:chocolateyPackageFolder -Filter "*.zip.txt"
+$InstallFolder = Get-Content $UnzipLog.FullName | Select-Object -First 1
+$target = (Get-ChildItem $InstallFolder -include eclipse.exe -Recurse).fullname
 $shortcut = Join-Path ([Environment]::GetFolderPath('CommonDesktopDirectory')) 'Eclipse Java IDE (Neon).lnk'
-$target = (Get-ChildItem $InstallArgs.UnzipLocation -include eclipse.exe -Recurse).fullname
 
 Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $target
