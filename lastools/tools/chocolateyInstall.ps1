@@ -2,7 +2,9 @@ $ErrorActionPreference = 'Stop'  # stop on all errors
 
 $ZipArgs = @{
    PackageName = 'lastools'
-   Url = 'http://www.cs.unc.edu/~isenburg/lastools/download/LAStools.zip'
+   Url = 'https://www.cs.unc.edu/~isenburg/lastools/download/LAStools.zip'
+   Checksum = '534c4b2f92ec850bf0b41af0822864734d275004'
+   ChecksumType = 'sha1'
    UnzipLocation = Split-Path (Split-Path -parent $MyInvocation.MyCommand.Definition)
 }
 
