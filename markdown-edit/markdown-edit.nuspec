@@ -6,14 +6,18 @@
     <title>Markdown Edit</title>
     <authors>Mike Ward</authors>
     <owners>Mike Ward, Teknowledgist</owners>
-    <licenseUrl>https://cdn.rawgit.com/mike-ward/Markdown-Edit/master/LICENSE.txt</licenseUrl>
-    <projectUrl>http://markdownedit.com</projectUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/markdown-edit</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/mike-ward/Markdown-Edit/master/src/MarkdownEdit/logo.png</iconUrl>
+    <licenseUrl>https://cdn.rawgit.com/mike-ward/Markdown-Edit/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://markdownedit.com</projectUrl>
+    <projectSourceUrl>https://github.com/mike-ward/Markdown-Edit/</projectSourceUrl>
+    <docsUrl>https://github.com/mike-ward/Markdown-Edit/wiki</docsUrl>
+	<bugTrackerUrl>https://github.com/mike-ward/Markdown-Edit/issues</bugTrackerUrl>
     <description>Markdown Edit is a Windows desktop CommonMark (a.k.a. Markdown) editor with an emphasis on content and keyboard shortcuts. There is minimal window chrome and most functions are accessed through keyboard shortcuts. There is no main menu, status bar, tabbed windows or other distractions.
 	
 ### Features
-* Open .html and .docx (Microsoft Word) files. They’re converted to Markdown auto-magically.
+* Open .html and .docx (Microsoft Word) files. Theyâ€™re converted to Markdown auto-magically.
 * Drag and drop to open files (yep, the conversion thing works for drag and drop).
 * Upload images to Imgur using drag and drop.
 * Keyboard snippets.
@@ -31,16 +35,14 @@
 * CommonMark and GitHub Markdown.
 * Modern UI with minimal distractions.
 * Open Source.
-* MIT License.</description>
+* MIT License.
+
+	</description>
     <summary>A full-featured Markdown editor for Windows with an emphasis on content and keyboard shortcuts</summary>
     <releaseNotes>http://markdownedit.com/markdown-edit-release-1-29</releaseNotes>
     <tags>markdown commonmark editor text admin</tags>
-    <projectSourceUrl>https://github.com/mike-ward/Markdown-Edit/</projectSourceUrl>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/markdown-edit</packageSourceUrl>
-    <docsUrl>https://github.com/mike-ward/Markdown-Edit/wiki</docsUrl>
-    <bugTrackerUrl>https://github.com/mike-ward/Markdown-Edit/issues</bugTrackerUrl>
     <dependencies>
-      <dependency id="DotNet4.6" version="4.6"/>
+      <dependency id="DotNet4.6" />
     </dependencies>
   </metadata>
 </package>

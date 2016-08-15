@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>qcad</id>
-    <version>3.14.3</version>
+    <version>3.15.4</version>
     <title>QCAD - 2D CAD </title>
     <authors>RibbonSoft, GmbH</authors>
     <owners>Teknowledgist,petervbeck</owners>
