@@ -15,6 +15,7 @@
     <licenseUrl>http://www.gnu.org/licenses/lgpl.html</licenseUrl>
     <mailingListUrl>http://lists.sourceforge.net/lists/listinfo/jmol-users</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/jmol/bugs/</bugTrackerUrl>
+    <summary>An interactive viewer for three-dimensional chemical structures.</summary>
     <description>Jmol is a free, open source molecule viewer for students, educators, and researchers in chemistry and biochemistry.
 	
  #### Features
@@ -86,6 +87,7 @@
 * JavaScript support library (Jmol.js)
 * Exports to jpg, png, gif, ppm, pdf, POV-Ray, Gaussian, Maya, vrml, x3d, idtf, web page.
 </description>
+    <releaseNotes>https://sourceforge.net/projects/jmol/files/Jmol/Version%2014.6/Version%2014.6.1/</releaseNotes>
     <tags>jmol chemistry molecule image viewer java</tags>
     <dependencies>
       <dependency id="jre8" version="8.0"/>
