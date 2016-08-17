@@ -19,7 +19,7 @@ if (Test-Path $logs) {
    $Acl = get-acl $logs
    $InheritanceFlag = [System.Security.AccessControl.InheritanceFlags]::ContainerInherit -bor [System.Security.AccessControl.InheritanceFlags]::ObjectInherit
    $PropagationFlag = [System.Security.AccessControl.PropagationFlags]::InheritOnly
-   $rule = New-Object  system.security.accesscontrol.filesystemaccessrule('Authenticated Users','Modify',$InheritanceFlag,$PropagationFlag,'Allow')
+   $rule = New-Object  system.security.accesscontrol.filesystemaccessrule('BUILTIN\Users','Modify',$InheritanceFlag,$PropagationFlag,'Allow')
    $Acl.setaccessrule($rule)
    set-acl $logs $Acl
 } else {
