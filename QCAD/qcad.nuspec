@@ -27,6 +27,6 @@ QCAD was designed with modularity, extensibility and portability in mind. But wh
     </description>
     <summary>The Open Source CAD System For Everyone</summary>
     <releaseNotes>http://www.qcad.org/en/changelog</releaseNotes>
-    <tags>qcad cad 2d drawing drafting admin notsilent</tags>
+    <tags>qcad cad 2d drawing drafting admin</tags>
   </metadata>
 </package>

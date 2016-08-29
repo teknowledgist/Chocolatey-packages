@@ -13,7 +13,7 @@ $installArgs = @{
 
 Install-ChocolateyZipPackage @installArgs
 
-$JavaExe = 'C:\ProgramData\Oracle\Java\javapath\javaw.exe'
+$JavaExe = "$env:ProgramData\Oracle\Java\javapath\javaw.exe"
 $target = (Get-ChildItem $installArgs.UnzipLocation -filter jmol.jar -Recurse).fullname
 $icon = Join-Path $installArgs.UnzipLocation "Jmol_icon13.ico"
 $launcher = Join-Path $installArgs.UnzipLocation 'Jmol Launcher.exe'
