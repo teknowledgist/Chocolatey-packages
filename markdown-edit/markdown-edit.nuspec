@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>markdown-edit</id>
+    <version>1.31</version>
+    <title>Markdown Edit</title>
+    <authors>Mike Ward</authors>
+    <owners>Mike Ward, Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/markdown-edit</packageSourceUrl>
+    <iconUrl>https://cdn.rawgit.com/mike-ward/Markdown-Edit/master/src/MarkdownEdit/logo.png</iconUrl>
+    <licenseUrl>https://cdn.rawgit.com/mike-ward/Markdown-Edit/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://markdownedit.com</projectUrl>
+    <projectSourceUrl>https://github.com/mike-ward/Markdown-Edit/</projectSourceUrl>
+    <docsUrl>https://github.com/mike-ward/Markdown-Edit/wiki</docsUrl>
+	<bugTrackerUrl>https://github.com/mike-ward/Markdown-Edit/issues</bugTrackerUrl>
+    <description>Markdown Edit is a Windows desktop CommonMark (a.k.a. Markdown) editor with an emphasis on content and keyboard shortcuts. There is minimal window chrome and most functions are accessed through keyboard shortcuts. There is no main menu, status bar, tabbed windows or other distractions.
+	
+### Features
+* Open .html and .docx (Microsoft Word) files. They’re converted to Markdown auto-magically.
+* Drag and drop to open files (yep, the conversion thing works for drag and drop).
+* Upload images to Imgur using drag and drop.
+* Keyboard snippets.
+* Alt+F will reformat your Markdown and wrap it to 80 columns.
+* A real editor, not a watered down text-area or rich-text control. (Thank you Avalon Edit!)
+* Loads fast.
+* Accurate syntax highlighting.
+* Live preview and user defined templates.
+* User settable fonts, colors, themes.
+* Word count, auto save, find and replace (including regular expressions).
+* As you type spell checking.
+* Quickly open recent files.
+* Remember last cursor position when opening file (optional).
+* Quickly navigate to the next or previous header (Ctrl+J Ctrl+U).
+* CommonMark and GitHub Markdown.
+* Modern UI with minimal distractions.
+* Open Source.
+* MIT License.
+
+	</description>
+    <summary>A full-featured Markdown editor for Windows with an emphasis on content and keyboard shortcuts</summary>
+    <releaseNotes>http://markdownedit.com/markdown-edit-release-1-29</releaseNotes>
+    <tags>markdown commonmark editor text admin</tags>
+    <dependencies>
+      <dependency id="DotNet4.5.2" />
+    </dependencies>
+  </metadata>
+</package>
