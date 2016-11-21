@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>geoda</id>
-    <version>1.8.10</version>
+    <version>1.8.14</version>
     <title>GeoDa</title>
     <authors>Center for Spatial Data Science (CSDS)</authors>
     <owners>Teknowledgist</owners>

@@ -1,4 +1,4 @@
-﻿$desktop = $([Environment]::GetFolderPath([Environment+SpecialFolder]::DesktopDirectory))
+﻿$desktop = ([System.Environment]::GetFolderPath('Desktop'))
 $shortcut = Join-Path $desktop 'Swiss-PdbViewer.lnk'
  
 if ([System.IO.File]::Exists($shortcut)) {

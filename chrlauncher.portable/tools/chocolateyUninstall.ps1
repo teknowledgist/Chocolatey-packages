@@ -1,5 +1,5 @@
 ﻿$PackageName = "chrlauncher.portable"
-$version = '1.9.1'
+$version = '1.9.4'
 $PackageDir = Split-path (Split-path $MyInvocation.MyCommand.Definition)
 
 Remove-Item (Join-path $PackageDir ($PackageName.split('.')[0] + $version)) -Recurse -Force

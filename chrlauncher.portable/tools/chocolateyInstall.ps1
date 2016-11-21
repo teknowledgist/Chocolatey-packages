@@ -1,8 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'  # stop on all errors
 
 $PackageName = "chrlauncher.portable"
-$version = '1.9.1'
+$version = '1.9.4'
 $Url = "https://github.com/henrypp/chrlauncher/releases/download/v.$version/chrlauncher-$version-without-ppapi-bin.zip" 
+$checkSum = '2AE995F2CC1E0ACE9B549C09CD78114BBBB2C087ABF0227BE842055843A4299D'
 
 $UserArguments = @{}
  
@@ -32,6 +33,7 @@ if ($env:chocolateyPackageParameters) {
 if ($UserArguments.ContainsKey('Flash')) {
    Write-Host 'You want the Flash Pepper Plugin API (PPAPI) included.'
    $URL = $Url.replace('-without-ppapi','')
+   $checkSum = 'F901A439F60F49FEB4DF8D43D405B0C8C214C7FA7E959C2BF33FE26B09FFE5F4'
 }
 
 $PackageDir = Split-path (Split-path $MyInvocation.MyCommand.Definition)
@@ -40,6 +42,8 @@ $InstallArgs = @{
    PackageName = $PackageName
    Url = $URL 
    UnzipLocation = (Join-path $PackageDir ($PackageName.split('.')[0] + $version))
+   checkSum = $checkSum
+   checkSumType = 'sha256'
 }
 Install-ChocolateyZipPackage @InstallArgs
 

@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>markdown-edit</id>
-    <version>1.29.1</version>
+    <version>1.31</version>
     <title>Markdown Edit</title>
     <authors>Mike Ward</authors>
     <owners>Mike Ward, Teknowledgist</owners>
@@ -42,7 +42,7 @@
     <releaseNotes>http://markdownedit.com/markdown-edit-release-1-29</releaseNotes>
     <tags>markdown commonmark editor text admin</tags>
     <dependencies>
-      <dependency id="DotNet4.6" />
+      <dependency id="DotNet4.5.2" />
     </dependencies>
   </metadata>
 </package>
