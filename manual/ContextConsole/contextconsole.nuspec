@@ -1,17 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>contextconsole</id>
-    <version>2.1.0</version>
+    <version>2.1.0.20161122</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/ContextConsole</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Context Console Shell Extension</title>
     <authors>Kai Liu</authors>
-    <owners>Teknowledgist</owners>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/ContextConsole</packageSourceUrl>
+    <projectUrl>http://code.kliu.org/cmdopen/</projectUrl>
+    <copyright>Copyright © 2007-2011 Kai Liu</copyright>
     <licenseUrl>http://code.kliu.org/cmdopen/license.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectUrl>http://code.kliu.org/cmdopen/</projectUrl>
     <projectSourceUrl>http://code.kliu.org/cmdopen/downloads/CmdOpenSource-latest.7z</projectSourceUrl>
     <bugTrackerUrl>http://code.kliu.org/tracker/</bugTrackerUrl>
+    <tags>contextconsole context menu cmd dos windows explorer admin</tags>
+    <summary>Adds an "Open Command Prompt" contextual menu item.</summary>
     <description>The ContextConsole Shell Extension adds an "Open Command Prompt" menu item to the context menus (right-click menus) in Windows Explorer so that you can open a command prompt in the selected directory (or directories) or in the current directory that you are viewing.
 
 ### Features
@@ -42,10 +48,10 @@
 * Support for network paths
 
   You can even open directories from [network paths](http://code.kliu.org/cmdopen/screenshots/network_prompt.png) (UNC paths).
-</description>
-    <summary>Adds an "Open Command Prompt" contextual menu item.</summary>
+    </description>
     <releaseNotes>http://code.kliu.org/cmdopen/changelog.html</releaseNotes>
-    <copyright>Copyright © 2007-2011 Kai Liu</copyright>
-    <tags>contextconsole context menu cmd dos windows explorer admin</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

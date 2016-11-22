@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>deepview</id>
+    <version>4.10.0.20161116</version>
+    <title>DeepView - Swiss PdbViewer</title>
+    <authors>Nicolas Guex, Alexandre Diemand, Manuel C. Peitsch, and Torsten Schwede</authors>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/deepview</packageSourceUrl>
+    <licenseUrl>http://spdbv.vital-it.ch/disclaim.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectUrl>http://spdbv.vital-it.ch/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/DeepView_icon.png</iconUrl>
+    <docsUrl>http://spdbv.vital-it.ch/main_guide.html</docsUrl>
+    <mailingListUrl>http://spdbv.vital-it.ch/feedback.html</mailingListUrl>
+    <bugTrackerUrl>http://spdbv.vital-it.ch/feedback.html</bugTrackerUrl>
+    <description>Swiss-PdbViewer (aka DeepView) is an application that provides a user friendly interface allowing to analyze several proteins at the same time. The proteins can be superimposed in order to deduce structural alignments and compare their active sites or any other relevant parts. Amino acid mutations, H-bonds, angles and distances between atoms are easy to obtain thanks to the intuitive graphic and menu interface.
+    
+Swiss-PdbViewer (aka DeepView) has been developped since 1994 by Nicolas Guex. Swiss-PdbViewer is tightly linked to SWISS-MODEL, an automated homology modeling server developed within the [Swiss Institute of Bioinformatics](http://www.isb-sib.ch/) (SIB) at the [Structural Bioinformatics Group](http://www.biozentrum.unibas.ch/schwede/index.html) at the Biozentrum in Basel.
+
+Working with these two programs greatly reduces the amount of work necessary to generate models, as it is possible to thread a protein primary sequence onto a 3D template and get an immediate feedback of how well the threaded protein will be accepted by the reference structure before submitting a request to build missing loops and refine sidechain packing.
+
+Swiss-PdbViewer can also read electron density maps, and provides various tools to build into the density. In addition, various modeling tools are integrated and residues can be mutated.
+
+Finally, as a special bonus, POV-Ray scenes can be generated from the current view in order to make stunning ray-traced quality images. An example can be found [here](http://spdbv.vital-it.ch/gallery.html). 
+</description>
+    <summary>Comparitive protein analysis</summary>
+    <copyright>Copyright © 1995-2012 Nicolas Guex</copyright>
+    <tags>deepview pdbviewer chemistry protein modeling</tags>
+  </metadata>
+</package>

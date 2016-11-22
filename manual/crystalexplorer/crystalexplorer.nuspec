@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>crystalexplorer</id>
-    <version>3.1</version>
+    <version>3.1.0.20161122</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/crystalexplorer</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Crystal Explorer</title>
     <authors>Dylan Jayatilaka,Daniel Grimwood,Stephen Wolff,Mark Spackman,Josh McKinnon,Mike Turner</authors>
-    <owners>Teknowledgist</owners>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/crystalexplorer</packageSourceUrl>
+    <projectUrl>http://crystalexplorer.scb.uwa.edu.au/index.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/CrystalExplorer_icon.png</iconUrl>
+    <copyright>Copyright © 2004-2010 The University of Western Australia. </copyright>
     <licenseUrl>http://crystalexplorer.scb.uwa.edu.au/licence.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://www.hirshfeldsurface.net/wiki</docsUrl>
-    <projectUrl>http://crystalexplorer.scb.uwa.edu.au/index.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/CrystalExplorer_icon.png</iconUrl>
+    <mailingListUrl>http://www.xrayforum.co.uk/viewforum.php?f=155</mailingListUrl>
+    <tags>crystalexplorer crystallography chemistry molecular visualization admin</tags>
+    <summary>CrystalExplorer is a full-featured molecular crystal visualization tool. </summary>
     <description>CrystalExplorer is a versatile and powerful tool for investigating intermolecular interactions and packing in crystalline materials using the full suite of Hirshfeld surface tools and ab initio quantum mechanical calculations.  It can be used to investigate many areas of solid-state chemistry including:
 
 * Intermolecular interactions
@@ -33,10 +40,10 @@ CrystalExplorer requires a license to run.  One will be provided free with [emai
 * You must not use the free version of CrystalExplorer to conduct commercial research, confidential research, or research that is not likely to be published in a peer-reviewed publication.
 * If you publish research including results from CrystalExplorer, you must cite CrystalExplorer as described in the About→CrystalExplorer window in the Application.
 * CrystalExplorer is provided as-is, and without warranty of any kind.
-  </description>
-    <summary>CrystalExplorer is a full-featured molecular crystal visualization tool. </summary>
+    </description>
     <releaseNotes>http://www.hirshfeldsurface.net/wiki/index.php/CrystalExplorer_3.1_Release_Notes</releaseNotes>
-    <copyright>Copyright © 2004-2010 The University of Western Australia. </copyright>
-  <tags>crystalexplorer crystallography chemistry molecular visualization admin</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

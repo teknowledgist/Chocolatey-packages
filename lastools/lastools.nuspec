@@ -1,20 +1,26 @@
 <?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>lastools</id>
-    <version>2016.07.30</version>
+    <version>2016.11.14</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/lastools</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>LAStools software suite for LiDAR processing</title>
     <authors>Martin Isenburg</authors>
-    <owners>Teknowledgist</owners>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/lastools</packageSourceUrl>
+    <projectUrl>https://rapidlasso.com/lastools/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/LAStools_icon.png</iconUrl>
+    <copyright>Copyright © 2007-2015, rapidlasso GmbH</copyright>
     <licenseUrl>http://www.cs.unc.edu/~isenburg/lastools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectUrl>https://rapidlasso.com/lastools/</projectUrl>
     <projectSourceUrl>http://www.cs.unc.edu/~isenburg/lastools/</projectSourceUrl>
     <docsUrl>http://www.cs.unc.edu/~isenburg/lastools/</docsUrl>
     <mailingListUrl>http://groups.google.com/group/lastools</mailingListUrl>
     <bugTrackerUrl>http://groups.google.com/group/lastools</bugTrackerUrl>
+    <tags>LAStools LiDAR LASzip geology mapping</tags>
+    <summary>Efficient tools for LiDAR processing</summary>
     <description>LAStools is a collection of highly efficient, batch-scriptable, multicore command line tools. It includes tools to classify, tile, convert, filter, raster, triangulate, contour, clip, and polygonize LiDAR data (to name just a few functions). All of the tools can also be run via a native GUI and are available as a LiDAR processing toolboxes for [ArcGIS](https://arcgis.com) versions 9.3, 10.0, 10.1, 10.2, or 10.3, for [QGIS](https://chocolatey.org/packages/QGIS) versions 1.8, 2.0, 2.2, 2.4, 2.6, 2.8, or 2.10, and for [ERDAS IMAGINE](http://www.hexagongeospatial.com/products/producer-suite/erdas-imagine) versions 14.0 and 15.1.
 
 LAStools is the fastest and most memory efficient solution for batch-scripted multi-core LiDAR processing and can turn billions of LiDAR points into useful products at blazing speeds and with low memory requirements. 
@@ -24,10 +30,10 @@ Included in LAStools is the open-source LiDAR compressor, LASzip, which is the d
 ####[License note](http://www.cs.unc.edu/~isenburg/lastools/LICENSE.txt)
 There are TWO parts to LAStools. One part is OPEN source (LGPL 2.1). The other part is CLOSED source and requires licensing for most commercial or government use. For education and evaluation purposes you can use and test LAStools as much as you need to.
     </description>
-    <summary>Efficient tools for LiDAR processing</summary>
     <releaseNotes>http://www.cs.unc.edu/~isenburg/lastools/download/CHANGES.txt</releaseNotes>
-    <copyright>Copyright © 2007-2015, rapidlasso GmbH</copyright>
-    <tags>LAStools LiDAR LASzip geology mapping</tags>
     <dependencies></dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
