@@ -6,8 +6,8 @@ $InstallArgs = @{
    packageName = 'fusion-ldv'
    installerType = 'exe'
    url = 'http://forsys.cfr.washington.edu/fusion/FUSION_Install.exe'
-   Checksum = '978d71d68cf3da88e2440e60558b679efffb4826'
-   ChecksumType = 'sha1'
+   Checksum = 'C99142A4CADFB1CB32FB1D9A68765C9558882084A829B0AFA901C49D43B3FFD2'
+   ChecksumType = 'sha256'
    silentArgs = "/S /D=$InstallPath"
    validExitCodes = @(0)
 }

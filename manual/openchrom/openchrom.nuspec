@@ -1,21 +1,27 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>openchrom</id>
-    <version>1.1.0</version>
+    <version>1.1.0.20161129</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/openchrom</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>OpenChrom Community Edition</title>
     <authors>Lablicate</authors>
-    <owners>Teknowledgist</owners>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/openchrom</packageSourceUrl>
+    <projectUrl>https://www.openchrom.net/home</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/openchrom_icon.png</iconUrl>
+    <copyright>Copyright (c) 2016 by Lablicate GmbH</copyright>
     <licenseUrl>http://www.eclipse.org/legal/epl-v10.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectUrl>https://www.openchrom.net/home</projectUrl>
     <projectSourceUrl>https://sourceforge.net/projects/openchrom/files/</projectSourceUrl>
     <docsUrl>https://wiki.openchrom.net</docsUrl>
-	<bugTrackerUrl>https://sourceforge.net/p/openchrom/bugs/</bugTrackerUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/openchrom/bugs/</bugTrackerUrl>
+    <tags>openchrom chromatography chemistry spectometry admin</tags>
+    <summary>A tool for gas chromatography and mass spectrometry</summary>
     <description>OpenChrom® Community Edition is a free, extendable and easy-to-use software tool for chromatographic and mass spectrometric data analysis based on the [Eclipse Rich Client Platform (RCP)](http://wiki.eclipse.org/index.php/Rich_Client_Platform). Its focus is on handling mass spectrometry data files natively. Hence, mass spectrometric data generated, for example, by GC/MS, LC/MS, HPLC-MS, ICP-MS or MALDI-MS may be imported directly, without prior conversion, for subsequent visualization and evaluation. Aside from the support of various vendor data formats, data may also be imported in common formats such as NetCDF, csv or mzXML. All data format converters are provided as separate plug-ins which are not open source but free to use. Moreover, OpenChrom® offers a nicely adaptable graphical user interface.
-	
+
 OpenChrom® is tailored for data analysis purposes including processing, visualization and reporting. The implemented batch-processing features allow high-throughput evaluation. A continuously growing portfolio of processing and analysis procedures is provided. Extensions are welcome, as OpenChrom® is open source and uses a flexible approach, which allows others to implement their own methods, algorithms, filters, detectors or integrators.
 
 ### Features
@@ -33,9 +39,9 @@ OpenChrom® is tailored for data analysis purposes including processing, visuali
 * Office integration editor
 * Extensible with [plugins](https://marketplace.openchrom.net/)
     </description>
-    <summary>A tool for gas chromatography and mass spectrometry</summary>
     <releaseNotes>https://spectrometrylab.wordpress.com/2016/08/01/release-openchrom-1-1-0-diels/</releaseNotes>
-	<copyright>Copyright (c) 2016 by Lablicate GmbH</copyright>
-    <tags>openchrom chromatography chemistry spectometry admin</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
