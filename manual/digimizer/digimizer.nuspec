@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>digimizer</id>
+    <version>4.6.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/digimizer</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Digimizer (Install)</title>
+    <authors>MedCalc Software</authors>
+    <projectUrl>https://www.digimizer.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/Digimizer_icon.png</iconUrl>
+    <copyright>© 2005-2016 MedCalc Software bvba</copyright>
+    <licenseUrl>https://www.digimizer.com/license/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://www.digimizer.com/download/digimizermanual.pdf</docsUrl>
+    <mailingListUrl>mailto:info@medcalc.org</mailingListUrl>
+    <bugTrackerUrl>https://www.digimizer.com/feedback.php</bugTrackerUrl>
+    <tags>digimizer image analysis measure medical admin </tags>
+    <summary>Free, easy-to-use and flexible image analysis software</summary>
+    <description>Digimizer is a free easy-to-use and flexible image analysis software package that allows precise manual measurements as well as automatic object detection with measurements of object characteristics.
+
+Pictures may be X-rays, micrographs, etc. Supported file formats are JPG, GIF, TIFF, BMP, PNG, WMF, EMF and DICOM files.
+
+Features include:
+* Support for: DGZ, JPG, GIF, TIFF, BMP, PNG, WMF, EMF, and DICOM file formats
+* Common image manipulation tasks (crop, rotate, contrast, etc.)
+* Manual Measurements:
+    * Units (metric attometer through kilometer, imperial inch through mile, degree and pixel)
+    * Distances
+    * Areas
+    * Angles
+    * Find centers and perpendiculars
+    * Average intensity
+    * Mark and count
+* Image Analysis
+    * Filters including multiple mean, median, and max/min filters
+    * Binarization
+    * Morphological operations
+    * Noise reduction
+* Measurements list exportable to spreadsheet
+* Statistics on measurements
+* Scripting for repetitive tasks
+    </description>
+    <releaseNotes>https://www.digimizer.com/manual/a-whatsnew.php</releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
