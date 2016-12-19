@@ -8,7 +8,7 @@ if (test-path (Join-Path $InstallDir "$packageName$Version")) {
    Remove-Item (Join-Path $InstallDir "$packageName$Version") -Recurse -Force
 }
 
-$shortcut = Join-Path ([Environment]::GetFolderPath('CommonDesktop')) "$packageName.lnk"
+$shortcut = Join-Path ([Environment]::GetFolderPath('CommonDesktopDirectory')) "$packageName.lnk"
 
 if (Test-Path $shortcut) {
    Remove-Item $shortcut

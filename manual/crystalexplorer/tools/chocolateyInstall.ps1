@@ -14,7 +14,7 @@ $InstallArgs = @{
 Install-ChocolateyZipPackage @InstallArgs
 
 $ShortcutArgs = @{
-   ShortcutFilePath = Join-Path ([Environment]::GetFolderPath('CommonDesktop')) "$packageName.lnk"
-   TargetPath = (Get-ChildItem (join-path $DestDir "$packageName*") -include cry*.exe -Recurse).fullname
+   ShortcutFilePath = Join-Path ([Environment]::GetFolderPath('CommonDesktopDirectory')) "$packageName.lnk"
+   TargetPath = (Get-ChildItem (join-path $DestDir "$packageName$version") -include cry*.exe -Recurse).fullname
 }
 Install-ChocolateyShortcut @ShortcutArgs

@@ -27,6 +27,21 @@ $InstallArgs = @{
    validExitCodes= @(0)
 }
 
+# Determine default browser
+$HTTPDefault = (Get-ItemProperty 'registry::HKEY_CLASSES_ROOT\http\shell\open\command').'(default)' -replace '^.*\\(.*?\.exe)".*','$1'
+
+$RedirectKey = "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\$HTTPDefault"
+$RedirectCommand = '"c:\windows\system32\cmd.exe" /c echo > "' + (Join-Path $WorkingFolder 'CapturedCall.txt') + '"'
+$exists = Test-Path $RedirectKey
+if (-not $exists) {
+   New-Item $RedirectKey -Force | Write-Debug
+} 
+   New-ItemProperty -Path $RedirectKey -Name "Debugger" -Value $RedirectCommand -Force | Write-Debug
+
 Install-ChocolateyPackage @InstallArgs
 
-& AutoHotKey $(Join-Path (Split-Path $MyInvocation.MyCommand.Definition) 'chocolateyInstall.ahk')
+if (-not $exists) {
+   Remove-Item $RedirectKey -Recurse
+} else {
+   Remove-ItemProperty -Path $RedirectKey -Name 'Debugger' -Force
+}

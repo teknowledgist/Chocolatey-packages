@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>bioviadraw-ae</id>
+    <version>2016.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/bioviadraw-ae</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>BIOVIA Draw (Academic Edition)</title>
+    <authors>Dassault Systèmes</authors>
+    <projectUrl>http://accelrys.com/products/collaborative-science/biovia-draw/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/bioviadraw-ae_icon.png</iconUrl>
+    <copyright>Copyright © 2016 Dassault Systèmes</copyright>
+    <licenseUrl>http://media.accelrys.com/downloads/draw/2016/drawuse.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <mailingListUrl>https://community.3dsbiovia.com</mailingListUrl>
+    <tags>bioviadraw admin SPACE_SEPARATED</tags>
+    <summary>Draw and edit complex molecules, chemical reactions and biological sequences.</summary>
+    <description>BIOVIA Draw (32 and 64bit) enables scientists to draw and edit complex biologics, molecules and chemical reactions with ease, facilitating the collaborative searching, viewing, communicating and archiving of scientific information.
+    
+##### Features
+* Continuously draw bonds, pull out rings and add atoms using all-purpose drawing tool
+* Drag-and-drop commonly-used structures and chemical abbreviations onto the toolbar for reuse
+* Right-click for atom, bond, fragment properties and query options
+* Hover over atoms and edit them without right-click
+* Quickly retrace steps using Multiple Undo/Redo
+* Easily create structures with Rgroups for queries or enumerations
+* Annotate reaction schemes with text, color and a variety of arrow styles
+* Easily create publication-quality structures for inclusion in Microsoft Office documents and presentations
+    </description>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
