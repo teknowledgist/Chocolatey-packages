@@ -16,7 +16,7 @@
     <licenseUrl>http://media.accelrys.com/downloads/draw/2016/drawuse.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <mailingListUrl>https://community.3dsbiovia.com</mailingListUrl>
-    <tags>bioviadraw admin SPACE_SEPARATED</tags>
+    <tags>bioviadraw BIOVIA chemistry molecular admin</tags>
     <summary>Draw and edit complex molecules, chemical reactions and biological sequences.</summary>
     <description>BIOVIA Draw (32 and 64bit) enables scientists to draw and edit complex biologics, molecules and chemical reactions with ease, facilitating the collaborative searching, viewing, communicating and archiving of scientific information.
     

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>wxmacmolplt</id>
+    <version>7.7</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/wxmacmolplt</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>wxMacMolPlt (Install)</title>
+    <authors>Brett Bode</authors>
+    <projectUrl>https://brettbode.github.io/wxmacmolplt/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/bioviadraw-ae_icon.png</iconUrl>
+    <copyright>Copyright 2007-2009, Iowa State University of Science and Technology</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/brettbode/wxmacmolplt/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/brettbode/wxmacmolplt</projectSourceUrl>
+    <docsUrl>https://brettbode.github.io/wxmacmolplt/MacMolPlt_Manual.html</docsUrl>
+    <bugTrackerUrl>https://github.com/brettbode/wxmacmolplt/issues</bugTrackerUrl>
+    <tags>wxmacmolplt chemistry GAMESS admin</tags>
+    <summary>A GUI for input and output of the GAMESS quantum chemistry package.</summary>
+    <description>wxMacMolPlt is an open-source, cross-platform (Mac OS X, Linux and Windows) gui for preparing, submitting and visualizing input and output for the GAMESS quantum chemistry package. 
+    #### Features
+* A modern graphics program for plotting 3-D molecular structures and normal modes (vibrations). 
+* Reads a variety of file formats including any GAMESS input, log or IRC file, xMol XYZ files, MolDen format files and Chemical Markup Language (CML) files. Also some PDB file support and MDL MolFile support is included.
+* Fast (multi-threaded) on the fly computation of orbitals, densities and molecular electrostatic potentials for display as 2D contour maps or 3D isosurfaces!
+    * 2D Contour maps computed live with rotations or animations!
+    * Compute orbitals across an animation.
+    * Molecular Electrostatic Potentials available either alone or color mapped to a total electron density isosurface.
+    * Ability to create density difference maps, or abitrary combinations of densities. 
+* Molecular point group symmetry is supported.
+* You may also paste GAMESS and Gaussian-92 style cartesian coordinates directly into the program.
+* Animation of Normal Modes.
+* Animation of IRC's, and DRC's including orbitals.
+* Simple Energy Plots (including geometrical parameters).
+* Simple frequency line graph of frequency versus infrared or Raman intensity.
+* Append multiple GAMESS files together to create a single animation.
+* Build or modify molecules using the graphical molecule builder.
+* Build molecules from scratch using cartesian or internal coordinates
+* GAMESS input file (.inp) builder
+    </description>
+    <releaseNotes>https://brettbode.github.io/wxmacmolplt/Manual_pages/Version_History.html</releaseNotes>
+    <!-- =============================== -->      
+
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <!--<dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-uninstall.extension" />
+    </dependencies>-->
+    <!-- chocolatey-uninstall.extension - If supporting 0.9.9.x (or below) and including a chocolateyUninstall.ps1 file to uninstall an EXE/MSI, you probably want to include chocolatey-uninstall.extension as a dependency. Please verify whether you are using a helper function from that package. -->
+
+    <!--<provides>NOT YET IMPLEMENTED</provides>-->
+    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
+    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
