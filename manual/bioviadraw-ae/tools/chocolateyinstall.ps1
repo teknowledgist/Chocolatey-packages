@@ -8,7 +8,7 @@ $InstallArgs = @{
   checkSum = 'C273F18D64D310ACA0787CACBA3DF5E8E2EBFA506C25B086FD5AC7537BED4AD9'
   checkSumType = 'sha256'
   silentArgs = '/s /v"/qn"'
-  validExitCodes = @(0)
+  validExitCodes = @(0,3010)
 }
 
 Install-ChocolateyPackage @InstallArgs
