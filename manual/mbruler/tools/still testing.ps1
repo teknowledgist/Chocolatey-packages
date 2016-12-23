@@ -1,0 +1,1 @@
+I also am not seeing .NET installed on a bare-bones Win7x64 system.  

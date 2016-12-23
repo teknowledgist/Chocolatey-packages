@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>platon</id>
+    <version>2016.11.07</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/platon</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PLATON for Windows</title>
+    <authors>Anthony L. Spek</authors>
+    <projectUrl>http://www.chem.gla.ac.uk/~louis/software/platon/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/platon_icon.png</iconUrl>
+    <copyright>Copyright © 1980-2016 A.L.Spek</copyright>
+    <licenseUrl>http://www.platonsoft.nl/platon/pl030000.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>http://www.platonsoft.nl/platon/pl030000.html</projectSourceUrl>
+    <docsUrl>http://www.cryst.chem.uu.nl/platon/pl040000.html</docsUrl>
+    <mailingListUrl>http://www.xrayforum.co.uk/viewforum.php?f=123</mailingListUrl>
+    <tags>platon crystallography chemistry</tags>
+    <summary>PLATON is designed as a Multipurpose Crystallographic Tool</summary>
+    <description>PLATON for Windows is an MS-Windows implementation of PLATON, released in
+collaboration with Ton Spek. It is identical to the UNIX workstation version,
+except that System S is not available because it is too UNIX specific.
+
+PLATON is written by Ton Spek, and is a versatile crystallographic tool implementing a large variety of standard geometrical calculations (i.e. bonds, angles, torsions, planes, rings, inter-molecular contacts (H-Bond analysis), Coordination etc), tests (i.e. for missing symmetry, voids in the lattice etc.), utilities (cell transformation, SHELXL input etc.), graphics (e.g automatic labelled 'ORTEP-lookalike plots and the molecular graphics program PLUTON) and several filters (e.g. the DIFABS technique for empirical absorption correction (Walker and Stuart), and the SQUEEZE option for handling disordered solvents, described by Sluis and Spek, Acta Cryst. 1990,A46, 194). 
+
+While not required dependencies, it may be useful to install [pov-ray](https://chocolatey.org/packages/pov-ray/), [HP-GL Viewer](https://chocolatey.org/packages/hpglviewer), and [GhostScript preViewer](https://chocolatey.org/packages/GSView) before installing PLATON.
+
+The PLATON executable is also used in [WinGX](https://chocolatey.org/packages/wingx/), so this package will place a copy of the PLATON executable in the location of the WINGXDIR environment variable (if it exists) as well.
+
+#### License note
+PLATON is provided free of charge for academic, scientific and non-commercial purposes, provided usage is acknowledged.
+
+**Commercial users can only download Platon for Windows if they have previously obtained a license** (currently US$5000) from Prof. Dr. A.L. Spek using [this application form](http://www.cryst.chem.uu.nl/platon/applfrm.pdf).
+    </description>
+    <releaseNotes>http://www.cryst.chem.uu.nl/xraysoft/update_history_platon.html</releaseNotes>
+    <dependencies>
+      <dependency id="pwt" version="1.17" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

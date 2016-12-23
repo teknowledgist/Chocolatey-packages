@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>olex2</id>
+    <version>1.2.8</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/olex2</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Olex²</title>
+    <authors>Oleg Dolomanov, Horst Puschmann</authors>
+    <projectUrl>http://www.olexsys.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/olex2_icon.png</iconUrl>
+    <copyright>Copyright © 2016 OlexSys</copyright>
+    <licenseUrl>http://www.olex2.org/olex2-distro/1.2/update/licence.rtf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/olex2/code/HEAD/tree/</projectSourceUrl>
+    <docsUrl>http://www.olexsys.org/Documentation</docsUrl>
+    <bugTrackerUrl>http://www.olexsys.org/Support</bugTrackerUrl>
+    <tags>olex2 crystallography chemistry</tags>
+    <summary>Solve, refine and finish small-molecule crystal structures</summary>
+    <description>Olex² is a simple to use program containing numerous tools for the structure analysis and publication, including Fourier maps and voids calculation and visualisation, space group determination, calculation of esd's for almost any possible geometrical parameters, CIF translation to HTML and other documents, hydrogen atom placement and many others. The graphical user interface is the result of 10 years of striving to provide the best possible experience to modelling even the most challenging structures with ease.  The software originated at Durham University and has been in active development since 2004. 
+
+#### Features
+
+* Stereo visualisation
+* Full history of the structure - from solution - to the refinement
+* Structure analysis - pi-pi and other interactions, easy s.u. (esd) on many geometrical parameters calculation
+* Own olex2.refine structure refinement module
+* Seamless integration with [Shelxl](http://shelx.uni-ac.gwdg.de/SHELX/) - switch between Shelxl and olex2.refine in no time
+* Integration with [Platon](https://chocolatey.org/packages/platon/) software - every knowledge Platon has is unlocked
+* Multi-platform Windows-Linux-Mac (thanks to wxWidgets)
+* [Superflip GUI](http://superflip.fzu.cz/superflip.html), [ShelXT](http://shelx.uni-ac.gwdg.de/SHELX/shelxt_keywords.php), Sir and other structure solution programs at the push of the button
+* Postscript and bitmap (jpg, png etc) output to high resolution
+* Advanced tools for disorder modelling using rigid body refinemet
+* Structure reports (and CIF) - by managing metadata are always up to date even after a new structure solution!
+* Electron density maps (and they are live for contour maps)
+* Numerous drawing styles, including a few of predefined
+* Customisable main Menu and the GUI toolbar
+* Embedded Python and macro binding to the command line or interface elements
+    </description>
+    <dependencies>
+      <dependency id="vcredist2008" version="9.0.30729" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

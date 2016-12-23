@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>pwt</id>
+    <version>1.17</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/pwt</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Platon for Windows Taskbar</title>
+    <authors>Louis J. Farrugia</authors>
+    <projectUrl>http://www.chem.gla.ac.uk/~louis/software/platon/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/pwt_icon.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <!-- If there is a license Url available, it is is required for the community feed -->
+    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <!--<docsUrl>http://www.chem.gla.ac.uk/~louis/software/platon/readme.html</docsUrl>-->
+    <!--<bugTrackerUrl>louis.farrugia@glasgow.ac.uk</bugTrackerUrl>-->
+    <tags>pwt platon crystallography chemistry</tags>
+    <summary>A GUI to run PLATON</summary>
+    <description>The Platon for Windows Taskbar (PWT) is a GUI which runs [PLATON](https://chocolatey.org/packages/platon/) and allows access to all the UNIX shortcuts from the Windows environment. It acts as a launcher for the PLATON executable. 
+    </description>
+    <!--<dependencies>
+    </dependencies>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

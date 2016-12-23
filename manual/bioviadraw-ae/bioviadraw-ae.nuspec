@@ -18,7 +18,7 @@
     <mailingListUrl>https://community.3dsbiovia.com</mailingListUrl>
     <tags>bioviadraw BIOVIA chemistry molecular admin</tags>
     <summary>Draw and edit complex molecules, chemical reactions and biological sequences.</summary>
-    <description>BIOVIA Draw (32 and 64bit) enables scientists to draw and edit complex biologics, molecules and chemical reactions with ease, facilitating the collaborative searching, viewing, communicating and archiving of scientific information.
+    <description>BIOVIA Draw enables scientists to draw and edit complex biologics, molecules and chemical reactions with ease, facilitating the collaborative searching, viewing, communicating and archiving of scientific information.
     
 ##### Features
 * Continuously draw bonds, pull out rings and add atoms using all-purpose drawing tool
@@ -30,7 +30,9 @@
 * Annotate reaction schemes with text, color and a variety of arrow styles
 * Easily create publication-quality structures for inclusion in Microsoft Office documents and presentations
     </description>
-    <dependencies></dependencies>
+    <dependencies> 
+      <dependency id="dotnet3.5" version="3.5" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
