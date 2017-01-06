@@ -8,17 +8,17 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/wxmacmolplt</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>wxMacMolPlt (Install)</title>
+    <title>wxMacMolPlt</title>
     <authors>Brett Bode</authors>
     <projectUrl>https://brettbode.github.io/wxmacmolplt/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/bioviadraw-ae_icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/wxmacmolplt_icon.png</iconUrl>
     <copyright>Copyright 2007-2009, Iowa State University of Science and Technology</copyright>
     <licenseUrl>https://raw.githubusercontent.com/brettbode/wxmacmolplt/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/brettbode/wxmacmolplt</projectSourceUrl>
     <docsUrl>https://brettbode.github.io/wxmacmolplt/MacMolPlt_Manual.html</docsUrl>
     <bugTrackerUrl>https://github.com/brettbode/wxmacmolplt/issues</bugTrackerUrl>
-    <tags>wxmacmolplt chemistry GAMESS admin</tags>
+    <tags>wxmacmolplt chemistry GAMESS</tags>
     <summary>A GUI for input and output of the GAMESS quantum chemistry package.</summary>
     <description>wxMacMolPlt is an open-source, cross-platform (Mac OS X, Linux and Windows) gui for preparing, submitting and visualizing input and output for the GAMESS quantum chemistry package. 
     #### Features
@@ -41,8 +41,9 @@
 * GAMESS input file (.inp) builder
     </description>
     <releaseNotes>https://brettbode.github.io/wxmacmolplt/Manual_pages/Version_History.html</releaseNotes>
-    <!--<dependencies>
-    </dependencies>-->
+    <dependencies>
+      <dependency id="vcredist2013" version="12.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
