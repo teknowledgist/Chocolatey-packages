@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>pnggauntlet</id>
+    <version>3.1.2.20170106</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/pnggauntlet</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PNGGauntlet</title>
+    <authors>Ben Hollis</authors>
+    <projectUrl>https://pnggauntlet.com/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/pnggauntlet_icon.png</iconUrl>
+    <copyright>Copyright © 2005-2012, Benjamin Hollis</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/pnggauntlet.install/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://pnggauntlet.com/help/</docsUrl>
+    <tags>pnggauntlet png image compression</tags>
+    <summary>A PNG image optimization tool</summary>
+    <description>PNGGauntlet is a .NET (v4.0) program that uses Ken Silverman's PNGOUT, OptiPNG and DeflOpt to optimize PNG files. Many PNG files output by popular graphics software packages like Photoshop or even Fireworks are not as small as they could be - PNGGauntlet squeezes the last bit of size out of them. Furthermore, no information is lost during this process - the only thing that changes is the file size. Just select the files you want to optimize (or drag them onto the window), select where you want them to go, and click the button. PNGauntlet can also be used to convert JPG, GIF, TGA, PCX, and BMP files to PNG. 
+* Combines PNGOUT, OptiPNG, and DeflOpt to create the smallest PNGs
+* No image quality is lost — only file size
+* Converts JPG, GIF, TIFF, and BMP files to PNG
+* Ultra-configurable
+
+</description>
+    <releaseNotes>https://pnggauntlet.com/changelog/</releaseNotes>
+    <dependencies>
+      <dependency id='pnggauntlet.install' version="[3.1.2.20170106]" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

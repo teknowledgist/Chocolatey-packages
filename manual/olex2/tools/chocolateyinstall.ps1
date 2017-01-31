@@ -7,8 +7,8 @@ $InstallArgs = @{
    Url = 'http://www.olex2.org/olex2-distro/1.2/olex2-win32.zip'
    Url64 = 'http://www.olex2.org/olex2-distro/1.2/olex2-win64.zip'
    UnzipLocation = $InstallDir
-   checkSum = 'CA892D9D9908A518A8DC43A08A5AC830264C578638DF1AE5E3394A74A3C13AB9'
-   checkSum64 = '8DEAC6CC55726983AA525969FB24FAD364B65758900B2B64235F32254511AE4A'
+   checkSum = '943B973452637C5D465B96EDB0109653527A39B356D720EC535C90F0EBC77E99'
+   checkSum64 = 'A91F3C1677480F2AD805BB034D8B521CA87D6E69A873B5598DE1B7C032348B56'
    checkSumType = 'sha256'
 }
 Install-ChocolateyZipPackage @InstallArgs

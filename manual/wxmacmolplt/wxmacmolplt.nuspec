@@ -21,7 +21,8 @@
     <tags>wxmacmolplt chemistry GAMESS</tags>
     <summary>A GUI for input and output of the GAMESS quantum chemistry package.</summary>
     <description>wxMacMolPlt is an open-source, cross-platform (Mac OS X, Linux and Windows) gui for preparing, submitting and visualizing input and output for the GAMESS quantum chemistry package. 
-    #### Features
+
+### Features
 * A modern graphics program for plotting 3-D molecular structures and normal modes (vibrations). 
 * Reads a variety of file formats including any GAMESS input, log or IRC file, xMol XYZ files, MolDen format files and Chemical Markup Language (CML) files. Also some PDB file support and MDL MolFile support is included.
 * Fast (multi-threaded) on the fly computation of orbitals, densities and molecular electrostatic potentials for display as 2D contour maps or 3D isosurfaces!
