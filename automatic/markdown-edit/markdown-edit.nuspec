@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>markdown-edit</id>
+    <version>1.31</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/markdown-edit</packageSourceUrl>
+    <owners>Mike Ward, Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Markdown Edit</title>
+    <authors>Mike Ward</authors>
+    <projectUrl>http://markdownedit.com</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/mike-ward/Markdown-Edit/master/src/MarkdownEdit/logo.png</iconUrl>
+    <copyright>Copyright (c) 2014 Mike Ward</copyright>
+    <licenseUrl>https://cdn.rawgit.com/mike-ward/Markdown-Edit/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://github.com/mike-ward/Markdown-Edit/wiki</docsUrl>
+    <projectSourceUrl>https://github.com/mike-ward/Markdown-Edit/</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/mike-ward/Markdown-Edit/issues</bugTrackerUrl>
+    <tags>markdown commonmark editor text admin</tags>
+    <summary>A full-featured Markdown editor for Windows with an emphasis on content and keyboard shortcuts</summary>
+    <description>Markdown Edit is a Windows desktop CommonMark (a.k.a. Markdown) editor with an emphasis on content and keyboard shortcuts. There is minimal window chrome and most functions are accessed through keyboard shortcuts. There is no main menu, status bar, tabbed windows or other distractions.
+
+### Features
+
+-   [Display Equation Markup](http://markdownedit.com/markdown-edit-math-equations)
+-   [Drag and Drop image uploads](http://mike-ward.net/2015/03/31/markdown-edit-1-4-imgur-uploads/)
+-   [Document Formatting](http://mike-ward.net/2015/04/20/markdown-edit-1-5-released/).  Make your Markdown beautiful
+-   Syntax highlighting editor
+-   Side-by-side HTML preview
+-   Quickly show/hide preview
+-   Export to Word and PDF
+-   Smart link pasting
+-   [CommonMark](http://commonmark.org) standard Markdown engine
+-   GitHub Flavored Markdown
+-   User preferences stored in a text file for easy sharing
+-   Full screen covers task-bar (optional)
+-   Keyboard shortcuts for bold, italic, headers, lists, block quotes, etc.
+-   User defined snippets improve the speed and proficiency of writing documents.
+-   Modern UI look and feel
+-   **Not** a Windows Store App
+-   Synchronized scrolling
+-   User settable fonts, colors, themes
+-   User defined style sheets
+-   As you type spell checking
+-   **Paste Special** replaces Microsoft Word's smart quotes/hyphens/etc. with plain text equivalents
+-   Quickly open recent files
+-   Quickly change themes
+-   Word Count
+-   Auto Save
+-   Select previous/next header
+-   Highlight current line
+-   [Open Source](https://github.com/mike-ward/Markdown-Edit)
+-   MIT License
+    </description>
+    <releaseNotes>http://markdownedit.com/blog.html</releaseNotes>
+    <dependencies>
+      <dependency id="DotNet4.5.2" />
+    </dependencies>
+  </metadata>
+</package>
