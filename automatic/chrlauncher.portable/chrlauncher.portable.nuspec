@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>chrlauncher.portable</id>
+    <version>2.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/chrlauncher</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>chrlauncher (portable)</title>
+    <authors>Henry++</authors>
+    <projectUrl>http://www.henrypp.org/product/chrlauncher</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/chrlauncher_icon.png</iconUrl>
+    <copyright>Copyright (c) 2016, Henry++</copyright>
+    <licenseUrl>https://github.com/henrypp/chrlauncher/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/henrypp/chrlauncher</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/henrypp/chrlauncher/issues</bugTrackerUrl>
+    <tags>chrlauncher chromium chrome updater portable</tags>
+    <summary>Small and very fast portable launcher and updater for Chromium.</summary>
+    <description> A small and very fast portable launcher and updater for Chromium.
+
+#### Package Parameters
+The following package parameter can be set:
+
+ * `/Default`  - Make chrlauncher the default "browser".  This option requires installing with admin rights.
+
+These parameters can be passed to the installer with the use of `-params`.
+For example: 
+  `-params '"/Default"'`.
+
+    </description>
+    <releaseNotes>https://github.com/henrypp/chrlauncher/blob/master/CHANGELOG.md</releaseNotes>
+  </metadata>
+</package>
