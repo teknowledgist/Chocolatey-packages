@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>icopy.install</id>
+    <version>1.6.3</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/icopy.install</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>iCopy (Install)</title>
+    <authors>Matteo Rossi</authors>
+    <projectUrl>http://icopy.sourceforge.net/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/icopy_icon.png</iconUrl>
+    <copyright>© 2007 Matteo Rossi</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-3.0.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/icopy/git/ci/master/tree/iCopy/</projectSourceUrl>
+    <docsUrl>https://sourceforge.net/p/icopy/git/ci/master/tree/iCopy/README.md</docsUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/icopy/bugs/</bugTrackerUrl>
+    <tags>icopy print scan admin</tags>
+    <summary>Make the most of your scanner and printer</summary>
+    <description>iCopy is a free Windows application that lets you combine your scanner and printer into a powerful copy machine. With a single click, you can directly print your copies or save them to image or PDF files.
+
+### Features
+
+* Simple and quick interface
+* Scanning mode selection
+* Run by pressing scanner button
+* Resolution, brightness and contrast, scaling settings
+* Scan Multiple Pages before printing, including ADF support
+* Scan duplex (with compatible scanners)
+* Scan to file function
+* Scan to PDF with no external software
+* Preview function
+* Command-line parameters
+* No installation needed and little hard disk space required
+* [Compatible with all WIA scanners and all printers](http://icopy.sourceforge.net/compatible-scanners/)
+
+iCopy can be run as a Windows application, but its functionality can entirely be controlled from the command line.  [See the documentation for details.](https://sourceforge.net/p/icopy/git/ci/master/tree/iCopy/README.md)
+    </description>
+    <releaseNotes>http://icopy.sourceforge.net/category/rel/</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet3.5" version="3.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

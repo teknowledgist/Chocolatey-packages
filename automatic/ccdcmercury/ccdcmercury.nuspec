@@ -1,24 +1,18 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
-<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
-    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>ccdcmercury</id>
     <version>3.8</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/ccdcmercury</packageSourceUrl>
-    <owners>Teknowledgist</owners>
-    <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>CCDC Mercury (includes enCIFer)</title>
+    <title>CCDC Mercury 3.8 (incl. enCIFer 1.5.2)</title>
     <authors>Cambridge Crystallographic Data Centre</authors>
-    <projectUrl>https://www.ccdc.cam.ac.uk/Community/csd-community/freemercury/</projectUrl>
+    <owners>Teknowledgist</owners>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/ccdcmercury</packageSourceUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/ccdcmercury_icon.png</iconUrl>
-    <copyright>Copyright © 2016 Cambridge Crystallographic Data Centre</copyright>
     <licenseUrl>http://www.ccdc.cam.ac.uk/solutions/csd-system/components/mercury/licence/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectUrl>https://www.ccdc.cam.ac.uk/Community/csd-community/freemercury/</projectUrl>
     <docsUrl>https://www.ccdc.cam.ac.uk/support-and-resources/CCDCResources/mercury.pdf</docsUrl>
     <mailingListUrl>https://www.ccdc.cam.ac.uk/support-and-resources/Support/search?p=3a168035-d9a2-4248-81cc-6b141373e812</mailingListUrl>
-    <tags>ccdcmercury ccdc mercury crystallography chemistry encifer crystal admin</tags>
-    <summary>Crystal Structure Visualisation, Exploration and Analysis Made Easy</summary>
     <description>Mercury offers a comprehensive range of tools for 3D structure visualization and the exploration of crystal packing. With a long pedigree and over 10,000 downloads, Mercury is firmly established as the visualiser of choice within the crystallographic community.
 
 With a vast number of options for customizing display settings Mercury is widely used for the generation of publication-quality images. A Style Manager contains a number of pre-defined display styles for work, publication and presentation and also provides the ability to preserve and share your own custom display settings. Stunning 3D images created using Mercury can be exported in a variety of common formats. In addition, it is possible to render high quality ray-traced images using POV-Ray.
@@ -36,7 +30,8 @@ _In order to download this version of Mercury, you must first read and accept th
 ### Included software
 
 The latest version of Mercury is only distributed with [EnCIFer 1.5.2](http://www.ccdc.cam.ac.uk/Community/csd-community/encifer/) incorperated, and the installer drops icons for both on the desktop.  Version 1.5.2 of EnCIFer is not downloadable, installable nor uninstallable on its own.  The stand-alone, previous version of enCIFer is here](https://chocolatey.org/packages/encifer)
-    </description>
+</description>
+    <summary>Crystal Structure Visualisation, Exploration and Analysis Made Easy</summary>
     <releaseNotes>[Last updated 01 March 2016]
 
 ### Major new features
@@ -62,5 +57,7 @@ The latest version of Mercury is only distributed with [EnCIFer 1.5.2](http://ww
     <dependencies>
       <dependency id="vcredist2013" />
     </dependencies>
+    <copyright>Copyright © 2015 Cambridge Crystallographic Data Centre</copyright>
+    <tags>ccdcmercury ccdc mercury crystallography chemistry encifer crystal admin</tags>
   </metadata>
 </package>
