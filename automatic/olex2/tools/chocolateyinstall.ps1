@@ -1,15 +1,20 @@
-﻿$packageName = 'Olex2'
+$packageName = 'Olex2'
+$version     = '1.2.8'
+$url32       = 'http://www.olex2.org/olex2-distro/1.2/olex2-win32.zip'
+$url64       = 'http://www.olex2.org/olex2-distro/1.2/olex2-win64.zip'
+$checkSum32  = '33da60233893514173b3b37e949b50b66449d0d959feed6b9a8ee97f04c88f75'
+$checkSum64  = '468f60e79fa6efba36f07560e40411fbf423bb74fc63214222a40bd89d0382cb'
 
 $InstallDir = Join-Path $env:ProgramData $packageName
 
 $InstallArgs = @{
-   PackageName = $packageName
-   Url = 'http://www.olex2.org/olex2-distro/1.2/olex2-win32.zip'
-   Url64 = 'http://www.olex2.org/olex2-distro/1.2/olex2-win64.zip'
+   PackageName   = $packageName
+   Url           = $url32
+   Url64         = $url64
    UnzipLocation = $InstallDir
-   checkSum = '943B973452637C5D465B96EDB0109653527A39B356D720EC535C90F0EBC77E99'
-   checkSum64 = 'A91F3C1677480F2AD805BB034D8B521CA87D6E69A873B5598DE1B7C032348B56'
-   checkSumType = 'sha256'
+   checkSum      = $checkSum32
+   checkSum64    = $checkSum64
+   checkSumType  = 'sha256'
 }
 Install-ChocolateyZipPackage @InstallArgs
 

@@ -37,4 +37,7 @@ FossaMail is an English language client, and this package does not install any o
     </description>
     <releaseNotes>https://www.fossamail.org/releasenotes.shtml</releaseNotes>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

@@ -23,7 +23,7 @@ $shortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'Chromium
 Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $target
 
 
-# The following is only for when the "default" package parameter is used.
+# Capturing Package Parameters.
 $UserArguments = @{}
 if ($env:chocolateyPackageParameters) {
    $match_pattern = "\/(?<option>([a-zA-Z]+)):(?<value>([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)|\/(?<option>([a-zA-Z]+))"
@@ -40,10 +40,27 @@ if ($env:chocolateyPackageParameters) {
 } else { Write-Debug 'No Package Parameters Passed in' }
 
 if ($UserArguments.ContainsKey('Default')) {
-   Write-Host 'You want chrlauncher as your default browser.'
+   $msgtext = 'You want chrlauncher as the system default browser.'
+   Write-Host $msgtext -ForegroundColor Cyan
    $Bat = Join-Path $InstallArgs.unzipLocation "$BitLevel\SetDefaultBrowser.bat"
    $NoPauseBat = Join-Path (Split-Path $Bat) 'NoPauseSetDefaultBrowser.bat'
    (Get-Content $Bat) -ne 'pause' | Out-File $NoPauseBat -Encoding ascii -Force
    & $NoPauseBat
+}
+
+if ($UserArguments.ContainsKey('Shared')) {
+   $msgtext = 'You want chrlauncher to install/update/launch a single instance of Chromium to be shared (including settings, bookmarks, etc.) among all users.'
+   Write-Host $msgtext -ForegroundColor Cyan
+   $Acl = get-acl $InstallArgs.UnzipLocation
+   $InheritanceFlag = [System.Security.AccessControl.InheritanceFlags]::ContainerInherit -bor [System.Security.AccessControl.InheritanceFlags]::ObjectInherit
+   $PropagationFlag = [System.Security.AccessControl.PropagationFlags]::InheritOnly
+   $rule = New-Object  system.security.accesscontrol.filesystemaccessrule('BUILTIN\Users','Modify',$InheritanceFlag,$PropagationFlag,'Allow')
+   $Acl.setaccessrule($rule)
+   set-acl $InstallArgs.UnzipLocation $Acl
+} else {
+   $msgtext = 'chrlauncher will install/update/launch Chromium independently for each user.'
+   Write-Host $msgtext -ForegroundColor Cyan
+   $INIfile = Join-Path (Split-Path $target) 'chrlauncher.ini'
+   (gc $INIfile) -replace "^(ChromiumDirectory=).*$",'$1%appdata%\Chromium\bin' | Set-Content $INIfile
 }
 

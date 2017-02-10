@@ -96,4 +96,7 @@
       <dependency id="jre8" version="8.0" />
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

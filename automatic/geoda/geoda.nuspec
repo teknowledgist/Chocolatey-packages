@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>geoda</id>
     <version>1.8.14</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/geoda</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>GeoDa</title>
     <authors>Center for Spatial Data Science (CSDS)</authors>
-    <owners>Teknowledgist</owners>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/geoda</packageSourceUrl>
-    <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>https://geodacenter.github.io/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/GeoDa_icon.png</iconUrl>
+    <copyright>Copyright © 2003-2016 Luc Anselin</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/GeoDaCenter/geoda/</projectSourceUrl>
     <docsUrl>http://geodacenter.github.io/documentation.html</docsUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/openspace-list</mailingListUrl>
     <bugTrackerUrl>https://github.com/GeoDaCenter/geoda/issues</bugTrackerUrl>
+    <tags>geoda esda spatial statistics maps gis admin</tags>
+    <summary>An introduction to spatial data analysis.</summary>
     <description>GeoDa is a free and open source software tool that serves as an introduction to spatial data analysis. It is designed to facilitate new insights from data analysis by exploring and modeling spatial patterns.
 
 GeoDa was developed by [Dr. Luc Anselin](http://spatial.uchicago.edu/directory/luc-anselin-phd) and his [team](http://spatial.uchicago.edu/directories/full/all). The program provides a user-friendly and graphical interface to methods of exploratory spatial data analysis (ESDA), such as spatial autocorrelation statistics, and basic spatial regression analysis for lattice data (points and polygons).
 
 GeoDa supports a large variety of vector data in different formats. You can work with shapefiles, geodatabases, GeoJSON, MapInfo, GML, KML, and other vector data formats supported by the GDAL library. The program also converts coordinates in table format (.csv, .dbf, .xls, .ods) to one of these spatial data formats and converts data between different file formats (such as .csv to .dbf or shapefile to GeoJSON). 
-</description>
-    <summary>An introduction to spatial data analysis.</summary>
+    </description>
     <releaseNotes>https://github.com/GeoDaCenter/geoda/releases</releaseNotes>
     <dependencies>
       <dependency id="vcredist2010" version="10.0"/>
     </dependencies>
-    <copyright>Copyright © 2003-2016 Luc Anselin</copyright>
-    <tags>geoda esda spatial statistics maps gis admin</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

@@ -1,19 +1,24 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qcad</id>
-    <version>3.15.4</version>
-    <title>QCAD - 2D CAD </title>
-    <authors>RibbonSoft, GmbH</authors>
+    <version>3.16.4</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/QCAD</packageSourceUrl>
     <owners>Teknowledgist,petervbeck</owners>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/QCAD</packageSourceUrl>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>QCAD - 2D CAD - Community Edition</title>
+    <authors>RibbonSoft, GmbH</authors>
+    <projectUrl>http://www.qcad.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/qcad_icon.png</iconUrl>
     <licenseUrl>http://www.qcad.org/en/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectUrl>http://www.qcad.org/</projectUrl>
-    <projectSourceUrl>https://github.com/qcad/qcad/</projectSourceUrl>
     <docsUrl>http://www.qcad.org/en/qcad-documentation</docsUrl>
+    <projectSourceUrl>https://github.com/qcad/qcad/</projectSourceUrl>
     <mailingListUrl>http://www.qcad.org/rsforum/</mailingListUrl>
+    <tags>qcad cad 2d drawing drafting admin</tags>
+    <summary>The Open Source CAD System For Everyone</summary>
     <description>QCAD is a free, open source application for computer aided drafting (CAD) in two dimensions (2D). With QCAD you can create technical drawings such as plans for buildings, interiors, mechanical parts or schematics and diagrams. 
     
 QCAD was designed with modularity, extensibility and portability in mind. But what people notice most often about QCAD is its intuitive user interface. QCAD is an easy to use but powerful 2D CAD system for everyone. You don't need any CAD experience to get started with QCAD immediately. 
@@ -22,11 +27,11 @@ QCAD was designed with modularity, extensibility and portability in mind. But wh
     
 #### Notes
 
-* The default download/install of QCAD includes two trial-ware, commercial plugins.  This package removes those to leave a fully GPLv3 compliant install.
-* **The uninstall of QCAD is not silent.**  It will ask for confirmation.  Canceling the uninstall will keep the program installed, but remove the package from Chocolatey.  Agreeing to uninstall will also open an announcement of success.
+* The default download/install of QCAD includes trial-ware, commercial plugins.  This package removes those to leave a fully GPLv3-compliant install.
     </description>
-    <summary>The Open Source CAD System For Everyone</summary>
     <releaseNotes>http://www.qcad.org/en/changelog</releaseNotes>
-    <tags>qcad cad 2d drawing drafting admin</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

@@ -1,6 +1,6 @@
 # Lines to be updated by automatic updater
-$Url = 'https://github.com/mike-ward/Markdown-Edit/releases/download/v1.31/MarkdownEditSetup.msi'
-$Checksum = 'B0B3A7D4AE56EBE6769EFB1667617FC2EAA683446EFE2ED97811D1825D641A07'
+$Url = 'https://github.com/mike-ward/Markdown-Edit/releases/download/v1.32/MarkdownEditSetup.msi'
+$Checksum = '67e747bc342fc6b42d6bf6ba043acd6e517f2df8140e0853923e5c0b96b961a4'
 
 $installArgs = @{
   packageName = 'markdown-edit'

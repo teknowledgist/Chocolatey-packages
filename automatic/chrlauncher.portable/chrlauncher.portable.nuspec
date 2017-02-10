@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>chrlauncher.portable</id>
-    <version>2.2</version>
+    <version>2.2.0.20170208</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/chrlauncher</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -19,18 +19,35 @@
     <bugTrackerUrl>https://github.com/henrypp/chrlauncher/issues</bugTrackerUrl>
     <tags>chrlauncher chromium chrome updater portable</tags>
     <summary>Small and very fast portable launcher and updater for Chromium.</summary>
-    <description> A small and very fast portable launcher and updater for Chromium.
+    <description>A small and very fast portable launcher and updater for Chromium.
+
+### This package:
+* installs chrlauncher, not Chromium.  
+* will set chrlauncher to download/install/update Chromium without the need for admin rights.
+* by default, sets the install location for Chromium to be the per-user, %APPDATA% directory.  Use the `/Shared` package parameter (below) to make the Chromium install location be in the chrlauncher directory and have Chromium (and all its settings) shared among all users.
+
+#### Note
+Other (system-wide) chrlauncher settings can be modified in the `chrlauncher.ini` file located in the same directory as the target of the Chromium Launcher desktop shortcut.  Some options include:
+
+* Auto download updates
+* Show a chrlauncher window when updating (default is a tray icon only)
+* Type of Chromium build
+* Update check period
 
 #### Package Parameters
-The following package parameter can be set:
+The following package parameters can be set:
 
  * `/Default`  - Make chrlauncher the default "browser".  This option requires installing with admin rights.
+ * `/Shared`  - Share the Chromium install among all users. 
 
 These parameters can be passed to the installer with the use of `-params`.
 For example: 
-  `-params '"/Default"'`.
+  `choco install chrlauncher.portable -params '"/Default"'`.
 
     </description>
     <releaseNotes>https://github.com/henrypp/chrlauncher/blob/master/CHANGELOG.md</releaseNotes>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

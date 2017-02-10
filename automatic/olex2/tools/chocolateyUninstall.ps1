@@ -1,4 +1,6 @@
-﻿$InstallDir = Join-Path $env:ProgramData 'Olex2'
+﻿$packageName = 'Olex2'
+
+$InstallDir = Join-Path $env:ProgramData $packageName
 
 $DeskShortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'Olex2-1.2.lnk'
 $StartShortcut = Join-Path $env:ProgramData 'Microsoft\Windows\Start Menu\Programs\Olex2-1.2.lnk'
