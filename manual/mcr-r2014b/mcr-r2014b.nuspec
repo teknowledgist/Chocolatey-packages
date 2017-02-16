@@ -27,6 +27,7 @@
 * The MATLAB Runtime Compiler is large (700MB +).  It will take some time to download and install.
     </description>
     <dependencies>
+      <dependency id="vcredist2005" />
     </dependencies>
   </metadata>
   <files>

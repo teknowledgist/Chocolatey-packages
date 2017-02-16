@@ -10,6 +10,7 @@ $unexe = Get-ItemProperty "$RegistryLocation\*" |
                      Select-Object -ExpandProperty UninstallString
 
 $InstalledPath = $unexe -replace "^(.*v$($version.replace('.','')))\\.*",'$1'
+$unexe = $unexe.remove(($unexe.LastIndexOf($InstalledPath) - 1))
 
 $UninstallArgs = @{
    packageName = $packageName

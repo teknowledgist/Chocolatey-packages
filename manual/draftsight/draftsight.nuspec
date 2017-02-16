@@ -3,35 +3,33 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <id>bioviadraw-ae</id>
-    <version>2016.1</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/bioviadraw-ae</packageSourceUrl>
+    <id>draftsight</id>
+    <version>2017.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/draftsight</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>BIOVIA Draw (Academic Edition)</title>
+    <title>DraftSight 2017 SP0 (Free)</title>
     <authors>Dassault Systèmes</authors>
-    <projectUrl>http://accelrys.com/products/collaborative-science/biovia-draw/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/bioviadraw-ae_icon.png</iconUrl>
+    <projectUrl>https://www.3ds.com/products-services/draftsight-cad-software/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/draftsight2017_icon.png</iconUrl>
     <copyright>Copyright © 2016 Dassault Systèmes</copyright>
-    <licenseUrl>http://media.accelrys.com/downloads/draw/2016/drawuse.pdf</licenseUrl>
+    <licenseUrl>https://www.3ds.com/products-services/draftsight-cad-software/eula</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <mailingListUrl>https://community.3dsbiovia.com</mailingListUrl>
-    <tags>bioviadraw BIOVIA chemistry molecular admin</tags>
-    <summary>Draw and edit complex molecules, chemical reactions and biological sequences.</summary>
-    <description>BIOVIA Draw enables scientists to draw and edit complex biologics, molecules and chemical reactions with ease, facilitating the collaborative searching, viewing, communicating and archiving of scientific information.
-    
-### Features
-* Continuously draw bonds, pull out rings and add atoms using all-purpose drawing tool
-* Drag-and-drop commonly-used structures and chemical abbreviations onto the toolbar for reuse
-* Right-click for atom, bond, fragment properties and query options
-* Hover over atoms and edit them without right-click
-* Quickly retrace steps using Multiple Undo/Redo
-* Easily create structures with Rgroups for queries or enumerations
-* Annotate reaction schemes with text, color and a variety of arrow styles
-* Easily create publication-quality structures for inclusion in Microsoft Office documents and presentations
+    <mailingListUrl>https://www.3ds.com/products-services/draftsight-cad-software/community/</mailingListUrl>
+    <tags>DraftSight 2D CAD drafting admin</tags>
+    <summary>A professional-grade 2D design and drafting solution.</summary>
+    <description>DraftSight is a professional-grade 2D design and drafting solution that lets you create, edit, view and markup any kind of 2D drawing.
+Its familiar user interface makes it easy to transition from other comparable CAD applications.
+
+* [List of features here](https://www.3ds.com/products-services/draftsight-cad-software/features/)
+* [System Requirements](https://www.3ds.com/fileadmin/PRODUCTS-SERVICES/DRAFTSIGHT/PDF/DraftSight_2017_System_Requirements.pdf)
+
+### Registration Required
+DraftSight will work for 30 days before requiring free, per-user registration.  [Professional](https://www.3ds.com/products-services/draftsight-cad-software/professional-features/) and [enterprise](http://www.solidworks.com/sw/purchase/draftsight-get-a-quote.htm?scid=ext_DraftSight_page) licenses are available.
+
+>! grey info: Delete non-(default) values from and deny the user rights to create subkeys in `HKCU:\Software\SWActivation\K2` and the activation message will no longer appear on start.
     </description>
     <dependencies> 
-      <dependency id="dotnet3.5" version="3.5" />
     </dependencies>
   </metadata>
   <files>

@@ -20,6 +20,9 @@ $WebFileArgs = @{
    GetOriginalFileName = $true
 }
 
+$msgtext = 'MATLAB Runtime is large, so it may take awhile to download and install.  Please be patient.'
+Write-Host $msgtext -ForegroundColor Cyan
+
 $PackedInstaller = Get-ChocolateyWebFile @WebFileArgs
 
 $UnzipArgs = @{
