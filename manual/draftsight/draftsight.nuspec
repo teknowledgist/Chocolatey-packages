@@ -27,7 +27,7 @@ Its familiar user interface makes it easy to transition from other comparable CA
 ### Registration Required
 DraftSight will work for 30 days before requiring free, per-user registration.  [Professional](https://www.3ds.com/products-services/draftsight-cad-software/professional-features/) and [enterprise](http://www.solidworks.com/sw/purchase/draftsight-get-a-quote.htm?scid=ext_DraftSight_page) licenses are available.
 
->! grey info: Delete non-(default) values from and deny the user rights to create subkeys in `HKCU:\Software\SWActivation\K2` and the activation message will no longer appear on start.
+![](https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/manual/draftsight/bypass.png)
     </description>
     <dependencies> 
     </dependencies>
