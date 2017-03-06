@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = 'DraftSight'
-$version     = '2017SP0'
+$version     = '2017SP01'
 $url         = "http://dl-ak.solidworks.com/nonsecure/draftsight/$version/DraftSight32.exe"
 $url64       = "http://dl-ak.solidworks.com/nonsecure/draftsight/$version/DraftSight64.exe"
-$checkSum    = '531DA593E923413FC4BED1F5C95517C0DB9131CBC125FD4DECA23CFE1FA74103'
-$checkSum64  = '94DBD59E63E6440747357432793CEEC8685B1D66EB816947140EB090E213EDAF'
+$checkSum    = 'D764DE6A8A6BEFEBDF2D35FBA4A23A9D74E1629BE9733AE29CAADCE061AEDBB8'
+$checkSum64  = '0C9EF0396F0F38E806CD29976AFDBF8EAC0ADD7E8180C7F4EF004A74A4EC3B8D'
 
 $WorkSpace = Join-Path $env:TEMP "$packageName.$Version"
 
@@ -39,40 +39,3 @@ $InstallArgs = @{
 }
 
 Install-ChocolateyInstallPackage @InstallArgs
-
-<# From the DraftSight download page:
-   "It has come to the attention of the DraftSight team that, due to an expired 
-   certificate, Windows* 32 & 64-bit versions of DraftSight released from 2012 
-   to 2017 will not launch and/or will stop running as of March 1, 2017. However,
-   we are making available a critical hotfix to resolve this issue before that date.
-
-   To avoid usage interruption, please make sure to immediately download and 
-   install this critical hotfix.
-#>
-$HotfixUrl      = 'http://dl-ak.solidworks.com/nonsecure/draftsight/HOTFIX-2017SP0-V1R3/DraftSight_HotFix_2017.exe'
-$HotfixCheckSum = '33DD9766AB6871B47C5E277F207F9586B8BD0DD985C9CD9CFA9AA6EAE048A568'
-
-$WebFileArgs = @{
-   packageName  = "$packageName.Hotfix"
-   FileFullPath = Join-Path $WorkSpace "$packageName.HotFix.exe"
-   Url          = $HotfixUrl
-   Checksum     = $HotfixCheckSum
-   ChecksumType = 'sha256'
-   GetOriginalFileName = $true
-}
-
-$PackedInstaller = Get-ChocolateyWebFile @WebFileArgs
-
-$UnzipArgs = @{
-   PackageName = "$packageName.Hotfix"
-   FileFullPath = $PackedInstaller
-   Destination  = $WorkSpace
-}
-
-Get-ChocolateyUnzip @UnzipArgs
-
-$BitLevel = Get-ProcessorBits
-if ($BitLevel -eq '32') { $BitLevel = '86' }
-
-$PatchFile = Join-Path $WorkSpace "Files\x$BitLevel$version\DDKERNEL.dll" 
-Copy-Item $PatchFile "$env:ProgramFiles\Dassault Systemes\DraftSight\bin" -Force

@@ -4,11 +4,11 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>draftsight</id>
-    <version>2017.0</version>
+    <version>2017.01</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/draftsight</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>DraftSight 2017 SP0 (Free)</title>
+    <title>DraftSight 2017 SP1 (Free)</title>
     <authors>Dassault Systèmes</authors>
     <projectUrl>https://www.3ds.com/products-services/draftsight-cad-software/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/draftsight2017_icon.png</iconUrl>
