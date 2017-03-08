@@ -4,8 +4,8 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>lastools</id>
-    <version>2016.11.14</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/lastools</packageSourceUrl>
+    <version>2017.02.02</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/lastools</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>LAStools software suite for LiDAR processing</title>

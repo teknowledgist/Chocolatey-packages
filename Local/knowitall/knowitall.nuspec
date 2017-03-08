@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>knowitall</id>
+    <version>2017.3.127.0</version>
+    <packageSourceUrl></packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Bio-Rad KnowItAll Academic Edition</title>
+    <authors>Bio-Rad Laboratories, Inc.</authors>
+    <projectUrl>http://www.bio-rad.com/en-us/product/knowitall-academic-edition-free-chemistry-software</projectUrl>
+    <copyright>Copyright © 2017 Bio-Rad Laboratories, Inc.</copyright>
+    <mailingListUrl>https://info.bio-rad.com/ww-ux-feedback.html</mailingListUrl>
+    <docsUrl>http://www.bio-rad.com/webroot/web/pdf/spectroscopy/global/english/literature/docs/280076-KnowItAll_Quick_Start_Guide_English.pdf</docsUrl>
+    <tags>KnowItAll bio-rad chemistry spectroscopy academic license notsilent admin</tags>
+    <summary>Comprehensive spectroscopy software</summary>
+    <description>Bio-Rad’s award-winning KnowItAll software offers comprehensive solutions for spectral analysis, identification, search, data management, and reporting. It supports multiple instrument vendor file formats and techniques (IR, Raman, NIR, NMR, MS, UV-Vis). The software, combined with over 2.3 million spectra, helps chemists extract even greater knowledge from their spectral data.
+
+    Researchers use spectral search software along with spectral databases to identify unknown substances and verify the composition of synthesized materials in a number of applications and industries. First, precision instruments measure a substance and produce a spectrum, which is expressed as a graph showing a series of peaks that is specific to the sample material. That spectrum is then compared to a reference database of the measured spectra of known substances. If a matching spectrum is found, the material in question can be identified. Bio-Rad’s KnowItAll solutions provide search software tools, as well as the world's most extensive collection of reference spectra used in this type of analysis.
+    
+    [These tutorials](http://www.training.knowitall.com) are designed to help you become familiar with KnowItAll.
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

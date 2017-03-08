@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>shelxtl</id>
+    <version>6.12</version>
+    <packageSourceUrl></packageSourceUrl>
+    <owners></owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>ShelXTL (from Bruker)</title>
+    <authors>Bruker</authors>
+    <tags>shelxtl xshell crystallography chemistry bruker admin</tags>
+    <summary>Software used for X-ray Crystallography</summary>
+    <description>This is the software package distributed by Bruker with X-ray Crystallography equipment.  It is widely used in the Chemistry department.  The release notes were produced May 24, 2000 and include the following requirements:
+
+* Windows NT version 4.0 or Windows 2000, service pack 1 or later.
+* Intel-compatible CPU.
+* 64 Mbytes memory recommended.
+* Display mode of 256 colors. Higher color modes are not fully supported. Lower color modes are not supported at all.
+* The highest resolution screen mode supported is 1200x1600.
+
+The installer is 16-bit, so the only way to install it is by manually manipulating file locations and adjusting system variables.
+
+The licensing is completely unclear.  Bruker only provided (provides?) it with the XRC equipment, and it is not downloadable.  Nobody has ever produced a license or information on where it can be used.
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

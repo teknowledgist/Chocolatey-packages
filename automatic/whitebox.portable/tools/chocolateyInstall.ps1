@@ -1,16 +1,26 @@
-﻿$InstallArgs = @{
-   packageName = 'whitebox.portable'
-   url = 'http://www.uoguelph.ca/~hydrogeo/Whitebox/WhiteboxGAT.zip' 
+﻿$CheckSum = 'b1b1ab847ab2d91679ce50d2bcffa054ed6b763c5fede71dd575d22a9b2a87d2'
+$url      = 'https://www.uoguelph.ca/~hydrogeo/Whitebox/WhiteboxGAT.zip' 
+
+$InstallArgs = @{
+   packageName   = 'whitebox.portable'
+   url           = $url
    UnzipLocation = Split-path (Split-path $MyInvocation.MyCommand.Definition)
+   CheckSum      = $CheckSum
 }
 
 Install-ChocolateyZipPackage @InstallArgs
 
 $target = (Get-ChildItem $InstallArgs.UnzipLocation -filter whiteboxgis.jar -Recurse).fullname
-$logs = Join-Path (Split-Path $target) "logs"
+
+$files = get-childitem (Split-Path $target ) -include *.exe -recurse
+foreach ($file in $files) {
+  #generate an ignore file
+  New-Item "$file.ignore" -type file -force | Out-Null
+}
 
 # All users need modify rights to the logs directory or Whitebox won't start.  
 # By default, only the installing user has modify rights
+$logs = Join-Path (Split-Path $target) "logs"
 if (-not (Test-Path $logs)) {
    New-Item $logs -ItemType Directory
 }

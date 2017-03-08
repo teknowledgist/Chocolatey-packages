@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
   <metadata>
     <id>whitebox.portable</id>
-    <version>3.3.0</version>
+    <version>3.4.0</version>
     <title>Whitebox Geospatial Analysis Tools (Portable)</title>
     <authors>John Lindsay</authors>
     <owners>teknowledgist</owners>
@@ -19,7 +19,7 @@
     </description>
     <summary>An open-source desktop GIS and remote sensing software package</summary>
     <dependencies>
-      <dependency id="jre8" version="8.0.20"/>
+      <dependency id="jre8" version="8.0.20" />
     </dependencies>
     <releaseNotes>https://whiteboxgeospatial.wordpress.com/2015/04/12/whitebox-geospatial-analysis-tools-v-3-2-2-released/</releaseNotes>
     <copyright>Copyright © John Lindsay, 2015-2016</copyright>
