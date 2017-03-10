@@ -1,5 +1,5 @@
-﻿$CheckSum = 'b1b1ab847ab2d91679ce50d2bcffa054ed6b763c5fede71dd575d22a9b2a87d2'
-$url      = 'https://www.uoguelph.ca/~hydrogeo/Whitebox/WhiteboxGAT.zip' 
+﻿$CheckSum = 'D530E48822CD03B3C3932329DBB92BB3322FECC34635DBB01AB6A9C8C0CF814D'
+$url      = 'https://www.uoguelph.ca/~hydrogeo/Whitebox/WhiteboxGAT-win.zip' 
 
 $InstallArgs = @{
    packageName   = 'whitebox.portable'
@@ -28,8 +28,7 @@ if (Test-Path $logs) {
    Remove-Item "$logs\*" -Recurse
    $Acl = get-acl $logs
    $InheritanceFlag = [System.Security.AccessControl.InheritanceFlags]::ContainerInherit -bor [System.Security.AccessControl.InheritanceFlags]::ObjectInherit
-   $PropagationFlag = [System.Security.AccessControl.PropagationFlags]::InheritOnly
-   $rule = New-Object  system.security.accesscontrol.filesystemaccessrule('BUILTIN\Users','Modify',$InheritanceFlag,$PropagationFlag,'Allow')
+   $rule = New-Object  system.security.accesscontrol.filesystemaccessrule('BUILTIN\Users','Modify',$InheritanceFlag,'none','Allow')
    $Acl.setaccessrule($rule)
    set-acl $logs $Acl
 } else {

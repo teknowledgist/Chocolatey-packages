@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>posterazor.portable</id>
+    <version>1.5.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/posterazor</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PosteRazor (portable)</title>
+    <authors>Alessandro Portale</authors>
+    <projectUrl>http://posterazor.sourceforge.net/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/posterazor_icon.png</iconUrl>
+    <copyright>Copyright © 2005-2009</copyright>
+    <licenseUrl>http://www.gnu.org/copyleft/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/projects/posterazor/files/Source%20Releases/</projectSourceUrl>
+    <docsUrl>https://sourceforge.net/p/posterazor/wiki/Home/</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/posterazor/discussion/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/posterazor/bugs/</bugTrackerUrl>
+    <tags>posterazor poster print </tags>
+    <summary>Make your own poster!</summary>
+    <description>Want to print a poster? PosteRazor cuts an image file into pieces and you can print then on your printer and glue them together to a poster. Easy FLTK based user interface. Uses FreeImage for image loading. Creates PDFs as output.
+#### Features
+* Input image formats:  
+  BMP, DDS, Dr. Halo, GIF, ICO, IFF, JBIG, JPEG/JIF, KOALA, LBM, Kodak PhotoCD, PCX, PBM, PGM, PNG, PPM, PhotoShop PSD, Sun RAS, TARGA, TIFF, WBMP, XBM, XPM  
+* Dimension Units:  
+    m, mm, cm, inch, ft, pt(72th inch)
+* Printer page layout:  
+    DIN A4, DIN A3, Legal, Letter, Tabloid, set manually
+    * The size limit for one page is 5 meters (16.4 feet), which is the maximum that PDF allows. 
+* Three poster size options:
+    * Absolute image size  
+    * Size in pages
+    * Image size in percent
+    The final size of the poster is theoretically unlimited.
+* Image tile overlapping
+* PDF output
+    </description>
+    <releaseNotes>
+###### PosteRazor 1.5.2
+- Fixed: Crash on Windows when loading a GIF file.
+           Used FreeImage 3.10 with PluginGIF.cpp, CVS rev. 1.19.
+
+###### PosteRazor 1.5.1
+-   Fixed: Compile errors with GCC 4.3. On Ubuntu 8.10
+
+###### PosteRazor 1.5
+-   Added: Brazilian Portuguese translation by
+           Ederson Gomes dos Santos
+-   Added: PosteRazor is now also available as an installer on Win32
+-   Fixed: The image file open dialog does now show
+           image files on Windows Vista.
+-   Fixed: Startup problem on some Windows systems seems to be gone
+-   Fixed: A crash on some Leopard systems after image loading is gone
+- Changed: PosteRazors binary OSX package is now a universal binary
+- Changed: Upgraded Fltk used for OSX package to version 1.1.9
+- Changed: Upgraded FreeImage to version 3.10
+- Changed: Switched license from GPL v2 to GPL v3
+- Changed: Simplified source structure
+</releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

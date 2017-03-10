@@ -1,28 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>whitebox.portable</id>
     <version>3.4.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/whitebox.portable</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Whitebox Geospatial Analysis Tools (Portable)</title>
     <authors>John Lindsay</authors>
-    <owners>teknowledgist</owners>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/whitebox.portable</packageSourceUrl>
+    <projectUrl>http://www.uoguelph.ca/~hydrogeo/Whitebox</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/whitebox_icon.png</iconUrl>
+    <copyright>Copyright © John Lindsay, 2015-2016</copyright>
     <licenseUrl>http://www.uoguelph.ca/~hydrogeo/Whitebox/gpl-3_0.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/whitebox_icon.png</iconUrl>
-    <projectUrl>http://www.uoguelph.ca/~hydrogeo/Whitebox/index.html</projectUrl>
     <projectSourceUrl>https://github.com/jblindsay/whitebox-geospatial-analysis-tools</projectSourceUrl>
     <mailingListUrl><![CDATA[http://www.lsoft.com/scripts/wl.exe?SL1=WHITEBOX-GAT&H=LISTSERV.UOGUELPH.CA]]></mailingListUrl>
+    <tags>whitebox gis geomatics geopspatial</tags>
+    <summary>An open-source desktop GIS and remote sensing software package</summary>
     <description>Whitebox GAT is an _[open-access](https://en.wikipedia.org/wiki/Open_access)_, well documented, and extendable software for geomatics with its roots originating from Terrain Analysis System (TAS).  It as a desktop GIS and remote sensing software package for general applications of geospatial analysis and data visualization. Whitebox GAT is intended to provide a platform for advanced geospatial data analysis with applications in both environmental research and the geomatics industry more broadly. It was envisioned from the outset as providing an ideal platform for experimenting with novel geospatial analysis methods. Equally important is the project’s goal of providing a tool that can be used for geomatics-based education. 
     
     Open-access software can be viewed as a complimentary extension to the traditional open-source software (OSS) model of development. Open-access software is distinct from other OSS in that it has an explicitly stated design goal of reducing barriers to the transfer of knowledge to the user community. Direct insight into the workings of algorithm design and implementation allows for educational opportunities and increases the potential for rapid innovation, experimentation with algorithms, and community-directed development. This is particularly important in geomatics because many geospatial algorithms are complex and are strongly affected by implementation details. Also, there are often multiple competing algorithms for accomplishing the same task and the choice of one method over another can greatly impact the outcome of a workflow. 
     </description>
-    <summary>An open-source desktop GIS and remote sensing software package</summary>
     <dependencies>
       <dependency id="jre8" version="8.0.20" />
     </dependencies>
-    <releaseNotes>https://whiteboxgeospatial.wordpress.com/2015/04/12/whitebox-geospatial-analysis-tools-v-3-2-2-released/</releaseNotes>
-    <copyright>Copyright © John Lindsay, 2015-2016</copyright>
-    <tags>whitebox gis geomatics geopspatial</tags>
+    <releaseNotes>##### Whitebox 3.4.0 Has Been Released 
+The following additions/modifications have been made:
+* This is the first release of Whitebox GAT that includes some plugin tools that are compiled to native code rather than running on the Java Runtime Environment. The plan is to develop most tools going forward using natively compiled programming languages and to redevelop some of the existing tools in future releases. The native compiled tools in this release have been developed using the Rust and Go programming languages. Importantly, this change requires that we now distribute versions of Whitebox that include these tools compiled specifically for Windows, Mac, and Linux OSs.
+* Fixed bug that falsely reported the use of 32-bit Java on 64-bit computers.
+* Added an ExportGeoTIFF tool, after many requests. This tool is part of the GoSpatial library. This tool currently only works on MacOS and Linux. Windows users need to access the 'whitebox2geotiff' tool directly from the go-spatial library, until this is rectified in the next release.
+* Added new tools for joining (LiDAR Join), segmenting (LiDAR Segment), and separating ground points within LiDAR point clouds. Each tool outputs in LAS format and are native-compiled plugin tools.
+* Updated and improved the algorithm used by the Remove Off-terrain Objects tool. It is also now a native-complied plugin tool.
+* Added the LiDAR Elevation Slice tool, which can be used to remove points from a LAS file that are above or below specified elevations thresholds. This is a native-compiled plugin tool.
+* Added tools for the mathematical morphology operators Opening and Closing and the white top-hat transform.
+* Added the Isolate Vector Features by Attribute tool.
+* Fixed bug that removed line feeds when copying code snippets from help documentation into the Scripter.
+* Updated the RetrieveSRTMDEMData tool to optionally fix ocean elevation values by replacing them with nodata.
+* You can now hillshade raster images by specifying a hillshade source image in a raster's display properties. This provides better colour saturation than the previous approach of overlaying the raster transparently overtop a hillshade image.
+* Added the Stream Slope (Continuous) tool in contrast to the Stream Link Slope tool.
+* Updated the save map procedure to include the raster/vector cartographic generalization and the scale type (Standard = 0, Simple = 1, Complex = 2).
+* Numerous other bug fixes and enhancements.
+
+Date: 2017-01-25
+    </releaseNotes>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

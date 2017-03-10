@@ -8,7 +8,7 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/ccdcmercury</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>CCDC Mercury 3.8 (incl. enCIFer 1.5.2)</title>
+    <title>CCDC Mercury (incl. enCIFer)</title>
     <authors>Cambridge Crystallographic Data Centre</authors>
     <projectUrl>https://www.ccdc.cam.ac.uk/Community/csd-community/freemercury/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/ccdcmercury_icon.png</iconUrl>

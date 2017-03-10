@@ -13,7 +13,7 @@ function global:au_GetLatest {
 
    $version = $Name.split()[-1]
 
-   $url = 'https://www.uoguelph.ca/~hydrogeo/Whitebox/WhiteboxGAT.zip'
+   $url = 'https://www.uoguelph.ca/~hydrogeo/Whitebox/WhiteboxGAT-win.zip'
 
    return @{ 
             Version = $version
