@@ -10,7 +10,7 @@ function global:au_GetLatest {
    $url64 = $urls[0]
    $url32 = $urls[1]
 
-   $version = ($urls[0] -split '-')[1]
+   $version = (($urls[0] -split '/')[-1] -split '-')[1]
 
    return @{ 
             Version = $version

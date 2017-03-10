@@ -1,7 +1,7 @@
-$url32      = "https://s3.amazonaws.com/geoda/software/GeoDa-1.8.14-Windows-32bit.exe"
-$url64      = "https://s3.amazonaws.com/geoda/software/GeoDa-1.8.14-Windows-64bit.exe"
-$checkSum32 = '646F8422821B694152D85665DB10765B62051A028962F235CE11311363E59F36'
-$checkSum64 = '06588FC1871C8D0D96CC0D1F2B64C4B78B8417F9C4136FCF02664852240F9273'
+﻿$url32      = 'https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa-1.8.16-Windows-32bit.exe'
+$url64      = 'https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa-1.8.16-Windows-64bit.exe'
+$checkSum32 = '49dab1aad9d7d0756882b5e4456b7c9aa3fb1304fb141e19dfda28c43c2acad0'
+$checkSum64 = 'd35e485272ef3bc30d9e00fe295555626a3302302426662252581420507e80db'
 
 $InstallArgs = @{
    packageName    = 'geoda'
