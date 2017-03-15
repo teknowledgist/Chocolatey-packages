@@ -1,15 +1,19 @@
 $ErrorActionPreference = 'Stop'  # stop on all errors
 
-$packageName = 'pydev-eclipse'
-$Version = '5.1.2'
-$HostPackage = 'eclipse'
+$packageName   = 'pydev-eclipse-java-neon'
+$Version       = '5.1.2'
+$Url           = "https://sourceforge.net/projects/pydev/files/pydev/PyDev%20$Version/PyDev%20$Version.zip/download"
+$HostPackage   = 'eclipse-java-neon'
 
 $ZipArgs = @{
-   PackageName = 'pydev'
-   Url = "https://sourceforge.net/projects/pydev/files/pydev/PyDev%20$Version/PyDev%20$Version.zip/download'"
-   Checksum = 'F8C8258431CDC4B84D4D346902B32F67BF6519D7'
-   ChecksumType = 'sha1'
+   PackageName   = $packageName
+   Url           = $Url
+   Checksum      = 'F8C8258431CDC4B84D4D346902B32F67BF6519D7'
+   ChecksumType  = 'sha256'
+   UnzipLocation = Join-Path $env:chocolateyPackageFolder "PyDev$Version"
 }
+
+Install-ChocolateyZipPackage @ZipArgs
 
 $HostPackageLocation = "$env:ChocolateyInstall\lib\$HostPackage"
 $HostUnzipLog = Get-ChildItem $HostPackageLocation -Filter "$HostPackage*.zip.txt"
@@ -19,6 +23,7 @@ If ($HostUnzipLog) {
    throw "Chocolatey package $HostPackage install location not found!"
 }
 
-$ZipArgs.add('UnzipLocation', (Get-ChildItem $HostInstallLocation -filter dropins -Recurse).fullname)
+$DropIns = (Get-ChildItem $HostInstallLocation -Directory -filter dropins -Recurse).fullname
+$LinkFile = Join-Path $DropIns "$PyDev$Version.link"
 
-Install-ChocolateyZipPackage @ZipArgs
+("path=" + $env:chocolateyPackageFolder ) -replace '\\', '/' | Out-File -Encoding ASCII
