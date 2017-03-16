@@ -11,7 +11,7 @@
     <title>GeoDa</title>
     <authors>Center for Spatial Data Science (CSDS)</authors>
     <projectUrl>https://geodacenter.github.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/GeoDa_icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/geoda_icon.png</iconUrl>
     <copyright>Copyright © 2003-2016 Luc Anselin</copyright>
     <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -29,7 +29,7 @@ GeoDa supports a large variety of vector data in different formats. You can work
     </description>
     <releaseNotes>https://github.com/GeoDaCenter/geoda/releases</releaseNotes>
     <dependencies>
-      <dependency id="vcredist2010" version="10.0" />
+      <dependency id="vcredist2010" version="10.0"/>
     </dependencies>
   </metadata>
   <files>
