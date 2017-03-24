@@ -1,8 +1,8 @@
 ﻿$packageName = 'fossamail'
-$url32       = 'http://relmirror.fossamail.org/38.0.0//FossaMail-38.0.0.win32.installer.exe'
-$checkSum32  = '5f2acf5ac0847b6eacd9a8b14cfe247f97912d9f4a86a76216e4f0a6d40996e4'
-$url64       = 'http://relmirror.fossamail.org/38.0.0//FossaMail-38.0.0.win64.installer.exe'
-$checkSum64  = 'cd45dacef2f9b3d077b4c3ad1916b6ed86694979104ed13d078fde7c6e504f6c'
+$url32       = 'http://relmirror.fossamail.org/38.1.0//FossaMail-38.1.0.win32.installer.exe'
+$checkSum32  = 'a3c3b08ef9a81892da867d9cbdc154dd10f078d25acf37a029c741407d1d3a51'
+$url64       = 'http://relmirror.fossamail.org/38.1.0//FossaMail-38.1.0.win64.installer.exe'
+$checkSum64  = '063fe2cda53103add5515fb0d715421a1a04f3b25450c30d7274fce67a6529c1'
 
 $InstallArgs = @{
   packageName = $packageName

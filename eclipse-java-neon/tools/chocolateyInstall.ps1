@@ -9,11 +9,14 @@ $InstallArgs = @{
    ChecksumType = 'sha256'
    UnzipLocation = Join-Path $env:ProgramData $PackageName
 }
+# Installing into $env:ProgramData to improve discoverability and because
+#   Chocolatey packages shouldn't poke around in other package libraries.
+#   (i.e. plugins would have to go into $env:ChocolateyInstall\lib\eclipse...)
 Install-ChocolateyZipPackage @InstallArgs
 
 $UnzipLog = Get-ChildItem $env:chocolateyPackageFolder -Filter "*.zip.txt"
 $InstallFolder = Get-Content $UnzipLog.FullName | Select-Object -First 1
-$target = (Get-ChildItem $InstallFolder -include eclipse.exe -Recurse).fullname
+$target = (Get-ChildItem $InstallFolder -filter 'eclipse.exe' -Recurse).fullname
 
 # include shortcut on desktop for current user
 $desktop = Join-Path ([Environment]::GetFolderPath('Desktop')) 'Eclipse Java IDE (Neon).lnk'
@@ -22,12 +25,3 @@ Install-ChocolateyShortcut -ShortcutFilePath $desktop -TargetPath $target
 # include shortcut in all user's start menu (for discoverability)
 $startmenu = Join-Path $env:ProgramData 'Microsoft\Windows\Start Menu\Programs\Eclipse Java IDE (Neon).lnk'
 Install-ChocolateyShortcut -ShortcutFilePath $startmenu -TargetPath $target
-
-<#
-Temporary Notes:
-http://www.eclemma.org/installation.html
-https://www.eclipse.org/downloads/packages/release/Neon
-https://github.com/trajano/choco-packages/blob/master/eclipse/tools/chocolateyinstall.ps1
-https://github.com/trajano/choco-packages/blob/master/eclipse-eclemma/tools/chocolateyinstall.ps1
-https://www.apreltech.com/Free/How_to_run_as_system_user
-#>

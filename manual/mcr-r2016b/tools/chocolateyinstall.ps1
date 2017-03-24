@@ -29,7 +29,7 @@ $UnzipArgs = @{
 
 Get-ChocolateyUnzip @UnzipArgs
 
-$Installer = (Get-ChildItem $WorkSpace -Include 'setup.exe' -Recurse).fullname
+$Installer = (Get-ChildItem $WorkSpace -Filter 'setup.exe').fullname
 
 $InstallArgs = @{
    PackageName = $packageName
