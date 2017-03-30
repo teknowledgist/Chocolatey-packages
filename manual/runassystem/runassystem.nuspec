@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>runassystem</id>
+    <version>1.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/runassystem</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>runassystem (portable)</title>
+    <authors>AprelTech</authors>
+    <projectUrl>https://www.apreltech.com/Free/How_to_run_as_system_user</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/runassystem_icon.png</iconUrl>
+    <copyright>Copyright 2016, AprelTech</copyright>
+    <licenseUrl>https://www.apreltech.com/Free</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <bugTrackerUrl>https://www.apreltech.com/Contact</bugTrackerUrl>
+    <tags>runassystem runas su elevate root utility</tags>
+    <summary>Run software as SYSTEM</summary>
+    <description>Run as System is a useful tool for testing computer startup scripts or to figure out the behavior of a program when run as the local SYSTEM account. 
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
