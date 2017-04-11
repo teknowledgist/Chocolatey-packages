@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>axiovision</id>
+    <version>4.9.1-sp2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/axiovision</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Zeiss AxioVision LE SE64 (stand-alone)</title>
+    <authors>Carl Zeiss Microscopy GmbH</authors>
+    <projectUrl>https://www.zeiss.com/microscopy/us/products/microscope-software/axiovision.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/axiovision_icon.png</iconUrl>
+    <copyright>Copyright © 2006-2013 Carl Zeiss Microscopy GmbH</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/axiovision/AxioVisionLicense.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://download.zeiss.de/microimaging/axiovision/documentation/english/AxioVision_SE64_491_E.pdf</docsUrl>
+    <tags>axiovision zeiss microscopy image processing admin</tags>
+    <summary>Material Science Software for Research and Engineering</summary>
+    <description>AxioVision offers countless functions for applications in the field of industry, materials research or quality assurance. Thanks to its modular concept, the software guarantees you other advantages too: you can tailor AxioVision precisely to your requirements and only need to learn to work with the functions you actually need. You will find the optimal AxioVision module for your individual task here.
+
+#### Stand-alone (important!)
+This Chocolatey package is intended for systems that will do image analysis *only*.  **It does not install microscope camera drivers or control software for Microscopy equipment.**
+
+#### Features
+* Image Processing
+    Process your materials images using functions like Gray Morphology, Image Arithmetics, Fourier- and Color Transformation. Joined structures can be separated to discrete objects. The result is a ideal prerequisite for other image modules like Automatic Measurement. Of course Imaging Plus provides essential functions for brightness and contrast adjustments of your images too. Remove even image artifacts by eleminating specific parts of the images frequency spectrum.
+* Image Analysis and Interpretation
+    Utilize all the information in your images. With our analysis modules you can carry out measurements and segmentation interactively or automatically, according to your requirements.
+* Software Configuration
+    Whether you want to automate workflows for day-to-day laboratory work, create your own applications or record the history of your images in accordance with the FDA’s regulations, AxioVision can be configured to meet your own individual requirements.
+
+#### Functionality
+* Specific interface configurations for Windows multi-user environment
+* Image import: lsm, bmp, tif, jpg, j2k, jp2, gif, tga, png, cal, mac, msp, ras, pct, eps, wmf, psd, img, cmp
+* Image export (bmp, jpg, j2k, tif, tga, png, psd, img, cmp, avi, mov
+* Assign image annotations
+* Measure intensity profiles like length, area, perimeter, circle or angle interactively
+* Count and mark events on images
+* View multidimensional images in every dimension with the gallery view
+* Compare images in splitter display mode synchronous or independent
+* Generate meaningful reports containing images, data tables and graphs
+* Editor to create customized report layouts
+* Print images in standard magnification
+* Align z-stack images taken with stereo microscopes
+* Use powerful data processing functions
+* Increase apparent sharpness with Unsharp Masking
+* Adjust exposure time in the live image automatically
+</description>
+    <releaseNotes>[See the newest "Hotfix.txt" file here](http://download.zeiss.de/microscopy/axiovision/?C=M;O=D)</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

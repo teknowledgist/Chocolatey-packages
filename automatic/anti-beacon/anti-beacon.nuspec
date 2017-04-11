@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>anti-beacon</id>
+    <version>1.6</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/anti-beacon</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Spybot Anti-Beacon (install)</title>
+    <authors>Safer-Networking Ltd.</authors>
+    <projectUrl>https://www.safer-networking.org/spybot-anti-beacon/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/anti-beacon_icon.png</iconUrl>
+    <copyright>© 2015-2016 Safer-Networking Ltd.</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/anti-beacon/tools/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <mailingListUrl>https://forums.spybot.info/showthread.php?72686-Spybot-Anti-Beacon-for-Windows-10</mailingListUrl>
+    <tags>anti-beacon spybot win10 privacy tracking telemetry admin</tags>
+    <summary>Block and stop Windows tracking</summary>
+    <description>Spybot Anti-Beacon is a standalone tool which was designed to block and stop the various tracking (telemetry) issues present in Windows 10. It has since been modified to block similar tracking functionality in Windows 7, Windows 8 and Windows 8.1 operating systems.
+
+Anti-Beacon is small, simple to use, and is provided free of charge. It was created to address the privacy concerns of users of Windows 10 who do not wish to have information about their PC usage sent to Microsoft. Simply clicking “Immunize” on the main screen of Anti-Beacon will immediately disable any known tracking features included by Microsoft in the operating system.
+
+If any issues occur with your PC while using Anti-Beacon, undoing the changes made can be done by clicking the “Undo” button in the main window. This will re-enable all tracking services. 
+
+#### Note
+To prevent orphaned settings, when this package is uninstalled or upgraded, any tracking protections the program may (or may not) have enabled will be reset to default system settings .  After upgrading, a user will have to run (elevated) the Anti-Beacon application to re-establish protections.
+</description>
+    <releaseNotes>https://forums.spybot.info/showthread.php?72686-Spybot-Anti-Beacon-for-Windows-10</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

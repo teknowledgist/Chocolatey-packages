@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>bluebeamvu</id>
+    <version>2017.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/bluebeamvu</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Bluebeam Vu</title>
+    <authors>Bluebeam, Inc.</authors>
+    <projectUrl>https://www.bluebeam.com/solutions/vu</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/bluebeamvu_icon.png</iconUrl>
+    <copyright>© 2002-2017 Bluebeam, Inc.</copyright>
+    <licenseUrl>https://www.bluebeam.com/legal/eula-vu</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <mailingListUrl>http://support.bluebeam.com/</mailingListUrl>
+    <tags>Bluebeam Vu PDF 3D Archetecture Engineering Construction admin</tags>
+    <summary>A professional, AEC-standards, PDF viewer</summary>
+    <description>Vu is a professional PDF viewer designed for you. Vu does more than just read PDFs. With integration into document management systems and innovative File Access™ technology for organizing PDF files, Vu allows you to access and navigate PDF files with ease. View your PDF files as they are meant to be viewed - markups, comments, annotations display clearly and accurately so nothing is missed. But that’s not all. Vu also allows you to fill out and save PDF forms and join collaboration sessions using Bluebeam’s cloud solution, Studio™. 
+
+##### Key Features for Bluebeam Vu for Windows
+* MultiView - Split your screen up to 16 times
+* 3D PDFs - Navigate through complex 3D models
+* Search - Find both text and graphics in your PDFs
+* Markups List - Locate comments and markups and see the author, date, time and any comments associated with the markup
+* DMS Integration - Access SharePoint and ProjectWise documents
+* PDF Forms - Fill out and save PDF forms
+* Digital Signatures - Digitally sign PDFs
+    </description>
+    <dependencies>
+      <dependency id="vcredist2015" version="14.0.24212" />
+      <dependency id="autohotkey.portable" version="1.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

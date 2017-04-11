@@ -8,7 +8,7 @@ function global:au_GetLatest {
    $urlstub = $download_page.links |? href -match '\.msi' | select -ExpandProperty href
    $url = "https://github.com$urlstub"
 
-   $version = ($download_page.links |? href -match '\/tag\/v').href -replace '.*\/tag\/v(.+)','$1'
+   $version = $urlstub -replace '.*\/v([1-9.]+)\/.*','$1'
 
    return @{ Version = $version; URL = $url }
 }
