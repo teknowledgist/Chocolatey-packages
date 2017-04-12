@@ -1,10 +1,17 @@
+$ErrorActionPreference = 'Stop'
+
+$packageName = 'tinn-r'
+$URL         = 'https://sourceforge.net/projects/tinn-r/files/Tinn-R%20setup/5.1.2.0/Tinn-R_5.01.02.00_setup.exe/download'
+$Checksum    = '148A63769F9B794A5DF5938253D8DA763E4525ACCB35E1229599ED3165395550'
+
+
 $InstallArgs = @{
-   packageName = 'tinn-r'
-   installerType = 'exe'
-   url = 'https://sourceforge.net/projects/tinn-r/files/Tinn-R%20setup/5.1.2.0/Tinn-R_5.01.02.00_setup.exe/download'
-   silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /DIR="C:\Program Files\Tinn-R" /NOICONS=0'
-   Checksum = '148A63769F9B794A5DF5938253D8DA763E4525ACCB35E1229599ED3165395550'
-   ChecksumType = 'sha256'
+   packageName    = $packageName
+   installerType  = 'exe'
+   url            = $url
+   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /DIR="C:\Program Files\Tinn-R" /NOICONS=0'
+   Checksum       = $Checksum
+   ChecksumType   = 'sha256'
    validExitCodes = @(0)
 }
 

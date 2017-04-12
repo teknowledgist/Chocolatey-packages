@@ -1,15 +1,16 @@
 import-module au
 
-$Release = 'http://support.bluebeam.com/articles/networkautomated-deployment-of-bluebeam-software/'
+$Release = 'http://support.bluebeam.com/downloads-and-updates/'
 
 function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri $Release
 
-   $Fullname = $download_page.links | 
-                  Where-Object -FilterScript {($_.href -match 'enterprise') -and ($_.innertext -match 'bluebeam')} |
-                  select -ExpandProperty innertext -First 1
+   $html = $download_page.AllElements | 
+                  Where-Object -FilterScript {($_.tagname -eq 'tr') -and ($_.innertext -match '^Vu')} | 
+                  Select-Object -ExpandProperty innerhtml -First 1
 
-   $AppVersion = $Fullname.split()[-1]
+   $AppVersion = (($html.split("`n") |? {$_ -match 'center'}) -replace '.*>(.*)<.*','$1').trim()
+
    $PackageVersion = $AppVersion
    if ($AppVersion.split('.').count -eq 1) {
       $PackageVersion += '.0'

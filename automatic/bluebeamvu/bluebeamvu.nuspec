@@ -29,6 +29,7 @@
 * PDF Forms - Fill out and save PDF forms
 * Digital Signatures - Digitally sign PDFs
     </description>
+    <releaseNotes>http://support.bluebeam.com/articles/release-notes-bluebeam-revu/</releaseNotes>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24212" />
       <dependency id="autohotkey.portable" version="1.1" />

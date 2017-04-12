@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>hakchi2.portable</id>
+    <version>2.15</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/hakchi2</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>hakchi2 (portable)</title>
+    <authors>Alexey 'Cluster' Avdyukhin</authors>
+    <projectUrl>https://gbatemp.net/threads/hakchi2-nes-mini-very-simple-pimp-tool.456256/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/hakchi2_icon.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://github.com/ClusterM/hakchi2/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ClusterM/hakchi2</projectSourceUrl>
+    <docsUrl>https://gbatemp.net/threads/hakchi2-nes-mini-very-simple-pimp-tool.456256/</docsUrl>
+    <bugTrackerUrl>https://github.com/ClusterM/hakchi2/issues</bugTrackerUrl>
+    <tags>hakchi2 hakchi NES Nintendo game portable</tags>
+    <summary>A ROM-management tool for NES Mini</summary>
+    <description>This is a GUI for hakchi by madmonkey.
+
+This application can add more games (game ROMs) to your Nintendo Classic Mini or Famicom Mini. All you need is to connect it to a Windows PC via Micro-USB cable. No soldering or disassembling required.
+
+https://github.com/ClusterM/hakchi2
+
+### Features
+* Change any game settings (including command-line arguments)
+* Fill all game data automatically using included database
+* Automatically check for supported games
+* Search for box art using Google Images
+* Use [Game Genie](https://en.wikipedia.org/wiki/Game_Genie) codes; includes Game Genie database
+* Automatically patch problem games (patches for many popular games included)
+* Upload hundreds of games at once
+* Return to the HOME menu with a button combination instead of the Reset button
+* Enable autofire A/B
+* Simulate the start button on the second controller (for Famicom Mini)
+* Disable seizure protection
+* Allows to install user-mods to add more features (even support for SNES/N64/Genesis/etc., music replacement, themes, etc.)
+
+[Many commonly asked questions are answered in the FAQ](https://github.com/ClusterM/hakchi2/wiki/FAQ)
+    </description>
+    <releaseNotes>https://github.com/ClusterM/hakchi2/wiki/Changelog</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet3.5" version="3.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

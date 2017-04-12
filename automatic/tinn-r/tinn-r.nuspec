@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>tinn-r</id>
-    <version>5.1.2.0</version>
+    <version>5.1.1.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/tinn-r</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Tinn-R</title>
     <authors>José Cláudio Faria, Philippe Grosjean, Enio Galinkin Jelihovschi, Philipe Silva Farias</authors>
-    <owners>Teknowledgist</owners>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/tinn-r</packageSourceUrl>
-    <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectUrl>http://nbcgib.uesc.br/lec/software/editores/tinn-r/en</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/Tinn-R_icon.png</iconUrl>
+    <copyright>Copyright © 2001-2016</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/jcfaria/Tinn-R</projectSourceUrl>
     <mailingListUrl>https://groups.google.com/forum/?hl=en#!forum/tinn-r</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/tinn-r/bugs/</bugTrackerUrl>
+    <tags>tinn-r tinnr r.project statistics gui ide admin</tags>
+    <summary>A GUI/IDE for R development.</summary>
     <description>Tinn-R is a generic ASCII/UNICODE editor/word processor for the Windows operating system that is very well integrated into the R statistics system and provides a Graphical User Interface (GUI) and Integrated Development Environment (IDE).
     
 ### Key features
@@ -43,9 +49,9 @@ This parameter can be passed to the installer with the use of `-params`.
 For example : 
 `choco install tinn-r -params '"/Default"'`
     </description>
-    <summary>A GUI/IDE for R development.</summary>
     <releaseNotes>http://nbcgib.uesc.br/lec/software/editores/tinn-r/en#h9-what-is-new</releaseNotes>
-    <copyright>Copyright © 2001-2016</copyright>
-    <tags>tinn-r tinnr r.project statistics gui ide admin</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
