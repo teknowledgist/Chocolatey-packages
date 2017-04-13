@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>graph</id>
-    <version>4.4.2</version>
+    <version>4.4.2.20170413</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/graph</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Graph</title>
     <authors>Ivan Johansen</authors>
-    <owners>Teknowledgist</owners>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/graph</packageSourceUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/Graph_icon.png</iconUrl>
+    <projectUrl>https://www.padowan.dk/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/graph_icon.png</iconUrl>
+    <copyright>Copyright © 2001-2012 Ivan Johansen</copyright>
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectUrl>https://www.padowan.dk/</projectUrl>
-	<docsUrl>https://www.padowan.dk/manual/</docsUrl>
+    <docsUrl>https://www.padowan.dk/manual/</docsUrl>
     <projectSourceUrl>https://sourceforge.net/p/graph/code/HEAD/tree/</projectSourceUrl>
     <mailingListUrl>http://forum.padowan.dk/</mailingListUrl>
     <bugTrackerUrl>http://forum.padowan.dk/</bugTrackerUrl>
+    <tags>graph plotting math functions admin</tags>
+    <summary>Plotting of mathematical functions</summary>
     <description>Graph is an open source application used to draw mathematical graphs in a coordinate system. Anyone who wants to draw graphs of functions will find this program useful. Graph makes it very easy to visualize a function and paste it into another program. It is capable of drawing standard functions, parametric functions, polar functions, tangents, point series, shadings and relations. It is also possible to evaluate a function for a given point, trace a graph with the mouse, do some mathematical calculations on the functions and much more.
     </description>
-    <summary>Plotting of mathematical functions</summary>
     <releaseNotes>https://www.padowan.dk/history/</releaseNotes>
-    <copyright>Copyright © 2001-2012 Ivan Johansen</copyright>
-    <tags>graph plotting math functions admin</tags>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
