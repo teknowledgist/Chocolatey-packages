@@ -1,8 +1,8 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'tinn-r'
-$URL         = 'https://sourceforge.net/projects/tinn-r/files/Tinn-R%20setup/5.1.2.0/Tinn-R_5.01.02.00_setup.exe/download'
-$Checksum    = '148A63769F9B794A5DF5938253D8DA763E4525ACCB35E1229599ED3165395550'
+$URL         = 'https://sourceforge.net/projects/tinn-r/files/latest/download?source=files'
+$Checksum    = '148a63769f9b794a5df5938253d8da763e4525accb35e1229599ed3165395550'
 
 
 $InstallArgs = @{
