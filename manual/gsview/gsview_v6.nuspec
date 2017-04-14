@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>gsview</id>
+    <version>6.0.0.20150422</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/gsview</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>GhostScript preViewer</title>
+    <authors>Artifex Software Inc.</authors>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/GSView_icon.png</iconUrl>
+    <copyright>Copyright 2006-2015 Artifex Software, Inc.</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/gsview/tools/license.md</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectUrl>http://artifex.com/developers-ghostscript-gsview/</projectUrl>
+    <mailingListUrl>http://webchat.freenode.net/?channels=ghostscript</mailingListUrl>
+    <bugTrackerUrl>http://bugs.ghostscript.com/</bugTrackerUrl>
+    <tags>gsview Ghostscript PostScript PDF gui admin</tags>
+    <summary>A graphical interface for Ghostscript.</summary>
+    <description>GSview is a graphical interface for Ghostscript. Ghostscript is an interpreter for the PostScript page description language used by laser printers. For documents following the Adobe PostScript Document Structuring Conventions, GSview allows selected pages to be viewed or printed. GSview requires Ghostscript. 
+    
+GSView is a user-friendly viewer for various document formats including Postscript, PDF, XPS, EPUB (version 2, no DRM), CBZ, JPEG, and PNG files. GSView leverages the viewing capabilities of MuPDF, along with the conversion capabilities of Ghostscript to provide both a fast and high quality on-screen experience, and high quality export and conversion features.
+
+### Features include:
+* Display and print PostScript and PDF files.
+* View pages in arbitrary order (Next, Previous, Goto).
+* Page size and Orientation are automatically selected from DSC comments or can be selected using the menu.
+* Print selected pages using Ghostscript.
+* Convert pages to bitmap, PDF or PostScript.
+* Selectable display resolution, depth, alpha.
+* Single button zoom.
+* Extract selected pages to another file.
+* Copy display bitmap to clipboard.
+* Save clipboard bitmap as BMP file.
+* Add bitmap or user preview to EPS file (Interchange, TIFF or Windows Metafile)
+* Graphically select and show bounding box for EPS file.
+* Extract bitmap preview or PostScript from DOS EPS file.
+* Extract text or search for text.
+* Can read gzip and bzip2 compressed PostScript and PDF files. 
+
+### Version Note 
+There are two "branches" of GSView.  They share a name and have very similar function and UI, but they have only some common code and have different copyrights.
+
+* ["GSView" version 6+](https://chocolatey.org/packages/GSView) is produced by [Artifex Software LLC](http://artifex.com/developers-ghostscript-gsview/).  This version should be used with more recent versions of GhostScript.
+* ["GSView" version 5 and earlier](https://chocolatey.org/packages/GSView/5.0.0.20170414) was produced by [Russell Lang at Ghostgum Software Pty Ltd.](http://pages.cs.wisc.edu/~ghost/gsview/index.htm).  This version exhibits problems with versions of GhostScript newer than 9.16.  
+    </description>
+    <dependencies>
+      <dependency id="Ghostscript.app"  version="9.18"/>
+    </dependencies>
+  </metadata>
+</package>

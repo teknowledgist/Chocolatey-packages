@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>gsview</id>
+    <version>5.0.0.20170414</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/gsview</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>GhostScript preViewer</title>
+    <authors>Russel Lang</authors>
+    <projectUrl>http://pages.cs.wisc.edu/~ghost/gsview/index.htm</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/GSView_icon.png</iconUrl>
+    <copyright>Copyright © Ghostgum Software Pty Ltd.</copyright>
+    <licenseUrl>http://pages.cs.wisc.edu/~ghost/gsview/LICENCE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>http://pages.cs.wisc.edu/~ghost/gsview/download/gsv50src.zip</projectSourceUrl>
+    <tags>gsview Ghostscript PostScript gui admin</tags>
+    <summary>A graphical interface for Ghostscript.</summary>
+    <description>GSview is a graphical interface for Ghostscript. Ghostscript is an interpreter for the PostScript page description language used by laser printers. For documents following the Adobe PostScript Document Structuring Conventions, GSview allows selected pages to be viewed or printed. GSview requires Ghostscript. 
+
+### Features include:
+* Display and print PostScript and PDF files.
+* View pages in arbitrary order (Next, Previous, Goto).
+* Page size and Orientation are automatically selected from DSC comments or can be selected using the menu.
+* Print selected pages using Ghostscript.
+* Convert pages to bitmap, PDF or PostScript.
+* Selectable display resolution, depth, alpha.
+* Single button zoom.
+* Extract selected pages to another file.
+* Copy display bitmap to clipboard.
+* Save clipboard bitmap as BMP file.
+* Add bitmap or user preview to EPS file (Interchange, TIFF or Windows Metafile)
+* Graphically select and show bounding box for EPS file.
+* Extract bitmap preview or PostScript from DOS EPS file.
+* Extract text or search for text.
+* Can read gzip and bzip2 compressed PostScript and PDF files. 
+
+### Version Note 
+There are two "branches" of GSView.  They share a name and have very similar function and UI, but they have only some common code and have different copyrights.
+
+* ["GSView" version 5 and earlier](https://chocolatey.org/packages/GSView/5.0.0.20170414) was produced by [Russell Lang at Ghostgum Software Pty Ltd.](http://pages.cs.wisc.edu/~ghost/gsview/index.htm).  This version exhibits problems with versions of GhostScript newer than 9.16 and should only be used if the Ghostscript.app package is ["pinned"](https://github.com/chocolatey/choco/wiki/CommandsPin).
+* ["GSView" version 6+](https://chocolatey.org/packages/GSView) is produced by [Artifex Software LLC](http://artifex.com/developers-ghostscript-gsview/).  This version should be used with more recent versions of GhostScript.
+
+### Registering GSview  
+
+If you wish to support the development of GSview or wish to disable the GSview nag screen, please consider registering GSview. There is no requirement for you to register GSview. According to the terms of the GSview licence, you can use GSview without any payment. The registration fee is AUD$40 (approx. USD$40). GSview can be [registered online](https://www.cardgate.net/~ghostgum/) at an external secure site. 
+
+GSview can also be registered by faxing or mailing a [registration form](http://www.ghostgum.com.au/regorder.txt). Ghostgum Software prefers that you use the online registration method. A [site registration](http://www.ghostgum.com.au/sitereg.htm) for multiple computers is also available. 
+
+    </description>
+    <releaseNotes>http://pages.cs.wisc.edu/~ghost/gsview/get50.htm</releaseNotes>
+    <dependencies>
+      <dependency id="Ghostscript.app"  version="[9.04,9.16]"/>
+    </dependencies>
+  </metadata>
+</package>
