@@ -41,6 +41,8 @@ https://github.com/ClusterM/hakchi2
 * Allows to install user-mods to add more features (even support for SNES/N64/Genesis/etc., music replacement, themes, etc.)
 
 [Many commonly asked questions are answered in the FAQ](https://github.com/ClusterM/hakchi2/wiki/FAQ)
+#### Note 
+This package will install without admin rights, but hakchi2 requires admin rights to run (for now).
     </description>
     <releaseNotes>https://github.com/ClusterM/hakchi2/wiki/Changelog</releaseNotes>
     <dependencies>

@@ -27,4 +27,4 @@ foreach ($file in $files) {
 }
 $shortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'hakchi2.lnk'
 
-Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $target
+Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $target -RunAsAdmin
