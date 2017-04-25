@@ -1,4 +1,15 @@
-﻿$packageName = 'Fiji'
+﻿# This is stuck for now.
+# Discussion:
+#   https://github.com/imagej/imagej/issues/152
+# Unresolved:
+#   How to block automatic unpgrade check.
+#   How to determine the currently installed version.
+#   Update.ps1 not created
+#      parse for info: http://maven.imagej.net/content/groups/public/net/imagej/imagej/maven-metadata.xml
+#      Does Chocolatey nuspec support release candidate versioning?
+
+
+$packageName = 'Fiji'
 $version     = '2.0.0.5900'
 $url         = 'http://downloads.imagej.net/fiji/latest/fiji-nojre.zip'
 $checkSum    = 'A64D32E78A15B514B49D5E82651352BF65345A36B46F289952F4AAF0141E29C1'
