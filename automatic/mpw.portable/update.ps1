@@ -1,3 +1,6 @@
+# This is broken until a URL can be scraped for information
+write-host "This is broken until a URL can be scraped for information"
+return
 import-module au
 
 $Release = 'https://github.com/Lyndir/MasterPassword/releases'

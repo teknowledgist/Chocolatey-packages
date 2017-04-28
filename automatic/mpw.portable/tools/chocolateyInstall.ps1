@@ -1,13 +1,12 @@
 ﻿$packageName = 'mpw.portable'
-$url         = 'https://ssl.masterpasswordapp.com/masterpassword-gui.jar'
+$url         = 'https://ssl.masterpasswordapp.com/masterpassword-gui-2.3.jar'
 $Checksum    = 'c3eedb0ddede3a1511fab888012d62f9749d00f525796cac0506dfbfe66a9315'
-$version     = '2.4'
 
 $installDir  = Split-Path (Split-Path -parent $script:MyInvocation.MyCommand.Path)
 
 $installArgs = @{
    packageName   = $packageName
-   FileFullPath  = Join-Path $installDir ($url.split('/')[-1] -replace '-',"-$version-")
+   FileFullPath  = Join-Path $installDir ($url.split('/')[-1])
    url           = $url
    Checksum      = $Checksum
    ChecksumType  = 'sha256'
