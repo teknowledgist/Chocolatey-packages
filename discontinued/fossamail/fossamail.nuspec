@@ -4,25 +4,33 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fossamail</id>
-    <version>38.1.0</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fossamail</packageSourceUrl>
+    <version>38.2.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/fossamail</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>FossaMail</title>
     <authors>Moonchild Productions</authors>
     <projectUrl>http://www.fossamail.org/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/fossamail_icon.png</iconUrl>
-    <copyright>© 2014-2016 Moonchild Productions</copyright>
+    <copyright>Copyright © 2014-2016 Moonchild Productions</copyright>
     <licenseUrl>https://www.fossamail.org/redist.shtml</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/MoonchildProductions/FossaMail</projectSourceUrl>
     <mailingListUrl>http://forum.palemoon.org/viewforum.php?f=34</mailingListUrl>
     <bugTrackerUrl>http://forum.palemoon.org/viewforum.php?f=35</bugTrackerUrl>
-    <tags>fossamail email news thunderbird palemoon admin</tags>
+    <tags>fossamail email news thunderbird palemoon discontinued admin</tags>
     <summary>A Thunderbird-based mail, news and chat client based on the Pale Moon browser core.</summary>
     <description>FossaMail is an open-source, Mozilla Thunderbird-based mail, news and chat client for Windows and Linux, brought to you by the Pale Moon developers (and therefore not affiliated with the Mozilla Corporation). It is an alternative version of the Mozilla Thunderbird mail and news client, and based on the [Pale Moon](https://chocolatey.org/packages/palemoon) browser core.
+## Discontinued!
+Unfortunately, due to lack of time to maintain the code, and lack of users and funds, this project is now discontinued. 
 
-### FossaMail:
+Although security issues are less frequent for a mail client because there is no scripting possible in e-mails, they are not nonexistent and as time goes on, it's inevitable that this client will become vulnerable. It will still continue to serve the people who already have it for a while yet, but everyone currently using FossaMail should consider finding an alternative mail/chat/news client to keep them from increasing security/privacy risks.
+
+(This Chocolatey package will continue to work, but will no longer be updated.)
+
+---
+
+##### FossaMail:
 
 * Is built from source with compiler optimizations geared towards an as stable and smooth operation of the client as possible (Pale Moon-alike optimizations).
 * Uses the Pale Moon browser core as its back-end. The client is therefore based on Pale Moon rather than other Mozilla-derived mail clients.
@@ -32,8 +40,9 @@
 * Is available in 32-bit (x86) and 64-bit (x64) versions for both Windows and Linux.
 * Comes with an optional calendar/organizer integrated that will allow it to be used in a Microsoft Outlook style information manager fashion.
 
-### Note:
-FossaMail is an English language client, and this package does not install any other languages.  [Go here for any available, alternative language packs and instructions.](http://www.fossamail.org/langpacks.shtml) **It is recommended to uninstall any language packs before upgrading to a newer version of FossaMail.**
+##### Note:
+FossaMail is an English language client, and this package does not install any other languages.
+
     </description>
     <releaseNotes>https://www.fossamail.org/releasenotes.shtml</releaseNotes>
   </metadata>

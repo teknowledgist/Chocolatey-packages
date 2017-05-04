@@ -44,7 +44,7 @@ As a Master Password user, there are about three steps to entering any site:
 Most browsers will then ask you to "save" the site's password. For most people, this is a good idea and will subsequently allow you to log in without having to use Master Password at all.
     </description>
     <dependencies>
-      <dependency id="mpw.portable" version="2.3" />
+      <dependency id="mpw.portable" version="[2.3]" />
     </dependencies>
   </metadata>
   <files>

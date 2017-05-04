@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <id>{{PackageName}}</id>
-    <version>{{PackageVersion}}</version>
+    <id>fastcopy.install</id>
+    <version>3.30</version>
     <packageSourceUrl>https://github.com/dtgm/chocolatey-packages/tree/master/automatic/FastCopy.install</packageSourceUrl>
     <owners>Teknowledgist, dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

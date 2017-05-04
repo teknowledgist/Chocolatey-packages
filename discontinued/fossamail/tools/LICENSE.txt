@@ -1,0 +1,56 @@
+﻿From: http://www.fossamail.org/redist.shtml
+
+Redistributing FossaMail
+========================
+
+Even though FossaMail is Free and Open Source software and the source is supplied under the Mozilla Public License, **redistribution of the FossaMail binaries (in executable form) is limited by certain conditions under a proprietary license by Moonchild Productions**, as permitted under 3.2b of the MPL v2.0.
+
+Even though FossaMail is supplied as open source, our branding included in the source tree is protected and you are not granted any rights or licenses to the FossaMail name, logo, or other identifying official branding marks, names or phrases. To clarify the situation if you build from source to redistribute the resulting executable form, please see points 8, 10 and 12 below.
+
+This license covers redistribution of officially supplied binaries (including the lightning extension which has binary components) and some policies regarding binaries built from source with official branding, which is allowed in some circumstances.
+
+------------------------------------------------------------------------
+
+### Redistribution license
+
+Last updated: 08 March 2016
+
+If you wish to redistribute the binaries (executable form of the code) of FossaMail, you are free to do so, with the following limitations:
+
+1.  There is NO CHARGE for the download or distribution of the client package or lightning.
+    It is therefore **not permitted** if, without limitation:
+    1.  You charge for the download of the binary packages (e.g. paid hosting service, pay-per-download, subscription, etc.) or access to them (password protected sites/archives/etc.)
+    2.  You charge for redistribution rights of the client binaries, yourself (you have no rights to it)
+    3.  You charge for a physical medium like a CD or DVD. Example: If you provide a "cover disk" with a *printed* magazine, that is considered a "no charge" item (free bonus item with the magazine) and is therefore allowed. If you provide a *disk-based* or *magazine* (digital distribution) that includes FossaMail, the medium itself is paid for and considered a "charge" item, and is therefore not allowed.
+2.  You don't require the obligatory submission of personal data (name, e-mail, telephone number, address, age, gender, ID, or similar) to download the binaries. If you require registration of users before they can download FossaMail, you are not allowed to distribute it. Users must, at all times, have the *clear **and equal** option* to download FossaMail without surrendering *any* personal information to you.
+3.  The binaries and/or archives are completely UNALTERED. This includes addition or removal of any component of the client or redistributing modified parts of the client as-built (including, without limitation, predefined profile components, altered jar or omni files, or modified .exe or dll components). Redistribution is therefore **not permitted** if, without limitation:
+    1.  You have re-packed the browser in a different archive format (either common or proprietary)
+        (an exception to this is re-packaging required for specific target operating systems, e.g. rpm, deb, pet)
+    2.  You have added language packs/add-ons/plugins/etc.
+    3.  You have added third-party tools/toolbars/utilities/etc.
+    4.  You have changed supplied default preferences of the client
+    5.  You include a pre-set profile
+    6.  You have removed any component from the client package
+    7.  You have edited or removed text or script files (including license files, readmes, JavaScript modules, etc.)
+    8.  The binaries have been in any way infected with or include a virus, trojan, or other malware
+    9.  The binaries and program structure have been in any way obscured (e.g. by using application virtualization) making it difficult or impossible to check for the previously listed alterations
+4.  The binaries can be obtained without the use of third-party software not officially endorsed, including but not limited to: download managers, stub installers, wrappers, proprietary clients or proprietary protocols. This includes any offering of such unendorsed downloading software or methods, regardless of offering "direct" downloads or allowed methods alongside the unendorsed ones.
+5.  The binaries are not supplied as an integral part of a commercial/non-commercial software package/larger works ("package"). If you wish to do this, you must contact me beforehand to obtain permission and discuss terms. Inclusion in a package will be subject to an individual agreement (either extemporaneous or legalized) which may or may not involve compensation.
+6.  The binaries are not supplied as an integral part of a commercial/non-commercial website/web service/on-line venue/etc. ("service"). If you wish to do this, you must contact me beforehand to obtain permission and discuss terms. Inclusion in a service will be subject to an individual agreement (either extemporaneous or legalized) which may or may not involve compensation.
+7.  An *exception* applies to points 5 and 6 of this license for educational purposes if bundled with other open source software or supplied as part of a curriculum or in-college resource for students.
+8.  An *exception* applies to point 5 of this license for inclusion of the officially branded binaries in freely available and fully Open Source operating systems, including but not limited to non-commercial variants of Linux or variants of BSD. This exception only applies to *unaltered* versions of the FossaMail binaries or officially branded variants specifically built for the target operating system from source that have not been materially changed (including brand-specific configurations like e.g. home page, default search engine). If any of the essential settings of the browser are altered beyond what is strictly needed for providing a working build on the target operating system, the exception in this point does not apply and the license defaults to point 10, instead.
+    1.  Clarification of "officially branded variants specifically built for the target operating system": If an officially-built binary (i.e. built by our team) is available for the target operating system (e.g. existing Linux binaries), then those binaries will always, in principle, take precedence over a third-party build to ensure necessary QA and compatibility. Building and distributing a binary with official branding is in that situation only in principle allowed if an actual variant build is required for the target distribution's compatibility (e.g. kernel or library requirements) or operation, and otherwise not impacting the material content of the browser package as a whole. QA of and support for the resulting variant binaries will in that case fall on the maintainer who will have to take full responsibility for the variant binary.
+9.  This redistribution agreement and any Individual Agreements for the redistribution of executable code are provided by Moonchild Productions ("Moonchild", "M.C. Straver") explicitly for the FossaMail executable code, and not by the Initial Developer or any Contributor. The Initial Developer and every Contributor is hereby indemnified for any liability incurred by the Initial Developer or such Contributor as a result of these terms.
+10. The **only** exception to this redistribution policy not otherwise covered in points 7 or 8 is if the repackaged or private build with official branding has been pre-approved by Moonchild for redistribution and is listed on this website or the official forum as an endorsed, contributed build. Contributed builds are subject to a screening process, may be accepted or rejected, may be re-screened at a later time, and may be at any time removed, in Moonchild's sole discretion, either with or without stated reason.
+11. If a distribution is authorized as per point 10, the contributed build may be redistributed in unaltered form by third parties as set out in the points above and under the same conditions.
+12. If you wish to distribute binaries for other platforms, building from FossaMail source code, you may **not** use official branding unless these builds have also been approved as a contributed build as per point 10 of this license or if they are exempt under points 7 or 8 of this license. Even so, you obtain no rights to the FossaMail or Pale Moon name or logo, merely the permission to use it for the 3rd party build, and only for as long as it is officially endorsed or satisfies the conditions for exemption. In all other cases you must use significantly different branding files/graphics and a significantly different name for the client.
+13. Unofficially branded binaries with an unofficial or different logo and product name are not subject to the endorsement and exception rules as set out in previous points of this license and may be freely distributed in altered or unaltered form, subject to the Mozilla Public License as regards source code changes and availability. This permission does, however, not include any rights or license to the FossaMail or Pale Moon name and logo that may still be present in the resulting unofficially/individually branded binaries.
+
+------------------------------------------------------------------------
+
+If you have any questions about this redistribution policy, think anything is in error or wish to discuss individual redistribution terms for your specific scenario, then please [contact me](http://www.palemoon.org/contact/).
+
+Site and contents © 2014-2017 [Moonchild Productions](http://www.moonchildproductions.info/) - All rights reserved
+FossaMail is released as Open Source under the [Mozilla Public License (MPL) 2.0](http://www.mozilla.org/MPL/2.0/)
+FossaMail in binary/executable form is subject to its [Redistribution License](redist.shtml)
+

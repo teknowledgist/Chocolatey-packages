@@ -1,7 +1,7 @@
 ﻿$packageName = 'Jmol'
 
-$url        = 'https://sourceforge.net/projects/jmol/files/Jmol/Version%2014.9/Jmol%2014.9.1/Jmol-14.9.1-binary.zip'
-$Checksum   = 'b67cd8f402bee129730694f4b0f6b4154079bf6e38a5edee2d179ba08f6c5918'
+$url        = 'https://sourceforge.net/projects/jmol/files/Jmol/Version%2014.15/Jmol%2014.15.2/Jmol-14.15.2-binary.zip'
+$Checksum   = '23f2dca6e9572e67b75f6e138e3d24ae6b726d245da0359ea2989af9f136eeb9'
 $installDir = Split-Path (Split-Path -parent $script:MyInvocation.MyCommand.Path)
 
 $installArgs = @{

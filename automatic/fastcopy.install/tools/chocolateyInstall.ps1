@@ -1,8 +1,8 @@
-﻿$packageName = '{{PackageName}}'
-$url32       ='{{DownloadUrl}}'
-$checkSum32  = '{{Checksum}}'
-$url64       ='{{DownloadUrlx64}}'
-$checkSum64  = '{{Checksumx64}}'
+﻿$packageName = 'fastcopy.install'
+$url32       ='http://ftp.vector.co.jp/68/61/2323/FastCopy330.zip'
+$checkSum32  = 'c67bd82f9847d759b1fe114934ca724ead7f49a115764dff5473437a2bf5e926'
+$url64       ='http://ftp.vector.co.jp/68/61/2323/FastCopy330_x64.zip'
+$checkSum64  = 'b66b8987d52d3d1a2cfad881f435d8d6cef48a9b72295ab2b2447b7550eec842'
 
 $DownloadArgs = @{
    PackageName         = $packageName

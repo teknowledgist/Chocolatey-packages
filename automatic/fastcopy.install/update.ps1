@@ -3,11 +3,21 @@ import-module au
 $RootURL = 'https://ipmsg.org'
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri "$RootURL/tools/fastcopy.html.en"
+   $HomePage = Invoke-WebRequest -Uri "$RootURL/tools/fastcopy.html.en"
 
-   $path64,$path32 = $download_page.links |? innertext -eq 'installer' |select -First 2 -ExpandProperty href
+   $Down32 = Invoke-WebRequest -uri ($HomePage.links | 
+                  Where-Object {$_.onclick -match "log\('fc32_vector"} |
+                  select -First 1 -ExpandProperty href
+             )
+   $url32 = $Down32.links | Where-Object {$_.href -match '.*\.zip'} |select -ExpandProperty href
 
-   $Text = $download_page.allelements |? {
+   $Down64 = Invoke-WebRequest -uri ($HomePage.links | 
+                  Where-Object {$_.onclick -match "log\('fc64_vector"} |
+                  select -First 1 -ExpandProperty href
+             )
+   $url64 = $Down64.links | Where-Object {$_.href -match '.*\.zip'} |select -ExpandProperty href
+
+   $Text = $HomePage.allelements |? {
                                    ($_.tagname -eq 'th') -and 
                                    ($_.innertext -match "FastCopy.*download")
                                 } | select -First 1 -ExpandProperty innertext
@@ -16,8 +26,8 @@ function global:au_GetLatest {
 
    return @{ 
             Version = $version
-            URL32 = $RootURL + $path32
-            URL64 = $RootURL + $path64
+            URL32 = $url32
+            URL64 = $url64
            }
 }
 
@@ -33,4 +43,4 @@ function global:au_SearchReplace {
    }
 }
 
-Update-Package
+Update-Package -nocheckchocoversion

@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName= 'hakchi2.portable'
-$version     = '2.15'
-$url         = 'https://github.com/ClusterM/hakchi2/releases/download/2.15/hakchi2.zip'
-$checkSum    = '14c4a427e45a346dbe0932b83215739b6570e0ce7e9eed4f31ad7bea7dbdf59d'
+$version     = '2.16'
+$url         = 'https://github.com/ClusterM/hakchi2/releases/download/2.16/hakchi2.zip'
+$checkSum    = '8a55ff053849722a0c8a6fbc71a6cb38b57d7da0db6a55335df19aa24c529a05'
 
 $PackageDir = Split-path (Split-path $MyInvocation.MyCommand.Definition)
 

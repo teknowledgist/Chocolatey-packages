@@ -2,31 +2,32 @@
 
 $PackageName = 'bluebeamvu'
 $DisplayName = 'Bluebeam Vu'
-$AppVersion  = '2017'
+$AppVersion  = '2017.0'
 $Checksum    = '8397f8f69fff444185298f1852c33b606d1ab83e09b32e68a69ed3332849bb87'
 $URL         = 'https://downloads.bluebeam.com/software/downloads/2017/vu/BbVu2017.exe'
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName "$DisplayName*$AppVersion*"
 
-if ($key) {
-   Write-Host "$($key.DisplayName) already installed." -ForegroundColor Cyan
+if ($AppVersion -like "*$($key.DisplayVersion)") {
+   Write-Host "$($key.DisplayName) v$AppVersion already installed." -ForegroundColor Cyan
 } else {
    $WorkingFolder = Join-Path -Path $env:TEMP -ChildPath $packageName
 
    $PackageArgs = @{
      PackageName  = $packageName
-     FileFullPath = Join-Path $WorkingFolder $URL.Split('/')[-1]
+     fileType     = 'exe'
      Url          = $URL
      Checksum     = $Checksum
      ChecksumType = 'sha256'
    }
   
-   # Download
-   $Download = Get-ChocolateyWebFile @PackageArgs
    # silent install requires AutoHotKey
-   & AutoHotKey $(Join-Path $env:ChocolateyPackageFolder 'tools\chocolateyInstall.ahk') $Download
-   # Alert Chocolatey if install failed
-   if (-not (Get-UninstallRegistryKey -SoftwareName "$DisplayName*$AppVersion")) {
-      Throw "Silent install of $DisplayName $AppVersion failed!"
-   }
+   $ahkExe = 'AutoHotKey'
+   $ahkFile = Join-Path (Split-Path -parent $MyInvocation.MyCommand.Definition) 'chocolateyInstall.ahk'
+   $ahkProc = Start-Process -FilePath $ahkExe -ArgumentList "$ahkFile" -PassThru
+   $ahkId = $ahkProc.Id
+   Write-Debug "$ahkExe start time:`t$($ahkProc.StartTime.ToShortTimeString())"
+   Write-Debug "Process ID:`t$ahkId"
+   
+   Install-ChocolateyPackage @PackageArgs
 }
