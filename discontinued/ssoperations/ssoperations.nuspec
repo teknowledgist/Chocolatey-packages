@@ -10,7 +10,6 @@
     <title>Screensaver Operations</title>
     <authors>The Grim Admin</authors>
     <projectUrl>http://www.grimadmin.com/page.php/ss-operations</projectUrl>
-    <iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/ssoperations.png</iconUrl>
     <copyright>Copyright © 2009-2013 The Grim Admin</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/ssoperations/tools/license.md</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

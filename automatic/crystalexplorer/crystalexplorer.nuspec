@@ -4,15 +4,15 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>crystalexplorer</id>
-    <version>3.1.0.20161202</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/crystalexplorer</packageSourceUrl>
+    <version>17.5</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/crystalexplorer</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Crystal Explorer</title>
-    <authors>Dylan Jayatilaka,Daniel Grimwood,Stephen Wolff,Mark Spackman,Josh McKinnon,Mike Turner</authors>
-    <projectUrl>http://crystalexplorer.scb.uwa.edu.au/index.html</projectUrl>
+    <authors>M.J. Turner,J.J. McKinnon,S.K. Wolff,D.J. Grimwood,P.R. Spackman,D. Jayatilaka,M.A.Spackman</authors>
+    <projectUrl>http://crystalexplorer.scb.uwa.edu.au</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/CrystalExplorer_icon.png</iconUrl>
-    <copyright>Copyright © 2004-2010 The University of Western Australia. </copyright>
+    <copyright>Copyright © 2005-2017 The University of Western Australia. </copyright>
     <licenseUrl>http://crystalexplorer.scb.uwa.edu.au/licence.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://www.hirshfeldsurface.net/wiki</docsUrl>
@@ -37,11 +37,11 @@ A recent feature in this version is the ability to display and quantify voids in
 CrystalExplorer requires a license to run.  One will be provided free with [email sign-up](http://crystalexplorer.scb.uwa.edu.au/licence.html) under the following conditions:
 
 * You must be conducting research for peer-reviewed publication at a bone fide degree-granting institution to qualify.
-* You must not use the free version of CrystalExplorer to conduct commercial research, confidential research, or research that is not likely to be published in a peer-reviewed publication.
-* If you publish research including results from CrystalExplorer, you must cite CrystalExplorer as described in the About→CrystalExplorer window in the Application.
+* You must **not** use the free version of CrystalExplorer to conduct commercial research, confidential research, or research that is not likely to be published in a peer-reviewed publication.
+* If you publish research including results from CrystalExplorer, you must cite CrystalExplorer as described [here](http://crystalexplorer.scb.uwa.edu.au/wiki/index.php/How_to_cite_CrystalExplorer).
 * CrystalExplorer is provided as-is, and without warranty of any kind.
     </description>
-    <releaseNotes>http://www.hirshfeldsurface.net/wiki/index.php/CrystalExplorer_3.1_Release_Notes</releaseNotes>
+    <releaseNotes>http://crystalexplorer.scb.uwa.edu.au/wiki/index.php/CrystalExplorer17_Release_Notes</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
