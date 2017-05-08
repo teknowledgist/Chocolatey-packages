@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>ssoperations</id>
+    <version>1.4</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/ssoperations</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Screensaver Operations</title>
+    <authors>The Grim Admin</authors>
+    <projectUrl>http://www.grimadmin.com/page.php/ss-operations</projectUrl>
+    <iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/ssoperations.png</iconUrl>
+    <copyright>Copyright © 2009-2013 The Grim Admin</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/ssoperations/tools/license.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.grimadmin.com/grim_tools/ssoperations/README.htm</docsUrl>
+    <mailingListUrl>http://www.grimadmin.com/forum/index.php?forum=5</mailingListUrl>
+    <bugTrackerUrl>http://www.grimadmin.com/profiles.php?uid=2</bugTrackerUrl>
+    <tags>ssoperations screensaver idle logoff admin</tags>
+    <summary>Configure actions to run when a computer has been left idle.</summary>
+    <description>Screensaver Operations allows you to perform configurable actions after a computer has been left idle for a specified amount of time.
+
+#### Features
+* Log off user, shut down or restart computer, or run any process when left idle
+* Optional warning message w/ screen dimming allowing users to cancel out
+* Can be configured and enforced via registry and Group Policy Preferences
+* Highly customizable with many easily configurable options such as delay time and custom messages
+* Colors can be adjusted to match your organization policies
+* Great replacement for the outdated Windows Exit Screen Saver Tool (Winexit.scr)
+* Windows Vista and Windows 7 compatible (Should work in Win8/10.)
+* Supports both 32-bit and 64-bit Windows operating systems
+
+View the [README](http://www.grimadmin.com/grim_tools/ssoperations/README.htm) for more information. 
+</description>
+    <releaseNotes>http://www.grimadmin.com/page.php/ss-operations-changelog</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

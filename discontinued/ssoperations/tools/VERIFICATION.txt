@@ -1,0 +1,12 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+This project appears to be heading towards abandonment, but (for now)
+the included 'ssoperations_1.4_win32_64.zip' file can be downloaded 
+for checksum comparisons from:
+http://www.grimadmin.com/filemgmt_data/files/ssoperations_1.4_win32_64.zip
+
+The sha256 checksum should be:
+1571E277DF38DFFF402B48BBD1DC12138A31774F2F46AA98EC6E7FD41EA1B6E6
+
