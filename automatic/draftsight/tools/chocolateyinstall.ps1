@@ -1,13 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = 'DraftSight'
-$version     = '2017SP01'
-$url         = "http://dl-ak.solidworks.com/nonsecure/draftsight/$version/DraftSight32.exe"
-$url64       = "http://dl-ak.solidworks.com/nonsecure/draftsight/$version/DraftSight64.exe"
-$checkSum    = 'D764DE6A8A6BEFEBDF2D35FBA4A23A9D74E1629BE9733AE29CAADCE061AEDBB8'
-$checkSum64  = '0C9EF0396F0F38E806CD29976AFDBF8EAC0ADD7E8180C7F4EF004A74A4EC3B8D'
+$url         = 'http://dl-ak.solidworks.com/nonsecure/draftsight/2017SP02/DraftSight32.exe'
+$url64       = 'http://dl-ak.solidworks.com/nonsecure/draftsight/2017SP02/DraftSight64.exe'
+$checkSum    = '0bd6b0219c803d330527a37ae45413f7c7587360ebff12cb1c9ddc2e365348f1'
+$checkSum64  = 'd1a44994e9b51f5f3aa791d0a055130fcdf663d09939bff4f2eb628d0f23d428'
 
-$WorkSpace = Join-Path $env:TEMP "$packageName.$Version"
+$WorkSpace = Join-Path $env:TEMP "$packageName.$env:chocolateyPackageVersion"
 
 $WebFileArgs = @{
    packageName  = $packageName

@@ -52,7 +52,10 @@ GSview can also be registered by faxing or mailing a [registration form](http://
     </description>
     <releaseNotes>http://pages.cs.wisc.edu/~ghost/gsview/get50.htm</releaseNotes>
     <dependencies>
-      <dependency id="Ghostscript.app"  version="[9.04,9.16]"/>
+      <dependency id="Ghostscript.app"  version="[9.04,9.17)"/>
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

@@ -18,8 +18,9 @@
     <docsUrl>https://pnggauntlet.com/help/</docsUrl>
     <tags>pnggauntlet png compression admin</tags>
     <summary>A PNG image optimization tool</summary>
-    <description>PNGGauntlet is a .NET (v4.0) program that uses Ken Silverman's PNGOUT, OptiPNG and DeflOpt to optimize PNG files. Many PNG files output by popular graphics software packages like Photoshop or even Fireworks are not as small as they could be - PNGGauntlet squeezes the last bit of size out of them. Furthermore, no information is lost during this process - the only thing that changes is the file size. Just select the files you want to optimize (or drag them onto the window), select where you want them to go, and click the button. PNGauntlet can also be used to convert JPG, GIF, TGA, PCX, and BMP files to PNG. 
-* Combines PNGOUT, OptiPNG, and DeflOpt to create the smallest PNGs
+    <description>PNGGauntlet is a .NET (v4.0) program that uses [Ken Silverman's PNGOUT](http://advsys.net/ken/util/pngout.htm), [OptiPNG](http://optipng.sourceforge.net/) and [DeflOpt](http://www.walbeehm.com/download/) to optimize PNG files. Many PNG files output by popular graphics software packages like Photoshop or even Fireworks are not as small as they could be - PNGGauntlet squeezes the last bit of size out of them. Furthermore, no information is lost during this process - the only thing that changes is the file size. Just select the files you want to optimize (or drag them onto the window), select where you want them to go, and click the button. PNGauntlet can also be used to convert JPG, GIF, TGA, PCX, and BMP files to PNG. 
+
+* Combines [PNGOUT](http://advsys.net/ken/util/pngout.htm), [OptiPNG](http://optipng.sourceforge.net/) and [DeflOpt](http://www.walbeehm.com/download/) to create the smallest PNGs
 * No image quality is lost — only file size
 * Converts JPG, GIF, TIFF, and BMP files to PNG
 * Ultra-configurable

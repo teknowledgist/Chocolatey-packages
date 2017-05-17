@@ -10,3 +10,8 @@ http://www.grimadmin.com/filemgmt_data/files/ssoperations_1.4_win32_64.zip
 The sha256 checksum should be:
 1571E277DF38DFFF402B48BBD1DC12138A31774F2F46AA98EC6E7FD41EA1B6E6
 
+Included in the zip file is the "LICENSE.txt" indicating that redistribution 
+of the binaries is allowed.  This license file has been converted to markdown
+and included independently in the package and is the license link in the 
+nuspec viewable here:
+https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/ssoperations/tools/License.md
