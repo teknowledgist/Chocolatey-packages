@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>sktimestamp</id>
+    <version>1.3.5</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/sktimestamp</packageSourceUrl>
+    <owners>Stefan Kueng, Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>sktimestamp (Install)</title>
+    <authors>Stefan Kueng</authors>
+    <projectUrl>http://stefanstools.sourceforge.net/SKTimeStamp.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/sktimestamp_icon.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/projects/stefanstools/files/SKTimeStamp/</projectSourceUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/stefanstools/tickets/</bugTrackerUrl>
+    <tags>sktimestamp timestamp touch explorer shell extension admin</tags>
+    <summary>A shell extension to TimeStamp file/folders</summary>
+    <description>SKTimeStamp is a very simple shell extension which adds a new tab to the Windows Explorer properties dialog. On that new tab, you can change the file/folder date and time.
+![screenshot](http://stefanstools.sourceforge.net/img/sktimestamp/SKTimeStamp_multiple.0d479249.png)
+    </description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

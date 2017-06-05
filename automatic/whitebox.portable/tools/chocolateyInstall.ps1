@@ -6,6 +6,7 @@ $InstallArgs = @{
    url           = $url
    UnzipLocation = Split-path (Split-path $MyInvocation.MyCommand.Definition)
    CheckSum      = $CheckSum
+   ChecksumType  = 'sha256'
 }
 
 Install-ChocolateyZipPackage @InstallArgs

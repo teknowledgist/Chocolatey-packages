@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>whitebox.portable</id>
-    <version>3.4.0</version>
+    <version>3.4.0.20170530</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/whitebox.portable</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

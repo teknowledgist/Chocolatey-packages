@@ -2,17 +2,16 @@
 
 $PackageName = 'bluebeamvu'
 $DisplayName = 'Bluebeam Vu'
-$AppVersion  = '2017.0'
-$Checksum    = '8397f8f69fff444185298f1852c33b606d1ab83e09b32e68a69ed3332849bb87'
-$URL         = 'https://downloads.bluebeam.com/software/downloads/2017/vu/BbVu2017.exe'
+$AppVersion  = '2017.0.10'
+$Checksum    = '1c25e8cb08118334ac001df35f56639a90e91194f7bc5b95f3e7037d76ee049f'
+$URL         = 'https://downloads.bluebeam.com/software/downloads/2017.0.10/vu/BbVu2017.0.10.exe'
 
-[array]$key = Get-UninstallRegistryKey -SoftwareName "$DisplayName*$AppVersion*"
+$uninstallEntry = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$DisplayName $AppVersion*"
+$uninstallEntryWow64 = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\$DisplayName $AppVersion*"
 
-if ($AppVersion -like "*$($key.DisplayVersion)") {
+if ((Test-Path $uninstallEntry) -or (Test-Path $uninstallEntryWow64)) {
    Write-Host "$($key.DisplayName) v$AppVersion already installed." -ForegroundColor Cyan
 } else {
-   $WorkingFolder = Join-Path -Path $env:TEMP -ChildPath $packageName
-
    $PackageArgs = @{
      PackageName  = $packageName
      fileType     = 'exe'

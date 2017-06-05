@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>scientificword</id>
+    <version>6.0.26</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/scientificword</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Scientific Word (Install)</title>
+    <authors>MacKichan Software, Inc.</authors>
+    <projectUrl>https://www.mackichan.com/index.html?products/sw.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/scientificword_icon.png</iconUrl>
+    <copyright>Copyright © 2017, MacKichan Software, Inc.</copyright>
+    <licenseUrl>https://www.mackichan.com/index.html?products/licensing/EULA.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>ftp://ftp.mackichan.com/download/version60/creatingdocs-60.pdf</docsUrl>
+    <mailingListUrl>http://forum.mackichan.com/</mailingListUrl>
+    <tags>scientificword scientific word tex latex typesetting trial admin</tags>
+    <summary>Makes typesetting and publishing with LaTeX easier.</summary>
+    <description>Scientific Word Version 6 brings you the ease of entering text and mathematics in natural notation in an easy-to-use word processing system. With its entirely new Mozilla-based architecture, Scientific Word 6 provides more flexibility for your workplace. You can save or export your documents in multiple formats, according to your publication and portability needs. Your documents are saved as xml files which makes them completely portable across platforms. Sharing your work with colleagues is easier than ever.
+    
+Because Scientific Word 6 is a front end to LaTeX, you do not have to learn the LaTeX syntax. When you typeset, LaTeX automatically generates footnotes, indexes, bibliographies, tables of contents, and cross-references. 
+
+### Trial Version
+* By default, this package will install a limited, trial version of Scientific Word without the ability to save or print.  
+* **You will need to activate the installation with an email address to make it fully functional.**  (Click on *Help* in the menu bar, then choose *Activate*.  Follow the instructions given on the screen.)  
+* The 30-day trial serial number to use will be put on the desktop in a text file named "Scientific Word Trial Serial Number.txt".  
+* If you reference an existing license (below), this file will NOT be created.
+
+### Package Parameters for Licenses
+If you already have a license file or [RLM license server](http://www.reprisesoftware.com/admin/software-licensing-faq.php) for Scientific Word, the following package parameters are available to be used with the `-params` switch to direct the program to a license.:
+  
+* `/LicenseFile:`&lt;`path`&gt;
+    Set this parameter to have the license file copied to the local install location.
+* `/SystemVariable:`_&lt;`port@server`|`path`&gt;_
+    Set this parameter to have the system environment variable, "mackichn_LICENSE", (which is the first thing checked by the software) set to either:
+    * _&lt;`port@server`&gt;_  the port and server name of a configured license server
+    * _&lt;`path (to license)`&gt;_ the path to a license file or a folder (with multiple license files).  It cannot contain the `@` symbol.
+    
+###### Examples : 
+  `choco install scientificword -params '"/SystemVariable:31416@server.example.com"'`
+  `choco install scientificword -params '"/LicenseFile:""\\Server\Share\SciWord\license.lic"""'`
+_(note: the double-double quotes around the path are only needed if it contains spaces)_
+
+    </description>
+    <releaseNotes>https://www.mackichan.com/index.html?techtalk/v60/1002updatesv6.htm</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
