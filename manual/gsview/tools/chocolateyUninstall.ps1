@@ -1,23 +1,20 @@
 $packageName='GSView'
 
-$unexe = Join-Path $env:ProgramFiles 'GSView\gsview\uninstgs.exe'
-$list = Join-Path (Split-Path $unexe) 'uninstal.txt'
+[array]$key = Get-UninstallRegistryKey -SoftwareName "$packageName*"
 
-if (Test-Path $unexe) {
+if ($key.Count -eq 1) {
    $UninstallArgs = @{
-      packageName = $packageName
-      fileType = 'exe'
-      file = $unexe
-      silentArgs = "`"$list`" -quiet"
+      PackageName     = $packageName
+      FileType        = 'exe'
+      File            = $key[0].UninstallString
+      SilentArgs      = '/S'
       validExitCodes = @(0)
    }
-
    Uninstall-ChocolateyPackage @UninstallArgs
-   Remove-Item (Split-Path (Split-Path $unexe)) -Recurse -Force
+
+} elseif ($key.Count -gt 1) {
+   Throw "Multiple installs found.  Could not safely uninstall $packageName!"
 } else {
-   Write-Host "Uninstaller not found!"
+   Write-Host "$packageName not found.  It may have been uninstalled through other actions."
 }
-
-
-
 

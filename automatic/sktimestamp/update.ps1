@@ -29,4 +29,4 @@ function global:au_SearchReplace {
     }
 }
 
-update -nocheckchocoversion
+update

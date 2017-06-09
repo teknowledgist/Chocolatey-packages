@@ -50,4 +50,7 @@ There are two "branches" of GSView.  They share a name and have very similar fun
       <dependency id="Ghostscript.app"  version="9.18"/>
     </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>
