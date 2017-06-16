@@ -3,7 +3,7 @@ import-module au
 function global:au_GetLatest {
    $WebClient = New-Object System.Net.WebClient
    $string = $WebClient.DownloadString('http://www.cs.unc.edu/~isenburg/lastools/download/CHANGES.txt')
-   $version = get-date ([datetime]($string.split("\n")[0] -replace "--.*",'')) -format yyyy.MM.dd
+   $version = get-date ([datetime]($string.split("`n")[0] -replace "--.*",'')) -format yyyy.MM.dd
 
    $url = 'http://lastools.org/download/LAStools.zip'
 

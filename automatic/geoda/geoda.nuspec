@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>geoda</id>
-    <version>1.8.16</version>
+    <version>1.10</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/geoda</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -29,7 +29,7 @@ GeoDa supports a large variety of vector data in different formats. You can work
     </description>
     <releaseNotes>https://github.com/GeoDaCenter/geoda/releases</releaseNotes>
     <dependencies>
-      <dependency id="vcredist2010" version="10.0"/>
+      <dependency id="vcredist2010" version="10.0" />
     </dependencies>
   </metadata>
   <files>

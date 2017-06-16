@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>markdown-edit</id>
-    <version>1.32</version>
+    <version>1.33</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/markdown-edit</packageSourceUrl>
     <owners>Mike Ward, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -24,39 +24,43 @@
 
 ### Features
 
--   [Display Equation Markup](http://markdownedit.com/markdown-edit-math-equations)
--   [Drag and Drop image uploads](http://mike-ward.net/2015/03/31/markdown-edit-1-4-imgur-uploads/)
--   [Document Formatting](http://mike-ward.net/2015/04/20/markdown-edit-1-5-released/).  Make your Markdown beautiful
--   Syntax highlighting editor
--   Side-by-side HTML preview
--   Quickly show/hide preview
--   Export to Word and PDF
--   Smart link pasting
--   [CommonMark](http://commonmark.org) standard Markdown engine
--   GitHub Flavored Markdown
--   User preferences stored in a text file for easy sharing
--   Full screen covers task-bar (optional)
--   Keyboard shortcuts for bold, italic, headers, lists, block quotes, etc.
--   User defined snippets improve the speed and proficiency of writing documents.
--   Modern UI look and feel
--   **Not** a Windows Store App
--   Synchronized scrolling
--   User settable fonts, colors, themes
--   User defined style sheets
--   As you type spell checking
--   **Paste Special** replaces Microsoft Word's smart quotes/hyphens/etc. with plain text equivalents
--   Quickly open recent files
--   Quickly change themes
--   Word Count
--   Auto Save
--   Select previous/next header
--   Highlight current line
--   [Open Source](https://github.com/mike-ward/Markdown-Edit)
--   MIT License
+- [Display Equation Markup](http://markdownedit.com/markdown-edit-math-equations)
+- [Drag and Drop image uploads](http://mike-ward.net/2015/03/31/markdown-edit-1-4-imgur-uploads/)
+- [Document Formatting](http://mike-ward.net/2015/04/20/markdown-edit-1-5-released/).  Make your Markdown beautiful
+- Syntax highlighting editor
+- Side-by-side HTML preview
+- Quickly show/hide preview
+- Export to Word and PDF
+- Smart link pasting
+- [CommonMark](http://commonmark.org) standard Markdown engine
+- GitHub Flavored Markdown
+- User preferences stored in a text file for easy sharing
+- Full screen covers task-bar (optional)
+- Keyboard shortcuts for bold, italic, headers, lists, block quotes, etc.
+- User defined snippets improve the speed and proficiency of writing documents.
+- Modern UI look and feel
+- **Not** a Windows Store App
+- Synchronized scrolling
+- User settable fonts, colors, themes
+- User defined style sheets
+- As you type spell checking
+- **Paste Special** replaces Microsoft Word's smart quotes/hyphens/etc. with plain text equivalents
+- Quickly open recent files
+- Quickly change themes
+- Word Count
+- Auto Save
+- Select previous/next header
+- Highlight current line
+- [Open Source](https://github.com/mike-ward/Markdown-Edit)
+- MIT License
+
+### Notes
+* This package *may* fail to install if the system is not rebooted after the .NET v4.7 dependency is installed.  If Markdown Edit does install with that reboot pending, it could encounter problems until the reboot is completed.
+* Markdown Edit is not supported for Windows 7.  It may work, but -- at a minimum -- the tool bar will be missing icons unless [the Win8+ version of Segoe UI Symbol font](http://www.askvg.com/fix-unknown-characters-or-vertical-rectangles-are-showing-in-place-of-metro-icons-in-windows-8-start-screen-and-login-screen/) is installed.  [See here for more info.](https://github.com/mike-ward/Markdown-Edit/issues/14)
     </description>
     <releaseNotes>http://markdownedit.com/blog.html</releaseNotes>
     <dependencies>
-      <dependency id="DotNet4.5.2" />
+      <dependency id="DotNet4.7" />
     </dependencies>
   </metadata>
   <files>
