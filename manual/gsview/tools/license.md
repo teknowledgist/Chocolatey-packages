@@ -2,10 +2,11 @@ This End User License Agreement (“Agreement”) is a legal agreement between A
 
 #### Grant of License. 
 Subject to the restrictions herein, and payment of the applicable license fees, Artifex hereby grants to you the personal, nontransferable, non-exclusive right to use the Software, for internal purposes only. You may use the Software as follows, depending on the licenses you have ordered as reflected in your invoice: 
-• Individual License. You may use the Software, on only one computer, and only by one user, at a time. You may not store the Software on a server that enables access via multiple computers. 
-• Multiple Licenses. One user may use one copy of the Software for each license you have purchased. You may make a reasonable number of copies to support such use. 
-• Site License. All of your employees located at a particular site, as indicated in your invoice, may use the Software via computers located at that site, provided the employee’s primary office is at that site. For clarity, a computer will be considered on-site when a user accesses the Software via that computer, even if the Software is being served from offsite servers, and even if the users access their primary computers via virtualization or remote access. 
-• Enterprise License. All your employees may use the Software regardless of the number of copies or locations. 
+
+* Individual License. You may use the Software, on only one computer, and only by one user, at a time. You may not store the Software on a server that enables access via multiple computers. 
+* Multiple Licenses. One user may use one copy of the Software for each license you have purchased. You may make a reasonable number of copies to support such use. 
+* Site License. All of your employees located at a particular site, as indicated in your invoice, may use the Software via computers located at that site, provided the employee’s primary office is at that site. For clarity, a computer will be considered on-site when a user accesses the Software via that computer, even if the Software is being served from offsite servers, and even if the users access their primary computers via virtualization or remote access. 
+* Enterprise License. All your employees may use the Software regardless of the number of copies or locations. 
 
 #### Copyright. 
 The Software is licensed to you, not sold. All copies of the Software are the property of Artifex. Artifex reserves all intellectual property rights in the Software. The Software is protected by United States copyright and other intellectual property laws and international treaty provisions. Therefore, you may not use, copy, modify or distribute the Software without authorization. You may make a reasonable number of copies of the Software solely for backup or archival purposes. 
