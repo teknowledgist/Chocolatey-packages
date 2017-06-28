@@ -47,9 +47,8 @@ if ($env:chocolateyPackageParameters) {
 if ($UserArguments.ContainsKey('LicenseFile')) {
    Write-Host "You requested copying a license file from '$($UserArguments.LicenseFile)'."
    if (test-path $UserArguments.LicenseFile) {
-      $Shortcut = gci (Join-Path $env:ALLUSERSPROFILE 'microsoft\windows\start menu\programs\Scientific Word') -Filter 'sw*.lnk' -Recurse
-      $sh = New-Object -ComObject WScript.Shell
-      $Destination = Split-Path $sh.CreateShortcut($Shortcut.FullName).TargetPath
+      [array]$key = Get-UninstallRegistryKey -SoftwareName 'Scientific Word'
+      $Destination = Join-Path (Split-Path $key.UninstallString) 'SW'
       Copy-Item $UserArguments.LicenseFile $Destination -Force
    } else {
       Write-Warning "LicenseFile '$($UserArguments.LicenseFile)' not found!"

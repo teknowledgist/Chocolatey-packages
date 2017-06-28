@@ -1,14 +1,10 @@
 $packageName = 'ScientificWord'
 
-$StartMenu = Join-Path $env:ALLUSERSPROFILE 'microsoft\windows\start menu\programs'
-$Shortcut = Get-ChildItem -Path $StartMenu -Filter 'Uninstall sw *.lnk' -Recurse
-
-$sh = New-Object -ComObject WScript.Shell
-$Target = $sh.CreateShortcut($Shortcut.FullName).TargetPath
+[array]$key = Get-UninstallRegistryKey -SoftwareName 'Scientific Word'
 
 $UninstallArgs = @{
    Statements      = '--mode unattended --unattendedmodeui none'
-   ExeToRun        = $Target
+   ExeToRun        = $key.UninstallString
    validExitCodes = @(0)
 }
 Start-ChocolateyProcessAsAdmin @UninstallArgs
