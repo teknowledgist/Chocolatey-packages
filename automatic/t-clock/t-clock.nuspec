@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>t-clock</id>
+    <version>2.4.3.471</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/t-clock</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>t-clock (portable)</title>
+    <authors>White-Tiger</authors>
+    <projectUrl>https://github.com/White-Tiger/T-Clock</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/tclock_icon.png</iconUrl>
+    <licenseUrl>https://github.com/White-Tiger/T-Clock#license</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/White-Tiger/T-Clock</projectSourceUrl>
+    <docsUrl>https://github.com/White-Tiger/T-Clock</docsUrl>
+    <mailingListUrl>https://www.donationcoder.com/forum/?board=324</mailingListUrl>
+    <bugTrackerUrl>https://github.com/White-Tiger/T-Clock/issues</bugTrackerUrl>
+    <tags>t-clock tclock clock calendar tray portable</tags>
+    <summary>Highly configurable Windows taskbar clock</summary>
+    <description>**T-Clock Redux** is an enhanced fork of [Stoic Joker's T-Clock 2010](http://www.stoicjoker.com/TClock/) with ISO week number support, bug fixes and the ability to use Windows' default calendar and tooltips.
+
+T-Clock *(called TClock)*, originally written by Kazubon in the early 90's, was a popular classic that was on the edge of extinction when Windows started going 64bit. ... Stoic Joker simply chose not to let that happen. And now it's up to us to continue their efforts.
+![clockshowcase](https://cloud.githubusercontent.com/assets/1467733/4608572/71b48156-5283-11e4-960f-b0415b5b7cec.png)  
+
+T-Clock will allow you to "Use small taskbar buttons" **and** display both time and date.  
+
+#### Use
+Once installed, enter *clock* or *clock64* the "Search" or "Run..." fields of the Start menu or in a "Command" window.  Options are then available by right-clicking on the clock.
+    </description>
+    <releaseNotes>https://github.com/White-Tiger/T-Clock/releases</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2010" version="10.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
