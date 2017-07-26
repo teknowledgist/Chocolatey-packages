@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>stata-se</id>
+    <version>14.2</version>
+    <packageSourceUrl>\\Server\Share\ChocolateyPackages</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>stata-se</title>
+    <authors>StataCorp LP</authors>
+    <projectUrl>http://www.stata.com</projectUrl>
+    <copyright>Copyright © 1985–2015 StataCorp LP</copyright>
+    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <docsUrl>http://www.stata.com/features/documentation/</docsUrl>
+    <tags>stata-se stata statistics analysis admin</tags>
+    <summary>A complete, integrated statistical software package</summary>
+    <description>Stata is a complete, integrated statistical software package that provides everything you need for data analysis, data management, and graphics. 
+
+* Fast, accurate, and easy to use
+* Broad suite of statistical features 
+* Complete data management facilities 
+* Publication-quality graphics 
+* Matrix programming with Mata 
+* Real documentation 
+* Trusted 
+* Technical support 
+* Extensible 
+* Cross-platform compatible 
+* Widely used 
+
+    </description>
+    <releaseNotes>http://www.stata.com/new-in-stata/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

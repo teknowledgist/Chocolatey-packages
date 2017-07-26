@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>path-copy-copy</id>
+    <version>14.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/path-copy-copy</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Path Copy Copy (Install)</title>
+    <authors>clechasseur</authors>
+    <projectUrl>https://pathcopycopy.github.io/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/path-copy-copy_icon.png</iconUrl>
+    <copyright>Copyright © 2008-2017 Charles Lechasseur</copyright>
+    <licenseUrl>https://github.com/clechasseur/pathcopycopy/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/clechasseur/pathcopycopy</projectSourceUrl>
+    <docsUrl>https://github.com/clechasseur/pathcopycopy/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/clechasseur/pathcopycopy/issues</bugTrackerUrl>
+    <tags>path-copy-copy pathcopycopy pathcopy path explorer extension context admin</tags>
+    <summary>Copy file paths from Windows explorer's contextual menu</summary>
+    <description>A Windows Explorer add-on that adds a contextual menu item on all files and folders allowing the user to copy the path in various formats. Idea copied from "Path Copy".
+
+Works on Windows XP or later.
+
+![The Path Copy Copy contextual menu items](screenshots/PathCopyCopyContextualMenu.png)
+    </description>
+    <releaseNotes>https://github.com/clechasseur/pathcopycopy/blob/master/HISTORY</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

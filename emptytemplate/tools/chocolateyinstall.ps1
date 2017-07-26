@@ -4,7 +4,7 @@
 
 $ErrorActionPreference = 'Stop'; # stop on all errors
 
-$packageName= 'emptytemplate' # arbitrary name for the package, used in messages
+$packageName= $env:ChocolateyPackageName
 $toolsDir   = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $url        = '' # download url, HTTPS preferred
 $url64      = '' # 64bit URL here (HTTPS preferred) or remove - if installer contains both (very rare), use $url
@@ -30,19 +30,19 @@ $packageArgs = @{
   checksum64    = ''
   checksumType64= 'sha256' #default is checksumType
 
-  #MSI
+  # MSI
   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
   validExitCodes= @(0, 3010, 1641)
-  #OTHERS
+  # OTHERS
   # Uncomment matching EXE type (sorted by most to least common)
   #silentArgs   = '/S'           # NSIS
   #silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' # Inno Setup
   #silentArgs   = '/s'           # InstallShield
-  #silentArgs   = '/s /v"/qn"' # InstallShield with MSI
+  #silentArgs   = '/s /v"/qn"'   # InstallShield with MSI
   #silentArgs   = '/s'           # Wise InstallMaster
   #silentArgs   = '-s'           # Squirrel
   #silentArgs   = '-q'           # Install4j
-  #silentArgs   = '-s -u'        # Ghost
+  #silentArgs   = '-s'           # Ghost
   # Note that some installers, in addition to the silentArgs above, may also need assistance of AHK to achieve silence.
   #silentArgs   = ''             # none; make silent with input macro script like AutoHotKey (AHK)
                                  #       https://chocolatey.org/packages/autohotkey.portable
@@ -91,6 +91,12 @@ Install-ChocolateyPackage @packageArgs # https://chocolatey.org/docs/helpers-ins
 ## - https://chocolatey.org/docs/helpers-start-chocolatey-process-as-admin
 #Start-ChocolateyProcessAsAdmin 'STATEMENTS_TO_RUN' 'Optional_Application_If_Not_PowerShell' -validExitCodes $validExitCodes
 
+## To avoid quoting issues, you can also assemble your -Statements in another variable and pass it in
+#$appPath = "$env:ProgramFiles\appname"
+##Will resolve to C:\Program Files\appname
+#$statementsToRun = "/C `"$appPath\bin\installservice.bat`""
+#Start-ChocolateyProcessAsAdmin $statementsToRun cmd -validExitCodes $validExitCodes
+    
 ## add specific folders to the path - any executables found in the chocolatey package 
 ## folder will already be on the path. This is used in addition to that or for cases 
 ## when a native installer doesn't add things to the path.
