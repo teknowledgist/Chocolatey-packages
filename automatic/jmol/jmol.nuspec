@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>jmol</id>
-    <version>14.18.1</version>
+    <version>14.20.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/jmol</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -31,6 +31,7 @@
 * Supports all major web browsers: Internet Explorer, Mozilla and Firefox, Safari, Google Chrome, Opera, Konqueror, IceWeasel, ...
 * High-performance 3D rendering with no hardware requirements
 * File formats (see also the file formats section within Jmol Wiki):
+
     * MOL  MDL / Elsevier / Symyx structure (classic version V2000)
     * V3000  MDL / Elsevier / Symyx structure (new version V3000)
     * SDF  MDL / Elsevier / Symyx structure (multiple models)
@@ -91,7 +92,7 @@
 * JavaScript support library (Jmol.js)
 * Exports to jpg, png, gif, ppm, pdf, POV-Ray, Gaussian, Maya, vrml, x3d, idtf, web page.
 </description>
-    <releaseNotes>https://sourceforge.net/projects/jmol/files/Jmol/Version%2014.6/Version%2014.6.1/</releaseNotes>
+    <releaseNotes>https://sourceforge.net/projects/jmol/files/Jmol/Version%2014.20/Version%2014.20.3/</releaseNotes>
     <dependencies>
       <dependency id="jre8" version="8.0" />
     </dependencies>
