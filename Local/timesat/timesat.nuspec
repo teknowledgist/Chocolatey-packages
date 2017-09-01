@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>timesat</id>
+    <version>3.3</version>
+    <packageSourceUrl>\\server\share\ChocolateyPackages</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>TIMESAT</title>
+    <authors>Lars Eklundh and Per Jönsson</authors>
+    <projectUrl>http://web.nateko.lu.se/timesat/timesat.asp</projectUrl>
+    <copyright>Copyright © 2002-2015 Lars Eklundh and Per Jönsson</copyright>
+    <docsUrl>http://web.nateko.lu.se/timesat/docs/TIMESAT33_SoftwareManual.pdf</docsUrl>
+    <tags>timesat satellite data geography matlab admin</tags>
+    <summary>Software time-series satellite sensor data analysis</summary>
+    <description>TIMESAT is a software package for analysing time-series of satellite sensor data. TIMESAT was developed to be able to investigate the seasonality of satellite time-series data and their relationship with dynamic properties of vegetation, such as phenology and temporal development. The temporal domain holds important information about short- and long-term vegetation changes. 
+TIMESAT runs from a graphical user interface. For large images or long time-series Fortran executables ensure fast processing. Matlab is the default running environment but is no longer required.
+
+TIMESAT is freely available for non-commercial academic research (see our Distribution policy)[http://web.nateko.lu.se/timesat/timesat.asp?cat=3]. 
+#### MATLAB
+This package installs the MATLAB 2016b Runtime Compiler that comes with the TIMESAT package.  It does not install it as a dependency.  Uninstallation will not remove the MRC.
+    </description>
+    <releaseNotes>http://web.nateko.lu.se/timesat/timesat.asp?cat=1</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

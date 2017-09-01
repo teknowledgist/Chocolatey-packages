@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>idl-envi</id>
+    <version>5.3</version>
+    <packageSourceUrl>\\Server\Share\ChocolateyPackages</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>IDL 8.5 and ENVI 5.3</title>
+    <authors>Exelis Visual Information Solutions, Inc.</authors>
+    <projectUrl>http://www.harrisgeospatial.com/ProductsandTechnology/Software/ENVI.aspx</projectUrl>
+    <copyright>Exelis Visual Information Solutions, Inc.</copyright>
+    <docsUrl>http://www.harrisgeospatial.com/docs/home.html</docsUrl>
+    <mailingListUrl>http://www.harrisgeospatial.com/Support/Forums.aspx</mailingListUrl>
+    <tags>ENVI IDL GIS geospatial LiDAR imaging admin</tags>
+    <summary>Geospatial analysis and scientific programming language</summary>
+    <description>ENVI image analysis software is used by GIS professionals, scientists, and image analysts to extract meaningful information from imagery to make better decisions. ENVI can be deployed and accessed from the desktop, in the cloud, and on mobile devices, and can be customized through an API to meet specific project requirements. 
+    
+    IDL is the trusted scientific programming language used across disciplines to extract meaningful visualizations from complex numerical data. With IDL you can interpret your data, expedite discoveries, and deliver powerful applications to market.
+    </description>
+    <releaseNotes>http://www.harrisgeospatial.com/Support/Maintenance/TabId/2350/ArtMID/10427/ArticleID/15370/Whats-New-in-ENVI-53-Service-Pack-1.aspx</releaseNotes>
+    <!-- =============================== -->      
+    <!--<dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+    </dependencies>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
