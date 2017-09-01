@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>icap4demo</id>
+    <version>8.3.11.4444</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/icap4demo</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>ICAP/4 Demo (SPICE software)</title>
+    <authors>Intusoft</authors>
+    <projectUrl>http://www.intusoft.com/demos.php</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/icap4demo_icon.png</iconUrl>
+    <copyright>Copyright © Intusoft 1996-2016</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/icap4demo/tools/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.intusoft.com/NewUserTutorial.htm</docsUrl>
+    <mailingListUrl>mailto://techsupport@intusoft.com</mailingListUrl>
+    <tags>icap4demo icap/4 spice circuit simulation notsilent admin</tags>
+    <summary>SPICE (Simulation Program with Integrated Circuit Emphasis) demo</summary>
+    <description>ICAP/4 is a family of commercial SPICE (Simulation Program with Integrated Circuit Emphasis) analog circuit simulation software.  It is a program used in integrated circuit and board-level design to check the integrity of circuit designs and to predict circuit behavior.
+
+Demo Limitations
+
+- **The ICAP/4Windows Demo has a 20 Parts simulation limit.** If you place more than 20 parts on the schematic, or place a subcircuit model comprised of more than 20 parts, the Demo will provide a "too complex" message and will not simulate the design.
+- 1,514 models are included in the Demo, out of 23,500+ available from Intusoft's ICAP/4 model collection  
+    (See [model list](http://www.intusoft.com/models.php#ModelList) or [product comparison](http://www.intusoft.com/products/icapscomparison.php#model%20libraries) for which models are available in each package)  
+    **Note:** No limitation in the Demo is imposed regarding the addition of your own SPICE3 compatible models.
+- Explore "GFT," a truly cutting-edge modeling technique for measuring open-loop properties in a closed design topology without breaking the loop. Valuable for the design of power electronics, ICs, servo systems…any loop configuration. Its creator, Dr. R. David Middlebrook with California Institute of Technology, also presents a wealth of techniques for successful SPICE simulation. The ICAP/4Windows demo includes [GFT Templates](http://www.intusoft.com/lit/GFTTemplates.pdf) and also a [User's Manual](http://www.intusoft.com/lit/GFTManual.pdf) written by Dr. Middlebrook.
+- The Scope5 Demo version (IntuScope waveform viewing and processing tool) will not allow you to use a text file of data points as a source.
+- The Scope5 Demo version will not allow you to read in touchstone files and plot Smith charts.
+- ICAP/4Windows Demo New User Tutorial Movies help you get started with ICAP/4Windows fast. They make learning basic concepts easy. Now you can learn SPICE the multimedia way!
+- ICAP/4 documentation includes the IsSpice4 User's Guide, Working with Model Libraries, and the Power Supply Template instruction sheet. The IsSpice4 book contains a complete syntax reference guide to IsSpice4, including data on advanced analyses, model parameters, and Interactive Command Language (ICL) scripts. "Working with Model Libraries" contains information and equations for key IsSpice4 semiconductor models and subcircuits. The Power Supply Template instruction sheet goes through an example circuit to show the value and time-savings of these powerful and ready-to-use power supply designs.
+
+Extensive in-application help is included in the software. It walks you through any aspect of the ICAP/4 software and documentation.
+
+##### Package Note
+This package does NOT install the optional [Power Supply Templates from ON Semiconductor](http://www.intusoft.com/pwrtemplates.php).
+    </description>
+    <releaseNotes>http://www.intusoft.com/featurechanges.php</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey" version="0.10.8" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
