@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>speedyfox</id>
+    <version>2.0.20</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/speedyfox</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>SpeedyFox (portable)</title>
+    <authors>CrystalIDEA Software</authors>
+    <projectUrl>https://www.crystalidea.com/speedyfox</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/speedyfox_icon.png</iconUrl>
+    <copyright>Copyright © 2009-2017 CrystalIDEA Software</copyright>
+    <licenseUrl>https://www.crystalidea.com/eula</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.crystalidea.com/speedyfox</docsUrl>
+    <mailingListUrl>https://www.crystalidea.com/speedyfox</mailingListUrl>
+    <tags>speedyfox Firefox Thunderbird Chrome Skype Opera Cyberfox PaleMoon sqlite profile optimize</tags>
+    <summary>Speed boost Firefox, Skype, Chrome, Thunderbird in a single click</summary>
+    <description>SpeedyFox is specially designed to resolve the problem of slowdowns due to fragmentation of SQLITE profile databases. The method used in SpeedyFox is 100% safe for your profile (e.g. bookmarks, passwords, etc), it's well documented and has been tested on millions of computers. 
+
+SpeedyFox is portable, supports portable programs and can be run from the GUI or command line.
+
+#### Supported Programs
+* Firefox
+* Chrome
+* Chromium
+* Skype
+* Thunderbird
+* Opera
+* Vivaldi
+* Yandex Browser
+* Epic Privacy Browser
+* Cyberfox
+* FossaMail
+* Viber for Windows
+* Slimjet Browser
+* Pale Moon
+* SeaMonkey
+
+![ExampleScreenshot](https://www.crystalidea.com/assets/images/speedyfox/screen.png)  
+
+    </description>
+    <releaseNotes>https://www.crystalidea.com/speedyfox/release-notes</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
