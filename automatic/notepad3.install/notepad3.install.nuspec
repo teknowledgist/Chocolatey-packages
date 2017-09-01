@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>notepad3.install</id>
+    <version>2.0.2.453</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/notepad3.install</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Notepad3 (install)</title>
+    <authors>Rizonesoft</authors>
+    <projectUrl>https://www.rizonesoft.com/downloads/notepad3/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/notepad3_icon.png</iconUrl>
+    <copyright>Copyright © 2008-2016 Rizonesoft</copyright>
+    <licenseUrl>https://github.com/rizonesoft/Notepad3/blob/master/License.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/rizonesoft/Notepad3</projectSourceUrl>
+    <mailingListUrl>https://www.rizonesoft.com/forums/forum/product-support/notepad3/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/rizonesoft/Notepad3/issues</bugTrackerUrl>
+    <tags>notepad3 notepad notepad2 text editor</tags>
+    <summary>A light-weight Scintilla-based text editor for Windows.</summary>
+    <description>Notepad3 is based on code from [Florian Balmer's Notepad2](http://www.flos-freeware.ch/notepad2.html) and [XhmikosR's Notepad2-mod](http://xhmikosr.github.io/notepad2-mod/). 
+MiniPath is based on code from [Florian Balmer's metapath](http://www.flos-freeware.ch/archive.html).
+  
+###### Changes in Notepad3 compared to Notepad2
+
+  - Code folding
+  - Support for bookmarks
+  - Option to mark all occurrences of a word
+  - Updated Scintilla component
+  - Word auto-completion
+  - Syntax highlighting support for AutoHotkey, AutoIt3, AviSynth, Bash, CMake, 
+    CoffeeScript, Inno Setup, LaTeX, Lua, Markdown, NSIS, Ruby, Tcl, 
+    YAML and VHDL scripts
+  - Improved support for NFO ANSI art
+  - Support for replacing Windows Notepad using a clean, unintrusive 
+    registry-based method
+  - New toolbar icons based on Yusuke Kamiyaman's Fugue Icons
+    Purchased by Rizonesoft
+  - New program icon and other small cosmetic changes
+  - Other various minor changes and tweaks
+  
+###### Changes in MiniPath compared to metapath
+
+  - Project upgraded to Visual C++ 2017
+  - 64-bit version
+  - New toolbar icons based on Yusuke Kamiyaman's Fugue Icons
+    Purchased by Rizonesoft
+  - Installation bundled with Notepad3
+  - Minor cosmetic changes
+	
+	</description>
+    <releaseNotes>https://github.com/rizonesoft/Notepad3/blob/master/distrib/Changes.txt</releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

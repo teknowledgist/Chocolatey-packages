@@ -1,9 +1,9 @@
-$ErrorActionPreference = 'Stop'  # stop on all errors
+﻿$ErrorActionPreference = 'Stop'  # stop on all errors
 
 $PackageName = 'chrlauncher.portable'
-$version     = '2.3'
-$url         = 'https://github.com//henrypp/chrlauncher/releases/download/v.2.3/chrlauncher-2.3-bin.zip'
-$checkSum    = '4b5acc8133e90cab735559e652dea5f6996f0c4781d4ccf65bd517e2561734d0'
+$version     = '2.4.1'
+$url         = 'https://github.com//henrypp/chrlauncher/releases/download/v.2.4.1/chrlauncher-2.4.1-bin.zip'
+$checkSum    = '93ad7515c262154760f3b20731c516ac0e96c383c4192e6c7193d6fe5b9011dc'
 
 $PackageDir = Split-path (Split-path $MyInvocation.MyCommand.Definition)
 

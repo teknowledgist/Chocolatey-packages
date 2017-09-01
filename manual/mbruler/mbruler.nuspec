@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mbruler</id>
-    <version>5.3.0.20161122</version>
+    <version>5.3.0.20170727</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mbruler</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -28,8 +28,8 @@ Additionally it has a screen loupe function, a RGB value window and you can plac
     </description>
     <releaseNotes>http://www.markus-bader.de/MB-Ruler/download.php</releaseNotes>
     <dependencies>
-      <dependency id="autohotkey.portable" version="1.1" />
-    </dependencies>
+<!--      <dependency id="autohotkey.portable" version="1.1" />
+-->    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

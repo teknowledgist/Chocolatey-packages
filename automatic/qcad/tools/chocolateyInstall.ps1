@@ -1,8 +1,8 @@
 ﻿$packageName = 'qcad'
-$url32 = 'http://www.qcad.org//archives/qcad/qcad-3.17.1-trial-win32-installer.msi'
-$url64 = 'http://www.qcad.org//archives/qcad/qcad-3.17.1-trial-win64-installer.msi'
-$checkSum32 = '5005fd0ad35e55c8d6afa7a2166c9691f54edbdc19ab2e57586b6e684de6c1ee'
-$checkSum64 = '995b0529e7c306cc55865c92f4e7675c5600b4744a3eb951823a77c72fd3d6ec'
+$url32 = 'http://www.qcad.org//archives/qcad/qcad-3.17.3-trial-win32-installer.msi'
+$url64 = 'http://www.qcad.org//archives/qcad/qcad-3.17.3-trial-win64-installer.msi'
+$checkSum32 = 'fe4dd0b8f9e8398430387180a6d800b1601f8d2f69f8189f27fbd771f2012c2b'
+$checkSum64 = '59bc92bfc56b50692e3b93df35d219a3499ea979cd7b6b879794e999616764d3'
 
 $InstallArgs = @{
    packageName = $packageName

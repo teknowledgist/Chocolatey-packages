@@ -1,5 +1,5 @@
-$PackageName = 'chrlauncher.portable'
-$version = '2.3'
+﻿$PackageName = 'chrlauncher.portable'
+$version = '2.4.1'
 $PackageDir = Split-path (Split-path $MyInvocation.MyCommand.Definition)
 $InstallDir = (Join-path $PackageDir ($PackageName.split('.')[0] + $version))
 $BitLevel = Get-ProcessorBits

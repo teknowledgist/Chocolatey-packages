@@ -1,10 +1,11 @@
 import-module au
 
+$Homepage = 'http://zabkat.com/x2lite.htm'
+
 function global:au_GetLatest {
-   $Homepage = 'http://zabkat.com/index.htm'
    $PageContent = Invoke-WebRequest -Uri $Homepage
 
-   $Version = ($Homepage.content.split() |? {$_ -match 'v[0-9.]{4,7}.*'}) -replace '.*v(.*)','$1'
+   $Version = ($PageContent.content.split() |? {$_ -match 'v[0-9.]{4,7}.*'}) -replace '.*v(.*)','$1'
    
    $DownloadPage = 'http://zabkat.com/alldown.htm'
    $PageContent = Invoke-WebRequest -Uri $DownloadPage
@@ -27,4 +28,4 @@ function global:au_SearchReplace {
     }
 }
 
-Update-Package
+Update-Package -ChecksumFor 32
