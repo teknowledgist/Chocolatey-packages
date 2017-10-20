@@ -1,23 +1,23 @@
 ﻿$ErrorActionPreference = 'Stop'  # stop on all errors
 
-$PackageName = 'chrlauncher.portable'
-$version     = '2.4.1'
-$url         = 'https://github.com//henrypp/chrlauncher/releases/download/v.2.4.1/chrlauncher-2.4.1-bin.zip'
-$checkSum    = '93ad7515c262154760f3b20731c516ac0e96c383c4192e6c7193d6fe5b9011dc'
+$ToolsDir   = Join-Path $env:ChocolateyPackageFolder 'tools'
 
-$PackageDir = Split-path (Split-path $MyInvocation.MyCommand.Definition)
+# Remove previous versions
+$Previous = Get-ChildItem $env:ChocolateyPackageFolder -filter 'chrlauncher*' | ?{ $_.PSIsContainer }
+if ($Previous) {
+   $Previous | % { Remove-Item $_.FullName -Recurse -Force }
+}
 
 $InstallArgs = @{
-   PackageName   = $PackageName
-   Url           = $Url 
-   UnzipLocation = (Join-path $PackageDir ($PackageName.split('.')[0] + $version))
-   checkSum      = $checkSum
-   checkSumType  = 'sha256'
+   packageName  = $env:ChocolateyPackageName
+   FileFullPath = (Get-ChildItem $ToolsDir -Filter "*.zip").FullName
+   Destination  = (Join-path $env:ChocolateyPackageFolder ($env:ChocolateyPackageName.split('.')[0] + $env:ChocolateyPackageVersion))
 }
-Install-ChocolateyZipPackage @InstallArgs
+
+Get-ChocolateyUnzip @InstallArgs
 
 $BitLevel = Get-ProcessorBits
-$target   = Join-Path $InstallArgs.UnzipLocation "$BitLevel\chrlauncher.exe"
+$target   = Join-Path $InstallArgs.Destination "$BitLevel\chrlauncher.exe"
 $shortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'Chromium Launcher.lnk'
 
 Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $target
@@ -62,5 +62,29 @@ if ($UserArguments.ContainsKey('Shared')) {
    Write-Host $msgtext -ForegroundColor Cyan
    $INIfile = Join-Path (Split-Path $target) 'chrlauncher.ini'
    (gc $INIfile) -replace "^(ChromiumDirectory=).*$",'$1%appdata%\Chromium\bin' | Set-Content $INIfile
+}
+
+if ($UserArguments.ContainsKey('Type')) {
+   $msgtext = 'You want to use a Chromium build other than the unofficial development builds with codecs.'
+   Write-Host $msgtext -ForegroundColor Cyan
+   $NotValid = $false
+   switch ($UserArguments['Type']) {
+      'dev-official'         { $ValidType = 'dev-official'; break }
+      'stable-codecs-sync'   { $ValidType = 'stable-codecs-sync'; break }
+      'dev-codecs-nosync'    { $ValidType = 'dev-codecs-nosync'; break }
+      'stable-codecs-nosync' { $ValidType = 'stable-codecs-nosync'; break }
+      'ungoogled-chromium'   { $ValidType = 'ungoogled-chromium'; break }
+      default                { $NotValid = $true; $ValidType = 'dev-codecs-sync' }
+   }
+   if ($NotValid) {
+      $msgtext = "The value '" + $UserArguments['Type'] + "' is not a Chromium build that chrlauncher recognizes." +
+                  "`nFalling back to use the default, unofficial development builds with codecs."
+      Write-Warning $msgtext
+   } else {
+      $INIfile = Join-Path (Split-Path $target) 'chrlauncher.ini'
+      (Get-Content $INIfile) -replace "^(ChromiumType=).*$","`$1$ValidType" | Set-Content $INIfile
+      $msgtext = "chrlauncher will install/update/launch the '$ValidType' Chromium build."
+      Write-Host $msgtext -ForegroundColor Cyan
+   }
 }
 

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>hakchi2.portable</id>
-    <version>2.17</version>
+    <version>2.0.21.60</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/hakchi2</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -18,7 +18,7 @@
     <projectSourceUrl>https://github.com/ClusterM/hakchi2</projectSourceUrl>
     <docsUrl>https://gbatemp.net/threads/hakchi2-nes-mini-very-simple-pimp-tool.456256/</docsUrl>
     <bugTrackerUrl>https://github.com/ClusterM/hakchi2/issues</bugTrackerUrl>
-    <tags>hakchi2 hakchi NES Nintendo game portable</tags>
+    <tags>hakchi2 hakchi NES Nintendo game portable embedded</tags>
     <summary>A ROM-management tool for NES Mini</summary>
     <description>This is a GUI for hakchi by madmonkey.
 

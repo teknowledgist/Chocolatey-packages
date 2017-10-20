@@ -3,18 +3,17 @@ import-module au
 function global:au_GetLatest {
    $Release = 'https://raw.githubusercontent.com/rizonesoft/Notepad3/master/src/VersionEx.h'
    $VersionText = Invoke-WebRequest -Uri $Release
-   $major = ($VersionText.content.split("`n") | ? { $_ -match ".*MAJOR (\d+)"}).split()[-1]
-   $minor = ($VersionText.content.split("`n") | ? { $_ -match ".*MINOR (\d+)"}).split()[-1]
+
+   $major    = ($VersionText.content.split("`n") | ? { $_ -match ".*MAJOR (\d+)"}).split()[-1]
+   $minor    = ($VersionText.content.split("`n") | ? { $_ -match ".*MINOR (\d+)"}).split()[-1]
    $revision = ($VersionText.content.split("`n") | ? { $_ -match ".*REV (\d+)"}).split()[-1]
+   $Build    = ($VersionText.content.split("`n") | ? { $_ -match ".*BUILD (\d+)"}).split()[-1]
+   $Version = "$major.$minor.$revision.$build"
    
    $HomeURL = 'https://www.rizonesoft.com/downloads/notepad3/'
    $DownloadPage = Invoke-WebRequest -Uri $HomeURL
    $DownloadLink = $DownloadPage.Links |? {$_.innertext -match 'replace Windows Notepad'}
    $DownloadURL = $DownloadLink.href
-   
-   $build = $DownloadLink.innertext -replace ".*Build (\d+).*",'$1'
-   
-   $Version = "$major.$minor.$revision.$build"
    
    return @{ 
             Version  = $Version

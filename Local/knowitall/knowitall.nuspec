@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>knowitall</id>
     <version>2017.3.127.0</version>
-    <packageSourceUrl></packageSourceUrl>
+    <packageSourceUrl>\\server\share\ChocolateyPackages</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Bio-Rad KnowItAll Academic Edition</title>

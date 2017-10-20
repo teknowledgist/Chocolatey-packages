@@ -11,21 +11,26 @@ function global:au_GetLatest {
 
    $version = ($urlstub -split '-')[1]
 
-   return @{ Version = $version; URL = $url }
+   $CheckFile = $url -replace "-bin\.zip",'.sha256'
+
+   return @{ Version = $version; URL = $url; Checkfile = $CheckFile}
 }
 
 
 function global:au_SearchReplace {
    @{
-      "tools\chocolateyInstall.ps1" = @{
-         "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-         "(^[$]Checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-         "(^[$]version\s*=\s*)('.*')"      = "`$1'$($Latest.version)'"
-      }
-      "tools\chocolateyUninstall.ps1" = @{
-         "(^[$]version\s*=\s*)('.*')"      = "`$1'$($Latest.version)'"
+      "tools\VERIFICATION.txt" = @{
+         "(^Version\s+:).*"      = "`${1} $($Latest.Version)"
+         "(^URL\s+:).*"          = "`${1} $($Latest.URL32)"
+         "(^Checksum\s+:).*"     = "`${1} $($Latest.Checksum32)"
+         "^https.*sha256"        = "$($Latest.Checkfile)"
       }
    }
 }
 
-Update-Package -ChecksumFor 32
+function global:au_BeforeUpdate() { 
+   Write-host "Downloading ChrLauncher v$($Latest.Version) zip file"
+   Get-RemoteFiles -Purge -NoSuffix -FileNameBase "Jmol-$($Latest.Version)-binary" 
+}
+
+update -ChecksumFor none

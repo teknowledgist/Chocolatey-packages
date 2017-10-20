@@ -1,0 +1,11 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+Direct download: 
+Version  : 2.4.1
+URL      : https://github.com//henrypp/chrlauncher/releases/download/v.2.4.1/chrlauncher-2.4.1-bin.zip
+Checksum : 93ad7515c262154760f3b20731c516ac0e96c383c4192e6c7193d6fe5b9011dc
+
+An independent Checksum is in this file:
+https://github.com/henrypp/chrlauncher/releases/download/v.2.4.1/chrlauncher-2.4.1.sha256

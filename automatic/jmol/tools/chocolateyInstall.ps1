@@ -1,23 +1,26 @@
-﻿$packageName = 'Jmol'
+﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
-$url        = 'https://sourceforge.net/projects/jmol/files/Jmol/Version%2014.20/Jmol%2014.20.5/Jmol-14.20.5-binary.zip'
-$Checksum   = 'b106616471692421eb7817099d17654f8f55eec0251ca037d7d5aed424e9a07b'
-$installDir = Split-Path (Split-Path -parent $script:MyInvocation.MyCommand.Path)
+$ToolsDir   = Split-Path -parent $MyInvocation.MyCommand.Path
+$PackageDir = Split-Path -Parent $ToolsDir
 
-$installArgs = @{
-   packageName   = $packageName
-   url           = $url
-   Checksum      = $Checksum
-   ChecksumType  = 'sha256'
-   UnzipLocation = $installDir
+# Remove previous versions
+$Previous = Get-ChildItem $PackageDir -filter "jmol*" | ?{ $_.PSIsContainer }
+if ($Previous) {
+   $Previous | % { Remove-Item $_.FullName -Recurse -Force }
 }
 
-Install-ChocolateyZipPackage @installArgs
+$installArgs = @{
+   packageName  = $env:ChocolateyPackageName
+   FileFullPath = (Get-ChildItem $ToolsDir -Filter "*.zip").FullName
+   Destination  = $PackageDir
+}
+
+Get-ChocolateyUnzip @installArgs
 
 $JavaExe = "$env:ProgramData\Oracle\Java\javapath\javaw.exe"
-$target = (Get-ChildItem $installDir -filter jmol.jar -Recurse).fullname
-$icon = Join-Path $installDir 'tools\Jmol_icon13.ico'
-$launcher = Join-Path $installDir 'Jmol Launcher.exe'
+$target = (Get-ChildItem $PackageDir -filter jmol.jar -Recurse).fullname
+$icon = Join-Path $PackageDir 'tools\Jmol_icon13.ico'
+$launcher = Join-Path $PackageDir 'Jmol Launcher.exe'
 $SGpath = Join-Path $env:ChocolateyInstall 'tools\shimgen.exe'
 
 & $SGpath -o $launcher -p $JavaExe -c "-jar '$target'" -i $icon --gui

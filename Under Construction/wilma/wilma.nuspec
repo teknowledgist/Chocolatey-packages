@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>wilma</id>
+    <version>1.1.0.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/wilma</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Windows Layout Manager</title>
+    <authors>Stefan Didak</authors>
+    <projectUrl>http://www.stefandidak.com/windows-layout-manager/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/wilma_icon.png</iconUrl>
+    <copyright>Copyright © 2008-2010 Ignyter™/Animagic</copyright>
+    <licenseUrl>http://www.stefandidak.com/wilma/license_agreement.htm</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.stefandidak.com/wilma</docsUrl>
+    <mailingListUrl>mailto:support@ignytion.com</mailingListUrl>
+    <tags>wilma Windows layout position screen monitor</tags>
+    <summary>Position and scale many windows on your desktop with ease</summary>
+    <description>Window Layout Manager, or WiLMA for short allows the management of various window layouts.
+A layout is a collection of window definitions that contain conditions and actions. Conditions that describe the window and how it should be detected and matched and actions that allow various actions to be taken such as minimizing, moving, relocating, moving it to a different screen, offsetting the position, maximizing it to a certain screen, etc. 
+    
+##### Features
+* allows you to position and scale many windows on your desktop with ease.
+* Fine tune control over window position and size.
+* Automatically capture the layout of all the windows on your desktop
+* Automatically position any window on any screen at any place with any size.
+* Supports minimizing and maximizing of windows.
+* Supports undo and restore when applying a layout.
+* Elaborate application options to control overall behavior.
+* Window matching via title, process name, class name, based on full, wildcard, or regular expression.
+* Supports copying of entire layouts, single windows, or windows between different layouts.
+* Provides context pop-up menu for windows with quick layout options.
+* Hotkey support for layouts.
+* Hotkey support for individual windows.
+* Hotkey explorer that shows an overview of all hotkeys used.
+* Data files are stored in the folder in which the Windows Layout Manager is installed for easy backup of the configuration.
+* Minimizes to the tray where it allows for quick layout changes via the pop-up menu.
+* Apply layouts from the command line.
+
+    </description>
+    <releaseNotes>http://www.stefandidak.com/wilma/version_history.htm</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

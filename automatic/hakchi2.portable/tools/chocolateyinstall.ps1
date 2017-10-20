@@ -1,28 +1,28 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageName= 'hakchi2.portable'
-$version     = '2.17'
-$url         = 'https://github.com/ClusterM/hakchi2/releases/download/2.17/hakchi2.zip'
-$checkSum    = 'dcced7ff63861c534180756bd6de1b7b8a42c74af2897bd3d4bf9a8d9b35c3af'
+$ToolsDir   = Join-Path $env:ChocolateyPackageFolder 'tools'
 
-$PackageDir = Split-path (Split-path $MyInvocation.MyCommand.Definition)
+# Remove previous versions
+$Previous = Get-ChildItem $env:ChocolateyPackageFolder -filter 'chrlauncher*' | ?{ $_.PSIsContainer }
+if ($Previous) {
+   $Previous | % { Remove-Item $_.FullName -Recurse -Force }
+}
 
 $InstallArgs = @{
-   PackageName   = $PackageName
-   Url           = $Url 
-   UnzipLocation = (Join-path $PackageDir ($PackageName.split('.')[0] + '_' + $version))
-   checkSum      = $checkSum
-   checkSumType  = 'sha256'
+   packageName  = $env:ChocolateyPackageName
+   FileFullPath = (Get-ChildItem $ToolsDir -Filter "*.zip").FullName
+   Destination  = (Join-path $env:ChocolateyPackageFolder ($env:ChocolateyPackageName.split('.')[0] + $env:ChocolateyPackageVersion))
 }
-Install-ChocolateyZipPackage @InstallArgs
 
-$files = get-childitem $InstallArgs.UnzipLocation -include *.exe -recurse
+Get-ChocolateyUnzip @InstallArgs
+
+$files = get-childitem $InstallArgs.Destination -include *.exe -recurse
 foreach ($file in $files) {
    if ($file.name -eq 'hakchi.exe') {
       $target = $file.fullname
    } else {
       #generate an ignore file
-      New-Item "$file.ignore" -type file -force | Out-Null
+      New-Item "$($file.fullname).ignore" -type file -force | Out-Null
    }
 }
 $shortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'hakchi2.lnk'

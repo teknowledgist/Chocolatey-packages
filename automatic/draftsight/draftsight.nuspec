@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>draftsight</id>
-    <version>2017.03</version>
+    <version>2017.03.01</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/draftsight</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -29,7 +29,7 @@ DraftSight will work for 30 days before requiring free, per-user registration.  
 [--](https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/automatic/draftsight/bypass.png)
 
     </description>
-    <releaseNotes>https:\\www.3ds.com\fileadmin/PRODUCTS-SERVICES/DRAFTSIGHT/PDF/DraftSight_2017_SP3_Release_Notes_v1.pdf</releaseNotes>
+    <releaseNotes>https://www.3ds.com/fileadmin/PRODUCTS-SERVICES/DRAFTSIGHT/PDF/DraftSight_2017_SP3_Release_Notes_v1.pdf</releaseNotes>
     <dependencies> 
     </dependencies>
   </metadata>

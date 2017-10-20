@@ -1,16 +1,17 @@
-﻿$PackageName = 'chrlauncher.portable'
-$version = '2.4.1'
-$PackageDir = Split-path (Split-path $MyInvocation.MyCommand.Definition)
-$InstallDir = (Join-path $PackageDir ($PackageName.split('.')[0] + $version))
-$BitLevel = Get-ProcessorBits
+﻿$ErrorActionPreference = 'Stop'  # stop on all errors
 
+# If ChrLauncher was made the default browser, turn that off
 if (Test-Path 'HKLM:\Software\Clients\StartMenuInternet\chrlauncher') {
+$version = (get-childitem -filter "chrlauncher*" | 
+               Where-Object {$_.psiscontainer} | 
+               ForEach-Object {[version]($_.name -replace 'chrlauncher','')} |
+               Sort-Object)[-1]
+$InstallDir = join-path $env:ChocolateyPackageFolder "chrlauncher$($version.tostring())"
+$BitLevel = Get-ProcessorBits
    Write-Debug 'Removing registry keys that set chrlauncher as the default browser.'
    $Regfile = Join-Path $InstallDir "$BitLevel\RegistryCleaner.reg"
    regedit /s $Regfile
 }
-
-Remove-Item $InstallDir -Recurse -Force
 
 $shortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'Chromium Launcher.lnk'
  

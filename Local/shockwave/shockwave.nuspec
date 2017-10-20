@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>shockwave</id>
+    <version>12.2.9.199</version>
+    <packageSourceUrl>\\server\share\ChocolateyPackages</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Adobe Shockwave (licensed distribution)</title>
+    <authors>Adobe</authors>
+    <projectUrl>https://get.adobe.com/shockwave/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/shockwave_icon.png</iconUrl>
+    <copyright>Adobe</copyright>
+    <licenseUrl>https://www.adobe.com/products/clients/all_dist_agreement.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>shockwave adobe multimedia admin</tags>
+    <summary>Displays Web content that has been created by Adobe Director</summary>
+    <description>Adobe Shockwave (formerly Macromedia Shockwave) is a multimedia platform used to add animation and interactivity to web pages. It allows Adobe Director applications to be published on the Internet and viewed in a web browser on any computer which has the Shockwave plug-in installed. It was first developed by Macromedia, and released in 1995 and was later acquired by Adobe Systems in 2005.
+
+Unlike the Adobe Flash Player, the Adobe Shockwave Player is not commonly bundled with web browsers; if needed it must be downloaded.
+
+Shockwave movies are authored in the Adobe Director environment. While there is support for including Flash movies inside Shockwave files, authors often choose the Shockwave Director combination over Flash because it offers more features and more powerful tools. Features not replicated by Flash include a much faster rendering engine, and support for various network protocols, including Internet Relay Chat. Also, Shockwave's functionality can be extended with "Xtras".
+
+Shockwave is outdated and a security concern [as reported by Brian Krebs](https://krebsonsecurity.com/2014/05/why-you-should-ditch-adobe-shockwave/), but sometimes it is still needed.
+</description>
+    <releaseNotes>https://helpx.adobe.com/shockwave/release-note/release-notes-shockwave-12.html</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

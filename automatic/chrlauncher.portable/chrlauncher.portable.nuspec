@@ -17,7 +17,7 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/henrypp/chrlauncher</projectSourceUrl>
     <bugTrackerUrl>https://github.com/henrypp/chrlauncher/issues</bugTrackerUrl>
-    <tags>chrlauncher chromium chrome updater portable</tags>
+    <tags>chrlauncher chromium chrome updater portable embedded</tags>
     <summary>Small and very fast portable launcher and updater for Chromium.</summary>
     <description>A small and very fast portable launcher and updater for Chromium.
 
@@ -37,12 +37,22 @@ Other (system-wide) chrlauncher settings can be modified in the `chrlauncher.ini
 #### Package Parameters
 The following package parameters can be set:
 
- * `/Default`  - Make chrlauncher the default "browser".  This option requires installing with admin rights.
- * `/Shared`  - Share the Chromium install among all users. 
+* `/Default`  - Make chrlauncher the default "browser".  This option requires installing with admin rights.
+* `/Shared`  - Share the Chromium install among all users. 
+* `/Type:`_&lt;build&gt;_  - Set chrlauncher to use a specific Chromium build:
+    * dev-official - [official development builds from snapshots repository](commondatastorage.googleapis.com/chromium-browser-snapshots/index.html)
+    * dev-codecs-sync - (default) [unofficial development builds with codecs](github.com/henrypp/chromium/releases)
+    * stable-codecs-sync - [unofficial stable builds with codecs](github.com/henrypp/chromium/releases)
+    * dev-codecs-nosync - [unofficial development builds with codecs and without google services](github.com/henrypp/chromium/releases)
+    * stable-codecs-nosync - [unofficial stable builds with codecs and without google services](github.com/henrypp/chromium/releases)
+    * ungoogled-chromium - [unofficial builds without google integration and enhanced privacy](github.com/Eloston/ungoogled-chromium)
+
+(Adjust the `chrlauncher.ini` file to manually change the build after installation)
 
 These parameters can be passed to the installer with the use of `-params`.
 For example: 
-  `choco install chrlauncher.portable -params '"/Default"'`.
+  `choco install chrlauncher.portable -params '"/Default"'`
+  `choco install chrlauncher.portable -params '"/Type:stable-codecs-sync"'`
 
     </description>
     <releaseNotes>https://github.com/henrypp/chrlauncher/blob/master/CHANGELOG.md</releaseNotes>

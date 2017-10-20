@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The installer is available from SourceForge:
+https://sourceforge.net/projects/jmol/files/Jmol-<Latest Version>-binary.zip
+
+Direct Download:
+
+Version  : 14.20.8
+URL      : https://sourceforge.net/projects/jmol/files/Jmol-14.20.8-binary.zip
+CheckSum : e0e9eb364bb1314f5e989619876b80e326be78ada3e4edfb1953618b6b84334c
+

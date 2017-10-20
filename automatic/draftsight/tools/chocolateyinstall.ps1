@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName = 'DraftSight'
-$url         = 'http://dl-ak.solidworks.com/nonsecure/draftsight/2017SP03/DraftSight32.exe'
-$url64       = 'http://dl-ak.solidworks.com/nonsecure/draftsight/2017SP03/DraftSight64.exe'
-$checkSum    = '4874a8527df1a8c46aab2eb7f63805481afcc9f87a1d49e95a930cfc6d645c29'
-$checkSum64  = 'ac968ebadc2827ff8aa479f0a8aaafdb24c3fb7c404fcddc6972bd8a7125107c'
+$url         = 'http://dl-ak.solidworks.com/nonsecure/draftsight/2017SP03-1/DraftSight32.exe'
+$url64       = 'http://dl-ak.solidworks.com/nonsecure/draftsight/2017SP03-1/DraftSight64.exe'
+$checkSum    = 'B5C77636D062E1EE146BA568516774CD349AFE2AE142A84C3ECAEC241803EEF9'
+$checkSum64  = 'F103FC64599DEC2C3435271BE84059269619D0D67F2EEA2525CADEBFE832A466'
 
 $WorkSpace = Join-Path $env:TEMP "$packageName.$env:chocolateyPackageVersion"
 

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>jmol</id>
-    <version>14.20.5</version>
+    <version>14.20.8</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/jmol</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -91,7 +91,7 @@
 * JavaScript support library (Jmol.js)
 * Exports to jpg, png, gif, ppm, pdf, POV-Ray, Gaussian, Maya, vrml, x3d, idtf, web page.
 </description>
-    <releaseNotes>https://sourceforge.net/projects/jmol/files/Jmol/Version%2014.20/Version%2014.20.3/</releaseNotes>
+    <releaseNotes>https://sourceforge.net/projects/jmol/files/Jmol/Version%2014.20/Version%2014.20.8/</releaseNotes>
     <dependencies>
       <dependency id="jre8" version="8.0" />
     </dependencies>
