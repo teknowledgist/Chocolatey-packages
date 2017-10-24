@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest version is available at this site:
+https://pnggauntlet.com/
+
+Direct Download:
+
+Version  : 3.1.2
+URL      : https://pnggauntlet.com/PNGGauntlet-3.1.2.exe
+CheckSum : 1155CB66555764D497962D7857EB61D3EA13D5E6CA4C847FB0A4BBC46B802E83
+

@@ -3,8 +3,8 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <id>contextconsole</id>
-    <version>2.1.0.20161213</version>
+    <id>ContextConsole</id>
+    <version>2.1.0.20171024</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/ContextConsole</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

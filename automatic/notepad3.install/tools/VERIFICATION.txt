@@ -7,7 +7,7 @@ on this page:  https://www.rizonesoft.com/downloads/notepad3/
 
 Direct Download:
 
-Version  : 2.17.1016.610
+Version  : 2.17.1023.632
 URL      : https://www.rizonesoft.com/?ddownload=2692
-CheckSum : 84C2ED5F607A5D91D7C3DF45EFB7B5280F5F158B946B0BE74BE00B5D39C74AB6
+CheckSum : E1A52F3FC5EA8A050C63D76D27E63B785F0C36D8962C598FC5D2C19E4BACEB80
 

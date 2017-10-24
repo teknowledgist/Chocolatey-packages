@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest version is available at this link:
+http://code.kliu.org/cmdopen/downloads/CmdOpenInstall-latest.exe
+
+Direct Download:
+
+Version  : 2.1.0
+URL      : http://code.kliu.org/cmdopen/downloads/CmdOpenInstall-2.1.0.exe
+CheckSum : 108D24832359AE8E34A2E661DEA3F5F468DCA7D5074C417EBA33227D552A07BA
+

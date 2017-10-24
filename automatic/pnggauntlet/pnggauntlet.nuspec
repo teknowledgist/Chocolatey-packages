@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pnggauntlet</id>
-    <version>3.1.2.20170106</version>
+    <version>3.1.2.20171024</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/pnggauntlet</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -28,7 +28,7 @@
 </description>
     <releaseNotes>https://pnggauntlet.com/changelog/</releaseNotes>
     <dependencies>
-      <dependency id='pnggauntlet.install' version="[3.1.2.20170106]" />
+      <dependency id="pnggauntlet.install" version="3.1.2.20171024" />
     </dependencies>
   </metadata>
   <files>

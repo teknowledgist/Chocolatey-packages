@@ -33,7 +33,7 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate() { 
    Write-host "Downloading Jmol-$($Latest.Version)-binary.zip"
-   Get-RemoteFiles -Purge -NoSuffix -FileNameBase "Jmol-$($Latest.Version)-binary" 
+   Get-RemoteFiles -Purge -NoSuffix
 }
 
 update -ChecksumFor none

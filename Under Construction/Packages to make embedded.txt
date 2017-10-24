@@ -13,10 +13,8 @@ whitebox.portable
 Manual:
 Avogadro
 caesium
-contextconsole
 fusion-ldv
 openchrom
-pnggauntlet
 posterazor
 pov-ray
 wxmacmolplt
