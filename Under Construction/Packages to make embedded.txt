@@ -1,4 +1,5 @@
 automatic:
+fastcopy
 geoda
 graph
 icopy
@@ -9,6 +10,7 @@ qcad
 sktimestamp
 tinn-r
 whitebox.portable
+
 
 Manual:
 Avogadro

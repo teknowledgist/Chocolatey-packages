@@ -4,13 +4,13 @@ $packageName  = 'stata-se'
 $commonName   = 'StataSE'
 $LicenseFile  = 'STATA.LIC'  # This license file must be placed in the Tools folder
 
-$v    = '14'
+$v    = '15'
 $Bits = Get-ProcessorBits
 
 $InstallArgs = @{
    PackageName    = $packageName
    url            = "\\Server\share\Stata\SetupStata$v.exe"
-   Checksum       = 'F561EA1D7DB8EABA73B65EA92B5D4A941660D7B6FD86A2AD313234D57B2E8468'
+   Checksum       = 'A9EA2863D69E93BD7648A19ED2D05283165C566869FDE1D58090CCF8CA92C713'
    ChecksumType   = 'sha256'
    FileType       = 'exe'
    SilentArgs     = "/qb ADDLOCAL=Ado,Core,$commonName$Bits"
@@ -43,7 +43,7 @@ if ($key.Count -eq 1) {
    Throw "$commonName install not found!  Can't auto-license or update $commonName"
 }
 
-$shortcut = Join-Path ([Environment]::GetFolderPath("Desktop")) "$commonName $v.lnk"
+$shortcut = Join-Path $env:PUBLIC "Desktop\$commonName $v.lnk"
 Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $Stata
 
 

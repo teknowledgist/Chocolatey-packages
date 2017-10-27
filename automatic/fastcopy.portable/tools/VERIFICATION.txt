@@ -1,0 +1,14 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The installer is available by following the "installer" links
+near the top of the home page:  
+   https://ipmsg.org/tools/fastcopy.html.en
+
+Direct Download:
+Version      : 3.32
+x86 URL      : http://ftp.vector.co.jp/69/28/2323/FastCopy332.zip
+x86 CheckSum : 801B133519EC7779AC344BC5693E4CADE51A3C7EAE696E9F527EEF71BE440E55
+x64 URL      : http://ftp.vector.co.jp/69/28/2323/FastCopy332_x64.zip
+x64 CheckSum : B3319D65E89570F521B8ABE6A5AAF5BA7CD9B1E14BE8DBE18E119B924FEFD935
