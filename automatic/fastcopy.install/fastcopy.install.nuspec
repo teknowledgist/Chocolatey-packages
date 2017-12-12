@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy.install</id>
-    <version>3.32</version>
+    <version>3.40</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy.install</packageSourceUrl>
     <owners>Teknowledgist, dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -18,7 +18,7 @@
     <projectSourceUrl>http://ipmsg.org/archive/FastCopy313src.zip</projectSourceUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/fastcopy-bb-eng</mailingListUrl>
     <docsUrl>http://ipmsg.org/tools/fastcopy.html.en#usage</docsUrl>
-    <tags>fastcopy copy delete explorer shell notsilent admin</tags>
+    <tags>fastcopy copy delete explorer shell notsilent embedded admin</tags>
     <summary>The Fastest Copy/Delete Software on Windows.</summary>
     <description>FastCopy is **the Fastest Copy/Delete Software on Windows**.
 

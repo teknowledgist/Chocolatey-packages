@@ -2,12 +2,12 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
-The installer is available by following the link to "Replace Windows Notepad"
+The installer is available by following the link to "Replace Notepad"
 on this page:  https://www.rizonesoft.com/downloads/notepad3/
 
 Direct Download:
 
-Version  : 2.17.1023.632
-URL      : https://www.rizonesoft.com/?ddownload=2692
-CheckSum : E1A52F3FC5EA8A050C63D76D27E63B785F0C36D8962C598FC5D2C19E4BACEB80
+Version  : 3.17.1210.729
+URL      : https://www.rizonesoft.com/download/4306/
+CheckSum : DBA6BDC71B8CA0B980C0E6EAB810AED068B6F45DFF04F1DCE4276DCE1216F5D4
 

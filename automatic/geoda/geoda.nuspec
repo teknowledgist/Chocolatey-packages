@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>geoda</id>
-    <version>1.12</version>
+    <version>1.12.1.59</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/geoda</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -19,7 +19,7 @@
     <docsUrl>http://geodacenter.github.io/documentation.html</docsUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/openspace-list</mailingListUrl>
     <bugTrackerUrl>https://github.com/GeoDaCenter/geoda/issues</bugTrackerUrl>
-    <tags>geoda esda spatial statistics maps gis admin</tags>
+    <tags>geoda esda spatial statistics maps gis admin embedded</tags>
     <summary>An introduction to spatial data analysis.</summary>
     <description>GeoDa is a free and open source software tool that serves as an introduction to spatial data analysis. It is designed to facilitate new insights from data analysis by exploring and modeling spatial patterns.
 

@@ -1,31 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageName='PNGGauntlet'
+$fileLocation = (Get-ChildItem (Split-Path $MyInvocation.MyCommand.Definition) -Filter '*.exe').FullName
 
-$DownloadFile = "$packageName-3.1.2.exe"
-$DestinationDir = Join-Path $env:TEMP $packageName
-
-$PackageArgs = @{
-  PackageName = $packageName
-  FileFullPath = Join-Path $DestinationDir $DownloadFile
-  Url = 'https://pnggauntlet.com/PNGGauntlet-3.1.2.exe'
-  checkSum = '1155CB66555764D497962D7857EB61D3EA13D5E6CA4C847FB0A4BBC46B802E83'
-  checkSumType = 'sha256'
-}
-
-# Download zip
-Get-ChocolateyWebFile @PackageArgs
+$UnzipDir = Join-Path $env:TEMP $env:ChocolateyPackageName
 
 # Extract zip
-Get-ChocolateyUnzip (Join-Path $DestinationDir $DownloadFile) $DestinationDir
+Get-ChocolateyUnzip -FileFullPath $fileLocation -Destination $UnzipDir
 
 $InstallArgs = @{
-   packageName   = $packageName
-   fileType      = 'msi'
-   silentArgs = "/qn"
-   validExitCodes= @(0)
-   File = (Join-Path $DestinationDir "Installer\$($packageName)Setup.msi")
+   packageName    = $env:ChocolateyPackageName
+   fileType       = 'msi'
+   File           = (Get-ChildItem $UnzipDir -filter "*.msi" -Recurse).FullName
+   silentArgs     = "/qn"
+   validExitCodes = @(0)
 }
 
 Install-ChocolateyInstallPackage @InstallArgs
 
+New-Item "$fileLocation.ignore" -Type file -Force | Out-Null

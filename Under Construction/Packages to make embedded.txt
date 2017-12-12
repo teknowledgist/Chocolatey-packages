@@ -1,12 +1,11 @@
 automatic:
-fastcopy
-geoda
+fastcopy.install
 graph
 icopy
 markdown-edit
 mpw
 path-copy-copy
-qcad
+qcad  -- too big
 sktimestamp
 tinn-r
 whitebox.portable
@@ -20,3 +19,6 @@ openchrom
 posterazor
 pov-ray
 wxmacmolplt
+
+Consider:
+BleachBit

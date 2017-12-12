@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy</id>
-    <version>3.32</version>
+    <version>3.40</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy</packageSourceUrl>
     <owners>Teknowledgist, dtgm, MarkJohnson</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -42,7 +42,7 @@ You can modify this software, because all source code has been opened to the pub
     <releaseNotes>http://ipmsg.org/tools/fastcopy.html.en#history</releaseNotes>
     <language>en-US</language>
     <dependencies>
-      <dependency id="fastcopy.portable" version="3.32" />
+      <dependency id="fastcopy.portable" version="[3.40]" />
     </dependencies>
   </metadata>
   <files>

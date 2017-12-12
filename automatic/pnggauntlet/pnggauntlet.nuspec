@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pnggauntlet</id>
-    <version>3.1.2.20171024</version>
+    <version>3.1.2.20171027</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/pnggauntlet</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -28,7 +28,7 @@
 </description>
     <releaseNotes>https://pnggauntlet.com/changelog/</releaseNotes>
     <dependencies>
-      <dependency id="pnggauntlet.install" version="3.1.2.20171024" />
+      <dependency id="pnggauntlet.install" version="3.1.2.20171027" />
     </dependencies>
   </metadata>
   <files>

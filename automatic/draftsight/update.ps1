@@ -11,7 +11,7 @@ function global:au_GetLatest {
 
    $AppVersion = $Headline.split(':')[-1] -replace '.*(\d\d\d\d.*)','$1'
    $PackageVersion = $AppVersion.split()[0] + '.0' + ($AppVersion -replace '.*SP(.*)','$1')
-   $LinkVersion = $AppVersion.replace(' ','') -replace 'SP(\d)','SP0$1'
+   $LinkVersion = $AppVersion.replace(' ','') -replace 'SP([1-9])','SP0$1'
 
    $ReleaseNotes = $download_page.links | 
                   Where-Object -FilterScript {($_.href -match $AppVersion.replace(' ','_')) -and ($_.href -match 'Release_Notes')} | 

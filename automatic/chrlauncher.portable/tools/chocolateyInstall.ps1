@@ -61,7 +61,7 @@ if ($UserArguments.ContainsKey('Shared')) {
    $msgtext = 'chrlauncher will install/update/launch Chromium independently for each user.'
    Write-Host $msgtext -ForegroundColor Cyan
    $INIfile = Join-Path (Split-Path $target) 'chrlauncher.ini'
-   (gc $INIfile) -replace "^(ChromiumDirectory=).*$",'$1%appdata%\Chromium\bin' | Set-Content $INIfile
+   (gc $INIfile) -replace "^(ChromiumDirectory=).*$",'$1%LOCALAPPDATA%\Chromium\bin' | Set-Content $INIfile
 }
 
 if ($UserArguments.ContainsKey('Type')) {

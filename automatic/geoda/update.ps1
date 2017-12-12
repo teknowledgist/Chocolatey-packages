@@ -13,22 +13,30 @@ function global:au_GetLatest {
    $version = (($urls[0] -split '/')[-1] -split '-')[1]
 
    return @{ 
-            Version = $version
-            URL32 = $url32
-            URL64 = $url64
+            AppVersion = $Version
+            Version    = $version
+            URL32      = $url32
+            URL64      = $url64
            }
 }
 
 
 function global:au_SearchReplace {
     @{
-        "tools\chocolateyInstall.ps1" = @{
-            "(^[$]url32\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-            "(^[$]url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^[$]Checksum32\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(^[$]Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-        }
+      "tools\VERIFICATION.txt" = @{
+         "(^Version\s+:).*"      = "`${1} $($Latest.AppVersion)"
+         "(^x86 URL\s+:).*"      = "`${1} $($Latest.URL32)"
+         "(^x86 Checksum\s+:).*" = "`${1} $($Latest.Checksum32)"
+         "(^x64 URL\s+:).*"      = "`${1} $($Latest.URL64)"
+         "(^x64 Checksum\s+:).*" = "`${1} $($Latest.Checksum64)"
+      }
     }
 }
 
-Update-Package
+
+function global:au_BeforeUpdate() { 
+   Write-host "Downloading GeoDa $($Latest.AppVersion) installer files"
+   Get-RemoteFiles -Purge -NoSuffix
+}
+
+update -ChecksumFor none

@@ -1,23 +1,17 @@
 import-module au
 
 function global:au_GetLatest {
-   $Release = 'https://raw.githubusercontent.com/rizonesoft/Notepad3/master/src/VersionEx.h'
-   $VersionText = Invoke-WebRequest -Uri $Release
+   $Release = 'https://www.rizonesoft.com/downloads/notepad3/'
+   $PageText = Invoke-WebRequest -Uri $Release
 
-   $major    = ($VersionText.content.split("`n") | ? { $_ -match ".*MAJOR (\d+)"}).split()[-1]
-   $minor    = ($VersionText.content.split("`n") | ? { $_ -match ".*MINOR (\d+)"}).split()[-1]
-   $revision = ($VersionText.content.split("`n") | ? { $_ -match ".*REV (\d+)"}).split()[-1]
-   $Build    = ($VersionText.content.split("`n") | ? { $_ -match ".*BUILD (\d+)"}).split()[-1]
-   $Version = "$major.$minor.$revision.$build"
-   
-   $HomeURL = 'https://www.rizonesoft.com/downloads/notepad3/'
-   $DownloadPage = Invoke-WebRequest -Uri $HomeURL
-   $DownloadLink = $DownloadPage.Links |? {$_.innertext -match 'replace Windows Notepad'}
-   $DownloadURL = $DownloadLink.href
-   
+   $DownLink = $PageText.Links | Where-Object {$_.innertext -match 'replace'} | select -First 1
+
+   $URL = $DownLink.href
+   $Version = $DownLink.innertext -replace '.* ([0-9.]*) .*','$1'
+
    return @{ 
             Version  = $Version
-            URL32    = $DownloadURL
+            URL32    = $URL
             FileType = 'exe'
            }
 }

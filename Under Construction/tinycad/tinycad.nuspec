@@ -1,20 +1,41 @@
-<?xml version="1.0"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>tinycad</id>
-    <version>2.80.06.6260</version>
+    <version>2.90.00.686</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/bluebeamvu</packageSourceUrl>
+    <owners>Teknowledgist, dtgm, adgellida</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>TinyCAD</title>
-    <authors>beischer don_lucas mattpyne</authors>
-    <owners>tonigellida</owners>
-    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <authors>beischer, don_lucas, mattpyne, mlangezaal</authors>
     <projectUrl>http://sourceforge.net/apps/mediawiki/tinycad/index.php?title=TinyCAD</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/adgellida/chocolateyautomaticpackages/master/icons/tinycad.png</iconUrl>
-    <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>An open source schematic capture program for MS Windows.
-	
-	Use TinyCAD to produce professional circuit diagrams and export net list information to PCB applications.</description>
-    <summary>An open source schematic capture program for MS Windows.</summary>
-    <copyright />
-    <tags>pcb circuit-diagram electronic schematic</tags>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/tinycad_icon.png</iconUrl>
+    <copyright>© 2017 - TinyCAD.net</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/tinycad/code/HEAD/tree/</projectSourceUrl>
+    <docsUrl>https://sourceforge.net/p/tinycad/wiki/Home/</docsUrl>
+    <mailingListUrl>https://uk.groups.yahoo.com/neo/groups/tinycad/info</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/projects/tinycad/support?source=navbar</bugTrackerUrl>
+    <tags>tinycad circuit-diagram schematics PCB SPICE EDA embedded</tags>
+    <summary>An open source schematic capture program</summary>
+    <description>TinyCAD is a program for drawing circuit diagrams commonly known as schematic drawings. It supports standard and custom symbol libraries. It supports PCB layout programs with several netlist formats and can also produce SPICE simulation netlists.
+
+##### Features
+
+* Flat or Hierarchical Schematic Entry
+* Many popular PCB Layout compatible netlist formats
+* Convenient support for embedding graphical images in drawings
+
+    </description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1" />
+    </dependencies>
   </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
 </package>

@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest installers are available here:
+   https://geodacenter.github.io/download_windows.html
+
+Direct Download:
+Version      : 1.12.1.59
+x86 URL      : https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa-1.12.1.59-Windows-32bit.exe
+x86 CheckSum : 569449805E26DBEF08F4CDDBFA104475E7EE3EA7619D462124C5F798BB807101
+x64 URL      : https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa-1.12.1.59-Windows-64bit.exe
+x64 CheckSum : 28957F22E83C3CE9452A063A0E8F0DE5974114EA2B001F745DC5DC61366C895C

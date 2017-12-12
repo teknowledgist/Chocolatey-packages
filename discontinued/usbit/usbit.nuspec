@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>usbit</id>
+    <version>1.74</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/usbit</packageSourceUrl>
+    <owners>Teknowledgist, tonigellida</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>USB Image Tool</title>
+    <authors>Alexander Beug</authors>
+    <projectUrl>http://www.alexpage.de/usb-image-tool/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/usbit_icon.png</iconUrl>
+    <copyright>Copyright © 2006-2017 Alexander Beug</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/usbit/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <mailingListUrl>http://www.alexpage.de/usb-image-tool/forum/</mailingListUrl>
+    <tags>usbit USB image clone</tags>
+    <summary>Create images of USB flash drives and MP3 players, that are mounted as USB drives.</summary>
+    <description>USB Image Tool can create images of USB flash drives and MP3 players, that are mounted as USB drives. It allows you switch between images with different music styles on your MP3 Player or to make an exact backup image of your USB Stick.
+
+#### Features
+* create image files of USB flash drives
+* restore images of USB flash drives
+* compressed image file format
+* show USB device information
+* manage favorite USB images
+* command line utility
+
+#### Supported devices
+USB Image Tool works with any device, that implements the USB Mass Storage protocol. This includes flash drives, card readers and a lot of other devices, like digicams, cell phones and mobile music players.
+
+#### Note
+As of the release of this package, the homepage for the USB Image Tool appears to be defunct, but it can still be seen in [the Internet Archive WayBackMachine](https://web.archive.org/web/20170901023608/http://www.alexpage.de/usb-image-tool/).  This package embeds the last known released version.
+
+    </description>
+    <dependencies>
+      <dependency id="dotnet4.6" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

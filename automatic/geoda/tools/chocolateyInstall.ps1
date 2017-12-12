@@ -1,19 +1,34 @@
-﻿$url32      = 'https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa-1.12-Windows-32bit.exe'
-$url64      = 'https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa-1.12-Windows-64bit.exe'
-$checkSum32 = 'ec96eb0ecf58761116f7b960dad801eeb20238157c3cd9dd0b3cdb43820e34c7'
-$checkSum64 = 'b3535c12a4c9dcacb24fa20dbcf4546eeeb4de419169a792e32588b4f67d7cbd'
+﻿$ErrorActionPreference = 'Stop'
+
+[array]$key = Get-UninstallRegistryKey -SoftwareName "GeoDa*"
+
+if ($key.Count -eq 1) {
+   $RemoveProc = Start-Process -FilePath $key[0].UninstallString -ArgumentList '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-' -PassThru
+   $updateId = $RemoveProc.Id
+   Write-Debug "Uninstalling old version of GeoDa."
+   Write-Debug "Uninstall Process ID:`t$updateId"
+   $RemoveProc.WaitForExit()
+} elseif ($key.Count -gt 1) {
+   Throw "Multiple, previous installs found!  Cannot proceed with install of new version."
+}
+
+$Bitness = Get-OSArchitectureWidth
+
+$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$InstallerFile = (Get-ChildItem -Path $toolsDir -Filter "*$($Bitness)bit.exe").FullName
 
 $InstallArgs = @{
-   packageName    = 'geoda'
-   installerType  = 'exe'
-   url            = $url32
-   url64bit       = $url64
-   checkSum       = $checkSum32
-   checkSum64     = $checkSum64
-   checkSumType   = 'sha256'
+   packageName    = $env:ChocolateyPackageName
+   fileType       = 'exe'
+   File           = $InstallerFile
    silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
    validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage @InstallArgs
+Install-ChocolateyInstallPackage @InstallArgs
+
+$exes = Get-ChildItem $toolsDir -filter *.exe -Recurse |select -ExpandProperty fullname
+foreach ($exe in $exes) {
+   New-Item "$exe.ignore" -Type file -Force | Out-Null
+}
 

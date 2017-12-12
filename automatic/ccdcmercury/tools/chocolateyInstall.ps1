@@ -1,7 +1,7 @@
 ﻿$PackageName = 'ccdcmercury'
-$Version     = '3.9.0.20170508'
-$url         = 'https://downloads.ccdc.cam.ac.uk/Mercury/3.9/mercurystandalone-3.9-windows-installer.exe'
-$Checksum    = '2a683404255bee05747e797816ea51bbae368c58f8201037fd6c4b47b416df20'
+$Version     = '3.10'
+$url         = 'https://downloads.ccdc.cam.ac.uk/Mercury/3.10/mercurystandalone-3.10-windows-installer.exe'
+$Checksum    = '51a25f4c946838caced12c8b2aa50f21223f20d59d63cb0a9be5e5536ac3b290'
 
 $BitLevel = Get-ProcessorBits
 If ($BitLevel -eq '64') {

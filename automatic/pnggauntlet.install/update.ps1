@@ -4,19 +4,19 @@ function global:au_GetLatest {
    $Notes = 'https://pnggauntlet.com/changelog/'
    $NotesText = Invoke-WebRequest -Uri $Notes
 
-   $AppVersion = $NotesText.AllElements | 
+   $Version = $NotesText.AllElements | 
                   ? {$_.tagname -eq 'h5' -and $_.innertext -match 'PNGGauntlet [0-9.]+'} | 
                   select -First 1 -ExpandProperty innertext
-   $AppVersion = $AppVersion -replace '.*? ([0-9.]+) .*','$1'
+   $Version = $Version -replace '.*? ([0-9.]+) .*','$1'
    
    $HomeURL = 'https://pnggauntlet.com/'
    $MainPage = Invoke-WebRequest -Uri $HomeURL
    $URLStub = $MainPage.Links |? {$_.href -match 'exe'} |select -expandproperty href
    
    return @{ 
-            Version    = $AppVersion
+            Version    = $Version
             URL32      = "$HomeURL$URLStub"
-            AppVersion = $AppVersion
+            AppVersion = $Version
            }
 }
 

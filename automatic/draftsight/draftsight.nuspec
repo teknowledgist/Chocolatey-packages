@@ -4,11 +4,11 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>draftsight</id>
-    <version>2017.03.01</version>
+    <version>2018.00</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/draftsight</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Draftsight 2017 SP3</title>
+    <title>Draftsight 2018 SP0</title>
     <authors>Dassault Systèmes</authors>
     <projectUrl>https://www.3ds.com/products-services/draftsight-cad-software/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/draftsight2017_icon.png</iconUrl>
@@ -22,14 +22,14 @@
 Its familiar user interface makes it easy to transition from other comparable CAD applications.
 
 * [List of features here](https://www.3ds.com/products-services/draftsight-cad-software/features/)
-* [System Requirements](https:\\www.3ds.com\fileadmin/PRODUCTS-SERVICES/DRAFTSIGHT/PDF/DraftSight_2017_SP3_System_Requirements_v1.pdf)
+* [System Requirements](https:\\www.3ds.com\fileadmin/PRODUCTS-SERVICES/DRAFTSIGHT/PDF/DraftSight_2018_SP0_System_Requirements_v1.pdf)
 
 ### Registration Required
 DraftSight will work for 30 days before requiring free, per-user registration.  [Professional](https://www.3ds.com/products-services/draftsight-cad-software/professional-features/) and [enterprise](http://www.solidworks.com/sw/purchase/draftsight-get-a-quote.htm?scid=ext_DraftSight_page) licenses are available.
 [--](https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/automatic/draftsight/bypass.png)
 
     </description>
-    <releaseNotes>https://www.3ds.com/fileadmin/PRODUCTS-SERVICES/DRAFTSIGHT/PDF/DraftSight_2017_SP3_Release_Notes_v1.pdf</releaseNotes>
+    <releaseNotes>https:\\www.3ds.com\</releaseNotes>
     <dependencies> 
     </dependencies>
   </metadata>

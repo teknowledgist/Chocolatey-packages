@@ -1,18 +1,20 @@
-﻿$packageName = 'qcad'
-$url32 = 'http://www.qcad.org//archives/qcad/qcad-3.18.1-trial-win32-installer.msi'
-$url64 = 'http://www.qcad.org//archives/qcad/qcad-3.18.1-trial-win64-installer.msi'
-$checkSum32 = '7dfc367be4407df61b3919720bccaa2030ac88a85bcb441f0da0c0a2156af298'
-$checkSum64 = '88173e528dad696d1674e47c324723e6debd7b10694d68c394a07a62d5c27275'
+﻿$ErrorActionPreference = 'Stop'
+
+$packageName = 'qcad'
+$url32 = 'http://www.qcad.org//archives/qcad/qcad-3.19.1-trial-win32-installer.msi'
+$url64 = 'http://www.qcad.org//archives/qcad/qcad-3.19.1-trial-win64-installer.msi'
+$checkSum32 = '063c2cd8130e15cfbad852700a72e7c480f3e43ec9165180d88d32832f328c08'
+$checkSum64 = '72388f269414386a47118ec66f5f25136c193653dce97ba5ae6cda25c1a9fb46'
 
 $InstallArgs = @{
-   packageName = $packageName
+   packageName = $env:ChocolateyPackageName
    installerType = 'msi'
    url = $url32
    url64bit = $url64
    Checksum = $checkSum32
    Checksum64 = $checkSum64
    ChecksumType = 'sha256'
-   silentArgs = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
+   silentArgs = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
    validExitCodes = @(0)
 }
 
@@ -23,6 +25,8 @@ Install-ChocolateyPackage @InstallArgs
 $TrialFiles = 'qcaddwg.dll','qcadopengl3d','qcadpolygon.dll','qcadproscripts.dll','qcadtriangulation.dll'
 
 foreach ($file in $TrialFiles) {
-   Remove-Item (Join-Path $env:ProgramFiles "QCAD\plugins\$file") -Force
+   if (test-path (Join-Path $env:ProgramFiles "QCAD\plugins\$file")) {
+      Remove-Item (Join-Path $env:ProgramFiles "QCAD\plugins\$file") -Force
+   }
 }
 

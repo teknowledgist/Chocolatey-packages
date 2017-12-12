@@ -2,9 +2,9 @@
 
 $PackageName = 'bluebeamvu'
 $DisplayName = 'Bluebeam Vu'
-$AppVersion  = '2017.0.20'
-$Checksum    = '124958d50b57b3761bd91181acce40862830cd3a81410138afa25d4ebaf63a3e'
-$URL         = 'https://downloads.bluebeam.com/software/downloads/2017.0.20/vu/BbVu2017.0.20.exe'
+$AppVersion  = '2017.0.30'
+$Checksum    = '632d98bb4a45c0c26a50f2396a9271d619329b29acbdcf8982fd965a83f64c9c'
+$URL         = 'https://downloads.bluebeam.com/software/downloads/2017.0.30/vu/BbVu2017.0.30.exe'
 
 $uninstallEntry = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$DisplayName $AppVersion*"
 $uninstallEntryWow64 = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\$DisplayName $AppVersion*"

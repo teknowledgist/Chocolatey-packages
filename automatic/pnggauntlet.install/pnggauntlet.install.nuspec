@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pnggauntlet.install</id>
-    <version>3.1.2.20171024</version>
+    <version>3.1.2.20171027</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/pnggauntlet.install</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -16,7 +16,7 @@
     <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/pnggauntlet.install/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://pnggauntlet.com/help/</docsUrl>
-    <tags>pnggauntlet png compression admin</tags>
+    <tags>pnggauntlet png compression admin embedded</tags>
     <summary>A PNG image optimization tool</summary>
     <description>PNGGauntlet is a .NET (v4.0) program that uses [Ken Silverman's PNGOUT](http://advsys.net/ken/util/pngout.htm), [OptiPNG](http://optipng.sourceforge.net/) and [DeflOpt](http://www.walbeehm.com/download/) to optimize PNG files. Many PNG files output by popular graphics software packages like Photoshop or even Fireworks are not as small as they could be - PNGGauntlet squeezes the last bit of size out of them. Furthermore, no information is lost during this process - the only thing that changes is the file size. Just select the files you want to optimize (or drag them onto the window), select where you want them to go, and click the button. PNGauntlet can also be used to convert JPG, GIF, TGA, PCX, and BMP files to PNG. 
 

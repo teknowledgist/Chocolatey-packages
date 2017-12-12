@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>notepad3.install</id>
-    <version>2.17.1023.632</version>
+    <version>3.17.1210.729</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/notepad3.install</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -25,32 +25,39 @@ MiniPath is based on code from [Florian Balmer's metapath](http://www.flos-freew
   
 ###### Changes in Notepad3 compared to Notepad2
 
-  - Code folding
-  - Support for bookmarks
-  - Option to mark all occurrences of a word
-  - Updated Scintilla component
-  - Word auto-completion
-  - Syntax highlighting support for AutoHotkey, AutoIt3, AviSynth, Bash, CMake, 
-    CoffeeScript, Inno Setup, LaTeX, Lua, Markdown, NSIS, Ruby, Tcl, 
-    YAML and VHDL scripts
-  - Improved support for NFO ANSI art
-  - Support for replacing Windows Notepad using a clean, unintrusive 
-    registry-based method
-  - New toolbar icons based on Yusuke Kamiyaman's Fugue Icons
-    Purchased by Rizonesoft
-  - New program icon and other small cosmetic changes
-  - Other various minor changes and tweaks
-  
+* Code folding
+* Support for bookmarks
+* Option to mark all occurrences of a word
+* Updated Scintilla component
+* Word auto-completion
+* Syntax highlighting support for AutoHotkey, AutoIt3, AviSynth, Bash, CMake, CoffeeScript, Inno Setup, LaTeX, Lua, Markdown, NSIS, Ruby, Tcl, YAML and VHDL scripts
+* Improved support for NFO ANSI art
+* Support for replacing Windows Notepad using a clean, unintrusive registry-based method
+* New toolbar icons based on Yusuke Kamiyaman's Fugue Icons (Purchased by [Rizonesoft](https://www.rizonesoft.com/))
+* New program icon and other small cosmetic changes
+* High-DPI awareness, including high definition toolbar icons
+* In-App support for AES-256 Rijndael encryption of files (incl. external commandline tool for batch processing)
+* Multiline Regular Expression search engine (DeelX)
+* Undo/Redo preserves selection
+* Virtual Space rectangular selection box (Alt-Key down)
+* Accelerated word navigation
+* Preserve caret position of items in file history
+* Visual Studio style copy/paste current line (no selection)
+* Count occurrences of a marked selection or word
+* Insert GUIDs
+* Dropped support for Windows XP version
+* Other various minor changes, tweaks and bugfixes  
+
 ###### Changes in MiniPath compared to metapath
 
-  - Project upgraded to Visual C++ 2017
-  - 64-bit version
-  - New toolbar icons based on Yusuke Kamiyaman's Fugue Icons
-    Purchased by Rizonesoft
-  - Installation bundled with Notepad3
-  - Minor cosmetic changes
-	
-	</description>
+* Project upgraded to Visual C++ 2017
+* 64-bit version
+* New toolbar icons based on Yusuke Kamiyaman's Fugue Icons
+* Purchased by Rizonesoft
+* Installation bundled with Notepad3
+* Minor cosmetic changes
+
+    </description>
     <releaseNotes>https://github.com/rizonesoft/Notepad3/blob/master/distrib/Changes.txt</releaseNotes>
     <dependencies>
     </dependencies>

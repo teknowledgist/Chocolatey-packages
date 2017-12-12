@@ -1,25 +1,14 @@
-﻿$packageName = 'fastcopy.install'
-$url32       ='http://ftp.vector.co.jp/69/28/2323/FastCopy332.zip'
-$checkSum32  = '801b133519ec7779ac344bc5693e4cade51a3c7eae696e9f527eef71be440e55'
-$url64       ='http://ftp.vector.co.jp/69/28/2323/FastCopy332_x64.zip'
-$checkSum64  = 'b3319d65e89570f521b8abe6a5aaf5ba7cd9b1e14be8dbe18e119b924fefd935'
+﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
-$DownloadArgs = @{
-   PackageName         = $packageName
-   FileFullPath        = "$env:TEMP\$packageName\Download.zip"
-   Url                 = $url32
-   Url64bit            = $url64
-   Checksum            = $checkSum32
-   Checksum64          = $checkSum64
-   ChecksumType        = 'sha256'
-   GetOriginalFilename = $true
+$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$ZipPath = (Get-ChildItem -Path $toolsDir -filter '*_x64.zip').FullName
+
+if (get-OSArchitectureWidth 32) {
+   $ZipPath = $ZipPath -replace '_x64',''
 }
 
-# Download zip
-$ZipPath = Get-ChocolateyWebFile @DownloadArgs
- 
 # Extract zip
-Get-ChocolateyUnzip $ZipPath (Split-Path $ZipPath)
+Get-ChocolateyUnzip -FileFullPath $ZipPath -Destination (Join-Path $env:TEMP "$ChocolateyPackageName")
 
 $UserArguments = @{}
 
@@ -47,6 +36,6 @@ if ($env:chocolateyPackageParameters) {
 # Win7 complains the installer didn't run correctly.  This will prevent that.
 Set-Variable __COMPAT_LAYER=!Vista
 
-& AutoHotKey $(Join-Path $env:ChocolateyPackageFolder 'tools\chocolateyInstall.ahk') $(Join-Path (Split-Path $ZipPath) 'setup.exe') $NoSubs
+& AutoHotKey $(Join-Path $env:ChocolateyPackageFolder 'tools\chocolateyInstall.ahk') $(Join-Path $env:TEMP "$ChocolateyPackageName\setup.exe") $NoSubs
 
 

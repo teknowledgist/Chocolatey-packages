@@ -83,5 +83,5 @@ if (Test-Path ($ProgDir)) {
       Remove-Item $ProgDir -Recurse -Force 
    }
 } else {
-   throw 'FastCopy install not found!' 
+   Write-Host 'FastCopy files appear to have already been deleted.' 
 }
