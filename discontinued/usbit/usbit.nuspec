@@ -36,7 +36,7 @@ As of the release of this package, the homepage for the USB Image Tool appears t
 
     </description>
     <dependencies>
-      <dependency id="dotnet4.6" />
+      <dependency id="dotnet4.5" />
     </dependencies>
   </metadata>
   <files>

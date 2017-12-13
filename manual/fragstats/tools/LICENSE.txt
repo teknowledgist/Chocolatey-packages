@@ -1,0 +1,17 @@
+﻿From: http://www.umass.edu/landeco/research/fragstats/downloads/fragstats_downloads.html
+
+Disclaimer
+
+This software is in the public domain, and the recipient may not 
+assert any proprietary rights thereto nor represent it to anyone 
+as other than an Oregon State University-produced program (version 2), 
+University of Massachusetts-produced program (version 3), or LandEco 
+Consulting-produced (Dr. McGarigal, sole propeitor)(vesion 4). 
+FRAGSTATS is provided "as is" without warranty of any kind, including, 
+but not limited to, the implied warranties of merchantability and 
+fitness for a particular purpose. The user assumes all responsibility 
+for the accuracy and suitability of this program for a specific 
+application. In no event will the authors or the University be liable 
+for any damages, including lost profits, lost savings, or other 
+incidental or consequential damages arising from the use of or the 
+inability to use this program.
