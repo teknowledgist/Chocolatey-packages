@@ -18,7 +18,7 @@ if ($SMlink) {
    Uninstall-ChocolateyPackage @UninstallArgs
    remove-item $smlink.directory.fullname -Recurse -Force
 } else {
-   Throw "Fusion-LDV install not found!"
+   Write-Warning "Fusion-LDV install not found.  It may have already been removed."
 }
 
 

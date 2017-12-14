@@ -1,0 +1,12 @@
+﻿From: http://forsys.sefs.uw.edu/fusion/fusionlatest.html
+
+LICENSE (and Disclaimer)
+
+FUSION is developed at the US Department of Agriculture, Forest Service, 
+Pacific Northwest Research Station by an employee of the Federal 
+Government in the course of his official duties. Pursuant to Title 17, 
+Section 105 of the United States Code, this software is not subject to 
+copyright protection and is in the public domain. FUSION is primarily a 
+research tool. USDA Forest Service assumes no responsibility whatsoever 
+for its use by other parties, and makes no guarantees, expressed or 
+implied, about its quality, reliability, or any other characteristic.

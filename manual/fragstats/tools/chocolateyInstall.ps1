@@ -11,7 +11,6 @@ $UnzipArgs = @{
 
 Get-ChocolateyUnzip @UnzipArgs
 
-
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    installerType  = 'exe'
