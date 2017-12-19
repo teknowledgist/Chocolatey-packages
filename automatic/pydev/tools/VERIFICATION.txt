@@ -1,0 +1,12 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest verion of the PyDev zip file is available on SourceForge:
+https://sourceforge.net/projects/pydev/files/latest/download
+
+Direct Download:
+
+Version  : 6.2.0
+URL      : https://sourceforge.net/projects/pydev/files/pydev/PyDev%206.2.0/PyDev%206.2.0.zip
+CheckSum : CC2310BA9A33B6DDB45981DF69644F0C161EEC0782589AB6C9EDDDB4DA8C6142

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>qgis-ltr</id>
+    <version>2.14.21</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qgis-ltr</packageSourceUrl>
+    <owners>Snowflake, Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>QGIS LTR (Long Term Release)</title>
+    <authors>OSGeo</authors>
+    <projectUrl>https://www.qgis.org</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/qgis_icon.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/qgis/QGIS</projectSourceUrl>
+    <docsUrl>https://www.qgis.org/en/docs/index.html</docsUrl>
+    <mailingListUrl>http://lists.osgeo.org/mailman/listinfo/qgis-user</mailingListUrl>
+    <bugTrackerUrl>https://www.qgis.org/en/site/getinvolved/development/bugreporting.html#bugs-features-and-issues</bugTrackerUrl>
+    <tags>qgis GIS mapping geographic geospatial admin</tags>
+    <summary>A Free and Open Source Geographic Information System</summary>
+    <description>QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.
+
+#### General Features
+* View data -- Spatially-enabled tables and views, vector formats, raster and imagery formats, GRASS raster and vector data and online spacial data.
+* Explore data and compose maps -- Interactively explore spatial data with a friendly GUI.
+* Create, edit, manage and export data -- Vector and raster layers in several formats.
+* Analyze data -- vector analysis, sampling, geoprocessing, geometry and database management tools including the complete GRASS functionality of more than 400 modules.
+* Publish maps on the Internet
+* Extensable functionality through plugins
+* Python console
+
+
+    </description>
+    <releaseNotes>https://qgis.org/en/site/forusers/visualchangelog214</releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

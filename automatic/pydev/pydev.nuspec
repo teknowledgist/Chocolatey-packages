@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>pydev</id>
+    <version>6.2.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pydev</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PyDev for Eclipse</title>
+    <authors>Fabio Zadrozny</authors>
+    <projectUrl>http://www.pydev.org</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/pydev_icon.png</iconUrl>
+    <copyright>Copyright © 2014-2017, Brainwy Software Ltda</copyright>
+    <licenseUrl>http://www.eclipse.org/legal/epl-v10.html</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/projects/pydev/files/pydev/</projectSourceUrl>
+    <docsUrl>http://www.pydev.org/manual.html</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/pydev/mailman/</mailingListUrl>
+    <bugTrackerUrl>https://stackoverflow.com/questions/tagged/pydev</bugTrackerUrl>
+    <tags>pydev eclipse python jython ide development code plugin embedded admin</tags>
+    <summary>A Python IDE for Eclipse.</summary>
+    <description>PyDev is a Python IDE extension for Eclipse which may be used for Python, Jython and IronPython development (and is among the leading tools for Python coding).
+
+It comes with many goodies such as:
+
+- [Django integration](http://www.pydev.org/manual_adv_django.html)
+- [Code completion](http://www.pydev.org/manual_adv_complctx.html)
+- [Code completion with auto import](http://www.pydev.org/manual_adv_complnoctx.html)
+- [Type hinting](http://www.pydev.org/manual_adv_type_hints.html)
+- [Code analysis](http://www.pydev.org/manual_adv_code_analysis.html)
+- [Go to definition](http://www.pydev.org/manual_adv_gotodef.html)
+- [Refactoring](http://www.pydev.org/manual_adv_refactoring.html)
+- [Debugger](http://www.pydev.org/manual_adv_debugger.html)
+- [Remote debugger](http://www.pydev.org/manual_adv_remote_debugger.html)
+- [Find Referrers in Debugger](http://www.pydev.org/manual_adv_debugger_find_referrers.html)
+- [Tokens browser](http://www.pydev.org/manual_adv_open_decl_quick.html)
+- [Interactive console](http://www.pydev.org/manual_adv_interactive_console.html)
+- [Unittest integration](http://www.pydev.org/manual_adv_pyunit.html)
+- [Code coverage](http://www.pydev.org/manual_adv_coverage.html)
+- [PyLint integration](http://www.pydev.org/manual_adv_pylint.html)
+- Find References (Ctrl+Shift+G)
+- and [many others](http://www.pydev.org/manual_adv_features.html).
+
+For more details on the provided features, check the [Features Matrix](http://www.pydev.org/manual_adv_features.html).
+
+**This package installs the PyDev extension into only a Chocolately-installed, [*Eclipse* package](https://chocolatey.org/packages/eclipse).**  
+
+While not required to install, PyDev is not much use without an installation of [Python](https://chocolatey.org/packages?q=python) (2.6 or newer).
+    </description>
+    <releaseNotes>http://www.pydev.org/history_pydev.html</releaseNotes>
+    <dependencies>
+      <dependency id="eclipse" version="4.6" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
