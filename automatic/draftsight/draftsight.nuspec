@@ -11,7 +11,7 @@
     <title>Draftsight 2018 SP0</title>
     <authors>Dassault Systèmes</authors>
     <projectUrl>https://www.3ds.com/products-services/draftsight-cad-software/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/draftsight2017_icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/draftsight2018_icon.png</iconUrl>
     <copyright>Copyright © 2016 Dassault Systèmes</copyright>
     <licenseUrl>https://www.3ds.com/products-services/draftsight-cad-software/eula</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

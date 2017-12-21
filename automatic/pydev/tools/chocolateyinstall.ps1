@@ -5,7 +5,8 @@ $ToolsDir   = Split-Path -parent $MyInvocation.MyCommand.Path
 # First find where eclipse is installed
 $HostPackage = 'eclipse'
 $HostPackageLocation = "$env:ChocolateyInstall\lib\$HostPackage"
-$HostUnzipLog = Get-ChildItem $HostPackageLocation -Filter "$HostPackage.*.txt"
+$HostUnzipLog = Get-ChildItem $HostPackageLocation -Filter "$HostPackage.*.txt" |
+                  sort creationtime | select -last 1
 If ($HostUnzipLog) {
    $HostInstallLocation = Get-Content $HostUnzipLog.FullName | Select-Object -First 1
 } else {

@@ -19,7 +19,7 @@
     <docsUrl>http://www.pydev.org/manual.html</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/pydev/mailman/</mailingListUrl>
     <bugTrackerUrl>https://stackoverflow.com/questions/tagged/pydev</bugTrackerUrl>
-    <tags>pydev eclipse python jython ide development code plugin embedded admin</tags>
+    <tags>pydev eclipse python jython ide development code plugin embedded foss admin</tags>
     <summary>A Python IDE for Eclipse.</summary>
     <description>PyDev is a Python IDE extension for Eclipse which may be used for Python, Jython and IronPython development (and is among the leading tools for Python coding).
 
@@ -45,9 +45,10 @@ It comes with many goodies such as:
 
 For more details on the provided features, check the [Features Matrix](http://www.pydev.org/manual_adv_features.html).
 
-**This package installs the PyDev extension into only a Chocolately-installed, [*Eclipse* package](https://chocolatey.org/packages/eclipse).**  
-
 While not required to install, PyDev is not much use without an installation of [Python](https://chocolatey.org/packages?q=python) (2.6 or newer).
+
+### Important Note:
+This package drops the PyDev extension into a Chocolately-installed, [*Eclipse*](https://chocolatey.org/packages/eclipse) folder structure.  If Eclipse is upgraded, the PyDev files will be erased although Chocolatey will still consider it installed.  The PyDev package will then need to be re-installed/upgraded using the `-force` option.
     </description>
     <releaseNotes>http://www.pydev.org/history_pydev.html</releaseNotes>
     <dependencies>
