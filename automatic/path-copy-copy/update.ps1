@@ -8,19 +8,26 @@ function global:au_GetLatest {
    $urlstub = $download_page.links |? href -match '.exe$' | select -ExpandProperty href -First 1
    $url = "https://github.com$urlstub"
 
-   $version = $urlstub.split('/') | ? {$_ -match '^[0-9.]+$'} | select -Last 1
+   $version = $urlstub.split('/') | ? {$_ -match '^v?[0-9.]+$'} | select -Last 1
+   $version = $version.trim('v')
 
-   return @{ Version = $version; URL = $url }
+   return @{ Version = $version; URL32 = $url }
 }
 
 
 function global:au_SearchReplace {
-    @{
-        "tools\chocolateyInstall.ps1" = @{
-            "(^  url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-            "(^  Checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-        }
-    }
+   @{
+      "tools\VERIFICATION.txt" = @{
+         "(^Version\s+:).*"  = "`${1} $($Latest.Version)"
+         "(^URL\s+:).*"      = "`${1} $($Latest.URL32)"
+         "(^Checksum\s+:).*" = "`${1} $($Latest.Checksum32)"
+      }
+   }
 }
 
-update -ChecksumFor 32
+function global:au_BeforeUpdate() { 
+   Write-host "Downloading PathCopyCopy $($Latest.Version) installer file"
+   Get-RemoteFiles -Purge -NoSuffix
+}
+
+update -ChecksumFor none

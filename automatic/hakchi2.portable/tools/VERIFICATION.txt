@@ -7,7 +7,7 @@ https://github.com/ClusterM/hakchi2/releases/latest
 
 Direct Download:
 
-Version  : 2.0.21.60
-URL      : https://github.com/ClusterM/hakchi2/releases/download/2.21e/hakchi2.21e.zip
-CheckSum : 16B43598652EDDFF895A148B59394C78E1F061E12B241ED33A448B2B68FE9144
+Version  : 2.0.21.72
+URL      : https://github.com/ClusterM/hakchi2/releases/download/2.21f/hakchi2.21f.zip
+CheckSum : 06C5B3DBF99C9DF3CE4151BB732CB65FFA03E00F6A28E7770E9DBF6C28AACA74
 

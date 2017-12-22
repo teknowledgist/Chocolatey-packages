@@ -30,7 +30,7 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate() { 
    Write-host "Downloading hakchi $($Latest.Version) zip file"
-   Get-RemoteFiles -Purge -NoSuffix" 
+   Get-RemoteFiles -Purge -NoSuffix 
 }
 
 update -ChecksumFor none

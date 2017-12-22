@@ -4,10 +4,16 @@ function global:au_GetLatest {
    $Release = 'https://www.rizonesoft.com/downloads/notepad3/'
    $PageText = Invoke-WebRequest -Uri $Release
 
-   $DownLink = $PageText.Links | Where-Object {$_.innertext -match 'replace'} | select -First 1
+   $TargetString = ($PageText.AllElements | 
+                  Where-Object {($_.tagname -eq 'tr') -and ($_.innertext -match 'Replace Notepad')} |
+                  Select-Object -ExpandProperty innertext
+               ) -replace '.*Notepad(\S*).*','$1'
 
-   $URL = $DownLink.href
-   $Version = $DownLink.innertext -replace '.* ([0-9.]*) .*','$1'
+   $URL = $PageText.links |
+               Where-Object {$_.innertext -match $targetString} |
+               Select-Object -ExpandProperty href
+
+   $Version = $targetString -replace '.*_([0-9.]+)\.exe.*','$1'
 
    return @{ 
             Version  = $Version

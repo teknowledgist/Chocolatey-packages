@@ -6,7 +6,7 @@
     <id>draftsight</id>
     <version>2018.00</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/draftsight</packageSourceUrl>
-    <owners>Teknowledgist</owners>
+    <owners>Teknowledgist, BasicTheProgram</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Draftsight 2018 SP0</title>
     <authors>Dassault Systèmes</authors>

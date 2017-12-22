@@ -6,7 +6,9 @@ function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri "$MainPage/download.php"
 
    $FooterString = $download_page.AllElements | ? {$_.id -eq 'footer'} |select -ExpandProperty innertext
-   $Version = $FooterString.split() | ? { $_ -match '\d+\.\d+(\.\d+)+'}
+   $Version = $FooterString.split('-') | ? { $_ -match 'version'}
+   $Version = $Version -replace '[^0-9]*([0-9.]*).*','$1'
+   if ($Version.length -eq 1) { $Version = "$Version.0.0" }
 
    $urlstub = $download_page.links | ? {$_.href -like '*.msi'} | select -ExpandProperty href
    $url = $MainPage + $urlstub

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>path-copy-copy</id>
-    <version>14.0</version>
+    <version>15.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/path-copy-copy</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -18,7 +18,7 @@
     <projectSourceUrl>https://github.com/clechasseur/pathcopycopy</projectSourceUrl>
     <docsUrl>https://github.com/clechasseur/pathcopycopy/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/clechasseur/pathcopycopy/issues</bugTrackerUrl>
-    <tags>path-copy-copy pathcopycopy pathcopy path explorer extension context admin</tags>
+    <tags>path-copy-copy pathcopycopy pathcopy path explorer extension context FOSS embedded admin</tags>
     <summary>Copy file paths from Windows explorer's contextual menu</summary>
     <description>A Windows Explorer add-on that adds a contextual menu item on all files and folders allowing the user to copy the path in various formats. Idea copied from "Path Copy".
 

@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageArgs = @{
-  softwareName  = 'Path Copy Copy*'
-  packageName   = $env:ChocolateyPackageName
-  fileType      = 'EXE'
-  url           = 'https://github.com/clechasseur/pathcopycopy/releases/download/14.0/PathCopyCopy14.0.exe'
-  Checksum      = '851475cd14e2b7ccef0bb778766affb00cc76512d77f06984aba4373a784c241'
-  checksumType  = 'sha256'
-  silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-  validExitCodes= @(0)
+$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$InstallerFile = (Get-ChildItem -Path $toolsDir -Filter "*.exe").FullName
+
+$InstallArgs = @{
+   packageName    = $env:ChocolateyPackageName
+   fileType       = 'exe'
+   File           = $InstallerFile
+   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+   validExitCodes = @(0)
 }
 
 $WarningString = "This installer is known to close the Explorer process.  `n" +
@@ -16,4 +16,9 @@ $WarningString = "This installer is known to close the Explorer process.  `n" +
                'command shell to restart it.'
 Write-Warning $WarningString
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @InstallArgs
+
+$exes = Get-ChildItem $toolsDir -filter *.exe -Recurse |select -ExpandProperty fullname
+foreach ($exe in $exes) {
+   New-Item "$exe.ignore" -Type file -Force | Out-Null
+}

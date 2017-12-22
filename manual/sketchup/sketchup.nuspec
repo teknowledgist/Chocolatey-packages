@@ -52,9 +52,10 @@ Examples :
 * `-params '"/ActivationFile:http://localsite.org/activation_info.txt"'`.
     _(note: File paths with spaces require double-double quotes around the path)_
     </description>
-    <releaseNotes>(https://help.sketchup.com/en/article/141303)</releaseNotes>
+    <releaseNotes>https://help.sketchup.com/en/article/141303</releaseNotes>
     <dependencies>
       <dependency id="dotnet4.5.2" />
+      <dependency id="vcredist2015" />
     </dependencies>
   </metadata>
   <files>
