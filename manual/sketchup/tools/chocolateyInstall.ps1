@@ -1,21 +1,25 @@
 ﻿$ErrorActionPreference = 'Stop'
+$packageName = 'sketchup'
+$version = '2016.1.1449'
 
 $UnzipArgs = @{
-   PackageName    = $env:ChocolateyPackageName
-   url64          = 'http://dl.trimble.com/sketchup/2017/en/sketchuppro-2017-2-2555-90782-en-x64.exe'
-   checksum64     = '30FDDF0C7E78C1FD491687D569EAB21449F1FAE8A72DA1DDCCB8A03B495D70EA'
-   checksumType64 = 'sha256'
-   UnzipLocation  = Join-Path $env:temp "$env:ChocolateyPackageName$env:ChocolateyPackageVersion"
+   PackageName    = $packageName
+   url            = 'https://dl.trimble.com/sketchup/2016/en/SketchUpPro-2016-1-1450-80430-en-x86.exe'
+   url64          = 'https://dl.trimble.com/sketchup/2016/en/SketchUpPro-2016-1-1449-80430-en-x64.exe'
+   checksum       = 'B0DAA3C6056FA72BE006DDB9DA87CF908336F6E948A0A131B2CDF10BADF6EEA2'
+   checksum64     = 'D4632178EDD8DF013C27FC752188516C2325942FA074F432340131E0479DC98C'
+   checksumType   = 'sha256'
+   UnzipLocation  = Join-Path $env:temp $packageName
 }
 Install-ChocolateyZipPackage @UnzipArgs
 
 $installFile = Get-ChildItem -Path $UnzipArgs['UnzipLocation'] -Filter *.msi
 if ($installFile) {
    $installArgs = @{
-      PackageName    = $env:ChocolateyPackageName
+      PackageName    = $packageName
       FileType       = 'msi'
-      silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
-      File64         = $installFile.fullname
+      silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
+      File           = $installFile.fullname
       validExitCodes = @(0,3010)
    }
    Install-ChocolateyInstallPackage @installArgs
@@ -42,7 +46,7 @@ if ($env:chocolateyPackageParameters) {
       }
    }
 
-   $LicenseFileDestination = Join-Path $env:ProgramFiles "$env:ChocolateyPackageName\$env:ChocolateyPackageName $(([version]$env:ChocolateyPackageVersion).major)\activation_info.txt"
+   $LicenseFileDestination = Join-Path $env:ProgramFiles "$packageName\$packageName $(([version]$version).major)\activation_info.txt"
 
    if ($UserArguments.ContainsKey('ActivationFile')) {
       Write-Host 'You provided a license file path.'

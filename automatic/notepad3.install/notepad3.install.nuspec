@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>notepad3.install</id>
-    <version>3.17.1210.725</version>
+    <version>3.18.113.828</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/notepad3.install</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -58,7 +58,7 @@ MiniPath is based on code from [Florian Balmer's metapath](http://www.flos-freew
 * Minor cosmetic changes
 
     </description>
-    <releaseNotes>https://github.com/rizonesoft/Notepad3/blob/master/distrib/Changes.txt</releaseNotes>
+    <releaseNotes>https://www.rizonesoft.com/downloads/notepad3/update/</releaseNotes>
     <dependencies>
     </dependencies>
   </metadata>

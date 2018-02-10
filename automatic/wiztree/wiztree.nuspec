@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>wiztree</id>
+    <version>3.17</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/wiztree</packageSourceUrl>
+    <owners>DDoSolitary, Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>WizTree</title>
+    <authors>Antibody Software</authors>
+    <projectUrl>http://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/wiztree_icon.png</iconUrl>
+    <copyright>Copyright © 2012-2018 Antibody Software Limited</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/wiztree/tools/LICENSE.text</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>wiztree diskspace treemap treesize windirstat embedded donationware</tags>
+    <summary>Find the files and folders using the most space on your hard drive - QUICKLY!</summary>
+    <description>WizTree is the world's fastest disk space analyzer. It scans your hard drive and shows you which files and folders are using the most disk space. It does this in the FASTEST way possible - you simply won't find any other application of this type that's quicker! Use the information WizTree provides to quickly locate and remove "space hogs" from your hard drive. 
+
+#### Features
+* Finds the files and folders using the most space on your hard drive
+* VERY Fast! WizTree reads the master file table (MFT) directly from NTFS formatted hard drives (similar to the way Everything Search Engine works)
+* Visual Treemap allows you to spot large files and large collections of smaller files at a glance
+* Finds the largest files on your hard drive. Every single file on your hard drive can be sorted in order of size.
+* File Name Search - quickly locate files by name or wildcard match
+* Sort the contents of your entire hard drive by folder size and optionally delete files and folders
+* Scan ALL hard drive file system types (NTFS, FAT, FAT32, network, etc) and/or individual folders
+
+WizTree is FREE! However, if you find WizTree useful or are using WizTree in your business and would like to help to support further development, please make a donation. 
+
+    </description>
+    <releaseNotes>http://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/#whatsnew</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

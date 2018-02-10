@@ -6,8 +6,8 @@ function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri $Release
 
    $version = ($download_page.links |
-                 ? {$_.href -match 'latest'} | 
-                 select -ExpandProperty title) -replace '^.*/[^0-9]*([0-9.]*).*','$1'
+                 Where-Object {$_.href -match 'latest'} | 
+                 Select-Object -ExpandProperty title) -replace '^[^0-9]*-([0-9.]*)-.*','$1'
    $url = $Release + "files/Jmol-$Version-binary.zip"
 
    $ReleaseNotes = $Release + 'files/Jmol/Version%20' + 
@@ -20,13 +20,13 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
    @{
-      "tools\VERIFICATION.txt" = @{
-         "(^Version\s+:).*"      = "`${1} $($Latest.Version)"
-         "(^URL\s+:).*"          = "`${1} $($Latest.URL32)"
-         "(^Checksum\s+:).*"     = "`${1} $($Latest.Checksum32)"
+      'tools\VERIFICATION.txt' = @{
+         '(^Version\s+:).*'      = "`${1} $($Latest.Version)"
+         '(^URL\s+:).*'          = "`${1} $($Latest.URL32)"
+         '(^Checksum\s+:).*'     = "`${1} $($Latest.Checksum32)"
       }
-      "jmol.nuspec" = @{
-         "^(\s*<releaseNotes>).*(<\/releaseNotes>)" = "`$1$($Latest.RNotes)`$2"
+      'jmol.nuspec' = @{
+         '^(\s*<releaseNotes>).*(<\/releaseNotes>)' = "`$1$($Latest.RNotes)`$2"
       }
    }
 }

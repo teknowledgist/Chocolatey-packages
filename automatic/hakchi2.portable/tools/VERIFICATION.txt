@@ -5,9 +5,15 @@ in verifying that this package's contents are trustworthy.
 The latest version is available from GitHub:
 https://github.com/ClusterM/hakchi2/releases/latest
 
+* The Package version number is the numerical application version with a date suffix.  
+* The App Version is the published application version.
+* The "internal version" is listed on the download page.
+
 Direct Download:
 
-Version  : 2.0.21.72
-URL      : https://github.com/ClusterM/hakchi2/releases/download/2.21f/hakchi2.21f.zip
-CheckSum : 06C5B3DBF99C9DF3CE4151BB732CB65FFA03E00F6A28E7770E9DBF6C28AACA74
+Package Version  : 2.21.0.20180118
+App Version      : 2.21f
+Internal Version : 2.0.21.72
+URL              : https://github.com/ClusterM/hakchi2/releases/download/2.21f/hakchi2.21f.zip
+CheckSum         : 06C5B3DBF99C9DF3CE4151BB732CB65FFA03E00F6A28E7770E9DBF6C28AACA74
 

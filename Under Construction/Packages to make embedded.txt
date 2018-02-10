@@ -5,7 +5,6 @@ icopy
 markdown-edit
 mpw
 path-copy-copy
-qcad  -- too big
 sktimestamp
 tinn-r
 whitebox.portable

@@ -1,16 +1,17 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿$ErrorActionPreference = 'Stop'
 
-$packageName= 'icopy.install'
-$url        = 'https://sourceforge.net/projects/icopy/files/iCopy/1.6.3/iCopy1.6.3setup.exe'
+$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*.exe').FullName
 
 $packageArgs = @{
-   packageName    = $packageName
+   packageName    = $env:ChocolateyPackageName
    fileType       = 'EXE'
-   url            = $url
-   checksum       = 'ae8a5ad0f3209b8ed2d64fb0e4efaa7e38c70d78112265d4664911d129b79f71'
-   checksumType   = 'sha256'
+   file           = $fileLocation
+   softwareName   = "$env:ChocolateyPackageName*"
    silentArgs     = '/S'
    validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage @packageArgs
+Install-ChocolateyInstallPackage @packageArgs
+
+New-Item "$fileLocation.ignore" -Type file -Force | Out-Null

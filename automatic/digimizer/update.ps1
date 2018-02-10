@@ -1,12 +1,12 @@
 import-module au
 
-$MainPage = 'http://www.digimizer.com'
+$MainPage = 'https://www.digimizer.com'
 
 function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri "$MainPage/download.php"
 
    $FooterString = $download_page.AllElements | ? {$_.id -eq 'footer'} |select -ExpandProperty innertext
-   $Version = $FooterString.split('-') | ? { $_ -match 'version'}
+   $Version = $FooterString.split(';-') | ? { $_ -match 'version'}
    $Version = $Version -replace '[^0-9]*([0-9.]*).*','$1'
    if ($Version.length -eq 1) { $Version = "$Version.0.0" }
 

@@ -11,7 +11,7 @@ function global:au_GetLatest {
 
    $AppVersion = $Headline.split(':')[-1] -replace '.*(\d\d\d\d.*)','$1'
    $PackageVersion = $AppVersion.split()[0] + '.0' + ($AppVersion -replace '.*SP(.*)','$1')
-   $LinkVersion = $AppVersion.replace(' ','') -replace 'SP([1-9])','SP0$1'
+   $LinkVersion = $AppVersion.replace(' ','') -replace 'SP([1-9])','SP$1'
 
    $ReleaseNotes = $download_page.links | 
                   Where-Object -FilterScript {($_.href -match $AppVersion.replace(' ','_')) -and ($_.href -match 'Release_Notes')} | 
@@ -22,7 +22,6 @@ function global:au_GetLatest {
                   Where-Object -FilterScript {($_.href -match $AppVersion.replace(' ','_')) -and ($_.href -match 'Requirements')} | 
                   Select-Object -ExpandProperty href -First 1
    $Requirements = 'https:\\www.3ds.com\' + $Requirements
-
 
    $url = "http://dl-ak.solidworks.com/nonsecure/draftsight/$LinkVersion/DraftSight32.exe"
    $url64 = "http://dl-ak.solidworks.com/nonsecure/draftsight/$LinkVersion/DraftSight64.exe"
