@@ -13,7 +13,7 @@
     <projectUrl>http://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/wiztree_icon.png</iconUrl>
     <copyright>Copyright © 2012-2018 Antibody Software Limited</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/wiztree/tools/LICENSE.text</licenseUrl>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/wiztree/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>wiztree diskspace treemap treesize windirstat embedded donationware</tags>
     <summary>Find the files and folders using the most space on your hard drive - QUICKLY!</summary>
