@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>t-clock</id>
-    <version>2.4.3.471</version>
+    <version>2.4.4.492</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/t-clock</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -17,7 +17,7 @@
     <docsUrl>https://github.com/White-Tiger/T-Clock</docsUrl>
     <mailingListUrl>https://www.donationcoder.com/forum/?board=324</mailingListUrl>
     <bugTrackerUrl>https://github.com/White-Tiger/T-Clock/issues</bugTrackerUrl>
-    <tags>t-clock tclock clock calendar tray portable</tags>
+    <tags>t-clock tclock clock calendar tray portable OSS embedded</tags>
     <summary>Highly configurable Windows taskbar clock</summary>
     <description>**T-Clock Redux** is an enhanced fork of [Stoic Joker's T-Clock 2010](http://www.stoicjoker.com/TClock/) with ISO week number support, bug fixes and the ability to use Windows' default calendar and tooltips.
 

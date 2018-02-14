@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>vstor2010</id>
+    <version>10.0.60724</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/vstor2010</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Visual Studio 2010 Tools for Office Runtime </title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=48217</projectUrl>
+    <copyright>© Microsoft</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/manual/vstor2010/tools/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>vstor2010 VisualStudio Microsoft Office runtime </tags>
+    <summary>__REPLACE__</summary>
+    <description>Visual Studio 2010 Tools for Office Runtime is required to run Microsoft Office based solutions built using Microsoft Visual Studio 2010, 2012, 2013 and 2015. 
+    
+### Prerequisite Note
+
+ Running Office customizations built for this version of Visual Studio Tools for Office requires at least one of the following versions of Microsoft Office: 2007, 2010, 2013, 2016.  However, this package does not have an Office install as a pre-requisite.  It will attempt to discover an Office install before it proceeds, but it will only provide a warning if one is not found.
+    </description>
+    <dependencies>
+      <dependency id="dotnet4.5" version="4.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
