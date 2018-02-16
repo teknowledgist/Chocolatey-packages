@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>polleverywhere</id>
+    <version>2.2.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/polleverywhere</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Poll Everywhere (plugin)</title>
+    <authors>polleverywhere.com</authors>
+    <projectUrl>https://www.polleverywhere.com/app/powerpoint/win</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/polleverywhere_icon.png</iconUrl>
+    <copyright>Copyright © 2014-2018 PollEverywhere.com</copyright>
+    <licenseUrl>https://www.polleverywhere.com/terms</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.polleverywhere.com/support</docsUrl>
+    <tags>polleverywhere polling powerpoint plugin admin</tags>
+    <summary>PowerPoint plugin for live, interactive audience participation</summary>
+    <description>The Poll Everywhere plugin for MS Office PowerPoint allows live audience participation at a presentation event through a fast mobile-friendly web page or text messages.  The poll that is embedded within the presentation or web page will update in real time. Advanced uses include texting comments to a presentation, texting questions to a presenter, responding via the web, and SMS interactivity in print, radio, and TV.
+    </description>
+    <releaseNotes>https://www.polleverywhere.com/app/releases/win</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet4.5" version="4.5" />
+      <dependency id="vstor2010" version="10.0.60724" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
