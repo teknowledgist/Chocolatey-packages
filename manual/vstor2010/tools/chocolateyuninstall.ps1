@@ -7,7 +7,8 @@ $SoftwareName = 'Microsoft Visual Studio 2010 Tools for Office Runtime*'
 if ($key.Count -eq 0) {
    Write-Warning "$env:ChocolateyPackageName has already been uninstalled by other means."
 } elseif ($key.Count -le 2) {
-   # VSTOR install creates two uninstall keys.  Either does the job fully.
+   # VSTOR install usually creates two uninstall keys.  Either does the job fully,
+   #    but only one is silent for Chocolatey's Automatic Uninstaller
    $uninstallString = $key[0].UninstallString
    if ($uninstallString -like 'MsiExec*') {
       $packageArgs = @{

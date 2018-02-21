@@ -6,7 +6,7 @@
     <id>vstor2010</id>
     <version>10.0.60724</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/vstor2010</packageSourceUrl>
-    <owners>Teknowledgist</owners>
+    <owners>aa.malta, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Visual Studio 2010 Tools for Office Runtime </title>
     <authors>Microsoft</authors>
@@ -14,8 +14,8 @@
     <copyright>© Microsoft</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/manual/vstor2010/tools/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <tags>vstor2010 VisualStudio Microsoft Office runtime </tags>
-    <summary>__REPLACE__</summary>
+    <tags>vstor2010 vstor VisualStudio Microsoft Office .NET dotnet runtime </tags>
+    <summary>Interface MS Office and .NET</summary>
     <description>Visual Studio 2010 Tools for Office Runtime is required to run Microsoft Office based solutions built using Microsoft Visual Studio 2010, 2012, 2013 and 2015. 
     
 ### Prerequisite Note
