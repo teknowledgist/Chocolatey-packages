@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>chimera</id>
+    <version>1.12</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/chimera</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>UCSF Chimera</title>
+    <authors>UCSF Resource for Biocomputing, Visualization, and Informatics</authors>
+    <projectUrl>https://www.cgl.ucsf.edu/chimera/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/chimera_icon.png</iconUrl>
+    <copyright>© The Regents of the University of California, 1999-2017</copyright>
+    <licenseUrl>http://www.cgl.ucsf.edu/chimera/license.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://www.cgl.ucsf.edu/chimera/docs/sourcecode.html</projectSourceUrl>
+    <docsUrl>https://www.cgl.ucsf.edu/chimera/docindex.html</docsUrl>
+    <mailingListUrl>http://plato.cgl.ucsf.edu/mailman/listinfo/chimera-users</mailingListUrl>
+    <bugTrackerUrl>http://plato.cgl.ucsf.edu/trac/chimera/report</bugTrackerUrl>
+    <tags>chimera chemistry molecular modeling python nonsilent admin</tags>
+    <summary>An extensible molecular modeling system</summary>
+    <description>UCSF Chimera is a highly extensible program for interactive visualization and analysis of molecular structures and related data, including density maps, supramolecular assemblies, sequence alignments, docking results, trajectories, and conformational ensembles. High-quality images and animations can be generated. Chimera includes complete documentation and several tutorials, and can be downloaded free of charge for academic, government, nonprofit, and personal use. Chimera is developed by the [Resource for Biocomputing, Visualization, and Informatics](http://www.rbvi.ucsf.edu/) (RBVI), funded by the [National Institutes of Health](http://www.nih.gov/) (NIGMS P41-GM103311). 
+
+### Non-Commercial use ONLY
+    Use of the Chimera is restricted to **non-commercial**, personal, academic, non-profit, or government-sponsored research purposes. Commercial use of the Software requires a separately executed written license agreement. 
+    </description>
+    <releaseNotes>https://www.cgl.ucsf.edu/chimera/docs/relnotes.html</releaseNotes>
+    <!--<dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>-->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
