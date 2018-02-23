@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>patchcleaner</id>
+    <version>1.4.2.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/patchcleaner</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PatchCleaner</title>
+    <authors>homedev</authors>
+    <projectUrl>http://www.homedev.com.au/Free/PatchCleaner</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/patchcleaner_icon.png</iconUrl>
+    <copyright>Copyright © 2015 HomeDev</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/patchcleaner/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.homedev.com.au/Free/PatchCleaner</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/patchcleaner/discussion/</mailingListUrl>
+    <tags>patchcleaner Windows installer clean orphan waste embedded admin</tags>
+    <summary>Windows Installer Directory Cleaner</summary>
+    <description>When applications are installed and updated on the Windows Operating System a hidden directory "c:\Windows\Installer" is used to store the installer (.msi) files and the patch (.msp) files.
+
+Generally these files are important as during updating, patching or uninstalling software it will use the .msi/.msp files. If you blanketly delete all the files in this folder, you will find yourself needing to rebuild windows.
+
+Over time as your computer is patched and patched again, these installer files become outdated and orphaned. They are no longer required, but they can take up many gigabytes of data.
+
+PatchCleaner identifies these redundant/orphaned files and allows you to either:
+
+1. (Recommended) Move them to another location. If you want to play it safe, just move them to another location, and you can always copy them back.
+2. Delete them.
+    </description>
+    <releaseNotes>http://www.homedev.com.au/Free/PatchCleaner#tabs-3</releaseNotes>
+    <dependencies>
+      <dependency id="dotnet4.5.2" version="4.5.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

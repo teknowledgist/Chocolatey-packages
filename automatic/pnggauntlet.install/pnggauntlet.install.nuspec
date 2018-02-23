@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pnggauntlet.install</id>
     <version>3.1.2.20171027</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/pnggauntlet.install</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pnggauntlet.install</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>PNGGauntlet (Install)</title>
@@ -13,7 +13,7 @@
     <projectUrl>https://pnggauntlet.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/pnggauntlet_icon.png</iconUrl>
     <copyright>Copyright © 2005-2012, Benjamin Hollis</copyright>
-    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/pnggauntlet.install/tools/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/pnggauntlet.install/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://pnggauntlet.com/help/</docsUrl>
     <tags>pnggauntlet png compression admin embedded</tags>

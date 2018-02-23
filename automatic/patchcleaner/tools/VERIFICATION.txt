@@ -1,0 +1,14 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+PatchCleaner can be downloaded directly by going to the download tab on 
+the home page:
+   http://www.homedev.com.au/Free/PatchCleaner#tabs-4
+or by downloading from SourceForge:
+   https://sourceforge.net/projects/patchcleaner/files/latest/download?source=files
+
+Direct Download:
+Version  : 1.4.2.0
+URL      : https://sourceforge.net/projects/patchcleaner/files/PatchCleaner/v1.4.2.0/PatchCleaner_1.4.2.0.exe
+CheckSum : 6472DE894C5CB6050FD80CDD893B8772AEF71F8BDB5C65A0175CF7CBB90E6EC6
