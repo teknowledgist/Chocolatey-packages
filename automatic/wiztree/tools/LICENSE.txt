@@ -1,5 +1,36 @@
-﻿From:  Installation folder (not available online)
+﻿Subject: Re: Antibody Software: WizTree license
+To: ***** <t**********@g****.com>
+Date: Wed, 28 Feb 2018 07:29:45 +1300
 
+Hi *****
+
+Thanks for the email.
+
+Yes the unmodified software is freely distributable. If you find the 
+software useful a donation is appreciated.
+
+Kind Regards
+Dominic
+
+
+On 28/02/2018 4:24 AM, ***** wrote:
+> This is an enquiry e-mail via http://antibody-software.com/web from:
+> ***** <t**********@g****.com>
+>
+> Hi,
+>
+> Does your license for WizTree allow for free distribution if the 
+> software/installer is unmodified, the license included and you are 
+> clearly identified as the owner/copyright holder?
+>
+> Thanks,
+> *****
+
+
+
+=================================================
+From:  Installation folder (not available online)
+=================================================
 LICENSE
 
 WizTree is released as DONATIONWARE. It may not be resold.

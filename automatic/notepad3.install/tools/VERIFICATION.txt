@@ -2,12 +2,13 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
-The installer is available by following the link to download
-on this page:  https://www.rizonesoft.com/downloads/notepad3/
+The installer is available by following the link to download the
+particular version on this page:  
+   https://www.rizonesoft.com/downloads/notepad3/
 
 Direct Download:
 
-Version  : 3.18.131.862
-URL      : https://www.rizonesoft.com/download/3939/
-CheckSum : E1174AE9087739945A73F5A09078E1036641885CEC1A2904D53CDEF17937F21A
+Version  : 3.18.223.908
+URL      : https://www.rizonesoft.com/download/3939/?version=3-18-223-908
+CheckSum : 5334E5F9EF758E45374C752292EC01C5AB1EF0597BC8B62A62E70C05097647E4
 

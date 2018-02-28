@@ -4,16 +4,17 @@ function global:au_GetLatest {
    $Release = 'https://www.rizonesoft.com/downloads/notepad3/'
    $PageText = Invoke-WebRequest -Uri $Release
 
-   $HREF = $PageText.links | ? {$_.innertext -match 'Notepad3.*exe'}
+   $HREF = $PageText.links | ? {$_.innertext -match 'Notepad3.*Setup\.zip'} | select -First 1
+
+   $Version = $href.innertext -replace '.*_([0-9.]+)_.*\.zip.*','$1'
 
    $URL = $HREF | Select-Object -ExpandProperty href
-
-   $Version = $href.innertext -replace '.*_([0-9.]+)\.exe.*','$1'
+   $URL = $URL + "?version=" + $Version.replace('.','-')
 
    return @{ 
             Version  = $Version
             URL32    = $URL
-            FileType = 'exe'
+            FileType = 'zip'
            }
 }
 
@@ -31,8 +32,8 @@ function global:au_SearchReplace {
 #   (It is dot sourced in the meta-package.)
 if ($MyInvocation.InvocationName -ne '.') { 
    function global:au_BeforeUpdate() { 
-   Write-host "Downloading Notepad3_x_$($Latest.Version)"
-      Get-RemoteFiles -Purge -NoSuffix -FileNameBase "Notepad3_x_$($Latest.Version)" 
+   Write-host "Downloading Notepad3 $($Latest.Version)"
+      Get-RemoteFiles -Purge -NoSuffix -FileNameBase "Notepad3_$($Latest.Version)" 
    }
 
    update -ChecksumFor none
