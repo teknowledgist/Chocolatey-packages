@@ -1,0 +1,12 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Download links for older versions (and a link to the current version 
+   dowload page) are here:
+https://www.freefilesync.org/archive.php
+
+Direct Download:
+Version  : 9.8
+URL      : https://www.freefilesync.org/download/FreeFileSync_9.8_Windows_Setup.exe
+CheckSum : E396903F6131CA2BAAE568B10CEA2D9C3E1A3288000D33421E0B1CB53E63F503

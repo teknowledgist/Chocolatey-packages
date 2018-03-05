@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>freefilesync</id>
+    <version>9.8</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/freefilesync</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>FreeFileSync (DonationWare)</title>
+    <authors>Zenju</authors>
+    <projectUrl>https://www.freefilesync.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/freefilesync_icon.png</iconUrl>
+    <copyright>Copyright © 2018 Zenju</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/freefilesync/tools/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://www.freefilesync.org/download/FreeFileSync_9.8_Source.zip</projectSourceUrl>
+    <docsUrl>https://www.freefilesync.org/manual.php</docsUrl>
+    <mailingListUrl>https://www.freefilesync.org/forum/</mailingListUrl>
+    <tags>freefilesync sync donation notsilent admin</tags>
+    <summary>Synchronize Files and Folders</summary>
+    <description>FreeFileSync is a folder comparison and synchronization software that creates and manages backup copies of all your important files. Instead of copying every file every time, FreeFileSync determines the differences between a source and a target folder and transfers only the minimum amount of data needed. FreeFileSync is Open Source software, available for Windows, Linux and macOS.
+    </description>
+    <releaseNotes>
+* [RSS News](http://www.freefilesync.org/news-feed.php)
+* [Changelog current](http://www.freefilesync.org/download.php)
+* [Changelog previous](http://www.freefilesync.org/archive.php)
+</releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
