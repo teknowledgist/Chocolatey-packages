@@ -7,13 +7,13 @@ function global:au_GetLatest {
 
    $Text = $HomePage.allelements |Where-Object {
                                    ($_.tagname -eq 'th') -and 
-                                   ($_.innertext -match "FastCopy.*download")
+                                   ($_.innertext -match "download v*")
                                 } | Select-Object -First 1 -ExpandProperty innertext
     
    $version = $Text -replace ".*v([\d\.]*).*",'$1'
 
    $Start32 = $HomePage.links | 
-                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc32')} |
+                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc32') -and ($_.href -match 'vector')} |
                 Select-Object -ExpandProperty href -First 1
    if ($Start32 -match 'vector') {
       $DownPage = Invoke-WebRequest -Uri $Start32

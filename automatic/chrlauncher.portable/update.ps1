@@ -7,13 +7,17 @@ function global:au_GetLatest {
 
    $regex = 'chrlauncher-.*?-bin.zip'
    $urlstub = $download_page.links |Where-Object {$_.href -match $regex} |Select-Object -ExpandProperty href
-   $url = "https://github.com/$urlstub"
+   $url = "https://github.com$urlstub"
 
    $version = ($urlstub -split '-')[1]
 
    $CheckFile = $url -replace "-bin\.zip",'.sha256'
 
-   return @{ Version = $version; URL = $url; Checkfile = $CheckFile}
+   return @{ 
+            Version   = $version
+            URL32     = $url
+            Checkfile = $CheckFile
+           }
 }
 
 

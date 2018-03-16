@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qgis-ltr</id>
-    <version>2.14.22</version>
+    <version>2.18.17</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qgis-ltr</packageSourceUrl>
     <owners>Snowflake, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -34,7 +34,7 @@
 
 
     </description>
-    <releaseNotes>https://qgis.org/en/site/forusers/visualchangelog214</releaseNotes>
+    <releaseNotes>https://qgis.org/en/site/forusers/visualchangelog218</releaseNotes>
     <dependencies>
     </dependencies>
   </metadata>

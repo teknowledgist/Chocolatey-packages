@@ -3,25 +3,26 @@
 $ToolsDir   = Join-Path $env:ChocolateyPackageFolder 'tools'
 
 # Remove previous versions
-$Previous = Get-ChildItem $env:ChocolateyPackageFolder -filter 'chrlauncher*' | ?{ $_.PSIsContainer }
+$Previous = Get-ChildItem $env:ChocolateyPackageFolder | 
+               Where-Object{($_.name -match '(chrlauncher)|(v[0-9.]+)') -and $_.PSIsContainer }
 if ($Previous) {
-   $Previous | % { Remove-Item $_.FullName -Recurse -Force }
+   $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
 
 $InstallArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = (Get-ChildItem $ToolsDir -Filter "*.zip").FullName
-   Destination  = (Join-path $env:ChocolateyPackageFolder ($env:ChocolateyPackageName.split('.')[0] + $env:ChocolateyPackageVersion))
+   Destination  = (Join-path $env:ChocolateyPackageFolder  "v$env:ChocolateyPackageVersion")
 }
 
 Get-ChocolateyUnzip @InstallArgs
 
 $BitLevel = Get-ProcessorBits
-$target   = Join-Path $InstallArgs.Destination "$BitLevel\chrlauncher.exe"
+$target   = (Get-ChildItem $InstallArgs.Destination -filter "*.exe" -Recurse |
+               Where-Object {$_.Directory -match "$BitLevel`$"}).FullName
 $shortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'Chromium Launcher.lnk'
 
 Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $target
-
 
 # Capturing Package Parameters.
 $UserArguments = @{}
@@ -61,7 +62,7 @@ if ($UserArguments.ContainsKey('Shared')) {
    $msgtext = 'chrlauncher will install/update/launch Chromium independently for each user.'
    Write-Host $msgtext -ForegroundColor Cyan
    $INIfile = Join-Path (Split-Path $target) 'chrlauncher.ini'
-   (gc $INIfile) -replace "^(ChromiumDirectory=).*$",'$1%LOCALAPPDATA%\Chromium\bin' | Set-Content $INIfile
+   (Get-Content $INIfile) -replace "^(ChromiumDirectory=).*$",'$1%LOCALAPPDATA%\Chromium\bin' | Set-Content $INIfile
 }
 
 if ($UserArguments.ContainsKey('Type')) {

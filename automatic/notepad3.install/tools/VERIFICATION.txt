@@ -8,7 +8,7 @@ particular version on this page:
 
 Direct Download:
 
-Version  : 3.18.223.908
-URL      : https://www.rizonesoft.com/download/3939/?version=3-18-223-908
-CheckSum : 5334E5F9EF758E45374C752292EC01C5AB1EF0597BC8B62A62E70C05097647E4
+Version  : 3.18.311.928
+URL      : https://www.rizonesoft.com/download/3939/?version=3-18-311-928
+CheckSum : 769BC58D3ABE003E07EB21D7D12A733DA2A97695E985E895ACC947904DDBA2E8
 

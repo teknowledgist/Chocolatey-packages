@@ -14,7 +14,7 @@ $packageArgs = @{
   fileType     = 'EXE' 
   file         = $fileLocation
   softwareName = "$env:ChocolateyPackageName*"
-  silentArgs   = ''
+  silentArgs   = '\LANG=english_uk'
 }
 
 Install-ChocolateyInstallPackage @packageArgs

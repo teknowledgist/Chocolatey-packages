@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>ccdcmercury</id>
-    <version>3.10</version>
+    <version>3.10.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/ccdcmercury</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -37,26 +37,17 @@ _In order to download this version of Mercury, you must first read and accept th
 
 The latest version of Mercury is only distributed with [EnCIFer 1.5.2](http://www.ccdc.cam.ac.uk/Community/csd-community/encifer/) incorperated, and the installer drops icons for both on the desktop.  Version 1.5.2 of EnCIFer is not downloadable, installable nor uninstallable on its own.  The stand-alone, previous version of enCIFer is here](https://chocolatey.org/packages/encifer)
 </description>
-    <releaseNotes>[Last updated 01 March 2016]
-### Major new features
-    New CSD-Community menu providing access to CSD Deposit and Access
-    Structures services online as well as the CSD Teaching Database, 
-    enCIFer and CellCheckCSD.
-    
-    New CSD-System menu providing access to searching in WebCSD and ConQuest
-    as well as integration of geometry analysis using Mogul and interaction
-    analysis using IsoStar.
+    <releaseNotes>From the end of [the help documentation](https://www.ccdc.cam.ac.uk/support-and-resources/CCDCResources/mercury.pdf).
 
-    CSD-Discovery menu extended to provide direct access to protein-ligand
-    docking using GOLD, analysis of protein-ligand interactions and flexible
-    overlay for multiple ligands.
-    
-    CSD-Materials menu extended to provide direct access to solution of crystal
-    structures from powder diffraction data using DASH.
-
-### Changes - General
-    POV-Ray output now correctly honours the size, orientation, location,
-    colour and font of labels from Mercury 
+### Mercury 3.10
+* New features have been added to Mercury to aid the visualisation, understanding and modification of crystal structure symmetry including:
+    * The ability to view along a specific combination of either the unit cell axes (Unit Cell Directions) or the reciprocal cell axes (Miller Directions)
+    * Links directly to International Tables Volume A (Space-group symmetry) online from the crystal structure information
+    * The ability to reduce symmetry from the current space group to any valid subgroup
+* The underlying database of the CSD has been extended, which allows Mercury to provide direct display in the visualiser of the anisotropic displacement parameters (ADPs) for over 220,000 CSD entries
+* The Full Interaction Maps application has been expanded to include C-Br bromine and C-I iodine probes, which are particularly useful for analysing halogen bonding interactions
+* The Hydrogen-Bond Propensity application has been further improved and streamlined for usability
+* The CSD Python API menu has been improved to provide more feedback and information when running Python scripts within Mercury
     </releaseNotes>
     <dependencies>
       <dependency id="vcredist2013" version="12.0.30501" />

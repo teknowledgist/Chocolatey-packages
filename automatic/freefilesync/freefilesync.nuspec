@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>freefilesync</id>
-    <version>9.8</version>
+    <version>9.9</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/freefilesync</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -21,6 +21,9 @@
     <tags>freefilesync sync donation notsilent admin</tags>
     <summary>Synchronize Files and Folders</summary>
     <description>FreeFileSync is a folder comparison and synchronization software that creates and manages backup copies of all your important files. Instead of copying every file every time, FreeFileSync determines the differences between a source and a target folder and transfers only the minimum amount of data needed. FreeFileSync is Open Source software, available for Windows, Linux and macOS.
+
+##### Antivirus note
+The installer for FreeFileSync is built with the option to offer additional software.  Some anti-virus/anti-malware programs flag the installer as potentially dangerous.  This package has been configured and tested to *not install additional software*.  [See a statement about malware/adware warnings on the FreeFileSync FAQ here.](https://www.freefilesync.org/faq.php#virus)  If the warnings are a concern, [consider donating to the creator of FreeFileSync](https://www.freefilesync.org/donate.php) for the ability to download an unburdened installer.
     </description>
     <releaseNotes>
 * [RSS News](http://www.freefilesync.org/news-feed.php)

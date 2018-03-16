@@ -5,18 +5,36 @@ $RootURL = 'https://ipmsg.org'
 function global:au_GetLatest {
    $HomePage = Invoke-WebRequest -Uri "$RootURL/tools/fastcopy.html.en"
 
-   $Text = $HomePage.allelements |? {
+   $Text = $HomePage.allelements |Where-Object {
                                    ($_.tagname -eq 'th') -and 
-                                   ($_.innertext -match "FastCopy.*download")
-                                } | select -First 1 -ExpandProperty innertext
+                                   ($_.innertext -match "download v*")
+                                } | Select-Object -First 1 -ExpandProperty innertext
     
    $version = $Text -replace ".*v([\d\.]*).*",'$1'
 
-   $Stub32 = $HomePage.links | ? {$_.href -match "$($version.replace('.',''))\.zip"}
-   $url32 = $RootURL + $Stub32.href
+   $Start32 = $HomePage.links | 
+                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc32') -and ($_.href -match 'vector')} |
+                Select-Object -ExpandProperty href -First 1
+   if ($Start32 -match 'vector') {
+      $DownPage = Invoke-WebRequest -Uri $Start32
+      $URL32 = $DownPage.links | 
+                  Where-Object {$_.href -like '*.zip'} | 
+                  Select-Object -First 1 -ExpandProperty href
+   } else { 
+      $URL32 = $Start32
+   }
 
-   $Stub64 = $HomePage.links | ? {$_.href -match "$($version.replace('.',''))_x64\.zip"}
-   $url64 = $RootURL + $Stub64.href
+   $Start64 = $HomePage.links | 
+                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc64') -and ($_.href -match 'vector')} |
+                Select-Object -ExpandProperty href -First 1
+   if ($Start64 -match 'vector') {
+      $DownPage = Invoke-WebRequest -Uri $Start64
+      $URL64 = $DownPage.links | 
+                  Where-Object {$_.href -like '*.zip'} | 
+                  Select-Object -First 1 -ExpandProperty href
+   } else {
+      $URL64 = $Start64
+   }
 
    return @{ 
             Version = $version

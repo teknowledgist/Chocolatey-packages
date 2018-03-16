@@ -6,9 +6,9 @@ The zip files are available on this page:  https://ipmsg.org/tools/fastcopy.html
 
 Direct Download:
 
-Version  : 3.40
-x86 URL      : https://ipmsg.org/archive/FastCopy340.zip
-x86 CheckSum : 20D5637DB54116C7959794B31DBDA249F163EBEB1079D19A96B990CF8F170C44
-x64 URL      : https://ipmsg.org/archive/FastCopy340_x64.zip
-x64 CheckSum : B1754976DD2E0A688C8A705B43F1B7BA8497C135FC99F2E2159084C10AAD31A8
+Version  : 3.41
+x86 URL      : http://ftp.vector.co.jp/69/93/2323/FastCopy341.zip
+x86 CheckSum : 976059DBC074B51923640D65FA295FFAA3F8CEACB261B2314F170AB9B5834F34
+x64 URL      : http://ftp.vector.co.jp/69/93/2323/FastCopy341_x64.zip
+x64 CheckSum : EE31A89229E9F9625626DDDF3AF944E23F24FE214E5ABFCDCE2067BC386EF506
 
