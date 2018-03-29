@@ -37,6 +37,7 @@ Other (system-wide) chrlauncher settings can be modified in the `chrlauncher.ini
 #### Package Parameters
 The following package parameters can be set:
 
+* `/KeepSettings`  - Maintain all settings from an existing, previous version, package installation. (No check for compatibility.)
 * `/Default`  - Make chrlauncher the default "browser".  This option requires installing with admin rights.
 * `/Shared`  - Share the Chromium install among all users. 
 * `/Type:`_&lt;build&gt;_  - Set chrlauncher to use a specific Chromium build:
@@ -51,7 +52,7 @@ The following package parameters can be set:
 
 These parameters can be passed to the installer with the use of `-params`.
 For example: 
-  `choco install chrlauncher.portable -params '"/Default"'`
+  `choco install chrlauncher.portable -params '"/Default /KeepSettings"'`
   `choco install chrlauncher.portable -params '"/Type:stable-codecs-sync"'`
 
     </description>
