@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>varpanel</id>
+    <version>1.1.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/varpanel</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Varpanel environment variable editor</title>
+    <authors>Implbits Software</authors>
+    <projectUrl>http://implbits.com/products/varpanel</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/varpanel_icon.png</iconUrl>
+    <copyright>© Implbits Software</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/manual/varpanel/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://implbits.com/support/#collapsevpfaq</docsUrl>
+    <tags>varpanel environment variable Windows utility embedded</tags>
+    <summary>A simple, yet powerful environment variable editor for Windows.</summary>
+    <description> The Windows default environment variable editor provides a terrible experience.
+Varpanel makes editing environment variables better:
+
+![Screenshot](http://implbits.com/img/screenshots/varpanel.png)
+
+* The Varpanel window is resizable.  That alone should convince you to download this right now. 
+* Search for text in environment variable keys and values.
+* [Multi-line editing for multi-valued environment variables.](http://implbits.com/img/screenshots/vp-advanced.png)  Varpanel is making the world a better place through the amazing technology that is a multi-line text box. Remember, every time you edit your path in a really tiny single line text box a baby kitten laughs at you and you should feel bad about yourself. 
+* File/directory browser for editing PATHs.  Varpanel lets you browse for files and folders like a real person with dreams and feelings instead of making you type them in like some kind of slavish automaton.
+* [Elevates only if you need to edit system environment variables (Admin mode).](http://implbits.com/img/screenshots/vp-adminmode.png)  Need to edit system variables? Click the Admin Mode checkbox and Varpanel will elevate when you click OK. No need to restart the app using "Run as Administrator". That's just too much work for people like you and me.
+* Broadcasts WM_SETTINGCHANGE so that running processes may update their environment.
+    </description>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

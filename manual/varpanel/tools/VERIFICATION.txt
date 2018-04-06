@@ -1,0 +1,15 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The installer is available from this site by clicking the download button:
+   http://implbits.com/products/varpanel/
+and entering an email address.  A unique, direct-download link is sent 
+to the address (thus not included below).
+
+Direct Download:
+
+Version  : 1.1.0
+URL      : unique for each download
+CheckSum : 232EFA5F125DAF8211FD89DB1D1720EFB1A3E99311A14D682278533784FDFD55
+
