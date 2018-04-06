@@ -1,6 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop'  # stop on all errors
 
 $ToolsDir   = Join-Path $env:ChocolateyPackageFolder 'tools'
+$BitLevel = Get-ProcessorBits
+
+# Capture the newest, previous version's settings
+$INIs = Get-ChildItem $env:ChocolateyPackageFolder -Filter '*.ini' -Recurse | 
+               Where-Object {$_.Directory -match "\\$BitLevel\\"}
+if ($INIs) {
+   $NewestVersion = $INIs | ForEach-Object {
+                     [version]($_.directory.tostring().trim("$BitLevel\") -replace '.*?([0-9]\.[0-9.]+).*','$1')} | 
+                     Sort-Object | Select-Object -Last 1
+   $oldINI = Get-Content -Path ($INIs | 
+                                 Where-Object {$_.fullname -match $NewestVersion.tostring()} |
+                                 Select-Object -ExpandProperty fullname
+                               )
+}
 
 # Remove previous versions
 $Previous = Get-ChildItem $env:ChocolateyPackageFolder | 
@@ -17,7 +31,6 @@ $InstallArgs = @{
 
 Get-ChocolateyUnzip @InstallArgs
 
-$BitLevel = Get-ProcessorBits
 $target   = (Get-ChildItem $InstallArgs.Destination -filter "*.exe" -Recurse |
                Where-Object {$_.Directory -match "$BitLevel`$"}).FullName
 $shortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'Chromium Launcher.lnk'
@@ -47,6 +60,21 @@ if ($UserArguments.ContainsKey('Default')) {
    $NoPauseBat = Join-Path (Split-Path $Bat) 'NoPauseSetDefaultBrowser.bat'
    (Get-Content $Bat) -ne 'pause' | Out-File $NoPauseBat -Encoding ascii -Force
    & $NoPauseBat
+}
+
+if ($UserArguments.ContainsKey('KeepSettings')) {
+   $msgtext = 'You want to keep previous installation settings.'
+   Write-Host $msgtext -ForegroundColor Cyan
+   if ($oldINI) {
+      $INIfile = Join-Path (Split-Path $target) 'chrlauncher.ini'
+      Rename-Item $INIfile "chrlauncher.ini.orig" -Force
+      $oldINI | Out-File $INIfile -Force
+      $msgtext = 'Default settings for new version backed up and older version settings restored.'
+      Write-Host $msgtext -ForegroundColor Cyan
+   } else {
+      $msgtext = 'No older settings were found.  Using default settings.'
+      Write-Host $msgtext -ForegroundColor Cyan
+   }
 }
 
 if ($UserArguments.ContainsKey('Shared')) {
