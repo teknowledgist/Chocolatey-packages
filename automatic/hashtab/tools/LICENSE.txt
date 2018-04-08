@@ -1,0 +1,41 @@
+﻿From: Installer License Agreement dialog
+
+LICENSE
+
+EVALUATION AND NON-COMMERCIAL END USER LICENSE AGREEMENT
+
+IMPORTANT! BE SURE TO CAREFULLY READ AND UNDERSTAND ALL OF THE RIGHTS AND RESTRICTIONS SET FORTH IN THIS END-USER LICENSE AGREEMENT ("EULA"). YOU WILL BE ASKED TO REVIEW AND EITHER ACCEPT OR NOT ACCEPT THE TERMS OF THE EULA. YOU ARE NOT AUTHORIZED TO USE THIS SOFTWARE UNLESS AND UNTIL YOU ACCEPT THE TERMS OF THIS EULA.
+This EULA is a binding legal agreement between you and Implbits Software, LLC (hereinafter "Licensor") for the materials accompanying this EULA, including the accompanying computer software, associated media, printed materials and any "online" or electronic documentation (hereinafter the "Software"). By installing the Software, you agree to be bound by the terms of this EULA. If you do not agree to the terms of this EULA, do not install or attempt to use the Software.
+1. Grant of License
+  The Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The Software is licensed, not sold. This EULA grants you the following rights:
+  A. You may install, use, access, display and run the Software, on a multiple computers, workstations or terminals ("Computers") 
+  B. Your license rights under this EULA are non-exclusive. All rights not expressly granted herein are reserved by Licensor.
+  C. You may redistribute free unmodified copies of the Software.  Software redistribution must include this EULA.  
+  E. You may not sell the Software to any third party without Licensor's prior express written consent.
+2. Price and Payment
+  There is no license fee if the Software is installed on your personal Computers or if the software is installed on Computers owned and operated by a non-commercial, charitable, or chartered educational organization.  After a 30 day evaluation, all other users and organizations must purchas a license key or uninstall and discontinue using the Software.  For more information on obtaining a commercial license key, please visit http://implbits.com or contact sales@implbits.com.
+3. Support Services
+  Licensor may provide you with support services related to the Software ("Support Services"), at its discretion. Use of Support Services, if any, is governed by Licensor's policies and programs described in any user’s manual, in online documentation, and/or in other Licensor-provided materials. Any supplemental Software code provided to you as a part of Support Services will be considered part of the Software and subject to the terms of this EULA. With respect to technical information you provide to Licensor as part of the Support Services, Licensor may use such information for its business purposes, including for product support and development. Licensor will not utilize such technical information in a form that personally identifies you except to the extent necessary to provide you with support.
+4. Replacement, Modification and/or Upgrades
+  Licensor may, from time to time, and for a fee, replace, modify or upgrade the Software. When accepted by you, any such replacement or modified Software code or upgrade to the Software will be considered part of the Software and subject to the terms of this EULA (unless this EULA is superceded by a further EULA accompanying such replacement or modified version of or upgrade to the Software).
+5. Termination
+  You may terminate this EULA at any time by destroying all your copies of the Software. Your license to the Software automatically terminates if you fail to comply with the terms of this agreement. Upon termination, you are required to remove the Software from your computer and destroy any copies of the Software in your possession.
+6. Copyright
+  A.  All title and copyrights in and to the Software (including but not limited to any images, photographs, animations, video, audio, music and text incorporated into the Software), the accompanying printed materials, and any copies of the Software, are owned by Licensor or its suppliers. This EULA grants you no rights to use such content. If this Software contains documentation that is provided only in electronic form, you may print one copy of such electronic documentation. Except for any copies of this EULA, you may not copy the printed materials accompanying the Software.
+  B.  You may not reverse engineer, de-compile, disassemble, alter, duplicate, modify, rent, lease, loan, sublicense, make copies of, create derivative works from the Software in whole or part.
+7. Export Restrictions
+  You may not export, ship, transmit or re-export software in violation of any applicable law or regulation including but not limited to Export Administration Regulations issued by the U. S. Department of Commerce.
+8. Disclaimer of Warranties
+  LICENSOR AND ITS SUPPLIERS PROVIDE THE SOFTWARE "AS IS" AND WITH ALL FAULTS, AND HEREBY DISCLAIM ALL OTHER WARRANTIES AND CONDITIONS, EITHER EXPRESS, IMPLIED OR STATUTORY, INCLUDING BUT NOT LIMITED TO ANY (IF ANY) IMPLIED WARRANTIES OR CONDITIONS OF MERCHANTABILITY, OF FITNESS FOR A PARTICULAR PURPOSE, OF LACK OF VIRUSES, AND OF LACK OF NEGLIGENCE OR LACK OF WORKMANLIKE EFFORT. ALSO, THERE IS NO WARRANTY OR CONDITION OF TITLE, OF QUIET ENJOYMENT, OR OF NONINFRINGEMENT. THE ENTIRE RISK ARISING OUT OF THE USE OR PERFORMANCE OF THE SOFTWARE IS WITH YOU.
+9. Limitation of Damages
+  TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT WILL LICENSOR OR ITS SUPPLIERS BE LIABLE FOR ANY CONSEQUENTIAL, INCIDENTAL, DIRECT, INDIRECT, SPECIAL, PUNITIVE OR OTHER DAMAGES WHATSOEVER ARISING OUT OF OR IN ANY WAY RELATED TO THE USE OF OR INABILITY TO USE THE SOFTWARE AND WHETHER BASED ON CONTRACT, TORT, NEGLIGENCE, STRICT LIABILITY OR OTHERWISE, EVEN IF LICENSOR OR ANY SUPPLIER HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES. THIS EXCLUSION OF DAMAGES WILL BE EFFECTIVE EVEN IF ANY REMEDY FAILS OF ITS ESSENTIAL PURPOSE.
+10. Arbitration
+  Any dispute arising under this EULA will be subject to binding arbitration by a single Arbitrator with the American Arbitration Association (AAA), in accordance with its relevant industry rules, if any. The parties agree that this EULA will be governed by and construed and interpreted in accordance with the laws of the State of Utah. The arbitration will be held in Utah. The Arbitrator will have the authority to grant injunctive relief and specific performance to enforce the terms of this EULA. Judgment on any award rendered by the Arbitrator may be entered in any Court of competent jurisdiction.
+11. Severability
+  If any term of this EULA is found to be unenforceable or contrary to law, it will be modified to the least extent necessary to make it enforceable, and the remaining portions of this Agreement will remain in full force and effect.
+12. No Waiver
+  No waiver of any right under this EULA will be deemed effective unless contained in writing signed by a duly authorized representative of the party against whom the waiver is to be asserted, and no waiver of any past or present right arising from any breach or failure to perform will be deemed to be a waiver of any future rights arising out of this EULA.
+13. Entire Agreement
+  This EULA constitutes the entire agreement between the parties with respect to its subject matter, and supersedes all prior agreements, proposals, negotiations, representations or communications relating to the subject matter. Both parties acknowledge that they have not been induced to enter into this EULA by any representations or promises not specifically stated herein.
+
+By clicking the "I accept" button below, you agree to the terms of this EULA.

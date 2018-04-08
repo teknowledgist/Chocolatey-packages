@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The installer is available on this page:  
+http://implbits.com/products/hashtab/
+
+Direct Download:
+
+Version  : 6.0.0.34
+URL      : http://implbits.com/products/hashtab/./HashTab_v6.0.0.34_Setup.exe
+CheckSum : 85CAA9EA0BB91DA273E4D02B5F0A1C1736CC7314C4F2C839882339CC69DDAF10
+
