@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>doublecadxt</id>
+    <version>5.0.30.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/doublecadxt</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>DoubleCAD XT v5</title>
+    <authors>IMSIDesign</authors>
+    <!-- projectUrl is required for the community feed -->
+    <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/doublecadxt_icon.png</iconUrl>
+    <copyright>Copyright © 1985-2012 IMSIDesign</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/doublecadxt/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>doublecadxt doublecad autocad turbocad cad 2D DWG DXF DWF sketchup trial</tags>
+    <summary>DoubleCAD™ XT is an AutoCAD LT® work-alike. But free.</summary>
+    <description>DoubleCAD XT is a free full featured 2.5D CAD application that has the power to handle all design and detailing needs. It is free to use for personal, educational, or commercial use without restriction or limitation. With its unmatched support for many industry standard design formats including Google SketchUp and AutoCAD, DoubleCAD XT v5.0 assures great interoperability with the applications you use to help optimize project workflow. Based on IMSI/Design's award-winning CAD code with over two million copies sold worldwide, DoubleCAD XT works like AutoCAD LT but goes beyond in a number of important areas, including innovative features (below).
+    
+DoubleCAD XT is also an excellent multi-format Drawing Viewer capable of not only simple viewing, but full editing and markup like no other free CAD based application available today. In addition to viewing and editing capabilities, DoubleCAD XT also makes a great file converter that can import and export files to DWG, SKP, DXF, DWF, PLT, WMF to name a few. Regardless of what CAD applications you are currently using, DoubleCAD XT makes a perfect companion and even better replacement that will quickly become one of your favorite tools to help increase your competitive advantage. 
+
+#### Features:
+* Self-healing, ACA-compatible walls
+* Self-aligning blocks
+* Transparent fills
+* Draw order by layer
+* Bezier curves
+* Flatten 3D to 2D views
+* Advanced polyline editing
+* Automatic scaling of units between drawings
+* Input multiple unit types on-the-fly
+* Object snap prioritization
+* Brush editor
+* Smart dimensions
+* split objects
+* Import xrefs
+
+#### Trial Version
+This install of DoubleCAD XT will work for 30 days.  A free, [common activation code](https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/doublecadxt/ActivationCode.txt) is required to continue using DoubleCAD XT beyond 30 days.  Please [register with IMSI/Design](https://www.turbocad.com/doublecad-download) to obtain the [common activation code](https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/doublecadxt/ActivationCode.txt). 
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
