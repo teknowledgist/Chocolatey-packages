@@ -3,20 +3,21 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>ssoperations</id>
-    <version>1.4</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/ssoperations</packageSourceUrl>
+    <version>1.5.4</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/ssoperations</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Screensaver Operations</title>
     <authors>The Grim Admin</authors>
     <projectUrl>http://www.grimadmin.com/page.php/ss-operations</projectUrl>
-    <copyright>Copyright © 2009-2013 The Grim Admin</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/ssoperations/tools/License.md</licenseUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/ssoperations_icon.png</iconUrl>
+    <copyright>Copyright © 2009-2017 The Grim Admin</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/ssoperations/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://www.grimadmin.com/grim_tools/ssoperations/README.htm</docsUrl>
     <mailingListUrl>http://www.grimadmin.com/forum/index.php?forum=5</mailingListUrl>
     <bugTrackerUrl>http://www.grimadmin.com/profiles.php?uid=2</bugTrackerUrl>
-    <tags>ssoperations screensaver idle logoff admin</tags>
+    <tags>ssoperations screensaver idle logoff embedded</tags>
     <summary>Configure actions to run when a computer has been left idle.</summary>
     <description>Screensaver Operations allows you to perform configurable actions after a computer has been left idle for a specified amount of time.
 
@@ -31,7 +32,7 @@
 * Supports both 32-bit and 64-bit Windows operating systems
 
 View the [README](http://www.grimadmin.com/grim_tools/ssoperations/README.htm) for more information. 
-</description>
+    </description>
     <releaseNotes>http://www.grimadmin.com/page.php/ss-operations-changelog</releaseNotes>
   </metadata>
   <files>

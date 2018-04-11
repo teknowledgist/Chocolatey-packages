@@ -1,0 +1,11 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The zipped installers can be downloaded from the download link on this page:
+https://www.grimadmin.com/filemgmt/index.php
+
+Direct download: 
+Version  : 1.5.4
+URL      : http://www.grimadmin.com/filemgmt_data/files/ssoperations_1.5.4_win32_64.zip
+CheckSum : bc86e0a4c47c100759b21d29428706262eaf0d0b7015a74ac3e8d6f29efd2a76
