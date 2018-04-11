@@ -39,7 +39,7 @@ DoubleCAD XT is also an excellent multi-format Drawing Viewer capable of not onl
 * Import xrefs
 
 #### Trial Version
-This install of DoubleCAD XT will work for 30 days.  A free, [common activation code](https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/doublecadxt/ActivationCode.txt) is required to continue using DoubleCAD XT beyond 30 days.  Please [register with IMSI/Design](https://www.turbocad.com/doublecad-download) to obtain the [common activation code](https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/doublecadxt/ActivationCode.txt). 
+This install of DoubleCAD XT will work for 30 days.  A free, [common activation code](https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/discontinued/doublecadxt/ActivationCode.txt) is required to continue using DoubleCAD XT beyond 30 days.  Please [register with IMSI/Design](https://www.turbocad.com/doublecad-download) to obtain the [common activation code](https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/discontinued/doublecadxt/ActivationCode.txt). 
     </description>
   </metadata>
   <files>
