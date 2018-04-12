@@ -10,7 +10,6 @@
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>DoubleCAD XT v5</title>
     <authors>IMSIDesign</authors>
-    <!-- projectUrl is required for the community feed -->
     <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/doublecadxt_icon.png</iconUrl>
     <copyright>Copyright © 1985-2012 IMSIDesign</copyright>
