@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qgis</id>
-    <version>3.0.1</version>
+    <version>3.0.2</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qgis</packageSourceUrl>
     <owners>Snowflake, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

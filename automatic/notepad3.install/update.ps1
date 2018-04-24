@@ -4,11 +4,17 @@ function global:au_GetLatest {
    $Release = 'https://www.rizonesoft.com/downloads/notepad3/'
    $PageText = Invoke-WebRequest -Uri $Release
 
+   # Next attempt
+   $AElement = $PageText.content.split('<') | ? {$_ -match '\.zip' -and $_ -match 'href='} |select -First 1
+   $version = $AElement.split('_') |? {$_ -match '^[0-9.]+$'}
+   $URL = $AElement.split('"') |? {$_ -match '^http'}
+
+   <# Formerly working
    $HREF = $PageText.links | ? {$_.innertext -match 'Notepad3.*Setup\.zip'} | select -First 1
-
    $Version = $href.innertext -replace '.*_([0-9.]+)_.*\.zip.*','$1'
-
    $URL = $HREF | Select-Object -ExpandProperty href
+   #>
+
    $URL = $URL + "?version=" + $Version.replace('.','-')
 
    return @{ 

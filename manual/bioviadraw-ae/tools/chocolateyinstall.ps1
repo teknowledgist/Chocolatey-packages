@@ -1,34 +1,29 @@
-﻿$packageName = 'bioviadraw-ae'
+﻿$ErrorActionPreference = 'Stop'
 
 $DownloadArgs = @{
-   packageName         = $packageName
-   url                 = 'http://media.accelrys.com/downloads/draw/2017/BIOVIADraw-2017_R2_AE_32bit.zip'
-   url64               = 'http://media.accelrys.com/downloads/draw/2017/BIOVIADraw-2017_R2_AE_64bit.zip'
-   Checksum            = 'E31AAACF64114D7B953BC09424667CF234DA10DA7A78260A38C46E1D7F37E94B'
-   Checksum64          = 'BC5DBADE1EA2EA47B17489D91C7AC1F235622E5A8D6072F94DC90674932106CC'
+   packageName         = $env:ChocolateyPackageName
+   url                 = 'http://media.accelrys.com/downloads/draw/2018/BIOVIADraw-2018_AE_32bit.zip'
+   url64               = 'http://media.accelrys.com/downloads/draw/2018/BIOVIADraw-2018_AE_64bit.zip'
+   Checksum            = 'c1fcb2ac0b00f2e5b86ffbcf3692d60a27085cc64de82015831ff78954c56870'
+   Checksum64          = 'c73744eebed778608fcc13068eb9497a86f5a3e753a8ddcd628e13ebd2db7154'
    ChecksumType        = 'sha256'
    GetOriginalFileName = $true
-   FileFullPath        = Join-Path $env:TEMP "$packageName\download.zip"
+   FileFullPath        = Join-Path $env:TEMP "$env:ChocolateyPackageName\download.zip"
 }
 $ZipFile = Get-ChocolateyWebFile @DownloadArgs
 
 $UnzipArgs = @{
-   packageName  = $packageName
+   packageName  = $env:ChocolateyPackageName
    FileFullPath = $ZipFile
    Destination  = Split-Path $DownloadArgs.FileFullPath
 }
 Get-ChocolateyUnzip @UnzipArgs
 
 $InstallArgs = @{
-   packageName = $packageName
+   packageName = $env:ChocolateyPackageName
    FileType = 'exe'
    File = (Get-ChildItem $UnzipArgs.Destination -Include '*.exe' -Recurse).FullName
-   silentArgs = "/s /v`"/qn /norestart /l*v $($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
-   validExitCodes = @(0,1603,3010)  
-   # 1603 is normally a problematic exit code, but for this version it is a known bug
-   # as can be seen here:
-   #   https://community.3dsbiovia.com/Communities_Topics?tid=09a500000004QeHAAU&id=90638000000LCfgAAG
-   # A fix is in the works for the next version.
-   # Chocolatey will warn still warn about the irregular exit.  
+   silentArgs = "/s /v`"/qn /norestart /l*v $($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+   validExitCodes = @(0,3010)  
 }
 Install-ChocolateyInstallPackage @InstallArgs

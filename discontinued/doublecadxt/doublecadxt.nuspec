@@ -8,7 +8,7 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/doublecadxt</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>DoubleCAD XT v5</title>
+    <title>DoubleCAD XT v5 (Trial)</title>
     <authors>IMSIDesign</authors>
     <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/doublecadxt_icon.png</iconUrl>
