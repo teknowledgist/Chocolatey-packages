@@ -7,6 +7,6 @@ Download links for older versions (and a link to the current version
 https://www.freefilesync.org/archive.php
 
 Direct Download:
-Version  : 9.9
-URL      : https://www.freefilesync.org/download/FreeFileSync_9.9_Windows_Setup.exe
-CheckSum : 01073C8E36B57E0062035192996615FEC9EEAFD043C61505887C365BBD0A6697
+Version  : 10.0
+URL      : https://www.freefilesync.org/download/FreeFileSync_10.0_Windows_Setup.exe
+CheckSum : 8AA554EEFC37F30315DD327EE6F99A9D07CE0B3C996F45CB8F933162159B5515

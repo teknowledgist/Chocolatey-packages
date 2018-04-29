@@ -30,6 +30,17 @@ if ErrorLevel {
 ; Next button
 ControlClick, TNewButton3, Setup - FreeFileSync, Select Components
 
+__Animal:
+; Picture of animal window.  Wah!!??
+WinWait, Setup - FreeFileSync, Instead of an ad, 2
+if ErrorLevel {
+    if WinExist(Setup - FreeFileSync, Select Destination Location) {
+      goto, __Components
+    }
+}
+; Next button
+ControlClick, TNewButton3, Setup - FreeFileSync, Instead of an ad
+
 ; Wait 3 seconds for installation window
 WinWait, Setup - FreeFileSync, ..., 3
 ; if additional software is trying to be installed, show dialog
