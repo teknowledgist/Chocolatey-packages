@@ -1,0 +1,45 @@
+﻿From: <insert applicable license url here>
+
+LICENSE
+
+Handy Image Mapper
+Copyright © 2001-2013 SilverAge Software
+Check latest version at:	http://www.silveragesoftware.com
+E-mail:	support@silveragesoftware.net 
+
+LICENSE AGREEMENT
+You should carefully read the following terms and conditions before 
+installing and/or using the software. By installing and/or using this 
+software you indicate that you accept the license agreement.
+
+LICENSE
+SilverAge Software grants you a non-exclusive, non-transferable license 
+to copy the software  for your personal or commercial use and for 
+shareware distribution. 
+
+THIS SOFTWARE CAN BE FREELY INCLUDED ON CD-ROM ACCOMPANYING ANY 
+MAGAZINE, BOOK OR OTHER PUBLICATION.
+
+COPYRIGHT
+The software is protected by international copyright laws and 
+international treaty provisions. Any use of the software name is 
+strictly prohibited without the written permission of SilverAge 
+Software.
+The software, including its code, appearance, structure, design and 
+documentation is an exclusive product of SilverAge Software, who 
+permanently preserves all property rights to the software product or 
+its copies, modifications or merged parts.
+
+RESTRICTIONS
+You may not modify, decompile, disassemble or reverse engineer the 
+software.
+You may not rent, lease or lend the software.
+For registered users, it is strictly prohibited to give their 
+registration number to third parties.
+
+NO WARRANTIES
+SOFTWARE IS "AS IS" AND WITHOUT ANY WARRANTY AS TO MERCHANTABILITY OR 
+FITNESS FOR A PARTICULAR PURPOSE OR ANY OTHER WARRANTIES EITHER 
+EXPRESSED OR IMPLIED. THE SilverAge Software, Inc. WILL NOT BE 
+LIABLE FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF 
+LOSS WHILE USING OR MISUSING THIS SOFTWARE.

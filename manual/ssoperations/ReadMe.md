@@ -1,12 +1,19 @@
-﻿Screensaver Operations for Windows
-The Grim Admin http://www.grimadmin.com/staticpages/index.php/ss-operations
 
----
+
+Screensaver Operations for Windows
+The Grim Admin http://www.grimadmin.com/page.php/ss-operations
+--------------------------------------------------------------
 
 ### CONTACT INFORMATION
-Comments or software bugs may be reported to The Grim Admin at http://www.grimadmin.com/profiles.php?uid=2
-Alternate e-mail contact: admin @ grimadmin.com
 
+
+Comments or software bugs may be reported to The Grim Admin at http://www.grimadmin.com/profiles.php?uid=2
+
+
+### Important Notes
+
+
+ADMX files, mentioned below, are still in the works. Please use Group Policy Preferences or other means (e.g., scripting) to set required registry keys.
 
 ### INSTALLATION
 
@@ -14,11 +21,9 @@ Alternate e-mail contact: admin @ grimadmin.com
 
 Alternatively, you can use the included Windows Installer (MSI) files to easily deploy using Group Policy or other means.
 
-
 ### SINGLE USER CONFIGURATION
 
 Using the Windows Control Panel, select "Screensaver Operations" as your screensaver and click the "Settings..." button.
-
 
 ### CONFIGURE GROUP POLICY TO ENFORCE SCREENSAVER
 
@@ -30,12 +35,11 @@ NOTE: Some Group Policy adjustments may not take effect until your users log off
 
 |       SETTING         |                  DESCRIPTION                      |
 | --------------------- | ------------------------------------------------- |
-| Display\Hide screen saver tab  |      Removes Screen Saver tab from Display in Control Panel. |
-| Display\Password protect the screen saver | Enable to set passwords on all screen savers.  Disable to prevent passwords from being used on all screen savers. | 
+| Display\Hide screen saver tab | Removes Screen Saver tab from Display in Control Panel. |
+| Display\Password protect the screen saver | Enable to set passwords on all screen savers.  Disable to prevent passwords from being used on all screen savers. |
 | Display\Screen Saver | Enables/Disables desktop screen savers. |
 | Display\Screen saver executable name | Specifies the screen saver for the user's desktop and prevents changes. |
 | Display\Screen Saver timeout | Specifies how much user idle time (in seconds) must elapse before the screen saver is launched. |
-
 
 ##### Windows Vista, 7, or Server 2008:
 
@@ -43,7 +47,7 @@ NOTE: Some Group Policy adjustments may not take effect until your users log off
 | --------------------- | ------------------------------------------------- |
 | Personalization\Enable screen saver | Enables/Disables desktop screen savers. |
 | Personalization\Force specific screen saver | Specifies the screen saver for the user's desktop and prevents changes. |
-| Personalization\Password protect the screen saver | Enable to set passwords on all screen savers. Disable to prevent passwords from being used on all screen savers. |
+| Personalization\Password protect the screen saver | Enable to set passwords on all screen savers. Disable to prevent passwords from being used on all screen savers. | 
 | Personalization\Prevent changing screen saver | Prevents the Screen Saver dialog from opening in the Personalization or Display Control Panel. |
 | Personalization\Screen Saver timeout | Specifies how much user idle time (in seconds) must elapse before the screen saver is launched. |
 
@@ -55,21 +59,21 @@ Apply settings under `HKEY_CURRENT_USER\Control Panel\Desktop\`
 
 |       SETTING         |                  DESCRIPTION                      |
 | --------------------- | ------------------------------------------------- |
-| ScreenSaveActive (REG_SZ) | Enables/Disables desktop screen savers (0=disabled; 1=enabled).|
+| ScreenSaveActive (REG_SZ) | Enables/Disables desktop screen savers (0=disabled; 1=enabled). |
 | ScreenSaverIsSecure (REG_SZ) | Enable to set passwords on all screen savers (0=disabled; 1=enabled). |
 | ScreenSaveTimeOut (REG_SZ) | Specifies how much user idle time (in seconds) must elapse before the screen saver is launched. |
 | SCRNSAVE.EXE (REG_SZ) | Specifies the screen saver for the user's desktop; you may need to use the 8.3 filename (e.g., "C:\Windows\System32\SCREEN~1.SCR"). |
 
 ### USER SETTINGS
 
-USER settings are stored under HKEY_CURRENT_USER (HKCU) at `HKEY_CURRENT_USER\Software\GrimAdmin.com\Screensaver Operations`.
+USER settings are stored under `HKEY_CURRENT_USER (HKCU) at HKEY_CURRENT_USER\Software\GrimAdmin.com\Screensaver Operations`.
 - This is very useful if you want to use scripts, Group Policy Preferences, or the included ADMX files to push out settings to your users.
 - Since users can change USER settings, they cannot be enforced (you can still overwrite their stored registry settings).
 
 ### MACHINE SETTINGS
 
-MACHINE settings are stored under HKEY_LOCAL_MACHINE (HKLM) at `HKEY_LOCAL_MACHINE\SOFTWARE\GrimAdmin.com\Screensaver Operations`.
-- Important Note: For backwards compatibility with older versions, SSO will still pull settings from the HKLM Wow6432node registry key on 64-bit systems if you don't have settings at `HKEY_LOCAL_MACHINE\SOFTWARE\GrimAdmin.com\Screensaver Operations`.
+MACHINE settings are stored under `HKEY_LOCAL_MACHINE (HKLM) at HKEY_LOCAL_MACHINE\SOFTWARE\GrimAdmin.com\Screensaver Operations`.
+- Important Note: For backwards compatibility with older versions, SSO will still pull settings from the HKLM Wow6432node registry key on 64-bit systems if you don't have settings at "HKEY_LOCAL_MACHINE\SOFTWARE\GrimAdmin.com\Screensaver Operations".
 - You can set DEFAULT settings for all users on a machine by creating registry values under HKEY_LOCAL_MACHINE. 
 - If any USER settings exist, they will take precedence over MACHINE settings unless you enable the "LocalMachineOverride" value. Enabling "LocalMachineOverride" is very useful if you want to enforce any MACHINE settings since users will not be able to change these settings (unless they are local admin and know how to edit the HKLM registry).
 - Use scripts, Group Policy Preferences, or the included ADMX files to push out settings to your computers.
@@ -79,7 +83,6 @@ MACHINE settings are stored under HKEY_LOCAL_MACHINE (HKLM) at `HKEY_LOCAL_MACHI
 NOTE: With the exception of "LocalMachineOverride" all settings can be applied to either HKCU or HKLM.
 
 --------------------------------
-
 ##### LocalMachineOverride (REG_DWORD)
 
 * Description: Causes MACHINE settings (HKLM) to take precedence over USER settings (HKCU). 
@@ -105,6 +108,12 @@ NOTE: With the exception of "LocalMachineOverride" all settings can be applied t
     * 95 - Forced Hibernate
     * 99 - Does Nothing (used for testing)
 
+##### BackgroundOpacity (REG_DWORD)
+
+* Description: Changes the background opacity. 0 is transparent, 75 is 75% opaque, and 100 is completley opaque.
+* Format: integer between 0 and 100 (default=75); Make sure you use DECIMAL in the registry, not hexadecimal
+* Note: If you set this value to 0, the background will not load and you can interact with items behind the message box. If you want it to be transparent but don't want users to be able to interact with other items set the value to 1.
+
 ##### CancelOnMouseClick (REG_DWORD)
 
 * Description: Enables the ability to cancel the screensaver when a mouse button is clicked.
@@ -118,7 +127,7 @@ NOTE: With the exception of "LocalMachineOverride" all settings can be applied t
 * NOTE: Experimental setting - can only be set via registry and ADMX (setting not available in the configuration GUI).
 
 ##### DelayInSeconds (REG_DWORD)
-
+ 
 * Description: How long to display warning message before performing specified action. Setting to 0 will cause action to occur immediately.
 * Format: integer between 0 and 2,147,483,647 (default=60)
 
@@ -126,6 +135,11 @@ NOTE: With the exception of "LocalMachineOverride" all settings can be applied t
 
 * Description: Disables special keys and key combinations such as the Windows key, Alt+Tab, Alt+Esc, Ctrl+Esc, Ctrl+Shift+Esc. Does not disable Ctrl+Alt+Del or Alt+F4.
 * Format: integer (0=disabled; 1=enabled; default=1)
+
+##### EasterEgg (REG_SZ)
+
+* Description: Configures the "Snow" Easter Egg.
+* Format: string ("" to show snow only on January 1st; "snow" to always show snow; "none" to never load the Easter Egg; default="")
 
 ##### HideActionButton (REG_DWORD)
 
@@ -154,14 +168,14 @@ NOTE: With the exception of "LocalMachineOverride" all settings can be applied t
 
 ##### CustomTitleText (REG_SZ)
 
-* Description: Allows you to display a custom text in the title rather than one of the default titles.
+* Description: Allows you to display custom text in the title rather than one of the default titles.
 * Format: string (e.g., "Windows is now logging off")
 * NOTE: Setting CustomTitleText to "" will cause one of the default titles to appear. If you want no text to appear, enter a space " ".
 
 ##### CustomMessage (REG_SZ)
 
 * Description: Allows you to display a custom message rather than one of the default messages.
-* Format: string (e.g., "Your computer is about to shutdown!")
+* Format: string (e.g., "Your computer is about to shut down!")
 * NOTE: Setting CustomMessage to "" will cause one of the default messages to appear. If you want no text to appear, enter a space " ".
 * Optional Variables:
     * `%time_remaining%` - Displays the time remaining in seconds (e.g., "Your computer will shutdown in %time_remaining% seconds.").
@@ -178,8 +192,8 @@ NOTE: With the exception of "LocalMachineOverride" all settings can be applied t
     * `%time_elapsed_hp%` - Displays the hours component of the time elapsed in two-digit padded HH:MM:SS format.
     * `%time_elapsed_mp%` - Displays the minutes component of the time elapsed in two-digit padded HH:MM:SS format.
     * `%time_elapsed_sp%` - Displays the seconds component of the time elapsed in two-digit padded HH:MM:SS format.
-    * `%user_name%` -> Shows the currently logged on user's username.
-    * `%user_domain_name%` -> Shows the current user's domain name.
+    * `%user_name%` - Shows the currently logged on user's username.
+    * `%user_domain_name%` - Shows the current user's domain name.
     * `%machine_name%` - Shows the current computer name.
 
 ##### GradientColorLeft (REG_SZ) & GradientColorRight (REG_SZ)
@@ -207,9 +221,11 @@ NOTE: With the exception of "LocalMachineOverride" all settings can be applied t
 
 ### VERSION INFORMATION
 
-Documentation relevant for Screensaver Operations version 1.4.3.0
-Check for new version at http://www.grimadmin.com/staticpages/index.php/ss-operations-versioncheck?version=1.4.3.0
+Documentation relevant for Screensaver Operations version 1.5.4.0
+Check for new version at http://www.grimadmin.com/page.php/ss-operations-versioncheck?version=1.5.4.0
+View the latest ChangeLog and known issues at http://www.grimadmin.com/page.php/ss-operations-changelog
 
 ### COPYRIGHT NOTICE
-Copyright © GrimAdmin.com 2009-2013
+Copyright © GrimAdmin.com 2009-2017
 All rights reserved
+

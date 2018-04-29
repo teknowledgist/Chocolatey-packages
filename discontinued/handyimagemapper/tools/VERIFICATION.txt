@@ -1,0 +1,17 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Handy Image Mapper is effectively abandoned.  The website for the 
+publisher, Siver Age Software, is (usually) offline.  The installer in 
+this package was the newest archive from the Internet Archive Wayback 
+Machine for May 30, 2016:
+
+https://web.archive.org/web/20160501000000/http://www.silveragesoftware.com/files/HandyImageMapperSetup.exe
+
+and checksum-matches the oldest archived installer from July 30, 2014:
+
+https://web.archive.org/web/20140730190359/http://www.silveragesoftware.com/files/HandyImageMapperSetup.exe
+
+Version:  2.0.0.0
+Checksum:  485410e581629adc5a48972b2494a0b5cae0ba9ab2d62860d1801d630e5547b4

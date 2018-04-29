@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>handyimagemapper</id>
+    <version>2.0.0.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/handyimagemapper</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Handy Image Mapper</title>
+    <authors>Silver Age Software</authors>
+    <projectUrl>http://www.silveragesoftware.com/archive.php</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/handyimagemapper_icon.png</iconUrl>
+    <copyright>Copyright © 2001-2013 SilverAge Software</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/handyimagemapper/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>handyimagemapper imagemap image html area map tag embedded</tags>
+    <summary>Create image-mapped images for a website</summary>
+    <description>Handy Image Mapper will help you easily create hot-spot areas for images and generate AREA and MAP tags on the Clipboard. Different parts of an image can use different links to many HTML pages. Handy Image Mapper can map GIF, JPG, PNG and BMP images and can work with any HTML editor.
+
+![screenshot](https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/discontinued/handyimagemapper/tools/screenshot.png)  
+
+* Friendly user interface.
+* Ability to add an unlimited number of image map elements.
+* Rectangular, circular and polygonal region types of map elements.
+
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

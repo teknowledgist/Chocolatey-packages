@@ -11,9 +11,9 @@ https://github.com/ClusterM/hakchi2/releases/latest
 
 Direct Download:
 
-Package Version  : 2.30.0.20180312
+Package Version  : 2.30.0.20180413
 App Version      : 2.30 
-Internal Version : 2.0.30.14
+Internal Version : 2.0.30.18
 URL              : https://github.com/ClusterM/hakchi2/releases/download/2.30/hakchi2.30.zip
-CheckSum         : 44BB71CBBEE5CC55CC493CD3DFE4E2578B3853D513ADE3DDAFC14D6B3B4DB148
+CheckSum         : DF3EA2022595674DCB028864B3EDB9EEDC57E27C778822BA745131B39E693176
 

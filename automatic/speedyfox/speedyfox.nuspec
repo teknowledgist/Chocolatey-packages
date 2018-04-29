@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>speedyfox</id>
-    <version>2.0.22</version>
+    <version>2.0.23</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/speedyfox</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -19,7 +19,7 @@
     <mailingListUrl>https://www.crystalidea.com/speedyfox</mailingListUrl>
     <tags>speedyfox Firefox Thunderbird Chrome Skype Opera Cyberfox PaleMoon sqlite profile optimize</tags>
     <summary>Speed boost Firefox, Skype, Chrome, Thunderbird in a single click</summary>
-    <description>SpeedyFox is specially designed to resolve the problem of slowdowns due to fragmentation of SQLITE profile databases. The method used in SpeedyFox is 100% safe for your profile (e.g. bookmarks, passwords, etc), it's well documented and has been tested on millions of computers. 
+    <description>SpeedyFox is specially designed to speed up Firefox, Skype, Chrome, Thunderbird and other web programs bogged down by the fragmentation of SQLITE profile databases that naturally occurs over time.  The method used in SpeedyFox is 100% safe for your profile (e.g. bookmarks, passwords, etc), it's well documented and has been tested on millions of computers. 
 
 SpeedyFox is portable, supports portable programs and can be run from the GUI or command line.
 

@@ -4,11 +4,11 @@ $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    fileType       = 'EXE'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
-   url            = 'http://qgis.org/downloads/QGIS-OSGeo4W-2.18.17-1-Setup-x86.exe'
-   url64bit       = 'http://qgis.org/downloads/QGIS-OSGeo4W-2.18.17-1-Setup-x86_64.exe'
+   url            = 'http://qgis.org/downloads/QGIS-OSGeo4W-2.18.19-1-Setup-x86.exe'
+   url64bit       = 'http://qgis.org/downloads/QGIS-OSGeo4W-2.18.19-1-Setup-x86_64.exe'
    checksumType   = 'sha256'
-   checksum       = '4ee62811aab06b18a01ff5ce0b6d9b5b4c5f5dd245893c9fbfc944e91d1cde47'
-   checksum64     = 'fa125598605654cb63c4f3ac73af40d077bd0857e6d1d636310138a3bd20965c'
+   checksum       = 'e3627733b5b4a8af45f096c059699b010d3fd79ddbace0ffb3a6b9eb03ed58ee'
+   checksum64     = 'c024520930ad8d2f610da2358104e151ec5c8dcce8cde737b5dd828107568ec3'
    silentArgs     = '/S'
    validExitCodes = @(0)
 }

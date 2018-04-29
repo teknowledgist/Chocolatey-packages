@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>bioviadraw-ae</id>
-    <version>2017.2</version>
+    <version>2018.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/bioviadraw-ae</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -29,9 +29,16 @@
 * Easily create structures with Rgroups for queries or enumerations
 * Annotate reaction schemes with text, color and a variety of arrow styles
 * Easily create publication-quality structures for inclusion in Microsoft Office documents and presentations
+
+### License
+BIOVIA Draw Academic Edition can be installed and used only if:
+
+*  You are a student, faculty member, staff member or resident scholar of an educational institution (K-12, junior college, college or
+university) using Software for academic and/or teaching purposes only
+*  Your use of the Software is solely for personal, non-commercial use. 
+
     </description>
     <dependencies> 
-      <dependency id="dotnet3.5" version="3.5" />
     </dependencies>
   </metadata>
   <files>
