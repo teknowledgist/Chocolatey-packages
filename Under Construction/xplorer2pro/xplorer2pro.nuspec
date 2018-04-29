@@ -21,10 +21,9 @@
     <bugTrackerUrl>http://zabkat.com/contact.htm</bugTrackerUrl>
     <tags>xplorer2pro xplorer2 xplorer file browser manager admin</tags>
     <summary>Reclaim control of your files and folders.</summary>
-    <description>**xplorer²** is a desktop file manager combining the simplicity of windows explorer with the speed and efficiency of traditional dual pane orthodox file managers, helping you be **productive** with your documents, pictures, music, source code and other files. 
+    <description>**xplorer² professional** is a desktop file manager combining the simplicity of windows explorer with the speed and efficiency of traditional dual pane orthodox file managers, helping you be **productive** with your documents, pictures, music, source code and other files. 
 
-##### Power at your fingertips:
-
+### Power at your fingertips:
 * Full shell namespace browser
 * Dual panes and folder tabs
 * Preview documents, images, music etc.
@@ -43,7 +42,21 @@
 * Native 32/64 bit and Unicode versions 
 
 ### Trial-ware
-This package installs a fully-functional, 21-day trial version of **xplorer² Pro**.
+This package installs a fully-functional, **21-day trial version** of *xplorer² professional*.
+
+### Package Parameters
+A simple, silent install of **xplorer²** uses default options that -- in some cases -- require a re-install to change.  The following package parameters can be set to choose other install options:
+
+ * `/Icon:(0/1)` - Put an **xplorer²** icon on the desktop (default: 1)
+ * `/Skin:(0/1)` - Use a "modern" (i.e. ribbon) skin interface (default: 1)
+ * `/Replace:(0/1)` - Open all folders with **xplorer²** (i.e. replace Windows Explorer) (default: 0)
+ * `/All:(0/1)` - Replace for all users (Requires `/Replace:1`) (default: 0)
+ * `/Menu:(0/1)` - Add "Open with xplorer²" to *folder* context menus (default: 1)
+ * `/Language:` - Set **xplorer²** to use an optional language.  (Available: *English, German, French, Spanish, Italian, Japanese, Greek, Dutch, Swedish, Serbian, Czech, Polish, Bulgarian, Chinese Trad, Russian, Brazilian, Chinese Simpl*) (Default: English)
+
+To pass parameters, use `--params "''"`.  Example:
+  `choco install xplorer2pro -y --params="'/Icon:0 /Skin:0 /Replace:1 /Language:German'"`
+To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
 	</description>
     <releaseNotes>http://zabkat.com/changes.txt</releaseNotes>
   </metadata>

@@ -17,24 +17,9 @@ $packageArgs = @{
 
 Install-ChocolateyPackage @packageArgs
 
-$UserArguments = @{}
-# Parse the packageParameters using good old regular expression
-if ($env:chocolateyPackageParameters) {
-   $match_pattern = "\/(?<option>([a-zA-Z]+)):(?<value>([`"'])?([a-zA-Z0-9- _\\:\.@]+)([`"'])?)|\/(?<option>([a-zA-Z]+))"
-   $option_name = 'option'
-   $value_name = 'value'
+$UserArguments = Get-PackageParameters
 
-   if ($env:chocolateyPackageParameters -match $match_pattern ){
-      $results = $env:chocolateyPackageParameters | Select-String $match_pattern -AllMatches
-      $results.matches | % {
-      $UserArguments.Add(
-         $_.Groups[$option_name].Value.Trim(),
-         $_.Groups[$value_name].Value.Trim())
-      }
-   } else {
-      Throw 'Package Parameters were found but were invalid (REGEX Failure).'
-   }
-} else {
+if (!$UserArguments) {
    Write-Debug 'No Package Parameters Passed in.  Collecting 30-day Serial Number.'
    $WebClient = New-Object System.Net.Webclient
    $DownloadURL  = 'https://www.mackichan.com/products/dnloadreq.html'
@@ -44,18 +29,18 @@ if ($env:chocolateyPackageParameters) {
    $SN | Out-File (Join-Path $Desktop 'Scientific Word Trial Serial Number.txt') -Force
 }
 
-if ($UserArguments.ContainsKey('LicenseFile')) {
+if ($UserArguments['LicenseFile']) {
    Write-Host "You requested copying a license file from '$($UserArguments.LicenseFile)'."
-   if (test-path $UserArguments.LicenseFile) {
+   if (test-path $UserArguments[licenseFile]) {
       [array]$key = Get-UninstallRegistryKey -SoftwareName 'Scientific Word'
       $Destination = Join-Path (Split-Path $key.UninstallString) 'SW'
       Copy-Item $UserArguments.LicenseFile $Destination -Force
    } else {
-      Write-Warning "LicenseFile '$($UserArguments.LicenseFile)' not found!"
+      Write-Warning "LicenseFile '$($UserArguments[LicenseFile])' not found!"
    }
 }
 
-if ($UserArguments.ContainsKey('SystemVariable')) {
+if ($UserArguments['SystemVariable']) {
    Write-Host "You requested the 'mackichn_LICENSE' environment variable be set to '$($UserArguments.SystemVariable)'."
    Write-Warning 'No check on the accuracy or existance of the information will be made.'
 

@@ -38,22 +38,9 @@ $shortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'Chromium
 Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $target
 
 # Capturing Package Parameters.
-$UserArguments = @{}
-if ($env:chocolateyPackageParameters) {
-   $match_pattern = "\/(?<option>([a-zA-Z]+)):(?<value>([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)|\/(?<option>([a-zA-Z]+))"
-   $option_name = 'option'
-   $value_name = 'value'
+$UserArguments = Get-PackageParameters
 
-   if ($env:chocolateyPackageParameters -match $match_pattern ){
-      $results = $env:chocolateyPackageParameters | Select-String $match_pattern -AllMatches
-      $results.matches | ForEach-Object {$UserArguments.Add(
-                           $_.Groups[$option_name].Value.Trim(),
-                           $_.Groups[$value_name].Value.Trim())
-                        }
-   } else { Throw 'Package Parameters were found but were invalid (REGEX Failure)' }
-} else { Write-Debug 'No Package Parameters Passed in' }
-
-if ($UserArguments.ContainsKey('Default')) {
+if ($UserArguments['Default']) {
    $msgtext = 'You want chrlauncher as the system default browser.'
    Write-Host $msgtext -ForegroundColor Cyan
    $Bat = Join-Path $InstallArgs.unzipLocation "$BitLevel\SetDefaultBrowser.bat"
@@ -62,7 +49,7 @@ if ($UserArguments.ContainsKey('Default')) {
    & $NoPauseBat
 }
 
-if ($UserArguments.ContainsKey('KeepSettings')) {
+if ($UserArguments['KeepSettings']) {
    $msgtext = 'You want to keep previous installation settings.'
    Write-Host $msgtext -ForegroundColor Cyan
    if ($oldINI) {
@@ -77,7 +64,7 @@ if ($UserArguments.ContainsKey('KeepSettings')) {
    }
 }
 
-if ($UserArguments.ContainsKey('Shared')) {
+if ($UserArguments['Shared']) {
    $msgtext = 'You want chrlauncher to install/update/launch a single instance of Chromium to be shared (including settings, bookmarks, etc.) among all users.'
    Write-Host $msgtext -ForegroundColor Cyan
    $Acl = get-acl $InstallArgs.UnzipLocation
@@ -93,7 +80,7 @@ if ($UserArguments.ContainsKey('Shared')) {
    (Get-Content $INIfile) -replace "^(ChromiumDirectory=).*$",'$1%LOCALAPPDATA%\Chromium\bin' | Set-Content $INIfile
 }
 
-if ($UserArguments.ContainsKey('Type')) {
+if ($UserArguments['Type']) {
    $msgtext = 'You want to use a Chromium build other than the unofficial development builds with codecs.'
    Write-Host $msgtext -ForegroundColor Cyan
    $NotValid = $false
