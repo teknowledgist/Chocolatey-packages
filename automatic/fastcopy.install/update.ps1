@@ -13,7 +13,8 @@ function global:au_GetLatest {
    $version = $Text -replace ".*v([\d\.]*).*",'$1'
 
    $Start32 = $HomePage.links | 
-                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc32') -and ($_.href -match 'vector')} |
+                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc32') -and (
+                                 ($_.href -match 'vector') -or ($_.href -match '\.zip'))} |
                 Select-Object -ExpandProperty href -First 1
    if ($Start32 -match 'vector') {
       $DownPage = Invoke-WebRequest -Uri $Start32
@@ -21,11 +22,12 @@ function global:au_GetLatest {
                   Where-Object {$_.href -like '*.zip'} | 
                   Select-Object -First 1 -ExpandProperty href
    } else { 
-      $URL32 = $Start32
+      $URL32 = $RootURL + $Start32
    }
 
    $Start64 = $HomePage.links | 
-                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc64') -and ($_.href -match 'vector')} |
+                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc64') -and (
+                                 ($_.href -match 'vector') -or ($_.href -match '\.zip'))} |
                 Select-Object -ExpandProperty href -First 1
    if ($Start64 -match 'vector') {
       $DownPage = Invoke-WebRequest -Uri $Start64
@@ -33,7 +35,7 @@ function global:au_GetLatest {
                   Where-Object {$_.href -like '*.zip'} | 
                   Select-Object -First 1 -ExpandProperty href
    } else {
-      $URL64 = $Start64
+      $URL64 = $RootURL + $Start64
    }
 
    return @{ 
