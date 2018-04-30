@@ -50,6 +50,7 @@ if ErrorLevel {
     goto, __StartMenuIcons
   }
 }
+; (Using bitwise-exclusive-or "^" for these settings)
 ; create Desktop shortcut
 controlGet, CheckVal, Checked,, Button5, xplorer² professional %1% bit Setup, Choose Additional Tasks
 if ((CheckVal) ^ (InStr(A_Args[2], "D"))) {
