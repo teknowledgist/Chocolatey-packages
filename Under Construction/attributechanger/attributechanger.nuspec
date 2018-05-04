@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>attributechanger</id>
+    <version>9.0.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/attributechanger</packageSourceUrl>
+    <owners>Teknowledgist, ferventcoder</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Attribute Changer</title>
+    <authors>Romain Petges</authors>
+    <projectUrl>https://www.petges.lu/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/attributechanger_icon.png</iconUrl>
+    <copyright>Copyright © 1999 - 2018 Romain PETGES</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/attributechanger/tools/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.petges.lu/support/</docsUrl>
+    <mailingListUrl>https://www.petges.lu/contact/</mailingListUrl>
+    <tags>attributechanger attribute timestamp touch explorer shell extension embedded</tags>
+    <summary>Attribute Changer is a free Explorer extension to modify file and folder attributes</summary>
+    <description>Attribute Changer freeware is a powerful Windows Explorer add-on, available at your fingertips whenever you right-click on files, folders and even drives in Windows Explorer. 
+    
+#### Features:
+* Right-click Extension
+* Photo date and time
+* Attributes, date and time
+* Detailed reporting
+* Filters
+* Simulation
+
+    </description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <!-- =============================== -->      
+
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <!--<dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>-->
+    <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
+         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
+         - You want to use Get-PackageParameters and on less than 0.11.0
+         - You want to take advantage of other functions in the core community maintainer's team extension package
+    -->
+
+    <!--<provides>NOT YET IMPLEMENTED</provides>-->
+    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
+    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>

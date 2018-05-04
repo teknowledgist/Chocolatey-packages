@@ -1,6 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+
+if (-not (Get-ChildItem -Path $toolsDir -Filter '*.exe')) {
+   Throw ("$env:ChocolateyPackageName installer executable not found!`n" +
+            "`tThis is an embedded package, so the most probable cause is that`n" +
+            "`tanti-virus/anti-malware software has incorrectly removed it.`n" +
+            "`tGo here for more info: https://www.freefilesync.org/faq.php#virus")
+}
 $fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*.exe').FullName
 
 # silent install requires AutoHotKey
@@ -15,6 +22,13 @@ $packageArgs = @{
   file         = $fileLocation
   softwareName = "$env:ChocolateyPackageName*"
   silentArgs   = '\LANG=english_uk'
+}
+
+if (-not (Test-Path $fileLocation)) {
+   Throw ("$env:ChocolateyPackageName installer executable not found!`n" +
+            "`tThis is an embedded package, so the most probable cause is that`n" +
+            "`tanti-virus/anti-malware software has incorrectly removed it.`n" +
+            "`tGo here for more info: https://www.freefilesync.org/faq.php#virus")
 }
 
 Install-ChocolateyInstallPackage @packageArgs
