@@ -19,9 +19,9 @@
     <docsUrl>http://zabkat.com/x2h_0.htm</docsUrl>
     <mailingListUrl>http://netez.com/bbs/</mailingListUrl>
     <bugTrackerUrl>http://zabkat.com/contact.htm</bugTrackerUrl>
-    <tags>xplorer2pro xplorer2 xplorer file browser manager admin</tags>
+    <tags>xplorer2pro xplorer2 xplorer explorer shell file manage search filter preview tabs dual-pane trial notsilent</tags>
     <summary>Reclaim control of your files and folders.</summary>
-    <description>**xplorer² professional** is a desktop file manager combining the simplicity of windows explorer with the speed and efficiency of traditional dual pane orthodox file managers, helping you be **productive** with your documents, pictures, music, source code and other files. 
+    <description>**xplorer² professional** is a desktop file manager combining the simplicity of Windows Explorer with the speed and efficiency of traditional dual pane orthodox file managers, helping you be **productive** with your documents, pictures, music, source code and other files. 
 
 ### Power at your fingertips:
 * Full shell namespace browser
@@ -44,7 +44,7 @@
 ### Trial-ware
 This package installs a fully-functional, **21-day trial version** of *xplorer² professional*.
 
-### Package Parameters
+### Installation Package Parameters
 A simple, silent install of **xplorer²** uses default options that -- in some cases -- require a re-install to change.  The following package parameters can be set to choose other install options:
 
  * `/Icon:(0/1)` - Put an **xplorer²** icon on the desktop (default: 1)
@@ -54,9 +54,17 @@ A simple, silent install of **xplorer²** uses default options that -- in some c
  * `/Menu:(0/1)` - Add "Open with xplorer²" to *folder* context menus (default: 1)
  * `/Language:` - Set **xplorer²** to use an optional language.  (Available: *English, German, French, Spanish, Italian, Japanese, Greek, Dutch, Swedish, Serbian, Czech, Polish, Bulgarian, Chinese Trad, Russian, Brazilian, Chinese Simpl*) (Default: English)
 
-To pass parameters, use `--params "''"`.  Example:
-  `choco install xplorer2pro -y --params="'/Icon:0 /Skin:0 /Replace:1 /Language:German'"`
+Example: `choco install xplorer2pro -y --params="'/Icon:0 /Skin:0 /Replace:1 /Language:German'"`
+
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
+
+### Uninstallation Package Parameters
+The default uninstall will remove registry settings for **xplorer²** including bookmarks.  Use the following package parameter to leave registry settings and bookmarks:
+
+ * `/Keep` - Keep **xplorer²** registry settings and bookmarks
+
+Example:  `choco uninstall xplorer2pro -y --params="'/Keep'"`
+
 	</description>
     <releaseNotes>http://zabkat.com/changes.txt</releaseNotes>
   </metadata>
