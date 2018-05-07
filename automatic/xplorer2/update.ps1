@@ -1,20 +1,19 @@
 import-module au
 
-$Homepage = 'http://zabkat.com/x2lite.htm'
-
 function global:au_GetLatest {
-   $PageContent = Invoke-WebRequest -Uri $Homepage
-
-   $Version = ($PageContent.content.split() |? {$_ -match 'v[0-9.]{4,7}.*'}) -replace '.*v(.*)','$1'
-   
-   $DownloadPage = 'http://zabkat.com/alldown.htm'
+   $DownloadPage = 'https://www.zabkat.com/alldown.htm'
    $PageContent = Invoke-WebRequest -Uri $DownloadPage
+   $section = $PageContent.RawContent -split 'hredge' | ? {$_ -match 'old version 3.50'}
+   $line = $section -split '<li>' |? {$_ -match 'Professional edition'}
+
+   $Version = ($line -replace '.*build (\d\d\d\d):.*','$1' -split '' | ? {$_ -match '.'} ) -join '.'
    
-   $url = $PageContent.links | ? {$_.href -match 'lite_setup.exe'} |select -First 1 -ExpandProperty href
-   
+   $url32,$url64 = select-string '"(.*?\.exe)"' -InputObject $line -AllMatches |% {$_.matches.value.trim('"')}
+
    return @{ 
       Version    = $Version
-      URL32      = $url
+      URL32      = $url32
+      URL64      = $url64
    }
 }
 
