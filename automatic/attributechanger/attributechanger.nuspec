@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
@@ -22,39 +22,17 @@
     <description>Attribute Changer freeware is a powerful Windows Explorer add-on, available at your fingertips whenever you right-click on files, folders and even drives in Windows Explorer. 
     
 #### Features:
-* Right-click Extension
-* Photo date and time
-* Attributes, date and time
-* Detailed reporting
-* Filters
-* Simulation
+* **Right-click Extension** - Available whenever you right-click on files, folders and even drives.
+* **Photo date and time** - Modify date and time information stored in digital photos. Add or subtract values and even synchronise with file date and time.
+* **Attributes, date and time** - Modify system attributes and manipulate date and time of files and folders with endless possibilities.
+* **Detailed reporting** - Every file and folder modification is logged and the actions are exportable in a spreadsheet format.
+* **Filters** - Exclude or include objects based on multiple criteria, such as attributes, date, time, size and file- or folder name wildcards.
+* **Simulation** - A Simulation mode features a preview of all modifications in a detailed reporting window before they get applied.
 
     </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
-    <!-- =============================== -->      
-
-    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
-    <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
-    </dependencies>-->
-    <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
-         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
-         - You want to use Get-PackageParameters and on less than 0.11.0
-         - You want to take advantage of other functions in the core community maintainer's team extension package
-    -->
-
-    <!--<provides>NOT YET IMPLEMENTED</provides>-->
-    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
-    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+    <releaseNotes>https://www.petges.lu/changelog/</releaseNotes>
   </metadata>
   <files>
-    <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
-    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>

@@ -1,5 +1,6 @@
 import-module au
 
+$Global:au_NoCheckUrl = $true
 
 function global:au_GetLatest {
    $DownloadURI = 'https://www.petges.lu/download/'
@@ -17,9 +18,14 @@ function global:au_GetLatest {
    $url32 = $Link.href
 
    return @{ 
-            Version = $version
-            URL32   = $url32
-           }
+            Version  = $version
+            URL32    = $url32
+            Options  = @{
+               Headers = @{
+                  ContentType = 'application/octet-stream'
+               }
+            }
+         }
 }
 
 
@@ -35,6 +41,7 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate() { 
    Write-host "Downloading Attribute Changer $($Latest.Version)"
+   Write-warning "The Attribute Changer site won't allow proper download.  It must be manually downloaded."
    Get-RemoteFiles -Purge -NoSuffix
 }
 

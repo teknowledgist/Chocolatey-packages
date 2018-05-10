@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The installer is available on this page:  
+https://www.petges.lu/download/
+
+Direct Download:
+
+Version  : 9.0.1
+URL      : https://www.petges.lu/pubfiles/ac-900a.exe
+CheckSum : ab0e52fe65e17066784e42ade9b810a2b1b6542b5bf0db804c191afa4c53d4bc
+

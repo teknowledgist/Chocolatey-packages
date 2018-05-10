@@ -8,7 +8,7 @@ If (-not $pp.count) {
 } else {
    if (-not $pp.contains("Icon")) {
       $ahkArgs += 'D'        # Desktop icon is the default
-   } elseif ($pp["Icon"]) {
+   } elseif ($pp["Icon"] -eq 1) {
       Write-Host 'You requested an xplorer² desktop icon.'
       $ahkArgs += 'D'
    } else {
@@ -16,19 +16,19 @@ If (-not $pp.count) {
    }
    if (-not $pp.contains("Skin")) {
       $ahkArgs += 'M'        # Modern skin is the default
-   } elseif ($pp["Skin"]) {
+   } elseif ($pp["Skin"] -eq 1) {
       Write-Host 'You requested a modern skin in xplorer².'
       $ahkArgs += 'M'
    } else {
       Write-Host 'You requested NO modern skin in xplorer².'
    }
-   if ($pp["Replace"]) {
+   if ($pp["Replace"] -eq 1) {
       Write-Host 'You requested to replace Explorer with xplorer².'
       $ahkArgs += 'R'
    } else {
       Write-Host 'xplorer² will NOT replace Windows Explorer.'
    }
-   if ($pp["All"]) {
+   if ($pp["All"] -eq 1) {
       Write-Host 'You requested to replace Explorer with xplorer² for ALL users.'
       $ahkArgs += 'A'
    } else {
@@ -36,7 +36,7 @@ If (-not $pp.count) {
    }
    if (-not $pp.contains("Menu")) {
       $ahkArgs += 'C'        # xplorer² in folder context menus is the default
-   } elseif ($pp["Menu"]) {
+   } elseif ($pp["Menu"] -eq 1) {
       Write-Host 'You requested to include xplorer² in folder context menus.'
       $ahkArgs += 'C'
    } else {
@@ -66,11 +66,11 @@ If (-not $pp.count) {
 $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
    fileType       = 'EXE'
-   url            = 'https://zabkat.com/3502.exe'
-   url64          = 'https://zabkat.com/3502_64.exe'
+   url            = 'https://zabkat.com/xplorer2_setup.exe'
+   url64          = 'https://zabkat.com/xplorer2_setup64.exe'
    softwareName   = 'xplorer² Pro*'
-   checksum       = 'CFDD351CEC97E5D2D923DBC30BA09AF43846B1BE7C45D0ECA77ACA7BB7C70783'
-   checksum64     = '13D0680AD6F31FE76221E4EC5F713D2FB247315469626464A2A1F5BBC9F9878F'
+   checksum       = '5612b236af9a90d1528fafe7d62c66ea56b8fc97aa9dfadb5880b2472953cd14'
+   checksum64     = 'b689d9f6ddae80c736677574d23992754dc7f54d87c4d4cc8009ca3dbc462fbe'
    checksumType   = 'sha256'
    silentArgs     = $SilentArgs
    validExitCodes = @(0)
