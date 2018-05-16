@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>makemeadmin</id>
+    <version>2.2.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/makemeadmin</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Make Me Admin</title>
+    <authors>Patrick S. Seymour</authors>
+    <projectUrl>https://makemeadmin.com/</projectUrl>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/makemeadmin.png</iconUrl>-->
+    <copyright>Copyright © 2018 Patrick S. Seymour</copyright>
+    <licenseUrl>https://code.sinclair.edu/projects/MAKEMEADMIN/repos/origin/browse/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://code.sinclair.edu/projects/MAKEMEADMIN</projectSourceUrl>
+    <docsUrl>https://makemeadmin.com/docs/</docsUrl>
+    <mailingListUrl>https://makemeadmin.com/contact/</mailingListUrl>
+    <tags>makemeadmin SPACE_SEPARATED</tags>
+    <summary>Temporarily elevate standard users to administrator-level.</summary>
+    <description>Make Me Admin is a simple, open-source application for Windows that allows standard user accounts to be elevated to administrator-level, on a temporary basis.
+
+### How it works:
+The user launches the Make Me Admin application. If they are authorized to obtain administrator rights, and they are not already an administrator, the “Grant Me Administrator Rights” button is enabled.
+
+![MMAUI](https://makemeadmindotcom.files.wordpress.com/2018/01/makemeadminlocalui.png)  
+
+When the user clicks the Grant button, a service, running in the background, adds the user to the Administrators group. The user application notifies the user, and it minimizes to the notification area.
+
+At this point, the user can perform the actions that require administrator rights. When prompted for credentials, they simply enter their current Windows credentials.
+
+After a configurable period, the user is removed from the Administrators group by the service. The user is notified of this, and the application closes.
+
+Consult [the documentation](https://makemeadmin.com/docs/) for information on how to define authorized users, timeouts and other settings.  
+    </description>
+    <releaseNotes>https://code.sinclair.edu/projects/MAKEMEADMIN/repos/origin/commits</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

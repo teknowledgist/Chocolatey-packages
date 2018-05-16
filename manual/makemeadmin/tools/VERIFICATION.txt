@@ -1,0 +1,12 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Download from: https://makemeadmin.com/download/
+
+Direct Download:
+Version      : 2.2.1
+x86 URL      : https://code.sinclair.edu/projects/MAKEMEADMIN/repos/origin/browse/Installers/MakeMeAdmin%202.2.1%20x86.msi?at=6ae5a347b44d0b30c695461da34aa9b70da1faf9&raw
+x86 CheckSum : fecec7ef6dee888c09e8b8c97395f0f208283b9f8e88472202f705b2db549f6c
+x64 URL      : https://code.sinclair.edu/projects/MAKEMEADMIN/repos/origin/browse/Installers/MakeMeAdmin%202.2.1%20x64.msi?at=6ae5a347b44d0b30c695461da34aa9b70da1faf9&raw
+x64 CheckSum : b83eb69e001b3d669aba4e84eed1bf9969dadecfe890a31f383831a62192d024
