@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>hpglviewer</id>
+    <version>5.43.0.20180521</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/hpglviewer</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>HP-GL Viewer</title>
+    <authors>CERN, European Organization for Nuclear Research</authors>
+    <projectUrl>http://service-hpglview.web.cern.ch/service-hpglview/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/hpglviewer_icon.png</iconUrl>
+    <copyright>Copyright © 2011 CERN, European Organization for Nuclear Research</copyright>
+    <licenseUrl>https://service-hpglview.web.cern.ch/service-hpglview/</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>http://service-hpglview.web.cern.ch/service-hpglview/documents/hpglview-543.pdf</docsUrl>
+    <tags>hpgl HP-GL postscript DXF CGM chemistry CERN</tags>
+    <summary>Display, print and convert HP-GL and HP-GL/2 files.</summary>
+    <description>The HP-GL viewer developed at CERN provides fast and accurate display of HP-GL and HP-GL/2 files on a number of platforms and operating systems. It has an intuitive graphical interface and can be used to display, print, and convert files from HP-GL and HP-GL/2 to PostScript, Encapsulated PostScript, DXF, or CGM. It is available for various Unix, PC-Windows and MacIntosh platforms. 
+    </description>
+    <releaseNotes>http://service-hpglview.web.cern.ch/service-hpglview/newfeatures.html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

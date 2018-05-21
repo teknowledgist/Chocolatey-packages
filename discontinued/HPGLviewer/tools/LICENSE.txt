@@ -1,0 +1,142 @@
+No strict license for HPGLview exists.  Below are the only available
+statement regarding use and ownership.
+=======================================================================
+
+Quote from the hpglview website (https://service-hpglview.web.cern.ch/service-hpglview/):
+  "While in the past the CERN HP-GL viewer was sold commercially outside of the 
+   High Energy Physics community, it is nowadays distributed free of charge. "
+
+=======================================================================
+Below is a copy of a document included with the download that includes
+some copyright and conditions of use.
+=======================================================================
+
+
+                               HPGLVIEW
+
+                  Viewer and converter for HP-GL files
+
+                             Version 5.43
+
+
+                       CERN, Geneva, December 2011
+
+
+1. Copyright
+
+The CERN HP-GL viewer software is copyright and sole property of CERN,
+European Organization for Nuclear Research, CH-1211 Geneva 23, Switzerland.
+
+The viewer CGM module is derived from CGM Draw software produced by NIST,
+which in turn is based on gd 1.2, copyright 1994, 1995, Quest Protein
+Database Center, Cold Spring Harbor Labs, USA.
+
+
+2. Conditions of Use Outside CERN
+
+The software and documentation contained herein are provided for the sole
+use of the organization to which they are licensed and may not be
+redistributed or reproduced without the express approval of CERN.  The
+documentation gives information about authorship of the software.  Neither
+the software nor any accompanying material may be sold.  CERN must be given
+credit in all references, documentation, and publications based on the
+software.
+
+Documentation and other information concerning the use and licensing of the
+HP-GL viewer can be obtained via the URL:
+
+  http://cern.ch/hpglview/hpglviewer.html
+
+
+3. General Information
+
+The CERN HP-GL viewer is designed to display legal HP-GL and HP-GL/2 files
+on screen and to allow printing them and converting them to other formats.
+The primary design criteria have been correctness, speed, and portability
+to various platforms.  Versions of the viewer run on Microsoft Windows
+versions 95 and newer, Apple MacOS 8 and newer, and on various Unix variants
+including IBM AIX, Compaq/Digital OSF/1, Hewlett-Packard HP-UX, SGI IRIX,
+Linux, Sun Solaris, and Apple MaxOS X / Darwin.  The current version of the
+viewer understands most of the old HP-GL and the current HP-GL/2 standards
+and extensions with a few exceptions:
+
+  - No support for the Dual-Context Extension, i.e., using raster commands
+    belonging to HP RTL (Raster Transfer Language) or HP PCL (Printer Control
+    Language) command sets, or using the Scalable or Bitmap Fonts command
+    sets.  Such commands are syntactically parsed and skipped without
+    interpreting them.
+
+  - HP PJL (Printer Job Language) headers are parsed and skipped.  The only
+    feature interpreted is the language mode (HPGL / HPGL2), which may,
+    however, be overridden if the file is later found to contain commands
+    belonging solely to the other mode.
+
+  - Minimal support for built-in fonts.  The HP-GL/2 symbol sets supported
+    are:  US ASCII, Roman Extensions, Roman8, Latin1, Latin2, Latin5, and
+    HP-GL Drafting.  The only available typeface is the simple vector stick
+    font.  No other font characteristics are supported.
+
+  - No support for device output and control commands in the Technical
+    Graphics Extension.
+
+  - No support for the commands in the Digitizing Extension.
+
+  - No support for configurable line attributes, i.e., different line ends
+    and joins.
+
+  - Minimal support for advanced merge control and pixel placement commands
+    in the Advanced Drawing Extension.  The merge commands are propagated
+    when saving the file in HP-GL/2 from the viewer but are not interpreted
+    for screen display or for printing on non-HP-GL/2 printers.
+
+Practice has shown that few plot files heavily utilize features outside of
+the set currently supported by the viewer.  However, in the future most of
+the above items are expected to be supported with the exception of device
+control and digitizing commands, which make no sense in the viewer context.
+
+
+4. New and Changed Features in Version 5.43
+ 
+Version 5.43 is a bugfix version based on version 5.42 and as such contains
+no new features.
+
+
+5. Old Licence Files and Version 5.43
+
+Information in this section concerns only existing licensees of the CERN
+HP-GL viewer.
+
+Version 5.43 of the viewer is compatible with the licence files of versions
+5.00, 5.01, 5.20, 5.21, 5.22, 5.30, 5.40, 5.41, and 5.42.  However, since several
+items present in the licence file have been updated, it is highly recommended
+to convert the file to the new format.  Note also that a bug exist in licence
+files created before 2000, which renders the file unusable.  In this case
+a new licence file can be requested from CERN (see below for contact details).
+This can be done with the small utility named licconv available for different
+architectures via the URL:
+
+  http://cern.ch/hpglview/download_index.html
+
+Usage instructions for the converter are contained in the included ReadMe
+file.
+
+
+6. Old Configuration Files and Version 5.43
+
+Version 5.43 of the viewer is able to read old configuration files of versions
+earlier than 5.43 but it only saves them in the new format, which may not be
+properly interpreted by older viewer versions.
+
+
+7. Contact Information
+
+Queries and comments concerning the CERN HP-GL viewer should be addressed to:
+
+  Timo Hakulinen
+  CERN / GS
+  CH-1211, Geneva 23,
+  Switzerland
+
+  email: Timo.Hakulinen@cern.ch
+  phone: +41 22 7679491
+  fax:   +41 22 7667865
