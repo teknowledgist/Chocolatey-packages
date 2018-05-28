@@ -6,8 +6,8 @@ The latest installers are available here:
    https://geodacenter.github.io/download_windows.html
 
 Direct Download:
-Version      : 1.12.1.125
-x86 URL      : https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa-1.12.1.125-Windows-32bit.exe
-x86 CheckSum : 4E6BED43B99C441257BDD36895AD0BF37E204C4C8BB3732813BFA3B95A674E42
-x64 URL      : https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa-1.12.1.125-Windows-64bit.exe
-x64 CheckSum : 4F274974EC270CDCE02EA09658292F1152038E46686591B42607B1B81DFB55EB
+Version      : 1.12.1.129
+x86 URL      : https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa-1.12.1.129-Windows-32bit.exe
+x86 CheckSum : FD366FC16D5DC96C6B12EE339716FCC609EBAD4C59F2A903FE7310B6A9A1FD3D
+x64 URL      : https://s3-us-west-2.amazonaws.com/geodasoftware/GeoDa-1.12.1.129-Windows-64bit.exe
+x64 CheckSum : ADF89E92A0BD3B221D9D88CAEEBDC2865B3A976AE97D3144A28C1D2F5FE10CBD

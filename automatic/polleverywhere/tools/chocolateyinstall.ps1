@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url      = 'https://polleverywhere-app.s3.amazonaws.com/win-stable/2.3.1/PollEverywhere.PowerPointAddInSetup.msi'
-$checksum = '8c4e54d3629e57b21fd31ea8d14b71aa7e72c165b0ab2158809606653f27d970'
+$url      = 'https://polleverywhere-app.s3.amazonaws.com/win-stable/2.4.0/PollEverywhere.PowerPointAddInSetup.msi'
+$checksum = '5fb4c7bb98390d0b527a07288cc6d65c9f7d463ac424919762a80233be8c1087'
 
 $packageArgs = @{
    packageName   = $env:ChocolateyPackageName

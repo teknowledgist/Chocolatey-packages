@@ -6,6 +6,6 @@ Download via the green button on the WizTree homepage:
 http://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/
 
 Direct Download:
-Version  : 3.20
-URL      : https://antibody-software.com/files/wiztree_3_20_setup.exe
-CheckSum : 60BBAD3A21B476A96F979DC640DB42D8B26DD3F10D00206EFAB34E55357BBC18
+Version  : 3.21
+URL      : https://antibody-software.com/files/wiztree_3_21_setup.exe
+CheckSum : 42626A6BA1B2477EE164635F0721D4DD78CEDBD32543E0EC73848C6D42FDDD7D
