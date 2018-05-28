@@ -2,8 +2,8 @@
 $version     = '1.2.8'
 $url32       = 'http://www.olex2.org/olex2-distro/1.2/olex2-win32.zip'
 $url64       = 'http://www.olex2.org/olex2-distro/1.2/olex2-win64.zip'
-$checkSum32  = 'c2c083399e66dbb051f18ac4ddc90f4acdae27cc923ca6df56358147546c04dd'
-$checkSum64  = '8e02debc3ed7d956e88c0fc969b96fd7570fba490d02a6288b2fa6201c83a709'
+$checkSum32  = 'a32bb6a09313595d9be679e9e2806d9cfe890ab7c1930d78cde3af96246ea6ce'
+$checkSum64  = '34afd7bd0d192d78f0a917ede4bc51f638eddc36ff50b1b256773fb902339062'
 
 $InstallDir = Join-Path $env:ProgramData $packageName
 
