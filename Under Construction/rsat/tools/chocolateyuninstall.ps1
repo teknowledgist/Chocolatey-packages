@@ -1,30 +1,25 @@
-﻿#Requires -RunAsAdministrator
+﻿$ErrorActionPreference = 'Stop'
 
-$package = 'RSAT'
-$osInfo = Get-WmiObject Win32_OperatingSystem | SELECT Version, ProductType, Caption
-$osInfo.Version = [version] $osInfo.Version
+$osInfo = Get-WmiObject Win32_OperatingSystem | Select-Object Version,ProductType
 
-if ($osInfo.Version -lt [version]'6.0') {
-    Write-Host 'The Remote System Administration Tool (RSAT) requires Windows Vista, Windows 2008 Server or later.'
-    return
-}
-elseif ($osInfo.ProductType -ne 1) {
-    Write-Host 'The RSAT is built into Windows server OSes, making this effectively a stub package'
-}
+if ($osInfo.ProductType -ne 1) {
+   Write-Warning 'The Remote System Administration Toolkit (RSAT) is built into Windows Server, so it cannot be uninstalled.'
+   Return
+} 
+
+if (([version]$osInfo.Version).Major -eq 6) {
+   $string = 'RemoteServerAdministrationTools'
+} 
 else {
-    if ($osInfo.Version.Major -eq 6) {
-        if ($osInfo.Version.Minor -eq 0) { #Windows Vista
-        }
-        elseif ($osInfo.Version.Minor -eq 1) { #Windows 7
-        }
-        elseif ($osInfo.Version.Minor -eq 2) { #Windows 8
-        }
-		elseif ($osInfo.Version.Minor -eq 3) { #Windows 8.1
-        }
-		dism /online /get-features | Select-String -Pattern remote* | %{$Exec = "dism.exe /online /disable-feature /featurename:RemoteServerAdministrationTools /featurename:" + ($_).ToString().Replace('Feature Name : ',''); Invoke-expression $Exec}
-    }elseif ($osInfo.Version.Major -eq 10) {
-        if ($osInfo.Version.Minor -eq 0) { #Windows 10
-        }
-		dism /online /get-features | Select-String -Pattern rsat* | %{$Exec = "dism.exe /online /disable-feature /featurename:RSATClient /featurename:" + ($_).ToString().Replace('Feature Name : ',''); Invoke-expression $Exec}
-    }
+   $string = 'rsat'
 }
+
+$packages = dism /online /get-packages | 
+               Select-String -Pattern $string -AllMatches | 
+               ForEach-Object {$_.line.split(':')[-1].trim()}
+
+foreach ($package in $packages) {
+   DISM /Online /Remove-Package /NoRestart /PackageName:$package
+}
+
+Write-Warning 'It is recommended that you restart the computer.'
