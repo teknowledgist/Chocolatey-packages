@@ -7,6 +7,6 @@ Download links for older versions (and a link to the current version
 https://www.freefilesync.org/archive.php
 
 Direct Download:
-Version  : 10.0
+Version  : 10.0.0.20180531
 URL      : https://www.freefilesync.org/download/FreeFileSync_10.0_Windows_Setup.exe
-CheckSum : 8AA554EEFC37F30315DD327EE6F99A9D07CE0B3C996F45CB8F933162159B5515
+CheckSum : E1BB810352495373225C9BF004360FEE5695EC50EB0A92FA241D3D2B8BA9F10F

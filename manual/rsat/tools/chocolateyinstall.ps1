@@ -51,7 +51,7 @@ else {
                   $Checksum64 = '3908b653c8bc5567684ab2779ee110dc2c0d56d2a33a329fe5460ecce55aaebe' }
       }
       $html = $web.DownloadString("https://www.microsoft.com/download/confirmation.aspx?id=45520")
-      Write-Host "Installing for managing Windows Server $WS." -ForegroundColor Cyan
+      Write-Host "Installing tools for managing Windows Server $WS." -ForegroundColor Cyan
    }
 
    $urls = select-string '"https[^"]*msu"' -input $html -AllMatches |

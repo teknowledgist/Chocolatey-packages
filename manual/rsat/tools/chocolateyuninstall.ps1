@@ -7,19 +7,15 @@ if ($osInfo.ProductType -ne 1) {
    Return
 } 
 
-if (([version]$osInfo.Version).Major -eq 6) {
-   $string = 'RemoteServerAdministrationTools'
-} 
-else {
-   $string = 'rsat'
-}
-
 $packages = dism /online /get-packages | 
-               Select-String -Pattern $string -AllMatches | 
+               Select-String -Pattern 'rsat|RemoteServerAdministrationTools' -AllMatches | 
                ForEach-Object {$_.line.split(':')[-1].trim()}
 
 foreach ($package in $packages) {
    DISM /Online /Remove-Package /NoRestart /PackageName:$package
+   if ($LASTEXITCODE) {
+      throw "Error $LASTEXITCODE trying to remove $package`nYou may need to reboot first."
+   }
 }
 
 Write-Warning 'It is recommended that you restart the computer.'

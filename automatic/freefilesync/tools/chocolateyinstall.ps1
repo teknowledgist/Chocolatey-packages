@@ -21,7 +21,7 @@ $packageArgs = @{
   fileType     = 'EXE' 
   file         = $fileLocation
   softwareName = "$env:ChocolateyPackageName*"
-  silentArgs   = '\LANG=english_uk'
+  silentArgs   = '/LANG=english_uk'
 }
 
 if (-not (Test-Path $fileLocation)) {
