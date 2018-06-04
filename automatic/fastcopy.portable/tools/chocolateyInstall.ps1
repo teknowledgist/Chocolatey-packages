@@ -9,7 +9,7 @@ if ($Previous) {
 }
 
 if (Get-OSArchitectureWidth -eq '64') {
-   $x64 = '_x64'
+   $x64 = '64'
 }
 
 $FolderName = "FastCopy$x64 $env:ChocolateyPackageVersion"

@@ -1,5 +1,5 @@
-﻿Source:  https://ipmsg.org/tools/license-gpl3.txt
-Also see:  https://ipmsg.org/tools/xxhash-LICENSE.txt
+﻿Source:  https://fastcopy.jp/help/license-gpl3.txt
+Also see:  https://fastcopy.jp/help/xxhash-LICENSE.txt
 ==========================================================
 FastCopy ver3.0 Copyright(C) 2004-2016 by SHIROUZU Hiroaki
 

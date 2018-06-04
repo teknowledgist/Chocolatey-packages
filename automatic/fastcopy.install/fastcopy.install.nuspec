@@ -4,20 +4,20 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy.install</id>
-    <version>3.41</version>
+    <version>3.50</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy.install</packageSourceUrl>
     <owners>Teknowledgist, dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>FastCopy (install)</title>
     <authors>SHIROUZU Hiroaki</authors>
-    <projectUrl>http://ipmsg.org/tools/fastcopy.html.en</projectUrl>
+    <projectUrl>https://fastcopy.jp/en/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/FastCopy_icon.png</iconUrl>
     <copyright>Copyright © 2004-2017 by SHIROUZU Hiroaki</copyright>
-    <licenseUrl>http://ipmsg.org/tools/fastcopy.html.en#license</licenseUrl>
+    <licenseUrl>https://fastcopy.jp/help/fastcopy_eng.htm#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>http://ipmsg.org/archive/FastCopy313src.zip</projectSourceUrl>
+    <projectSourceUrl>https://fastcopy.jp/archive/FastCopy350src.zip</projectSourceUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/fastcopy-bb-eng</mailingListUrl>
-    <docsUrl>http://ipmsg.org/tools/fastcopy.html.en#usage</docsUrl>
+    <docsUrl>https://fastcopy.jp/help/fastcopy_eng.htm</docsUrl>
     <tags>fastcopy copy delete explorer shell notsilent embedded admin</tags>
     <summary>The Fastest Copy/Delete Software on Windows.</summary>
     <description>FastCopy is **the Fastest Copy/Delete Software on Windows**.
@@ -36,20 +36,15 @@ Include/Exclude filter (UNIX Wildcard style) can be specified. In ver3.0 or late
 
 It runs fast and does not hog resources, because MFC is not used. (Designed using Win32 API and C Runtime only)
 
+You can modify this software, because all source code has been opened to the public under the GPL ver3 license.
+
 #### Notes
 
 * This package will install the FastCopy shell extension.
-* Install and uninstall of this package does have a few windows flash open and close.  I.E. This package is not silent, but it is no-touch.
 * Upon uninstall, a .dll file remains locked by explorer and will not be deleted until a reboot.
 
-### Option
-
-* NoSubs - The FastCopy Explorer shell extension choices will not appear in a submenu (as is the default) but rather on the main context menu.
-
-This parameter can be requested on installation of the package like so:
-  `choco install fastcopy.install -params '"/NoSubs"'`
     </description>
-    <releaseNotes>http://ipmsg.org/tools/fastcopy.html.en#history</releaseNotes>
+    <releaseNotes>https://fastcopy.jp/help/fastcopy_eng.htm#history</releaseNotes>
     <language>en-US</language>
     <dependencies>
       <dependency id="autohotkey.portable" version="1.1" />

@@ -1,9 +1,8 @@
 import-module au
 
-$RootURL = 'https://ipmsg.org'
-
 function global:au_GetLatest {
-   $HomePage = Invoke-WebRequest -Uri "$RootURL/tools/fastcopy.html.en"
+   $RootPage = 'https://fastcopy.jp'
+   $HomePage = Invoke-WebRequest -Uri "$RootPage/en/"
 
    $Text = $HomePage.allelements |Where-Object {
                                    ($_.tagname -eq 'th') -and 
@@ -11,37 +10,36 @@ function global:au_GetLatest {
                                 } | Select-Object -First 1 -ExpandProperty innertext
     
    $version = $Text -replace ".*v([\d\.]*).*",'$1'
+   
+   $Source = $HomePage.links | 
+                Where-Object {$_.innertext -eq 'Source code'} | Select-Object -ExpandProperty href
 
-   $Start32 = $HomePage.links | 
-                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc32') -and (
-                                 ($_.href -match 'vector') -or ($_.href -match '\.zip'))} |
-                Select-Object -ExpandProperty href -First 1
-   if ($Start32 -match 'vector') {
-      $DownPage = Invoke-WebRequest -Uri $Start32
+   $x86links = $HomePage.links | 
+                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc32')} |
+                Select-Object -ExpandProperty href -First 2
+   Try { $DownPage = Invoke-WebRequest -Uri $x86links[0] }
+   Catch { $DownPage = Invoke-WebRequest -Uri $x86links[1] }
+   Finally {
       $URL32 = $DownPage.links | 
-                  Where-Object {$_.href -like '*.zip'} | 
-                  Select-Object -First 1 -ExpandProperty href
-   } else { 
-      $URL32 = $RootURL + $Start32
+               Where-Object {$_.href -like '*.zip'} | 
+               Select-Object -First 1 -ExpandProperty href
    }
 
-   $Start64 = $HomePage.links | 
-                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc64') -and (
-                                 ($_.href -match 'vector') -or ($_.href -match '\.zip'))} |
-                Select-Object -ExpandProperty href -First 1
-   if ($Start64 -match 'vector') {
-      $DownPage = Invoke-WebRequest -Uri $Start64
-      $URL64 = $DownPage.links | 
+   $x64links = $HomePage.links | 
+                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc64')} |
+                Select-Object -ExpandProperty href -First 2
+   Try { $DownPage = Invoke-WebRequest -Uri $x64links[0] }
+   Catch { $DownPage = Invoke-WebRequest -Uri $x64links[1] }
+   Finally { $URL64 = $DownPage.links | 
                   Where-Object {$_.href -like '*.zip'} | 
                   Select-Object -First 1 -ExpandProperty href
-   } else {
-      $URL64 = $RootURL + $Start64
    }
 
    return @{ 
-            Version = $version
-            URL32 = $url32
-            URL64 = $url64
+            Version   = $version
+            SourceURL = "$RootPage$Source"
+            URL32     = $url32
+            URL64     = $url64
            }
 }
 
@@ -54,6 +52,9 @@ function global:au_SearchReplace {
          "(^x64 URL\s+:).*"       = "`${1} $($Latest.URL64)"
          "(^x64 Checksum\s+:).*"  = "`${1} $($Latest.Checksum64)"
       }
+      "fastcopy.install.nuspec" = @{
+               "(<projectSourceUrl>).*(</projectSourceUrl>)" = "`$1$($Latest.SourceURL)`$2"
+      }
    }
 }
 
@@ -61,7 +62,7 @@ function global:au_SearchReplace {
 #   (It is dot sourced in the meta-package.)
 if ($MyInvocation.InvocationName -ne '.') { 
    function global:au_BeforeUpdate() { 
-   Write-host "Downloading FastCopy v$($Latest.Version)"
+      Write-host "Downloading FastCopy v$($Latest.Version)"
       Get-RemoteFiles -Purge -NoSuffix
    }
 

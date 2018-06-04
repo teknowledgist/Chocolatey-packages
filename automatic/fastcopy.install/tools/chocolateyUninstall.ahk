@@ -1,17 +1,27 @@
-﻿; Uninstall
-Run, %1%, , Min, setupID
-WinWait, FastCopy Setup
-ControlClick, 2. Uninstall, FastCopy Setup
-ControlClick, Start, FastCopy Setup
-WinWait, UnInstall, Starting
-ControlClick, OK, UnInstall
-WinWait, msg, shell extention
-ControlClick, OK, msg
+﻿DetectHiddenWindows, on
+Run, %1%, , Min
 
-; and close the windows containing what the user is supposed to manually delete
+__Setup:
+winWait, FastCopy Setup, Setup Mode
+;WinHide, FastCopy Setup, Setup Mode
+
+ControlClick, 2. Uninstall, FastCopy Setup, Setup Mode
+ControlClick, Start, FastCopy Setup, Setup Mode
+
+__UnInstall:
+WinWait, UnInstall, Starting, 1
+if ErrorLevel {
+  goto, __Setup
+}
+ControlClick, OK, Install, Starting
+
+__Done:
+WinWait, msg, completed, 3
+if ErrorLevel {
+  goto, __UnInstall
+}
+ControlClick, OK, msg, completed
+
+; close the windows containing what the user is supposed to manually delete
 WinWait, , %ProgramFiles%\FastCopy, 0
 WinClose, , %ProgramFiles%\FastCopy
-WinWait, , %APPDATA%\FastCopy, 0
-WinClose, , %APPDATA%\FastCopy
-
-Process, WaitClose, setupID, 2

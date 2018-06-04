@@ -1,24 +1,48 @@
-﻿; First, install
+﻿DetectHiddenWindows, on
 Run, %1%, , Min
-winWait, FastCopy Setup
-ControlClick, Start, FastCopy Setup
-WinWait, Install, Starting
-ControlClick, OK, Install
-WinWait, Install, The setup was completed
-ControlClick, Launch, Install
 
-; Next, add/update shell extensions
-WinWait, FastCopy ver
-WinMenuSelectItem, FastCopy ver, ,Option,Extensions,Shell Extension
-WinWait, Shell Extension Settings
-ControlGetText, ButtonText, Button1, Shell Extension Settings
-Param = %2%
-if (ButtonText = "Install" AND Param = "") {
-   ; Dont change previous shell extension submenu choice if 
-   ;   updating or if the install-user requests 'NoSubs'.
-   ControlClick, Button7, Shell Extension Settings
-   ControlClick, Button10, Shell Extension Settings
+__Setup:
+winWait, FastCopy Setup, Setup Mode
+;WinHide, FastCopy Setup, Setup Mode
+
+ControlFocus, Edit1, FastCopy Setup, Setup Mode
+SendInput, ^a%ProgramFiles%\FastCopy
+sleep, 100
+ControlClick, Start, FastCopy Setup, Setup Mode
+
+__Install:
+WinWait, Install, Starting, 1
+if ErrorLevel {
+  goto, __Setup
 }
-ControlClick, %ButtonText%, Shell Extension Settings
-WinClose Shell Extension Settings
+ControlClick, OK, Install, Starting
+
+__Done:
+WinWait, Install, The setup was completed, 3
+if ErrorLevel {
+  goto, __Install
+}
+ControlClick, Launch, Install, The setup was completed
+
+; Next, enable shell extensions
+WinWait, FastCopy ver, 1
+if ErrorLevel {
+  goto, __Done
+}
+__Launch:
+WinMenuSelectItem, FastCopy ver, ,Option,Main Settings
+WinWait, Main Settings, 1
+if ErrorLevel {
+  goto, __Launch
+}
+Control, ChooseString, Shell Extension, ListBox1 , Main Settings
+ControlGet, CheckVal, Checked,, Enabled, Shell Extension, for all users
+if (!(CheckVal)) {
+  ControlClick, Button64, Main Settings, for all users
+}
+ControlClick, OK, Main Settings
+__Close:
 WinClose FastCopy ver
+if WinExist(FastCopy ver, Execute) {
+  goto, __Close
+}

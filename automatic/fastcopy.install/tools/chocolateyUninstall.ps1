@@ -3,9 +3,11 @@
 $ProgDir = Join-Path $env:ProgramFiles 'FastCopy'
 
 # Win7 complains the installer didn't run correctly.  This will prevent that.
-Set-Variable __COMPAT_LAYER=!Vista
+#Set-Variable __COMPAT_LAYER=!Vista
 
 & AutoHotkey.exe $(Join-Path $env:ChocolateyPackageFolder 'tools\chocolateyUninstall.ahk') $(Join-Path $ProgDir 'setup.exe') | Out-Null
+
+return
 
 # Uninstall removes desktop/Start Menu icons, but it does not remove the installed program and folder.
 if (Test-Path ($ProgDir)) {
