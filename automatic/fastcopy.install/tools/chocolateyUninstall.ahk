@@ -1,5 +1,4 @@
-﻿DetectHiddenWindows, on
-Run, %1%, , Min
+DetectHiddenWindows, on
 
 __Setup:
 winWait, FastCopy Setup, Setup Mode
@@ -13,7 +12,7 @@ WinWait, UnInstall, Starting, 1
 if ErrorLevel {
   goto, __Setup
 }
-ControlClick, OK, Install, Starting
+ControlClick, OK, UnInstall, Starting
 
 __Done:
 WinWait, msg, completed, 3

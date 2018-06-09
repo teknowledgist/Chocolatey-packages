@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>whitebox.portable</id>
-    <version>3.4.0.20170530</version>
+    <version>3.4.0.20180608</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/whitebox.portable</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -23,9 +23,6 @@
     
     Open-access software can be viewed as a complimentary extension to the traditional open-source software (OSS) model of development. Open-access software is distinct from other OSS in that it has an explicitly stated design goal of reducing barriers to the transfer of knowledge to the user community. Direct insight into the workings of algorithm design and implementation allows for educational opportunities and increases the potential for rapid innovation, experimentation with algorithms, and community-directed development. This is particularly important in geomatics because many geospatial algorithms are complex and are strongly affected by implementation details. Also, there are often multiple competing algorithms for accomplishing the same task and the choice of one method over another can greatly impact the outcome of a workflow. 
     </description>
-    <dependencies>
-      <dependency id="jre8" version="8.0.20" />
-    </dependencies>
     <releaseNotes>##### Whitebox 3.4.0 Has Been Released 
 The following additions/modifications have been made:
 * This is the first release of Whitebox GAT that includes some plugin tools that are compiled to native code rather than running on the Java Runtime Environment. The plan is to develop most tools going forward using natively compiled programming languages and to redevelop some of the existing tools in future releases. The native compiled tools in this release have been developed using the Rust and Go programming languages. Importantly, this change requires that we now distribute versions of Whitebox that include these tools compiled specifically for Windows, Mac, and Linux OSs.
@@ -45,6 +42,9 @@ The following additions/modifications have been made:
 
 Date: 2017-01-25
     </releaseNotes>
+    <dependencies>
+      <dependency id="jre8" version="8.0.20" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

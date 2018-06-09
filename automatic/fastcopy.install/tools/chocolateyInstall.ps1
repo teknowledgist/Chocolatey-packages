@@ -1,5 +1,4 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
-
+﻿$ErrorActionPreference = 'Stop'
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $ZipPath = (Get-ChildItem -Path $toolsDir -filter '*64.zip').FullName
 
@@ -8,13 +7,14 @@ if (get-OSArchitectureWidth 32) {
 }
 
 # Extract zip
-Get-ChocolateyUnzip -FileFullPath $ZipPath -Destination (Join-Path $env:TEMP $env:ChocolateyPackageName)
+$UnZipPath = Get-ChocolateyUnzip -FileFullPath $ZipPath -Destination (Join-Path $env:TEMP $env:ChocolateyPackageName)
 
-$InstallerPath = (Get-ChildItem -Path (Join-Path $env:TEMP $env:ChocolateyPackageName) -filter '*.exe').FullName
+$InstallerPath = (Get-ChildItem -Path $UnZipPath -filter '*.exe').FullName
 
-# Win7 complains the installer didn't run correctly.  This will prevent that.
-#Set-Variable __COMPAT_LAYER=!Vista
+# silent install requires AutoHotKey
+$ahkFile = Join-Path $toolsDir 'chocolateyInstall.ahk'
+$ahkProc = Start-Process -FilePath AutoHotkey -ArgumentList "$ahkFile" -PassThru
+Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
+Write-Debug "Process ID:`t$($ahkProc.Id)"
 
-& AutoHotKey $(Join-Path $toolsDir 'chocolateyInstall.ahk') $InstallerPath
-
-
+Start-ChocolateyProcessAsAdmin -ExeToRun $InstallerPath -WorkingDirectory $UnZipPath

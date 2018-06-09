@@ -1,4 +1,4 @@
-﻿$CheckSum = 'D530E48822CD03B3C3932329DBB92BB3322FECC34635DBB01AB6A9C8C0CF814D'
+﻿$CheckSum = 'd530e48822cd03b3c3932329dbb92bb3322fecc34635dbb01ab6a9c8c0cf814d'
 $url      = 'https://www.uoguelph.ca/~hydrogeo/Whitebox/WhiteboxGAT-win.zip' 
 
 $InstallArgs = @{
@@ -19,28 +19,32 @@ foreach ($file in $files) {
   New-Item "$file.ignore" -type file -force | Out-Null
 }
 
-# All users need modify rights to the logs directory or Whitebox won't start.  
-# By default, only the installing user has modify rights
-$logs = Join-Path (Split-Path $target) "logs"
+$logs = Join-Path (Split-Path $target) 'logs'
 if (-not (Test-Path $logs)) {
    New-Item $logs -ItemType Directory
 }
+
+# All users need modify rights to the logs directory or Whitebox won't start.  
+# By default, only the installing user has modify rights.  This will give
+# Authenticated users modify rights.
 if (Test-Path $logs) {
    Remove-Item "$logs\*" -Recurse
-   $Acl = get-acl $logs
-   $InheritanceFlag = [System.Security.AccessControl.InheritanceFlags]::ContainerInherit -bor [System.Security.AccessControl.InheritanceFlags]::ObjectInherit
-   $rule = New-Object  system.security.accesscontrol.filesystemaccessrule('BUILTIN\Users','Modify',$InheritanceFlag,'none','Allow')
+   $Acl = Get-Acl $logs
+   $InheritanceFlag = [Security.AccessControl.InheritanceFlags]::ContainerInherit -bor [Security.AccessControl.InheritanceFlags]::ObjectInherit
+   # https://superuser.com/a/1176767/671995
+   $sid = New-Object System.Security.Principal.SecurityIdentifier ([Security.Principal.WellKnownSidType]::AuthenticatedUserSid, $null)
+   $rule = New-Object  system.security.accesscontrol.filesystemaccessrule($sid,'Modify',$InheritanceFlag,'none','Allow')
    $Acl.setaccessrule($rule)
-   set-acl $logs $Acl
+   Set-Acl $logs $Acl
 } else {
-   throw "Logs folder does not exist!"
+   throw 'Logs folder does not exist!'
 }
 
 # The program author offered an icon when contacted.
 $icon = Join-Path $InstallArgs.UnzipLocation 'tools\TDAP_Home.ico'
 
 $launcher = Join-Path $InstallArgs.UnzipLocation 'tools\WhiteBox Launcher.exe'
-$JavaExe = 'C:\ProgramData\Oracle\Java\javapath\javaw.exe'
+$JavaExe = "$env:ProgramData\Oracle\Java\javapath\javaw.exe"
 $sg = Join-Path $env:ChocolateyInstall 'tools\shimgen.exe'
 
 & $sg -o $launcher -p $JavaExe -c "-jar '$target'" -i $icon --gui

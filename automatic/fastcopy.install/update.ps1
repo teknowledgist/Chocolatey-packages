@@ -52,8 +52,8 @@ function global:au_SearchReplace {
          "(^x64 URL\s+:).*"       = "`${1} $($Latest.URL64)"
          "(^x64 Checksum\s+:).*"  = "`${1} $($Latest.Checksum64)"
       }
-      "fastcopy.install.nuspec" = @{
-               "(<projectSourceUrl>).*(</projectSourceUrl>)" = "`$1$($Latest.SourceURL)`$2"
+      "$($Latest.PackageName).nuspec" = @{
+         "(<projectSourceUrl>).*(</projectSourceUrl>)" = "`$1$($Latest.SourceURL)`$2"
       }
    }
 }

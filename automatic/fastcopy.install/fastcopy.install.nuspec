@@ -41,7 +41,7 @@ You can modify this software, because all source code has been opened to the pub
 #### Notes
 
 * This package will install the FastCopy shell extension.
-* Upon uninstall, a .dll file remains locked by explorer and will not be deleted until a reboot.
+* Upon uninstall, a .dll file remains locked by explorer and will be deleted upon reboot.
 
     </description>
     <releaseNotes>https://fastcopy.jp/help/fastcopy_eng.htm#history</releaseNotes>

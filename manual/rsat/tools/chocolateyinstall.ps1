@@ -11,8 +11,8 @@ if ($osInfo.Version -lt [version]'6.0') {
 elseif ($osInfo.ProductType -ne 1) {
    Write-Warning 'The Remote System Administration Toolkit (RSAT) is built into Windows Server, so no need for an actual install.'
 }
-elseif ($osInfo.caption -notmatch "(Enterprise|Professional|Ultimate)") {
-   Throw 'The Remote System Administration Toolkit (RSAT) can only install on Professional or Enterprise editions of Windows.'
+elseif ($osInfo.caption -notmatch "(Enterprise|Education|Pro|Ultimate)") {
+   Throw 'The Remote System Administration Toolkit (RSAT) can only install on Professional, Enterprise, or Education editions of Windows.'
 }
 else {
    $web = New-Object Net.WebClient

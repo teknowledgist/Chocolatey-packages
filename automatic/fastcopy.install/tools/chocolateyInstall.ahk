@@ -1,13 +1,16 @@
-﻿DetectHiddenWindows, on
-Run, %1%, , Min
+DetectHiddenWindows, on
 
-__Setup:
 winWait, FastCopy Setup, Setup Mode
 ;WinHide, FastCopy Setup, Setup Mode
 
+__Setup:
 ControlFocus, Edit1, FastCopy Setup, Setup Mode
 SendInput, ^a%ProgramFiles%\FastCopy
 sleep, 100
+ControlGetText, PathVal, Edit1, FastCopy Setup, Setup Mode
+if (PathVal <> ProgramFiles . "\FastCopy") {
+  goto, __Setup
+}
 ControlClick, Start, FastCopy Setup, Setup Mode
 
 __Install:
@@ -25,13 +28,13 @@ if ErrorLevel {
 ControlClick, Launch, Install, The setup was completed
 
 ; Next, enable shell extensions
-WinWait, FastCopy ver, 1
+WinWait, FastCopy ver, DestDir, 1
 if ErrorLevel {
   goto, __Done
 }
 __Launch:
 WinMenuSelectItem, FastCopy ver, ,Option,Main Settings
-WinWait, Main Settings, 1
+WinWait, Main Settings, Default parameters, 1
 if ErrorLevel {
   goto, __Launch
 }
@@ -42,6 +45,7 @@ if (!(CheckVal)) {
 }
 ControlClick, OK, Main Settings
 __Close:
+sleep, 100
 WinClose FastCopy ver
 if WinExist(FastCopy ver, Execute) {
   goto, __Close

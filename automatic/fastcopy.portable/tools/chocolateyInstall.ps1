@@ -1,30 +1,29 @@
-﻿$ErrorActionPreference = 'Stop'  # stop on all errors
+﻿$ErrorActionPreference = 'Stop'
+$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$ZipPath = (Get-ChildItem -Path $toolsDir -filter '*64.zip').FullName
 
-$ToolsDir   = Join-Path $env:ChocolateyPackageFolder 'tools'
-
-# Remove previous versions
-$Previous = Get-ChildItem $env:ChocolateyPackageFolder -filter 'FastCopy*' | ?{ $_.PSIsContainer }
-if ($Previous) {
-   $Previous | % { Remove-Item $_.FullName -Recurse -Force }
+if (get-OSArchitectureWidth 32) {
+   $ZipPath = $ZipPath -replace '64.zip','.zip'
 }
 
-if (Get-OSArchitectureWidth -eq '64') {
-   $x64 = '64'
-}
+# Extract zip
+$UnZipPath = Get-ChocolateyUnzip -FileFullPath $ZipPath -Destination (Join-Path $env:TEMP $env:ChocolateyPackageName)
 
-$FolderName = "FastCopy$x64 $env:ChocolateyPackageVersion"
+$InstallerPath = (Get-ChildItem -Path $UnZipPath -filter '*.exe').FullName
 
-$InstallArgs = @{
-   packageName  = $env:ChocolateyPackageName
-   FileFullPath = (Get-ChildItem $ToolsDir -Filter "*$x64.zip").FullName
-   Destination  = (Join-path $env:ChocolateyPackageFolder $FolderName)
-}
+# silent install requires AutoHotKey
+$ahkFile = Join-Path $toolsDir 'chocolateyInstall.ahk'
+$ahkProc = Start-Process -FilePath AutoHotkey -ArgumentList "$ahkFile","$env:ChocolateyPackageFolder" -PassThru
+Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
+Write-Debug "Process ID:`t$($ahkProc.Id)"
 
-Get-ChocolateyUnzip @InstallArgs
+Start-ChocolateyProcessAsAdmin -ExeToRun $InstallerPath -WorkingDirectory $UnZipPath
 
 # Prevent the installer from being on the path
-$installFile = Join-Path $InstallArgs.Destination "setup.exe"
-if (Test-Path $installFile) {
-  New-Item "$installFile.ignore" -type file -force | Out-Null
+$setupFile = Get-ChildItem -Path $env:ChocolateyPackageFolder -filter '*setup.exe' -Recurse| Select-Object -ExpandProperty FullName
+if ($setupFile) {
+   foreach ($file in $setupFile) {
+      $null = New-Item "$File.ignore" -type file -force
+   }
 }
 

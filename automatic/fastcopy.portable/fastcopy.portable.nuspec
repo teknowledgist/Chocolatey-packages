@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy.portable</id>
-    <version>3.41</version>
+    <version>3.50</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy.portable</packageSourceUrl>
     <owners>Teknowledgist, dtgm, MarkJohnson</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -15,7 +15,7 @@
     <copyright>Copyright © 2004-2017 by SHIROUZU Hiroaki</copyright>
     <licenseUrl>http://ipmsg.org/tools/fastcopy.html.en#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>http://ipmsg.org/archive/FastCopy313src.zip</projectSourceUrl>
+    <projectSourceUrl>https://fastcopy.jp/archive/FastCopy350src.zip</projectSourceUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/fastcopy-bb-eng</mailingListUrl>
     <docsUrl>http://ipmsg.org/tools/fastcopy.html.en#usage</docsUrl>
     <tags>fastcopy copy delete gui cli embedded</tags>

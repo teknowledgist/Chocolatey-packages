@@ -2,25 +2,29 @@
 
 $ProgDir = Join-Path $env:ProgramFiles 'FastCopy'
 
-# Win7 complains the installer didn't run correctly.  This will prevent that.
-#Set-Variable __COMPAT_LAYER=!Vista
+# silent uninstall requires AutoHotKey
+$ahkFile = Join-Path $env:ChocolateyPackageFolder 'Tools\chocolateyUninstall.ahk'
+$ahkProc = Start-Process -FilePath AutoHotkey -ArgumentList "$ahkFile" -PassThru
+Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
+Write-Debug "Process ID:`t$($ahkProc.Id)"
 
-& AutoHotkey.exe $(Join-Path $env:ChocolateyPackageFolder 'tools\chocolateyUninstall.ahk') $(Join-Path $ProgDir 'setup.exe') | Out-Null
+Start-ChocolateyProcessAsAdmin -ExeToRun $(Join-Path $ProgDir 'setup.exe') -WorkingDirectory $ProgDir
 
-return
-
-# Uninstall removes desktop/Start Menu icons, but it does not remove the installed program and folder.
-if (Test-Path ($ProgDir)) {
-   # Test if Explorer locked the extension dll.  
-   $dll = 'FastExt1.dll'
-   If (Get-ProcessorBits -eq '64') { $dll = 'FastEx64.dll' }
-   $Lock = Get-Process | foreach { $processVar = $_; $_.Modules | foreach { if ($_.FileName -like "*$dll") { $processVar.Name }}}
+# Uninstall leaves behind the DLL in use by explorer and sometimes other files
+$DLLpath = (Get-ChildItem -Path $ProgDir -filter '*.dll').FullName
+if (Test-Path $DLLpath) {
+   $Lock = Get-Process | ForEach-Object { 
+               $processVar = $_
+               $_.Modules | ForEach-Object { 
+                  if ($_.FileName -like "$DLLpath") { $processVar.Name }
+               }
+           }
 
    # Register a lock for deletion.
    If ($Lock) {
-      Write-Host "The FastCopy file extension is locked by $Lock. It will be deleted on next reboot." -ForegroundColor Cyan
+      Write-Host "The FastCopy file extension is locked by $Lock. The extension will be deleted on next reboot." -ForegroundColor Cyan
       # Function from: https://gallery.technet.microsoft.com/scriptcenter/Register-FileToDelete-0cbb00bb
-      #   with reference to "system.linq" (requiring .net 3.5+) removed as it is not needed here.
+      #   with the reference to "system.linq" removed as it is not needed here.
       Function Register-FileToDelete {
          [cmdletbinding(SupportsShouldProcess = $True )]
          Param (
@@ -76,11 +80,11 @@ if (Test-Path ($ProgDir)) {
          }
       } #end Register-FileToDelete function
 
-      Register-FileToDelete (Join-Path $ProgDir $dll)
+      Register-FileToDelete $DLLpath
       Register-FileToDelete $ProgDir
 
       # remove everything else
-      Remove-Item (Join-Path $ProgDir '*.*') -Exclude $dll -Force
+      Remove-Item (Join-Path $ProgDir '*.*') -Exclude $(Split-Path $DLLpath -Leaf) -Force
    } else {
       Remove-Item $ProgDir -Recurse -Force 
    }

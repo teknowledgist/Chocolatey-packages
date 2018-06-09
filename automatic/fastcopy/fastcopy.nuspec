@@ -4,21 +4,21 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy</id>
-    <version>3.41</version>
+    <version>3.50</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy</packageSourceUrl>
     <owners>Teknowledgist, dtgm, MarkJohnson</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>FastCopy</title>
     <authors>SHIROUZU Hiroaki</authors>
-    <projectUrl>http://ipmsg.org/tools/fastcopy.html.en</projectUrl>
+    <projectUrl>https://fastcopy.jp/en/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/FastCopy_icon.png</iconUrl>
     <copyright>Copyright © 2004-2017 by SHIROUZU Hiroaki</copyright>
-    <licenseUrl>http://ipmsg.org/tools/fastcopy.html.en#license</licenseUrl>
+    <licenseUrl>https://fastcopy.jp/help/fastcopy_eng.htm#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>http://ipmsg.org/archive/FastCopy313src.zip</projectSourceUrl>
+    <projectSourceUrl>https://fastcopy.jp/archive/FastCopy350src.zip</projectSourceUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/fastcopy-bb-eng</mailingListUrl>
-    <docsUrl>http://ipmsg.org/tools/fastcopy.html.en#usage</docsUrl>
-    <tags>fastcopy copy delete gui cli</tags>
+    <docsUrl>https://fastcopy.jp/help/fastcopy_eng.htm</docsUrl>
+    <tags>fastcopy copy delete notsilent embedded</tags>
     <summary>The Fastest Copy/Delete Software on Windows.</summary>
     <description>FastCopy is **the Fastest Copy/Delete Software on Windows**.
 
@@ -39,10 +39,10 @@ It runs fast and does not hog resources, because MFC is not used. (Designed usin
 You can modify this software, because all source code has been opened to the public under the GPL ver3 license. 
 
     </description>
-    <releaseNotes>http://ipmsg.org/tools/fastcopy.html.en#history</releaseNotes>
+    <releaseNotes>https://fastcopy.jp/help/fastcopy_eng.htm#history</releaseNotes>
     <language>en-US</language>
     <dependencies>
-      <dependency id="fastcopy.portable" version="[3.41]" />
+      <dependency id="fastcopy.portable" version="[3.50]" />
     </dependencies>
   </metadata>
   <files>

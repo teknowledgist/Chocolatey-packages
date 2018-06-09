@@ -6,9 +6,9 @@ The zip files are available on this page:  https://ipmsg.org/tools/fastcopy.html
 
 Direct Download:
 
-Version  : 3.41
-x86 URL      : http://ftp.vector.co.jp/69/93/2323/FastCopy341.zip
-x86 CheckSum : 976059DBC074B51923640D65FA295FFAA3F8CEACB261B2314F170AB9B5834F34
-x64 URL      : http://ftp.vector.co.jp/69/93/2323/FastCopy341_x64.zip
-x64 CheckSum : EE31A89229E9F9625626DDDF3AF944E23F24FE214E5ABFCDCE2067BC386EF506
+Version  : 3.50
+x86 URL      : http://dforest.watch.impress.co.jp/library/f/fastcopy/11574/FastCopy350_installer.zip
+x86 CheckSum : 11AB63C68594E001C3CABFEE48BE3058CC22C15F4DF1DE81BC9ABD2B2EAC383E
+x64 URL      : http://dforest.watch.impress.co.jp/library/f/fastcopy/11575/FastCopy350_installer64.zip
+x64 CheckSum : 981035CC4090935486B0B5318655E4E414BB95425233A0E07A64693D49512FF3
 
