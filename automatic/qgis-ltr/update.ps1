@@ -5,19 +5,24 @@ $DownloadURI = 'https://www.qgis.org/en/site/forusers/download.html'
 function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri $DownloadURI
 
-   $null = $download_page.content.split("`n") |? {$_ -cmatch 'current version is QGIS ([0-9.]*)'}
+   $null = $download_page.content.split("`n") | Where-Object {$_ -cmatch 'current version is QGIS ([0-9.]*)'}
    
-   $newversion = $Matches[1]
+   $NewRelease = $Matches[1]
 
-   $url32 = $download_page.Links | ? {($_.href -match "QGIS.*x86\.exe`$") -and ($_.href -notmatch "$newversion")} | select -ExpandProperty href
-   $url64 = $download_page.Links | ? {($_.href -match "QGIS.*64\.exe`$") -and ($_.href -notmatch "$newversion")} | select -ExpandProperty href
+   $url32 = $download_page.Links | 
+               Where-Object {($_.href -match "QGIS.*x86\.exe`$") -and ($_.href -notmatch "$NewRelease")} | 
+               Select-Object -ExpandProperty href
+   $url64 = $download_page.Links | 
+               Where-Object {($_.href -match "QGIS.*64\.exe`$") -and ($_.href -notmatch "$NewRelease")} | 
+               Select-Object -ExpandProperty href
 
-   $version = $url32 -replace ".*?-([0-9.]+)-.*",'$1'
-   $ShortVer = ([version]$version).tostring(2).Replace('.','')
+   $LTRversion = $url32 -replace ".*?-([0-9.]+)-.*",'$1'
+
 
    return @{ 
-            Version      = $version
-            ShortVersion = $ShortVer
+            Version      = $LTRversion
+            NewRelease   = $NewRelease
+            ShortVersion = ([version]$LTRversion).tostring(2).Replace('.','')
             URL32        = $url32
             URL64        = $url64
            }
@@ -27,6 +32,7 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
    @{
       "tools\chocolateyInstall.ps1" = @{
+         "(^[$]NewRelease = )('.*')"     = "`$1'$($Latest.NewVersion)'"
          "(^   url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
          "(^   url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
          "(^   Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"

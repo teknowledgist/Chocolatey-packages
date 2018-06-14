@@ -1,7 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$NewRelease = $env:ChocolateyPackageVersion
+$LTRversion = 
+
 $InstallArgs = @{
-   packageName    = $env:ChocolateyPackageName
+   packageName    = 'qgis'
    fileType       = 'EXE'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
    url            = 'http://qgis.org/downloads/QGIS-OSGeo4W-3.0.3-1-Setup-x86.exe'
