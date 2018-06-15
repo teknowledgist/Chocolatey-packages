@@ -7,7 +7,7 @@ https://www.petges.lu/download/
 
 Direct Download:
 
-Version  : 9.0.1
-URL      : https://www.petges.lu/pubfiles/ac-900a.exe
-CheckSum : ab0e52fe65e17066784e42ade9b810a2b1b6542b5bf0db804c191afa4c53d4bc
+Version  : 9.10
+URL      : https://www.petges.lu/pubfiles/ac-910.exe
+CheckSum : 3676A4BBFE344436BA938DFDE5C766964FCDA433343FD83A6228564077C0D98B
 

@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
 $packageName= 'anti-beacon' 
-$url        = 'https://download.spybot.info/AntiBeacon/SpybotAntiBeacon-1.6-setup.exe'
-$Checksum   = '9c648ca6a086a0d626b5f4042d51cb78b7641ea380f92f4a9ddbf959fca89c2d'
+$url        = 'https://download.spybot.info/AntiBeacon/SpybotAntiBeacon-2.1-setup.exe'
+$Checksum   = '5ae1cfd967a21399a21b33953fa254c61740c14d844f7a5091986204b8d1e6c2'
 
 $packageArgs = @{
   packageName   = $packageName
