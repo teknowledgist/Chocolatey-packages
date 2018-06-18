@@ -4,12 +4,14 @@ function global:au_GetLatest {
    $Release = 'http://forsys.sefs.uw.edu/fusion'
    $PageText = Invoke-WebRequest -Uri "$Release/fusionlatest.html"
 
-   $HREF = $PageText.links |? {$_.href -match 'install\.exe'} |select -ExpandProperty href
+   $HREF = $PageText.links |
+               Where-Object {($_.href -match '\.exe') -and ($_.href -notmatch 'example')} |
+               Select-Object -ExpandProperty href
 
-   $null = $PageText.rawcontent.split("`n") |? {$_ -match 'Version ([0-9.]+) is the latest version'}
+   $null = $PageText.rawcontent.split("`n") | Where-Object {$_ -match 'Version ([0-9.]+) is the latest version'}
    $Version = $Matches[1]
 
-   $URL = $Release + '/' + $HREF
+   $URL = "$Release/$HREF"
 
    return @{ 
             Version  = $Version
