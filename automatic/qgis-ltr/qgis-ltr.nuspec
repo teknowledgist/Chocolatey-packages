@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qgis-ltr</id>
-    <version>2.18.20</version>
+    <version>2.18.20.20180620</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qgis-ltr</packageSourceUrl>
     <owners>Snowflake, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -24,15 +24,24 @@
     <description>QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.
 
 #### General Features
-* View data -- Spatially-enabled tables and views, vector formats, raster and imagery formats, GRASS raster and vector data and online spacial data.
-* Explore data and compose maps -- Interactively explore spatial data with a friendly GUI.
+* View data -- Spatially-enabled tables and views, vector formats, raster and imagery formats, GRASS raster and vector data and online spatial data.
+* Explore data and compose maps -- Interactively explore spatial data with a friendly GUI with many helpful tools.
 * Create, edit, manage and export data -- Vector and raster layers in several formats.
 * Analyze data -- vector analysis, sampling, geoprocessing, geometry and database management tools including the complete GRASS functionality of more than 400 modules.
-* Publish maps on the Internet
-* Extensable functionality through plugins
+* Publish maps on the Internet -- QGIS can be used as a WMS, WMTS, WMS-C or WFS and WFS-T client, and as a WMS, WCS or WFS server. 
+* Extensible functionality through plugins
 * Python console
 
-#### Parameters
+This package will install the identified, "Long Term Release" version of QGIS intended for stability.  If you want to install a version more rich with features but potentially less stable, try the [package for the latest release of QGIS](https://chocolatey.org/packages/QGIS).  These packages can now co-exist!
+
+#### Keeping old releases
+Upon installation/upgrade, this package will attempt to remove the newest version of QGIS *less than or equal to* this package version.  (It will no longer remove non-"LTR" versions.)  If you would like to skip the uninstallation of any older versions, use the a "Keep" package parameter as follows:
+
+`choco install qgis-ltr -params '"/Keep"'`
+
+This parameter will be ignored if the newest version has the same major.minor value as this package because the QGIS installer won't allow two different builds of the same major.minor release.  (I.E. Version 2.18.14 has the same "2.18" as version 2.18.20.)  This parameter would allow you to keep a v2.14.x install of QGIS when installing a v2.18.x package.
+
+Uninstallation should remove only the installed, Chocolatey package version.
 
     </description>
     <releaseNotes>https://qgis.org/en/site/forusers/visualchangelog218</releaseNotes>

@@ -1,11 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$AppShortVersion = [version](([version]$env:ChocolateyPackageVersion).tostring(2))
+$AppShortVersion = ([version]$env:ChocolateyPackageVersion).tostring(2)
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName "QGIS $AppShortVersion*"
 
 if ($key.Count -eq 1) {
-   $oldVersion = $key[0].PSChildName -replace '([^0-9.]+)','$1'
    $UninstallArgs = @{
       PackageName = $env:ChocolateyPackageName
       FileType    = 'exe'
@@ -14,26 +13,31 @@ if ($key.Count -eq 1) {
    }
    Uninstall-ChocolateyPackage @UninstallArgs
 
+   # The uninstaller starts an "Au_" process and immediately returns.  
+   Write-Host "Despite the line above, $env:ChocolateyPackageName is still uninstalling.  Please wait." -ForegroundColor Cyan
+   Get-Process | Where-Object {$_.path -match '.*Temp.*chocolatey.*Au_.exe'} | Wait-Process
+
+   # The QGIS uninstaller sometimes leaves stuff behind
+   Get-ChildItem HKLM:\SOFTWARE | 
+               Where-Object {$_.name -match "QGIS $AppShortVersion"} | 
+               Remove-Item -Recurse -Force 
+
+   # AND it leaves behind dead, public desktop shortcuts
+   if (Test-Path "$env:PUBLIC\Desktop\QGIS $AppShortVersion") { 
+      Remove-Item "$env:PUBLIC\Desktop\QGIS $AppShortVersion" -Recurse -Force 
+   }
+   $OrphanedLinks = Get-ChildItem "$env:PUBLIC\Desktop\" -Filter "*.lnk" 
+   Foreach ($Item in $OrphanedLinks) {
+      $LinkTarget = (new-object -comobject Wscript.Shell).CreateShortcut($Item.FullName).TargetPath
+      if ($LinkTarget -match "QGIS $AppShortVersion") {
+         Remove-Item $Item.FullName -Recurse -Force 
+      }
+   }
+
 } elseif ($key.Count -gt 1) {
    Throw 'Multiple, previous installs found!  For safety, no uninstall will occur.'
+} elseif ($key.Count -eq 0) {
+  Write-Warning "$env:ChocolateyPackageName $AppShortVersion has already been uninstalled by other means."
 }
 
-# The QGIS uninstaller sometimes leaves stuff behind
-$OldKey = Get-ChildItem HKLM:\SOFTWARE | 
-            Where-Object {$_.name -match "QGIS $AppShortVersion"} |
-            Select-Object -ExpandProperty Name
-if ($OldKey) { $OldKey | Remove-Item -Recurse }
-
-# AND it leaves behind dead, public desktop shortcuts
-$OldLinks = [array]("QGIS $AppShortVersion")
-if (Test-Path "$env:PUBLIC\Desktop\QGIS $AppShortVersion") {
-   $GRASSversion = (Get-ChildItem "$env:PUBLIC\Desktop\QGIS $AppShortVersion" -Filter "*GRASS*" | 
-                     Select-Object -ExpandProperty Name -First 1) -replace ".*GRASS ([0-9.]+).lnk",'$1'
-   $OldLinks += "GRASS GIS $GRASSversion.lnk",'OSGeo4W Shell.lnk'
-}
-Foreach ($item in $OldLinks) {
-   if (Test-Path "$env:PUBLIC\Desktop\$item") { 
-      Remove-Item "$env:PUBLIC\Desktop\$item" -Recurse -Force 
-   }
-}
 

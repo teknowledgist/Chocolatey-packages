@@ -21,8 +21,7 @@ function global:au_GetLatest {
 
    return @{ 
             Version      = $LTRversion
-            NewRelease   = $NewRelease
-            ShortVersion = ([version]$LTRversion).tostring(2).Replace('.','')
+            AppVersion   = $LTRversion
             URL32        = $url32
             URL64        = $url64
            }
@@ -32,14 +31,14 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
    @{
       "tools\chocolateyInstall.ps1" = @{
-         "(^[$]NewRelease = )('.*')"     = "`$1'$($Latest.NewVersion)'"
+         "(^[$]AppVersion = )('.*')"     = "`$1'$($Latest.AppVersion)'"
          "(^   url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
          "(^   url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
          "(^   Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
          "(^   Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
       }
       "qgis-ltr.nuspec" = @{
-         "^(\s*<releaseNotes>.*log)\d\d\d?(<\/releaseNotes>)" = "`${1}$($Latest.ShortVersion)`$2"
+         "^(\s*<releaseNotes>.*log)\d\d\d?(<\/releaseNotes>)" = "`${1}$(([version]($Latest.AppVersion)).tostring(2).Replace('.',''))`$2"
       }
    }
 }

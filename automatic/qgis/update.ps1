@@ -10,17 +10,18 @@ function global:au_GetLatest {
    $NewVersion = $Matches[1]
 
    $url32 = $download_page.Links | 
-   Where-Object {$_.href -match "$version.*x86\.exe`$"} | 
-   Select-Object -ExpandProperty href
+              Where-Object {$_.href -match "$NewVersion.*x86\.exe`$"} | 
+              Select-Object -ExpandProperty href
    $url64 = $download_page.Links | 
-   Where-Object {$_.href -match "$version.*64\.exe`$"} | 
-   Select-Object -ExpandProperty href
+              Where-Object {$_.href -match "$NewVersion.*64\.exe`$"} | 
+              Select-Object -ExpandProperty href
 
    $LTRversion = ($download_page.Links | 
-      Where-Object {
-         ($_.href -match "QGIS.*x86\.exe`$") -and 
-      ($_.href -notmatch "$newversion")} | 
-   Select-Object -ExpandProperty href) -replace ".*?-([0-9.]+)-.*",'$1'
+                    Where-Object {
+                       ($_.href -match "QGIS.*x86\.exe`$") -and 
+                       ($_.href -notmatch "$newversion")
+                    } | Select-Object -ExpandProperty href
+                 ) -replace ".*?-([0-9.]+)-.*",'$1'
 
    return @{ 
       Version    = $NewVersion
