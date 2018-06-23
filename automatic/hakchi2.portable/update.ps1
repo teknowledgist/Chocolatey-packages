@@ -3,14 +3,15 @@ import-module au
 $Release = 'https://github.com/ClusterM/hakchi2/releases/latest'
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $urlstub = $download_page.links | ? {$_.href -match 'hakchi[0-9.]*[a-z]?.zip'} |select -ExpandProperty href
    $url = "https://github.com$urlstub"
 
-   $version = $download_page.links | 
-                  ? {$_.innertext -match 'internal version'} |
-                  select -ExpandProperty innertext
+   $versionstring = $download_page.links | 
+                  ? {$_.OuterHTML -match 'internal version'} |
+                  select -ExpandProperty OuterHTML
+   $version = $versionstring -replace '.*version ([0-9.]+).*','$1'
 
    $InternalVersion = $version -replace '.* ([0-9.]+).*','$1'
 

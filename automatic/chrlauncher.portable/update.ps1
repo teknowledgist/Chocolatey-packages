@@ -3,7 +3,7 @@ import-module au
 $Release = 'https://github.com/henrypp/chrlauncher/releases/latest'
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $regex = 'chrlauncher-.*?-bin.zip'
    $urlstub = $download_page.links |Where-Object {$_.href -match $regex} |Select-Object -ExpandProperty href

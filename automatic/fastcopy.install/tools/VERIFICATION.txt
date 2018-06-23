@@ -6,9 +6,9 @@ The zip files are available on this page:  https://fastcopy.jp/en/
 
 Direct Download:
 
-Version  : 3.50
-x86 URL      : http://dforest.watch.impress.co.jp/library/f/fastcopy/11574/FastCopy350_installer.zip
-x86 CheckSum : 11AB63C68594E001C3CABFEE48BE3058CC22C15F4DF1DE81BC9ABD2B2EAC383E
-x64 URL      : http://dforest.watch.impress.co.jp/library/f/fastcopy/11575/FastCopy350_installer64.zip
-x64 CheckSum : 981035CC4090935486B0B5318655E4E414BB95425233A0E07A64693D49512FF3
+Version  : 3.51
+x86 URL      : http://dforest.watch.impress.co.jp/library/f/fastcopy/11574/FastCopy351_installer.zip
+x86 CheckSum : E92232B9FC3BBD48F988BD09583F8CEC706FE5D26B548063A0E5A421549784FA
+x64 URL      : http://dforest.watch.impress.co.jp/library/f/fastcopy/11575/FastCopy351_installer64.zip
+x64 CheckSum : 379CCFCBD37BA3CA878D26BEDB33D64ED6CE2C4CFEE00294FC485332BECA9F1D
 
