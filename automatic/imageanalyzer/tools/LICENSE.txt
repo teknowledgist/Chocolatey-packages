@@ -1,0 +1,21 @@
+﻿From: <insert applicable license url here>
+
+LICENSE
+
+Conditions for using and copying the software:
+  · I (Michael Vinther) or MeeSoft can not in any way be held responsible for
+    any damage or loss caused by using this software.
+  · The software can only be copied/distributed in its original form (installer
+    or zip archive) unless otherwise agreed with the author.
+  · Distribution of the software on CD-ROMs, Internet or other media is not 
+    allowed without consent from the author.
+This means that you do not have to ask my permission to use it in your company
+or for personal use! It is meant to be free for everyone to use but of course a 
+donation is always appreciated...
+
+Thanks to Markus Oberhumer and Laszlo Molnar for their brilliant EXE compressor
+UPX. (See http://upx.sourceforge.net/)
+This software includes a library created by Anders Melander.
+The JasPerLib DLL which contains the JPEG 2000 stuff is (c) 1999-2000, Image
+Power, Inc. and the University of British Columbia, Canada, see libjasper.txt.
+Most of the filter and palette files was provided by Marian Stach.
