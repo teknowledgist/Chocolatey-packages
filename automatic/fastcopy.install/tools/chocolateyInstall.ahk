@@ -1,3 +1,6 @@
+; This script will exit after 10 seconds
+SetTimer, TimeOut, 10000
+
 DetectHiddenWindows, on
 
 winWait, FastCopy Setup, Setup Mode
@@ -43,10 +46,12 @@ if ErrorLevel {
 }
 WinHide, Main Settings, Default parameters
 Control, ChooseString, Shell Extension, ListBox1 , Main Settings
-ControlGet, CheckVal, Checked,, Enabled, Shell Extension, for all users
+SetTitleMatchMode, RegEx
+ControlGet, CheckVal, Checked,, ^Enable$, ^Main Settings$, For all users
 if (!(CheckVal)) {
-  ControlClick, Button64, Main Settings, for all users
+  ControlClick, ^Enable$, ^Main Settings$, For all users
 }
+SetTitleMatchMode, 1
 ControlClick, OK, Main Settings
 __Close:
 sleep, 100
@@ -54,3 +59,7 @@ WinClose FastCopy ver
 if WinExist(FastCopy ver, Execute) {
   goto, __Close
 }
+ExitApp
+
+TimeOut:
+ExitApp 10
