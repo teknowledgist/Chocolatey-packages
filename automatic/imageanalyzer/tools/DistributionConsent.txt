@@ -1,0 +1,35 @@
+Subject:  Re: Distribution of Image Analyzer
+From:  Michael Vinther <mv@logicnet.dk>
+Date:  6/26/2018 6:50 AM
+To:  Teknowledgist <teknowledgist@gmail.com>
+
+Hi Eric
+You are welcome to do that.
+Best regards,
+Michael
+
+
+tir. 26. jun. 2018 03.42 skrev Teknowledgist <teknowledgist@gmail.com 
+<mailto:teknowledgist@gmail.com>>:
+
+    Michael,
+
+    I am specifically including your full name, Michael Vinther, to try to squeeze
+    past spam filtering.
+
+    Hi. I am interested in making a Chocolatey (https://chocolatey.org) package for
+    Image Analyzer, and I am wondering if you would be willing to give your consent
+    to distribute the unaltered installation executable within the Chocolatey
+    package on the public repository.
+
+    Many Chocolatey packages download a software installer from the download
+    source,
+    but FossHub (your download host) has asked that Chocolatey not download from
+    their site.  If the software license allows or there is express consent,
+    Chocolatey packages can have the binaries "embedded" as a alternative method of
+    distribution and installation.
+
+    Thanks,
+    Erich Hammer
+
+

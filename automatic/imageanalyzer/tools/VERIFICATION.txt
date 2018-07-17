@@ -1,13 +1,14 @@
-﻿
-Note: Include this file if including binaries you have the right to distribute. 
-Otherwise delete. this file. If you are the software author, you can change this
-mention you are the author of the software.
-
-===DELETE ABOVE THIS LINE AND THIS LINE===
-
-VERIFICATION
+﻿VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
-<Include details of how to verify checksum contents>
-<If software vendor, explain that here - checksum verification instructions are optional>
+Downloadable link on the project site:
+   http://logicnet.dk/Analyzer/
+The download is hosted on FossHub at:
+   http://www.fosshub.com/Image-Analyzer.html
+   
+Direct download: 
+Version  : 1.38.4
+URL      : https://www.fosshub.com/Image-Analyzer.html/ImageAnalyzer1.38.4.exe
+Checksum : 0BA1D55C73B733172AD2B3D5DCBFC6135043169D2A6FC1F1CB17A8D8F84DAC14
+

@@ -13,7 +13,8 @@ $InstallerPath = (Get-ChildItem -Path $UnZipPath -filter '*.exe').FullName
 
 # silent install requires AutoHotKey
 $ahkFile = Join-Path $toolsDir 'chocolateyInstall.ahk'
-$ahkProc = Start-Process -FilePath AutoHotkey -ArgumentList "$ahkFile","$env:ChocolateyPackageFolder" -PassThru
+$ahkEXE = gci "$env:ChocolateyInstall\lib\autohotkey.portable" -Recurse -filter autohotkey.exe
+$ahkProc = Start-Process -FilePath $ahkEXE.FullName -ArgumentList "$ahkFile","$env:ChocolateyPackageFolder" -PassThru
 Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
 Write-Debug "Process ID:`t$($ahkProc.Id)"
 

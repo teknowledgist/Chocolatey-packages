@@ -1,4 +1,4 @@
-﻿From: <insert applicable license url here>
+﻿From: README.txt included in download
 
 LICENSE
 
