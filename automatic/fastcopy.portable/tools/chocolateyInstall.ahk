@@ -1,3 +1,6 @@
+; This script will exit after 10 seconds
+SetTimer, TimeOut, 10000
+
 DetectHiddenWindows, on
 Dest = %1%
 
@@ -24,3 +27,7 @@ if (PathVal <> Dest) {
 ControlClick, OK, FastCopy, Select the location to extract
 sleep, 1000
 WinClose, %Dest%
+ExitApp
+
+TimeOut:
+ExitApp 10

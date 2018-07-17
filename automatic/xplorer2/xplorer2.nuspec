@@ -2,7 +2,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
     <id>xplorer2</id>
-    <version>3.5.0.2</version>
+    <version>4.0.0.2</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xplorer2pro</packageSourceUrl>
     <owners>Werner van Deventer, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -17,7 +17,7 @@
     <docsUrl>http://zabkat.com/x2h_0.htm</docsUrl>
     <mailingListUrl>http://netez.com/bbs/</mailingListUrl>
     <bugTrackerUrl>http://zabkat.com/contact.htm</bugTrackerUrl>
-    <tags>xplorer2 xplorer explorer file browser manager notsilent admin</tags>
+    <tags>xplorer2 xplorer explorer file browser manager notsilent</tags>
     <summary>Reclaim control of your files and folders.</summary>
     <description>**xplorer² Lite** is utterly affordable file management power.
 

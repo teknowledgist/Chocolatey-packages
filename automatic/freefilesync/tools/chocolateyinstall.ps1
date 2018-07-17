@@ -21,10 +21,13 @@ $packageArgs = @{
   fileType     = 'EXE' 
   file         = $fileLocation
   softwareName = "$env:ChocolateyPackageName*"
-  silentArgs   = '/LANG=english_uk'
+  silentArgs   = '/LANG=english'
 }
 
 if (-not (Test-Path $fileLocation)) {
+   if (get-process -id $ahkProc.Id -ErrorAction SilentlyContinue) {
+      stop-process -id $ahkProc.Id
+   }
    Throw ("$env:ChocolateyPackageName installer executable not found!`n" +
             "`tThis is an embedded package, so the most probable cause is that`n" +
             "`tanti-virus/anti-malware software has incorrectly removed it.`n" +

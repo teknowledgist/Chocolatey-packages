@@ -2,7 +2,7 @@
 
 $packageName = $env:ChocolateyPackageName
 $url         = 'http://zabkat.com/xplorer2_lite_setup.exe'
-$Checksum    = 'ac5da518eb766594bb2ae3153dcaddb2f82732b12e806baff01cb25b5e508765'
+$Checksum    = 'ccce1a1308faeafb56f41965bbb0d4c952f41ff51b2e7d19a1707d4a7786d8cf'
 
 # silent install requires AutoHotKey
 $ahkExe = 'AutoHotKey'
