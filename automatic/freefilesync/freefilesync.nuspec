@@ -24,9 +24,6 @@
 
 ##### Antivirus note
 The installer for the public versions of FreeFileSync was built with the option to show and ad or offer additional software.  Some anti-virus/anti-malware programs flag the installer as potentially dangerous.  This package has been configured and tested to *not install additional software*.  [See a statement about malware/adware warnings on the FreeFileSync FAQ here.](https://www.freefilesync.org/faq.php#virus)  If the warnings are a concern, [consider donating to the creator of FreeFileSync](https://www.freefilesync.org/donate.php) for the ability to download an unburdened installer.
-
-#### Non-English Windows users
-This package is currently not silent or automatic when called on non-English installations of Windows.
     </description>
     <releaseNotes>
 * [RSS News](http://www.freefilesync.org/news-feed.php)

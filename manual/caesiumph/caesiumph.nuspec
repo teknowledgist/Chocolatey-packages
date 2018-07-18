@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>caesiumph</id>
+    <version>0.9.5-beta</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/caesiumph</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>CaesiumPH</title>
+    <authors>Matteo Paonessa</authors>
+    <projectUrl>https://saerasoft.com/caesium/ph/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/caesiumph_icon.png</iconUrl>
+    <copyright>Copyright © 2016 SaeraSoft and Matteo Paonessa</copyright>
+    <licenseUrl>https://github.com/Lymphatus/CaesiumPH/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Lymphatus/CaesiumPH</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/Lymphatus/CaesiumPH/issues</bugTrackerUrl>
+    <tags>caesiumph caesium lossless image compression jpeg FOSS embedded</tags>
+    <summary>Lossless JPEG compression for photographers and webmasters.</summary>
+    <description>CaesiumPH is a small, simple application that does one single job: compressing JPEGs images without any loss of quality. It means that the image is exactly the same as before the process, but about 15-20% smaller in size. So, you just save space without losing absolutely anything. I would try it out.
+    </description>
+    <releaseNotes>https://github.com/Lymphatus/CaesiumPH/blob/master/CHANGELOG.md</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2013" version="12.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

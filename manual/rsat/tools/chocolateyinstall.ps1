@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$osInfo = Get-WmiObject Win32_OperatingSystem | Select-Object Version, ProductType, Caption
+$osInfo = Get-WmiObject Win32_OperatingSystem | Select-Object Version, ProductType, Caption, OperatingSystemSKU
 
 Write-host "Detected:  $($osInfo.Caption)" -ForegroundColor Cyan
 
@@ -11,7 +11,10 @@ if ($osInfo.Version -lt [version]'6.0') {
 elseif ($osInfo.ProductType -ne 1) {
    Write-Warning 'The Remote System Administration Toolkit (RSAT) is built into Windows Server, so no need for an actual install.'
 }
-elseif ($osInfo.caption -notmatch "(Enterprise|Education|Pro|Ultimate)") {
+# See here for determining the edition of Windows via SKU:
+#   https://superuser.com/questions/1328506/windows-edition-on-non-english-systems
+# The list below are the valid SKUs for Windows editions that can have RSAT
+elseif ((1,4,6,16,27,28,48,49,70,72,84,103,121,122,125,126,129,130,133,161,162) -notcontains ($osInfo.OperatingSystemSKU)) {
    Throw 'The Remote System Administration Toolkit (RSAT) can only install on Professional, Enterprise, or Education editions of Windows.'
 }
 else {

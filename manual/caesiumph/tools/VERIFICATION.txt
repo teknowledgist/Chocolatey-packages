@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The installer is available on this page:  
+https://saerasoft.com/caesium/ph/#download
+
+Direct Download:
+
+Version  : 0.9.5-beta
+URL      : https://github.com/Lymphatus/CaesiumPH/releases/download/v0.9.5-beta/caesiumph-0.9.5-beta.exe
+CheckSum : 71566df1793f3cc1cfd75570bc3a3b93893899a7e21312d45d9a2429bd0f512a
+

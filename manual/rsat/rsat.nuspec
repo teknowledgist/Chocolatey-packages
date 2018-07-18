@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>rsat</id>
-    <version>2.1803.0.20180604</version>
+    <version>2.1803.0.201806011</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/rsat</packageSourceUrl>
     <owners>Teknowledgist, lowmach1ne</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -21,7 +21,7 @@
     <description>Remote Server Administration Tools (RSAT) enables IT administrators to remotely manage roles and features in versions of Windows Server since 2008 R2 from a computer that is running Windows 10, Windows 8.1, Windows 8, Windows 7, or Windows Vista.
 
 ### Notes
-* RSAT will install *only* on Professional, Education, or Enterprise (or LTSB/LTSC) editions of Windows.  You cannot install RSAT on computers that are running Home or Standard editions of Windows. 
+* RSAT will install *only* on Business, Ultimate, Professional, Education, or Enterprise (or LTSB/LTSC) editions of Windows.  You cannot install RSAT on computers that are running Home or Standard editions of Windows. 
 * For Windows Vista and Windows 7, the individual tools for the roles and features must be enabled after you install RSAT. 
 * This package will install the latest version of RSAT for the running Windows OS **unless** it is Windows 10 **AND** the `Server` package parameter is used as follows:
 
