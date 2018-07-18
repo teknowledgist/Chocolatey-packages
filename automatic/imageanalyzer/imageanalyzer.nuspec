@@ -12,8 +12,8 @@
     <projectUrl>http://logicnet.dk/Analyzer/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/imageanalyzer_icon.png</iconUrl>
     <copyright>Copyright © 2000-2017, Michael Vinther</copyright>
-    <!-- <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/imageanalyzer/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://logicnet.dk/Analyzer/help.htm</docsUrl>
     <mailingListUrl>http://meesoft.logicnet.dk/support/viewforum.php?id=2</mailingListUrl>
     <tags>imageanalyzer image edit analysis enhancement </tags>
@@ -41,7 +41,7 @@
 * Math expression module for creating and transforming images and advanced "pocket" calculator with equation solver
 * Plugin system for adding more specialized features. [See here for available plugins.](http://logicnet.dk/Analyzer/plugins/)
 
-</description>
+    </description>
     <releaseNotes>Changes in version 1.38  (2016-10-22):
 * Improved support for Windows large fonts setting (disable display scaling on high DPI monitors)
 * JPEG XR import
@@ -56,31 +56,12 @@
 * Blackman resize mode
 * Support for high DPI monitors
 * Support for more BMP, CR2 and TIFF variants
-</releaseNotes>
-    <!-- =============================== -->      
-
-    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    </releaseNotes>
     <!--<dependencies>
-      <dependency id="" version="__MINIMUM_VERSION__" />
-      <dependency id="" version="[__EXACT_VERSION__]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
-      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
-      <dependency id="" />
       <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>-->
-    <!-- chocolatey-core.extension - https://chocolatey.org/packages/chocolatey-core.extension
-         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
-         - You want to use Get-PackageParameters and on less than 0.11.0
-         - You want to take advantage of other functions in the core community maintainer's team extension package
-    -->
-
-    <!--<provides>NOT YET IMPLEMENTED</provides>-->
-    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
-    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
   </metadata>
   <files>
-    <!-- this section controls what actually gets packaged into the Chocolatey package -->
     <file src="tools\**" target="tools" />
-    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
   </files>
 </package>
