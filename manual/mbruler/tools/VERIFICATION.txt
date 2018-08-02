@@ -1,0 +1,19 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The installers are available on this page:  
+http://www.markus-bader.de/MB-Ruler/download.php
+
+Direct Download of installer for Windows XP, 7 and 8:
+-----------------------------------------------------
+Version  : 5.3
+URL      : http://www.markus-bader.de/MB-Ruler/mbruler53.zip
+CheckSum : f7a245c32e0f9a4336e36b9b500fe750fb71b16574bf957287cf56c86ec210b5
+
+
+Direct Download of installer for Windows 10:
+--------------------------------------------
+Version  : 5.3
+URL      : http://www.markus-bader.de/MB-Ruler/mbruler53_10.zip
+CheckSum : b18eaa214c02bcd85ec271238382b646b0a19b0f35d65f5738a6c4343a619553

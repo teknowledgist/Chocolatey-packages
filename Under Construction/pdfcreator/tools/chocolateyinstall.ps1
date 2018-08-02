@@ -17,12 +17,11 @@ $installArgs = $('' +
 )
 
 $toolsPath = Split-Path -parent $MyInvocation.MyCommand.Definition
-$fileLocation = (Get-ChildItem -Path $toolsPath -Filter '*.exe').FullName
 
 $packageArgs = @{
   packageName    = $env:ChocolateyPackageName
   fileType       = 'exe'
-  file           = $fileLocation
+  file           = "$toolsPath\PDFCreator-3_2_2-Setup.exe"
   softwareName   = 'PDFCreator'
   silentArgs     = $installArgs
   validExitCodes = @(0)
@@ -46,12 +45,13 @@ catch {
 
 # silent install requires AutoHotKey
 $ahkFile = Join-Path $toolsPath 'chocolateyInstall.ahk'
-$ahkProc = Start-Process -FilePath AutoHotkey -ArgumentList "$ahkFile" -PassThru
+$ahkEXE = gci "$env:ChocolateyInstall\lib\autohotkey.portable" -Recurse -filter autohotkey.exe
+$ahkProc = Start-Process -FilePath $ahkEXE.FullName -ArgumentList "$ahkFile" -PassThru
 Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
 Write-Debug "Process ID:`t$($ahkProc.Id)"
 
 Install-ChocolateyInstallPackage @packageArgs
 
-New-Item "$fileLocation.ignore" -Type file -Force | Out-Null
+Get-ChildItem $toolsPath\*.exe | ForEach-Object { New-Item "$_.ignore" -Type file -Force | Out-Null}
 
 if (get-process -id $ahkProc.Id -ErrorAction SilentlyContinue) {stop-process -id $ahkProc.Id}

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mbruler</id>
-    <version>5.3.0.20170727</version>
+    <version>5.3.0.20180802</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mbruler</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -18,18 +18,31 @@
     <docsUrl>http://www.markus-bader.de/MB-Ruler/tutorial.php</docsUrl>
     <mailingListUrl>http://www.markus-bader.de/MB-Ruler/maillist.php</mailingListUrl>
     <bugTrackerUrl>http://mb-ruler.idea.informer.com/</bugTrackerUrl>
-    <tags>ruler measure distance scale protractor angle notsilent admin</tags>
+    <tags>ruler measure distance scale protractor angle embedded notsilent</tags>
     <summary>A triangular screen ruler for on-screen measurements.</summary>
-    <description>MB-Ruler helps you to measure distances and angles on the screen and distances on a map.
+    <description>MB-Ruler offers several measurement instruments for measuring distances and angles on the screen.
 
-The set square with integrated protractor is almost transparent, so you can have it on the screen, while you are working with the applications below.
+All measurement instruments are displayed in an unobtrusive, almost-transparent layer above all other items on the screen.  Therefore, you can integrate its use neatly with other applications while continuing to work with the applications below the MB-Ruler.
 
-Additionally it has a screen loupe function, a RGB value window and you can place temporary points, lines, rectangles, ellipses, polylines, texts and bitmaps as markers on the screen. 
+#### Features
+* triangular ruler
+* coordinate system
+* screen cutter (for the easy creation of screen shots)
+* RGB picker
+* screen loupe
+* overlay objects
+* remote interface
+
+The general use of MB-Ruler is very easy. All functions can be accessed through the context menu (right mouse button) of the MB-Ruler Icon in the taskbar.  Help on using MB-Ruler can be found [here](http://www.markus-bader.de/MB-Ruler/help/quickstart.freeware.htm) and [here](http://www.markus-bader.de/MB-Ruler/tutorial.php).
+
+### License
+MB-Ruler is freeware for private and **non-commercial** use.  
+If you use MB-Ruler in a commercial environment, you must order a license after a test period of 14 days.
+[Read more about ordering commercial MB-Ruler licenses here.](http://www.markus-bader.de/MB-Ruler/commercialuse.php)
     </description>
-    <releaseNotes>http://www.markus-bader.de/MB-Ruler/download.php</releaseNotes>
+    <releaseNotes>http://www.markus-bader.de/MB-Ruler/help/history.freeware.htm</releaseNotes>
     <dependencies>
-<!--      <dependency id="autohotkey.portable" version="1.1" />
--->    </dependencies>
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

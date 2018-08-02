@@ -40,24 +40,104 @@
       [parameter][String[]] $Protocol = 'http'
    )
 
-   #Get the value from here
-   $userchoice = 'HKEY_CURRENT_USER\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\http\UserChoice'
-   $UCkey = 'progid'
+
+
+# This is one possible method of capturing URLs.  It uses the "debug" method
+#   similar to how Notepad2 replaces Notepad.  The process works for
+#   "regular" browsers for all Windows in that an EXE can be called in 
+#   place of another.  However, the extended command switches for 
+#   cmd.exe appear to not work.
+$HTTPDefault = (Get-ItemProperty 'registry::HKEY_CLASSES_ROOT\http\shell\open\command').'(default)' -replace '^.*\\(.*?\.exe)".*','$1'
+
+$RedirectKey = "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\$HTTPDefault"
+$RedirectCommand = '"c:\windows\system32\cmd.exe" /c echo > "' + (Join-Path $WorkingFolder 'CapturedCall.txt') + '"'
+$exists = Test-Path $RedirectKey
+if (-not $exists) {
+   New-Item $RedirectKey -Force | Write-Debug
+} 
+   New-ItemProperty -Path $RedirectKey -Name "Debugger" -Value $RedirectCommand -Force | Write-Debug
+
+Install-ChocolateyPackage @InstallArgs
+
+if (-not $exists) {
+   Remove-Item $RedirectKey -Recurse
+} else {
+   Remove-ItemProperty -Path $RedirectKey -Name 'Debugger' -Force
+}
+
+
+
+# This method only works in Win7 because Win10 has protected default applications
+#   with a "secret" hash (see: https://kolbi.cz/blog/?p=346).
+$Protocols = 'http','https'
+$ToRemove = @{}
+$UserChoice = @{}
+foreach ($p in $Protocols) {
+   $UserChoiceKey = "HKCU:\Software\Microsoft\Windows\Shell\Associations\UrlAssociations\$p\UserChoice"
+   if (Test-Path $UserChoiceKey) {
+      # Collect the user's default http(s) handler(s)
+      $UserChoice.$p = (Get-ItemProperty $UserChoiceKey).progid
+   }
+   else {
+      # If the user hasn't set a default, create the default keys
+      $KeyPath = 'HKCU:\Software\Microsoft\Windows\Shell\Associations'
+      if (-not (Test-Path $KeyPath)) {
+         $null = New-Item $KeyPath -Force
+         if (-not $ToRemove.$p) {$ToRemove.$p += $KeyPath}
+      }
+      $KeyPath += '\UrlAssociations'
+      if (-not (Test-Path $KeyPath)) {
+         $null = New-Item $KeyPath -Force
+         if (-not $ToRemove.$p) {$ToRemove.$p += $KeyPath}
+      }
+      $KeyPath += "\$p"
+      if (-not (Test-Path $KeyPath)) {
+         $null = New-Item $KeyPath -Force
+         if (-not $ToRemove.$p) {$ToRemove.$p += $KeyPath}
+      }
+      $KeyPath += '\UserChoice'
+      if (-not (Test-Path $KeyPath)) {
+         $null = New-Item $KeyPath -Force
+         if (-not $ToRemove.$p) {$ToRemove.$p += $KeyPath}
+      }
+   }
+   # Now set the default handler
+   Set-ItemProperty $UserChoiceKey -Name 'progid' -Value 'ChocoURLCapture' -Force
+}
+
+# Create the default handler information
+$CaptureKey = 'HKCU:\Software\Classes\ChocoURLCapture'
+New-Item $CaptureKey  -Force
+New-Item "$CaptureKey\Shell" -Value 'open' -Force
+New-Item "$CaptureKey\Shell\open" -Force
+New-Item "$CaptureKey\Shell\open\command" -Value "cmd.exe /u /d /c `"echo %1 >>$env:Temp\ChocolateyBlockedURLs.txt`"" -Force
+
+try {
+   Install-ChocolateyPackage @InstallArgs
+}
+catch {
    
-   # save it and set the value to ChocoURLCapture
+}
+Finally {
+   foreach ($p in $Protocols) {
+      if ($UserChoice.$p) {
+         Set-ItemProperty $UserChoiceKey -Name 'progid' -Value $UserChoice.$p -Force
+      } else {
+         $null = Remove-Item $ToRemove.$p -Recurse -Force
+      }
+   }
+   $null = Remove-Item $CaptureKey -Recurse -Force
+}
 
-   #Then create the registry keys
-   $regstring = @'
-[HKEY_CURRENT_USER\Software\Classes\ChocoURLCapture\Shell]
-@="open"
 
-[HKEY_CURRENT_USER\Software\Classes\ChocoURLCapture\Shell\open]
 
-[HKEY_CURRENT_USER\Software\Classes\ChocoURLCapture\Shell\open\command]
-@="cmd.exe /u /d /c "echo %1 >c:\users\master\desktop\urls.txt""
-'@
+
 
 
 }
 
 Set-Alias -Name Block-InstallerURLs
+
+
+
+

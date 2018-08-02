@@ -1,47 +1,25 @@
 $ErrorActionPreference = 'Stop'  # stop on all errors
-$packageName  = 'mbruler'
-$version = '5.3'
 
-$URL = "http://www.markus-bader.de/MB-Ruler/$packageName$($version.replace('.','')).zip"
-$WorkingFolder = Join-Path -Path $env:TEMP -ChildPath $packageName
+$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$osVersion = [version](Get-WmiObject Win32_OperatingSystem | Select-Object -ExpandProperty Version)
 
-
-$PackageArgs = @{
-  PackageName = $packageName
-  FileFullPath = Join-Path -Path $WorkingFolder -ChildPath "$packageName$($version.replace('.','')).zip"
-  Url = $URL
-  checkSum = 'F7A245C32E0F9A4336E36B9B500FE750FB71B16574BF957287CF56C86EC210B5'
+if ($osVersion.Major -lt 10) {
+   $fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*.zip' | ? {$_.name -notmatch '_10'}).FullName
+} else {
+   $fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*_10.zip').FullName
 }
-  
-# Download zip
-Get-ChocolateyWebFile @PackageArgs
- 
+
+$WorkingFolder = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:ChocolateyPackageVersion"
+
 # Extract zip
-Get-ChocolateyUnzip $PackageArgs.FileFullPath $WorkingFolder
+Get-ChocolateyUnzip -FileFullPath $fileLocation -Destination $WorkingFolder
 
 $InstallArgs = @{
-   packageName   = $packageName
+   packageName   = $env:ChocolateyPackageName
    fileType      = 'exe'
-   url = Join-Path -Path $WorkingFolder -ChildPath (Get-ChildItem -Path "$WorkingFolder\*.exe").Name
-   silentArgs = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+   File          = (Get-ChildItem -Path "$WorkingFolder\*.exe").FullName
+   silentArgs    = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
    validExitCodes= @(0)
 }
 
-# Determine default browser
-$HTTPDefault = (Get-ItemProperty 'registry::HKEY_CLASSES_ROOT\http\shell\open\command').'(default)' -replace '^.*\\(.*?\.exe)".*','$1'
-
-$RedirectKey = "HKLM:\Software\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\$HTTPDefault"
-$RedirectCommand = '"c:\windows\system32\cmd.exe" /c echo > "' + (Join-Path $WorkingFolder 'CapturedCall.txt') + '"'
-$exists = Test-Path $RedirectKey
-if (-not $exists) {
-   New-Item $RedirectKey -Force | Write-Debug
-} 
-   New-ItemProperty -Path $RedirectKey -Name "Debugger" -Value $RedirectCommand -Force | Write-Debug
-
-Install-ChocolateyPackage @InstallArgs
-
-if (-not $exists) {
-   Remove-Item $RedirectKey -Recurse
-} else {
-   Remove-ItemProperty -Path $RedirectKey -Name 'Debugger' -Force
-}
+Install-ChocolateyInstallPackage @InstallArgs

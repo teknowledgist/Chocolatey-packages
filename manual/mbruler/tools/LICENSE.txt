@@ -1,0 +1,41 @@
+MB-Ruler does not have a comprehensive license statement.  The following
+are exerps from various sources related to MB-Ruler:
+
+================================================
+From:  The "ReadMe.txt" file in the installation
+-------------------------------------------------
+MB-Ruler is freeware. You can distribute it freely on any media in the
+complete package (ZIP file).
+
+MB-Ruler is distributed AS IS.
+=================================================
+
+=================================================
+From:  http://www.markus-bader.de/MB-Ruler/download.php
+-------------------------------------------------
+MB-Ruler works on WinXP / Windows Vista / Windows 7 / Windows 8 and Windows 10.
+ You can distribute it freely on any media in the complete package (ZIP file), which you can download here. 
+
+MB-Ruler is freeware for private and non commercial use.
+ If you use MB-Ruler in a commercial enviroment, you have to order a license after a test period of 14 days.
+=================================================
+
+=================================================
+From: License Agreement window of Installer:
+-------------------------------------------------
+MB-Ruler is freeware for private and non commercial use.
+
+If you use MB-Ruler in a commercial enviroment, you have to order a MB-Ruler license after a test period of 14 days.
+Please have a look a the help file installed with this setup for details how to order the licenses
+- or have a look at http://www.markus-bader.de/MB-Ruler/commercialuse.php
+=================================================
+
+=================================================
+From: http://www.markus-bader.de/MB-Ruler/purchaselicense.php
+-------------------------------------------------
+MB-Ruler is freeware for private and non commercial use - and you do not need a license.
+But if 
+•you use MB-Ruler in a commercial enviroment and/or
+•want to use up to four of the user defined measure instruments,
+you have to order a MB-Ruler seat license after a test period of 14 days.
+=================================================

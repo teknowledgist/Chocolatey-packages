@@ -1,56 +1,71 @@
 ﻿$ErrorActionPreference = 'Stop'
-$packageName = 'sketchup'
-$version = '2016.1.1449'
 
+if (Get-ProcessorBits -compare 32) {
+   $msg = "SketchUp Make/Pro 2017 is 64-bit only.  `n" + 
+          "The 2016 release is the last version available for this 32-bit system."
+   Throw $msg
+   Return
+}
+
+$pp = Get-PackageParameters
+if ($pp.contains('Keep')) {
+   Write-Host "You wish to keep the 2016 version of Sketchup." -ForegroundColor Cyan
+   Write-Warning "Note:  Chocolatey will not be able to uninstall the 2016 version of Sketchup."
+} else {
+   [array]$Keys = Get-UninstallRegistryKey -SoftwareName "SketchUp 2016"
+   if ($Keys) {
+      if ($Keys.Count -gt 1) {
+         Write-Warning "Multiple, previously-installed versions of SketchUp 2016 found."
+         Write-Warning "They will **not** be uninstalled."
+      } elseif ($Keys.Count -eq 1) {
+         $AppID = $Keys[0].UninstallString.split('{')[-1].trim('}')
+
+         $UninstallArgs = @{
+            ExeToRun       = "msiexec.exe"
+            Statements     = "/x{$AppID} /qn /norestart"
+            ValidExitCodes = @(0)
+         }
+         Write-Host "Uninstalling Sketchup v2016." -ForegroundColor Cyan
+         $null = Start-ChocolateyProcessAsAdmin @UninstallArgs
+         # The uninstaller starts another process and immediately returns.  
+         Get-Process | Where-Object {$_.path -match '.*Temp.*chocolatey.*Au_.exe'} |wait-process
+      }
+   }
+}
+
+# Look here for older versions:
+#    https://help.sketchup.com/en/downloading-older-versions
 $UnzipArgs = @{
-   PackageName    = $packageName
-   url            = 'https://dl.trimble.com/sketchup/2016/en/SketchUpPro-2016-1-1450-80430-en-x86.exe'
-   url64          = 'https://dl.trimble.com/sketchup/2016/en/SketchUpPro-2016-1-1449-80430-en-x64.exe'
-   checksum       = 'B0DAA3C6056FA72BE006DDB9DA87CF908336F6E948A0A131B2CDF10BADF6EEA2'
-   checksum64     = 'D4632178EDD8DF013C27FC752188516C2325942FA074F432340131E0479DC98C'
+   PackageName    = $env:ChocolateyPackageName
+   url64          = 'https://www.sketchup.com/sketchup/2017/en/sketchuppro-2017-2-2555-90782-en-x64-exe'
+   checksum64     = '30fddf0c7e78c1fd491687d569eab21449f1fae8a72da1ddccb8a03b495d70ea'
    checksumType   = 'sha256'
-   UnzipLocation  = Join-Path $env:temp $packageName
+   UnzipLocation  = Join-Path $env:temp "$env:ChocolateyPackageName.$($env:chocolateyPackageVersion)"
 }
 Install-ChocolateyZipPackage @UnzipArgs
 
 $installFile = Get-ChildItem -Path $UnzipArgs['UnzipLocation'] -Filter *.msi
 if ($installFile) {
    $installArgs = @{
-      PackageName    = $packageName
+      PackageName    = $env:ChocolateyPackageName
       FileType       = 'msi'
-      silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
+      silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`"" # ALLUSERS=1 DISABLEDESKTOPSHORTCUT=1 ADDDESKTOPICON=0 ADDSTARTMENU=0
       File           = $installFile.fullname
       validExitCodes = @(0,3010)
    }
    Install-ChocolateyInstallPackage @installArgs
 
 } else {
-  Write-Warning "MSI install file not found."
+  Write-Warning 'MSI install file not found.'
   throw
 }
 
-$UserArguments = @{}
+If ($pp.count) {
+   $LicenseFileDestination = Join-Path $env:ProgramFiles "$env:ChocolateyPackageName\$env:ChocolateyPackageName $(([version]$env:chocolateyPackageVersion).major)\activation_info.txt"
 
-# Parse the packageParameters using good old regular expression
-if ($env:chocolateyPackageParameters) {
-   $match_pattern = "\/(?<option>([a-zA-Z]+)):(?<value>([`"'])?([a-zA-Z0-9- _\\:\.]+)([`"'])?)|\/(?<option>([a-zA-Z]+))"
-   $option_name = 'option'
-   $value_name = 'value'
- 
-   if ($env:chocolateyPackageParameters -match $match_pattern ){
-      $results = $env:chocolateyPackageParameters | Select-String $match_pattern -AllMatches
-      $results.matches | ForEach-Object {
-      $UserArguments.Add(
-         $_.Groups[$option_name].Value.Trim(),
-         $_.Groups[$value_name].Value.Trim())
-      }
-   }
-
-   $LicenseFileDestination = Join-Path $env:ProgramFiles "$packageName\$packageName $(([version]$version).major)\activation_info.txt"
-
-   if ($UserArguments.ContainsKey('ActivationFile')) {
+   if ($pp.contains('ActivationFile')) {
       Write-Host 'You provided a license file path.'
-      $ActFilePath = $UserArguments.ActivationFile
+      $ActFilePath = $pp['ActivationFile']
 
       $LicenseArgs = @{
          packageName  = 'SketchupLicense'
@@ -64,20 +79,23 @@ if ($env:chocolateyPackageParameters) {
                "SketchUp installation directory.***`n"
          Write-Warning $msg 
       } else { Get-ChocolateyWebFile @LicenseArgs }
-   } elseif ($UserArguments.ContainsKey('SN') -and $UserArguments.ContainsKey('AuthCode')) {
-      Write-Host 'You provided a serial number and authorization code.'
-      Write-Host 'The license will be set to "allow re-activation"' -ForegroundColor Cyan
-      Write-Host 'See here for info: https://help.sketchup.com/en/article/3000285' -ForegroundColor Cyan
-      $FileString = @"
+   } elseif ($pp.contains('SN') -or $pp.contains('AuthCode')) {
+      if ($pp.contains('SN') -and $pp.contains('AuthCode')) {
+         Write-Host 'You provided a serial number and authorization code.'
+         Write-Host 'The license will be set to "allow re-activation"' -ForegroundColor Cyan
+         Write-Host 'See here for info: https://help.sketchup.com/en/article/3000285' -ForegroundColor Cyan
+         $FileString = @"
 {
-"serial_number":"$($UserArguments.SN)",
-"auth_code":"$($UserArguments.AuthCode)",
+"serial_number":"$($pp['SN'])",
+"auth_code":"$($pp['AuthCode'])",
 "allow_reactivation":"true"
 }
 "@
-      $FileString | Out-File -FilePath $LicenseFileDestination -Force
-   } else {
-   Throw 'Package Parameters were found but were invalid (REGEX Failure)'
+         $FileString | Out-File -FilePath $LicenseFileDestination -Force
+      } else {
+         Write-Warning 'The Serial Number and Authorization Code must *both* be provided.'
+         Write-Warning "You will need to manually register Sketchup Pro $env:chocolateyPackageVersion"
+      }
    }
 } else {
    Write-Debug 'No Package Parameters Passed in.'
