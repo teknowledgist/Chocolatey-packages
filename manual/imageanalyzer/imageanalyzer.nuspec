@@ -3,16 +3,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>imageanalyzer</id>
-    <version>1.38</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/imageanalyzer</packageSourceUrl>
+    <version>1.38.4</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/imageanalyzer</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Image Analyzer</title>
+    <title>Image Analyzer (portable)</title>
     <authors>Michael Vinther</authors>
     <projectUrl>http://logicnet.dk/Analyzer/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/imageanalyzer_icon.png</iconUrl>
     <copyright>Copyright © 2000-2017, Michael Vinther</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/imageanalyzer/tools/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/manual/imageanalyzer/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://logicnet.dk/Analyzer/help.htm</docsUrl>
     <mailingListUrl>http://meesoft.logicnet.dk/support/viewforum.php?id=2</mailingListUrl>
@@ -58,7 +58,6 @@
 * Support for more BMP, CR2 and TIFF variants
     </releaseNotes>
     <!--<dependencies>
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>-->
   </metadata>
   <files>
