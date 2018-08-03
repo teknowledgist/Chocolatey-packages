@@ -3,6 +3,7 @@ import-module au
 $Release = 'https://geodacenter.github.io/download_windows.html'
 
 function global:au_GetLatest {
+   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
    $download_page = Invoke-WebRequest -Uri $Release
 
    $regex = '^.*?/(.*?\.zip).*'

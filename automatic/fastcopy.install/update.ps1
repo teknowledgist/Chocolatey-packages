@@ -9,11 +9,12 @@ function global:au_GetLatest {
                                    ($_.innertext -match "download v*")
                                 } | Select-Object -First 1 -ExpandProperty innertext
     
-   $version = $Text -replace ".*v([\d\.]*).*",'$1'
+   $version = $Text -replace "(?s).*v([0-9.]+).*",'$1'
    
    $Source = $HomePage.links | 
                 Where-Object {$_.innertext -eq 'Source code'} | Select-Object -ExpandProperty href
 
+<# Argh!  This site is constantly shifting!
    $x86links = $HomePage.links | 
                 Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc32')} |
                 Select-Object -ExpandProperty href -First 2
@@ -34,23 +35,31 @@ function global:au_GetLatest {
                   Where-Object {$_.href -like '*.zip'} | 
                   Select-Object -First 1 -ExpandProperty href
    }
+#>
+   [array]$links = $HomePage.links | 
+                     Where-Object {($_.innertext -eq 'installer')} |
+                     Select-Object -ExpandProperty href
+   Foreach ($link in $links) {
+      $DownPage = Invoke-WebRequest -Uri $link -ErrorAction SilentlyContinue
+      if ($DownPage) { break }
+   }
+   $URL32 = $DownPage.links | 
+            Where-Object {$_.href -like '*.zip'} | 
+            Select-Object -First 1 -ExpandProperty href
 
    return @{ 
             Version   = $version
             SourceURL = "$RootPage$Source"
             URL32     = $url32
-            URL64     = $url64
            }
 }
 
 function global:au_SearchReplace {
    @{
       "tools\VERIFICATION.txt" = @{
-         "(^Version\s+:).*"       = "`${1} $($Latest.Version)"
-         "(^x86 URL\s+:).*"       = "`${1} $($Latest.URL32)"
-         "(^x86 Checksum\s+:).*"  = "`${1} $($Latest.Checksum32)"
-         "(^x64 URL\s+:).*"       = "`${1} $($Latest.URL64)"
-         "(^x64 Checksum\s+:).*"  = "`${1} $($Latest.Checksum64)"
+         "(^Version\s+:).*"   = "`${1} $($Latest.Version)"
+         "(^URL\s+:).*"       = "`${1} $($Latest.URL32)"
+         "(^Checksum\s+:).*"  = "`${1} $($Latest.Checksum32)"
       }
       "$($Latest.PackageName).nuspec" = @{
          "(<projectSourceUrl>).*(</projectSourceUrl>)" = "`$1$($Latest.SourceURL)`$2"

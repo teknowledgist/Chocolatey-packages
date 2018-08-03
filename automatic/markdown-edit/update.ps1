@@ -3,10 +3,13 @@ import-module au
 $Release = 'https://github.com/mike-ward/Markdown-Edit/releases/latest/'
 
 function global:au_GetLatest {
+   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
    $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
-   $urlstub = $download_page.links |? {$_.href -match '\.msi'} | select -ExpandProperty href
-   $url = "https://github.com$urlstub"
+   $urlstub = $download_page.rawcontent.split("<>") | 
+                Where-Object {$_ -match '\.msi"'} |
+                Select-Object -First 1
+   $url = "https://github.com" + $($urlstub -replace '.*?"([^ ]+\.msi).*','$1')
 
    $version = $urlstub -replace '.*\/v([1-9.]+)\/.*','$1'
 

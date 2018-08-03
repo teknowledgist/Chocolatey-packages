@@ -1,10 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$ZipPath = (Get-ChildItem -Path $toolsDir -filter '*64.zip').FullName
-
-if (get-OSArchitectureWidth 32) {
-   $ZipPath = $ZipPath -replace '64.zip','.zip'
-}
+$ZipPath = (Get-ChildItem -Path $toolsDir -filter '*.zip').FullName
 
 # Extract zip
 $UnZipPath = Get-ChocolateyUnzip -FileFullPath $ZipPath -Destination (Join-Path $env:TEMP $env:ChocolateyPackageName)

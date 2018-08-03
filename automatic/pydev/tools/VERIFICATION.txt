@@ -7,6 +7,6 @@ https://sourceforge.net/projects/pydev/files/latest/download
 
 Direct Download:
 
-Version  : 6.4.0
-URL      : https://sourceforge.net/projects/pydev/files/pydev/PyDev%206.4.0/PyDev%206.4.0.zip
-CheckSum : C72110419720D3555539450A195AA118DD23E2C9E7ED5A61B085CCC133F4ECC3
+Version  : 6.4.4
+URL      : https://sourceforge.net/projects/pydev/files/pydev/PyDev%206.4.4/PyDev%206.4.4.zip
+CheckSum : 8B51CB4B3FF4BB7C05FF22873E706315E1B3AD326F387F0F27DB731F66498F4A

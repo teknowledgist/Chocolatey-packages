@@ -1,5 +1,5 @@
-; This script will exit after 10 seconds
-SetTimer, TimeOut, 10000
+; This script will exit after 15 seconds
+SetTimer, TimeOut, 15000
 
 DetectHiddenWindows, on
 
@@ -39,7 +39,7 @@ if ErrorLevel {
 }
 WinHide, FastCopy ver, DestDir
 __Launch:
-WinMenuSelectItem, FastCopy ver, ,Option,Main Settings
+WinMenuSelectItem, FastCopy ver, , Option, Main Settings
 WinWait, Main Settings, Default parameters, 1
 if ErrorLevel {
   goto, __Launch

@@ -4,7 +4,6 @@ if (Get-ProcessorBits -compare 32) {
    $msg = "SketchUp Make/Pro 2017 is 64-bit only.  `n" + 
           "The 2016 release is the last version available for this 32-bit system."
    Throw $msg
-   Return
 }
 
 $pp = Get-PackageParameters
@@ -33,8 +32,6 @@ if ($pp.contains('Keep')) {
    }
 }
 
-# Look here for older versions:
-#    https://help.sketchup.com/en/downloading-older-versions
 $UnzipArgs = @{
    PackageName    = $env:ChocolateyPackageName
    url64          = 'https://www.sketchup.com/sketchup/2017/en/sketchuppro-2017-2-2555-90782-en-x64-exe'
@@ -54,7 +51,6 @@ if ($installFile) {
       validExitCodes = @(0,3010)
    }
    Install-ChocolateyInstallPackage @installArgs
-
 } else {
   Write-Warning 'MSI install file not found.'
   throw
@@ -62,11 +58,9 @@ if ($installFile) {
 
 If ($pp.count) {
    $LicenseFileDestination = Join-Path $env:ProgramFiles "$env:ChocolateyPackageName\$env:ChocolateyPackageName $(([version]$env:chocolateyPackageVersion).major)\activation_info.txt"
-
    if ($pp.contains('ActivationFile')) {
       Write-Host 'You provided a license file path.'
       $ActFilePath = $pp['ActivationFile']
-
       $LicenseArgs = @{
          packageName  = 'SketchupLicense'
          fileFullPath = $LicenseFileDestination
@@ -100,4 +94,3 @@ If ($pp.count) {
 } else {
    Write-Debug 'No Package Parameters Passed in.'
 }
-

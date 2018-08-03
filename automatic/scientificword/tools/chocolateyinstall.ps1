@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'ScientificWord'
-$url         = 'https://s3-us-west-1.amazonaws.com/download.mackichan.com/sw-6.0.28-windows-installer.exe'
-$Checksum    = '901dd8f1bd7d3fe304c070a77787d1f5626a347abbb898c361f5a2b87264e72d'
+$url         = 'https://s3-us-west-1.amazonaws.com/download.mackichan.com/sw-6.0.29-windows-installer.exe'
+$Checksum    = '7baa2efb27e78a1f8384eb25cc454dedd9646f002ef1a99ac5a00521159607ad'
 
 $packageArgs = @{
   packageName   = $packageName
@@ -31,12 +31,12 @@ if (!$UserArguments) {
 
 if ($UserArguments['LicenseFile']) {
    Write-Host "You requested copying a license file from '$($UserArguments.LicenseFile)'."
-   if (test-path $UserArguments[licenseFile]) {
+   if (test-path $UserArguments['licenseFile']) {
       [array]$key = Get-UninstallRegistryKey -SoftwareName 'Scientific Word'
       $Destination = Join-Path (Split-Path $key.UninstallString) 'SW'
       Copy-Item $UserArguments.LicenseFile $Destination -Force
    } else {
-      Write-Warning "LicenseFile '$($UserArguments[LicenseFile])' not found!"
+      Write-Warning "LicenseFile '$($UserArguments['LicenseFile'])' not found!"
    }
 }
 
