@@ -13,7 +13,7 @@
     <projectUrl>https://www.mathworks.com/products/compiler.html</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/matlab_icon.png</iconUrl>
     <copyright>Copyright 2001-2014 The MathWorks, Inc.</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mcr-r2015a/MCR_license.txt</licenseUrl>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mcr-r2015a/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://www.mathworks.com/help/compiler/deployment-process.html</docsUrl>
     <bugTrackerUrl>https://www.mathworks.com/support/search_results.html?q=asset_type%3A%22Bug%2BReports%22+product%3A%22MATLAB+Compiler%22</bugTrackerUrl>
