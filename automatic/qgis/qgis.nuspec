@@ -32,12 +32,12 @@
 * Extensible functionality through plugins
 * Python console
 
-This package will install the "Latest Release" version of QGIS with the richest feature set.  If you want to install a version more more stability (but less features, try the [package for QGIS-Long Term Release](https://chocolatey.org/packages/QGIS-LTR).  These packages can now co-exist!
+This package will install the "Latest Release" version of QGIS with the richest feature set.  If you want to install a version with more more stability but less features, try the [package for QGIS-Long Term Release](https://chocolatey.org/packages/QGIS-LTR).  These packages can now co-exist!
 
 #### Keeping old releases
 Upon installation/upgrade, this package will attempt to remove the newest installed version of QGIS.  (It will not remove LTR versions installed via the [Chocolatey package](https://chocolatey.org/packages/QGIS-LTR).)  If you would like to skip the uninstallation of older versions, use the a "Keep" package parameter as follows:
 
-`choco install qgis-ltr -params '"/Keep"'`
+`choco install qgis -params '"/Keep"'`
 
 This parameter will be ignored if the newest version has the same major.minor value as this package because the QGIS installer won't allow two different builds of the same major.minor release.  (I.E. Version 3.0.1 has the same "3.0" as version 3.0.3.)  This parameter would allow you to keep a v2.18.x install of QGIS when upgrading to a v3.0.x package.
 
