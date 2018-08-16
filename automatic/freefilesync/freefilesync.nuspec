@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>freefilesync</id>
-    <version>10.2</version>
+    <version>10.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/freefilesync</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -15,7 +15,7 @@
     <copyright>Copyright © 2018 Zenju</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/freefilesync/tools/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://www.freefilesync.org//download/FreeFileSync_10.2_Source.zip</projectSourceUrl>
+    <projectSourceUrl>https://www.freefilesync.org//download/FreeFileSync_10.3_Source.zip</projectSourceUrl>
     <docsUrl>https://www.freefilesync.org/manual.php</docsUrl>
     <mailingListUrl>https://www.freefilesync.org/forum/</mailingListUrl>
     <tags>freefilesync sync donation notsilent admin</tags>
