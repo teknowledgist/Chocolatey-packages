@@ -10,7 +10,7 @@
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>MATLAB Compiler Runtime R2015a</title>
     <authors>The Mathworks, Inc.</authors>
-    <projectUrl>https://www.mathworks.com/products/compiler.html</projectUrl>
+    <projectUrl>https://www.mathworks.com/products/compiler/matlab-runtime.html</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/matlab_icon.png</iconUrl>
     <copyright>Copyright 2001-2014 The MathWorks, Inc.</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mcr-r2015a/tools/LICENSE.txt</licenseUrl>
@@ -18,8 +18,8 @@
     <docsUrl>https://www.mathworks.com/help/compiler/deployment-process.html</docsUrl>
     <bugTrackerUrl>https://www.mathworks.com/support/search_results.html?q=asset_type%3A%22Bug%2BReports%22+product%3A%22MATLAB+Compiler%22</bugTrackerUrl>
     <tags>MATLAB compiler runtime math mathematics library</tags>
-    <summary>Run compiled MATLAB applications.</summary>
-    <description>The MATLAB Runtime is a standalone set of shared libraries that enables the execution of compiled MATLAB applications or components on computers that do not have MATLAB installed. 
+    <summary>Run compiled MATLAB applications or components without installing MATLAB.</summary>
+    <description>MATLAB Runtime is a collection of shared libraries and code that enables the execution of compiled and packaged MATLAB applications on systems without an installed version of MATLAB.
     
 #### Notes
 * The version of the MATLAB Runtime necessary to run an application is tied to the version of MATLAB used to create the application.
