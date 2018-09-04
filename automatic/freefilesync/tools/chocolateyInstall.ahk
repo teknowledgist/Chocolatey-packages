@@ -1,6 +1,6 @@
 ﻿__License:
 ; License Agreement window
-WinWait, Setup - FreeFileSync, License Agreement
+WinWait, ahk_class TWizardForm, DirEdit
 ; Accept agreement button
 ControlClick, TNewRadioButton1, Setup - FreeFileSync, License Agreement
 ; Next button
