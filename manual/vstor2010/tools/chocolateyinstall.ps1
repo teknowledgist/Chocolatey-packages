@@ -2,9 +2,9 @@
 
 $packageArgs = @{
    packageName  = $env:ChocolateyPackageName
-   url           = 'https://download.microsoft.com/download/7/A/F/7AFA5695-2B52-44AA-9A2D-FC431C231EDC/vstor_redist.exe'
+   url           = 'https://download.microsoft.com/download/C/A/8/CA86DFA0-81F3-4568-875A-7E7A598D4C1C/vstor_redist.exe'
    fileType      = 'EXE'
-   Checksum      = 'C34E03C24EEA01F90D5796490F38822884DE7A7DA34232526E728FFC8073C2A1'
+   Checksum      = '2B656781C884647A5368DADB0A4D63488413EA59A86D73E1802308D526B2BF84'
    checksumType  = 'sha256'
    softwareName  = 'Microsoft Visual Studio 2010 Tools for Office Runtime*'
    silentArgs    = '/quiet /norestart'
