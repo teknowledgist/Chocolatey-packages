@@ -1,62 +1,37 @@
-; This script will exit after 15 seconds
-SetTimer, TimeOut, 15000
+; This script will exit after 10 seconds
+SetTimer, TimeOut, 10000
 
-DetectHiddenWindows, on
-
-winWait, FastCopy Setup, Setup Mode
-WinHide, FastCopy Setup, Setup Mode
-
-__Setup:
-sleep, 100
-ControlSetText, Edit1, %ProgramFiles%\FastCopy, FastCopy Setup, Setup Mode
-sleep, 200
-ControlGetText, PathVal, Edit1, FastCopy Setup, Setup Mode
-if (PathVal <> ProgramFiles . "\FastCopy") {
-  goto, __Setup
-}
-ControlClick, Start, FastCopy Setup, Setup Mode
-
-__Install:
-WinWait, Install, Starting, 1
+WinWait, ahk_exe FastCopy.exe, DestDir
+WinGet, appid, ID, ahk_exe FastCopy.exe, DestDir
+WinGetClass, FCclass, ahk_id %appid%
+__MenuSelect:
+WinMenuSelectItem, ahk_id %appid%, , Option, Main Settings
+WinWait, Main Settings ahk_class %FCclass%,, 1
 if ErrorLevel {
-  goto, __Setup
+  goto, __MenuSelect
 }
-WinHide, Install, Starting
-ControlClick, OK, Install, Starting
-
-__Done:
-WinWait, Install, The setup was completed, 3
+WinGet, setid, ID, Main Settings ahk_class %FCclass%
+__Shell:
+Control, ChooseString, Shell Extension, ListBox1 , ahk_id %setid%
+WinWait, ahk_id %setid%, For all users, 1
 if ErrorLevel {
-  goto, __Install
+  goto, __Shell
 }
-WinHide, Install, The setup was completed
-ControlClick, Launch, Install, The setup was completed
-
-; Next, enable shell extensions
-WinWait, FastCopy ver, DestDir, 1
-if ErrorLevel {
-  goto, __Done
-}
-WinHide, FastCopy ver, DestDir
-__Launch:
-WinMenuSelectItem, FastCopy ver, , Option, Main Settings
-WinWait, Main Settings, Default parameters, 1
-if ErrorLevel {
-  goto, __Launch
-}
-WinHide, Main Settings, Default parameters
-Control, ChooseString, Shell Extension, ListBox1 , Main Settings
-SetTitleMatchMode, RegEx
-ControlGet, CheckVal, Checked,, ^Enable$, ^Main Settings$, For all users
+SetTitleMatchMode RegEx
+ControlGet, CheckVal, Checked,, ^Enable$, ahk_id %setid%, for all users
 if (!(CheckVal)) {
-  ControlClick, ^Enable$, ^Main Settings$, For all users
+  ControlClick, ^Enable$, ahk_id %setid%, for all users
 }
-SetTitleMatchMode, 1
-ControlClick, OK, Main Settings
+SetTitleMatchMode 1
+__OK:
+ControlClick, OK, ahk_id %setid%
+if WinExist("ahk_id" . setid) {
+  goto, __OK
+}
 __Close:
 sleep, 100
 WinClose FastCopy ver
-if WinExist(FastCopy ver, Execute) {
+if WinExist("ahk_id" . appid) {
   goto, __Close
 }
 ExitApp

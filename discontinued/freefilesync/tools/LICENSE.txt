@@ -1,14 +1,20 @@
-﻿From:  https://www.freefilesync.org/faq.php#distribute
+﻿***NOTE: The license for the installer of versions of FreeFileSync *after* 
+  v10.2 *does not* allow distribution, but the distribution statement 
+  shortly after the time of release of v10.2 does and can be seen here:
 
-May I distribute the FreeFileSync installation package?
+https://web.archive.org/web/20180725153459/https://freefilesync.org/faq.php#distribute
+
+"May I distribute the FreeFileSync installation package?
   You are permitted to distribute the software subject to the following conditions:
     The software must be distributed free of charge and without modification 
     to the contents of the archive. Redistributing this archive with any files 
     added, removed, or modified is prohibited. The inclusion of any individual 
     file from this archive in another archive without the prior permission of 
-    the author is prohibited. 
+    the author is prohibited. "
 
+*******************************************
 LICENSE -- Text copied from Installer panel
+*******************************************
 
 A. GNU GENERAL PUBLIC LICENSE
 B. cURL License

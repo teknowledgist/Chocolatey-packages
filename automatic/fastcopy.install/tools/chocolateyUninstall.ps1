@@ -1,28 +1,38 @@
-﻿# fastcopy.install really can't be uninstalled without AutoHotKey as a prereq.
+﻿$ErrorActionPreference = 'Stop'
 
+$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$ZipPath = (Get-ChildItem -Path $toolsDir -filter '*.zip').FullName
 $ProgDir = Join-Path $env:ProgramFiles 'FastCopy'
 
-# silent uninstall requires AutoHotKey
-$ahkFile = Join-Path $env:ChocolateyPackageFolder 'Tools\chocolateyUninstall.ahk'
-$ahkProc = Start-Process -FilePath AutoHotkey -ArgumentList "$ahkFile" -PassThru
-Write-Debug "AutoHotKey start time:`t$($ahkProc.StartTime.ToShortTimeString())"
-Write-Debug "Process ID:`t$($ahkProc.Id)"
+# Extract installer
+$UnZipPath = Get-ChocolateyUnzip -FileFullPath $ZipPath -Destination (Join-Path $env:TEMP $env:ChocolateyPackageName.$env:ChocolateyPackageVersion)
 
-Start-ChocolateyProcessAsAdmin -ExeToRun $(Join-Path $ProgDir 'setup.exe') -WorkingDirectory $ProgDir
+$UninstallArgs = @{
+   packageName    = $env:ChocolateyPackageName
+   FileType       = 'exe'
+   File           = (Get-ChildItem -Path $UnZipPath -filter '*.exe').FullName
+   silentArgs     = "/silent /r"
+   validExitCodes = @(0)
+}
+Uninstall-ChocolateyPackage @UninstallArgs
 
-# Uninstall leaves behind the DLL in use by explorer and sometimes other files
-$DLLpath = (Get-ChildItem -Path $ProgDir -filter '*.dll').FullName
-if (Test-Path $DLLpath) {
-   $Lock = Get-Process | ForEach-Object { 
+$Shortcut = Join-Path $env:ProgramData "Microsoft\Windows\Start Menu\Programs\FastCopy.lnk"
+if (Test-Path $Shortcut) {
+   Remove-Item $Shortcut -Force
+}
+
+# Uninstall often leaves behind the DLL in use by explorer and sometimes other files
+if (Test-Path (Join-Path $env:ProgramFiles 'FastCopy\*')) {
+   [array]$Locks = Get-Process | ForEach-Object { 
                $processVar = $_
                $_.Modules | ForEach-Object { 
-                  if ($_.FileName -like "$DLLpath") { $processVar.Name }
+                  if ($_.FileName -like "*fastcopy*.dll") { $_.FileName }
                }
-           }
+           } | Select-Object -Unique
 
    # Register a lock for deletion.
-   If ($Lock) {
-      Write-Host "The FastCopy file extension is locked by $Lock. The extension will be deleted on next reboot." -ForegroundColor Cyan
+   If ($Locks) {
+      Write-Host "A FastCopy file, $Locks, is locked. The extension will be deleted on next reboot." -ForegroundColor Cyan
       # Function from: https://gallery.technet.microsoft.com/scriptcenter/Register-FileToDelete-0cbb00bb
       #   with the reference to "system.linq" removed as it is not needed here.
       Function Register-FileToDelete {
@@ -30,7 +40,7 @@ if (Test-Path $DLLpath) {
          Param (
             [parameter(ValueFromPipeline=$True, ValueFromPipelineByPropertyName=$True)]
             [Alias('FullName','File','Folder')]
-            $Source = 'C:\users\Administrator\desktop\test.txt'    
+            $Source = "$env:TEMP\test.dll"    
          )
          Begin {
             Try { $null = [File] } 
@@ -80,14 +90,12 @@ if (Test-Path $DLLpath) {
          }
       } #end Register-FileToDelete function
 
-      Register-FileToDelete $DLLpath
+      Foreach ($Lock in $Locks) {
+         if (Test-Path $Lock) { Register-FileToDelete $Lock }
+      }
       Register-FileToDelete $ProgDir
 
       # remove everything else
-      Remove-Item (Join-Path $ProgDir '*.*') -Exclude $(Split-Path $DLLpath -Leaf) -Force
-   } else {
-      Remove-Item $ProgDir -Recurse -Force 
-   }
-} else {
-   Write-Host 'FastCopy files appear to have already been deleted.' 
-}
+      Remove-Item (Join-Path $ProgDir '*.*') -Force -ErrorAction SilentlyContinue
+   } else { Remove-Item $ProgDir -Recurse -Force }
+} else { Write-Host 'FastCopy files appear to have been fully deleted.' }
