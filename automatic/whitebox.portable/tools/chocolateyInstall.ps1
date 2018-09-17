@@ -44,7 +44,10 @@ if (Test-Path $logs) {
 $icon = Join-Path $InstallArgs.UnzipLocation 'tools\TDAP_Home.ico'
 
 $launcher = Join-Path $InstallArgs.UnzipLocation 'tools\WhiteBox Launcher.exe'
-$JavaExe = "$env:ProgramData\Oracle\Java\javapath\javaw.exe"
+$JReg = 'HKLM:\SOFTWARE\JavaSoft\Java Runtime Environment'
+$JVer=(Get-ItemProperty $JReg).CurrentVersion
+$JavaHome = (Get-ItemProperty $JReg/$JVer).JavaHome
+$JavaExe = (Get-ChildItem $JavaHome -Filter "javaw.exe" -Recurse).fullname
 $sg = Join-Path $env:ChocolateyInstall 'tools\shimgen.exe'
 
 & $sg -o $launcher -p $JavaExe -c "-jar '$target'" -i $icon --gui

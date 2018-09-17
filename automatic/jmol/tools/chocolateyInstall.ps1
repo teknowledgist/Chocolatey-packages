@@ -4,9 +4,9 @@ $ToolsDir   = Split-Path -parent $MyInvocation.MyCommand.Path
 $PackageDir = Split-Path -Parent $ToolsDir
 
 # Remove previous versions
-$Previous = Get-ChildItem $PackageDir -filter "jmol*" | ?{ $_.PSIsContainer }
+$Previous = Get-ChildItem $PackageDir -filter "jmol*" | Where-Object { $_.PSIsContainer }
 if ($Previous) {
-   $Previous | % { Remove-Item $_.FullName -Recurse -Force }
+   $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
 
 $installArgs = @{
@@ -19,10 +19,13 @@ Get-ChocolateyUnzip @installArgs
 
 $target = (Get-ChildItem $PackageDir -filter jmol.jar -Recurse).fullname
 
-$JavaPath = gwmi win32_product | ? {$_.name -match 'java'} | select installlocation
+$JReg = 'HKLM:\SOFTWARE\JavaSoft\Java Runtime Environment'
+$JVer=(Get-ItemProperty $JReg).CurrentVersion
+$JavaHome = (Get-ItemProperty $JReg/$JVer).JavaHome
+$JavaPath = (Get-ChildItem $JavaHome -Filter "javaw.exe" -Recurse).fullname
 
 $ShortcutArgs = @{
-   ShorcutFilePath = Join-Path ([Environment]::GetFolderPath("Desktop")) 'Jmol.lnk'
+   ShortcutFilePath = Join-Path ([Environment]::GetFolderPath("Desktop")) 'Jmol.lnk'
    TargetPath = $JavaPath
    Arguments = "-xmx512m -jar `"$Target`""
    IconLocation = Join-Path $PackageDir 'tools\Jmol_icon13.ico'
