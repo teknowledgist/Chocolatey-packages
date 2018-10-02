@@ -1,0 +1,18 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The LAME site has links for downloading pre-compiled binaries of LAME:
+http://lame.sourceforge.net/links.php#Binaries
+
+Following the link for 'Arturo "Buanzo" Busleiman' leads to:
+https://lame.buanzo.org/
+
+The .zip file containing the LAME DLL can be downloaded from there.
+
+Direct Download:
+
+Version  : 3.100
+URL      : https://lame.buanzo.org/lame_v3.100.zip
+CheckSum : 2ad66ed683b0074d0381055d387a871cce3c38626fea29ee30710f73cee12356
+ 

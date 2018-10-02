@@ -1,0 +1,57 @@
+﻿From:	Sali Tagliamonte <sali.tagliamonte@utoronto.ca>
+Sent:	Thursday, September 20, 2018 1:05 PM
+To:	Hammer, Erich F
+Subject:	Re: Goldvarb license?
+
+Absolutely free to distribute. 
+Let me know how it goes,
+__
+
+
+On 2018-09-20, 6:53 PM, "Hammer, Erich F" <[redacted]> wrote:
+
+    Sali,
+    
+    Thank you for the very fast response!  
+    
+    I don't mean to harass you, but can Goldvarb X be freely distributed, or do we need to instruct folks to 
+download it from your website?
+    
+    Thanks,
+    Erich
+    
+    
+    On Thursday, September 20, 2018 at 12:48, Sali Tagliamonte eloquently inscribed:
+    
+    > Hi Erich,
+    > Goldvarb is free. Use it as you wish, citing the references on my website.
+    > You can download it from my website too.
+    > 
+    > 
+    > *************************************************
+    > Sali A. Tagliamonte, PhD, FRSC
+    > Professor and Chair of Linguistics
+    > Canada Research Chair in Language Variation and Change University of
+    > Toronto Sid Smith Hall, Room 4077, 4th Floor
+    > 100 St George Street
+    > TORONTO, Ontario, M5S 3G3
+    > 
+    > 
+    > 
+    > On 2018-09-20, 6:41 PM, "Hammer, Erich F" <[redacted]> wrote:
+    > 
+    >     Hi,
+    >     
+    >     We would like to use Goldvarb X in a language lab here, but are hesitant
+    > without some kind of license statement.  I assume the source code is not
+    > open, but is the binary free to use?  Are there restrictions on use?  Can it be
+    > distributed (e.g. to students)?  Are there restrictions on distribution?
+    > 
+    >     We can work with a license statement you send us, but it would better for
+    > everyone if it could be included in the .zip/.dmg downloads and/or on
+    > the website.
+    > 
+    >     Thank you,
+    >     Erich
+    > 
+    > 

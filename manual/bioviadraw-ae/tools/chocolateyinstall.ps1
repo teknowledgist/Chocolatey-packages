@@ -19,11 +19,13 @@ $UnzipArgs = @{
 }
 Get-ChocolateyUnzip @UnzipArgs
 
+$ShortTemp = (new-object -comobject scripting.filesystemobject).getfolder($env:TEMP).shortpath
+
 $InstallArgs = @{
    packageName = $env:ChocolateyPackageName
    FileType = 'exe'
    File = (Get-ChildItem $UnzipArgs.Destination -Include '*.exe' -Recurse).FullName
-   silentArgs = "/s /v`"/qn /norestart /l*v $($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+   silentArgs = "/s /v`"/qn /norestart /l*v $($ShortTemp)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes = @(0,3010)  
 }
 Install-ChocolateyInstallPackage @InstallArgs

@@ -1,0 +1,28 @@
+﻿From Chapter 7 of: http://www.textworld.com/scp/scphelp.pdf
+
+Copyright and Licence Information
+SCP Simple Concordance Program is owned and licensed exclusively by 
+Alan Reed Copyright (C) 1997-2017 Alan Reed. All rights reserved. 
+Alan Reed grants to you (“Licensee”) a non-exclusive, non-transferable 
+licence to use the SCP binary code version (hereafter, “Binary 
+Software”) without fee. Licensee may distribute the Binary Software 
+to third parties provided that the copyright notice and this
+statement appear on all copies. Licensee agrees that the copyright 
+notice and this statement will appear on all copies of the software, 
+packaging, and documentation or portions thereof.
+
+ALAN REED MAKES NO REPRESENTATIONS OR WARRANTIES ABOUT THE SUITABILITY
+OF THE BINARY SOFTWARE, EITHER EXPRESSED OR IMPLIED, INCLUDING BUT NOT
+LIMITED TO THE IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+PARTICULAR PURPOSE, OR NON-INFRINGEMENT.  ALAN REED SHALL NOT BE LIABLE 
+FOR ANY DAMAGES SUFFERED BY LICENSEE AS A RESULT OF USING, MODIFYING 
+OR DISTRIBUTING THE BINARY SOFTWARE OR ITS DERIVATIVES.
+
+By downloading, installing, using or copying this Binary Software, 
+Licensee agrees to abide by the intellectual property laws, and all 
+other applicable laws of the U.K., and the terms of this Licence. 
+Ownership of the software shall remain solely in Alan Reed.  Alan Reed 
+shall have the right to terminate this licence immediately by written 
+notice upon Licensee’s breach of, or non-compliance with, any of its 
+terms.  Licensee shall be liable for any infringement or damages 
+resulting from Licensee’s failure to abide by the terms of this Licence.

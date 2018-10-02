@@ -1,7 +1,7 @@
 ﻿$PackageName = 'Markdown Edit'
 # Lines to be updated by automatic updater
-$Url = 'https://github.com/mike-ward/Markdown-Edit/releases/download/v1.33/MarkdownEditSetup.msi'
-$Checksum = 'e67cbc0bdc8215d7fc1fb837da4177eaad562b08d25b75cd22e6a56dafb08d7e'
+$Url = 'https://github.com/mike-ward/Markdown-Edit/releases/download/v1.34/MarkdownEditSetup.msi'
+$Checksum = 'd237e53f1ededce4851409bae79a8f610cc9e03cd91ca96bd5280536d95602a7'
 
 $OSversion = [version](Get-WmiObject -Class Win32_OperatingSystem).version 
 if ($OSversion -eq $null -or $OSversion -lt [Version]'6.2') {

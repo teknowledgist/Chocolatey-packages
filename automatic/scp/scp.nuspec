@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>scp</id>
+    <version>4.0.9.88</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/local/scp</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Simple Concordance Program</title>
+    <authors>Alan Reed</authors>
+    <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/scp_icon.png</iconUrl>
+    <copyright>copyright © 2006 Alan Reed</copyright>
+    <licenseUrl>http://www.textworld.com/scp/copyrigh.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.textworld.com/scp/scphelp.pdf</docsUrl>
+    <bugTrackerUrl>mailto:A.Reed@textworld.com</bugTrackerUrl>
+    <tags>scp concordance language words phrases</tags>
+    <summary>Generate concordances from natural language text files.</summary>
+    <description> SCP is a concordance and word listing program that is able to read texts written in many languages and create word lists and search natural language text files for words, phrases, and patterns. There are built-in alphabets for English, French, German, Polish, Greek, Russian, etc. SCP contains an alphabet editor which you can use to create alphabets for any other language. 
+
+### Features
+* You can generate concordances, and search for words or phrases. You can produce both KWIC and Line-Based concordances. The words used can be highlighted in context or contracted. Left and right context sorting can be achieved. The concordances can be printed or saved to files.
+* You can save concordances in html to display on the web.
+* You can create word lists, which you can sort , print, or save. Sorting can be done in ascending or descending alphabetic or frequency order.
+* You can specify words and phrases using a prefix, a suffix, specific words, or using a pattern. You can select a group of words from which to produce your concordances and word lists.
+* You can exclude words using a stoplist.
+* You can display statistics of letter and word-frequency usage.
+* You can define the method of reading text, the types of symbols used, together with their collating order and style of embedded text references.Many text files already exist in forms that SCP can handle. Several sample files are included in the SCP download.
+
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

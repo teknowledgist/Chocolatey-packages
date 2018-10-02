@@ -1,0 +1,18 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The "regular" installer is available from:
+http://www.textworld.com/scp/#Downloads
+
+The embedded installer was offered by the developer in response to a 
+question about preventing the desktop icon.  It differs from the 
+advertised downloads only in that it does not install a desktop icon.
+It can be downloaded from the same site at the URL below.  
+
+Direct Download:
+
+Version  : 4.0.9.88
+URL      : http://www.textworld.com/scp/scp409nd.msi
+CheckSum : ef5d011dfa506edd895e0f97d80065580d07224b2c7876c13208700f679e1840
+

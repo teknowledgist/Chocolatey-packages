@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>audacity-lame</id>
+    <version>3.100</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/audacity-lame</packageSourceUrl>
+    <owners>DigitalCardboard, Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>LAME for Audacity</title>
+    <authors>Arturo Busleiman (build), Robert Hegemann, Alexander Leidinger, Rogério Brito</authors>
+    <projectUrl>http://lame.sourceforge.net/index.php</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/audacity-lame_icon.png</iconUrl>
+    <copyright>Copyrights © 1999-2011 by The LAME Project</copyright>
+    <licenseUrl>http://lame.sourceforge.net/license.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>http://lame.cvs.sourceforge.net/viewvc/lame/</projectSourceUrl>
+    <docsUrl>http://lame.cvs.sourceforge.net/viewvc/lame/lame/doc/html/usage.html</docsUrl>
+    <mailingListUrl>https://sourceforge.net/projects/lame/lists/lame-dev</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/lame/bugs/</bugTrackerUrl>
+    <tags>audacity-lame audacity lame mp3 encoder music</tags>
+    <summary>LAME MP3 Encoder for Audacity</summary>
+    <description>LAME is a high quality MPEG Audio Layer III (MP3) encoder licensed under the LGPL.
+
+LAME is considered the best MP3 encoder at mid-high bitrates and at VBR, mostly thanks to the dedicated work of its developers and the open source licensing model that allowed the project to tap into engineering resources from all around the world. Both quality and speed improvements are still happening, probably making LAME the only MP3 encoder still being actively developed. 
+
+** Use this package to install the LAME MP3 library for Audacity. **
+
+More info: http://manual.audacityteam.org/man/faq_installation_and_plug_ins.html#lame
+    </description>
+    <releaseNotes>https://svn.code.sf.net/p/lame/svn/trunk/lame/doc/html/history.html</releaseNotes>
+    <dependencies>
+      <dependency id="audacity" version="2.1.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>goldvarbx</id>
+    <version>3.0.3</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/local/goldvarbx</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Goldvarb X</title>
+    <authors>David Sankoff, Sali A. Tagliamonte, Eric Smith</authors>
+    <projectUrl>http://individual.utoronto.ca/tagliamonte/goldvarb.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/goldvarbx_icon.png</iconUrl>
+    <copyright>Copyright © 2005-17 Sali A. Tagliamonte</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/local/goldvarbx/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <docsUrl>https://web.archive.org/web/20161218133754/http://privatewww.essex.ac.uk/~patrickp/lg654/GoldVarb2001forPCmanual.htm</docsUrl>
+    <tags>goldvarbx variationist sociolinguistics analysis</tags>
+    <summary>A Multivariate Analysis Application for Windows</summary>
+    <description>GOLDVARB X is an application for multivariate analysis, based on the previously circulated program GoldVarb 2.0 (Rand and Sankoff 1990).  It is a version of the key methodological tool of variationist sociolinguistics — the variable rule program.
+    </description>
+    <releaseNotes>
+#### Changes in 3.0b3 (16-oct-05)
+* GoldVarb Help now opens page on Sali's website.
+* No Recode needs to insert a carriage-return before the comment
+* Generate Factor Specifications doesn’t update the number of groups on the factor dialog.
+* I notice there are two ampersands in the cross-tabulation window.
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

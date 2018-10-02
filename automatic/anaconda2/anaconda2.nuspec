@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>anaconda2</id>
+    <version>5.2.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/anaconda2</packageSourceUrl>
+    <owners>Teknowledgist, Chantisnake</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Anaconda Distribution (Python 2.7)</title>
+    <authors>Anaconda, Inc.</authors>
+    <projectUrl>https://www.anaconda.com/distribution/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/anaconda_icon.png</iconUrl>
+    <copyright>© Copyright 2015, Anaconda, Inc.</copyright>
+    <licenseUrl>https://docs.anaconda.com/anaconda/eula/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ContinuumIO</projectSourceUrl>
+    <docsUrl>https://docs.anaconda.com/anaconda/</docsUrl>
+    <mailingListUrl>https://groups.google.com/a/anaconda.com/forum/#!forum/anaconda</mailingListUrl>
+    <bugTrackerUrl>https://github.com/ContinuumIO/anaconda-issues/issues</bugTrackerUrl>
+    <tags>anaconda3 anaconda conda python</tags>
+    <summary>The most trusted Python distribution for data science</summary>
+    <description>Anaconda® is a package manager, an environment manager, a Python distribution, and a collection of [over 1,000+ open source packages](https://docs.anaconda.com/anaconda/packages/pkg-docs/). It is free and easy to install, and it offers free community support.
+
+Anaconda Distribution contains conda and Anaconda Navigator.  You can try both conda and Navigator to see which is right for you to manage your packages and environments. You can even switch between them, and the work you do with one can be viewed in the other.
+
+Download the [Anaconda Cheat Sheet](https://docs.anaconda.com/_downloads/Anaconda-Starter-Guide-Cheat-Sheet.pdf) (48 KB PDF) for a quick guide to using Anaconda.
+
+##### Package Defaults
+Anaconda Python:
+
+  * will install for **all users**
+  * **will not** be added to the path
+  * **will** be registered as the default Python
+  * will install to `$ChocolateyToolsLocation\Anaconda2` (i.e. `C:\Tools\Anaconda2` by default)
+
+You can change any of the defaults with package parameters:
+
+  * `/JustMe` - Install for only the current user.
+  * `/AddToPath` - Add Anaconda Python to the path.
+  * `/DoNotRegister` - Do not register Anaconda Python as the default Python.
+  * `/D:(path)` - Choose another, *existing*, parent directory to place the 'Anaconda2' directory.
+  
+###### Example : 
+  `choco install anaconda3 --params '"/AddToPath /D:c:\MyTools"'`
+
+    </description>
+    <releaseNotes>https://docs.anaconda.com/anaconda/release-notes/</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

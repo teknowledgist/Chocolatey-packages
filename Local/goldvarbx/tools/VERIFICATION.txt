@@ -1,0 +1,13 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Zip package can be downloaded from:
+http://individual.utoronto.ca/tagliamonte/goldvarb.html
+
+Direct Download:
+
+Version  : 3.0b3
+URL      : http://www.tarkvara.org/goldvarb/GoldVarb30b3.zip
+CheckSum : b4364a6dd67ccd656092a34308c6afd1b7f386131f696986f1cc0a084ead0e7d
+
