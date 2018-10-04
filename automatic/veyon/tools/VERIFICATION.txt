@@ -1,4 +1,4 @@
-﻿VERIFICATION
+VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
@@ -6,8 +6,8 @@ Binaries can be downloaded here:
 https://github.com/veyon/veyon/releases/tag/v4.0.8
 
 Direct download:
-Version    : 4.0.8
-URL        : https://github.com/veyon/veyon/releases/download/v4.0.8/veyon-4.0.8.0-win32-setup.exe
-CheckSum   : ff7f61c353c00939d8970397cea8f289e5fdbdea86f803cf38214db082c3bbb6
-URL64      : https://github.com/veyon/veyon/releases/download/v4.0.8/veyon-4.0.8.0-win64-setup.exe
-CheckSum64 : c5405cee1451ef2b71cce3aaa8f05d72f330f1408a3c46aa4b1d797758636fe5
+Version    : 4.1.3.0
+URL        : https://github.com/veyon/veyon/releases/download/v4.1.3/veyon-4.1.3.0-win64-setup.exe
+CheckSum   : 48F1F75BB5D8439942D912218E3F976975A05822EFCD5A2B11F13C4837E4B885
+URL64      : https://github.com/veyon/veyon/releases/download/v4.1.3/veyon-4.1.3.0-win64-setup.exe
+CheckSum64 : 48F1F75BB5D8439942D912218E3F976975A05822EFCD5A2B11F13C4837E4B885

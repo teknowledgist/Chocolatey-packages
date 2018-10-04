@@ -4,10 +4,10 @@ $InstallArgs = @{
    packageName   = $env:ChocolateyPackageName
    softwareName  = 'Anaconda2'
    fileType      = 'EXE'
-   url           = 'https://repo.continuum.io/archive/Anaconda2-5.2.0-Windows-x86.exe'
-   url64bit      = 'https://repo.continuum.io/archive/Anaconda2-5.2.0-Windows-x86_64.exe'
-   checksum      = '2b81916c477e64db917821bb48a97000fad78cd1041022b343cec3cebf9e9efa'
-   checksum64    = 'e5ff95332d08a7b006a5bb723e0a5124c4c4c9a9e4289afdd05941791a79ec81'
+   url           = 'https://repo.continuum.io/archive/Anaconda2-5.3.0-Windows-x86.exe'
+   url64bit      = 'https://repo.continuum.io/archive/Anaconda2-5.3.0-Windows-x86_64.exe'
+   checksum      = 'f18bdb9a38e5c444a3cb79c5c6bc927fbcd863683b4197713337216af7300a68'
+   checksum64    = '30bf9131df2314c00a9cd5e5f0b7d6184c3aec38e4068eaafc962f62018110a1'
    checksumType  = 'sha256'
    validExitCodes= @(0)
 }

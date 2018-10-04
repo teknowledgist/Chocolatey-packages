@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>expressionweb</id>
+    <version>4.0.1460.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/expressionweb</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Microsoft Expression Web</title>
+    <authors>Microsoft Corporation</authors>
+    <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/expressionweb_icon.png</iconUrl>
+    <copyright>Copyright © 2012 Microsoft Corporation</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/expressionweb/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://docs.microsoft.com/en-us/previous-versions/visualstudio/design-tools/expression-studio-4/ee341475(v%3dexpression.40)</docsUrl>
+    <mailingListUrl>https://social.msdn.microsoft.com/Forums/en-US/home?forum=web</mailingListUrl>
+    <tags>expressionweb expression web html css asp php ajax</tags>
+    <summary>Design, develop, and publish websites</summary>
+    <description>Microsoft Expression Web is a full-featured professional tool for designing, developing, and publishing compelling, feature-rich sites that conform to web standards. Web designers, web developers, and visual design professionals can use Expression Web to create and produce sites.
+
+Expression Web supports ASP.NET, PHP, Microsoft Silverlight, Deep Zoom Composer images, AJAX, and Silverlight video. You can import Adobe Photoshop files easily and publish your sites quickly and securely with multiple files transfer streams and secure FTP.
+
+The multiple preview modes in Expression Web speed up your site development. Use the Snapshot Preview to see actual browser views of pages using any browser installed on your computer, right in Expression Web. Use SuperPreview to compare your pages in multiple browsers simultaneously. You can even overlay pages from two different browsers to troubleshoot layout and positioning errors.
+
+### Language
+This package installs the English version by default.  Use a package parameter option for a different language if desired:
+
+* **German**:  `--params '"/Lang:de"'`
+* **Spanish**:  `--params '"/Lang:es"'`
+* **French**:  `--params '"/Lang:fr"'`
+* **Italian**:  `--params '"/Lang:it"'`
+* **Japanese**:  `--params '"/Lang:ja"'`
+* **Korean**:  `--params '"/Lang:ko"'`
+* **Simp. Chinese**:  `--params '"/Lang:zhs"'`
+* **Trad. Chinese**:  `--params '"/Lang:zht"'`
+
+</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

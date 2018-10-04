@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>anaconda3</id>
-    <version>5.2.0.20180920</version>
+    <version>5.3.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/anaconda3</packageSourceUrl>
     <owners>Teknowledgist, Chantisnake</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

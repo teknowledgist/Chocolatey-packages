@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'tinn-r'
-$URL         = 'https://sourceforge.net/projects/tinn-r/files/latest/download?source=files'
+$URL         = 'https://sourceforge.net/projects/tinn-r/files/latest/download'
 $Checksum    = '148a63769f9b794a5df5938253d8da763e4525accb35e1229599ed3165395550'
 
 

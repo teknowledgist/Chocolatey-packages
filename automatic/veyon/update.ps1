@@ -1,36 +1,42 @@
 import-module au
 
-$Release = 'https://github.com/clechasseur/pathcopycopy/releases/latest'
+$Release = 'https://github.com/veyon/veyon/releases/latest'
 
 function global:au_GetLatest {
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
    $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
-   $urlstub = $download_page.rawcontent.split("<>") | 
-                Where-Object {$_ -match '\.exe"'} |
-                Select-Object -First 1
-   $url = "https://github.com" + $($urlstub -replace '.*?"([^ ]+\.exe).*','$1')
+   $urlstubs = $download_page.rawcontent.split("<>") | 
+                Where-Object {$_ -match '\.exe"'} | Select-Object -First 2
 
-   $version = $urlstub.split('/') | ? {$_ -match '^v?[0-9.]+$'} | select -Last 1
-   $version = $version.trim('v')
+   $url32 = ($urlstubs | Where-Object {$_ -match 'win32'}) -replace '.*?"([^ ]+\.exe).*','$1'
+   $url64 = ($urlstubs | Where-Object {$_ -match 'win64'}) -replace '.*?"([^ ]+\.exe).*','$1'
 
-   return @{ Version = $version; URL32 = $url }
+   $version = $url64.split('-') | Where-Object {$_ -match '^[0-9.]+$'} |select -Last 1
+
+   return @{ 
+      Version = $version
+      URL32   = "https://github.com" + $url64
+      URL64   = "https://github.com" + $url64
+   }
 }
 
 
 function global:au_SearchReplace {
    @{
       "tools\VERIFICATION.txt" = @{
-         "(^Version\s+:).*"  = "`${1} $($Latest.Version)"
-         "(^URL\s+:).*"      = "`${1} $($Latest.URL32)"
-         "(^Checksum\s+:).*" = "`${1} $($Latest.Checksum32)"
+            "(^Version\s+:).*"    = "`${1} $($Latest.Version)"
+            "(^URL\s+:).*"        = "`${1} $($Latest.URL32)"
+            "(^Checksum\s+:).*"   = "`${1} $($Latest.Checksum32)"
+            "(^URL64\s+:).*"      = "`${1} $($Latest.URL64)"
+            "(^Checksum64\s+:).*" = "`${1} $($Latest.Checksum64)"
       }
    }
 }
 
 function global:au_BeforeUpdate() { 
-   Write-host "Downloading PathCopyCopy $($Latest.Version) installer file"
-   Get-RemoteFiles -Purge -NoSuffix
+   Write-host "Downloading Veyon $($Latest.Version) installer files"
+   Get-RemoteFiles -Purge
 }
 
 update -ChecksumFor none

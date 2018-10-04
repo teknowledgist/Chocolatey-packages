@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>anaconda2</id>
-    <version>5.2.0</version>
+    <version>5.3.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/anaconda2</packageSourceUrl>
     <owners>Teknowledgist, Chantisnake</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -18,7 +18,7 @@
     <docsUrl>https://docs.anaconda.com/anaconda/</docsUrl>
     <mailingListUrl>https://groups.google.com/a/anaconda.com/forum/#!forum/anaconda</mailingListUrl>
     <bugTrackerUrl>https://github.com/ContinuumIO/anaconda-issues/issues</bugTrackerUrl>
-    <tags>anaconda3 anaconda conda python</tags>
+    <tags>anaconda2 anaconda conda python</tags>
     <summary>The most trusted Python distribution for data science</summary>
     <description>Anaconda® is a package manager, an environment manager, a Python distribution, and a collection of [over 1,000+ open source packages](https://docs.anaconda.com/anaconda/packages/pkg-docs/). It is free and easy to install, and it offers free community support.
 

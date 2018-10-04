@@ -1,7 +1,11 @@
-﻿DetectHiddenWindows, on
+﻿; This script will exit after 30 seconds
+SetTimer, TimeOut, 30000
+
+DetectHiddenWindows, on
 __Welcome:
 ; Welcome window
 WinWait, xplorer² professional %1% bit Setup, Welcome
+WinGet, appid, ID, xplorer² professional %1% bit Setup, Welcome
 WinHide, xplorer² professional %1% bit Setup, Welcome
 ; Next button
 ControlClick, Button2, xplorer² professional %1% bit Setup, Welcome
@@ -91,3 +95,7 @@ ControlClick, Button5, xplorer² professional %1% bit Setup, Click Finish to clo
 ControlClick, Button2, xplorer² professional %1% bit Setup, Click Finish to close
 
 WinShow, xplorer² professional %1% bit Setup
+ExitApp
+
+TimeOut:
+ExitApp 30
