@@ -1,0 +1,16 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The installer is available by following the link to download the
+particular version on this page:  
+   http://nbcgib.uesc.br/lec/software/editores/tinn-r/en#h10-download
+or by getting the same download from SourceForge:
+   https://sourceforge.net/projects/tinn-r/files/latest/download
+
+Direct Download:
+
+Version  : 5.2.2.0
+URL      : https://sourceforge.net/projects/tinn-r/files/Tinn-R%20setup/5.2.2.0/Tinn-R_5.02.02.00_setup.exe
+CheckSum : 6DC0CB83913A8A1C025D72C4C693804F7C68F248F527C4115CAD49B33D23891B
+

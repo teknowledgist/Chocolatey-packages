@@ -1,6 +1,7 @@
 import-module au
 
 function global:au_GetLatest {
+   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    $Release = 'https://www.rizonesoft.com/downloads/notepad3/'
    $PageText = Invoke-WebRequest -Uri $Release
 

@@ -1,17 +1,13 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageName = 'tinn-r'
-$URL         = 'https://sourceforge.net/projects/tinn-r/files/latest/download'
-$Checksum    = '148a63769f9b794a5df5938253d8da763e4525accb35e1229599ed3165395550'
-
+$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$InstallerFile = (Get-ChildItem -Path $toolsDir -Filter "*.exe").FullName
 
 $InstallArgs = @{
-   packageName    = $packageName
-   installerType  = 'exe'
-   url            = $url
+   packageName    = $env:ChocolateyPackageName
+   FileType       = 'exe'
+   File           = $InstallerFile
    silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /DIR="C:\Program Files\Tinn-R" /NOICONS=0'
-   Checksum       = $Checksum
-   ChecksumType   = 'sha256'
    validExitCodes = @(0)
 }
 
@@ -23,4 +19,9 @@ if ($UserArguments['Default']) {
    $InstallArgs.silentArgs += ' /Tasks='
 }
 
-Install-ChocolateyPackage @InstallArgs
+Install-ChocolateyInstallPackage @InstallArgs
+
+$exes = Get-ChildItem $toolsDir -filter *.exe -Recurse |select -ExpandProperty fullname
+foreach ($exe in $exes) {
+   New-Item "$exe.ignore" -Type file -Force | Out-Null
+}

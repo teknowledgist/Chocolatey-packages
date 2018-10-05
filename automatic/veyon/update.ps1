@@ -36,7 +36,7 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate() { 
    Write-host "Downloading Veyon $($Latest.Version) installer files"
-   Get-RemoteFiles -Purge
+   Get-RemoteFiles -Purge -nosuffix
 }
 
 update -ChecksumFor none

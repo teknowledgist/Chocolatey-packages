@@ -1,15 +1,18 @@
 import-module au
 
-$FilesPage = 'https://sourceforge.net/projects/tinn-r/files/'
+$FilesPage = 'https://sourceforge.net/projects/tinn-r/files'
 
 function global:au_GetLatest {
+   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    $download_page = Invoke-WebRequest -Uri $FilesPage
 
-   $Link = $download_page.links | Where-Object {$_.innertext -match 'setup.exe'} | select -First 1
+   $stub = ($download_page.links |
+                 Where-Object {$_.href -match 'latest'} | 
+                 Select-Object -ExpandProperty title).split(':')[0]
 
-   $Version = ([version]$link.innerText.split('_')[1]).ToString()
+   $Version = $stub.split('/') | ? {$_ -match '^[0-9.]+$'}
 
-   $url = ([uri]$FilesPage).scheme,'://',([uri]$FilesPage).host,$Link.href -join ''
+   $url = "$FilesPage$stub" -replace ' ','%20'
 
    return @{ 
             Version    = $Version
@@ -17,14 +20,20 @@ function global:au_GetLatest {
            }
 }
 
-
 function global:au_SearchReplace {
     @{
-        "tools\chocolateyInstall.ps1" = @{
-            "(^[$]URL\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-            "(^[$]Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-        }
+      "tools\VERIFICATION.txt" = @{
+         "(^Version\s+:).*"  = "`${1} $($Latest.Version)"
+         "(^URL\s+:).*"      = "`${1} $($Latest.URL32)"
+         "(^Checksum\s+:).*" = "`${1} $($Latest.Checksum32)"
+      }
     }
 }
 
-Update-Package
+
+function global:au_BeforeUpdate() { 
+   Write-host "Downloading Tinn-R $($Latest.Version) installer files"
+   Get-RemoteFiles -Purge -nosuffix 
+}
+
+update -ChecksumFor none

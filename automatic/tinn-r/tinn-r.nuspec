@@ -13,12 +13,12 @@
     <projectUrl>http://nbcgib.uesc.br/lec/software/editores/tinn-r/en</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/Tinn-R_icon.png</iconUrl>
     <copyright>Copyright © 2001-2016</copyright>
-    <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
+    <licenseUrl>https://github.com/jcfaria/Tinn-R/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/jcfaria/Tinn-R</projectSourceUrl>
     <mailingListUrl>https://groups.google.com/forum/?hl=en#!forum/tinn-r</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/tinn-r/bugs/</bugTrackerUrl>
-    <tags>tinn-r tinnr r.project statistics gui ide admin</tags>
+    <tags>tinn-r tinnr r.project statistics gui ide oss embedded</tags>
     <summary>A GUI/IDE for R development.</summary>
     <description>Tinn-R is a generic ASCII/UNICODE editor/word processor for the Windows operating system that is very well integrated into the R statistics system and provides a Graphical User Interface (GUI) and Integrated Development Environment (IDE).
     
