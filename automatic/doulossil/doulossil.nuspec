@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>doulossil</id>
+    <version>5.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/doulossil</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Doulos SIL (font)</title>
+    <authors>SIL International</authors>
+    <projectUrl>https://software.sil.org/doulos/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/doulossil_icon.png</iconUrl>
+    <copyright>Copyright © 1994-2014, SIL International</copyright>
+    <licenseUrl>https://scripts.sil.org/ofl</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://software.sil.org/downloads/r/doulos/DoulosSIL-5.000-developer.zip</projectSourceUrl>
+    <docsUrl>http://software.sil.org/doulos/support/character-set-support/</docsUrl>
+    <mailingListUrl>http://software.sil.org/lcgfonts/home/sil-font-news-announcement-list/</mailingListUrl>
+    <tags>doulossil doulos sil font unicode serif latin cyrillic phonetic orthographic typography glyphs diacritics oss embedded</tags>
+    <summary>Complete support for the International Phonetic Alphabet</summary>
+    <description>Doulos SIL is a Unicode-based font family that supports the wide range of languages that use the Latin and Cyrillic scripts, whether used for phonetic or orthographic needs. Linguists appreciate the wide range of characters and symbols useful in their work. This font makes use of state-of-the-art font technologies to support complex typographic issues, such as the need to position arbitrary combinations of base glyphs and diacritics optimally.
+
+#### Well-established design
+This Doulos SIL font is essentially the same design as the SIL Doulos font first released by SIL in 1992. The design has been changed from the original in that it has been scaled down to be a better match with contemporary digital fonts, such as Times New Roman®. Read more about its design(http://software.sil.org/doulos/design/).
+
+#### IPA support
+Doulos SIL is a Unicode-encoded serif font similar to Times New Roman. Besides having a comprehensive inventory of glyphs needed for almost any Roman- or Cyrillic-based writing system, it also contains the entire inventory of the International Phonetic Alphabet (IPA). The font supports advanced OpenType and Graphite typographic features useful for multilingual texts, including careful diacritic positioning and small caps. 
+
+#### Complete character set
+The Latin and Cyrillic scripts are used to write thousands of languages around the world. Doulos SIL provides comprehensive support for these writing systems, and includes a wide range of additional characters and symbols useful for linguistics and literacy work.
+     </description>
+    <releaseNotes>http://software.sil.org/doulos/release-5-000/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

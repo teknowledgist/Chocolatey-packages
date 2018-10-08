@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>praat</id>
+    <version>6.0.43.20181008</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/praat</packageSourceUrl>
+    <owners>Doc, Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Praat</title>
+    <authors>Paul Boersma, David Weenink</authors>
+    <projectUrl>http://www.praat.org/</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/praat_icon.png</iconUrl>
+    <copyright>Copyright © 1992-2018 by Paul Boersma and David Weenink</copyright>
+    <licenseUrl>http://www.fon.hum.uva.nl/praat/GNU_General_Public_License.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/praat/praat</projectSourceUrl>
+    <docsUrl>http://www.fon.hum.uva.nl/praat/manual/Intro.html</docsUrl>
+    <mailingListUrl>http://groups.yahoo.com/group/praat-users</mailingListUrl>
+    <bugTrackerUrl>https://github.com/praat/praat/issues</bugTrackerUrl>
+    <tags>praat sound visualization speech phonetics phonology analysis oss embedded</tags>
+    <summary>Doing phonetics by computer</summary>
+    <description>PRAAT is a very flexible tool to do speech analysis. It offers a wide range of standard and non-standard procedures, including spectrographic analysis, articulatory synthesis, and neural networks.  There is simply no better package for linguists to use in analyzing speech.
+    
+### Features
+* Speech analysis
+* Speech synthesis
+* Speech manipulation
+* Listening experiments
+* Labeling and segmentation
+* Learning algorithms
+* Statistics with principal compenent and discriminant analysis
+* Produce quality graphics with integrated Mathematical and phonetics symbols
+* Programmable with an easy scripting language
+* Portable
+* Configurable
+
+Much of the "official" documentation is not designed to help linguists (who may not have a strong phonetics background) get the measurements and make the changes that they need for research.  Thus, be sure to also look at the regularly-updated guidebook, [*Using Praat for Linguistic Research* by Will Styler](http://wstyler.ucsd.edu/praat).
+
+For best results with phonetic characters in the TextGrid and Picture windows, you should also download the [Charis SIL](https://chocolatey.org/packages/charissil) and/or the [Doulos SIL](https://chocolatey.org/packages/doulossil) fonts.
+    </description>
+    <releaseNotes>http://www.fon.hum.uva.nl/praat/manual/What_s_new_.html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
