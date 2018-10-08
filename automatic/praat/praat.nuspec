@@ -21,7 +21,7 @@
     <bugTrackerUrl>https://github.com/praat/praat/issues</bugTrackerUrl>
     <tags>praat sound visualization speech phonetics phonology analysis oss embedded</tags>
     <summary>Doing phonetics by computer</summary>
-    <description>PRAAT is a very flexible tool to do speech analysis. It offers a wide range of standard and non-standard procedures, including spectrographic analysis, articulatory synthesis, and neural networks.  There is simply no better package for linguists to use in analyzing speech.
+    <description>PRAAT is a very flexible tool for speech analysis. It offers a wide range of standard and non-standard procedures including spectrographic analysis, articulatory synthesis, and neural networks.  There is simply no better package for linguists to use in analyzing speech.
     
 ### Features
 * Speech analysis
@@ -36,9 +36,9 @@
 * Portable
 * Configurable
 
-Much of the "official" documentation is not designed to help linguists (who may not have a strong phonetics background) get the measurements and make the changes that they need for research.  Thus, be sure to also look at the regularly-updated guidebook, [*Using Praat for Linguistic Research* by Will Styler](http://wstyler.ucsd.edu/praat).
+For best results with phonetic characters in the TextGrid and Picture windows, you should also consider installing the [Charis SIL](https://chocolatey.org/packages/charissil) and/or the [Doulos SIL](https://chocolatey.org/packages/doulossil) fonts.
 
-For best results with phonetic characters in the TextGrid and Picture windows, you should also download the [Charis SIL](https://chocolatey.org/packages/charissil) and/or the [Doulos SIL](https://chocolatey.org/packages/doulossil) fonts.
+Much of the "official" documentation is not designed to help linguists (who may not have a strong phonetics background) get the measurements and make the changes that they need for research.  Thus, be sure to also look at the regularly-updated guidebook, [*Using Praat for Linguistic Research* by Will Styler](http://wstyler.ucsd.edu/praat).
     </description>
     <releaseNotes>http://www.fon.hum.uva.nl/praat/manual/What_s_new_.html</releaseNotes>
   </metadata>
