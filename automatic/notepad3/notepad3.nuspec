@@ -11,7 +11,7 @@
     <title>Notepad3</title>
     <authors>Rizonesoft</authors>
     <projectUrl>https://www.rizonesoft.com/downloads/notepad3/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/notepad3_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@da79e32fe4b3b218165cbec9f0671a3d02f10a38/Icons/notepad3_icon.png</iconUrl>
     <copyright>Copyright © 2008-2016 Rizonesoft</copyright>
     <licenseUrl>https://github.com/rizonesoft/Notepad3/blob/master/License.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
