@@ -1,87 +1,181 @@
-﻿From: Installer window
+﻿From: Program start dialog
 
-LICENSE
+"This program may be freely distributed in accordance with the license agreement."
+
+===========================
+From: Installation program window
+
+LICENSE AGREEMENT
 
 Chromas is copyright © 1998-2018 Technelysium Pty Ltd. All rights reserved.
 
 IMPORTANT - READ CAREFULLY
 
-This license statement constitutes a legal agreement ("License Agreement") between you ("Licensee", either as an individual or a single entity) and Technelysium Pty Ltd ("Licensor"), sole worldwide publisher of the software product Chromas ("Software") of which Technelysium Pty Ltd is the copyright holder.
+This license statement constitutes a legal agreement ("License Agreement") 
+between you ("Licensee", either as an individual or a single entity) and 
+Technelysium Pty Ltd ("Licensor"), sole worldwide publisher of the software 
+product Chromas ("Software") of which Technelysium Pty Ltd is the copyright holder.
 
 The Web Site referred to in this agreement is http://www.technelysium.com.au
 
-BY INSTALLING, COPYING, OR OTHERWISE USING THE SOFTWARE, YOU AGREE TO BE BOUND BY ALL OF THE TERMS AND CONDITIONS OF THE LICENSE AGREEMENT.
+BY INSTALLING, COPYING, OR OTHERWISE USING THE SOFTWARE, YOU AGREE TO BE 
+BOUND BY ALL OF THE TERMS AND CONDITIONS OF THE LICENSE AGREEMENT.
 
-The Software is provided as-is.  No warranty or fitness for a particular purpose is expressed or implied.  In no event shall the Licensor or any of the Licensor's affiliates be liable for any consequential, special, incidental or indirect damages of any kind arising out of the delivery, performance or use of the Software, to the maximum extent permitted by law.  The Software is not designed or intended to be used in any activity that may cause personal injury, death or any other severe damage or loss.
+The Software is provided as-is.  No warranty or fitness for a particular 
+purpose is expressed or implied.  In no event shall the Licensor or any 
+of the Licensor's affiliates be liable for any consequential, special, 
+incidental or indirect damages of any kind arising out of the delivery, 
+performance or use of the Software, to the maximum extent permitted by law.  
+The Software is not designed or intended to be used in any activity that 
+may cause personal injury, death or any other severe damage or loss.
 
-Upon your acceptance of the terms and conditions of the License Agreement, the Licensor grants you the right to use the Software in the manner provided below.
+Upon your acceptance of the terms and conditions of the License Agreement, the 
+Licensor grants you the right to use the Software in the manner provided below.
 
-If you do not accept the terms and conditions of the License Agreement, you must promptly delete each and any copy of the Software from all your computers.
+If you do not accept the terms and conditions of the License Agreement, you 
+must promptly delete each and any copy of the Software from all your computers.
 
-The Licensor reserves the right to license the same Software to other individuals or entities under a different license agreement.
+The Licensor reserves the right to license the same Software to other 
+individuals or entities under a different license agreement.
 
-After accepting this License Agreement, the Licensee is permitted to use the Software under the terms of this agreement, without payment to the Licensor, until such time as the Licensor withdraws the license to use the Software.
+After accepting this License Agreement, the Licensee is permitted to use 
+the Software under the terms of this agreement, without payment to the 
+Licensor, until such time as the Licensor withdraws the license to use 
+the Software.
 
-Technical support may be available directly from the Licensor.  When encountering problems, the Licensee must verify that the Licensee is using the latest version of the Software, by reading the product page on the Web Site. If the Licensee has the latest version, the Licensee may write to chromas@technelysium.com.au with his or her question in the English language. The Licensor reserves the right to refuse to provide technical support.
+Technical support may be available directly from the Licensor.  When 
+encountering problems, the Licensee must verify that the Licensee is using 
+the latest version of the Software, by reading the product page on the Web 
+Site. If the Licensee has the latest version, the Licensee may write to 
+chromas@technelysium.com.au with his or her question in the English language. 
+The Licensor reserves the right to refuse to provide technical support.
 
-You must not attempt to reverse compile, modify, translate or disassemble the Software in whole or in part.  You must not run the Software under a debugger or similar tool allowing you to inspect the inner workings of the Software.
+You must not attempt to reverse compile, modify, translate or disassemble 
+the Software in whole or in part.  You must not run the Software under a 
+debugger or similar tool allowing you to inspect the inner workings of 
+the Software.
 
 The Software remains the exclusive property of the Licensor.
 
-You must not ask payment for the act of distributing the installation package of the Software or for the Software itself.  You must not distribute the Software by making it part of a larger package, unless that package is a collection of free evaluation software and other software that does not require payment.
+You must not ask payment for the act of distributing the installation 
+package of the Software or for the Software itself.  You must not distribute 
+the Software by making it part of a larger package, unless that package is 
+a collection of free evaluation software and other software that does not 
+require payment.
 
-The Licensor reserves the right to revoke your license if you violate any or all of the terms of this license agreement, without prior notice.
+The Licensor reserves the right to revoke your license if you violate any 
+or all of the terms of this license agreement, without prior notice.
 
 ****************************************************
 
-Chromas includes a PeakTrace component provided by Nucleics Pty Ltd. The following license applies to the PeakTrace component:
+Chromas includes a PeakTrace component provided by Nucleics Pty Ltd. The 
+following license applies to the PeakTrace component:
 
 END-USER LICENSE AGREEMENT ("EULA") FOR NUCLEICS PTY. LTD. PEAKTRACE 6 RP SOFTWARE
 
-IMPORTANT-READ CAREFULLY: This Nucleics End-User License Agreement ("EULA") is a legal agreement between you (either an individual or a single entity) and Nucleics Pty. Ltd. ("Nucleics") for the PeakTrace RP software, which includes computer software and may include associated computer hardware, media, printed materials, and "online" or electronic documentation (collectively, "SOFTWARE"). By installing, copying, or otherwise using the SOFTWARE, you agree to be bound by the terms of this EULA. If you do not agree to the terms of this EULA, do not install, copy or otherwise use the SOFTWARE.
+IMPORTANT-READ CAREFULLY: This Nucleics End-User License Agreement ("EULA") 
+is a legal agreement between you (either an individual or a single entity) 
+and Nucleics Pty. Ltd. ("Nucleics") for the PeakTrace RP software, which 
+includes computer software and may include associated computer hardware, 
+media, printed materials, and "online" or electronic documentation 
+(collectively, "SOFTWARE"). By installing, copying, or otherwise using the 
+SOFTWARE, you agree to be bound by the terms of this EULA. If you do not 
+agree to the terms of this EULA, do not install, copy or otherwise use 
+the SOFTWARE.
 
 Software LICENSE
 
-The SOFTWARE is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties. The SOFTWARE is licensed, not sold.
+The SOFTWARE is protected by copyright laws and international copyright 
+treaties, as well as other intellectual property laws and treaties. The 
+SOFTWARE is licensed, not sold.
 
 1. GRANT OF LICENSE
 
-This EULA grants you the following limited, non-exclusive, nontransferable, non-assignable rights:
+This EULA grants you the following limited, non-exclusive, nontransferable, 
+non-assignable rights:
 
-Installation and Use: You may ONLY use the SOFTWARE with .ab1, abd or abi file format data collected from DNA sequencing instruments. You may only use the SOFTWARE if you have a PeakTrace license.
+Installation and Use: You may ONLY use the SOFTWARE with .ab1, abd or abi 
+file format data collected from DNA sequencing instruments. You may only 
+use the SOFTWARE if you have a PeakTrace license.
 
-Reserved Rights: Nucleics and its suppliers retain title and all ownership rights to the SOFTWARE. All rights not expressly granted are reserved to Nucleics.
+Reserved Rights: Nucleics and its suppliers retain title and all ownership 
+rights to the SOFTWARE. All rights not expressly granted are reserved to 
+Nucleics.
 
 2. DESCRIPTION OF OTHER RIGHTS AND LIMITATIONS
 
-Limitations on Reverse Engineering, Decompilation, and Disassembly. You may not reverse engineer, decompile, or disassemble the SOFTWARE, except and only to the extent that such activity is expressly permitted by applicable law notwithstanding this limitation.
+Limitations on Reverse Engineering, Decompilation, and Disassembly. You 
+may not reverse engineer, decompile, or disassemble the SOFTWARE, except 
+and only to the extent that such activity is expressly permitted by applicable 
+law notwithstanding this limitation.
 
 3. INTELLECTUAL PROPERTY RIGHTS
 
-All title and intellectual property rights in and to the SOFTWARE (including but not limited to any images, photographs, animations, video, audio, music, text and "applets" incorporated into the SOFTWARE), and any copies you are permitted to make herein are owned by Nucleics or its suppliers. All title and intellectual property rights in and to the content which may be accessed through use of the SOFTWARE is the property of the respective content owner and may be protected by applicable copyright or other intellectual property laws and treaties. All rights not expressly granted are reserved by Nucleics.
+All title and intellectual property rights in and to the SOFTWARE 
+(including but not limited to any images, photographs, animations, video, 
+audio, music, text and "applets" incorporated into the SOFTWARE), and any 
+copies you are permitted to make herein are owned by Nucleics or its 
+suppliers. All title and intellectual property rights in and to the content 
+which may be accessed through use of the SOFTWARE is the property of the 
+respective content owner and may be protected by applicable copyright or 
+other intellectual property laws and treaties. All rights not expressly 
+granted are reserved by Nucleics.
 
 4. CONTROLLING LAW AND SEVERABILITY
 
-This EULA will be governed by and construed in accordance with the laws in the State of New South Wales, Australia, as applied to agreements entered into and to be performed entirely within New South Wales between New South Wales residents. This EULA shall not be governed by the United Nations Convention on Contracts for the International Sale of Goods, the application of which is expressly excluded. If for any reason a court of competent jurisdiction finds any provision, or portion thereof, to be unenforceable, the remainder of this EULA shall continue in full force and effect.
+This EULA will be governed by and construed in accordance with the laws 
+in the State of New South Wales, Australia, as applied to agreements 
+entered into and to be performed entirely within New South Wales between 
+New South Wales residents. This EULA shall not be governed by the United 
+Nations Convention on Contracts for the International Sale of Goods, the 
+application of which is expressly excluded. If for any reason a court of 
+competent jurisdiction finds any provision, or portion thereof, to be 
+unenforceable, the remainder of this EULA shall continue in full force 
+and effect.
 
 5. DISCLAIMER OF WARRANTIES
 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" 
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE 
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE 
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE 
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR 
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF 
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS 
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN 
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
+THE POSSIBILITY OF SUCH DAMAGE.
 
 6. COMPLETE AGREEMENT; GOVERNING LANGUAGE
 
-The warranty and remedies set forth above are exclusive and in lieu of all others, oral or written, express or implied. No Nucleics reseller, agent, or employee is authorized to make any modification, extension, or addition to this warranty. Any translation of this EULA is done for local requirements and in the event of a dispute between the English and any non-English versions, the English version of this EULA shall govern.
+The warranty and remedies set forth above are exclusive and in lieu of 
+all others, oral or written, express or implied. No Nucleics reseller, 
+agent, or employee is authorized to make any modification, extension, or 
+addition to this warranty. Any translation of this EULA is done for local 
+requirements and in the event of a dispute between the English and any 
+non-English versions, the English version of this EULA shall govern.
 
 7. TERMINATION
 
-This EULA is effective until terminated. Your rights under this EULA will terminate automatically without notice from Nucleics if you fail to comply with any term(s) of this EULA. Upon termination of this EULA, you shall cease all use of the SOFTWARE and destroy all copies, full or partial, of the SOFTWARE.
+This EULA is effective until terminated. Your rights under this EULA 
+will terminate automatically without notice from Nucleics if you fail 
+to comply with any term(s) of this EULA. Upon termination of this EULA, 
+you shall cease all use of the SOFTWARE and destroy all copies, full or 
+partial, of the SOFTWARE.
 
 8. TRADEMARK AND LICENSES ACKNOWLEDGEMENTS
 
-"PeakTrace", "PeakTrace RP", "Auto PeakTrace RP" and "Auto PeakTrace 6 RP" are trademarks of Nucleics Pty. Ltd.
+"PeakTrace", "PeakTrace RP", "Auto PeakTrace RP" and "Auto PeakTrace 6 RP" 
+are trademarks of Nucleics Pty. Ltd.
 
-The PeakTrace 6 RP installer provides the 7-Zip program. 7-Zip is licensed under the GNU LGPL license.You can receive a copy of the GNU Lesser General Public License from www.gnu.org. The source code for 7-zip can be found at www.7-zip.org.
+The PeakTrace 6 RP installer provides the 7-Zip program. 7-Zip is 
+licensed under the GNU LGPL license.You can receive a copy of the GNU 
+Lesser General Public License from www.gnu.org. The source code for 
+7-zip can be found at www.7-zip.org.
 
 9. MISCELLANEOUS
 
-Should you have any questions concerning this EULA, or if you desire to contact Nucleics for any reason, please write to: Nucleics Pty. Ltd, 29 John St, Woollahra, NSW, 2025, Australia
+Should you have any questions concerning this EULA, or if you desire to 
+contact Nucleics for any reason, please write to: Nucleics Pty. Ltd, 
+29 John St, Woollahra, NSW, 2025, Australia

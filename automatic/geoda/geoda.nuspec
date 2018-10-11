@@ -11,7 +11,7 @@
     <title>GeoDa</title>
     <authors>Center for Spatial Data Science (CSDS)</authors>
     <projectUrl>https://geodacenter.github.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/geoda_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@85290e2431b5ea98a18c220f29643db751d80412/Icons/geoda_icon.png</iconUrl>
     <copyright>Copyright © 2003-2016 Luc Anselin</copyright>
     <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

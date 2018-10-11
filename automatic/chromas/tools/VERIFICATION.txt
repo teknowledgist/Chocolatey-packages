@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The installer is available by following the download link on this page:  
+   https://technelysium.com.au/wp/chromas/
+
+Direct Download:
+
+Version  : 2.6.5
+URL      : http://www.technelysium.com.au/Chromas265Setup.exe
+CheckSum : 3d8cc4dccce577a6ba147d552d942a840fa83db48590d0922f45ab0bda7871c3
+

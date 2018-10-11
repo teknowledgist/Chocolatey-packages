@@ -11,7 +11,7 @@
     <title>Doulos SIL (font)</title>
     <authors>SIL International</authors>
     <projectUrl>https://software.sil.org/doulos/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/doulossil_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@f5df8275154486951e8b6876902a2a2dd7af5525/Icons/doulossil_icon.png</iconUrl>
     <copyright>Copyright © 1994-2014, SIL International</copyright>
     <licenseUrl>https://scripts.sil.org/ofl</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

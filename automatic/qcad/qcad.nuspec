@@ -11,7 +11,7 @@
     <title>QCAD - 2D CAD - Community Edition</title>
     <authors>RibbonSoft, GmbH</authors>
     <projectUrl>http://www.qcad.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/qcad_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@3207cab9b49da7be5d9a7ef8594be01935e15fda/Icons/qcad_icon.png</iconUrl>
     <licenseUrl>http://www.qcad.org/en/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>http://www.qcad.org/en/qcad-documentation</docsUrl>

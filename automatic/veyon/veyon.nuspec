@@ -11,7 +11,7 @@
     <title>Veyon</title>
     <authors>Veyon Solutions</authors>
     <projectUrl>https://veyon.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/veyon_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@c7b1ed463f40b38d7f199ee650b48a8ba153b64a/Icons/chromas_icon.png</iconUrl>
     <copyright>Copyright (c) 2004-2018 Tobias Junghans / Veyon Solutions</copyright>
     <licenseUrl>https://raw.githubusercontent.com/veyon/veyon/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

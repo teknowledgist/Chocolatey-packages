@@ -11,7 +11,7 @@
     <title>Tinn-R</title>
     <authors>José Cláudio Faria, Philippe Grosjean, Enio Galinkin Jelihovschi, Philipe Silva Farias</authors>
     <projectUrl>http://nbcgib.uesc.br/lec/software/editores/tinn-r/en</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/Tinn-R_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@d787bd727666b25e03bb92be0c60af219951e68d/Icons/Tinn-R_icon.png</iconUrl>
     <copyright>Copyright © 2001-2016</copyright>
     <licenseUrl>https://github.com/jcfaria/Tinn-R/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
