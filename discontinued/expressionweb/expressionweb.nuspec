@@ -10,7 +10,7 @@
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Microsoft Expression Web</title>
     <authors>Microsoft Corporation</authors>
-    <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
+    <projectUrl>https://www.microsoft.com/en-us/download/details.aspx?id=36179</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/expressionweb_icon.png</iconUrl>
     <copyright>Copyright © 2012 Microsoft Corporation</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/expressionweb/tools/LICENSE.txt</licenseUrl>
