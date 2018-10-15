@@ -5,18 +5,17 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>scp</id>
     <version>4.0.9.88</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/local/scp</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/scp</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Simple Concordance Program</title>
     <authors>Alan Reed</authors>
-    <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
+    <projectUrl>http://www.textworld.com/scp/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/scp_icon.png</iconUrl>
     <copyright>copyright © 2006 Alan Reed</copyright>
     <licenseUrl>http://www.textworld.com/scp/copyrigh.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://www.textworld.com/scp/scphelp.pdf</docsUrl>
-    <bugTrackerUrl>mailto:A.Reed@textworld.com</bugTrackerUrl>
     <tags>scp concordance language words phrases</tags>
     <summary>Generate concordances from natural language text files.</summary>
     <description> SCP is a concordance and word listing program that is able to read texts written in many languages and create word lists and search natural language text files for words, phrases, and patterns. There are built-in alphabets for English, French, German, Polish, Greek, Russian, etc. SCP contains an alphabet editor which you can use to create alphabets for any other language. 
