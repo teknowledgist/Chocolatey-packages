@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>markdown-edit</id>
-    <version>1.34</version>
+    <version>1.35</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/markdown-edit</packageSourceUrl>
     <owners>Mike Ward, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Markdown Edit</title>
     <authors>Mike Ward</authors>
     <projectUrl>http://markdownedit.com</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/mike-ward/Markdown-Edit/master/src/MarkdownEdit/logo.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/mike-ward/Markdown-Edit@fe591e5c633b78bcfe341293da8b1b49ccf08c7f/src/MarkdownEdit/logo.png</iconUrl>
     <copyright>Copyright (c) 2014 Mike Ward</copyright>
     <licenseUrl>https://cdn.rawgit.com/mike-ward/Markdown-Edit/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>

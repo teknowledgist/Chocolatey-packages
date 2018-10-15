@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>speedyfox</id>
-    <version>2.0.24</version>
+    <version>2.0.25</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/speedyfox</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>SpeedyFox (portable)</title>
     <authors>CrystalIDEA Software</authors>
     <projectUrl>https://www.crystalidea.com/speedyfox</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/speedyfox_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@f643811c403308fd4921ec69e9ffc600d2c6fd7c/Icons/speedyfox_icon.png</iconUrl>
     <copyright>Copyright © 2009-2017 CrystalIDEA Software</copyright>
     <licenseUrl>https://www.crystalidea.com/eula</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
