@@ -4,8 +4,8 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>openchrom</id>
-    <version>1.1.0.20161129</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/openchrom</packageSourceUrl>
+    <version>1.3.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/openchrom</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>OpenChrom Community Edition</title>
@@ -39,7 +39,6 @@ OpenChrom® is tailored for data analysis purposes including processing, visuali
 * Office integration editor
 * Extensible with [plugins](https://marketplace.openchrom.net/)
     </description>
-    <releaseNotes>https://spectrometrylab.wordpress.com/2016/08/01/release-openchrom-1-1-0-diels/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
