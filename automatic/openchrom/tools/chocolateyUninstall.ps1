@@ -1,19 +1,20 @@
-$RegistryLocation = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall'
+$ErrorActionPreference = 'Stop'
 
-$unexe = Get-ItemProperty "$RegistryLocation\*" | 
-                     Where-Object { $_.displayname -eq 'OpenChrom'} |
-                     Select-Object -ExpandProperty UninstallString
+# The installer doesn't remove previous versions, so there could be multiple "installs"
+$InstallDirs = Get-ChildItem $env:ChocolateyPackageFolder | 
+                  Where-Object {($_.psiscontainer) -and ($_.name -match $env:ChocolateyPackageName)}
 
-$UninstallArgs = @{
-   packageName = 'openchrom'
-   fileType = 'exe'
-   file = $unexe
-   silentArgs = '/S'
-   validExitCodes = @(0)
+# Chocolatey deletes the package directory which will break all the links, 
+#    so this will delete all of those associated with this Chocolatey package
+foreach ($Dir in $InstallDirs) {
+   $lnk = $Dir -replace $env:ChocolateyPackageName,"$env:ChocolateyPackageName v"
+   $StartShortcut = Join-Path $env:ProgramData "Microsoft\Windows\Start Menu\Programs\$lnk.lnk"
+
+   if(Test-Path $StartShortcut) {
+      Remove-Item $StartShortcut -Force
+   }
+
+   $null = Remove-Item $Dir.fullname -Recurse -Force
 }
-
-Uninstall-ChocolateyPackage @UninstallArgs
-
-
 
 
