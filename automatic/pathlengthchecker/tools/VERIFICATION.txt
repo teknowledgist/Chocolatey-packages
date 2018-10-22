@@ -1,0 +1,12 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Path Length Checker can be downloaded from the GitHub releases page:
+   https://github.com/deadlydog/PathLengthChecker/releases
+
+Direct download:
+Version  : 1.2.0
+URL      : https://github.com/deadlydog/PathLengthChecker/releases/download/1.2.0/PathLengthChecker1.2.0.zip
+CheckSum : C7748E2820F86649DDC6906780C71A782A4BED0CD1BE2D363D736D4435DD71E1
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>pathlengthchecker</id>
+    <version>1.2.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pathlengthchecker</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Path Length Checker</title>
+    <authors>Daniel Schroeder</authors>
+    <projectUrl>https://github.com/deadlydog/PathLengthChecker</projectUrl>
+    <!-- <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/pathlengthchecker_icon.png</iconUrl> -->
+    <copyright>MIT Copyright (c) 2012 Daniel Schroeder, iQmetrix</copyright>
+    <licenseUrl>https://github.com/deadlydog/PathLengthChecker/blob/master/License.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/deadlydog/PathLengthChecker</projectSourceUrl>
+    <docsUrl>https://github.com/deadlydog/PathLengthChecker#running-via-the-gui-graphical-user-interface</docsUrl>
+    <bugTrackerUrl>https://github.com/deadlydog/PathLengthChecker/issues</bugTrackerUrl>
+    <tags>pathlengthchecker pathlength path filename filepath explorer windows oss embedded</tags>
+    <summary>Easily find path lengths</summary>
+    <description>Path Length Checker is a stand-alone app that allows you to specify a root directory, and it gives you back a list of all paths (i.e. files and directories) in that root directory and their lengths. It includes features such as pattern matching and min/max length constraints, as well as the ability to specify a string that should replace the root directory in the results brought back, allowing you to quickly see path lengths if you were to move the files/folders to another location.
+
+    ![Example](https://cdn.jsdelivr.net/gh/deadlydog/PathLengthChecker@221aae256865998137f21f05f9cd79c081c19df5/docs/Images/PathLengthChecker.png)  
+    </description>
+    <releaseNotes>https://github.com/deadlydog/PathLengthChecker/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

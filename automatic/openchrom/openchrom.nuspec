@@ -11,14 +11,14 @@
     <title>OpenChrom Community Edition</title>
     <authors>Lablicate</authors>
     <projectUrl>https://www.openchrom.net/home</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/openchrom_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@64529d28c398f02e22b7dcfe2750bd44751024f2/Icons/openchrom_icon.png</iconUrl>
     <copyright>Copyright (c) 2016 by Lablicate GmbH</copyright>
     <licenseUrl>http://www.eclipse.org/legal/epl-v10.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://sourceforge.net/projects/openchrom/files/</projectSourceUrl>
     <docsUrl>https://wiki.openchrom.net</docsUrl>
     <bugTrackerUrl>https://sourceforge.net/p/openchrom/bugs/</bugTrackerUrl>
-    <tags>openchrom chromatography chemistry spectometry admin</tags>
+    <tags>openchrom chromatography chemistry spectrometry analysis eclipse oss</tags>
     <summary>A tool for gas chromatography and mass spectrometry</summary>
     <description>OpenChrom® Community Edition is a free, extendable and easy-to-use software tool for chromatographic and mass spectrometric data analysis based on the [Eclipse Rich Client Platform (RCP)](http://wiki.eclipse.org/index.php/Rich_Client_Platform). Its focus is on handling mass spectrometry data files natively. Hence, mass spectrometric data generated, for example, by GC/MS, LC/MS, HPLC-MS, ICP-MS or MALDI-MS may be imported directly, without prior conversion, for subsequent visualization and evaluation. Aside from the support of various vendor data formats, data may also be imported in common formats such as NetCDF, csv or mzXML. All data format converters are provided as separate plug-ins which are not open source but free to use. Moreover, OpenChrom® offers a nicely adaptable graphical user interface.
 
