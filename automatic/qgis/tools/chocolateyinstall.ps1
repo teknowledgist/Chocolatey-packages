@@ -1,17 +1,17 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $NewRelease = $env:ChocolateyPackageVersion
-$LTRversion = '2.18.24'
+$LTRversion = '2.18.25'
 
 $InstallArgs = @{
    packageName    = 'qgis'
    fileType       = 'EXE'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
-   url            = 'http://qgis.org/downloads/QGIS-OSGeo4W-3.2.3-1-Setup-x86.exe'
-   url64bit       = 'http://qgis.org/downloads/QGIS-OSGeo4W-3.2.3-1-Setup-x86_64.exe'
+   url            = 'http://qgis.org/downloads/QGIS-OSGeo4W-3.4.0-1-Setup-x86.exe'
+   url64bit       = 'http://qgis.org/downloads/QGIS-OSGeo4W-3.4.0-1-Setup-x86_64.exe'
    checksumType   = 'sha256'
-   checksum       = 'bc6fc19e8f1fbf196d139a3a4035117c59caed3ec5df0b4bec15fa02e524c643'
-   checksum64     = '7e2c77f52e823233f156cdbbd4a2d99d428e53ff982b4056fa2b1e17f2ae3c44'
+   checksum       = '30dfd1edab83a0d02e7921b4898246eb469bc7999e2a8e1cacbfb8118c953a17'
+   checksum64     = '224996b6a6b28eef7c3ba90dcc039c49a3e2dd866e2f766b20a79158bc46dab9'
    silentArgs     = '/S'
    validExitCodes = @(0)
 }

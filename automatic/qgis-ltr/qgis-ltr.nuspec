@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qgis-ltr</id>
-    <version>2.18.24</version>
+    <version>2.18.25</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qgis-ltr</packageSourceUrl>
     <owners>Snowflake, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>QGIS LTR (Long Term Release)</title>
     <authors>OSGeo</authors>
     <projectUrl>https://www.qgis.org</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/qgis_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@d71a34f3e4b56ff7a0e36af2d2a7eb2a8422765b/Icons/qgis_icon.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
