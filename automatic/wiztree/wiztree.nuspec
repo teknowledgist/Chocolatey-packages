@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>wiztree</id>
-    <version>3.26</version>
+    <version>3.26.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/wiztree</packageSourceUrl>
     <owners>DDoSolitary, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>WizTree</title>
     <authors>Antibody Software</authors>
     <projectUrl>http://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/wiztree_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@2b0f9ae47d47b9b699977be5d6a6c98f0f910180/Icons/wiztree_icon.png</iconUrl>
     <copyright>Copyright © 2012-2018 Antibody Software Limited</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/wiztree/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

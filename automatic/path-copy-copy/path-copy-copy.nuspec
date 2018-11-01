@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>path-copy-copy</id>
-    <version>15.0</version>
+    <version>15.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/path-copy-copy</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Path Copy Copy (Install)</title>
     <authors>clechasseur</authors>
     <projectUrl>https://pathcopycopy.github.io/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/path-copy-copy_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@5a1b0fc913cc5f39044c183ed0aa58b1172a7b39/Icons/path-copy-copy_icon.png</iconUrl>
     <copyright>Copyright © 2008-2017 Charles Lechasseur</copyright>
     <licenseUrl>https://github.com/clechasseur/pathcopycopy/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

@@ -6,7 +6,7 @@ function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri $Release
 
    $link = $download_page.links | 
-            Where-Object {$_.href -like "*.exe"} | 
+            Where-Object {$_.href -like "*win.zip"} | 
             Select-Object -First 1   
             
    $url = $Release + $link.href
