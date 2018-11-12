@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <id>pdfsam.install</id>
+    <id>pdfsam</id>
     <version>3.3.7</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdfsam.install</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdfsam</packageSourceUrl>
     <owners>Teknowledgist, CDuv</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>PDFsam Basic (Install)</title>
+    <title>PDFsam Basic</title>
     <authors>Andrea Vacondio</authors>
     <projectUrl>http://www.pdfsam.org</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@867d7a88b8b782f68a8c3ccd65bc82bfacb0e39a/Icons/pdfsam_icon.png</iconUrl>
@@ -19,7 +19,7 @@
     <docsUrl>http://www.pdfsam.org/documentation</docsUrl>
     <bugTrackerUrl>https://github.com/torakiki/pdfsam/issues</bugTrackerUrl>
     <mailingListUrl>https://pdfsam.org/contact/</mailingListUrl>
-    <tags>pdfsam.install pdfsam pdf split merge embedded</tags>
+    <tags>pdfsam pdf split merge meta</tags>
     <summary>The open source software to split, merge and rotate PDF files</summary>
     <description>Split, merge, rotate, mix and extract pages from PDF files with **PDFsam Basic** at home or at work. 
 
@@ -34,7 +34,7 @@
     </description>
     <releaseNotes>https://github.com/torakiki/pdfsam/releases/latest</releaseNotes>
     <dependencies>
-      <dependency id="jre8" version="8.0" />
+      <dependency id="pdfsam.install" version="3.3.7" />
     </dependencies>
   </metadata>
   <files>
