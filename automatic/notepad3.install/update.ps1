@@ -8,7 +8,7 @@ function global:au_GetLatest {
    # Next attempt
    $AElement = $PageText.content.split('<') | ? {$_ -match '\.zip' -and $_ -match 'href='} |select -First 1
    $version = $AElement.split('_') |? {$_ -match '^[0-9.]+$'}
-   $URL = $AElement.split('"') |? {$_ -match '^http'}
+   $URLLink = $AElement.split('"') |? {$_ -match '^http'}
 
    <# Formerly working
    $HREF = $PageText.links | ? {$_.innertext -match 'Notepad3.*Setup\.zip'} | select -First 1
@@ -16,7 +16,11 @@ function global:au_GetLatest {
    $URL = $HREF | Select-Object -ExpandProperty href
    #>
 
-   $URL = $URL + "?version=" + $Version.replace('.','-')
+   # $URL = $URL + "?version=" + $Version.replace('.','-')    # also formerly working
+
+   $url = (Invoke-WebRequest -Uri $URLLink -UseBasicParsing).rawcontent.split('"') | 
+               Where-Object {$_ -match "^$URLLink"}
+
 
    return @{ 
             Version  = $Version

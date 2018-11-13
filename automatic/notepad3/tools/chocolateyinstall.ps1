@@ -1,0 +1,1 @@
+﻿# This is just a virtual package for notepad3.install

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>pdfsam</id>
+    <version>3.3.7</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdfsam</packageSourceUrl>
+    <owners>Teknowledgist, CDuv</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PDFsam Basic</title>
+    <authors>Andrea Vacondio</authors>
+    <projectUrl>http://www.pdfsam.org</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@867d7a88b8b782f68a8c3ccd65bc82bfacb0e39a/Icons/pdfsam_icon.png</iconUrl>
+    <copyright>©2017 Sober Lemur S.a.s di Vacondio Andrea</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/agpl-3.0.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/torakiki/pdfsam</projectSourceUrl>
+    <docsUrl>http://www.pdfsam.org/documentation</docsUrl>
+    <bugTrackerUrl>https://github.com/torakiki/pdfsam/issues</bugTrackerUrl>
+    <mailingListUrl>https://pdfsam.org/contact/</mailingListUrl>
+    <tags>pdfsam pdf split merge meta</tags>
+    <summary>The open source software to split, merge and rotate PDF files</summary>
+    <description>Split, merge, rotate, mix and extract pages from PDF files with **PDFsam Basic** at home or at work. 
+
+* **PDFsam Basic** is a free and open source solution for casual users.  See http://www.pdfsam.org/enhanced-version/ for **PDFsam Enhanced**.
+* Your PDF documents stay private on your computer. No need to upload them to a third party service. 
+* Merge PDF files, select the pages, merge bookmarks and interactive forms.
+* Split a PDF file at given page numbers, at given bookmarks level or in files of a given size.
+* Extract pages from PDF files
+* Rotate PDF files: every page or just the selected pages
+* Mix PDF files together taking pages alternatively from one and the other. The perfect tool if you have a single-sided scanner
+
+    </description>
+    <releaseNotes>https://github.com/torakiki/pdfsam/releases/latest</releaseNotes>
+    <dependencies>
+      <dependency id="pdfsam.install" version="3.3.7" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
