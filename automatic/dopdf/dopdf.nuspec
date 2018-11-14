@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>dopdf</id>
+    <version>9.6.244</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/dopdf</packageSourceUrl>
+    <owners>Teknowledgist, schelljw</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>doPDF (install)</title>
+    <authors>Softland</authors>
+    <projectUrl>http://www.dopdf.com</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/dopdf_icon.png</iconUrl>
+    <copyright>© Softland 2006 - 2018</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/dopdf/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.dopdf.com/download/pdf/dopdf.pdf</docsUrl>
+    <mailingListUrl>http://www.dopdf.com/forum/</mailingListUrl>
+    <tags>dopdf pdf print notsilent</tags>
+    <summary>A free PDF printer</summary>
+    <description>doPDF is a free PDF printer that does what the name suggests, creates PDF files. Once installed it will allow you to convert any type of printable documents to PDF files. doPDF installs itself as a virtual PDF printer driver so after a successful installation will appear in your Printers and Faxes list and also in the list of All Programs. 
+
+#### Main Features
+
+* **Predefined page size**: You can select a predefined page size for the resulting PDF file. (50 different formats available)
+* **PDF output presets**: You can choose to create high quality, larger PDF files or smaller files, depending on your needs.
+* **Automatic updates**: We always recommend using the latest version of doPDF and its integrated automatic update engine will keep your version current. Update checks can be scheduled daily, weekly or monthly, but you can also disable this feature.
+* **Searchable PDFs**: You can search for text within the created PDF file (and search engines will also index the text from the PDF).
+* **Add Document info**: Add document metadata information for the resulting PDF file that helps with indexing.
+* **Graphic scale**: The content of the resulting PDF can be shrunk to 1% of the original size, or enlarged up to 400%.
+* **Always use this folder**: You can have doPDF create and save the PDF file to the same folder each time, no matter where you open the original document from.
+* **Embed font subsets**: To ensure that the resulting PDF file will look exactly as originally intended, doPDF embeds by default the font subsets used in the original document.
+* **Open with PDF reader**: You can choose to have the PDF opened with the default PDF reader once it's converted.
+* **No GhostScript**:  Doesn’t require 3rd party programs to make PDF files such as GhostScript. 
+* **Multi-language**: doPDF is the ONLY free pdf maker whose interface is currently available in 33 different languages.
+
+
+    </description>
+    <releaseNotes>http://www.dopdf.com/forum/announcements-f2/changelog-dopdf-9-t4298.html</releaseNotes>
+    <dependencies>
+      <dependency id="autohotkey.portable" version="1.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

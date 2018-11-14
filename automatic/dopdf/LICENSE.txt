@@ -1,0 +1,143 @@
+﻿From:  Installation files
+
+LICENSE
+
+**doPDF** End User License Agreement (EULA)
+===========================================
+
+NOTICE TO USERS: CAREFULLY READ THE FOLLOWING LEGAL AGREEMENT. USE OF doPDF (the 
+“SOFTWARE”) PROVIDED WITH THIS AGREEMENT CONSTITUTES YOUR ACCEPTANCE OF THESE 
+TERMS. IF YOU DO NOT AGREE TO THE TERMS OF THIS AGREEMENT, DO NOT INSTALL AND/OR 
+USE THIS SOFTWARE. USER'S USE OF THIS SOFTWARE IS CONDITIONED UPON COMPLIANCE BY 
+USER WITH THE TERMS OF THIS AGREEMENT.
+
+1. License grant
+----------------
+
+This EULA grants you the right to store, load, install, execute or display 
+unlimited copies of the SOFTWARE on your DEVICES.
+DEVICE means a computer, information appliance, peripheral or gadget. DEVICE 
+must be wholly owned, rented or leased by you. "You" means the company, entity 
+or individual who received the SOFTWARE.
+You may not modify the SOFTWARE or disable features of the SOFTWARE except as an 
+intended part of the SOFTWARE's programming features.
+
+2. Restrictions
+---------------
+
+You may not rent, lease, sub-license, transfer or sell the SOFTWARE. You agree 
+not to modify, adapt, translate, reverse engineer, decompile, disassemble or 
+otherwise attempt to discover the source code of the SOFTWARE. You may not 
+alter or modify the installer program or create a new installer for the SOFTWARE.
+
+3. Freeware
+-----------
+
+This SOFTWARE is free for personal and/or commercial use. When you obtain a copy 
+of the SOFTWARE, you are granted an unlimited usage period.
+You are expected to use the SOFTWARE on your system and to thoroughly evaluate 
+its usefulness and functionality. This approach is the ultimate guarantee that 
+the SOFTWARE will perform to your satisfaction; therefore, you understand and 
+agree that there is no compensation policy for the malfunction of the SOFTWARE.
+
+4. Ownership
+------------
+
+The SOFTWARE is owned and copyrighted by SOFTLAND. This license confers no title 
+or ownership of the SOFTWARE and should not be construed as a grant of any right 
+in the SOFTWARE.
+
+5. Distribution
+---------------
+
+You may make and distribute unlimited copies of the SOFTWARE, as long as each 
+copy that you make and distribute contains this agreement, the SOFTWARE 
+installer, and the same copyright and other proprietary notices pertaining to 
+this SOFTWARE. If you download the SOFTWARE from the Internet or similar on-line 
+source, you must include the SOFTLAND copyright notice for the SOFTWARE with any 
+on-line distribution and on any media you distribute that includes the SOFTWARE.
+You are not allowed to integrate the SOFTWARE in your applications or services.
+
+6. **Licensed Fonts**
+---------------------
+
+Some fonts are subject to a license granted by the owner of the font. This 
+license may provide that the font may NOT be embedded or otherwise distributed 
+without a license from the font owner. Users of the SOFTWARE are responsible for 
+obtaining the necessary license from the owner of the aforementioned fonts if 
+the user wishes to embed them. Failure to obtain the necessary licenses may 
+expose the user to legal claims by the owners of these fonts. SOFTLAND and its 
+suppliers assume no responsibility for such claims.
+
+7. **Program Credits**
+----------------------
+
+This SOFTWARE makes use of the following algorithms: ZIP compression, JPEG 
+compression, Rijndael encryption, SHA-2 encryption. You can find the credits for 
+the components used by the SOFTWARE in the credits file distributed with the 
+SOFTWARE.
+
+8. **Copyright**
+----------------
+
+The SOFTWARE and all rights are owned by SOFTLAND and/or its suppliers and are 
+protected by copyright law and international copyright treaties. You acknowledge 
+that no title to the intellectual property in the SOFTWARE is transferred to 
+you. You further acknowledge that title and full ownership rights to the 
+SOFTWARE will remain the exclusive property of SOFTLAND and you will not acquire 
+any rights to the SOFTWARE except as expressly set forth in this license.
+
+9. Termination
+--------------
+
+The License is in effect until terminated. You may terminate this License at any 
+time by ceasing any and all use of the SOFTWARE, and deleting or destroying the 
+SOFTWARE. This agreement shall terminate automatically upon breach of any term 
+of this agreement. Upon termination you shall destroy all copies of the 
+SOFTWARE. Sections titled "Restrictions", "Ownership", "Copyright", "No 
+Warranty, No Liability", "Governing Law" and "Entire Agreement" shall survive 
+any termination of this agreement.
+
+10. Consent to anonymous use of data
+------------------------------------
+
+You agree that Softland may collect and use anonymous technical data and related 
+information, including but not limited to technical information about your 
+operating system, that is gathered to facilitate the provision of software 
+updates and other services to You (if any) related to the SOFTWARE. Softland may 
+use this information to improve its products or to provide services or 
+technologies to You as long as it is in a form that does not personally identify 
+You.
+
+11. No Warranty, No Liability
+-----------------------------
+
+SOFTLAND AND ITS SUPPLIERS DO NOT AND CANNOT WARRANT THE PERFORMANCE OR RESULTS 
+YOU MAY OBTAIN BY USING THE SOFTWARE OR DOCUMENTATION. SOFTLAND AND ITS 
+SUPPLIERS MAKE NO WARRANTIES, EXPRESS OR IMPLIED, AS TO NONINFRINGEMENT OF THIRD 
+PARTY RIGHTS, MERCHANTABILITY, OR FITNESS FOR ANY PARTICULAR PURPOSE. IN NO 
+EVENT WILL SOFTLAND OR ITS SUPPLIERS BE LIABLE TO YOU FOR ANY CONSEQUENTIAL, 
+INCIDENTAL OR SPECIAL DAMAGES, INCLUDING ANY LOST PROFITS OR LOST SAVINGS, EVEN 
+IF A SOFTLAND REPRESENTATIVE HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH 
+DAMAGES, OR FOR ANY CLAIM BY ANY THIRD PARTY. YOU HEREBY ASSUME THE ENTIRE RISK 
+OF ALL USE OF THE COPIES OF SOFTWARE COVERED BY THIS LICENSE.
+
+12. Governing Law
+-----------------
+
+This agreement is governed by the laws of Romania. Any claim, dispute or 
+controversy with respect to, in connection with or arising out of this agreement 
+shall be subject to and decided by arbitration in the City of Cluj-Napoca, 
+County of Cluj, Romania. If any part of this agreement is found void and 
+unenforceable by a court of competent jurisdiction, it will not affect the 
+validity of the balance of the agreement, which shall remain valid and 
+enforceable according to its terms.
+
+13. Entire Agreement
+--------------------
+
+This agreement is the final, complete and exclusive agreement between you and 
+SOFTLAND that supersedes any prior agreement or understanding, whether written 
+or oral, relating to the subject matter of this license.
+
+Copyright © 2006-2018 Softland. All rights reserved.
