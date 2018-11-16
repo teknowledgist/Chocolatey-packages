@@ -8,10 +8,10 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pngoptimizer</packageSourceUrl>
     <owners>Teknowledgist, ferventcoder</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>PngOptimizer (Install)</title>
+    <title>PngOptimizer</title>
     <authors>Hadrien Nilsson</authors>
     <projectUrl>http://psydk.org/PngOptimizer.php</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/pngoptimizer_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@cc4b1558ccc7853df6d0cb4f1f79cb63caede42b/Icons/pngoptimizer_icon.png</iconUrl>
     <copyright>Copyright © 2002/2017 Hadrien Nilsson</copyright>
     <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.en.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
