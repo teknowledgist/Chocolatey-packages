@@ -1,16 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$ZipPath = (Get-ChildItem -Path $toolsDir -filter '*.zip').FullName
-$ProgDir = Join-Path $env:ProgramFiles 'FastCopy'
+$InstallerPath = (Get-ChildItem -Path $toolsDir -filter '*.exe').FullName
 
-# Extract installer
-$UnZipPath = Get-ChocolateyUnzip -FileFullPath $ZipPath -Destination (Join-Path $env:TEMP $env:ChocolateyPackageName.$env:ChocolateyPackageVersion)
+if (-not $InstallerPath) {
+   $ZipPath = (Get-ChildItem -Path $toolsDir -filter '*.zip').FullName
+   Get-ChocolateyUnzip -FileFullPath $ZipPath -Destination $toolsDir
+   $InstallerPath = (Get-ChildItem -Path $toolsDir -filter '*.exe').FullName
+}
+
+$ProgDir = Join-Path $env:ProgramFiles 'FastCopy'
 
 $UninstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileType       = 'exe'
-   File           = (Get-ChildItem -Path $UnZipPath -filter '*.exe').FullName
+   File           = $InstallerPath
    silentArgs     = "/silent /r"
    validExitCodes = @(0)
 }

@@ -1,16 +1,20 @@
 ﻿$ErrorActionPreference = 'Stop'
-$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$ZipPath = (Get-ChildItem -Path $toolsDir -filter '*.zip').FullName
 
-# Extract zip
-$UnZipPath = Get-ChocolateyUnzip -FileFullPath $ZipPath -Destination (Join-Path $env:TEMP $env:ChocolateyPackageName)
+$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$InstallerPath = (Get-ChildItem -Path $toolsDir -filter '*.exe').FullName
+
+if (-not $InstallerPath) {
+   $ZipPath = (Get-ChildItem -Path $toolsDir -filter '*.zip').FullName
+   Get-ChocolateyUnzip -FileFullPath $ZipPath -Destination $toolsDir
+   $InstallerPath = (Get-ChildItem -Path $toolsDir -filter '*.exe').FullName
+}
 
 $ProgDir = Join-Path $env:ProgramFiles 'FastCopy'
 
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileType       = 'exe'
-   File           = (Get-ChildItem -Path $UnZipPath -filter '*.exe').FullName
+   File           = $InstallerPath
    silentArgs     = "/silent /dir=`"$ProgDir`""
    validExitCodes = @(0)
 }
@@ -30,3 +34,4 @@ if (Test-Path $Shortcut) {
    Copy-Item $Shortcut "$env:ProgramData\Microsoft\Windows\Start Menu\Programs" -Force
 }
 
+New-Item "$InstallerPath.ignore" -Type file -Force | Out-Null

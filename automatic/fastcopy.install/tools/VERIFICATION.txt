@@ -2,11 +2,11 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
-The zip files are available on this page:  https://fastcopy.jp/en/
+The download files are linked from this page:  https://fastcopy.jp/en/
 
 Direct Download:
 
-Version  : 3.54
-URL      : http://ftp.vector.co.jp/70/64/2323/FastCopy354_installer.zip
-CheckSum : 3A4CF521ED9FF4CEB16DCA1695488BA28C6A646BFC9A3B8420175F74A3B436D8
+Version  : 3.61
+URL      : https://dforest.watch.impress.co.jp/library/f/fastcopy/11574/FastCopy361_installer.exe
+CheckSum : FCD12E8659011C96F15F8E5F69ADE1355AB294D087FC7B7D0B75154E77FD4C1E
 

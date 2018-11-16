@@ -1,0 +1,1005 @@
+﻿From: License file(s) installed with software 
+
+LICENSE (English - German version below)
+-----------------------------------------------
+THIS TRANSLATION IS FOR YOUR INFORMATION ONLY!
+
+THE LEGALLY BINDING DOCUMENT IS THE ORIGINAL LICENSE AGREEMENT IN GERMAN
+
+License Agreement on the PDF24 Creator provided by www.pdf24.org
+(Version 2.0 - Juni 2015)
+
+
+1. Objective and scope of the License Agreement
+
+1.1.1 The PDF24 Creator is made available to you free of charge by www.pdf24.org, 
+a project of "geek Software GmbH", and may be used for private as well as for 
+commercial purposes. The project would appreciate it, if satisfied users put a 
+link on the web site www.pdf24.org. geek Software GmbH offers software and 
+services relating to PDF.
+
+1.1.2 The user has no right to claim the right to use of the PDF24 Creator or to 
+its provision. The software and - as the case may be - any accompanying 
+documentation are provided "as is". geek Software GmbH does not guarantee for the 
+proper function of the PDF24 Creator or its fitness for a particular purpose and 
+does not provide support. In this respect only the resources offered at 
+www.pdf24.org are available.
+
+1.1.3 Visitors of the web site www.pdf24.org can generate an individualized 
+version of the PDF24 Creator free of charge. The user interface of this PDF24 
+Creator contains a picture which is provided by the visitor. The respective 
+visitor of www.pdf24.org is solely responsible for the content of the picture 
+(see in addition also figure 5).
+
+1.1.4 Also in the future the existing functions of the PDF24 Creator shall remain 
+free of charge. However, www.pdf24.org reserves the right to integrate additional 
+components to the program which might be subject to fees.
+
+1.1.5 The PDF24 Creator is provided only for the use and distribution in the area 
+of the European Union.
+
+
+1.2. Usage by end user
+
+1.2.1 The PDF24 Creator can be used by the end user starting from the date of its 
+installation.
+
+1.2.2 The end user consents that the software contacts the servers of the right 
+holder once a day provided an internet connection exists in order to search for a 
+newer program version. On this occasion, no personal data of the user or 
+specifications of the computer used by him will be transmitted. Merely 
+specifications relating to the installed PDF24 Creator will be transmitted, such 
+as program version, language version as well as the time of installation. If a 
+newer program version is available, the user is given the choice to install it or 
+not. 
+
+1.2.3 The free use of the PDF24 Creator is limited to the complete application. 
+The separate use of components - with the exception of the included GPL version 
+of GhostScript - is not permitted.
+
+
+1.3. Generation of an individualized version
+
+1.3.1 The picture uploaded by the visitor of the web site www.pdf24.org for the 
+purpose of generating an individualized version of the PDF24 Creator is used 
+exclusively for this purpose. It is neither distributed or transferred by 
+www.pdf24.org nor is it stored. 
+
+1.3.2 The visitor has no right that the picture integrated by him into the PDF24 
+Creator is also shown by future program versions on the user interface of the 
+PDF24 Creator. It may be deleted during the installation of a new program version 
+of the PDF24 Creator on the end users computer.
+
+1.3.3 www.pdf24.org is in particular entitled to remove the picture if the 
+picture obviously infringes rights of third parties or injures legal regulations, 
+and in case claims are lodged against pdf24.org because of the picture - both in 
+court and out of court - and these claims are not obviously arbitrary. The same 
+applies if such an official procedure is initiated.
+
+1.3.4 The name and email address provided by the visitor during the generation of 
+the individualized version of the PDF24 Creator are saved within the 
+individualized version of the PDF24 Creator and are available to the user of this 
+individualized version of the PDF24 Creator. Should the picture be deleted in a 
+later program version, this data will be deleted.
+
+
+1.4. Consent in data processing and reception of advertisement
+
+1.4.1 The visitor consents that the email with which the PDF24 Creator is sent to 
+him may contain advertising by geek Software GmbH as well as from advertising 
+partners and sponsors. The email address of the visitor will not be made 
+available to the advertising partners or sponsors or other to third parties. 
+
+1.4.2 The visitor consents that his email address and his name are saved by geek 
+Software GmbH and may be used to send information on new services, products and 
+supplies from www.pdf24.org and geek Software GmbH as well as advertising from 
+advertising partners and sponsors to his email address. Also emails for marketing 
+research and public opinion polls are permitted. This consent can be revoked at 
+any time with effect for the future by notice to geek Software GmbH.
+
+
+1.5. Distribution and modification
+
+1.5.1 It is under all circumstances prohibited to change the source code of the 
+program. Any manipulation, decompilation and disassembly of the software and the 
+provided files as well as changes of the directory structure or other changes of 
+the software package will be brought to prosectuion by the right holder and will 
+be punished under § 263 of the German Criminal Code. The right to claim damages 
+is reserved. 
+
+1.5.2 The original and unchanged GPL version of GhostScript 
+(http://www.ghostscript.com) is delivered with this software package. It is 
+accessed after the installation when the program starts. GhostScript is provided 
+under the GNU General Public License (http://www.gnu.org/licenses/gpl.html). 
+Additional information to this license is available, e.g., under 
+http://en.wikipedia.org/wiki/GNU/GPL and in the subdirectory /gs of the PDF24 
+Creator in the file gnu_gpl.txt. In case they are applicaple, provisions of the 
+GNU General Public License prevail over the provisions of the License Agreement. 
+Insofar, in particular the preceding figure 5.1 is not applicable. 
+
+1.5.3 The program may only be distributed free of charge and only together with 
+all accompanying files and in unchanged state on data carriers or through the 
+Internet. Publications on CD-ROM / DVD within freeware/ shareware compilations 
+and magazines are permitted. It may be necessary to obtain the consent of the 
+holder of rights to an integrated picture (cf figure 1.3 as well as figure 6). 
+
+1.5.4 Any distribution of the PDF24 Creator in a way or in a context which might 
+cause damage to the reputation of the project www.pdf24.org or to geek Software 
+GmbH, its employees, representatives, assistants or partners, is prohibited. This 
+applies especially to the distribution of the PDF24 Creator on web sites with 
+racist, pornographic, insulting, anti-constitutional, forbidden or illegal 
+contents. 
+
+1.5.5 In any case, geek Software GmbH reserves the right to prohibit the 
+distribution of the PDF24 Creator on certain web sites or data carriers or the 
+distribution by certain persons at any time without giving any reason. All 
+copyright notices and product references as well as pictures used, rendered 
+and/or shown by the PDF24 Creator may not be deleted. 
+
+ 
+1.6. Indemnification by the user
+
+1.6.1 The user has to ensure that he has the right to use the uploaded picture by 
+integrating it into the PDF24 Creator as well as that he has the right of 
+distribution of a picture integrated into the PDF24 Creator and that he does not 
+infringe rights of third parties of any kind and/or official or legal regulations 
+of any kind. In any case, the use of pictures with racist, pornographic, 
+insulting, anti-constitutional, forbidden or illegal content is permitted. 
+
+1.6.2 The user indemnifies geek Software GmbH from all claims of third parties 
+because of infringements of their respective rights by the pictures uploaded by 
+the user and/or distributed by him with the PDF24 Creator, irrelevant whether the 
+claims are justified or not. The same applies in the case of official procedures. 
+The indemnification includes, but is not limited to, adequate expenses of 
+judicial and extrajudicial legal defense, including court and lawyer fees and 
+other procedural costs, claims for compensation and reimbursement of expenses, 
+unjust enrichment as well as official punishments, ordinal money etc., safe for 
+costs and damages caused by a culpable behaviour of geek Software GmbH. 
+
+1.6.3 In addition, the user will compensate geek Software GmbH all other expenses 
+and damages originating from claims by third parties because of infringements of 
+their respective rights by the pictures uploaded by the user and/or distributed 
+by him with the PDF24 Creator or from such official procedures. However, this 
+does not apply if the expenses or damages are caused by a culpable behaviour of 
+geek Software GmbH. 
+
+1.6.4 These rights can also be exercised by employees of geek Software GmbH, its 
+representatives, assistants or partners in case claims are lodged against them or 
+such official procedures are initiated.
+
+1.6.5 If and to the extent geek Software GmbH is aware of the users address, e.g. 
+of the email address provided when generating an individualized version of the 
+PDF24 Creator, geek software GmbH undertakes to refer claimants to the user and 
+to inform the user about the claim. geek software GmbH will not admit any claim 
+without having given the opportunity to the user to enter in negotiations with 
+the claimant.
+
+
+1.7. Revocation of rights of use
+
+The right holder has the right to revoke all rights of use of the user in case 
+the user is in breach of this License Agreement. The user admits that all used 
+product names and registered brands / trade mark are the property of their 
+respective owners, no matter whether they are marked as those or not. 
+
+
+1.8. Liability of the right holder
+
+1.8.1 geek Software GmbH is liable for damages which were caused by the services 
+offered free of charge or in the course of their provision as well as damages 
+caused by software offered free of charge, irrespective of the legal basis - 
+neither of contractual nor of extra-contractual nature  -, only if and to the 
+extent geek Software GmbH has acted deliberately or grossly negligent. This does 
+not apply in case of injuries of the life, the body or the health. This 
+restriction of liability also applies when services are offered for remuneration, 
+however, not in case of breach of essential contractual obligations (main 
+duties). Liability according to the product liability law remains untouched.
+
+1.8.2 In case of negligent breach of main obligations geek Software GmbH is not 
+liable for indirect damages, in particular for loss of profit.
+
+1.8.3 If and to the extent the liability of geek Software GmbH is excluded or 
+limited by the preceding regulations, this also applies to the liability of 
+employees of geek Software GmbH, its representatives, assistants or partners.
+
+
+1.9. Final provisions
+
+1.9.1 This License Agreement remains in force, until it is replaced by a newer 
+version. geek Software GmbH has the right to make the installation of a new 
+program version depend on the users consent with a renewed License Agreement. The 
+renewed License Agreement will be sent to visitors that have received an 
+individualized version of the PDF24 Creator via email to the email address 
+provided by them. If they disagree with the renewed License Agreement, they loose 
+the right to distribute the PDF24 Creator.
+
+1.9.2 The legally binding version of this License Agreement is solely the German 
+version. Only this German version is decisive for the content of this License 
+Agreement and the rights and duties arising from it. Versions in other languages 
+are non-binding translations which are merely for information purposes. 
+
+1.9.3 This License Agreement is governed by the laws of the Federal Republic of 
+Germany to the exclusion of the Convention on the International Sale of Goods. In 
+case the user is a merchant or has his place of general jurisdiction not in the 
+Federal Republic of Germany, the place of jurisdiction is Berlin-Schöneberg. In 
+any case, the parties can be sued in their respective place of general 
+jurisdiction.
+
+
+2. Terms and Conditions for PDF24-Fax-Service
+
+2.1 General
+
+2.1.1 The Terms and Conditions (hereinafter “TC”) listed below govern the 
+contractual relations between Geek Software GmbH, Einstein Palais, 
+Friedrichstraße 171, 10117 Berlin, under the framework of the Fax Service offered 
+by PDF24 (hereinafter “PDF24”) and the customer (hereinafter “Customer”). PDF24 
+provides all services solely under these TC in conjunction with the current 
+specification of services and tariffs under https://fax.pdf24.org. Any and all 
+other general terms and conditions of Customer shall not be applicable, 
+regardless of whether PDF24 does explicitly object to such terms and conditions.
+
+
+2.2 Scope of Service
+
+2.2.1 PDF24 enables Customer to send fax messages via the internet and - 
+depending on the tariff - also to receive such messages. To this purpose, PDF24 
+provides Customer with a web-account which may be used to carry out such 
+services. PDF24’s services are provided in a basic, free version with limited 
+scope of services (2) and as a premium, chargeable version with extended scope of 
+services (3).
+
+2.2.2 The basic, free version allows only for the sending of a limited number of 
+outbound fax messages to the recipient’s telecommunications network, but not for 
+the reception of inbound fax-messages. PDF24 reserves the right further to limit 
+the service at any time (e.g. with regard to the number of fax-pages forwarded or 
+the amount of contactable destination numbers, etc.).
+
+2.2.3 The premium, chargeable version allows both for the sending and receiving 
+of fax messages within the quota defined under the respective tariff (2.5). In 
+addition, Customer is optionally assigned a recipient number in a landline 
+network of her/his choice (2.4), which she/he may also use as source identifier 
+for outbound fax messages.
+
+2.2.4 The scope of services as well as the charges payable are detailed in the 
+schedule of services and prices under https://fax.pdf24.org/preise effective at 
+the time of conclusion of the contract.
+
+
+2.3 Registration 
+
+2.3.1 In order to use PDF24’s services, Customer is required to register with the 
+web-account which is accessible by password only. Customer assumes responsibility 
+for the accuracy and completeness of her/his personal information. Registration 
+under an alias is explicitly prohibited.
+
+2.3.2 Customer agrees and undertakes to maintain full confidentiality of her/his 
+password and assumes liability for all damages arising from the disclosure or 
+making available of said password. For security reasons, the password should be 
+changed at regular intervals.
+
+
+2.4 Telephone number
+
+2.4.1 PDF24 optionally assigns Customer, within the framework of its chargeable 
+service, a telephone number for the reception of inbound fax-messages within the 
+German landline network - or depending on the scope of services - also within a 
+foreign landline network. Said number may also be used for outbound fax-messages.
+
+2.4.2 Under the terms governing the allocation of telephone numbers in the 
+Federal Republic of Germany, a landline in a specific local line network may only 
+be allocated if the recipient of said number provides proof of her/his residency 
+or place of business within this local line network. For this reason, PDF24 is 
+obliged to request such proof from Customer.
+
+2.4.3 Subsequent to the allocation of the telephone number, Customer is entitled 
+only to use said number for sending and receiving fax-messages via PDF24. Any and 
+all extensive use of the number is prohibited, as is the use of the number after 
+the expiration of the contractual relationship. In particular, Customer is not 
+entitled to the porting of her/his number to a contractual relationship with 
+another telephone communications service provider. (Porting, §46 TKG)
+
+
+2.5 Charges
+
+2.5.1 For the chargeable services of PDF24, a charge under the schedule of prices 
+(https://fax.pdf24.org/preise) then effective for the respective tariff is 
+incurred.
+
+2.5.2 Tariffs with monthly payment include the reception of inbound fax-messages 
+as well as sending a predefined contingent of outbound fax-messages - where 
+applicable tiered with regard to the number of pages sent and/or of destination 
+numbers groups. Outbound fax-messages to certain predefined groups of destination 
+numbers (e.g. telephone communication networks of certain countries or premium 
+services such as 0190-numbers) may be excluded or made dependent on an 
+extra-charge.
+
+2.5.3 If Customer within a given accounting period accesses services not included 
+under her/his current tariff (e.g. exceeding the quota of outbound fax-messages, 
+sending of outbound fax-messages to destination numbers not included in the 
+tariff), such services may be charged extra in accordance with the schedule of 
+prices then effective. PDF24 may make the rendering of such services dependent on 
+advance payment.
+
+2.5.4 Accounting periods are monthly, beginning with the calendar day of the 
+effective date of the contract. The respective charge is to be remitted a month 
+in advance by use of the method of payment specified under the respective 
+schedule of services.
+
+2.5.5 At the inception of the accounting period, Customer shall receive a billing 
+statement in writing (§126b BGB) - e.g. by transmission to his web account 
+(2.2.1) which shall include both the charges for the upcoming accounting period 
+as well as the charges for any contingent additional services under (3) accessed 
+in the previous accounting period.
+
+2.5.6 The billing statement includes the statutory VAT then effective in the 
+Federal Republic of Germany. If Customer provides proof by submitting a valid VAT 
+ID-No. of an EU member state that she/he as the beneficiary of services is liable 
+to pay the tax, the billing statement is issued exclusive of VAT. In this case, 
+Customer is obliged to pay VAT in her/his country of origin.
+
+2.5.7 PDF24 reserves its right to changing the charges. PDF24 may increase 
+charges in particular, if it is itself subject to price increases by third 
+parties (e.g. land line telecommunications service providers, mobile 
+telecommunications service providers) or by other cost factors arising in the 
+normal course of business. PDF24 shall inform Customer of such changes in 
+writing. If said changes deviate to the disadvantage of Customer from the terms 
+previously effective, she/he shall be entitled to make use of her/his 
+extraordinary right in this case to terminate the contract within a month of 
+receiving the notification of change, otherwise, the changes will be deemed as 
+authorized by Customer. PDF24 will inform Customer of the notice period and the 
+consequences of failure to observe it in its notification of change.
+
+
+2.6 Customer Duties and Obligation
+
+2.6.1 Customer undertakes to use PDF24’s services neither for accessing nor for 
+distributing content which violates legal regulations of whatever kind. Customer 
+is obliged to avoid any impression in commercial and legal transactions that 
+content for which she/he is responsible is in any way attributable to PDF24.
+
+2.6.2 Customer recognizes in particular the inadmissibility under German and 
+European law of transmitting unsolicited marketing fax-messages without explicit 
+prior consent of the recipient. Customer commits explicitly not to use PDF24’s 
+services for such fax-messages.
+
+2.6.3 Customer is obliged immediately to inform PDF24 of any change of address or 
+payment information.
+
+2.6.4 In the event of an ex-post failure to meet the requirements for the 
+allocation of a landline telephone number in a specific local network of Customer 
+(2.4.2) or of other services provided by PDF24, Customer must immediately inform 
+PDF24 thereof. If Customer, in this context, provides proof of her/his meeting 
+the requirements for the allocation of another landline telephone number or of 
+other services of PDF24, PDF24 shall notify Customer accordingly within the 
+framework of the regulations aforementioned.
+
+2.6.5 Customer acknowledges that, albeit assuming the contractual responsibility 
+to employ all reasonable technical measures in order to ensure the correct 
+transmission of Customer’s in- and outbound fax-messages, PDF24 cannot undertake 
+an unconditional guarantee for the correct transmission in each and every case 
+(2.7.1). In order to prevent, respectively mitigate, own damages incurred by a 
+contingent incorrect transmission, Customer is, therefore, obliged, in such cases 
+in which the financial or legal consequences liable to ensue from an incorrect 
+transmission are expected to be other than negligible, to ensure also by means 
+other than checking the fax transmission report that recipient has correctly 
+received the fax (e.g. by enquiring with the recipient). This applies 
+particularly to any and all cases where the transmission by fax is to ensure the 
+observation of a legally significant deadline (e.g. period of objection or for 
+filing an action, suspension of the period of limitation, etc.) or transactions 
+with other than negligible financial consequences are concerned, in which a 
+contingent damage exceeds the amount to which PDF24 would be liable for damages 
+in the case of culpable breach of its material contractual obligations (2.7.2). 
+In the event of Customer acquiring knowledge that an inbound fax addressed to 
+her/him has been transmitted incorrectly, she/he is obliged, in the cases 
+aforementioned, proactively to contact the sender identified by the source 
+identifier in the error message, in order to establish whether, if appropriate, 
+it is necessary to transmit the document by another method. To this end, PDF24 
+provides Customer - in as far as this is technically possible - with a dependable 
+error message listing the time and the source identifier of the failed 
+transmission.
+
+
+2.7 Liability of PDF24
+
+2.7.1 PDF24 commits to taking all reasonable technical measures to ensure the 
+correct transmission of Customer’s in- and outbound fax-messages. However, PDF24 
+cannot undertake a guarantee that all technical systems involved in the 
+transmission process - in particular those outside PDF24s sphere of control - 
+will function at all times and without exception.
+
+2.7.2 PDF24 shall be liable for financial damages - irrespective of the cause in 
+law - only if PDF24, respectively its employees or representatives, have caused 
+the damages with malice aforesought or by gross negligence or if the damages 
+result from negligence of material contractual obligations (cardinal obligations).
+
+2.7.3 In the case of slight negligence of cardinal obligations, PDF24’s liability 
+shall be limited to damages that are typical and foreseeable under the 
+contractual relationship and it shall not exceed the 24-fold amount of the 
+average monthly service charge paid by Customer during the six billing periods 
+prior to the occurrence of the loss. If the contract has been in existence for 
+less than six months, the average of the service charge accrued during all 
+billing periods prior to the occurrence of the loss shall be applicable. 
+Liability for collateral damages, in particular for lost profit damages, is 
+excluded.
+
+2.7.4 The aforesaid under (3) shall not apply in case of violation of life, body, 
+or health. In such cases, the statutory provisions shall be applicable. Product 
+liability under the German Product Liability Act remains equally unaffected.
+
+2.7.5 Any and all further damage claims are excluded. This shall apply in 
+particular for such financial damages which result from the incorrect 
+transmission or reception of fax messages, if Customer on her/his part has failed 
+to comply with her/his obligation to prevent or mitigate damages (2.6.3).
+
+2.7.6 All damage claims against PDF24 must be made by Customer within 6 months of 
+acquiring knowledge of the circumstances on which the claim is based, at the 
+latest, however, 5 years after the arising of such circumstances, irrespective of 
+the knowledge thereof. This shall not be applicable in the case of violation of 
+life, body, health or freedom as well as in case of liability for intentional tort.
+
+
+2.8 Data Privacy
+
+2.8.1 PDF24 collects stores and processes the data obtained within the framework 
+of the contractual relationship in accordance with the pertinent statutory data 
+privacy regulations. For details, Customer may refer to 
+https://pdf24.org/datenschutz at all times.
+
+
+2.9 Duration of Contract
+
+2.9.1 The contract shall be concluded for an indefinite period of time. It may be 
+terminated by both contracting parties with a notice period of two weeks to the 
+end of the billing period (2.5.4), in as far as the applicable tariff is not 
+subject to a different notice period. The right to termination without notice 
+remains unaffected.
+
+2.9.2 PDF24 reserves its right to termination without notice specifically if 
+Customer is in arrears with her/his service charges for two billing periods, or 
+Customer culpably breaches the conditions of the contract, specifically if she/he 
+infringes on the duties and obligations under 2.6
+
+2.9.3 The termination announcement must be made in written (§ 126 BGB) or text 
+form (§ 126b BGB). Non-utilisation of PDF24s services by the Customer shall not 
+substitute a termination within the meaning of (1), even if such non-utilisation 
+has already prevailed for some time.
+
+
+2.10 Final Provisions
+
+2.10.1 PDF24 reserves the right to subsequent additions or amendments to these 
+Terms and Conditions. PDF24 shall notify Customer of such additions and 
+amendments in text form. If Customer does not object to these additions or 
+amendments within a month after reception of the notification of addition or 
+amendment, the added or amended terms shall become part of Customer’s contract. 
+In the event of objection, the original terms shall prevail. PDF24 shall inform 
+Customer of the period for objection and the consequences of non-compliance with 
+it in its notification.
+
+2.10.2 In the event of PDF24 introducing additional services or tariffs, PDF24 
+reserves the right to make such services and tariffs subject to additional Terms 
+and Conditions.
+
+2.10.3 The legal relationship between PDF24 and Customer shall be governed 
+exclusively by the law of the Federal Republic of Germany. Unless otherwise 
+specified, this shall also apply to the definition of daytime, holidays and other 
+temporal or spatial factors.
+
+2.10.4 If Customer is a merchant or if her/his place of general jurisdiction is 
+not within the Federal Republic of Germany, the competent court of jurisdiction 
+shall be Berlin-Schöneberg. Customer may also be brought to action at her/his 
+general place of jurisdiction.
+
+
+
+geek Software GmbH				
+Einstein Palais
+Friedrichstraße 171
+10117 Berlin
+Germany
+
+-----------------------------------------------
+License (German)
+-----------------------------------------------
+Lizenzbedingungen für den PDF24 Creator von www.pdf24.org
+(Version 2.0 - Juni 2015)
+
+1.1 Gegenstand der Lizenzvereinbarung
+
+1.1.1 Der PDF24 Creator wird ihnen kostenlos von pdf24.org, einem Projekt der 
+geek Software GmbH, zur Verfügung gestellt und darf sowohl für private als auch 
+für gewerbliche Zwecke genutzt werden. Das Projekt pdf24.org würde sich freuen, 
+wenn zufriedene Nutzer einen Link auf die Website www.pdf24.org setzen würden. 
+Die geek Software GmbH bietet Software und Services rund um das Thema PDF an.
+
+1.1.2 Der Nutzer hat keinen Anspruch auf die Nutzung des PDF24 Creators oder 
+dessen Zurverfügungstellung. Die Software und eine ggf. zugehörige Dokumentation 
+werden so wie sie sind zur Verfügung gestellt. Die geek Software GmbH übernimmt 
+keine Gewähr für die ordnungsgemäße Funktion des PDF24 Creators oder die 
+Erreichung eines bestimmten Zwecks und leistet keinen Support. Insoweit stehen 
+lediglich die unter www.pdf24.org angebotenen Ressourcen zur Verfügung.
+
+1.1.3 pdf24.org ermöglicht es den Besuchern der Website www.pdf24.org kostenlos 
+eine individualisierte Version des PDF24 Creators zu erstellen. Die 
+Benutzeroberfläche dieses PDF24 Creators enthält ein vom Besucher zur Verfügung 
+gestelltes Bild. Für den Inhalt des Bildes ist ausschließlich der jeweilige 
+Besucher von www.pdf24.org verantwortlich (siehe dazu auch Ziffer 5).
+
+1.1.4 Die bestehenden Funktionen des PDF24 Creators sollen auch in Zukunft 
+kostenfrei bleiben. pdf24.org behält sich jedoch die Integration zusätzlicher 
+kostenpflichtiger Programmteile vor.
+
+1.1.5 Der PDF24 Creator ist nur zur Nutzung und Verbreitung im Gebiet der 
+Europäischen Union bestimmt.
+
+
+1.2 Nutzung durch Endanwender
+
+1.2.1 Der PDF24 Creator steht dem Anwender ab Installation zur Verfügung.
+
+1.2.2 Der Anwender erklärt sich damit einverstanden, dass die Software bei 
+bestehender Internet-Verbindung einmal täglich Kontakt zu einem Server des 
+Rechteinhabers aufnimmt, um nach einer neueren Programmversion zu suchen. Hierbei 
+werden keinerlei persönliche Daten des Anwenders oder technische Daten des von 
+ihm benutzten Rechners übertragen. Übertragen werden lediglich Angaben zum 
+installierten PDF24 Creator, wie Programmversion, Sprachversion sowie der 
+Installationszeitpunkt. Steht eine neuere Programmversion zur Verfügung, so hat 
+der Anwender die Auswahlmöglichkeit, ob er diese installieren möchte oder nicht.
+
+1.2.3 Der kostenlose Gebrauch beschränkt sich auf die komplette Anwendung. Der 
+Gebrauch von einzelnen Teilen daraus - mit Ausnahme der enthaltenen GPL-Version 
+von Ghostscript - ist nicht gestattet.
+
+
+1.3 Erstellung einer individualisierten Version
+
+1.3.1 Das vom Besucher der Website www.pdf24.org zur Erstellung des 
+individualisierten PDF24 Creators hochgeladene Bild wird ausschließlich zu diesem 
+Zweck verwendet. Es wird von pdf24.org weder weitergegeben noch gespeichert. 
+
+1.3.2 Der Besucher hat keinen Anspruch darauf, dass das von ihm in den PDF24 
+Creator integrierte Bild auch bei zukünftigen Programmversionen auf der 
+Benutzeroberfläche des PDF24 Creators gezeigt wird. Es darf bei Installation 
+einer neuen Programmversion des PDF24 Creators auf dem Rechner eines Anwenders 
+entfernt werden.
+
+1.3.3 pdf24.org ist insbesondere zur Entfernung des Bildes berechtigt, wenn durch 
+das Bild offensichtlich Rechte Dritter oder gesetzliche Vorschriften verletzt 
+werden, sowie wenn gegen pdf24.org darauf gerichtete Ansprüche gerichtlich oder 
+außergerichtlich geltend gemacht werden und diese nicht offensichtlich 
+unbegründet sind sowie wenn ein entsprechendes behördliches Verfahren eingeleitet 
+wird.
+
+1.3.4 Der bei der Erstellung der individualisierten Version des PDF24 Creators 
+angegebene Name sowie die angegebene Email-Adresse werden in die 
+individualisierte Version des PDF24 Creators aufgenommen und sind dort für den 
+Anwender dieser individualisierten Version des PDF24 Creators abrufbar. Sollte in 
+einer Programmversion das Bild entfernt werden, so werden auch diese Daten 
+gelöscht.
+
+
+1.4 Einwilligung in Datenverarbeitung und Werbezusendung
+
+1.4.1 Der Besucher erklärt sich damit einverstanden, dass die Email, mit der ihm 
+der PDF24 Creator zugesendet wird, Werbung sowohl der geek Software GmbH selbst 
+als auch von Werbepartnern und Sponsoren enthalten darf. Eine Weitergabe der 
+Email-Adresse des Besuchers an die Werbepartner oder Sponsoren oder sonstige 
+Dritte erfolgt nicht. 
+
+1.4.2 Der Besucher erklärt sich damit einverstanden, dass die von ihm angegeben 
+Email-Adresse und sein Name von der geek Software GmbH gespeichert wird und diese 
+ihm an diese Email-Adresse Informationen zu neuen Diensten, Produkten und 
+Angeboten von pdf24.org und der geek Software GmbH sowie Werbung von 
+Werbepartnern und Sponsoren zusenden darf. Auch Emails zur Markt- und 
+Meinungsforschung sind gestattet. Diese Einwilligung kann jederzeit mit Wirkung 
+für die Zukunft gegenüber der geek Software GmbH widerrufen werden.
+
+
+1.5 Veränderung und Weitergabe
+
+1.5.1 Es ist unter allen Umständen untersagt, den Quellcode der Programmdateien 
+zu verändern. Jegliche Manipulation, Dekompilierung und Disassemblierung der 
+Software und mitgelieferten Dateien sowie die Veränderung der Verzeichnisstruktur 
+oder andere Änderungen des Programmpakets werden vom Rechteinhaber zur Anzeige 
+gebracht und nach § 263a StGB geahndet. Die Geltendmachung von Schadensersatz 
+wird ausdrücklich vorbehalten. 
+
+1.5.2 Mit dem Programmpaket wird die originale und unveränderte GPL-Version von 
+Ghostscript (http://www.ghostscript.com) ausgeliefert, die nach der Installation 
+bei Programmstart aufgerufen wird. Diese steht unter der GNU General Public 
+License (http://www.gnu.org/licenses/gpl.html). Weitere Informationen zu dieser 
+Lizenz finden Sie z.B. unter 
+http://de.wikipedia.org/wiki/GNU_General_Public_License und im Unterverzeichnis 
+/gs des PDF24 Creators in der Datei gnu_gpl.txt. Soweit die GNU General Public 
+License gilt, geht sie diesen Lizenzbedingungen vor. Insbesondere die vorstehende 
+Ziffer 1.5.1 gilt insoweit nicht. 
+
+1.5.3 Das Programm darf nur kostenlos und nur zusammen mit allen zugehörigen 
+Dateien und in unverändertem Zustand auf Datenträgern oder im Internet 
+weitergeben werden. Veröffentlichungen auf CD-ROM/DVD innerhalb von 
+Freeware/Shareware-Sammlungen und Zeitschriften sind gestattet. Ggf. ist es 
+erforderlich, die Zustimmung des Inhabers von Rechten an einem integrierten Bild 
+(vgl. Ziffer 1.1.3 sowie Ziffer 1.6) einzuholen. 
+
+1.5.4 Eine Weiterverbreitung des PDF24 Creators in einer Art und Weise oder in 
+einem Zusammenhang, die dem Ansehen des Projekts pdf24.org oder der geek Software 
+GmbH, deren Angestellten, Vertretern, Erfüllungsgehilfen oder Partnern schaden 
+kann, ist unzulässig. Dies gilt insbesondere bei der Verbreitung des PDF24 
+Creators auf Websites mit rassistischen, pornographischen, beleidigenden, 
+verfassungsfeindlichen, verbotenen oder rechtswidrigen Inhalten. 
+
+1.5.5 Die geek Software GmbH behält sich in jedem Fall das Recht vor, die 
+Weiterverbreitung des PDF24 Creators auf bestimmten Websites oder Datenträgern 
+oder die Weiterverbreitung durch bestimmte Personen jederzeit ohne Angabe von 
+Gründen zu untersagen. Alle Copyright- und Produkthinweise sowie Bilder, die vom 
+PDF24 Creator verwendet, erstellt und/oder gezeigt werden, dürfen nicht entfernt 
+werden. 
+
+ 
+1.6 Freistellung durch den Nutzer
+
+1.6.1 Der Nutzer hat sicherzustellen, dass er zur Nutzung des von ihm 
+hochgeladenen Bildes in Form der Integration des Bildes in den PDF24 Creator 
+sowie zur Weiterverbreitung eines in den PDF24 Creators integrierten Bildes 
+berechtigt ist und damit nicht gegen Rechte Dritter gleich welcher Art und/oder 
+behördliche oder gesetzliche Vorschriften gleich welcher Art verstößt. Die 
+Verwendung von Bildern mit rassistischem, pornographischem, beleidigendem, 
+verfassungsfeindlichem, verbotenem oder rechtswidrigem Inhalt ist in keinem Fall 
+gestattet. 
+
+1.6.2 Der Nutzer stellt die geek Software GmbH von allen Ansprüchen Dritter wegen 
+Rechtsverletzungen durch die von ihm hochgeladenen Bilder und/oder von ihm mit 
+dem PDF24 Creator weiterverbreiteter Bilder - gleich ob begründet oder 
+unbegründet - frei. Das gleiche gilt im Fall behördlicher Verfahren. Dieser 
+Freistellungsanspruch umfasst insbesondere die angemessenen Kosten der 
+gerichtlichen und außergerichtlichen Rechtsverteidigung einschließlich 
+anwaltlicher Vertretung, Gerichts- und sonstige Verfahrenskosten, Schadens- und 
+Aufwendungsersatzansprüche, bereicherungsrechtliche Ansprüche sowie behördlichen 
+Strafen, Ordnungsgelder etc., soweit diese nicht von der geek Software GmbH zu 
+vertreten sind. 
+
+1.6.3 Darüber hinaus hat der Nutzer der geek Software GmbH alle weiteren ihr 
+entstehenden Kosten und Schäden auf Grund von Dritten geltend gemachten 
+Ansprüchen wegen Rechtsverletzungen durch von ihm hochgeladene und/oder mit dem 
+PDF24 Creator weiterverbreiteter Bilder oder aus derartigen behördlichen 
+Verfahren zu ersetzen. Dies gilt nicht, wenn die geek Software GmbH diese Kosten 
+oder Schäden zu vertreten hat. 
+
+1.6.4 Die Ansprüche stehen auch den Angestellten, Vertretern sowie 
+Erfüllungsgehilfen der geek Software GmbH zu, wenn gegen diese die genannten 
+Ansprüche geltend gemacht oder die genannten behördliche Verfahren eingeleitet 
+werden.
+
+1.6.5 Soweit der geek Software GmbH eine Anschrift des Nutzers bekannt ist, etwa 
+die bei Anforderung der individualisierten Version des PDF24 Creators angegebene 
+Email-Adresse, verpflichtet sie sich, etwaige Anspruchsteller an den Nutzer zu 
+verweisen und den Nutzer über die Anspruchstellung zu unterrichten. Sie wird 
+keine Ansprüche anerkennen, ohne dem Nutzer die Gelegenheit gegeben zu haben, in 
+Verhandlungen mit dem Anspruchsteller zu treten.
+
+
+1.7 Entzug der Nutzungsrechte
+
+Bei Verstoß gegen diese Lizenzbedingungen ist der Rechteinhaber berechtigt, dem 
+Nutzer alle Nutzungsrechte zu entziehen. Alle verwendeten Produktnamen und 
+eingetragenen Marken/Warenzeichen werden hiermit als Eigentum ihrer Inhaber 
+anerkannt, unabhängig davon, ob sie als solche gekennzeichnet sind oder nicht. 
+
+
+1.8 Haftung des Rechteinhabers
+
+1.8.1 Die geek Software GmbH haftet für Schäden, die durch die kostenlos 
+angebotenen Dienste oder bei deren Erbringung sowie durch kostenlos angebotene 
+Software verursacht wurden, gleich aus welchem Rechtsgrund - sowohl vertraglicher 
+als auch außervertraglicher Natur – nur, soweit sie vorsätzlich oder grob 
+fahrlässig gehandelt hat. Dies gilt nicht bei Verletzungen des Lebens, des 
+Körpers oder der Gesundheit. Diese Haftungsbeschränkung gilt auch bei gegen 
+Entgelt erbrachten Diensten, jedoch nicht im Falle der Verletzung wesentlicher 
+Vertragspflichten (Kardinalspflichten). Die Haftung nach dem 
+Produkthaftungsgesetz bleibt unberührt.
+
+1.8.2 Die geek Software GmbH haftet bei einfach fahrlässiger Verletzung von 
+Kardinalpflichten nicht für mittelbare Schäden, insbesondere für entgangenen 
+Gewinn.
+
+1.8.3 Soweit die Haftung der geek Software GmbH nach den vorstehenden Regelungen 
+ausgeschlossen oder begrenzt ist, gilt dies auch für die Haftung der 
+Angestellten, Vertreter sowie Erfüllungsgehilfen der geek Software GmbH.
+
+
+1.9 Schlussbestimmungen
+
+1.9.1 Diese Lizenzbedingungen bleiben gültig, bis sie durch eine neuere Version 
+ersetzt werden. Die geek Software GmbH ist berechtigt, die Installation einer 
+neuen Programmversion von der Zustimmung des Anwenders zu geänderten 
+Lizenzbedingungen abhängig zu machen. Besuchern, die eine individualisierte 
+Version des PDF24 Creators per Email erhalten haben, werden die geänderten 
+Lizenzbedingungen an die von ihnen angegeben Email-Adresse zugesandt. Sind sie 
+mit der Geltung der geänderten Lizenzbedingungen nicht einverstanden, sind sie 
+zur Weiterverbreitung des PDF24 Creators nicht mehr berechtigt.
+
+1.9.2 Verbindliche Fassung dieser Lizenzbedingungen ist ausschließlich die 
+Fassung in deutscher Sprache. Nur diese Fassung ist für den Inhalt dieser 
+Lizenzbedingungen und die Rechte und Pflichten aus ihnen maßgeblich. Fassungen in 
+anderen Sprachen sind unverbindliche Übersetzungen, die lediglich 
+Informationszwecken dienen. 
+
+1.9.3 Es gilt das Recht der Bundesrepublik Deutschland unter Ausschluss des 
+UN-Kaufrechts. Ist der Nutzer Kaufmann oder hat er seinen allgemeinen 
+Gerichtsstand nicht in der Bundesrepublik Deutschland, so ist Gerichtsstand 
+Berlin-Schöneberg. Die Parteien können jeweils auch an ihrem allgemeinen 
+Gerichtsstand verklagt werden.
+
+
+
+2 AGB PDF24 Fax Service
+
+2.1 Allgemeines
+
+2.1.1 Diese Allgemeinen Geschäftsbedingungen (AGB) regeln die Vertragsbeziehungen 
+zwischen der Geek Software GmbH, Einstein Palais, Friedrichstraße 171, 10117 
+Berlin im Rahmen des von PDF24 angebotenen Fax-Service (im Folgenden „PDF24“) und 
+dem Auftraggeber (im Folgenden: „Kunden“). PDF24 erbringt sämtliche Leistungen 
+ausschließlich zu diesen AGB in Verbindung mit den aktuellen Preis- und 
+Leistungsbeschreibungen unter https://fax.pdf24.org. Abweichende Allgemeine 
+Geschäftsbedingungen des Nutzers gelten auch dann nicht, wenn PDF24 ihnen nicht 
+ausdrücklich widerspricht.
+
+2.2 Leistungsumfang
+
+2.2.1 PDF24 räumt dem Kunden die Möglichkeit ein, über das Internet Fax-Sendungen 
+zu versenden und - je nach Tarif - auch zu empfangen. Hierzu stellt es dem Kunden 
+einen Web-Account zur Verfügung, über den diese Dienstleistungen abgewickelt 
+werden können. Der Service von PDF24 wird als kostenlose Basisversion mit 
+eingeschränktem Leistungsumfang (2.2.2) und als kostenpflichtige Version mit 
+erweitertem Leistungsumfang (2.2.3) angeboten.
+
+2.2.2 In der kostenlosen Basisversion ist lediglich der Versand einer 
+beschränkten Anzahl von Fax-Sendungen in das Telekommunikationsnetz des 
+Empfängers möglich, jedoch kein Fax-Empfang. PDF24 ist berechtigt, jederzeit 
+weitere Beschränkungen des Dienstes (z.B. in Hinsicht auf Anzahl der 
+übermittelten Seiten, die erreichbaren Zielrufnummern o.ä.) einzuführen.
+
+2.2.3 In der kostenpflichtigen Version sind der Empfang sowie der Versand von 
+Fax-Sendungen im Rahmen des Kontingents des jeweils gewählten Tarifs (2.5) 
+möglich. Darüber hinaus wird dem Kunden auf Wunsch eine Empfängernummer in einem 
+von ihm gewählten Festnetz zur Verfügung gestellt (2.4), welche er auch als 
+Absenderkennung bei ausgehenden Fax-Sendungen verwenden kann.
+
+2.2.4 Der Leistungsumfang im Einzelnen sowie dass hierfür zu erbringende Entgelt 
+ergibt sich aus dem jeweils bei Vertragsschluss geltenden Preis- und 
+Leistungsverzeichnis unter https://fax.pdf24.org/preise.
+
+
+2.3 Registrierung
+
+2.3.1 Für die Nutzung der Services von PDF24 ist eine Registrierung des Nutzers 
+für den nur unter Eingabe eines Passwortes zugänglichen Web-Account nötig. Der 
+Nutzer ist verantwortlich für die Richtigkeit und die Vollständigkeit der Angaben 
+zu seiner Person. Die Registrierung unter Pseudonym ist ausdrücklich untersagt.
+
+2.3.2 Der Kunde verpflichtet sich zur Geheimhaltung seines bei der Registrierung 
+gewählten Passwortes und ist für alle Schäden, die aus der Weitergabe oder 
+Bekanntgabe seines Passwortes entstehen, verantwortlich. Aus Sicherheitsgründen 
+sollte das Passwort regelmäßig geändert werden.
+
+
+2.4 Rufnummer
+
+2.4.1 PDF 24 stellt dem Kunden im Rahmen des kostenpflichtigen Angebots auf 
+Wunsch eine Rufnummer für den Fax-Empfang im deutschen Festnetz - je nach 
+Leistungsbeschreibung auch in einem ausländischen Festnetz - zur Verfügung, die 
+auch als Absendernummer verwendet werden kann.
+
+2.4.2 Nach den Bestimmungen über die Rufnummernzuteilung in der Bundesrepublik 
+Deutschland darf eine Festnetznummer in einem bestimmten Ortsnetz nur dann 
+zugeteilt werden, wenn der Zuteilungsempfängern nachweist, in dem entsprechenden 
+Ortsnetz seinen Wohnsitz oder seine Arbeitsstätte zu haben. Aus diesem Grund muss 
+PDF24 vor der Zuteilung für ein bestimmtes Ortsnetz einen entsprechenden Nachweis 
+des Kunden verlangen.
+
+2.4.3 Der Kunde ist nach Zuteilung der Rufnummer ausschließlich berechtigt, diese 
+Rufnummer zum Fax-Empfang und -versand über PDF24 zu verwenden. Eine darüber 
+hinausgehende Nutzung ist ebenso ausgeschlossen wie eine Nutzung dieser Nummer 
+nach Ablauf des Vertragsverhältnisses. Der Kunde hat insbesondere keinen Anspruch 
+auf Übernahme dieser Rufnummer in ein Vertragsverhältnis mit einem anderen 
+Telekommunikationsdiensteanbieter (Portierung, § 46 TKG).
+
+
+2.5 Entgelt
+
+2.5.1 Für die kostenpflichtigen Leistungen von PDF24 ist ein Entgelt nach dem 
+jeweils geltenden Preisverzeichnis (https://fax.pdf24.org/preise) für den 
+gewählten Tarif zu entrichten.
+
+2.5.2 In Tarifen mit monatlicher Zahlungsweise ist der Faxempfang sowie ein 
+jeweils dort bestimmtes Kontingent an Faxsendungen - u.U. gestaffelt nach Anzahl 
+der gesendeten Seiten und/oder Zielrufnummerngruppen - enthalten. Der Versand an 
+bestimmte Zielrufnummerngruppen (z.B. Fernmeldenetze bestimmter Länder oder 
+Premiumdienste wie 0190er-Nummern) kann ausgeschlossen oder von einer gesonderten 
+Bezahlung abhängig gemacht werden.
+
+2.5.3 Nimmt der Kunde in einem Abrechnungszeitraum Leistungen in Anspruch, die 
+nicht von dem geltenden Tarif umfasst sind (z.B. bei Überschreitung des 
+Kontingents an Faxsendungen, Übermittlung an von den Tarif nicht umfasste 
+Zielnummerngruppen) so können diese Leistungen nach Maßgabe des jeweils geltenden 
+Preisverzeichnisses gesondert berechnet werden. PDF24 kann die Erbringung solcher 
+Leistungen davon abhängig machen, dass sie vor Inanspruchnahme bezahlt werden.
+
+2.5.4 Abrechnungszeitraum ist jeweils ein Monat, beginnend mit dem Kalendertag 
+des Vertragsbeginns. Das jeweilige Entgelt ist jeweils für einen Monat im Voraus 
+durch Übermittlung eines in der Leistungsbeschreibung angegeben Zahlungsweges zu 
+entrichten.
+
+2.5.5 Bei Beginn des Abrechnungszeitraums wird dem Kunden eine Rechnung in 
+Textform (§ 126b BGB) - z.B. durch Übermittlung in seinen Web-Account (2.2.1) - 
+übermittelt, die sowohl das Entgelt für den kommenden Abrechnungszeitraum als 
+auch eine Abrechnung der eventuell im vorhergehenden Abrechnungszeitraum in 
+Anspruch genommenen weitere Leistungen nach Abs. 3 enthält.
+
+2.5.6 Die Rechnung enthält die jeweils in der Bundesrepublik Deutschland geltende 
+gesetzliche Umsatzsteuer. Weist der Kunde durch Vorlage einer gültigen USt-IdNr. 
+eines Mitgliedsstaats der Europäischen Union nach, dass er als Leistungsempfänger 
+Steuerschuldner ist, so enthält die Rechnung keine Umsatzsteuer. In diesem Falle 
+ist der Kunde verpflichtet, die Umsatzsteuer in seinem Heimatland abzuführen.
+
+2.5.7 PDF24 behält sich die Änderung des Entgelts vor. Sie kann eine Erhöhung 
+insbesondere in dem Fall vornehmen, in dem sie selbst Preiserhöhungen durch 
+Dritte (z.B. Festnetzbetreiber, Mobilfunknetzbetreiber) oder durch sonstige im 
+gewöhnlichen Betrieb entstandenen Kostenfaktoren ausgesetzt ist. Änderungen teilt 
+PDF24 dem Kunden in Textform mit. Weichen diese Änderungen zum Nachteil des 
+Kunden von den bisherigen Regelungen ab, ist er berechtigt, innerhalb eines 
+Monats nach Zugang der Änderungsmitteilung von dem ihm in diesem Falle 
+zustehenden außerordentlichen Kündigungsrecht Gebrauch zu machen, ansonsten gilt 
+die Änderung als genehmigt. Auf die Frist und die Folgen ihrer Nichteinhaltung 
+weist PDF24 den Kunden in der Mitteilung hin.
+
+
+2.6 Pflichten und Obliegenheiten des Kunden
+
+2.6.1 Der Kunde verpflichtet sich, Dienstleistungen von PDF24 weder zum Abruf 
+noch zur Verbreitung von Inhalten zu verwenden, die gegen gesetzliche 
+Bestimmungen - gleich welcher Art - verstoßen. Der Nutzer hat jeglichen Eindruck 
+im Rechts- und Geschäftsverkehr zu vermeiden, von ihm zu verantwortende Inhalte 
+seien PDF24 zuzurechnen.
+
+2.6.2 Dem Kunden ist insbesondere bekannt, dass nach bundesdeutschem und 
+europäischem Recht die Zusendung von Werbe-Faxen ohne ausdrückliche Einwilligung 
+des Empfängers unzulässig ist. Er verpflichtet sich ausdrücklich, die Dienste von 
+PDF24 in keinem Fall für solche Fax-Sendungen zu verwenden.
+
+2.6.3 Der Kunde hat PDF24 unverzüglich von einer Änderung seiner Adress- und 
+Zahlungsdaten zu unterrichten.
+
+2.6.4 Fallen die Voraussetzungen für die Zuteilung einer Festnetznummer in einem 
+bestimmten Ortsnetz in seiner Person (2.4.2) oder für sonstige von PDF24 zur 
+Verfügung gestellten Dienstleistungen nachträglich weg, so hat der Kunde PDF24 
+auch hiervon unverzüglich zu unterrichten. Sofern der in diesem Zusammenhang die 
+Voraussetzungen für die Zuteilung einer anderen Festnetznummer oder sonstigen 
+Leistung von PDF24 nachweist, teilt PDF24 ihm diese entsprechend den vorgenannten 
+Regelungen zu.
+
+2.6.5 Der Kunde nimmt zur Kenntnis, dass PDF24 zwar die vertragliche 
+Verpflichtung übernimmt, alle zumutbaren technischen Möglichkeiten zu ergreifen, 
+um eine fehlerfreie Übermittlung der von dem Kunden versandten bzw. empfangenden 
+Fax-Sendungen zu gewährleisten, jedoch keine uneingeschränkte Gewährleistung 
+dafür übernehmen kann, dass die Übermittlung tatsächlich auch in jedem Fall 
+fehlerfrei stattgefunden hat (2.7.1). Um eigene Schäden abzuwenden bzw. so gering 
+wie möglich zu halten, die durch eine eventuell fehlerhafte Übermittlung 
+entstehen könnten, ist der Kunde daher in solchen Fällen, in denen eine 
+fehlerhafte Übermittlung geeignet wäre, nicht nur unerhebliche wirtschaftliche 
+oder rechtliche Folgen auszulösen, verpflichtet, auch auf andere Art und Weise 
+als durch Kontrolle des übermittelten Sendeberichts (z.B. durch Nachfrage bei dem 
+Empfänger) sicherzustellen, dass die Sendung dem Empfänger auch fehlerfrei 
+erreicht hat. Solche Fälle liegen insbesondere dann vor, wenn a) durch die 
+Fax-Übermittlung eine rechtlich bedeutsame Frist (z.B. Einspruchs- oder 
+Klagefrist, Hemmung der
+Verjährung o.ä.) gewahrt werden soll, oder b) Transaktionen mit nicht nur 
+unerheblichen wirtschaftlichen Folgen betroffen sind, in denen ein potenzieller 
+Schaden höher ist als der Betrag, bis zu dessen Höhe PDF24 für die schuldhafte 
+Verletzung seiner vertragswesentlichen Pflichten haften würde (2.7.2). Erfährt 
+der Kunde davon, dass der Empfang einer für ihn bestimmten Fax-Sendung fehlerhaft 
+war, so obliegt es ihm in den in Sätzen 2 und 3 genannten Fällen, Kontakt mit dem 
+in der Fehlermeldung mit seiner Absenderkennung bezeichneten Absender 
+aufzunehmen, um zu prüfen, ob gegebenenfalls die anderweitige Übermittlung des 
+Dokuments erforderlich ist. PDF24 stellt dem Kunden hierfür - soweit dies 
+technisch möglich ist - eine aussagekräftige Fehlermeldung zur Verfügung, aus der 
+sich Zeitpunkt und Absendernummer des fehlgeschlagenen Empfangsversuchs ergeben.
+
+
+2.7 Haftung von PDF24
+
+2.7.1 PDF24 verpflichtet sich, alle ihm zumutbaren technischen Maßnahmen zu 
+ergreifen, um eine fehlerfreie Übermittlung der von dem Kunden versandten bzw. 
+empfangenden Fax-Sendungen zu gewährleisten. PDF24 kann jedoch keine Garantie 
+dafür übernehmen, dass alle an dem Versand beteiligten technischen Systeme - 
+insbesondere die außerhalb seines Einflussbereichs - jederzeit und ausnahmslos 
+funktionieren.
+
+2.7.2 PDF24 haftet für Vermögensschäden - gleich aus welchem Rechtsgrund - nur 
+dann, wenn PDF24 bzw. dessen Mitarbeiter/Beauftragte die Schäden vorsätzlich oder 
+grob fahrlässig verursacht haben oder der Schaden auf der Verletzung wesentlicher 
+Vertragspflichten (Kardinalpflichten) beruht.
+
+2.7.3 Bei einfach fahrlässiger Verletzung von Kardinalpflichten beschränkt sich 
+die Haftung von PDF24 auf die nach dem Vertragsverhältnis typischen und 
+vorhersehbaren Schäden und ist auf den 24-fachen Betrag des durchschnittlich in 
+den letzten sechs Abrechnungszeiträumen vor Schadenseintritt vom Kunden 
+monatlichen entrichteten Leistungsentgelts begrenzt. Besteht der Vertrag erst 
+eine kürzere Zeit, ist das durchschnittliche Monatsentgelt der bis dahin 
+angefallenen Abrechnungszeiträume maßgeblich. Die Haftung für mittelbare Schäden, 
+insbesondere für entgangenen Gewinn, ist ausgeschlossen.
+
+2.7.4 Absatz 3 gilt nicht bei Verletzungen des Lebens, des Körpers oder der 
+Gesundheit. Insoweit gelten die gesetzlichen Regelungen. Auch die Haftung nach 
+dem Produkthaftungsgesetz bleibt unberührt.
+
+2.7.5 Alle darüber hinausgehenden Schadenersatzansprüche werden ausgeschlossen. 
+Dies gilt insbesondere auch für solche Vermögensschäden, die durch eine 
+fehlerhafte Übermittlung oder Empfang von Fax-Sendungen entstanden sind, wenn der 
+Kunde seinerseits nicht seiner Obliegenheit zur Schadensvermeidung bzw. 
+–minderung (2.6.3) nachgekommen ist.
+
+2.7.5 Sämtliche Schadensersatzansprüche gegen PDF24 sind innerhalb von 6 Monaten 
+ab Kenntnis der anspruchsbegründenden Umstände - jedoch spätestens 5 Jahre nach 
+ihrer Entstehung ohne Rücksicht auf die Kenntnis - vom Kunden geltend zu machen. 
+Dies gilt nicht bei Verletzungen des Lebens, des Körpers, der Gesundheit und der 
+Freiheit sowie bei Haftung wegen Vorsatzes.
+
+
+2.8 Datenschutz
+
+2.8.1 PDF24 erhebt, speichert und verarbeitet im Rahmen des Vertragsverhältnisses 
+erlangte Daten entsprechend den gesetzlichen datenschutzrechtlichen Bestimmungen. 
+Näheres kann der Kunde jederzeit unter https://fax.pdf24.org/datenschutz abrufen.
+
+
+2.9 Vertragsdauer
+
+2.9.1 Der Vertrag wird auf unbestimmte Zeit geschlossen. Er kann von beiden 
+Vertragsparteien mit einer Frist von zwei Wochen zum Ende des 
+Abrechnungszeitraums (2.5.4) gekündigt werden, soweit der abgeschlossene Tarif 
+nicht eine andere Kündigungsfrist vorsieht. Das Recht zur fristlosen Kündigung 
+bleibt unberührt.
+
+2.9.2 PDF24 ist insbesondere zur Fristlosen Kündigung berechtigt, wenn: (a) der 
+Kunde mit der Zahlung der Entgelte für zwei Abrechnungszeiträume in Verzug gerät, 
+oder (b) der Nutzer schuldhaft gegen die Vertragsbedingungen, insbesondere gegen 
+die in 2.6 genannten Pflichten und Obliegenheiten verstößt.
+
+2.9.3 Die Kündigungserklärung bedarf der Schrift- (§ 126 BGB) oder Textform (126b 
+BGB). Die Nichtinanspruchnahme der Dienstleistungen von PDF24 durch den Nutzer 
+kann eine Kündigung im Sinne des Abs. 1 auch dann nicht ersetzen, wenn diese 
+bereits länger anhält.
+
+
+2.10 Schlussbestimmungen
+
+2.10.1 PDF24 ist berechtigt, die AGB nachträglich zu ändern oder zu ergänzen. In 
+diesem Fall teilt sie dem Kunden die Änderungen in Textform mit. Widerspricht der 
+Kunde innerhalb von einem Monat ab Zugang der Mitteilung der Änderung nicht, 
+werden die geänderten Bedingungen Vertragsbestandteil. Im Falle des Widerspruchs 
+verbleibt es bei der ursprünglichen Regelung. Auf die Frist und die Folgen ihrer 
+Nichteinhaltung weist PDF24 den Kunden in der Mitteilung hin.
+
+2.10.2 Soweit PDF24 ergänzende Dienstleistungen oder Tarife einführt, können 
+hierfür ergänzende AGB zugrunde gelegt werden.
+
+2.10.3 Für die Rechtsbeziehung zwischen der PDF24 und dem Kunden gilt 
+ausschließlich das Recht der Bundesrepublik Deutschland. Dies gilt - soweit 
+nichts anderes vereinbart ist - auch für die Bestimmung von Tageszeiten, 
+Feiertagen oder sonstigen zeitlichen oder räumlichen Faktoren.
+
+2.10.4 Ist der Kunde Kaufmann oder hat er seinen allgemeinen Gerichtsstand nicht 
+in der Bundesrepublik Deutschland, so ist Gerichtsstand Berlin-Schöneberg. Der 
+Kunde kann auch an seinem allgemeinen Gerichtsstand verklagt werden.
+
+
+
+geek Software GmbH				
+Einstein Palais
+Friedrichstraße 171
+10117 Berlin
+Germany
+

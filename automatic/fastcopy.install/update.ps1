@@ -14,28 +14,6 @@ function global:au_GetLatest {
    $Source = $HomePage.links | 
                 Where-Object {$_.innertext -eq 'Source code'} | Select-Object -ExpandProperty href
 
-<# Argh!  This site is constantly shifting!
-   $x86links = $HomePage.links | 
-                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc32')} |
-                Select-Object -ExpandProperty href -First 2
-   Try { $DownPage = Invoke-WebRequest -Uri $x86links[0] }
-   Catch { $DownPage = Invoke-WebRequest -Uri $x86links[1] }
-   Finally {
-      $URL32 = $DownPage.links | 
-               Where-Object {$_.href -like '*.zip'} | 
-               Select-Object -First 1 -ExpandProperty href
-   }
-
-   $x64links = $HomePage.links | 
-                Where-Object {($_.innertext -eq 'installer') -and ($_.onclick -match 'fc64')} |
-                Select-Object -ExpandProperty href -First 2
-   Try { $DownPage = Invoke-WebRequest -Uri $x64links[0] }
-   Catch { $DownPage = Invoke-WebRequest -Uri $x64links[1] }
-   Finally { $URL64 = $DownPage.links | 
-                  Where-Object {$_.href -like '*.zip'} | 
-                  Select-Object -First 1 -ExpandProperty href
-   }
-#>
    [array]$links = $HomePage.links | 
                      Where-Object {($_.innertext -eq 'installer')} |
                      Select-Object -ExpandProperty href
@@ -44,7 +22,7 @@ function global:au_GetLatest {
       if ($DownPage) { break }
    }
    $URL32 = $DownPage.links | 
-            Where-Object {$_.href -like '*.zip'} | 
+            Where-Object {$_.href -match '\.(zip|exe)$'} | 
             Select-Object -First 1 -ExpandProperty href
 
    return @{ 

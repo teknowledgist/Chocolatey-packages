@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Binaries can be downloaded here:
+http://psydk.org/pngoptimizer
+
+Direct download:
+Version    : 2.5.1
+URL        : http://psydk.org/download/pngoptimizer-2.5.1-win-x86.zip
+CheckSum   : A13A9DC5FC9ADE46006D954CBB9D0312B891A2487093823E9D4A408D6232EE59
+URL64      : http://psydk.org/download/pngoptimizer-2.5.1-win-x64.zip
+CheckSum64 : 45B7BA920BA9A0E904EAF36B1E8665A2A8BE0E0D696AED94EDE87CFCC86737D4
