@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>shockwave</id>
-    <version>12.2.9.199</version>
+    <version>12.3.4.204</version>
     <packageSourceUrl>\\server\share\ChocolateyPackages</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -19,11 +19,13 @@
     <summary>Displays Web content that has been created by Adobe Director</summary>
     <description>Adobe Shockwave (formerly Macromedia Shockwave) is a multimedia platform used to add animation and interactivity to web pages. It allows Adobe Director applications to be published on the Internet and viewed in a web browser on any computer which has the Shockwave plug-in installed. It was first developed by Macromedia, and released in 1995 and was later acquired by Adobe Systems in 2005.
 
+While the technology is outdated, and there are [recommendations against using or even having it](https://krebsonsecurity.com/2014/05/why-you-should-ditch-adobe-shockwave/), sometimes it is required by certain uncaring monopolies (Pearson textbooks, for example).
+
 Unlike the Adobe Flash Player, the Adobe Shockwave Player is not commonly bundled with web browsers; if needed it must be downloaded.
 
-Shockwave movies are authored in the Adobe Director environment. While there is support for including Flash movies inside Shockwave files, authors often choose the Shockwave Director combination over Flash because it offers more features and more powerful tools. Features not replicated by Flash include a much faster rendering engine, and support for various network protocols, including Internet Relay Chat. Also, Shockwave's functionality can be extended with "Xtras".
+[The "consumer" version of the installer available here](<https://fpdownload.macromedia.com/get/shockwave/default/english/win95nt/latest/Shockwave_Installer_Full.exe>) does not install nicely.  It cannot be made silent, and it tries to install toolbars or other garbage.  There are credible reports that it also requires admin credentials for each non-admin user to work.
 
-Shockwave is outdated and a security concern [as reported by Brian Krebs](https://krebsonsecurity.com/2014/05/why-you-should-ditch-adobe-shockwave/), but sometimes it is still needed.
+Adobe does have another installer release, but it requires a distribution license.  While there is no technical barrier to downloading the latest distribution installer, the distribution license specifically disallows sharing the URL.  You can [request your own distribution license](http://www.adobe.com/products/players/fpsh_distribution1.html), and then the files in this GitHub repository should help you build your own internal Chocolatey package.
 </description>
     <releaseNotes>https://helpx.adobe.com/shockwave/release-note/release-notes-shockwave-12.html</releaseNotes>
     <!-- =============================== -->      
