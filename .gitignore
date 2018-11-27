@@ -57,3 +57,8 @@ update_info.xml
 *.zip
 *.nupkg
 *.db
+
+##############
+# Binaries
+##############
+*.exe

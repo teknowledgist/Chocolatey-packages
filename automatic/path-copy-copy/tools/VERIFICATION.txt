@@ -6,6 +6,6 @@ The latest installers are available here:
    https://github.com/clechasseur/pathcopycopy/releases
    
 Direct Download:
-Version  : 15.1
-URL      : https://github.com/clechasseur/pathcopycopy/releases/download/v15.1/PathCopyCopy15.1.exe
-CheckSum : FDB119E569D0BEC287FED10E6AB7D69C7EB2CBE1A38C593997CF18C74A3DA597
+Version  : 16.0
+URL      : https://github.com/clechasseur/pathcopycopy/releases/download/v16.0/PathCopyCopy16.0.exe
+CheckSum : D81DFB8B8DDF6C1AFDB97AABF432AE5873FC89D33D86F4A99265EB898BF401A4
