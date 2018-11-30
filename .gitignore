@@ -58,7 +58,8 @@ update_info.xml
 *.nupkg
 *.db
 
-##############
-# Binaries
-##############
+############
+# Binaries #
+############
 *.exe
+*.msp
