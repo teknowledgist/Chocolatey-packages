@@ -7,7 +7,7 @@ The installer is available by following the download link on this page:
 
 Direct Download:
 
-Version  : 2.6.5
-URL      : http://www.technelysium.com.au/Chromas265Setup.exe
-CheckSum : 3d8cc4dccce577a6ba147d552d942a840fa83db48590d0922f45ab0bda7871c3
+Version  : 2.6.6
+URL      : http://www.technelysium.com.au/Chromas266Setup.exe
+CheckSum : 09BB7D8D55FD373C124034A7AFDA3AA5E109E85C502EA3E3EBD03642CBC6869C
 
