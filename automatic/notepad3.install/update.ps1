@@ -3,24 +3,15 @@ import-module au
 function global:au_GetLatest {
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    $Release = 'https://www.rizonesoft.com/downloads/notepad3/'
-   $PageText = Invoke-WebRequest -Uri $Release
+   $PageText = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
-   # Next attempt
-   $AElement = $PageText.content.split('<') | ? {$_ -match '\.zip' -and $_ -match 'href='} |select -First 1
-   $version = $AElement.split('_') |? {$_ -match '^[0-9.]+$'}
-   $URLLink = $AElement.split('"') |? {$_ -match '^http'}
-
-   <# Formerly working
-   $HREF = $PageText.links | ? {$_.innertext -match 'Notepad3.*Setup\.zip'} | select -First 1
-   $Version = $href.innertext -replace '.*_([0-9.]+)_.*\.zip.*','$1'
-   $URL = $HREF | Select-Object -ExpandProperty href
-   #>
-
-   # $URL = $URL + "?version=" + $Version.replace('.','-')    # also formerly working
-
-   $url = (Invoke-WebRequest -Uri $URLLink -UseBasicParsing).rawcontent.split('"') | 
-               Where-Object {$_ -match "^$URLLink"}
-
+   $Link = $PageText.links | 
+               Where-Object {$_.outerhtml -match 'Notepad3.*Setup\.zip'} | 
+               Select-Object -First 1
+   $Version = $Link.title -replace '.* ([0-9.]+).*','$1'
+   $urlstub = $Link.outerhtml.split() | Where-Object {$_ -match '\.zip$'}
+   
+   $url = "https://www.rizonesoft.com/genesis/Notepad3/$urlstub"
 
    return @{ 
             Version  = $Version
