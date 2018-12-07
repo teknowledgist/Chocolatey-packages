@@ -1,10 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$osInfo = Get-WmiObject Win32_OperatingSystem | Select-Object Version, ProductType, Caption, OperatingSystemSKU
+$1809Build = '17763'
+
+$osInfo = Get-WmiObject Win32_OperatingSystem | Select-Object Version, ProductType, Caption, OperatingSystemSKU, BuildNumber
 
 Write-host "Detected:  $($osInfo.Caption)" -ForegroundColor Cyan
 
-$osInfo.Version = [version] $osInfo.Version
+$osInfo.Version = [version]$osInfo.Version
 if ($osInfo.Version -lt [version]'6.0') {
    Throw 'The Remote System Administration Toolkit (RSAT) requires Windows Vista or later.'
 }
@@ -42,19 +44,54 @@ else {
       }
    } elseif ($osInfo.Version.Major -eq 10) { # Windows 10
       $pp = Get-PackageParameters
-      switch ($pp.Server) {
-         '2016' { $WS = '2016'
-                  $Checksum = '6d46ef85cb63cf5c949706b7890bc1bb56a8c30506700262fe5ef4999b7380f3'
-                  $Checksum64 = '4aeb716f301783e56739f9b0a361e2aa4f1e1d6b947b76c1d61af70b0ff0b4c7' }
-         '1709' { $WS = '1709'
-                  $Checksum = 'b62f131993908e24f093c8d630b84d49a829d9f7922dab17aa2f42867b096c43'
-                  $Checksum64 = '72b34e1bef5c790081ffda24e18a5eb3cbe26944baee604aae0deddd8bfe6ebc' }
-         default { $WS = '1803'
-                  $Checksum = '968c20e6492b89fe72fe1cf496b90b7106492258a02d1333a6aa810be7cf5b49'
-                  $Checksum64 = '3908b653c8bc5567684ab2779ee110dc2c0d56d2a33a329fe5460ecce55aaebe' }
+      if ($osInfo.BuildNumber -lt $1809Build) {
+         switch ($pp.Server) {
+            '2016' { $WS = '2016'
+                     $Checksum = '6d46ef85cb63cf5c949706b7890bc1bb56a8c30506700262fe5ef4999b7380f3'
+                     $Checksum64 = '4aeb716f301783e56739f9b0a361e2aa4f1e1d6b947b76c1d61af70b0ff0b4c7' }
+            '1709' { $WS = '1709'
+                     $Checksum = 'b62f131993908e24f093c8d630b84d49a829d9f7922dab17aa2f42867b096c43'
+                     $Checksum64 = '72b34e1bef5c790081ffda24e18a5eb3cbe26944baee604aae0deddd8bfe6ebc' }
+            default { $WS = '1803'
+                     $Checksum = '968c20e6492b89fe72fe1cf496b90b7106492258a02d1333a6aa810be7cf5b49'
+                     $Checksum64 = '3908b653c8bc5567684ab2779ee110dc2c0d56d2a33a329fe5460ecce55aaebe' }
+         }
+         $html = $web.DownloadString("https://www.microsoft.com/download/confirmation.aspx?id=45520")
+         Write-Host "Installing tools for managing Windows Server $WS." -ForegroundColor Cyan
+      } else {
+         $WSUSKey = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
+         $Save = (Get-ItemProperty -Path $WSUSKey -Name "UseWUServer").UseWUServer
+         Set-ItemProperty -Path $WSUSKey -Name "UseWUServer" -Value 0
+         Restart-Service wuauserv
+
+         $WhereString = '$_.State -eq "NotPresent"'
+         $WhereArray = @()
+         if ($pp.AD) {$WhereArray += '$_.Name -like "Rsat.ActiveDirectory*"'}
+         if ($pp.GP) {$WhereArray += '$_.Name -like "Rsat.GroupPolicy*"'}
+         if ($pp.SM) {$WhereArray += '$_.Name -like "Rsat.ServerManager*"'}
+         if ($pp.CS) {$WhereArray += '$_.Name -like "Rsat.CertificateServices*"'}
+         if ($pp.RD) {$WhereArray += '$_.Name -like "Rsat.RemoteDesktop*"'}
+         if ($pp.FS) {$WhereArray += '$_.Name -like "Rsat.FileServices*"'}
+         if ($pp.DNS) {$WhereArray += '$_.Name -like "Rsat.DNS*"'}
+         if ($pp.DHCP) {$WhereArray += '$_.Name -like "Rsat.DHCP*"'}
+
+         if ($WhereArray.count -eq 0) {
+            $WhereArray += '$_.Name -like "Rsat*"'
+         }
+         $WhereString = $WhereString + ' -AND ' + ($WhereArray -join ' -OR ')
+
+         $Tools = Get-WindowsCapability -Online | Where-Object [scriptblock]::Create($WhereString)
+         foreach ($Item in $Tools) {
+            try {
+               Write-Verbose "Adding" $Item.Name "to Windows"
+               Add-WindowsCapability -Online -Name $Item.Name
+            }
+            catch { Write-Warning -Message $_.Exception.Message; break }
+         }
+
+         Set-ItemProperty -Path $WSUSKey -Name "UseWUServer" -Value $Save
+         Restart-Service wuauserv
       }
-      $html = $web.DownloadString("https://www.microsoft.com/download/confirmation.aspx?id=45520")
-      Write-Host "Installing tools for managing Windows Server $WS." -ForegroundColor Cyan
    }
 
    $urls = select-string '"https[^"]*msu"' -input $html -AllMatches |

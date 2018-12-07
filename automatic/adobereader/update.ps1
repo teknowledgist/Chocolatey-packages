@@ -39,32 +39,25 @@ function global:au_GetLatest {
    return  @{ 
        Version   = $version
        URL32     = "http://ardownload.adobe.com/pub/adobe/reader/win/AcrobatDC/$MUIstub"
-       EXEurl    = "$FTPbase/$EXEstub"
        MUIMSPurl = "$FTPbase/$MUIMSPstub"
-       MSPurl    = "$FTPbase/$MSPstub"
    }
 }
 
 function global:au_SearchReplace {
-    @{
-        'tools\chocolateyInstall.ps1'   = @{
-            "(^\s*[$]*urlPackageMSP\s*=\s*)('.*')"          = "`$1'$($Latest.URL32)'"
-            "(^\s*[$]*checksumPackageMSP\s*=\s*)('.*')"     = "`$1'$($Latest.Checksum32)'"
-            "(^\s*[$]*checksumTypePackage\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumType32)'"
-        }; 
-    }
+   @{
+      'tools\chocolateyInstall.ps1' = @{
+         "(^[$]MUIurl\s*=\s*)('.*')"         = "`$1'$($Latest.URL32)'"
+         "(^[$]MUIchecksum\s*=\s*)('.*')"    = "`$1'$($Latest.Checksum32)'"
+         "(^[$]MUImspURL\s*=\s*)('.*')"      = "`$1'$($Latest.MUIMSPurl)'"
+         "(^[$]MUImspChecksum\s*=\s*)('.*')" = "`$1'$($Latest.MUImspChecksum)'"
+      } 
+   }
 }
 
 function global:au_BeforeUpdate() {
-   $Latest.exeChecksum    = Get-RemoteChecksum $Latest.EXEurl
-   $Latest.MUIMSPChecksum = Get-RemoteChecksum $Latest.MUIMSPurl
-   $Latest.MSPChecksum    = Get-RemoteChecksum $Latest.MSPurl
+   $Latest.MUImspChecksum = Get-RemoteChecksum $Latest.MUIMSPurl
 }
 
-function global:au_AfterUpdate ($Package) {
-    Set-DescriptionFromReadme $Package -SkipFirst 3
-}
-
-Update-Package
+Update-Package -NoCheckChocoVersion
 
 
