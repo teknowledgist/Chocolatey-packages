@@ -1,41 +1,53 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$files = Get-ChildItem $toolsDir -Filter '*.exe'
-
-$File32 = ($files | Where-Object {$_.Name -match "win32"}).fullname
+$Installer = (Get-ChildItem $toolsDir -Filter '*.msi').FullName
 
 $InstallArgs = @{
-   packageName  = $env:ChocolateyPackageName
-   fileType     = 'EXE' 
-   File         = $File32
-   softwareName = "$env:ChocolateyPackageName*"
+   packageName   = $env:ChocolateyPackageName
+   fileType      = 'MSI' 
+   File          = $Installer
+   softwareName  = "$env:ChocolateyPackageName*"
+   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+   validExitCodes= @(0, 3010, 1641)
 }
 
 $pp = Get-PackageParameters
 
-if (!$pp['Master']) { $M = ' /NoMaster' } 
+if (!$pp['DesktopIcon']) { $I = ' DESKTOPICONS=No' } 
 else { 
-   Write-Host 'You have opted to install the Master application.' -ForegroundColor Cyan
-   $M = ''
+   Write-Host 'You have opted for the Desktop Icon.' -ForegroundColor Cyan
+   $I = ''
 }
 
-if (!$pp['config']) {
-    $C = ''
+if (!$pp['PrintOnly']) {
+   $F = ''
 } else {
-    if (!(Test-Path $pp['Config'])) {
-        Write-Error "`nThe configuration parameter, '$($pp['Config'])' is not an accessible path!"
-    } else {
-       Write-Host "You wish to use the configuration file: $($pp['Config'])" -ForegroundColor Cyan
-       $C = " /ApplyConfig=$($pp['Config'])"
-    }
+   Write-Host 'You requested to configure the PDF Printer feature only.' -ForegroundColor Cyan
+   $F = ' FAXPRINTER=No'
+   $RegPath = 'HKLM:\SOFTWARE\Wow6432Node'
+   if (-not (Test-Path "$RegPath\PDFPrint")) {
+      $null = New-Item -Path $RegPath -Name 'PDFPrint' -Force
+   }
+   $Properties = @(
+      "NoTrayIcon",
+      "NoOnlineConverter",
+      "NoShellContextMenuExtension",
+      "NoOnlinePdfTools",
+      "NoCloudPrint",
+      "NoEmbeddedBrowser",
+      "NoPDF24MailInterface",
+      "NoScreenCapture",
+      "NoFax",
+      "NoFaxProfile",
+      "NoMail"
+   )
+   ForEach ($item in $Properties) {
+      $null = New-ItemProperty -Path "$RegPath\PDFPrint" -Name $item -PropertyType DWORD -Value 1 -Force
+   }
 }
 
-$InstallArgs.add('silentArgs',"/S$M$C")
+$InstallArgs.silentArgs = "$($InstallArgs.silentArgs)$I$F"
 
 Install-ChocolateyInstallPackage @InstallArgs
 
-$exes = Get-ChildItem $toolsDir -filter *.exe -Recurse |Select-Object -ExpandProperty fullname
-foreach ($exe in $exes) {
-   New-Item "$exe.ignore" -Type file -Force | Out-Null
-}
