@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pdf24</id>
-    <version>8.7.0</version>
+    <version>8.7.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdf24</packageSourceUrl>
-    <owners>Teknowledgist, freaky-m0, jberezanski</owners>
+    <owners>freaky-m0,jberezanski,teknowledgist,chocolatey,pocki_c</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>PDF24 Creator</title>
     <authors>geek Software GmbH</authors>
     <projectUrl>http://en.pdf24.org/creator.html</projectUrl>
     <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/pdf24.png</iconUrl>-->
     <copyright>geek Software GmbH</copyright>
-    <licenseUrl>Software License Location __REMOVE_OR_FILL_OUT__</licenseUrl>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/manual/pdf24/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://en.pdf24.org/pdf-creator-features.html</docsUrl>
     <mailingListUrl>https://help.pdf24.org/en/forums/forum/pdf24-creator</mailingListUrl>
@@ -42,6 +42,8 @@
 * PDF screen capture
 * Windows tray icon with useful features
 
+### Install Option
+Install with the package parameter `/PrintOnly` to disable all "extra" features (shell context menu item, screen capture, fax, mail, cloud print, tray icon) other than a the virtual printer.
     </description>
     <releaseNotes>https://en.pdf24.org/pdf-creator-changelog.html</releaseNotes>
   </metadata>
