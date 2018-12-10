@@ -27,9 +27,23 @@
 
     `choco install rsat -params '"/Server:2016"'`
 
-##### Windows 10 RSAT version recommendations:
+##### Windows 10 (pre-1809) RSAT version recommendations:
 * use the latest (default) when managing Windows Server, version 1803 or 1709 (Both `1803` and `1709` are available if needed.)
 * use `2016` when managing Windows Server 2016 or previous versions
+
+### Windows 10 release 1809+
+With the September 2018 release of Windows, RSAT is no longer a single install nor is it associated with the server version.  Each of the RSAT features are separately available through Features on Demand.  This package should allow for download and installation of some or all of the RSAT features.  The `/server` parameter (above) is ignored here, and all the (20+) available RSAT features will be installed unless one or more of the following parameters are used:
+
+* `/AD` - Install the Active Directory Management feature.
+* `/GP` - Install the Group Policy Management feature.
+* `/SM` - Install the Server Manager feature.
+* `/CS` - Install the Certificate Services feature.
+* `/RD` - Install the Remote Desktop Management feature.
+* `/FS` - Install the File Services Management feature.
+* `/DNS` - Install the Domain Name Services Management feature.
+* `/DHCP` - Install the DHCP Management feature.
+
+*Example:* `choco install rsat -params '"/AD /GP /DHCP"'`
 
     </description>
   </metadata>
