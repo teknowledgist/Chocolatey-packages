@@ -64,10 +64,10 @@ if ($osInfo.Version.Major -eq 6) {
 
 If (($osInfo.Version.Major -ne 10) -or ($osInfo.BuildNumber -lt $1809Build)) {
    $urls = select-string '"https[^"]*msu"' -input $html -AllMatches |
-               ForEach-Object {$_.matches} | 
-               ForEach-Object {$_.value.trim('"')} |
-               Select-Object -unique |
-               Where-Object {$_ -match "WS_?$WS"}
+   ForEach-Object {$_.matches} | 
+   ForEach-Object {$_.value.trim('"')} |
+   Select-Object -unique |
+   Where-Object {$_ -match "WS_?$WS"}
 
    $url        = $urls | where-Object {$_ -match 'x86' }
    $url64      = $urls | where-Object {$_ -match 'x64' }
@@ -88,34 +88,36 @@ If (($osInfo.Version.Major -ne 10) -or ($osInfo.BuildNumber -lt $1809Build)) {
 } else {
    # Based on https://gallery.technet.microsoft.com/Install-RSAT-for-Windows-75f5f92f
    $WSUSKey = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
-   $Save = (Get-ItemProperty -Path $WSUSKey -Name 'UseWUServer').UseWUServer
+   $Save = (Get-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -ErrorAction SilentlyContinue).UseWUServer
    Set-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Value 0
    Restart-Service wuauserv
 
    $WhereArray = @()
-   if ($pp.AD) {$WhereArray += '$_.Name -like "Rsat.ActiveDirectory*"'}
-   if ($pp.GP) {$WhereArray += '$_.Name -like "Rsat.GroupPolicy*"'}
-   if ($pp.SM) {$WhereArray += '$_.Name -like "Rsat.ServerManager*"'}
-   if ($pp.CS) {$WhereArray += '$_.Name -like "Rsat.CertificateServices*"'}
-   if ($pp.RD) {$WhereArray += '$_.Name -like "Rsat.RemoteDesktop*"'}
-   if ($pp.FS) {$WhereArray += '$_.Name -like "Rsat.FileServices*"'}
-   if ($pp.DNS) {$WhereArray += '$_.Name -like "Rsat.DNS*"'}
-   if ($pp.DHCP) {$WhereArray += '$_.Name -like "Rsat.DHCP*"'}
+   if ($pp.AD) {$WhereArray += '($_.Name -like "Rsat.ActiveDirectory*")'}
+   if ($pp.GP) {$WhereArray += '($_.Name -like "Rsat.GroupPolicy*")'}
+   if ($pp.SM) {$WhereArray += '($_.Name -like "Rsat.ServerManager*")'}
+   if ($pp.CS) {$WhereArray += '($_.Name -like "Rsat.CertificateServices*")'}
+   if ($pp.RD) {$WhereArray += '($_.Name -like "Rsat.RemoteDesktop*")'}
+   if ($pp.FS) {$WhereArray += '($_.Name -like "Rsat.FileServices*")'}
+   if ($pp.DNS) {$WhereArray += '($_.Name -like "Rsat.DNS*")'}
+   if ($pp.DHCP) {$WhereArray += '($_.Name -like "Rsat.DHCP*")'}
 
    if ($WhereArray.count -eq 0) {
       $WhereArray += '$_.Name -like "Rsat*"'
    }
    $WhereString = '$_.State -eq "NotPresent" -AND (' + ($WhereArray -join ' -OR ') + ')'
 
-   $Tools = Get-WindowsCapability -Online | Where-Object [scriptblock]::Create($WhereString)
+   $Tools = Get-WindowsCapability -Online | Where-Object $([scriptblock]::Create($WhereString))
    foreach ($Item in $Tools) {
       try {
-         Write-Verbose 'Adding' $Item.Name 'to Windows'
+         Write-Verbose 'Adding $($Item.Name) to Windows'
          Add-WindowsCapability -Online -Name $Item.Name
       }
       catch { Write-Warning -Message $_.Exception.Message; break }
    }
 
-   Set-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Value $Save
+   If ($Save -ne $null) {
+      Set-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Value $Save
+   } else {Remove-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Force}
    Restart-Service wuauserv
 }
