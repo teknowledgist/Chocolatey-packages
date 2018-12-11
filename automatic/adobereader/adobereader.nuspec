@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>adobereader</id>
-    <version>2019.008.20081</version>
+    <version>2019.010.20064</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/adobereader</packageSourceUrl>
     <owners>Teknowledgist, ferventcoder, doc, sbaerlocher, ITIGO</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -18,7 +18,7 @@
     <docsUrl>https://helpx.adobe.com/reader.html</docsUrl>
     <tags>adobereader adobe acrobat reader DC pdf MUI multilanguage</tags>
     <summary>View, print, sign, and annotate PDF files</summary>
-    <description>This package installs/upgrades the Multi-lingual ("MUI") release.  In some cases, this package will be able to install over the top of a language-specific installation.  Otherwise, this package will exit and require a manual uninstall of the language specific installation.
+    <description><![CDATA[This package installs/upgrades the Multi-lingual ("MUI") release.  In some cases, this package will be able to install over the top of a language-specific installation.  Otherwise, this package will exit and require a manual uninstall of the language specific installation.
 
 ## Package installation defaults
 By default, **installation** of this package:
@@ -50,7 +50,7 @@ However, **upgrades** to Adobe Reader via this package:
 These parameters can be passed to the installer with the use of `-params`.
 For example : 
 `choco install adobereader -params '"/DesktopIcon /UpdateMode:4"'`
-    </description>
+]]></description>
     <releaseNotes>https://www.adobe.com/devnet-docs/acrobatetk/tools/ReleaseNotes/index.html</releaseNotes>
     <dependencies>
       <dependency id="kb2919355" />

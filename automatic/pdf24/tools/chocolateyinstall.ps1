@@ -1,5 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+# The PDF24 Service depends on the Print Spooler service
+if ((get-service -DisplayName 'print spooler').Status -ne 'Running') {
+   Write-Warning "The Print Spooler service must be running for PDF24 to install."
+   Throw 'Print Spooler ("spooler") service is stopped.'
+}
+
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $Installer = (Get-ChildItem $toolsDir -Filter '*.msi').FullName
 

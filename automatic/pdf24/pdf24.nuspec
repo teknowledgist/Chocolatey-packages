@@ -19,7 +19,7 @@
     <mailingListUrl>https://help.pdf24.org/en/forums/forum/pdf24-creator</mailingListUrl>
     <tags>pdf24 pdf pdfcreator printer embedded</tags>
     <summary>A free and easy solution to many PDF problems</summary>
-    <description>The free PDF24 PDF Creator is a program to create PDF files from almost any application.  The PDF creator functions as a virtual PDF printer and provides some PDF editing features.
+    <description>The free, PDF24 PDF Creator is a program to create PDF files from almost any application.  The PDF creator functions as a virtual PDF printer and provides some PDF editing features.
 
 ### Features
 
@@ -42,11 +42,14 @@
 * PDF screen capture
 * Windows tray icon with useful features
 
+### Requirements
+As a virtual printer, PDF24 requires the Print Spooler ("spooler") service to be enabled and running. 
+
 ### Install Options
-By default, this package will *not* install the Fax printer and will *not* add a desktop icon, but you can choose those:
+By default, this package will *not* install the Fax printer and will *not* add a desktop icon, but you can change that through package parameters:
 
 * `/Icon` - Installs the desktop icon.
-* `/Fax` - Installs the desktop icon.
+* `/Fax` - Installs the fax printer.
 * `/Basic` - Only the PDF24 virtual printer is enabled to start.  All "extra" features (shell context menu item, screen capture, mail, cloud print, tray icon) are disabled.  They can be manually re-enabled in the PDF24 settings.
 
 Example usage:  `choco install pdf24 -params '"/Basic"'`
