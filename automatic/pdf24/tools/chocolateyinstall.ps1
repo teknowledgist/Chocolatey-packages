@@ -14,33 +14,34 @@ $InstallArgs = @{
 
 $pp = Get-PackageParameters
 
-if (!$pp['DesktopIcon']) { $I = ' DESKTOPICONS=No' } 
-else { 
+if ($pp['Icon']) { 
    Write-Host 'You have opted for the Desktop Icon.' -ForegroundColor Cyan
    $I = ''
-}
+} else { $I = ' DESKTOPICONS=No' } 
 
-if (!$pp['PrintOnly']) {
+if ($pp['Fax']) { 
+   Write-Host 'You have opted to include the FaxPrinter.' -ForegroundColor Cyan
    $F = ''
-} else {
+} else { $F = ' FAXPRINTER=No' } 
+
+if ($pp['Basic']) {
    Write-Host 'You requested to configure the PDF Printer feature only.' -ForegroundColor Cyan
-   $F = ' FAXPRINTER=No'
    $RegPath = 'HKLM:\SOFTWARE\Wow6432Node'
    if (-not (Test-Path "$RegPath\PDFPrint")) {
       $null = New-Item -Path $RegPath -Name 'PDFPrint' -Force
    }
    $Properties = @(
-      "NoTrayIcon",
-      "NoOnlineConverter",
-      "NoShellContextMenuExtension",
-      "NoOnlinePdfTools",
-      "NoCloudPrint",
-      "NoEmbeddedBrowser",
-      "NoPDF24MailInterface",
-      "NoScreenCapture",
-      "NoFax",
-      "NoFaxProfile",
-      "NoMail"
+      'NoTrayIcon',
+      'NoOnlineConverter',
+      'NoShellContextMenuExtension',
+      'NoOnlinePdfTools',
+      'NoCloudPrint',
+      'NoEmbeddedBrowser',
+      'NoPDF24MailInterface',
+      'NoScreenCapture',
+      'NoFax',
+      'NoFaxProfile',
+      'NoMail'
    )
    ForEach ($item in $Properties) {
       $null = New-ItemProperty -Path "$RegPath\PDFPrint" -Name $item -PropertyType DWORD -Value 1 -Force

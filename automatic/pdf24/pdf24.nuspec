@@ -11,13 +11,13 @@
     <title>PDF24 Creator</title>
     <authors>geek Software GmbH</authors>
     <projectUrl>http://en.pdf24.org/creator.html</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/pdf24.png</iconUrl>-->
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@cc4b1558ccc7853df6d0cb4f1f79cb63caede42b/Icons/pdf24_icon.png</iconUrl>
     <copyright>geek Software GmbH</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/manual/pdf24/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://en.pdf24.org/pdf-creator-features.html</docsUrl>
     <mailingListUrl>https://help.pdf24.org/en/forums/forum/pdf24-creator</mailingListUrl>
-    <tags>pdf24 SPACE_SEPARATED</tags>
+    <tags>pdf24 pdf pdfcreator printer embedded</tags>
     <summary>A free and easy solution to many PDF problems</summary>
     <description>The free PDF24 PDF Creator is a program to create PDF files from almost any application.  The PDF creator functions as a virtual PDF printer and provides some PDF editing features.
 
@@ -42,8 +42,15 @@
 * PDF screen capture
 * Windows tray icon with useful features
 
-### Install Option
-Install with the package parameter `/PrintOnly` to disable all "extra" features (shell context menu item, screen capture, fax, mail, cloud print, tray icon) other than a the virtual printer.
+### Install Options
+By default, this package will *not* install the Fax printer and will *not* add a desktop icon, but you can choose those:
+
+* `/Icon` - Installs the desktop icon.
+* `/Fax` - Installs the desktop icon.
+* `/Basic` - Only the PDF24 virtual printer is enabled to start.  All "extra" features (shell context menu item, screen capture, mail, cloud print, tray icon) are disabled.  They can be manually re-enabled in the PDF24 settings.
+
+Example usage:  `choco install pdf24 -params '"/Basic"'`
+
     </description>
     <releaseNotes>https://en.pdf24.org/pdf-creator-changelog.html</releaseNotes>
   </metadata>
