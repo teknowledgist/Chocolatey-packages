@@ -32,7 +32,7 @@
 * use `2016` when managing Windows Server 2016 or previous versions
 
 ### Windows 10 release 1809+
-With the September 2018 release of Windows, RSAT is no longer a single install nor is it associated with a specific server version.  Each of the RSAT features are separately available through Features on Demand.  This package should allow for download and installation of some or all of the RSAT features.  The `/server` parameter (above) is ignored here, and all the (20+) available RSAT features will be installed you choose one or more of the most common features using the following parameters:
+With the September 2018 release of Windows, RSAT is no longer a single install nor is it associated with a specific server version.  Each of the RSAT features are separately available through Features on Demand.  This package should allow for download and installation of some or all of the RSAT features.  The `/server` parameter (above) is ignored here, and all the (20+) available RSAT features will be installed unless you choose one or more of the most common features using the following parameters:
 
 * `/AD` - Install the Active Directory Management feature.
 * `/GP` - Install the Group Policy Management feature.

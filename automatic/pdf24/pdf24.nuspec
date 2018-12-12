@@ -43,7 +43,7 @@
 * Windows tray icon with useful features
 
 ### Requirements
-As a virtual printer, PDF24 requires the Print Spooler ("spooler") service to be enabled and running. 
+As a virtual printer, PDF24 requires the Print Spooler ("spooler") service to be running.  This package will start the spooler and configure it to auto-start.
 
 ### Install Options
 By default, this package will *not* install the Fax printer and will *not* add a desktop icon, but you can change that through package parameters:

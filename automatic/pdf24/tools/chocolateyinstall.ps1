@@ -1,11 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-# The PDF24 Service depends on the Print Spooler service
-if ((get-service -DisplayName 'print spooler').Status -ne 'Running') {
-   Write-Warning "The Print Spooler service must be running for PDF24 to install."
-   Throw 'Print Spooler ("spooler") service is stopped.'
-}
-
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $Installer = (Get-ChildItem $toolsDir -Filter '*.msi').FullName
 
@@ -16,6 +10,24 @@ $InstallArgs = @{
    softwareName  = "$env:ChocolateyPackageName*"
    silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes= @(0, 3010, 1641)
+}
+
+# The PDF24 Service depends on the Print Spooler service so make it is up and running 
+#    (Stolen from cutepdf package and thanks to bcurran3.)
+try {
+   $serviceName = 'Spooler'
+   $spoolerService = Get-WmiObject -Class Win32_Service -Property StartMode,State -Filter "Name='$serviceName'"
+   if ($spoolerService -eq $null) { 
+      Write-Warning "The Print Spooler service must be running for PDF24 to install."
+      Throw "Service $serviceName was not found" 
+   }
+   Write-Warning "Print Spooler service state: $($spoolerService.StartMode) / $($spoolerService.State)"
+   if ($spoolerService.StartMode -ne 'Auto' -or $spoolerService.State -ne 'Running') {
+      Set-Service $serviceName -StartupType Automatic -Status Running
+      Write-Warning 'Print Spooler service now set to: Auto / Running'
+   }
+} catch {
+   Throw "Unexpected error while checking Print Spooler service: $($_.Exception.Message)"
 }
 
 $pp = Get-PackageParameters
