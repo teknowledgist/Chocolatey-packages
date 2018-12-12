@@ -110,11 +110,16 @@ If (($osInfo.Version.Major -ne 10) -or ($osInfo.BuildNumber -lt $1809Build)) {
    $Tools = Get-WindowsCapability -Online | Where-Object $([scriptblock]::Create($WhereString))
    foreach ($Item in $Tools) {
       try {
-         Write-Verbose 'Adding $($Item.Name) to Windows'
-         Add-WindowsCapability -Online -Name $Item.Name
+         Write-Host "`nAdding $($Item.Name) to Windows"
+         $DISMobject = Add-WindowsCapability -Online -Name $Item.Name
+         if ($DISMobject.RestartNeeded) {
+            Write-Warning "A reboot is required."
+         }
       }
       catch { Write-Warning -Message $_.Exception.Message; break }
    }
+   Write-Host "`n"
+   Write-Verbose "Windows Feature install log is at $($DISMobject.LogPath)"
 
    If ($Save -ne $null) {
       Set-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Value $Save
