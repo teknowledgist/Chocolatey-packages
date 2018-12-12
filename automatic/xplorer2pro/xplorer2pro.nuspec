@@ -5,12 +5,11 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xplorer2pro</id>
     <version>4.1.0.1</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xplorer2pro</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xplorer2pro</packageSourceUrl>z
     <owners>Werner van Deventer, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>xplorer² Pro (Trial)</title>
     <authors>Zabkat</authors>
-    <!-- projectUrl is required for the community feed -->
     <projectUrl>http://zabkat.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/xplorer2_icon.png</iconUrl>
     <copyright>©2002-2017 ZABKAT</copyright>

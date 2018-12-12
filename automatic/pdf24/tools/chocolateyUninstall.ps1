@@ -1,13 +1,12 @@
-Remove-Item 'HKLM:\SOFTWARE\Wow6432Node\PDFPrint' -Recurse -Force
+$ErrorActionPreference = 'Stop'
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName "PDF24*"
 
 if ($key.Count -eq 1) {
-   $key[0].PSChildName
-   $GUID = $key[0].PSChildName
+   $GUID = "{$($key[0].UninstallString.split('{')[-1])"
    $UninstallArgs = @{
       Statements    = "/x $GUID /qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).Uninstall.log`""
-      ExeToRun      = "$env:SystemRoot\SysWow64\msiexec.exe"
+      ExeToRun      = 'msiexec'
       validExitCodes= @(0, 3010, 1605, 1614, 1641)
    }
    Start-ChocolateyProcessAsAdmin @UninstallArgs
@@ -18,3 +17,6 @@ if ($key.Count -eq 1) {
    Write-Host "PDF24 not found.  It may have been uninstalled through other actions."
 }
 
+if (Test-Path 'HKLM:\SOFTWARE\Wow6432Node\PDFPrint') {
+   Remove-Item 'HKLM:\SOFTWARE\Wow6432Node\PDFPrint' -Recurse -Force
+}
