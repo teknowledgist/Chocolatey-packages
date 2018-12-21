@@ -5,7 +5,7 @@ function global:au_GetLatest {
    $string = $WebClient.DownloadString('http://www.cs.unc.edu/~isenburg/lastools/download/CHANGES.txt')
    $version = get-date ([datetime]($string.split("`n")[0] -replace "--.*",'')) -format yyyy.MM.dd
 
-   $url = 'http://lastools.org/download/LAStools.zip'
+<#   $url = 'http://lastools.org/download/LAStools.zip'
    Try {
       $response = invoke-webrequest $url -DisableKeepAlive -UseBasicParsing -Method head -ErrorAction SilentlyContinue
    } catch {
@@ -13,9 +13,9 @@ function global:au_GetLatest {
    }
    Finally {
       if (-not ($response.StatusCode -eq 200)) {
-         $url = 'http://www.cs.unc.edu/~isenburg/lastools/download/LAStools.zip'
-      }
-   }
+#>         $url = 'http://www.cs.unc.edu/~isenburg/lastools/download/LAStools.zip'
+#      }
+#   }
    
    return @{ 
             Version = $version
