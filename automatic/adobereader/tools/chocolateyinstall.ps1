@@ -130,7 +130,7 @@ if ((0..4) -contains $UpdateMode) {
 
 if (-not $UpdateOnly) {
    $packageArgsEXE = @{
-      packageName    = $env:ChocolateyPackageName
+      packageName    = "$env:ChocolateyPackageName (installer)"
       fileType       = 'EXE'
       File            = $MUIexePath
       checksumType   = 'SHA256'
@@ -151,7 +151,7 @@ if (-not $UpdateOnly) {
 # Only download/install the patch if necessary
 if ($MUIurl.split('/')[-2] -ne $MUImspURL.split('/')[-2]) {
    $DownloadArgs = @{
-      packageName    = $env:ChocolateyPackageName
+      packageName    = "$env:ChocolateyPackageName (update)"
       FileFullPath   = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:ChocolateyPackageVersion.msp"
       url            = $MUImspURL
       checksum       = $MUImspChecksum
