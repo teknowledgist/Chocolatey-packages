@@ -26,7 +26,7 @@ if ($key.Count -eq 1) {
       }
    } else {
       $MUIinstalled = $true
-      $UpdaterVersion = (Split-Path $MUImspURL).split('\')[-1]
+      $UpdaterVersion = $MUImspURL.split('/')[-2]
       if ($InstalledVersion -eq $UpdaterVersion) {
          Write-Verbose 'Currently installed version is the same as this package.  Nothing further to do.'
          Return
