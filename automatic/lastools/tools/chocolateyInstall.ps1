@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'  # stop on all errors
 
-$url      = 'http://lastools.org/download/LAStools.zip'
-$CheckSum = '9c517f837aaa1f0b251e8bda803459a3fd618a3e363485470770470a2382ecc3'
+$url      = 'http://www.cs.unc.edu/~isenburg/lastools/download/LAStools.zip'
+$CheckSum = '4ABFEBA2EF30506E327BCBE763A1E5BC65C94BBCEE192FA1FE89B846804FD5DC'
 
 $ZipArgs = @{
    PackageName   = 'lastools'
