@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>anaconda3</id>
-    <version>5.3.1</version>
+    <version>2018.12</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/anaconda3</packageSourceUrl>
     <owners>Teknowledgist, Chantisnake</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -45,7 +45,7 @@ You can change any of the defaults with package parameters:
   `choco install anaconda3 --params '"/AddToPath /D:c:\MyTools"'`
 
     </description>
-    <releaseNotes>https://docs.anaconda.com/anaconda/release-notes/</releaseNotes>
+    <releaseNotes>http://docs.anaconda.com/anaconda/reference/release-notes/</releaseNotes>
     <dependencies>
       <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>
