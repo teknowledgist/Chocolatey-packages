@@ -1,22 +1,22 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>latexdraw</id>
-    <version>__REPLACE__</version>
+    <version>3.3.8</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/latexdraw</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>LaTeXDraw</title>
     <authors>arnobl</authors>
     <projectUrl>http://latexdraw.sourceforge.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/latexdraw.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@99c949e4cda77f6ece410d0c4f2404e4da863d41/Icons/latexdraw_icon.png</iconUrl>
     <copyright>Copyright (c) 2005-2018 Arnaud BLOUIN</copyright>
     <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/arnobl/latexdraw</projectSourceUrl>
-    <docsUrl>https://github.com/arnobl/latexdraw/wiki/Manual</docsUrl>
+    <projectSourceUrl>https://github.com/latexdraw/latexdraw</projectSourceUrl>
+    <docsUrl>https://github.com/latexdraw/latexdraw/wiki/Manual</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/latexdraw/discussion/</mailingListUrl>
     <bugTrackerUrl>https://launchpad.net/latexdraw</bugTrackerUrl>
     <tags>latexdraw latex draw vector pstricks pdf postscript ps java FOSS embedded</tags>
@@ -36,10 +36,10 @@ The PSTricks code corresponding to the current drawing is automatically generate
 * SVG import/export
 
     </description>
-    <releaseNotes>https://github.com/arnobl/latexdraw/blob/master/latexdraw-core/net.sf.latexdraw/history.txt</releaseNotes>
+    <releaseNotes>http://latexdraw.sourceforge.net/index.html</releaseNotes>
     <dependencies>
       <dependency id="jre8" version="8.0" />
-    </dependencies>-->
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -1,6 +1,4 @@
-﻿From: https://github.com/arnobl/latexdraw/blob/master/latexdraw-core/net.sf.latexdraw/license.txt
-
-LICENSE
+﻿LICENSE
 
 		    GNU GENERAL PUBLIC LICENSE
 		       Version 2, June 1991

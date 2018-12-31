@@ -1,4 +1,4 @@
-﻿VERIFICATION
+VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
@@ -6,6 +6,6 @@ LaTeXDraw can be downloaded by following the "Download" link at the top
 of the homepage:  http://latexdraw.sourceforge.net/
 
 Direct Download:
-Version:   
-URL:       https://sourceforge.net/projects/latexdraw/files/latest/download
-CheckSum:  
+Version: 3.3.8
+URL: https://sourceforge.net/projects/latexdraw/files/latexdraw/3.3.8/LaTeXDraw-3.3.8-bin.zip
+CheckSum: 9929C75388D3A96298A14C321CA7A17905D78B20A947133418DD5BB4739ED01E
