@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>multihasher</id>
+    <version>2.8.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/multihasher</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>MultiHasher</title>
+    <authors>Ricardo Governa, Rui Loureiro</authors>
+    <projectUrl>http://www.abelhadigital.com/multihasher</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@eb001e253a9584496726194c4c45f92fb4f50037/Icons/multihasher_icon.png</iconUrl>
+    <copyright>Copyright © 2010-2016 abelhadigital.com</copyright>
+    <licenseUrl>http://www.abelhadigital.com/licenses/license.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <mailingListUrl>http://forum.abelhadigital.com/</mailingListUrl>
+    <tags>multihasher checksum hash md5 sha1 sha2 sha256</tags>
+    <summary>Freeware, multi-file hash calculator</summary>
+    <description>MultiHasher is an intuitive Windows application that can verify the integrity of files by calculating their checksums. 
+    
+#### Features:
+* **Multiple Algorithms supported** - CRC-32, MD5, RIPEMD-160, SHA-1, SHA-256, SHA-512, and a few others.
+* **Hash file verification** - MHX, SFV, FCIV, MD5Sum, etc.
+* **Multiple files support** - Add files or entire folders to the file queue while calculation is in progress.
+* **Drag'n'Drop support**
+* **Pause or cancel calculations**
+* **Text string hashing** - Most unicode encodings are supported, including big and little-endian byte sequences.
+* **Windows Integration** - Includes option to launch MultiHasher from Windows Explorer context menu.
+* **VirusTotal support** - Supports querying VirusTotal database, as well as, uploading new files from the UI. (Requires API key)
+* **Localizable UI** - MultiHasher is currently available in Dutch, English (UK and US), French, German, Greek, Italian, Korean, Polish, Portuguese (Brazil and Portugal), Russian, Spanish, and Turkish.
+
+</description>
+    <releaseNotes>http://www.abelhadigital.com/multihasher/release-notes</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
