@@ -16,6 +16,7 @@
     <licenseUrl>http://www.abelhadigital.com/licenses/license.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <mailingListUrl>http://forum.abelhadigital.com/</mailingListUrl>
+    <bugTrackerUrl>mailto:bugs@abelhadigital.com?subject=Bug report</bugTrackerUrl>
     <tags>multihasher checksum hash md5 sha1 sha2 sha256</tags>
     <summary>Freeware, multi-file hash calculator</summary>
     <description>MultiHasher is an intuitive Windows application that can verify the integrity of files by calculating their checksums. 
