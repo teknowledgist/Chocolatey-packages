@@ -1,0 +1,21 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+This final, free build (v1.8.8) of Synergy can be downloaded from its old 
+home on SourceForge:
+
+https://sourceforge.net/projects/synergy-stable-builds/files/v1.8.8-stable/
+
+or a newer alternate location:
+
+https://github.com/brahma-dev/synergy-stable-builds/releases
+
+The downloads from the two locations are identical with the same hashes:
+
+SHA-256 checksum for 32-bit file, synergy-v1.8.8-stable-Windows-x86.msi:  
+7286fd733d30df1477e70186d70d812a1e8d146504100aec14b4e77c7a563566
+
+SHA-256 checksum for 64-bit file, synergy-v1.8.8-stable-Windows-x64.msi:  
+76b74921c675fa06db68243729e63a617e42d78305dac3b2192d97cd41fae5b3
+

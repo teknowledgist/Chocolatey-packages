@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>synergy</id>
+    <version>1.8.8</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/synergy</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Synergy (final free release)</title>
+    <authors>Symless</authors>
+    <projectUrl>https://symless.com/synergy</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@9e97d1467efff01eb952bb5592dcb80d342ffce2/Icons/synergy_icon.png</iconUrl>
+    <copyright>Copyright 2012-2017 Symless Ltd.</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/symless/synergy-core/releases/tag/v1.8.8-stable</projectSourceUrl>
+    <docsUrl>https://symless.com/help/s1-troubleshooting</docsUrl>
+    <mailingListUrl>https://symless.com/forums/forum/17-general-discussion/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/symless/synergy-core/issues</bugTrackerUrl>
+    <tags>synergy virtual kvm cross-platform foss discontinued embedded</tags>
+    <summary>A cross-platform, virtual KVM</summary>
+    <description>Synergy is a software download that shares one mouse and one keyboard between multiple computers. It combines your desktop devices together into one cohesive experience. You can even copy and paste between your computers. Synergy works on Windows, macOS, Linux, and Raspberry Pi.
+
+Unlike a KVM switch, Synergy is simply an easy-to-use app that doesn't need special hardware. You only need a typical WiFi or Ethernet connection, which everyone has. What's best, is that you don't need to press any buttons to switch your mouse and keyboard between computers, just move your mouse between your computers effortlessly.
+
+It works like magic.
+
+#### Last build note
+The 1.8.8 release of Synergy is the last, free, build.  Subsequent releases have an open source "core" that anyone may compile, but the GUI components and pre-compiled binaries require [purchasing a (reasonably priced) license](https://symless.com/purchase).
+    </description>
+    <releaseNotes>https://github.com/symless/synergy-core/releases/tag/v1.8.8-stable</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
