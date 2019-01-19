@@ -6,17 +6,18 @@ function global:au_GetLatest {
    $PageText = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $Link = $PageText.links | 
-               Where-Object {$_.outerhtml -match 'Notepad3.*Setup\.zip'} | 
+               Where-Object {$_.outerhtml -match 'Notepad3.*Setup\.'} | 
                Select-Object -First 1
    $Version = $Link.title -replace '.* ([0-9.]+).*','$1'
-   $urlstub = $Link.outerhtml.split() | Where-Object {$_ -match '\.zip$'}
+   $urlstub = $Link.outerhtml.split() | Where-Object {$_ -match '\.(exe|zip)$'}
    
+   $filetype = $urlstub.split('.')[-1]
    $url = "https://www.rizonesoft.com/genesis/Notepad3/$urlstub"
 
    return @{ 
             Version  = $Version
             URL32    = $URL
-            FileType = 'zip'
+            FileType = $filetype
            }
 }
 

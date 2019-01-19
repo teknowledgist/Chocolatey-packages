@@ -1,18 +1,29 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$fileLocation = (Get-ChildItem (Split-Path $MyInvocation.MyCommand.Definition) -Filter '*.zip').FullName
+$toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 
-$UnzipDir = Join-Path $env:TEMP "$env:ChocolateyPackageName_$env:ChocolateyPackageVersion"
+$ZipFile = (Get-ChildItem $toolsDir -Filter '*.zip').FullName
 
-# Extract zip
-Get-ChocolateyUnzip -FileFullPath $fileLocation -Destination $UnzipDir
+If ($ZipFile) {
+   $UnzipDir = Join-Path $env:TEMP "$env:ChocolateyPackageName_$env:ChocolateyPackageVersion"
+   # Extract zip
+   Get-ChocolateyUnzip -FileFullPath $ZipFile -Destination $UnzipDir
+} else {
+   $UnzipDir = $toolsDir
+}
+
+$Installer = (Get-ChildItem $UnzipDir -Filter '*.exe').FullName
 
 $packageArgs = @{
-  packageName  = $env:ChocolateyPackageName
-  fileType     = 'EXE' 
-   File        = (Get-ChildItem $UnzipDir -filter "*.exe" -Recurse).FullName
-  softwareName = "$env:ChocolateyPackageName*"
-  silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+   packageName  = $env:ChocolateyPackageName
+   fileType     = 'EXE' 
+   File         = $Installer
+   softwareName = "$env:ChocolateyPackageName*"
+   silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
 }
 
 Install-ChocolateyInstallPackage @packageArgs
+
+if ($UnzipDir -eq $toolsDir) {
+   $null = New-Item "$Installer.ignore" -Type file -Force
+}
