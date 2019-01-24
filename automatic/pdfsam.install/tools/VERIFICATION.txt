@@ -9,6 +9,6 @@ or:
 
 Direct download:
 
-Version  : 4.0.0
-URL      : https://github.com/torakiki/pdfsam/releases/download/v4.0.0/pdfsam-4.0.0.msi
-CheckSum : 6F286FDD6F143BEA04A81D85F8FEF2BBE5A3D4D96398D7466B25C0749A76FDB4
+Version  : 4.0.1
+URL      : https://github.com/torakiki/pdfsam/releases/download/v4.0.1/pdfsam-4.0.1.msi
+CheckSum : 830DEDA74213B994081010CCD96410788ECF7D598AC97140DE533F4604B8E443

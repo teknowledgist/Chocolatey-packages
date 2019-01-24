@@ -8,7 +8,7 @@ particular version on this page:
 
 Direct Download:
 
-Version  : 4.18.512.992
-URL      : https://www.rizonesoft.com/download/3939/?version=4-18-512-992
-CheckSum : B81C4A4F4C282C0E59050104A2D671287B2A1554C4CE8E9FCD9BA4FCA05243B5
+Version  : 5.19.108.1602
+URL      : https://www.rizonesoft.com/genesis/Notepad3/Notepad3_5.19.108.1602_Setup.exe
+CheckSum : DC8E0B2DA8B58DF6A477C1DE3D11AC4DEC1600711F541AF9AD7E911FDBC3C772
 
