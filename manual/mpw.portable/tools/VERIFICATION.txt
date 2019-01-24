@@ -1,0 +1,25 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+
+The Master Password .JAR file can be downloaded by going to:
+
+https://gitlab.com/MasterPassword/MasterPassword
+
+and clicking the "Desktop" link in the text of the README.md file.
+
+*** OR *** 
+
+by going to:
+
+https://masterpassword.app/
+
+and clicking the "Desktop" link at the bottom of the page under the
+"Get Master Password" heading.
+
+
+Direct download: 
+Version  : 2.7.10
+URL      : https://masterpassword.app/masterpassword-gui.jar
+Checksum : 13eebbf03749346bf962591aa62cbe354f44e5b14ae8f90075a55b6b1eaed688
+

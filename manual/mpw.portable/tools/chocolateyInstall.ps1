@@ -1,45 +1,21 @@
-﻿$packageName = 'mpw.portable'
-$url         = 'https://ssl.masterpasswordapp.com/masterpassword-gui-2.3.jar'
-$Checksum    = 'c3eedb0ddede3a1511fab888012d62f9749d00f525796cac0506dfbfe66a9315'
+﻿$ErrorActionPreference = 'Stop'
 
-$installDir  = Split-Path (Split-Path -parent $script:MyInvocation.MyCommand.Path)
+$ToolsDir   = Split-Path -parent $MyInvocation.MyCommand.Path
 
-$installArgs = @{
-   packageName   = $packageName
-   FileFullPath  = Join-Path $installDir ($url.split('/')[-1])
-   url           = $url
-   Checksum      = $Checksum
-   ChecksumType  = 'sha256'
-}
-$JarFile = Get-ChocolateyWebFile @installArgs
+$target = (Get-ChildItem $ToolsDir -filter *.jar -Recurse).fullname
 
-<# 
-# Install-BinFile is the "proper" method, but it is somehow broken
-# See:  https://github.com/chocolatey/choco/issues/1273
-$ShimArgs = @{
-   Name     = 'MasterPassword'
-   Path     = "$env:ProgramData\Oracle\Java\javapath\javaw.exe"
-   UseStart = $true
-   Command  = "-jar '$JarFile'"
-}
-Install-BinFile @ShimArgs
-#>
+$JReg = 'HKLM:\SOFTWARE\JavaSoft\Java Runtime Environment'
+$JVer=(Get-ItemProperty $JReg).CurrentVersion
+$JavaHome = (Get-ItemProperty $JReg/$JVer).JavaHome
+$JavaPath = (Get-ChildItem $JavaHome -Filter 'javaw.exe' -Recurse).fullname
 
-$icon     = Join-Path $installDir 'tools\MasterPassword.ico'
-$launcher = Join-Path $env:ChocolateyInstall 'bin\MasterPassword.exe'
-$JavaExe  = Join-Path $env:ProgramData 'Oracle\Java\javapath\javaw.exe'
-$sg       = Join-Path $env:ChocolateyInstall 'tools\shimgen.exe'
-
-& $sg -o $launcher -p $JavaExe -c "-jar '$JarFile'" -i $icon --gui |out-null
-
-if (Test-Path $launcher) {
-   Write-Host "Added $launcher shim for `'$JarFile`'."
-}
+$StartPrograms = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs'
 
 $ShortcutArgs = @{
-   ShortcutFilePath = Join-Path ([Environment]::GetFolderPath('Desktop')) 'MasterPassword.lnk'
-   TargetPath       = Join-Path $env:ChocolateyInstall 'bin\MasterPassword.exe'
-   IconLocation     = Join-Path $installDir 'tools\MasterPassword.ico'
-#   Arguments        = '--shimgen-gui'
+   ShortcutFilePath = Join-Path $StartPrograms 'Master Password.lnk'
+   TargetPath = $JavaPath
+   Arguments = "-jar `"$Target`""
+   IconLocation = Join-Path $ToolsDir 'MasterPassword.ico'
 }
+
 Install-ChocolateyShortcut @ShortcutArgs

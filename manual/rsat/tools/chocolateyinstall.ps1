@@ -88,9 +88,11 @@ If (($osInfo.Version.Major -ne 10) -or ($osInfo.BuildNumber -lt $1809Build)) {
 } else {
    # Based on https://gallery.technet.microsoft.com/Install-RSAT-for-Windows-75f5f92f
    $WSUSKey = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
-   $Save = (Get-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -ErrorAction SilentlyContinue).UseWUServer
-   Set-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Value 0
-   Restart-Service wuauserv
+   if (Test-Path $WSUSKey) {
+      $Save = (Get-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -ErrorAction SilentlyContinue).UseWUServer
+      Set-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Value 0
+      Restart-Service wuauserv
+   }
 
    $WhereArray = @()
    if ($pp.AD) {$WhereArray += '($_.Name -like "Rsat.ActiveDirectory*")'}
