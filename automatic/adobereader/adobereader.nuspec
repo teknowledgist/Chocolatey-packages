@@ -11,14 +11,16 @@
     <title>Adobe Acrobat Reader DC (multi-lingual)</title>
     <authors>Adobe</authors>
     <projectUrl>https://www.adobe.com/products/reader.html</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/adobereader_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@df2a7348a5fb0f3504002b02faa2776ca0b59172/Icons/adobereader_icon.png</iconUrl>
     <copyright>Copyright © 1984-2018 Adobe Systems Incorporated and its licensors</copyright>
     <licenseUrl>http://www.adobe.com/products/eulas/pdfs/Reader10_combined-20100625_1419.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://helpx.adobe.com/reader.html</docsUrl>
     <tags>adobereader adobe acrobat reader DC pdf MUI multilanguage</tags>
     <summary>View, print, sign, and annotate PDF files</summary>
-    <description><![CDATA[This package installs/upgrades the Multi-lingual ("MUI") release.  In some cases, this package will be able to install over the top of a language-specific installation.  Otherwise, this package will exit and require a manual uninstall of the language specific installation.
+    <description><![CDATA[Adobe Acrobat Reader DC software is the free, trusted global standard for viewing, printing, signing, sharing, and annotating PDFs. It's the only PDF viewer that can open and interact with all types of PDF content – including forms and multimedia. 
+    
+This package installs/upgrades the Multi-lingual ("MUI") release.  In some cases, this package will be able to install over the top of a language-specific installation.  Otherwise, this package will exit and require a manual uninstall of the language specific installation.
 
 ## Package installation defaults
 By default, **installation** of this package:
