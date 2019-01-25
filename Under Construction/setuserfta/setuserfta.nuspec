@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>setuserfta</id>
+    <version>1.7.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/setuserfta</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Set User FileType Associations (portable)</title>
+    <authors>Christoph Kolbicz</authors>
+    <projectUrl>https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/setuserfta_icon.png</iconUrl>
+    <copyright>Copyright © 2018 Christoph Kolbicz</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/setuserfta/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://kolbi.cz/blog/2017/10/25/setuserfta-userchoice-hash-defeated-set-file-type-associations-per-user/</docsUrl>
+    <bugTrackerUrl>mailto://bugs@kolbi.cz</bugTrackerUrl>
+    <tags>setuserfta filetype protocol association handler userchoice default</tags>
+    <summary>Set File Type Associations per User or Group</summary>
+    <description>Managing file type associations (FTAs) in Window 8/10/2012/2016/2019 is a pain for an administrator to set or to roam FTA’s.  Quoting Microsoft: 
+    
+*In Pre-Win 8, apps could set the default handler for a file type/protocol by manipulating the registry, this means you could easily have a script or a group policy manipulating the registry. However In Win 8, the registry changes are verified by a hash (unique per user and app)  that detects tampering by apps. In the absence of a valid hash, we ignore the default in the registry.*
+    
+Microsoft [offers a solution](https://blogs.technet.microsoft.com/windowsinternals/2017/10/25/windows-10-how-to-configure-file-associations-for-it-pros) via GPO per computer **NOT per user**!  That hash preventing the setting of FTAs is secret which means no scripted/programatic method exists to set FTAs... **until now!**
+
+
+    
+    </description>
+    <releaseNotes>#### SetUserFTA:
+* Version 1.1 – adds support for group membership checking
+* Version 1.2 – is completely rewritten in C. it also offers now verbose output on errors
+* Version 1.3 – new funtionality: multiple file type associations with a configuration file
+* Version 1.4 – support for protocols like mailto, https, http, etc (only for Windows 1703 and newer)
+* Version 1.5 – support for Windows 8.x and Server 2012/R2
+* Version 1.6 – added protocols (except http and https) support on 1607 or lower builds
+* Version 1.7 – get and del parameters added, # char for comments in config files, EULA
+* Version 1.7.1 – fixes false positive antivirus detections
+
+#### SetDefaultBrowser:
+* Version 1.0 – first public version
+* Version 1.0.1 – additional Firefox detection
+* Version 1.1 – now working on Windows 1703 and 1709, opera support added
+* Version 1.2 – support for Windows 8.x and Server 2012/R2 added
+* Version 1.3 – support for ALL Browsers, delayed start, full Unicode, EULA
+    </releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
