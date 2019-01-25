@@ -4,47 +4,51 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mpw</id>
-    <version>2.3</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/mpw</packageSourceUrl>
+    <version>2.7.10</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mpw</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>MasterPassword desktop/GUI</title>
+    <title>MasterPassword Java-Gui</title>
     <authors>Maarten Billemont</authors>
-    <projectUrl>https://ssl.masterpasswordapp.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/mpw_icon.png</iconUrl>
+    <projectUrl>https://masterpassword.app/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@7576aa4399e39c496babc2c49bbd3b27baeba10c/Icons/mpw_icon.png</iconUrl>
     <copyright>Copyright © 2011-2017 Maarten Billemont</copyright>
-    <licenseUrl>https://raw.githubusercontent.com/Lyndir/MasterPassword/master/LICENSE</licenseUrl>
+    <licenseUrl>https://gitlab.com/MasterPassword/MasterPassword/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/Lyndir/MasterPassword/</projectSourceUrl>
-    <docsUrl>https://ssl.masterpasswordapp.com/what.html</docsUrl>
-    <mailingListUrl>http://help.masterpasswordapp.com/</mailingListUrl>
-    <bugTrackerUrl>https://github.com/Lyndir/MasterPassword/issues</bugTrackerUrl>
+    <projectSourceUrl>https://gitlab.com/MasterPassword/MasterPassword</projectSourceUrl>
+    <docsUrl>https://masterpassword.app/how/</docsUrl>
+    <mailingListUrl>https://help.masterpassword.app/</mailingListUrl>
+    <bugTrackerUrl>https://gitlab.com/MasterPassword/MasterPassword/issues</bugTrackerUrl>
     <tags>MasterPassword password mpw security portable</tags>
     <summary>A stateless password management solution.</summary>
     <description>Master Password is a completely new way of thinking about passwords.
 
 It consists of an algorithm that implements the core idea and applications for various platforms making the alogirthm available to users on a variety of devices and platforms.
 
-### The Master Password way
+#### Benefits of using Master Password:
 
-* Stop writing down your passwords.
-* Stop storing your passwords in a "secure" place, such as a vault, a keychain, an app or "the cloud".
-* In fact, just stop thinking about passwords at all.
+* You don't need to think up a new strong password every time you make a new account - Master Password gives you the key for it.
+* You don't need to try remembering a password you created two years ago for that one account - Master Password gives you the key for it.
+* You don't need to try to keep password lists in sync or stored somewhere easily accessible - Master Password keys can be created anywhere.
+* You don't need to trust that a service will be online and stay online - Master Password is availale everywhere, even offline.
+* If you feel at risk of your device being stolen or confiscated, you can set a fake master password, delete my user or wipe it worry-free.
+* You don't need to worry about your password manager website getting hacked, your phone getting duplicated, somebody taking a picture of your passwords book - Master Password stores no secrets.
 
 Master Password users have no more passwords. They have a password. Their password is their single master key for unlocking all doors.
 
+The details of how Master Password works [are available here](https://masterpassword.app/masterpassword-algorithm.pdf).
+
 #### One, two, enter.
 
-As a Master Password user, there are about three steps to entering any site:
+There are about three steps to using Master Password:
 
-1. Enter your master password to unlock your Master Password app.
-2. Find the name of the site you want to get into, copy its key.
-3. Paste the site's key into the site and log in.
+1. Enter your master password.
+2. Enter the name of the site.
+3. View or copy/paste the generated (not stored!) password.
 
-Most browsers will then ask you to "save" the site's password. For most people, this is a good idea and will subsequently allow you to log in without having to use Master Password at all.
     </description>
     <dependencies>
-      <dependency id="mpw.portable" version="[2.3]" />
+      <dependency id="mpw.portable" version="[2.7.10]" />
     </dependencies>
   </metadata>
   <files>
