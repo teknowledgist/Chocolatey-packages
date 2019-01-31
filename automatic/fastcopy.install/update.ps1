@@ -53,6 +53,6 @@ if ($MyInvocation.InvocationName -ne '.') {
       Get-RemoteFiles -Purge -NoSuffix
    }
 
-   update -ChecksumFor none
+   update -ChecksumFor none -nocheckchocoversion
    if ($global:au_old_force -is [bool]) { $global:au_force = $global:au_old_force }
 }
