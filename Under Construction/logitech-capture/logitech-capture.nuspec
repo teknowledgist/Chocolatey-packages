@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>logitech-capture</id>
+    <version>1.0.553</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/logitech-capture</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Logitech Capture</title>
+    <authors>Logitech</authors>
+    <projectUrl>https://www.logitech.com/en-us/product/capture</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@d31c5d1fcd36f13e26bac616f3a1c728f0fb4068/Icons/logitech-capture_icon.png</iconUrl>
+    <copyright>© 2018 Logitech</copyright>
+    <licenseUrl>https://www.logitech.com/assets/65580/logitech-eula.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://aws13-customer-care-assets.s3-us-west-2.amazonaws.com/Software/Logitech%20Capture/Logitech%20Capture%20User%20Guide.pdf</docsUrl>
+    <mailingListUrl>https://community.logitech.com/s/topic/0TO31000000UKNrGAO/video-and-security</mailingListUrl>
+    <tags>logitech-capture logitech capture video webcam record</tags>
+    <summary>Create high-quality video content with the Logitech C920, C922 and BRIO webcams.</summary>
+    <description>The Logitech Capture app makes creating content with your webcam as easy as lights, camera, Capture.  
+    
+Start recording high-quality videos the second you plug in your Capture-powered Logitech webcam. Logitech Capture enables you to record from multiple sources, create mobile-friendly vertical videos, and stream live to YouTube from one intuitive interface.
+
+Customize your recordings with transition effects, source-switching, colored borders and ChromaKey settings. And use the Capture app to set your webcam’s field of view, aspect ratio, recording resolution and more. Capture saves all your settings in your user profile.
+
+## Minimum Requirements
+| **OS**       | Windows 7 SP1 (with updates), 8.1, 10 |
+| **CPU**      | 2nd Generation Core i5 or equivalent  |
+| **Graphics** | Intel HD 4600 Integrated graphics     |
+| **RAM**      | 8 GB RAM                              |
+| **Storage**  | 250 MB available space                |
+
+Installation will fail if some minimums are not met.
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
