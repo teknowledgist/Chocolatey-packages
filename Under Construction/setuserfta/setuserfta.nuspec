@@ -25,8 +25,14 @@
     
 Microsoft [offers a solution](https://blogs.technet.microsoft.com/windowsinternals/2017/10/25/windows-10-how-to-configure-file-associations-for-it-pros) via GPO per computer **NOT per user**!  That hash preventing the setting of FTAs is secret which means no scripted/programatic method exists to set FTAs... **until now!**
 
+#### **SetUserFTA** can
+* associate file types or network protocols with the program of your choice per user or per (local or domain) security group.
+* list the protected filetypes.  
+* delete file type associations.  
 
-    
+###### Note
+`SetUserFTA.exe` cannot associate HTTP and HTTPS on Win10 1607 or earlier.  Instead use [`SetDefaultBrowser.exe`](https://kolbi.cz/blog/2017/11/10/setdefaultbrowser-set-the-default-browser-per-user-on-windows-10-and-server-2016-build-1607/) (also included in this package).
+
     </description>
     <releaseNotes>#### SetUserFTA:
 * Version 1.1 – adds support for group membership checking
