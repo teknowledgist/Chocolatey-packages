@@ -1,4 +1,4 @@
-﻿From: https://code.sinclair.edu/projects/MAKEMEADMIN/repos/origin/browse/LICENSE
+﻿From: https://github.com/pseymour/MakeMeAdmin/blob/master/LICENSE
 
 which is a copy of the GNU General Public License, version 3. 
 

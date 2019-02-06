@@ -123,8 +123,12 @@ If (($osInfo.Version.Major -ne 10) -or ($osInfo.BuildNumber -lt $1809Build)) {
    Write-Host "`n"
    Write-Verbose "Windows Feature install log is at $($DISMobject.LogPath)"
 
-   If ($Save -ne $null) {
-      Set-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Value $Save
-   } else {Remove-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Force}
-   Restart-Service wuauserv
+   if (Test-Path $WSUSKey) {
+      If ($Save -ne $null) {
+         Set-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Value $Save
+      } else {
+         Remove-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Force
+      }
+      Restart-Service wuauserv
+   }
 }

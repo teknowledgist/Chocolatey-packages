@@ -4,18 +4,18 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>makemeadmin</id>
-    <version>2.2.1</version>
+    <version>2.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/makemeadmin</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Make Me Admin</title>
     <authors>Patrick S. Seymour</authors>
     <projectUrl>https://makemeadmin.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/makemeadmin_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@408d25dbdba5f0beccec932f8d33690246f378f2/Icons/makemeadmin_icon.png</iconUrl>
     <copyright>Copyright © 2018 Patrick S. Seymour</copyright>
-    <licenseUrl>https://code.sinclair.edu/projects/MAKEMEADMIN/repos/origin/browse/LICENSE</licenseUrl>
+    <licenseUrl>https://github.com/pseymour/MakeMeAdmin/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://code.sinclair.edu/projects/MAKEMEADMIN</projectSourceUrl>
+    <projectSourceUrl>https://github.com/pseymour/MakeMeAdmin</projectSourceUrl>
     <docsUrl>https://makemeadmin.com/docs/</docsUrl>
     <mailingListUrl>https://makemeadmin.com/contact/</mailingListUrl>
     <tags>makemeadmin admin administrator user elevate privilege OSS embedded</tags>
@@ -35,7 +35,7 @@ After a configurable period, the user is removed from the Administrators group b
 
 Consult [the documentation](https://makemeadmin.com/docs/) for information on how to define authorized users, timeouts and other settings.  
     </description>
-    <releaseNotes>https://code.sinclair.edu/projects/MAKEMEADMIN/repos/origin/commits</releaseNotes>
+    <releaseNotes>https://makemeadmin.com/whats-new-in-version-2-3/</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
