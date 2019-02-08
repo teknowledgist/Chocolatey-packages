@@ -5,9 +5,13 @@ in verifying that this package's contents are trustworthy.
 The installer is available on this page:  
 https://www.petges.lu/download/
 
+Versions on the site are concluded with a letter, but the nuspec syntax
+restricts lettered versions to beta status.  This package converts the
+letter into a numbered version as identifed below
+
 Direct Download:
 
-Version  : 9.10.3
-URL      : https://www.petges.lu/pubfiles/ac-910c.exe
-CheckSum : e63afc4762985f514effed8a4ec844b27c91ba3ddd781cd43a04d642d4e1cbb9
+Version  : 9.10.4
+URL      : https://www.petges.lu/pubfiles/ac-910d.exe
+CheckSum : 08DF63246FF113938DBFB25B7AD6009874CAC156AA33E460DB409EF4E406D675
 
