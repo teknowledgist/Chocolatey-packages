@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>pngoptimizer.commandline</id>
+    <version>2.5</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pngoptimizer.commandline</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PngOptimizer (CommandLine)</title>
+    <authors>Hadrien Nilsson</authors>
+    <projectUrl>http://psydk.org/PngOptimizer.php</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@cc4b1558ccc7853df6d0cb4f1f79cb63caede42b/Icons/pngoptimizer_icon.png</iconUrl>
+    <copyright>Copyright © 2002/2017 Hadrien Nilsson</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/gpl-2.0.en.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://www.github.com/hadrien-psydk/pngoptimizer</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/hadrien-psydk/pngoptimizer/issues</bugTrackerUrl>
+    <tags>pngoptimizer png bmp gif optimize images commandline cmdline OSS embedded</tags>
+    <summary>Optimize PNG images and convert other lossless format images to PNG</summary>
+    <description>PngOptimizer is a graphics and command line tool to optimize PNGs and convert other lossless formats (GIF, BMP, TGA) into optimized PNGs.
+    
+### Features
+* Cleans your PNG files of useless or wrong information.
+* Reduces your PNG files' data size.
+* Converts into PNG other lossless image formats (BMP, GIF, TGA).
+* Supports animated PNG (APNG).
+* Creates easily available PNG screenshots.
+* Perform all tasks in a simple and efficient way.
+    </description>
+    <releaseNotes>https://github.com/hadrien-psydk/pngoptimizer/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
