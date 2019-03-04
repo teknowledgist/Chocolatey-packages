@@ -1,0 +1,18 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Caesium can be downloaded by clicking the link from this page:
+
+https://saerasoft.com/caesium/#download
+
+The primary download link will get the file from FossHub.  There is an
+alternative download at Sourceforge.
+
+Direct Download:
+
+Version  : 1.7.0
+URL1     : https://www.fosshub.com/Caesium-Image-Compressor.html?dwl=caesium-1.7.0-win.exe
+URL2     : https://sourceforge.net/projects/caesium/files/1.7.0/caesium-1.7.0-win.exe/download
+CheckSum : 1C7CE7B925391730A2B7DBAB52DF7AC2F78D45580A423BC6B299F2E74A4B1C59
+ 

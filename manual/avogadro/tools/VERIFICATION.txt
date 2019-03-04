@@ -1,0 +1,14 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Avogadro can be obtained by clicking the download link from this page:
+
+https://avogadro.cc/
+
+Direct Download:
+
+Version  : 1.2.0
+URL      : https://sourceforge.net/projects/avogadro/files/latest/download
+CheckSum : BB15E67FC527C0D28DE32ABB2D0D0EE161829A64F3BF4887B8D786E3B0DAF270
+ 

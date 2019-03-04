@@ -1,11 +1,17 @@
-$InstallArgs = @{
-   packageName = 'avogadro'
-   installerType = 'exe'
-   url = 'https://sourceforge.net/projects/avogadro/files/avogadro/1.2.0/Avogadro-1.2.0n-win32.exe/download'
-   checksum = 'BB15E67FC527C0D28DE32ABB2D0D0EE161829A64F3BF4887B8D786E3B0DAF270'
-   checksumType = 'sha256'
-   silentArgs = '/S'
+$ErrorActionPreference = 'Stop'
+
+$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*.exe').FullName
+
+$packageArgs = @{
+  packageName  = $env:ChocolateyPackageName
+  fileType     = 'EXE' 
+  file         = $fileLocation
+  softwareName = "$env:ChocolateyPackageName*"
+  silentArgs   = '/S'
    validExitCodes = @(0)
 }
 
-Install-ChocolateyPackage @InstallArgs
+Install-ChocolateyInstallPackage @packageArgs
+
+New-Item "$fileLocation.ignore" -Type file -Force | Out-Null

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>avogadro</id>
-    <version>1.2.0.20170307</version>
+    <version>1.2.0.20190217</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/avogadro</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -19,7 +19,7 @@
     <docsUrl>https://manual.avogadro.cc/content/</docsUrl>
     <mailingListUrl>http://discuss.avogadro.cc/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/avogadro/bugs</bugTrackerUrl>
-    <tags>avogadro chemistry molecular science visualization GPL admin</tags>
+    <tags>avogadro chemistry molecular science visualization GPL OSS embedded</tags>
     <summary>An intuitive molecular editor and visualization tool </summary>
     <description>Avogadro is an advanced molecule editor and visualizer designed for cross-platform use in computational chemistry, molecular modeling, bioinformatics, materials science, and related areas. It offers flexible high quality rendering and a powerful plugin architecture.
 

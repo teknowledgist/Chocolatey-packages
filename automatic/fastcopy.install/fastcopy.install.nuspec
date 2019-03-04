@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy.install</id>
-    <version>3.62</version>
+    <version>3.63</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy.install</packageSourceUrl>
     <owners>Teknowledgist, dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -15,7 +15,7 @@
     <copyright>Copyright © 2004-2017 by SHIROUZU Hiroaki</copyright>
     <licenseUrl>https://fastcopy.jp/help/fastcopy_eng.htm#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://fastcopy.jp/archive/FastCopy362src.zip</projectSourceUrl>
+    <projectSourceUrl>https://fastcopy.jp/archive/FastCopy363src.zip</projectSourceUrl>
     <mailingListUrl>https://groups.google.com/forum/#!forum/fastcopy-bb-eng</mailingListUrl>
     <docsUrl>https://fastcopy.jp/help/fastcopy_eng.htm</docsUrl>
     <tags>fastcopy copy delete explorer shell notsilent embedded admin</tags>
