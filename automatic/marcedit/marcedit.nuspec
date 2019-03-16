@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>marcedit</id>
+    <version>7.1.120</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/marcedit</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>MarcEdit</title>
+    <authors>Terry Reese</authors>
+    <projectUrl>http://oregonstate.edu/~reeset/marcedit/html/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@d2bb8697be18709f0e785c49099028ef8fafdb71/Icons/marcedit_icon.png</iconUrl>
+    <copyright>Copyright © 2007-2019 Terry Reese</copyright>
+    <licenseUrl>https://marcedit.reeset.net/marcedit-end-user-license-agreement</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://marcedit.reeset.net/tutorials</docsUrl>
+    <mailingListUrl>http://listserv.gmu.edu/cgi-bin/wa?A0=marcedit-l</mailingListUrl>
+    <bugTrackerUrl>https://marcedit.reeset.net/bug-report?version=MarcEdit7</bugTrackerUrl>
+    <tags>marcedit MARC records OCLC worldcat xslt library catalog</tags>
+    <summary>Your complete, free, MARC editing utility</summary>
+    <description>MarcEdit is a metadata editing software suite used primarily to create and manipulate MARC (MAchine-Readable Cataloging) records. 
+
+* MarcEdit can be used with XSLT to retrieve records from remote servers via [Z39.50](https://en.wikipedia.org/wiki/Z39.50) and then map their contents to another metadata schema.
+* Catalogers who wish to read and write records in [OCLC WorldCat](https://www.worldcat.org/) can do so using MarcEdit's implementation of the OCLC Worldcat API to read and write records in WorldCat.
+* MarcEdit can be used to batch-edit authority records.
+* MarcEdit can add dereferencable URIs to bibliographic records that use authority control that uniquely identify the relevant authority record.
+    </description>
+    <releaseNotes>https://marcedit.reeset.net/software/update7.txt</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
