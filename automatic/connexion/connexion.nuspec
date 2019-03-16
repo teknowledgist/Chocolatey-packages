@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>connexion</id>
+    <version>2.63</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/connexion</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>OCLC Connexion® Client</title>
+    <authors>OCLC Online Computer Library Center, Inc.</authors>
+    <projectUrl>https://help.oclc.org/Metadata_Services/Connexion</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@ea0b3532345e916ae234a5bd4142036fae600bf3/Icons/connexion_icon.png</iconUrl>
+    <copyright>©2002-2012 OCLC Online Computer Library Center, Inc.</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/connexion/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://help.oclc.org/Metadata_Services/Connexion/Connexion_client_documentation</docsUrl>
+    <mailingListUrl>https://www.oclc.org/en/contacts/support.html</mailingListUrl>
+    <bugTrackerUrl>https://help.oclc.org/Metadata_Services/Connexion/Connexion_known_issues/Connexion_client_known_problems</bugTrackerUrl>
+    <tags>connexion SPACE_SEPARATED</tags>
+    <summary>Your access to the OCLC system for cataloging</summary>
+    <description>OCLC Connexion® is your access to the OCLC (Online Computer Library Center) system for cataloging. 
+
+Catalogers can use the Connexion client for the following functions:
+* Customize WorldCat search and browse index lists
+* Create and edit bibliographic records, including constant data
+* Open MARC field Help from Bibliographic Formats and Standards for immediate field descriptions as you catalog 
+* Use authority records and control headings in bibliographic records
+* Take OCLC actions on records
+* Take OCLC actions on multiple records selected in a list
+* Export records
+* Print labels
+* Import records
+* Open OCLC system news
+* Report errors in bibliographic and authority records to OCLC quality control staff
+* Search the Library of Congress (LC) authority file
+* Complete Name Authority Cooperative Program (NACO) activities
+* Conduct peer reviews of records
+* Open a WebDewey-only session
+* Access your library’s OCLC usage statistics
+* Insert data from cited records automatically
+* Select validation options for setting holdings and exporting
+* Open a local holdings maintenance browser window to maintain local holdings records for WorldCat records
+* Catalog electronic resources by automatically extracting metadata and creating a preliminary workform 
+* Search for superseded LC authority history records; opening LC distributed authority record from a history record and vice versa
+* Open guided entry windows to edit or insert fields 006, 541, or 583
+* Display a record in a “Find in a Library” view in WorldCat.org
+* Export bibliographic records using either MARC 21 (default) or one of the following Dublin Core record standards 
+    * For export, select Dublin Core Qualified, Dublin Core Simple, OCLC Dublin Core Qualified, or OCLC Dublin Core Simple
+    * For import, select Dublin Core Qualified or Dublin Core SimpleNote: Dublin Core standards are structured in XML
+* Access SCIPIO records describing art and rare book sales catalogs for sales from the late sixteenth century to the present
+* Catalog offline and online
+* Validate records offline
+* Use local save files as well as your library’s online save file
+* Create local constant data records, as well as online constant data, to insert often used MARC-formatted content
+* Batch process WorldCat and LC authority file searches
+* Batch process OCLC actions on records, including exports and label printing
+* Batch process setting or deleting holdings by OCLC number without first downloading the records
+* Create text strings to insert frequently used data 
+* Write macros or use a macro recorder to automate frequent tasks
+* Use the client’s built-in label printing capability
+* Print local accessions lists
+* Create multiple user profiles (sets of client options) to catalog for more than one library
+* Check spelling in records
+* Choice of multiple language for the interface
+* Supports all Unicode scripts through Unicode version 8.0.0.
+* Automatically transliterate romanized data in Arabic and Persian records to Arabic script data (two ways)
+* Validate MARC-8 characters separately from record validation
+* Convert invalid CJK characters to MARC-8 automatically
+* Upload digital files to a CONTENTdm collection and automatically add field 856 to the WorldCat record that contains the URL to open the digital content (for authorized CONTENTdm users with correct setup only)
+* Define a startup action or macro to run each time you open the client
+* Use quick tools for entering command line WorldCat searches and for using and managing text strings and user tools
+* Set up a Z39.50 access to your library's integrated local system (ILS) to retrieve local bibliographic records
+* Install and use RLIN21 keyboards for entering Arabic, Cyrillic, Hebrew, and Latin scripts
+* Add variant name headings using MARC-8 non-Latin character sets to LC authority file records
+    </description>
+    <!-- =============================== -->      
+    <dependencies>
+      <dependency id="dotnet4.5" version="4.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

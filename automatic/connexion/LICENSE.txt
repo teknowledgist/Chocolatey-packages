@@ -1,0 +1,173 @@
+OCLC Software License Agreement
+Copyright statement 
+
+Prior to downloading the OCLC software selected (the “OCLC Software”), 
+the institution downloading the OCLC Software ("Licensee") must indicate 
+its acceptance of the terms and conditions set forth in this OCLC Software 
+License Agreement (the “Agreement”) by clicking the “I Accept” button at 
+the end of this Agreement.
+
+1. OCLC Programs. 
+
+This Agreement governs Licensee's use of the OCLC Software. The “OCLC 
+Software” may include the following OCLC software programs: OCLC Connexion 
+client software; Catalog Label Program software; OCLC Dewey Cutter Macro 
+software; OCLC Permissions software; OCLC Submission Builder software; 
+Digital Archive Uploader software; RLIN keyboard software (e.g., RLIN21 
+Arabic keyboard, RLIN21 Cyrillic keyboard, RLIN21 Hebrew keyboard, and 
+RLIN21 Latin keyboard) and such other software programs as OCLC may 
+designate from time to time.
+
+a. License.
+
+OCLC hereby grants to Licensee a nonexclusive, nontransferable and 
+nonassignable license to load and use the OCLC Software in object code 
+form only solely for Licensee's internal, noncommercial purposes. Licensee 
+may make a reasonable number of copies of the OCLC Software for backup 
+purposes. Licensee shall not reverse engineer, decompile or reverse 
+assemble the OCLC Software and shall reproduce and/or retain all copyright 
+notices and restricted rights legends on all copies of the OCLC Software 
+made hereunder.
+
+b. Title.
+
+The OCLC Software and all copies thereof are the property of OCLC and/or 
+its suppliers and all rights, title and interest thereto remains in OCLC 
+and/or its suppliers. Licensee shall not sell, transfer, publish, 
+disclose, display, or otherwise make available to any third party any 
+OCLC Software or copy thereof, except as permitted in section 1.g of this 
+Agreement. Licensee shall take appropriate action by instruction or 
+agreement with its employees who are permitted access to the OCLC Software 
+or copies thereof to inform such employees of Licensee’s obligations under 
+this Agreement and usage restrictions applicable to the OCLC Software.
+
+c. Update Policy.
+
+OCLC may, but is not obligated to, update the OCLC Software from time to 
+time and will make these updates available electronically. In general, 
+updates will be announced by OCLC, and Licensee will have an opportunity 
+to acquire updated materials and interim patches from OCLC. OCLC shall 
+not be obligated to make other OCLC software programs, processes, products 
+or services compatible with prior versions of the OCLC Software after an 
+updated version is introduced. If Licensee acquires or is provided updated 
+materials, it will be licensed to use such updated materials under the 
+terms of this Agreement and OCLC will make a general announcement 
+electronically if it decides to terminate the right to use the copy of 
+the preceding version of the OCLC Software.
+
+d. Warranties and Limitation of Liability. 
+
+THE OCLC SOFTWARE IS PROVIDED "AS IS." OCLC MAKES NO REPRESENTATIONS OR 
+WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, WITH RESPECT TO THE OCLC 
+SOFTWARE AND DISCLAIMS ALL SUCH WARRANTIES, INCLUDING ALL WARRANTIES OF 
+MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE. OCLC'S LIABILITY, 
+IF ANY, FOR DAMAGES, INCLUDING BUT NOT LIMITED TO LIABILITY ARISING OUT 
+OF CONTRACT, NEGLIGENCE, STRICT LIABILITY IN TORT, OR WARRANTY SHALL NOT 
+EXCEED A REFUND OF THE FEES ACTUALLY PAID BY LICENSEE FOR THE OCLC 
+SOFTWARE, IN EXCHANGE FOR TERMINATION OF THIS AGREEMENT. IN NO EVENT 
+WILL OCLC (OR ITS SUPPLIERS OR LICENSORS) BE LIABLE FOR INDIRECT, SPECIAL, 
+INCIDENTAL, OR CONSEQUENTIAL DAMAGES, EVEN IF OCLC HAS BEEN ADVISED OF 
+THE POSSIBILITY OF SUCH DAMAGES. LICENSEE AGREES THAT THE OCLC SOFTWARE 
+IS NOT A CONSUMER GOOD FOR PURPOSES OF FEDERAL OR STATE WARRANTY LAWS. 
+The terms of this Agreement inure to the benefit of all suppliers of 
+third party software used to develop the OCLC Software.
+
+e. Term and Termination.
+
+The license granted herein for each release of the OCLC Software shall 
+terminate effective as of the date OCLC publicly announces that it will 
+no longer support such release following availability of a new release 
+or update of such OCLC Program. Licensee shall be responsible for 
+monitoring OCLC's web site for such "end-of-support" announcements. If 
+Licensee breaches this Agreement, the license granted by this Agreement 
+will terminate immediately. Upon any termination of license rights under 
+this Agreement with respect to any OCLC Programs, Licensee shall thereupon 
+destroy all such OCLC Programs, together with all copies thereof made or 
+permitted to be made by Licensee.
+
+f. Injunctive Relief.
+
+Licensee agrees that if any transfer or unauthorized copy of the OCLC 
+Software is made, OCLC will have the right to obtain an injunction in 
+addition to any other rights and remedies to which it may be entitled. 
+Licensee agrees to be responsible for all costs incurred by OCLC in 
+protecting its rights hereunder against unauthorized copying and transfer 
+by Licensee, including all attorneys' fees reasonably incurred by OCLC.
+
+g. Assignment.
+
+Licensee's rights and obligations under this License Agreement may not 
+be assigned or delegated by Licensee without the prior written consent 
+of OCLC which will not be unreasonably withheld.
+
+h. Exports and Imports.
+
+Licensee assures OCLC that Licensee intends to use the OCLC Software only 
+in the country where initially downloaded by Licensee, and that Licensee 
+will not use, ship, export or reexport copies of OCLC Software, directly 
+or indirectly, in or to any other country. Licensee shall be responsible 
+for paying and/or complying with any and all laws, customs, regulations, 
+tariffs, duties and fees, procurement, and data and technology transfer 
+laws, of the country into which any import is made. Licensee shall not 
+download the OCLC Software to countries to which export of the OCLC 
+Software is prohibited by U.S. law.
+
+i. Additional Terms.
+
+(i) Licensee understands that the OCLC Software is designed for use with 
+certain OCLC online systems and services (the “OCLC Systems”) and that 
+access to and use of the OCLC Systems are subject to the terms of separate 
+OCLC agreements. Licensee acknowledges that use and transfer of records 
+and other information from WorldCat received through the use of the OCLC 
+Software are subject to the “WorldCat Rights and Responsibilities for the 
+OCLC Cooperative”, as modified from time to time as a result of the policy 
+review process described therein (the “Policy”). A copy of the current 
+version of the Policy is available at the following url: 
+http://www.oclc.org/worldcat/recorduse/policy/default.htm.
+
+(ii) The availability of some features in the OCLC Software may be 
+conditioned upon the availability of features in the OCLC Systems which 
+are only in development and scheduled for later release. OCLC reserves 
+the right to change the OCLC Systems, and does not guarantee that the 
+OCLC Software will be capable of working with all features of the OCLC 
+Systems.
+
+The OCLC Software is subject to U.S. GOVERNMENT RESTRICTED RIGHTS. Use, 
+duplication and disclosure are subject to restrictions stated in a license 
+agreement with OCLC Online Computer Library Center, Incorporated. 
+Unpublished: Rights Reserved under the Copyright Laws of the United States.
+
+As to Click2learn, Inc. Software (the "Software"): U.S. GOVERNMENT 
+RESTRICTED RIGHTS.  The Software and written materials accompanying the 
+Software are provided with RESTRICTED RIGHTS.  If you are an agency of 
+the United States Government, the following clause applies to this 
+license.  The Software is commercial computer software developed a private 
+expense.  Software provided to the United States Government pursuant to 
+solicitations issued on or after December 1, 1995 is provided with the 
+commercial license rights and restrictions described elsewhere therein.  
+All Software provided to the United States Government pursuant to 
+solicitations issued prior to December 1, 1995 is provided with 
+“Restricted Rights” as provided for in the Commercial Computer Software-
+Restricted Rights at FAR, 48 CFR 52.227-14 (JUNE 1987) or The Rights in 
+Technical Data and Computer Software clause at DFAR, 48 CFR 252.227-7013 
+(OCT 1988), as applicable.  Use, duplication or disclosure by the United 
+States Government is subject to restrictions as set forth therein.  
+Manufacturer is Click2learn, Inc., 110-110th Avenue N.E., Bellevue, 
+Washington, U.S.A. 98004.
+
+2. Severability.
+
+If any provision of this Agreement is held to be invalid or unenforceable, 
+it will be construed to have the broadest interpretation that would make 
+it valid and enforceable under such holding. Invalidity or unenforceability 
+of a provision will not affect any other provision of this Agreement.
+
+3. Entire Agreement.
+
+This is the final, complete, and exclusive Agreement between the parties 
+as to the subject matter hereof, and there are no other contracts, express 
+or implied, with respect thereto. This Agreement may only be modified by 
+a writing signed by both parties.
+
+OCLC Software License Agreement OCLC20120203:01
+
