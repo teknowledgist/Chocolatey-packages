@@ -18,7 +18,7 @@
     <docsUrl>https://help.oclc.org/Metadata_Services/Connexion/Connexion_client_documentation</docsUrl>
     <mailingListUrl>https://www.oclc.org/en/contacts/support.html</mailingListUrl>
     <bugTrackerUrl>https://help.oclc.org/Metadata_Services/Connexion/Connexion_known_issues/Connexion_client_known_problems</bugTrackerUrl>
-    <tags>connexion SPACE_SEPARATED</tags>
+    <tags>connexion OCLC MARC library worldcat metadata</tags>
     <summary>Your access to the OCLC system for cataloging</summary>
     <description>OCLC Connexion® is your access to the OCLC (Online Computer Library Center) system for cataloging. 
 
