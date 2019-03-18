@@ -1,0 +1,19 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The current version of MarcEdit can be downloaded from the official site:
+   https://marcedit.reeset.net/downloads
+by selecting the correct version for your operating system.
+
+Direct download:
+Version      : 7.1.120
+x86 URL      : https://marcedit.reeset.net/software/marcedit7/MarcEdit_Setup32Admin.msi
+x86 CheckSum : 8A96D9F3D9CCBCA2A885D3E1B52A7312549BBBD62DBC6D7D66E3B4958E1E8073
+x64 URL      : https://marcedit.reeset.net/software/marcedit7/MarcEdit_Setup64Admin.msi
+x64 CheckSum : 886EE4FC55D18A464A8672746108CA86F4F71A7184EE68DDBD22FAD78FCDFAED
+
+Note the URLs for the latest version is always the same.  Previous versions
+can be found in the archives:
+
+https://marcedit.reeset.net/software/marcedit7/archive/

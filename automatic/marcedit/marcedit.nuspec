@@ -18,7 +18,7 @@
     <docsUrl>https://marcedit.reeset.net/tutorials</docsUrl>
     <mailingListUrl>http://listserv.gmu.edu/cgi-bin/wa?A0=marcedit-l</mailingListUrl>
     <bugTrackerUrl>https://marcedit.reeset.net/bug-report?version=MarcEdit7</bugTrackerUrl>
-    <tags>marcedit MARC records OCLC worldcat xslt library catalog</tags>
+    <tags>marcedit MARC records OCLC worldcat xslt library catalog embedded</tags>
     <summary>Your complete, free, MARC editing utility</summary>
     <description>MarcEdit is one of the more complete metadata edit suites available to librarians and is primarily used to create and manipulate MARC (MAchine-Readable Cataloging) records. 
 

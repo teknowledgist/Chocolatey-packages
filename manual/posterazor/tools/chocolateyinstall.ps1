@@ -1,23 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$packageName= 'posterazor'
-$url      = 'https://sourceforge.net/projects/posterazor/files/Binary%20Releases/1.5.2/PosteRazor-1.5.2-Win32.zip'
-$CheckSum = '2A91A2445D34FF2B7791815924EFAB1AA0EDC55AC282BB03AAA48147C13277F6'
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$ZipArgs = @{
-   PackageName   = $packageName
-   Url           = $url
-   Checksum      = $CheckSum
-   ChecksumType  = 'sha256'
-   UnzipLocation = Split-Path (Split-Path -parent $MyInvocation.MyCommand.Definition)
-}
+$ZipFile   = (Get-ChildItem $toolsDir -filter '*.zip').FullName
 
-Install-ChocolateyZipPackage @ZipArgs
+Get-ChocolateyUnzip -FileFullPath $ZipFile -Destination $env:ChocolateyPackageFolder
 
+
+$StartPrograms = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs'
 $ShortcutArgs = @{
-   ShortcutFilePath = Join-Path ([Environment]::GetFolderPath('Desktop')) 'PosteRazor.lnk'
-   TargetPath       = Join-Path $ZipArgs.UnzipLocation 'PosteRazor.exe'
-   IconLocation     = Join-Path $ZipArgs.UnzipLocation 'tools\PosteRazor.ico'
+   ShortcutFilePath = Join-Path $StartPrograms 'PosteRazor.lnk'
+   TargetPath       = Join-Path $env:ChocolateyPackageFolder 'PosteRazor.exe'
+   IconLocation     = Join-Path $toolsDir 'PosteRazor.ico'
 }
-
 Install-ChocolateyShortcut @ShortcutArgs

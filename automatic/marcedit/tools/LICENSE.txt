@@ -1,0 +1,55 @@
+﻿From:  https://marcedit.reeset.net/marcedit-end-user-license-agreement
+
+MarcEdit End User License Agreement
+
+Author:   Terry Reese
+Version:  5.1+; August 2007 to Present
+Homepage: http://marcedit.reeset.net
+Contact:  reeset@gmail.com
+
+END-USER LICENSE AGREEMENT FOR THIS SOFTWARE
+
+Important – read carefully:
+
+Redistribution and use in binary forms are permitted provided that the 
+following conditions are met:
+
+* FREEWARE.  Commercial as well as non-commercial (government, non-profit, 
+    etc.) use is allowed, without charge.
+* REDISTRIBUTION OF SOFTWARE. You may make copies of the Software as you 
+    wish; give that these are exact copies of the original Software; and 
+    distributed in its unmodified form.
+* REDISTRIBUTIONS in binary form must reproduce the above copyright 
+    notice, this list of conditions and the following disclaimer in the 
+    documentation and/or other materials provided with the distribution.
+* REDISTRIBUTION OF SOFTWARE:
+    * The entire Software application except the yaz.dll (and supporting 
+        packages), YazSharp.dll (and supporting packages), Saxon (and 
+        supporting packages) and ICSharpCode.SharpZipLib.dll.  These 
+        libraries are governed by their corresponding licenses, with 
+        source code for these libraries made available on their official 
+        project pages.
+    * The officially supported installation found at: https://marcedit.reeset.net.
+    * Other redistributions for use in derivative works may be allowed, 
+        but are at the discretion of the Software author.
+* Neither the name of TERRY REESE nor the names of its contributors may 
+    be used to endorse or promote products derived from this software 
+    without specific prior written permission.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS “AS 
+IS” AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, 
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR 
+PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR 
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, 
+EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, 
+PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR 
+PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF 
+LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING 
+NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS 
+SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+
+
+
+REVISED
+* 2016/12/28 — revised for clarity around acceptable use (particularly, 
+    can the software be used for non-commercial use)

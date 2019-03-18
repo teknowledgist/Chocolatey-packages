@@ -1,0 +1,12 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The download for the PosteRazor zip file can be found on the home site:
+   http://posterazor.sourceforge.net/index.php?page=download
+
+Direct download:
+
+Version:  1.5.2
+URL:      https://sourceforge.net/projects/posterazor/files/Binary%20Releases/1.5.2/PosteRazor-1.5.2-Win32.zip
+Checksum: 2A91A2445D34FF2B7791815924EFAB1AA0EDC55AC282BB03AAA48147C13277F6
