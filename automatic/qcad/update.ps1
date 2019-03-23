@@ -3,14 +3,14 @@ import-module au
 $Release = 'http://www.qcad.org/en/qcad-downloads-trial'
 
 function global:au_GetLatest {
+   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    $download_page = Invoke-WebRequest -Uri $Release
 
-   $regex = '^.*?/(.*?\.zip).*'
-   $urlstubs = $download_page.links |? {($_.href -match '\.msi$') -and ($_.innertext -NotMatch 'CAD\/CAM')} |select -ExpandProperty href -First 2
-   $url32 = 'http://www.qcad.org/' + $urlstubs[0]
-   $url64 = 'http://www.qcad.org/' + $urlstubs[1]
+   $url32,$url64 = $download_page.links |
+                     ? {($_.href -match '\.msi$') -and ($_.innertext -NotMatch 'CAD\/CAM')} |
+                     select -ExpandProperty href -First 2
 
-   $version = ($urlstubs[0] -split '-')[1]
+   $version = ($url64 -split '-')[1]
 
    return @{ 
             Version = $version

@@ -4,11 +4,11 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qcad</id>
-    <version>3.22.0</version>
+    <version>3.22.0.20190322</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/QCAD</packageSourceUrl>
     <owners>Teknowledgist,petervbeck</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>QCAD - 2D CAD - Community Edition</title>
+    <title>QCAD Professional (Trial)</title>
     <authors>RibbonSoft, GmbH</authors>
     <projectUrl>http://www.qcad.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@3207cab9b49da7be5d9a7ef8594be01935e15fda/Icons/qcad_icon.png</iconUrl>
@@ -17,17 +17,37 @@
     <docsUrl>http://www.qcad.org/en/qcad-documentation</docsUrl>
     <projectSourceUrl>https://github.com/qcad/qcad/</projectSourceUrl>
     <mailingListUrl>http://www.qcad.org/rsforum/</mailingListUrl>
-    <tags>qcad cad 2d drawing drafting admin</tags>
+    <tags>qcad cad 2d drawing drafting trial-ware</tags>
     <summary>The Open Source CAD System For Everyone</summary>
     <description>QCAD is a free, open source application for computer aided drafting (CAD) in two dimensions (2D). With QCAD you can create technical drawings such as plans for buildings, interiors, mechanical parts or schematics and diagrams. 
     
 QCAD was designed with modularity, extensibility and portability in mind. But what people notice most often about QCAD is its intuitive user interface. QCAD is an easy to use but powerful 2D CAD system for everyone. You don't need any CAD experience to get started with QCAD immediately. 
-    
+
+Main Features:
+
+* Layers
+* Blocks (grouping)
+* 35 CAD fonts included
+* Support for TrueType fonts
+* Various Metrical and Imperial units
+* DXF and DWG input and output
+* Printing to scale
+* Printing on multiple pages
+* Over 40 construction tools
+* Over 20 modification tools
+* Construction and modification of points, lines, arcs, circles, ellipses, splines, polylines, texts, dimensions, hatches, fills, raster images
+* Various powerful entity selection tools
+* Object snaps
+* Measuring tools
+* Part library with over 4800 CAD parts
+* Very complete and extremely powerful ECMAScript scripting interface
+
 [A complete list of features is here](http://www.qcad.org/en/qcad-documentation/qcad-features)
     
-#### Notes
+#### Trial-ware
+This package is for the open source QCAD, *bundled with a free trial of QCAD Professional*. The trial runs 15min at a time and can then be restarted. You can order QCAD Professional from the [Online Shop](https://www.qcad.org/online-shop). Alternatively, you can choose to remove the trial and use the reduced free QCAD Community Edition instead.
 
-* The default download/install of QCAD includes trial-ware, commercial plugins.  This package removes those to leave a fully GPLv3-compliant install.
+Use the `-params` switch argument of `/CommunityEdition` to remove the commercial plugins and leave a fully GPLv3-compliant install.
     </description>
     <releaseNotes>http://www.qcad.org/en/changelog</releaseNotes>
   </metadata>

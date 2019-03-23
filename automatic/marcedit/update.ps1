@@ -22,9 +22,9 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
     @{
         "tools\VERIFICATION.txt" = @{
-            "(^Version\s*: )('.*')"      = "`$1'$($Latest.Version)'"
-            "(^x86 Checksum\s*: )('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(^x64 Checksum\s*: )('.*')" = "`$1'$($Latest.Checksum64)'"
+            "(^Version\s*: )(.*)"      = "`$1$($Latest.Version)"
+            "(^x86 Checksum\s*: )(.*)" = "`$1$($Latest.Checksum32)"
+            "(^x64 Checksum\s*: )(.*)" = "`$1$($Latest.Checksum64)"
         }
     }
 }

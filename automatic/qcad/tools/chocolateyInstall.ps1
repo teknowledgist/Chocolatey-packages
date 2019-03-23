@@ -20,13 +20,17 @@ $InstallArgs = @{
 
 Install-ChocolateyPackage @InstallArgs
 
-# QCAD is GPLv3, but the binary download comes burdened with with a couple commercial trial plugins.
-# Removing a few files eliminates the proprietary pieces.
-$TrialFiles = 'qcaddwg.dll','qcadopengl3d','qcadpolygon.dll','qcadproscripts.dll','qcadtriangulation.dll'
+$UserArguments = Get-PackageParameters
 
-foreach ($file in $TrialFiles) {
-   if (test-path (Join-Path $env:ProgramFiles "QCAD\plugins\$file")) {
-      Remove-Item (Join-Path $env:ProgramFiles "QCAD\plugins\$file") -Force
+if ($UserArguments['CommunityEdition']) {
+   # QCAD is GPLv3, but the binary download comes burdened with with a couple commercial trial plugins.
+   # Removing a few files eliminates the proprietary pieces.
+   $TrialFiles = 'qcaddwg.dll','qcadopengl3d','qcadpolygon.dll','qcadproscripts.dll','qcadtriangulation.dll'
+
+   foreach ($file in $TrialFiles) {
+      if (test-path (Join-Path $env:ProgramFiles "QCAD\plugins\$file")) {
+         Remove-Item (Join-Path $env:ProgramFiles "QCAD\plugins\$file") -Force
+      }
    }
 }
 
