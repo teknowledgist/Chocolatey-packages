@@ -11,7 +11,7 @@
     <title>OCLC Connexion® Client</title>
     <authors>OCLC Online Computer Library Center, Inc.</authors>
     <projectUrl>https://help.oclc.org/Metadata_Services/Connexion</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@ea0b3532345e916ae234a5bd4142036fae600bf3/Icons/connexion_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@26e2f1f27444590beac15ec871b273a6b1398b9c/Icons/connexion_icon.png</iconUrl>
     <copyright>©2002-2012 OCLC Online Computer Library Center, Inc.</copyright>
     <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/connexion/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

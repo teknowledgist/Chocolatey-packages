@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qcad</id>
     <version>3.22.0.20190322</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/QCAD</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qcad</packageSourceUrl>
     <owners>Teknowledgist,petervbeck</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>QCAD Professional (Trial)</title>
