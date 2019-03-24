@@ -1,0 +1,10 @@
+﻿From: http://www.whitsoftdev.com/help/about.php
+
+LICENSE
+
+Unless clearly stated otherwise, all WhitSoft programs are freeware, and 
+as such are freely distributable. The one condition is that the program 
+file itself must not be modified from its original form; however, it may 
+be packaged or bundled with other software. If you are distributing a 
+WhitSoft program, I'd appreciate a short email and a copy of the 
+distributed package if possible.

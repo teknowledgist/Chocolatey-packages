@@ -1,0 +1,10 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The Power Dimmer zip file can be downloaded from its home site:
+  http://www.whitsoftdev.com/powerdimmer/
+  
+Direct Download:
+URL      : http://www.whitsoftdev.com/files/powerdimmer.zip
+Checksum : 427F8340D3BACA57989DEBA2311C5B5D0500E720B8A351D92AD56B66AA95A32B
