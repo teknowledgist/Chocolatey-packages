@@ -3,11 +3,14 @@ import-module au
 $Release = 'https://sourceforge.net/projects/jmol/'
 
 function global:au_GetLatest {
+   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
    $download_page = Invoke-WebRequest -Uri $Release
 
-   $version = ($download_page.links |
+   $versionstring = ($download_page.links |
                  Where-Object {$_.href -match 'latest'} | 
-                 Select-Object -ExpandProperty title) -replace '^[^0-9]*-([0-9.]*)-.*','$1'
+                 Select-Object -ExpandProperty title)
+   $version = ($versionstring -replace '^[^0-9]*-([0-9.]+).*','$1').trim('.')
+
    $url = $Release + "files/Jmol-$Version-binary.zip"
 
    $ReleaseNotes = $Release + 'files/Jmol/Version%20' + 

@@ -8,7 +8,7 @@ function global:au_GetLatest {
    $download_page -match "^7\.[0-9]+\.[0-9]+"
    
    $version = $Matches[0]
-   Write-Warning ("Chocolatey and AU calculate the MarcEdit checksum before it is fully downloaded.\n" +
+   Write-Warning ("Chocolatey and AU calculate the MarcEdit checksum before it is fully downloaded.`n" +
                   "It must be manually downloaded and checksums entered into 'VERIFICATION.txt'.")
                   
    return @{ 
@@ -22,9 +22,9 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
     @{
         "tools\VERIFICATION.txt" = @{
-            "(^Version\s*: )(.*)"      = "`$1$($Latest.Version)"
-            "(^x86 Checksum\s*: )(.*)" = "`$1$($Latest.Checksum32)"
-            "(^x64 Checksum\s*: )(.*)" = "`$1$($Latest.Checksum64)"
+            "(^Version\s*: )(.*)"    = "`$1$($Latest.Version)"
+            "(^x86 SHA256\s*: )(.*)" = "`$1$($Latest.Checksum32)"
+            "(^x64 SHA256\s*: )(.*)" = "`$1$($Latest.Checksum64)"
         }
     }
 }

@@ -2,18 +2,23 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
-The current version of MarcEdit can be downloaded from the official site:
+All versions of MarcEdit can be downloaded from the official site:
    https://marcedit.reeset.net/downloads
-by selecting the correct version for your operating system.
+by selecting the correct build for your operating system.
 
 Direct download:
-Version      : 7.1.120
-x86 URL      : https://marcedit.reeset.net/software/marcedit7/MarcEdit_Setup32Admin.msi
-x86 CheckSum : 8A96D9F3D9CCBCA2A885D3E1B52A7312549BBBD62DBC6D7D66E3B4958E1E8073
-x64 URL      : https://marcedit.reeset.net/software/marcedit7/MarcEdit_Setup64Admin.msi
-x64 CheckSum : 886EE4FC55D18A464A8672746108CA86F4F71A7184EE68DDBD22FAD78FCDFAED
+Version    : 7.1.137
+x86 URL    : https://marcedit.reeset.net/software/marcedit7/MarcEdit_Setup32Admin.msi
+x86 SHA256 : 3896DEFBD56BA0228A39686ADCCB49ED7130611B43081DF1734A1087B6CB61C2
+x64 URL    : https://marcedit.reeset.net/software/marcedit7/MarcEdit_Setup64Admin.msi
+x64 SHA256 : 3A52585776A8EB239E20A9762BF50D0536B6C3E4B7A753B92DA019B760E7DFC2
 
-Note the URLs for the latest version is always the same.  Previous versions
-can be found in the archives:
+Note the URLs for the latest version are always the same.  Previous versions
+can be found in the archives by date, not version:
+   https://marcedit.reeset.net/software/marcedit7/archive/
 
-https://marcedit.reeset.net/software/marcedit7/archive/
+However, the dates on the folders correspond to the release date of the 
+*next* version.  Thus, the folders contain the version released *before*
+the date.  The dates of releases can be seen here:
+   https://marcedit.reeset.net/software/update7.txt
+   

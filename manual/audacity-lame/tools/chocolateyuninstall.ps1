@@ -4,7 +4,7 @@ If (Get-OSArchitectureWidth -Compare 64) {
 }
 $RegPath = "HKLM:\SOFTWARE$RegXtra\Lame For Audacity"
 
-if (Test-Path $RegPath) {
-   Remove-Item $RegPath -Recurse -Force
+if (Test-Path "$RegPath") {
+   Remove-Item "$RegPath" -Recurse -Force
 }
 

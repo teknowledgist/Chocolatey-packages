@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>sketchup</id>
-    <version>2017.2.2555</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/sketchup</packageSourceUrl>
+    <version>2017.2.2555.20190408</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/sketchup</packageSourceUrl>
     <owners>teknowledgist dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>SketchUp Make/Pro</title>
+    <title>SketchUp Make</title>
     <authors>Trimble Inc.</authors>
     <projectUrl>https://www.sketchup.com/products/sketchup-make</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/sketchup_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@da79e32fe4b3b218165cbec9f0671a3d02f10a38/Icons/sketchup_icon.png</iconUrl>
     <copyright>Copyright © 2012-2018 Trimble Inc.</copyright>
     <licenseUrl>https://www.sketchup.com/license/c/sketchup</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -28,38 +28,23 @@ Whoever asked for complicated CAD software? SketchUp is hands-down the most intu
 * Share 3D models as walkthrough animations, scenes, or printouts, with realistic light and shadows. You can even print a model on a 3D printer.
 * Import files from other 3D modeling programs or tools, or export your SketchUp file for use with other popular modeling and image-editing software.
 
-#### [Hardware requirement](https://help.sketchup.com/en/sketchup/sketchup-hardware-and-software-requirements)
+## [Hardware requirement](https://help.sketchup.com/en/sketchup/sketchup-hardware-and-software-requirements)
 SketchUp v2017 no longer has software rendering of models.  It requires a 3D class video card with 1GB of memory or higher and hardware acceleration. Please ensure that the video card driver supports OpenGL version 3.0 or higher and is [up to date](https://help.sketchup.com/article/36254).
 
 "*SketchUp's performance relies heavily on the graphics card driver and its ability to support OpenGL 3.0 or higher. To test your graphics card's compatibility, please download and run the [SketchUp 2017 Checkup application](http://help.sketchup.com/en/sucheck). Historically, people have seen problems with Intel-based cards with SketchUp. We don't recommend using these graphics cards with SketchUp at this time.*"
 
 This package makes no attempt to confirm that this hardware requirement is met.
 
-#### Trial/Freeware (limited functionality)
-This package loads the Sketchup Pro installer which functions as follows:
-* &lt;=30 days: All SketchUp Pro features on a trial basis
-* &gt;30 days: On first run, user (admin) must make a choice:
-    * SketchUp Pro features expire and software becomes SketchUp Make -- a limited, non-commercial [freeware](http://help.sketchup.com/en/content/sketchup-make-and-sketchup-pro) version.
-    * [Buy a Pro license](http://www.sketchup.com/buy/sketchup-pro). 
-    
-##### Freeware Licensing Note
+###  Freeware Licensing Note
 SketchUp Make software is [licensed only for non-commercial use for your internal business purposes](https://www.sketchup.com/license/c/sketchup). Non-commercial use means that **you may not sell, rent, lease or lend the output of the Software**. Any other use requires the purchase of a SketchUp Pro license.
 
+### Package End-of-Life
+Unlike previous releases of this package, this is **not** a SketchUp Pro 2017 trial that can be licensed or reduced back to SketchUp Make.  This release of SketchUp Make is the last, installable, free version of SketchUp.  Subsequent versions of SketchUp are either Pro (commercial) or web-based and will not be built as Chocolatey Packages.  If you want SketchUp Pro 2017, [the previous version of this package](https://chocolatey.org/packages/sketchup/2017.2.2555) should still work with:  `choco install sketchup --version 2017.2.2555`
+
 #### Package Parameters
-The following package parameters can be set to [pre-populate an authorization code](https://help.sketchup.com/en/article/3000285). (Users will still have to authorize the software with a couple clicks.):
-
-* `/ActivationFile:`_&lt;path&gt;_ -- (Filepath or URL) to copy a remote ["Activation Info file"](https://help.sketchup.com/en/article/3000285). 
-* `/SN:`_&lt;Your serial number&gt;_ -- To create the activation file.  Use with `/AuthCode`.
-* `/AuthCode:`_&lt;Your authorization code&gt;_ -- To create the activation file.  Use with `/SN`.
-
 By default, this package will uninstall a 2016 version of SketchUp (if found).  If you want to have both versions installed at the same time (keeping the 2016 version), use a `/Keep` parameter.  **Note:** The 2016 version will **not** be removable via Chocolatey  after using this option.
 
-These parameters can be passed to the installer with the use of `-params`.
-Examples : 
-
-* `-params '"/SN:RA-99999999-ALR /AuthCode:ab3de21fgh /Keep"'`.
-* `-params '"/ActivationFile:http://localsite.org/activation_info.txt"'`.
-    _(note: File paths with spaces require double-double quotes around the path)_
+Example:   `choco install sketchup -params '"/Keep"'`.
     </description>
     <releaseNotes>(https://help.sketchup.com/en/article/141303)</releaseNotes>
     <dependencies>

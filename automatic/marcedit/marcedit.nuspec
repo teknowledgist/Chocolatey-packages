@@ -4,13 +4,13 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>marcedit</id>
-    <version>7.1.120</version>
+    <version>7.1.137</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/marcedit</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>MarcEdit</title>
     <authors>Terry Reese</authors>
-    <projectUrl>http://oregonstate.edu/~reeset/marcedit/html/</projectUrl>
+    <projectUrl>https://marcedit.reeset.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@d2bb8697be18709f0e785c49099028ef8fafdb71/Icons/marcedit_icon.png</iconUrl>
     <copyright>Copyright © 2007-2019 Terry Reese</copyright>
     <licenseUrl>https://marcedit.reeset.net/marcedit-end-user-license-agreement</licenseUrl>

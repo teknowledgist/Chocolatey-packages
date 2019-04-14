@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>audacity-lame</id>
-    <version>3.100</version>
+    <version>3.100.0.20190331</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/audacity-lame</packageSourceUrl>
     <owners>DigitalCardboard, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

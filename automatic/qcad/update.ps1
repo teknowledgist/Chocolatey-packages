@@ -6,11 +6,14 @@ function global:au_GetLatest {
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    $download_page = Invoke-WebRequest -Uri $Release
 
-   $url32,$url64 = $download_page.links |
-                     ? {($_.href -match '\.msi$') -and ($_.innertext -NotMatch 'CAD\/CAM')} |
-                     select -ExpandProperty href -First 2
-
-   $version = ($url64 -split '-')[1]
+   $Stub32,$Stub64 = $download_page.links |
+                     Where-Object {($_.href -match '\.msi$') -and ($_.innertext -NotMatch 'CAD\/CAM')} |
+                     Select-Object -ExpandProperty href -First 2
+   
+   $url32 = "https://www.qcad.org$Stub32"
+   $url64 = "https://www.qcad.org$Stub64"
+   
+   $version = ($stub64 -split '-')[1]
 
    return @{ 
             Version = $version
