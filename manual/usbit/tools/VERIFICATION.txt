@@ -5,12 +5,11 @@ in verifying that this package's contents are trustworthy.
 The official download location for this is:
 http://www.alexpage.de/usb-image-tool/download/
 
-However, the site appears to be down for months now.  As of the
-creation of this package, the download was still available here:
-https://web.archive.org/web/20170818085802/http://www.alexpage.de/usb-image-tool/download/
+Sometimes, the site is down.
 
 It is also available at MajorGeeks:
 http://www.majorgeeks.com/files/details/usb_image_tool.html
 
-Version:  1.74
-Checksum:  0AB56084F89754FAD3D3A8D798F860971AEE54658A876E826E3B3805DFAF3E10
+Version  :  1.76
+URL      :  https://www.alexpage.de/download/usbit/usbit.zip
+Checksum :  5226F8C8025CB2EE52B18F6541C008AFF7E891E45932E4CBF713E78B95D72B34

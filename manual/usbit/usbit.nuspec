@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>usbit</id>
-    <version>1.74</version>
+    <version>1.76</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/usbit</packageSourceUrl>
     <owners>Teknowledgist, tonigellida</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -31,10 +31,9 @@
 #### Supported devices
 USB Image Tool works with any device, that implements the USB Mass Storage protocol. This includes flash drives, card readers and a lot of other devices, like digicams, cell phones and mobile music players.
 
-#### Note
-As of the release of this package, the homepage for the USB Image Tool appears to be defunct, but it can still be seen in [the Internet Archive WayBackMachine](https://web.archive.org/web/20170901023608/http://www.alexpage.de/usb-image-tool/).  This package embeds the last known released version.
-
     </description>
+    <releaseNotes>https://www.alexpage.de/usb-image-tool/changelog/</releaseNotes>
+    <!-- =============================== -->      
     <dependencies>
       <dependency id="dotnet4.5" />
     </dependencies>

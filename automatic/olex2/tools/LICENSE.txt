@@ -1,0 +1,53 @@
+From:  http://www.olex2.org/olex2-distro/1.2/update/licence.rtf
+
+----------------
+OLEX2 
+Licence for use and distribution 
+
+If you are using Olex2, you agree to cite the program in your publications:
+
+Dolomanov, O.V.; Bourhis, L.J.; Gildea, R.J.; Howard, J.A.K.; Puschmann, H., 
+OLEX2: A complete structure solution, refinement and analysis program 
+(2009). J. Appl. Cryst., 42, 339-341.
+
+OLEX2 was developed under the EPSRC-funded open source project 
+'Crystallographic Software for the Future' (Grant No EP/C536274/1). This 
+grant was held by Durham University from 2005-2010.
+
+All continuing development is undertaken by OlexSys Ltd (www.olexsys.org)
+
+However, we keep the exclusive right to produce executables under the name 
+OLEX2. This is what is referred to in this licence agreement. OLEX2 is 
+distributed as freeware.
+
+Conditions of this license: 
+
+1. All copyrights to the OLEX2 executables are exclusively owned by the 
+authors - Oleg Dolomanov & Horst Puschmann 
+
+2. THE OLEX2 EXECUTABLES ARE DISTRIBUTED "AS IS". NO WARRANTY OF ANY KIND 
+IS EXPRESSED OR IMPLIED. YOU USE IT AT YOUR OWN RISK. THE AUTHORS WILL 
+NOT BE LIABLE FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND 
+OF LOSS WHILE USING OR MISUSING THIS SOFTWARE. 
+
+5. Installing and using the OLEX2 executables signifies acceptance of 
+these terms and conditions of the license. 
+
+6. If you disagree with any of the terms of this license you must cease 
+using the product and remove all components of the OLEX2 program from 
+your storage devices. 
+
+7. Anyone may distribute copies of the OLEX2 executables, completely 
+unaltered, without further permissions. A nominal fee for providing copies 
+of OLEX2 program to individuals or organizations can be charged. A charge 
+not exceeding £5.00 is suggested. 
+
+8. The maintenance of the the OLEX2 executables is exclusively owned by 
+the authors – Oleg Dolomanov & Horst Puschmann. 
+  
+9. There may exist add-ons as part of the OLEX2 distribution which are 
+not covered by this license.
+
+Thank you for using OLEX2. 
+ 
+Oleg Dolomanov & Horst Puschmann 
