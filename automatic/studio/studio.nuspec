@@ -11,7 +11,7 @@
     <title>Studio 2.0</title>
     <authors>BrickLink Corporation</authors>
     <projectUrl>https://studio.bricklink.com/v2/build/studio.page</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/studio_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@8788db964b96f8b059ddd7f8d47bd5eccef591e2/Icons/studio_icon.png</iconUrl>
     <copyright>Copyright © 2016 BrinkLink Corporation</copyright>
     <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/studio/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
