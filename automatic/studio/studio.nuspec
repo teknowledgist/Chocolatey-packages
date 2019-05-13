@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>studio</id>
+    <version>2.0.1.127</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/studio</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Studio 2.0</title>
+    <authors>BrickLink Corporation</authors>
+    <projectUrl>https://studio.bricklink.com/v2/build/studio.page</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/studio_icon.png</iconUrl>
+    <copyright>Copyright © 2016 BrinkLink Corporation</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/studio/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.bricklink.com/help.asp?helpID=2446</docsUrl>
+    <mailingListUrl>https://www.bricklink.com/v2/login.page?logInTo=http://forum.bricklink.com</mailingListUrl>
+    <bugTrackerUrl>https://www.bricklink.com/retract.asp</bugTrackerUrl>
+    <tags>studio studio2 bricklink lego blocks build plan model render </tags>
+    <summary>Build, render and create instructions for snap-together bricks.</summary>
+    <description>Studio is a desktop application that allows users to build LEGO models using virtual parts. Users will have the freedom to build whatever they want with any part they want. By being integrated with the BrickLink catalog, Studio can do things like showing you what part colors are unavailable and letting you keep track of part costs. Studio also makes it easy to turn a finished creation into a wanted list that you can use to order through BrickLink.
+
+![Batmobile](https://static.bricklink.com/renovate/img/studio-landing/1989-batmobile.gif)
+
+* **Intuitive and easy building** -- Watch as your bricks clutch, hinge, and clip to each other through our snap-to functionality. Compatible connections are detected, allowing you to assemble parts quickly.
+* **Convenient stability check** -- Make sure your designs are stable prior to having them in person. Studio 2.0 offers physical stability check to help you build more stable designs. 
+* **Photorealistic rederer** -- When your designs need that icing on the cake, the photorealistic renderer will export breathtaking, exceptional quality images for your creations. With just a few clicks, your designs never looked more vivid.
+* **Integrated instructions maker** -- Creating building instructions just got easier! Studio 2.0 offers an in-app instructions maker that helps you create custom instructions for your designs. From editing steps to designing pages, you can do it all.
+* **Integrated with BrickLink** -- Studio 2.0 supports direct integration with BrickLink’s catalog, marketplace, and gallery. You can check parts information, order your designs, and browse others’ designs to get inspired.
+
+    </description>
+    <releaseNotes>[Bottome of this page](https://studio.bricklink.com/v2/build/studio.page)</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

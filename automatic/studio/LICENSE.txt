@@ -1,0 +1,71 @@
+		SOFTWARE LICENSE AGREEMENT
+
+THIS SOFTWARE LICENSE AGREEMENT IS A LEGAL AGREEMENT BETWEEN BRICKLINK CORPORATION ("BRICKLINK") AND YOU, THE LICENSEE.  PLEASE READ THIS AGREEMENT CAREFULLY BEFORE DOWNLOADING AND INSTALLING OR USING STUD.IO SOFTWARE ("STUD.IO").  By DOWNLOADING, INSTALLING OR USING STUD.IO, YOU ACKNOWLEDGE THAT YOU HAVE READ THIS AGREEMENT, UNDERSTAND IT, AND AGREE WITH ALL OF ITS TERMS AND CONDITIONS.  IF YOU DO NOT AGREE WITH ALL TERMS AND CONDITIONS OF THIS AGREEMENT, DO NOT USE THE SOFTWARE.
+
+The STUD.IO is copyrighted to BRICKLINK and it is made available to Licensee under this Agreement for testing purposes only, it is not sold to Licensee and should not be used in production environments.
+
+By installing, copying or otherwise using the STUD.IO, Licensee is considered to have read and Licensee agrees to be bound by the terms of this Agreement. If Licensee is not willing to be bound by the terms of this Agreement, do not install, copy or use the STUD.IO. 
+
+1. Beta Disclaimer 
+
+THE BETA SOFTWARE LICENSED HEREUNDER IS STILL IN TESTING PHASE AND IS PROVIDED ON AN "AS IS" AND "AS AVAILABLE" BASIS AND IS BELIEVED TO CONTAIN DEFECTS AND A PRIMARY PURPOSE OF THIS BETA TESTING LICENSE IS TO OBTAIN FEEDBACK ON SOFTWARE PERFORMANCE AND THE IDENTIFICATION OF DEFECTS. LICENSEE IS ADVISED TO SAFEGUARD IMPORTANT DATA, TO USE CAUTION AND NOT TO RELY IN ANY WAY ON THE CORRECT FUNCTIONING OR PERFORMANCE OF THE STUD.IO AND/OR ACCOMPANYING MATERIALS. 
+
+2. Feedback 
+
+2.1. It is expressly understood, acknowledged and agreed that Licensee shall, regardless of whether or not formally requested to do, provide to BRICKLINK reasonable suggestions, comments and feedback regarding the STUD.IO, including but not limited to usability, bug reports and test results (collectively, "Feedback"). If Licensee provides such Feedback to BRICKLINK, Licensee shall grant BRICKLINK the following worldwide, non-exclusive, perpetual, irrevocable, royalty free, fully paid up rights: 
+
+ to make, use, copy, modify, sell, distribute, sub-license, and create derivative works of, the Feedback as part of any BRICKLINK product, technology, service, specification or other documentation (individually and collectively, "BRICKLINK Products"); 
+ to publicly perform or display, import, broadcast, transmit, distribute, license, offer to sell, and sell, rent, lease or lend copies of the Feedback (and derivative works thereof) as part of any BRICKLINK Product; 
+ solely with respect to Licensee's copyright and trade secret rights, to sublicense to third parties the foregoing rights, including the right to sublicense to further third parties; and 
+ to sublicense to third parties any claims of any patents owned or licensable by Licensee that are necessarily infringed by a third party product, technology or service that uses, interfaces, interoperates or communicates with the feedback or portion thereof incorporated into an BRICKLINK Product, technology or service. 
+
+2.2. Further, Licensee warrants that its Feedback is not subject to any license terms that would purport to require BRICKLINK to comply with any additional obligations with respect to any BRICKLINK Products that incorporate any Feedback. 
+
+2.3. Should Licensee encounter any bugs, glitches, lack of functionality or other problems on the website, please let BRICKLINK know immediately so it can rectified accordingly. Licensee can submit its requests and issues to studio@bricklink.com. Licensee¡¯s help in this regard is greatly appreciated.
+
+3. Grant of License 
+
+Subject to the terms and conditions of this Agreement, BRICKLINK hereby grants to Licensee a non-exclusive, non-transferable license (without the right to sublicense) (i) to use the STUD.IO in accordance with, if any, the Documentation solely for purposes of internal testing and evaluation, and (ii) to copy STUD.IO for archival or backup purposes, provided that all titles and trademarks, copyright, and restricted rights notices are reproduced on such copies and provided that only one copy of the STUD.IO may be used at a time.
+
+4. Restrictions on Grant 
+
+Except as otherwise specifically permitted in this Agreement, Licensee may not: 
+
+ modify or create any derivative works of any STUD.IO or documentation, including - without limitation - translation or localization; 
+ copy the STUD.IO except as provided in this Agreement or elsewhere by BRICKLINK; 
+ separate STUD.IO, which is licensed as a single product, into its component parts; 
+ reverse engineer, decompile, or disassemble or otherwise attempt to derive the source code for any Product of the STUD.IO (except to the extent applicable laws specifically prohibit such restriction); 
+ redistribute, encumber, sell, rent, lease, sublicense, or otherwise transfer rights to any Software. Licensee may NOT transfer the STUD.IO under any circumstances; 
+ remove or alter any trademark, logo, copyright or other proprietary notices, legends, symbols or labels in the BRICKLINK Product(s); or 
+
+5. STUD.IO Product Support 
+
+BRICKLINK is under no obligation i) to provide any technical support under the terms of this license, ii) to continue to develop, productize, support, repair, offer for sale or in any other way continue to provide or develop STUD.IO either to Licensee or to any other party, and iii) provides no assurance that any specific errors or discrepancies in the STUD.IO will be corrected.
+
+6. Ownership and Copyright of User-Generated Content
+
+By uploading any Licensee-generated content to bricklink.com website ("Site"), Licensee acknowleges that Licnsee has read Terms of Service of the Site, understands it, and agrees with all of its terms and conditions. The applicable and most current version of the Terms of Service of the Site is at Licensee¡¯s disposal on https://www.bricklink.com/help.asp?helpID=1919.
+
+7. Term of this Agreement 
+
+This License is effective until terminated.  Licensee may terminate this License at any time by destroying the Software and data.  BRICKLINK can terminate this License if Licensee fails to comply with any provision of this License.
+
+8. Disclaimer of Warranties 
+
+8.1. THE STUD.IO AND, IF ANY, DOCUMENTATION ARE LICENSED "AS IS", AND BRICKLINK DISCLAIMS ANY AND ALL OTHER WARRANTIES OF ANY KIND, WHETHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, SUITABILITY, USABILITY OR FITNESS FOR A PARTICULAR PURPOSE, MERCHANTABLE QUALITY, TITLE OR NONINFRINGEMENT OF THIRD PARTY RIGHTS, TO THE EXTENT AUTHORIZED BY LAW.
+ 
+8.2. WITHOUT LIMITATION OF THE FOREGOING, BRICKLINK EXPRESSLY DOES NOT WARRANT THAT THE STUD.IO WILL MEET LICENSEE¡¯S REQUIREMENTS OR THAT OPERATION OF THE STUD.IO WILL BE UNINTERRUPTED OR ERROR FREE. THE STUD.IO IS BEING PROVIDED TO LICENSEE "AS IS" WITHOUT WARRANTY OF ANY KIND. LICENSEE ASSUMES ALL RESPONSIBILITY FOR SELECTING THE STUD.IO TO ACHIEVE ITS INTENDED RESULTS, AND FOR THE RESULTS OBTAINED FROM ITS USE OF THE STUD.IO. LICENSEE SHALL BEAR THE ENTIRE RISK AS TO THE QUALITY AND THE PERFORMANCE OF THE STUD.IO. 
+
+8.3. ANY DOWNLOAD AND USE OF THIS STUD.IO PROGRAM PRODUCT IS DONE AT THE LICENSEE¡¯S OWN RISK AND THE LICENSEE WILL BE SOLELY RESPONSIBLE FOR ANY DAMAGE TO - WITHOUT LIMITATION - ANY COMPUTER SYSTEM OR LOSS OF DATA THAT RESULTS FROM SUCH ACTIVITIES. SHOULD IT PROVE DEFECTIVE, LICENSEE ASSUMES THE COST OF ALL NECESSARY SERVICING, REPAIR AND/OR CORRECTION. IT IS THEREFORE UP TO THE LICENSEE TO TAKE ADEQUATE PRECAUTION AGAINST POSSIBLE DAMAGES RESULTING FROM THIS STUD.IO SOFTWARE IN BETA TESTING SHOULD FOR EXAMPLE NOT BE USED ON SENSITIVE AND/OR VALUABLE DATA AND SHOULD NOT BE USED IN PRODUCTION SYSTEMS.
+
+9. Limit of Liability 
+
+IN NO EVENT WILL BRICKLINK BE LIABLE TO LICENSEE OR ANY PARTY FOR - WITHOUT LIMITATION - ANY LOSS OF USE; INTERRUPTION OF BUSINESS; OR ANY DIRECT; INDIRECT; SPECIAL; INCIDENTAL; EXEMPLARY OR PUNITIVE OR CONSEQUENTIAL DAMAGES OF ANY KIND (INCLUDING LOST PROFITS) REGARDLESS OF THE FORM OF ACTION WHETHER IN CONTRACT; TORT (INCLUDING NEGLIGENCE); STRICT PRODUCT LIABILITY OR OTHERWISE; WHETHER ARISING OUT OF THE USE OR INABILITY TO USE THE STUD.IO (INCLUDING BUT NOT LIMITED TO LOSS OF DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY LICENSEE OR THIRD PARTIES OR A FAILURE OF THE STUD.IO TO OPERATE WITH ANY OTHER PROGRAMS), EVEN IF BRICKLINK HAS BEEN ADVISED OF THE POSSIBILITY OF SUCH DAMAGES.
+ 
+10. Governing Law
+
+This agreement together with all our policies are governed by and construed in accordance with the laws of the State of California without respect to its conflict of laws principles.  In the event any legal action becomes necessary to enforce or interpret the terms of this Agreement, the parties agree that such action will be brought in the state or federal courts located in the State of California, and the parties hereby submit to the jurisdiction of said courts.  If any provision of this agreement or policies shall be unlawful, void or for any reason unenforceable, then that provision shall be deemed severable from this agreement and shall not affect the validity and enforceability of any remaining provisions.
+
+11. Entire Agreement 
+
+This Agreement is a legal agreement and constitutes the complete and exclusive agreement between Licensee and BRICKLINK with respect to the subject matter hereof, and supersedes all prior or contemporaneous oral or written communications, proposals, representations, understandings, or agreements not specifically incorporated herein. This Agreement may not be amended except in a writing duly signed by Licensee and an authorized representative of BRICKLINK. 

@@ -4,33 +4,37 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>draftsight</id>
-    <version>2018.03</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/draftsight</packageSourceUrl>
+    <version>2019.00</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/draftsight</packageSourceUrl>
     <owners>Teknowledgist, BasicTheProgram</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Draftsight 2018 SP3</title>
+    <title>Draftsight 2019 SP0 (trialware)</title>
     <authors>Dassault Systèmes</authors>
     <projectUrl>https://www.3ds.com/products-services/draftsight-cad-software/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/draftsight2018_icon.png</iconUrl>
-    <copyright>Copyright © 2016 Dassault Systèmes</copyright>
+    <copyright>Copyright © 2019 Dassault Systèmes</copyright>
     <licenseUrl>https://www.3ds.com/products-services/draftsight-cad-software/eula</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <mailingListUrl>https://www.3ds.com/products-services/draftsight-cad-software/community/</mailingListUrl>
-    <tags>DraftSight 2D CAD drafting admin</tags>
+    <tags>DraftSight 2D CAD drafting trialware</tags>
     <summary>A professional-grade 2D design and drafting solution.</summary>
     <description>DraftSight is a professional-grade 2D design and drafting solution that lets you create, edit, view and markup any kind of 2D drawing.
 Its familiar user interface makes it easy to transition from other comparable CAD applications.
 
-* [List of features here](https://www.3ds.com/products-services/draftsight-cad-software/features/)
-* [System Requirements](https:\\www.3ds.com\fileadmin/PRODUCTS-SERVICES/DRAFTSIGHT/PDF/DraftSight_2018_SP3_System_Requirements_v1.pdf)
+* [Draftsight 2019 Feature Matrix](https://www.draftsight.com/sites/default/files/multisite/wp-fwk-ms-draftsight/2019-02/DraftSight%202019%20Feature%20Matrix_v1.pdf)
+* [System Requirements](https://www.draftsight.com/sites/default/files/multisite/wp-fwk-ms-draftsight/2019-02/DraftSight%202019%20SP0%20System%20Requirements_v1.pdf)
+* [Draftsight 2019 FAQ](https://www.draftsight.com/sites/default/files/multisite/wp-fwk-ms-draftsight/2019-02/DraftSight2019%20FAQ_v1.pdf)
 
-### Registration Required
-DraftSight will work for 30 days before requiring free, per-user registration.  [Professional](https://www.3ds.com/products-services/draftsight-cad-software/professional-features/) and [enterprise](http://www.solidworks.com/sw/purchase/draftsight-get-a-quote.htm?scid=ext_DraftSight_page) licenses are available.
-[--](https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/automatic/draftsight/bypass.png)
+## Trialware
+* DraftSight 2019 for Windows® is [offered in paid versions only](https://www.draftsight.com/?int_campaign=3DS_Home_Offerings).
+* All free versions of DraftSight (2018 or earlier) will cease to run after 12/31/2019.
+    
+This package will install a trial that will work for 30 days before requiring registration.  
 
     </description>
-    <releaseNotes>https:\\www.3ds.com\fileadmin/PRODUCTS-SERVICES/DRAFTSIGHT/PDF/DraftSight_2018_SP3_Release_Notes_v1.pdf</releaseNotes>
+    <releaseNotes>https://www.draftsight.com/?int_campaign=3DS_Download_ReleaseNotes</releaseNotes>
     <dependencies> 
+      <dependency id="vcredist2015" version="14.0"/>
     </dependencies>
   </metadata>
   <files>
