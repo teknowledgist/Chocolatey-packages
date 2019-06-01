@@ -19,7 +19,7 @@ function global:au_GetLatest {
             Version = $version
             URL32 = $url32
             URL64 = $url64
-           }
+   }
 }
 
 

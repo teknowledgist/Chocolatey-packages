@@ -16,6 +16,14 @@ $InstallArgs = @{
    ChecksumType = 'sha256'
    silentArgs = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
    validExitCodes = @(0)
+   Options = @{
+               Headers = @{
+                  'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
+                  referer = 'https://www.qcad.org/en/qcad-downloads-trial'
+                  Cookie = 'c08dfa11cab8b59437d064060d5b637a=g954hai1eprq5iq2bdoe68gc15'
+               }
+   }
+
 }
 
 Install-ChocolateyPackage @InstallArgs

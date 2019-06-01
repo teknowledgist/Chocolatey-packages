@@ -8,9 +8,7 @@ function global:au_GetLatest {
    $download_page -match "^7\.[0-9]+\.[0-9]+"
    
    $version = $Matches[0]
-   Write-Warning ("Chocolatey and AU calculate the MarcEdit checksum before it is fully downloaded.`n" +
-                  "It must be manually downloaded and checksums entered into 'VERIFICATION.txt'.")
-                  
+
    return @{ 
       Version = $version
       URL32 = 'https://marcedit.reeset.net/software/marcedit7/MarcEdit_Setup32Admin.msi'
@@ -27,6 +25,11 @@ function global:au_SearchReplace {
             "(^x64 SHA256\s*: )(.*)" = "`$1$($Latest.Checksum64)"
         }
     }
+}
+
+function global:au_BeforeUpdate() { 
+   Write-Warning ("Chocolatey and AU calculate the MarcEdit checksum before it is fully downloaded.`n" +
+                  "It must be manually downloaded and checksums entered into 'VERIFICATION.txt'.")
 }
 
 Update-Package
