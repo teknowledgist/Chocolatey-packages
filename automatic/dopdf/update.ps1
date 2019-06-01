@@ -4,7 +4,7 @@ function global:au_GetLatest {
    $HomeURL = 'http://www.dopdf.com/'
    $page = Invoke-WebRequest -Uri $HomeURL
 
-   $null = $page.allelements |? {($_.tagname -eq "p") -and ($_.innertext -match '\d+\.\d+\.\d+')}
+   $null = $page.allelements |? {($_.tagname -eq "span") -and ($_.innertext -match '\d+\.\d+\.\d+')}
 
    $version = $Matches[0]
 

@@ -18,6 +18,7 @@ function global:au_GetLatest {
 
 
 function global:au_SearchReplace {
+   Start-Sleep -Seconds 180
     @{
         "tools\VERIFICATION.txt" = @{
             "(^Version\s*: )(.*)"    = "`$1$($Latest.Version)"

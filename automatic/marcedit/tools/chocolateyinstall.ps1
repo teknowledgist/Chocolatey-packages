@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$Installers = Get-ChildItem $toolsDir -filter "*.msi"
+$Installers = Get-ChildItem $toolsDir -filter '*.msi'
 
 $packageArgs = @{
    packageName   = $env:chocolateyPackageName

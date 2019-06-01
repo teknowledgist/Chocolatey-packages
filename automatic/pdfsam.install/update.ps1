@@ -28,9 +28,14 @@ function global:au_SearchReplace {
    }
 }
 
-function global:au_BeforeUpdate() { 
-   Write-host "Downloading PDFsam $($Latest.Version) installer file"
-   Get-RemoteFiles -Purge -NoSuffix
-}
+# A few things should only be done if the script is run directly (i.e. not "dot sourced")
+#   (It is dot sourced in the meta-package.)
+if ($MyInvocation.InvocationName -ne '.') { 
+   function global:au_BeforeUpdate() { 
+      Write-host "Downloading PDFsam $($Latest.Version) installer file"
+      Get-RemoteFiles -Purge -NoSuffix
+   }
 
-update -ChecksumFor none
+   update -ChecksumFor none
+   if ($global:au_old_force -is [bool]) { $global:au_force = $global:au_old_force }
+}
