@@ -18,19 +18,33 @@ function global:au_GetLatest {
 
 
 function global:au_SearchReplace {
-   Start-Sleep -Seconds 180
-    @{
-        "tools\VERIFICATION.txt" = @{
-            "(^Version\s*: )(.*)"    = "`$1$($Latest.Version)"
-            "(^x86 SHA256\s*: )(.*)" = "`$1$($Latest.Checksum32)"
-            "(^x64 SHA256\s*: )(.*)" = "`$1$($Latest.Checksum64)"
-        }
-    }
+   @{
+      "tools\VERIFICATION.txt" = @{
+         "(^Version\s*:)(.*)"    = "`$1 $($Latest.Version)"
+         "(^x86 SHA256\s*:)(.*)" = "`$1 $($Latest.Checksum32)"
+         "(^x64 SHA256\s*:)(.*)" = "`$1 $($Latest.Checksum64)"
+      }
+   }
 }
 
 function global:au_BeforeUpdate() { 
-   Write-Warning ("Chocolatey and AU calculate the MarcEdit checksum before it is fully downloaded.`n" +
-                  "It must be manually downloaded and checksums entered into 'VERIFICATION.txt'.")
+   #   Write-Warning ("Chocolatey and AU calculate the MarcEdit checksum before it is fully downloaded.`n" +
+   #   "It must be manually downloaded and checksums entered into 'VERIFICATION.txt'.")
+   $toolsDir = Resolve-Path tools
+   $OldInstallers = Get-ChildItem $toolsDir -filter '*.msi'
+   Foreach ($msi in $OldInstallers) {Remove-Item $msi.FullName}
+   
+   Get-RemoteFiles -NoSuffix
+   $Installers = Get-ChildItem $toolsDir -filter '*.msi'
+
+   $checksumExe = Join-Path "$env:ChocolateyInstall" 'tools\checksum.exe'
+   
+   $Latest.Checksum32 = Get-FileHash $(($Installers | 
+                           Where-Object {$_.basename -match '32'}).FullName) -Algorithm SHA256 | 
+                           Select-Object -ExpandProperty Hash
+   $Latest.Checksum64 = Get-FileHash $(($Installers | 
+                           Where-Object {$_.basename -match '64'}).FullName) -Algorithm SHA256 |
+                           Select-Object -ExpandProperty Hash
 }
 
-Update-Package
+Update-Package -ChecksumFor none

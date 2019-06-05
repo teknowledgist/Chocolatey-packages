@@ -42,7 +42,7 @@ MarcEdit edits more than simply MARC records and includes a very rich feature se
     <releaseNotes>https://marcedit.reeset.net/software/update7.txt</releaseNotes>
     <!-- =============================== -->      
     <dependencies>
-      <dependency id="DotNet4.6.1" version="4.6"/>
+      <dependency id="DotNet4.6.1" version="4.6" />
     </dependencies>
   </metadata>
   <files>
