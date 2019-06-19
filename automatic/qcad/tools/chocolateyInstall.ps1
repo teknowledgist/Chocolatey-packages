@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'qcad'
-$url32 = 'http://www.qcad.org//archives/qcad/qcad-3.22.0-trial-win32-installer.msi'
-$url64 = 'http://www.qcad.org//archives/qcad/qcad-3.22.0-trial-win64-installer.msi'
-$checkSum32 = 'c4dcc0d67484391901ebc7fa54416d6d42087019b32a3d4cad5ab9c0fe79a32c'
-$checkSum64 = 'fbb89c29825e14cac1fa21fd267c00c0c697f6d698ef7bcf339c7ae210a73bc4'
+$url32 = 'http://www.qcad.org//archives/qcad/qcad-3.22.1-trial-win32-installer.msi'
+$url64 = 'https://www.qcad.org/archives/qcad/qcad-3.22.1-trial-win64-installer.msi'
+$checkSum32 = 'E18A244600537459D52376A87AEA3971953DB561B340431705EE336FDA59DBCF'
+$checkSum64 = '8D7BF9FA6E51465F6ECBEA7976FB28DF96D7F08E99A7FB26372B9858CF46DCD5'
 
 $InstallArgs = @{
    packageName = $env:ChocolateyPackageName
@@ -16,14 +16,6 @@ $InstallArgs = @{
    ChecksumType = 'sha256'
    silentArgs = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
    validExitCodes = @(0)
-   Options = @{
-               Headers = @{
-                  'User-Agent' = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:66.0) Gecko/20100101 Firefox/66.0'
-                  referer = 'https://www.qcad.org/en/qcad-downloads-trial'
-                  Cookie = 'c08dfa11cab8b59437d064060d5b637a=g954hai1eprq5iq2bdoe68gc15'
-               }
-   }
-
 }
 
 Install-ChocolateyPackage @InstallArgs
