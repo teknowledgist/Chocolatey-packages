@@ -41,7 +41,7 @@ iCopy can be run as a Windows application, but its functionality can entirely be
     </description>
     <releaseNotes>http://icopy.sourceforge.net/category/rel/</releaseNotes>
     <dependencies>
-      <dependency id="icopy.install" />
+      <dependency id="icopy.install" version="[1.6.5]" />
     </dependencies>
   </metadata>
   <files>
