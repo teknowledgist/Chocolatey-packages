@@ -1,0 +1,55 @@
+SpineOMatic v.7.0 License Agreement
+
+Trustees of Boston College (“BC”) is making this Software available for free 
+under this agreement as a public service.  BC grants to you a non-exclusive, 
+royalty-free license, subject to all the terms and conditions of this agreement, 
+to use and copy the SpineOMatic software (the “Software”) solely for 
+non-commercial, internal purposes.
+
+BC retains all intellectual property and proprietary rights in and to the 
+Software.  You may not modify or remove from the Software any copyright or 
+proprietary notice, license agreement, or any disclaimer or documentation that 
+accompanies the Software.  You may not reverse engineer, decompile, disassemble 
+or otherwise attempt to derive the source code for the Software.  The name 
+“SpineOMatic” is proprietary and you may not use any name, trademark, or logo of 
+BC without the prior written permission of BC in each case.
+
+You are solely responsible for the selection, management, control and use of the 
+Software and the outcomes of such use.  The Software is provided on an “AS IS” 
+basis.  BC makes no warranties of any kind, express or implied, with respect to 
+the Software, and expressly disclaims all warranties of title, non-infringement, 
+merchantability and fitness for a particular purpose.
+
+In no event shall BC or its officers, trustees, employees or agents, be liable 
+for any direct, indirect, special, incidental, punitive or consequential damages 
+(including without limitation damages resulting from loss of use, loss of data, 
+loss of profits or loss of business) arising out of the use or the inability to 
+use the Software.
+
+You agree that you are solely responsible for complying with all laws applicable 
+to your access and use of this Software, including, without limitation, 
+compliance with any applicable export control law.
+
+You hereby release, and agree to indemnify, defend, and hold harmless BC and its 
+trustees, officers, employees and agents (“Indemnities”) against any liability, 
+damage, loss, or expense (including reasonable attorneys’ fees and expenses) 
+incurred by or imposed upon any of the Indemnities in connection with any claims, 
+demands or judgments arising out of any theory of liability (including without 
+limitation actions in tort, warranty, or strict liability and regardless of 
+whether such action has any factual basis) in connection with your use of the 
+Software.
+
+In the event that you breach this agreement, BC may terminate the license, 
+effective immediately upon notice to you.  You agree that this license shall be 
+governed by the law of the Commonwealth of Massachusetts, without regard to its 
+conflict of laws principles and without regard to the United Nations Convention 
+on Contracts for the International Sale of Goods.  The English language version 
+of this agreement shall be the official version of this agreement for all 
+purposes.  You agree that the exclusive venue and jurisdiction for any dispute 
+arising under this agreement will be the courts located in and near Boston, 
+Massachusetts.  This agreement contains the entire understanding between BC and 
+you.  If any provision of this agreement is held to be invalid or unenforceable, 
+it is the intent of the parties that the provision shall be deemed modified as 
+little as necessary to be enforceable and preserve its intent, and that all 
+other provisions of this agreement shall remain fully valid and binding.
+
