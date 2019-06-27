@@ -31,7 +31,7 @@
 * **Integrated with BrickLink** -- Studio 2.0 supports direct integration with BrickLink’s catalog, marketplace, and gallery. You can check parts information, order your designs, and browse others’ designs to get inspired.
 
     </description>
-    <releaseNotes>[Bottome of this page](https://studio.bricklink.com/v2/build/studio.page)</releaseNotes>
+    <releaseNotes>[Bottom of this page](https://studio.bricklink.com/v2/build/studio.page)</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
