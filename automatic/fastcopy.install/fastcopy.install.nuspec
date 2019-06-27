@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy.install</id>
-    <version>3.70</version>
+    <version>3.81</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy.install</packageSourceUrl>
     <owners>Teknowledgist, dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

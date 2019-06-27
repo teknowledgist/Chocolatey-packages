@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy</id>
-    <version>3.70</version>
+    <version>3.81</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy</packageSourceUrl>
     <owners>Teknowledgist, dtgm, MarkJohnson</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -42,7 +42,7 @@ You can modify this software, because all source code has been opened to the pub
     <releaseNotes>https://fastcopy.jp/help/fastcopy_eng.htm#history</releaseNotes>
     <language>en-US</language>
     <dependencies>
-      <dependency id="fastcopy.portable" version="[3.70]" />
+      <dependency id="fastcopy.portable" version="[3.81]" />
     </dependencies>
   </metadata>
   <files>

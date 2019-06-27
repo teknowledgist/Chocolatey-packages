@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pdfsam.install</id>
-    <version>4.0.1</version>
+    <version>4.0.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdfsam.install</packageSourceUrl>
     <owners>Teknowledgist, CDuv</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -34,8 +34,8 @@
     </description>
     <releaseNotes>https://github.com/torakiki/pdfsam/releases/latest</releaseNotes>
     <dependencies>
-      <dependency id="jre8" version="8.0" />
-    </dependencies>
+<!--      <dependency id="jre8" version="8.0" />
+-->    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

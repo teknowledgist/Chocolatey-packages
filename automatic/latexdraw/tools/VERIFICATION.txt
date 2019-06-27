@@ -6,6 +6,6 @@ LaTeXDraw can be downloaded by following the "Download" link at the top
 of the homepage:  http://latexdraw.sourceforge.net/
 
 Direct Download:
-Version: 3.3.8
-URL: https://sourceforge.net/projects/latexdraw/files/latexdraw/3.3.8/LaTeXDraw-3.3.8-bin.zip
-CheckSum: 9929C75388D3A96298A14C321CA7A17905D78B20A947133418DD5BB4739ED01E
+Version: 3.3.9
+URL: https://sourceforge.net/projects/latexdraw/files/latexdraw/3.3.9/LaTeXDraw-3.3.9-bin.zip
+CheckSum: DDD3E5AEA13203B8F295D7033FA88F40CEDC3E32A3887A9025DF82E935CF7CEF

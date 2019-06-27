@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>studio</id>
-    <version>2.0.1.127</version>
+    <version>2.0.6.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/studio</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -31,7 +31,7 @@
 * **Integrated with BrickLink** -- Studio 2.0 supports direct integration with BrickLink’s catalog, marketplace, and gallery. You can check parts information, order your designs, and browse others’ designs to get inspired.
 
     </description>
-    <releaseNotes>[Bottome of this page](https://studio.bricklink.com/v2/build/studio.page)</releaseNotes>
+    <releaseNotes>[Bottom of this page](https://studio.bricklink.com/v2/build/studio.page)</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
