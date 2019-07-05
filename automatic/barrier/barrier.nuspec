@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>barrier</id>
+    <version>2.3.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/barrier</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Barrier</title>
+    <authors>Debauchee Open Source Group</authors>
+    <projectUrl>https://github.com/debauchee/barrier</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@68edeeea73b92c3fb30275a45b41b5779b372d79/Icons/barrier_icon.png</iconUrl>
+    <copyright>Copyright (C) 2018 Debauchee Open Source Group,  
+Copyright (C) 2012-2016 Symless Ltd.,  
+Copyright (C) 2008-2014 Nick Bolton,  
+Copyright (C) 2002-2014 Chris Schoeneman</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/debauchee/barrier/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://github.com/debauchee/barrier/wiki</docsUrl>
+    <mailingListUrl>https://github.com/debauchee/barrier/issues</mailingListUrl>
+    <bugTrackerUrl>https://github.com/debauchee/barrier/issues</bugTrackerUrl>
+    <tags>attributechanger attribute timestamp touch explorer shell extension embedded</tags>
+    <summary>Eliminate the barrier between your machines.</summary>
+    <description>Barrier is KVM software that lets you easily share your mouse and keyboard between multiple computers on your desk, and it's Free and Open Source.  Just move your mouse off the edge of one computer's screen on to another.  You can even share all of your clipboards.  All you need is a network connection. Barrier is cross-platform (works on Windows, MacOS and Linux).
+    
+Barrier is forked from Symless's Synergy 1.9 codebase. Synergy is a commercialized reimplementation of the original CosmoSynergy written by Chris Schoeneman.
+
+#### What's different?
+Whereas Synergy has moved beyond its goals from the 1.x era, Barrier aims to maintain that simplicity. Barrier will let you use your keyboard and mouse from machine A to control machine B (or more). It's that simple.
+
+#### Project goals
+**Hassle-free reliability.** We are users, too. Barrier was created so that we could solve the issues we had with synergy and then share these fixes with other users.
+
+**Compatibility.** We use more than one operating system and you probably do, too. Windows, OSX, Linux, FreeBSD... Barrier should "just work". We will also have our eye on Wayland when the time comes.
+
+**Communication.** Everything we do is in the open. Our issue tracker will let you see if others are having the same problem you're having and will allow you to add additional information. You will also be able to see when progress is made and how the issue gets resolved.
+
+    </description>
+    <releaseNotes>https://github.com/debauchee/barrier/releases</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist2017" version="14.16" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

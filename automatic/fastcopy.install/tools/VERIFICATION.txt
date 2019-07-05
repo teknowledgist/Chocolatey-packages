@@ -6,7 +6,7 @@ The download files are linked from this page:  https://fastcopy.jp/en/
 
 Direct Download:
 
-Version  : 3.81
-URL      : https://dforest.watch.impress.co.jp/library/f/fastcopy/11574/FastCopy381_installer.exe
-CheckSum : 202117E81786CF48432681A9C40A72A443F8AF7953E54484EAAC33AF89AB6F5C
+Version  : 3.82
+URL      : https://dforest.watch.impress.co.jp/library/f/fastcopy/11574/FastCopy382_installer.exe
+CheckSum : 281CAE28748A04232687B683CD37F3751BB751CCD21F1DCBC63C30F5DF729131
 
