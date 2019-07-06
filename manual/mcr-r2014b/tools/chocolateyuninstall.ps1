@@ -1,27 +1,28 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿$ErrorActionPreference = 'Stop'
 
-$packageName = 'mcr-r2014b'
-$Version = '8.4'
-$softwareName = 'MATLAB Compiler Runtime ' + $Version
+$SoftwareName = "MATLAB Compiler Runtime $env:ChocolateyPackageVersion*"
 
-$RegistryLocation = 'HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall'
-$unexe = Get-ItemProperty "$RegistryLocation\*" | 
-                     Where-Object { $_.displayname -match $softwareName} |
-                     Select-Object -ExpandProperty UninstallString
+[array]$key = Get-UninstallRegistryKey -SoftwareName $SoftwareName
 
-$InstalledPath = $unexe -replace "^(.*v$($version.replace('.','')))\\.*",'$1'
-$unexe = $unexe.remove(($unexe.LastIndexOf($InstalledPath) - 1))
-
-$UninstallArgs = @{
-   packageName = $packageName
-   fileType = 'exe'
-   file = $unexe
-   silentArgs = '"' + $InstalledPath + '" -mode silent'
-   validExitCodes = @(0)
+if ($key.Count -eq 1) {
+   $UninstallArgs = @{
+      packageName    = $env:ChocolateyPackageName
+      softwareName   = $SoftwareName
+      fileType       = 'exe'
+      file           = $key[0].UninstallString -replace '(.*\.exe).*','$1'
+      silentArgs     = '"' + $key[0].InstallLocation + '" -mode silent'
+      validExitCodes = @(0)
+   }
+   Uninstall-ChocolateyPackage @UninstallArgs
+   if (Test-Path $key[0].InstallLocation) {
+      Remove-Item $key[0].InstallLocation -Recurse
+   }
+} elseif ($key.Count -eq 0) {
+   Write-Warning "$env:ChocolateyPackageName has already been uninstalled by other means."
+} elseif ($key.Count -gt 1) {
+   Write-Warning "$($key.Count) matches found!"
+   Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+   Write-Warning "Please alert package maintainer the following keys were matched:"
+   $key | % {Write-Warning "- $($_.DisplayName)"}
 }
 
-Uninstall-ChocolateyPackage @UninstallArgs
-
-if (Test-Path $InstalledPath) {
-   Remove-Item $InstalledPath -Recurse
-}

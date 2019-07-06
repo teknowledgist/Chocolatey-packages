@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$SoftwareName = "MATLAB Runtime $env:ChocolateyPackageVersion"
+$SoftwareName = "MATLAB Runtime $env:ChocolateyPackageVersion*"
 
 [array]$key = Get-UninstallRegistryKey -SoftwareName $SoftwareName
 
