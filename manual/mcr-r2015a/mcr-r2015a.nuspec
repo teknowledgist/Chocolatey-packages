@@ -20,14 +20,15 @@
     <tags>MATLAB compiler runtime math mathematics library</tags>
     <summary>Run compiled MATLAB applications or components without installing MATLAB.</summary>
     <description>MATLAB Runtime is a collection of shared libraries and code that enables the execution of compiled and packaged MATLAB applications on systems without an installed version of MATLAB.
-    
+
 #### Notes
 * The version of the MATLAB Runtime necessary to run an application is tied to the version of MATLAB used to create the application.
 * Multiple versions of the MATLAB Runtime may simultaneously exist on a target machine. This allows applications compiled with different versions of the MATLAB Runtime to execute side by side on the same machine.
 * The MATLAB Runtime Compiler is large (700MB +).  It will take some time to download and install.
     </description>
     <dependencies>
-      <dependency id="vcredist2005" /> 
+      <dependency id="vcredist2005" />
+      <dependency id="vcredist2008" />
     </dependencies>
   </metadata>
   <files>
