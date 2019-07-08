@@ -8,11 +8,11 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mcr-r2015b</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>MATLAB Compiler Runtime R2015a</title>
+    <title>MATLAB Compiler Runtime R2015b</title>
     <authors>The Mathworks, Inc.</authors>
     <projectUrl>https://www.mathworks.com/products/compiler/matlab-runtime.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/matlab_icon.png</iconUrl>
-    <copyright>Copyright 2001-2014 The MathWorks, Inc.</copyright>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@f5f5b9f6b5afc7dc7446a22954b865f21bd7d80c/Icons/matlab_icon.png</iconUrl>
+    <copyright>Copyright 2001-2015 The MathWorks, Inc.</copyright>
     <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/mcr-r2015b/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://www.mathworks.com/help/compiler/deployment-process.html</docsUrl>
