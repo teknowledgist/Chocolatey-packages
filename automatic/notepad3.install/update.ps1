@@ -1,23 +1,24 @@
 import-module au
 
 function global:au_GetLatest {
-   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-   $Release = 'https://www.rizonesoft.com/downloads/notepad3/'
-   $PageText = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   #   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+   #   $Release = 'https://www.rizonesoft.com/downloads/notepad3/'
+   #   $PageText = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $ie = New-Object -ComObject "InternetExplorer.Application"
+   $ie.silent = $true
+   $ie.Navigate("https://www.rizonesoft.com/downloads/notepad3/")
+   while($ie.ReadyState -ne 4) {start-sleep -m 100}
+   $body = $ie.Document.body.innerHTML
+   [System.Runtime.Interopservices.Marshal]::ReleaseComObject($ie)
+   Remove-Variable ie
 
-   $Link = $PageText.links | 
-               Where-Object {$_.outerhtml -match 'Notepad3.*Setup\.'} | 
-               Select-Object -First 1
-   $Version = $Link.title -replace '.* ([0-9.]+).*','$1'
-   $urlstub = $Link.outerhtml.split() | Where-Object {$_ -match '\.(exe|zip)$'}
-   
-   $filetype = $urlstub.split('.')[-1]
-   $url = "https://www.rizonesoft.com/genesis/Notepad3/$urlstub"
+   $filename = $body.split() | Where-Object {$_ -match 'setup\.exe'} | Select-Object -First 1
+   $version = $filename.split('_') | Where-Object {$_ -match '^[0-9.]+$'}
+   $url = "https://www.rizonesoft.com/shkarko/Notepad3/" + $filename 
 
    return @{ 
             Version  = $Version
             URL32    = $URL
-            FileType = $filetype
            }
 }
 
