@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>mcr-r2015b</id>
+    <version>9.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mcr-r2015b</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>MATLAB Compiler Runtime R2015a</title>
+    <authors>The Mathworks, Inc.</authors>
+    <projectUrl>https://www.mathworks.com/products/compiler/matlab-runtime.html</projectUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/matlab_icon.png</iconUrl>
+    <copyright>Copyright 2001-2014 The MathWorks, Inc.</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/mcr-r2015b/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.mathworks.com/help/compiler/deployment-process.html</docsUrl>
+    <bugTrackerUrl>https://www.mathworks.com/support/search_results.html?q=asset_type%3A%22Bug%2BReports%22+product%3A%22MATLAB+Compiler%22</bugTrackerUrl>
+    <tags>MATLAB compiler runtime math mathematics library</tags>
+    <summary>Run compiled MATLAB applications or components without installing MATLAB.</summary>
+    <description>MATLAB Runtime is a collection of shared libraries and code that enables the execution of compiled and packaged MATLAB applications on systems without an installed version of MATLAB.
+
+#### Notes
+* The version of the MATLAB Runtime necessary to run an application is tied to the version of MATLAB used to create the application.
+* Multiple versions of the MATLAB Runtime may simultaneously exist on a target machine. This allows applications compiled with different versions of the MATLAB Runtime to execute side by side on the same machine.
+* The MATLAB Runtime Compiler is large (700MB +).  It will take some time to download and install.
+    </description>
+    <dependencies>
+      <dependency id="vcredist2005" />
+      <dependency id="vcredist2008" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
