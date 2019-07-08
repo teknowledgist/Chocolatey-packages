@@ -26,7 +26,7 @@ $UnzipArgs = @{
 
 Get-ChocolateyUnzip @UnzipArgs
 
-$Installer = (Get-ChildItem $WorkSpace -Include 'setup.exe' -Recurse).fullname
+$Installer = (Get-ChildItem -Path "$WorkSpace\bin" -Include 'setup.exe' -Recurse).fullname
 
 $InstallArgs = @{
    PackageName = $env:ChocolateyPackageName
