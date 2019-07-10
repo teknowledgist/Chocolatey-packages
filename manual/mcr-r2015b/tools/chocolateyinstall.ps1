@@ -5,10 +5,10 @@ $WorkSpace = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:ChocolateyPack
 $WebFileArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = Join-Path $WorkSpace 'installer.exe'
-   Url          = 'https://www.mathworks.com/supportfiles/downloads/R2014b/deployment_files/R2014b/installers/win32/MCR_R2014b_win32_installer.exe'
-   Url64bit     = 'https://www.mathworks.com/supportfiles/downloads/R2014b/deployment_files/R2014b/installers/win64/MCR_R2014b_win64_installer.exe'
-   Checksum     = 'C3575166396F7B3F427FF5A52B99E1AD6BAD046682F04FA7DA0B5F8D1073F52C'
-   Checksum64   = '6D43AB89D71374A8F864A91DD052753743202AF0BA1B13B3245D7A31813F8979'
+   Url          = 'https://ssd.mathworks.com/supportfiles/downloads/R2015b/deployment_files/R2015b/installers/win32/MCR_R2015b_win32_installer.exe'
+   Url64bit     = 'https://ssd.mathworks.com/supportfiles/downloads/R2015b/deployment_files/R2015b/installers/win64/MCR_R2015b_win64_installer.exe'
+   Checksum     = '74593c18b69c5abc0f72eb61ce28a85240fe567fd3b22e7bc4b7dda1251986e2'
+   Checksum64   = 'dd5eb527ed16cd029cc135ca6fffc80a40d7c402d01cec7deec88641f809d30b'
    ChecksumType = 'sha256'
    GetOriginalFileName = $true
 }
@@ -36,3 +36,4 @@ $InstallArgs = @{
 }
 
 Install-ChocolateyInstallPackage @InstallArgs
+
