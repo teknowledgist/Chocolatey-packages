@@ -1,0 +1,12 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Download links are here:
+http://www.baara.com/q10/
+
+Direct Download of compressed zip file (with spell checker):
+Version  : 1.2.21
+URL      : http://www.baara.com/q10/downloads/q10-1.2-spell.zip
+CheckSum : 43DF38593629DDDB586642988A835068274534C6F5F5C9DAE04A0C52991EC715
+

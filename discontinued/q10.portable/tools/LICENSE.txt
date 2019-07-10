@@ -1,0 +1,48 @@
+﻿From: Installed files
+
+Baara License
+=============
+
+Except where otherwise noted, all of the documentation and software 
+included in the Q10 package is copyrighted by Baara Estudio.
+
+Copyright (C) 2007 Baara Estudio. All rights reserved.
+
+This software is provided "as-is," without any express or implied 
+warranty. In no event shall the author be held liable for any damages 
+arising from the use of this software.
+
+You may
+
+* install and use Q10;
+
+* copy Q10, provided that such copies contain all the original contents 
+and proprietary notices. You may collect a reimbursement for the costs 
+of producing the copy, but you may not charge a licensing fee for Q10;
+
+* permit other individuals to use Q10 under this same terms.
+
+You may not
+
+* modify or reverse engineering Q10 in any way;
+
+* extract portions of Q10;
+
+* sell licenses for Q10;
+
+* remove any proprietary notices on Q10.
+
+Permission is granted to anyone to use this software for any purpose, 
+including commercial applications, and redistribute it, provided that 
+the following conditions are met:
+
+All redistributions must retain all occurrences of the above copyright 
+notice and web site addresses that are currently in place (for example, 
+in the About boxes).
+
+The origin of this software must not be misrepresented; you must not 
+claim that you wrote the original software. 
+
+-- 
+Baara Estudio - q10@baara.com
+http://www.baara.com/q10
