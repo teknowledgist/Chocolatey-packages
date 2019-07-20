@@ -1,10 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$pp = Get-PackageParameters
+
 $DownloadArgs = @{
    packageName  = $env:ChocolateyPackageName
-   FileFullPath = Join-Path $env:TEMP "doPDF\doPDF_installer.exe"
-   url          = 'http://download.dopdf.com/download/setup/dopdf-full.exe'
-   checksum     = 'df0df8207f96de09d5596125861ebe5041993ffc58c9bee41f63ead9eafa504c'
+   FileFullPath = Join-Path $env:TEMP 'doPDF\doPDF_installer.exe'
+   url          = 'https://download.dopdf.com/download/setup/dopdf-full.exe'
+   checksum     = '69630bb5b8a5272094a4186bf91387f565135da1cf4aa51cfbe2337b6052a05a'
    checksumType = 'sha256'
    GetOriginalFileName = $true
 }
@@ -16,7 +18,7 @@ try {
    $serviceName = 'Spooler'
    $spoolerService = Get-WmiObject -Class Win32_Service -Property StartMode,State -Filter "Name='$serviceName'"
    if ($spoolerService -eq $null) { 
-      Write-Warning "The Print Spooler service must be running for doPDF to install."
+      Write-Warning 'The Print Spooler service must be running for doPDF to install.'
       Throw "Service $serviceName was not found" 
    }
    Write-Warning "Print Spooler service state: $($spoolerService.StartMode) / $($spoolerService.State)"
@@ -28,19 +30,27 @@ try {
    Throw "Unexpected error while checking Print Spooler service: $($_.Exception.Message)"
 }
 
-$ahkExe = 'AutoHotKey'
-$toolsDir    = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-$ahkFile = Join-Path $toolsDir 'chocolateyInstall.ahk'
-$ahkProc = Start-Process -FilePath $ahkExe -ArgumentList "$ahkFile" -PassThru
-$ahkId = $ahkProc.Id
-Write-Debug "$ahkExe start time:`t$($ahkProc.StartTime.ToShortTimeString())"
-Write-Debug "Process ID:`t$ahkId"
+If ($pp.contains('notelemetry')) {
+   Write-Host 'doPDF will attempt to install with telemetry disabled.' -ForegroundColor Cyan
+   $SilentArgs = ''
+   $ahkExe = 'AutoHotKey'
+   $toolsDir    = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
+   $ahkFile = Join-Path $toolsDir 'chocolateyInstall.ahk'
+   $ahkProc = Start-Process -FilePath $ahkExe -ArgumentList "$ahkFile" -PassThru
+   $ahkId = $ahkProc.Id
+   Write-Debug "$ahkExe start time:`t$($ahkProc.StartTime.ToShortTimeString())"
+   Write-Debug "Process ID:`t$ahkId"
+} else {
+   Write-Host 'doPDF will install with default options.' -ForegroundColor Cyan
+   # This may install an MS Office plugin and will leave telemetry enabled
+   $SilentArgs = '/SILENT /VERYSILENT /SUPPRESSMSGBOXES /NOCANCEL /NORESTART /Languages="es-en"'
+} 
 
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileType       = 'exe'
    File           = $LocalFile
-   silentArgs    = ''   #/SILENT /VERYSILENT /SUPPRESSMSGBOXES /NOCANCEL /NORESTART /Languages="es-en"'
+   silentArgs     = $SilentArgs
    validExitCodes = @(0)
 }
 Install-ChocolateyInstallPackage @InstallArgs

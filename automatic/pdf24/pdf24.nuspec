@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pdf24</id>
-    <version>8.9.0</version>
+    <version>8.9.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdf24</packageSourceUrl>
     <owners>freaky-m0,jberezanski,teknowledgist,chocolatey,pocki_c</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

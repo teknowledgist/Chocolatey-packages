@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>q10.portable</id>
     <version>1.2.21</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/q10</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/q10.portable</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Q10 editor</title>
@@ -13,7 +13,7 @@
     <projectUrl>http://www.baara.com/q10/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@96c2217e21fe7edee387db3925a8f36362f11d2c/Icons/q10_icon.png</iconUrl>
     <copyright>Copyright © 2007 Baara Estudio</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/q10/tools/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/q10.portable/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://www.baara.com/q10/</docsUrl>
     <mailingListUrl>http://groups.google.com/group/q10-editor</mailingListUrl>

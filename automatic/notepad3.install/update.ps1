@@ -1,19 +1,25 @@
 import-module au
 
 function global:au_GetLatest {
-   #   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-   #   $Release = 'https://www.rizonesoft.com/downloads/notepad3/'
-   #   $PageText = Invoke-WebRequest -Uri $Release -UseBasicParsing
-   $ie = New-Object -ComObject "InternetExplorer.Application"
-   $ie.silent = $true
-   $ie.Navigate("https://www.rizonesoft.com/downloads/notepad3/")
-   while($ie.ReadyState -ne 4) {start-sleep -m 100}
-   $body = $ie.Document.body.innerHTML
-   [System.Runtime.Interopservices.Marshal]::ReleaseComObject($ie)
-   Remove-Variable ie
+   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+   $Release = 'https://www.rizonesoft.com/downloads/notepad3/'
+   $PageText = Invoke-WebRequest -Uri $Release -UseBasicParsing
+#   $ie = New-Object -ComObject "InternetExplorer.Application"
+#   $ie.silent = $true
+#   $ie.Navigate("https://www.rizonesoft.com/downloads/notepad3/")
+#   while($ie.ReadyState -ne 4) {start-sleep -m 100}
+#   $body = $ie.Document.body.innerHTML
+#   [System.Runtime.Interopservices.Marshal]::ReleaseComObject($ie)
+#   Remove-Variable ie
 
-   $filename = $body.split() | Where-Object {$_ -match 'setup\.exe'} | Select-Object -First 1
-   $version = $filename.split('_') | Where-Object {$_ -match '^[0-9.]+$'}
+   $downloaduri = 'https://www.rizonesoft.com/downloads/notepad3/'
+   $download_page = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing   
+   $link = $download_page.links | Where-Object {$_.class -match 'exe'} | Select-Object -First 1   
+
+   $version = $link.title.split()[-1]
+   $filename = $link.outerhtml.split() | Where-Object {$_ -like '*.exe'}
+   
+#   $version = $filename.split('_') | Where-Object {$_ -match '^[0-9.]+$'}
    $url = "https://www.rizonesoft.com/shkarko/Notepad3/" + $filename 
 
    return @{ 

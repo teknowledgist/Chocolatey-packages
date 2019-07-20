@@ -8,8 +8,6 @@ WinWait, doPDF installer ahk_exe dopdf-full.exe
 
 WinActivate, doPDF installer ahk_exe dopdf-full.exe
 ;WinHide, ahk_id %appid%
-; Office add-in checkbox
-Send {Click 164, 260}
 ; Telemetry checkbox
 Send {Click 333, 518}
 ; Install button
@@ -21,6 +19,9 @@ PixelGetColor, BGcolor, 1, 1
 __Wait:
 sleep, 250
 ;MouseGetPos, xpos, ypos 
+If (WinExist(doPDF ahk_class #32770)) {
+   ControlClick, OK, doPDF ahk_class #32770
+}
 WinActivate, doPDF installer ahk_exe dopdf-full.exe
 MouseMove, 414, 414
 
