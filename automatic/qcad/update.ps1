@@ -14,7 +14,8 @@ function global:au_GetLatest {
    $url64 = "https://www.qcad.org$Stub64"
    
    $version = ($stub64 -split '-')[1]
-
+   Write-host "Available QCad version:  $version" -foregroundcolor Cyan
+   
    return @{ 
             Version = $version
             URL32 = $url32

@@ -1,0 +1,16 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Quoll Writer can be obtained from the official download page:
+
+http://quollwriter.com/downloads.html
+
+The version can be seen on the GitHub release page:
+https://github.com/garybentley/quollwriter/releases/latest
+
+
+Direct Download:
+Version  : 2.6.14
+URL      : http://quollwriter.com/download/windows/
+Checksum : 6E67850CD26326AD69617F4A58B042FB6A9F77FC4E2DF2479661F30E02587EED

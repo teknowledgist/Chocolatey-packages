@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>quollwriter</id>
+    <version>2.6.14</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/quollwriter</packageSourceUrl>
+    <owners>Teknowledgist, schelljw</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Quoll Writer</title>
+    <authors>Gary Bentley</authors>
+    <projectUrl>https://quollwriter.com/index.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@b9b8ede2c21450e8da43de85815b1d7e6b5e8598/Icons/quollwriter_icon.png</iconUrl>
+    <copyright>© Gary Bentley 2009-2019</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/garybentley/quollwriter/master/license.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/garybentley/quollwriter</projectSourceUrl>
+    <docsUrl>https://quollwriter.com/user-guide/getting-started.html</docsUrl>
+    <mailingListUrl>https://quollwriter.com/support.html</mailingListUrl>
+    <bugTrackerUrl>https://github.com/garybentley/quollwriter/issues</bugTrackerUrl>
+    <tags>quollwriter quoll writer writing book chapter character focus full-screen embedded FOSS</tags>
+    <summary>A writing application that lets you focus on your words</summary>
+    <description>Quoll Writer is a feature rich writing application with a clean and simple interface that ensures those features never get in the way of your writing.
+
+### Focus on your words, not the interface
+* Feature rich with a minimal interface, your text is the focus
+* Convert your great ideas into words
+* Manage all your projects in one place
+* The tabbed interface is familiar and easy to use
+* Easy chapter management, move chapters, link them, record goals and a description
+
+### Manage your characters and assets with ease
+* Create characters, locations and more, quickly and easily
+* Create your own types of asset
+* Customize your assets with new fields to record all the information you need
+* Quoll Writer keeps track of where your assets are mentioned and shows you the references
+
+### Annotate the text to make management simple
+* Scenes and plot outline items let you keep track of important moments in your story
+* Notes remind you of things to do
+* Special Edit Needed notes let you mark sections of the text that need reworking
+
+### Keep distractions at bay with full screen mode
+* Highly configurable, set things up the way you like them
+* Set a timer and/or word count to keep you moving
+* Use distraction free mode for that just the text experience
+
+### Improve the quality of your writing with the Problem Finder
+* Highlights problems within the text but it is a guide not an instructor
+* Use configurable rules to help find problems
+* Define your own rules and ignore those you aren't interested in
+
+### Share your work with Editor Mode
+* Send projects to your editors in a couple of clicks, inviting people to edit for you is as simple as knowing their email address
+* Chat with any of your editors at any time, see who is online, busy or offline
+* Your editors can make comments on your work
+* Make your changes then send an updated version when ready
+
+### Keep on track with Statistics and Targets
+* Word count, readability and session charts let you see how your project is progressing over time
+* Set yourself writing targets, maximum word counts and readabilty targets for your chapters
+* Warnings are shown when a maximum target is reached
+* Charts allow you to quickly identify problem chapters
+
+### Record and categorize your ideas
+* Quickly add new ideas
+* Categorize, sort and easily manage your ideas
+* Rate ideas and convert them to assets or chapters
+
+### Limber up your writing brain with a Warm-up
+* Over 300 prompts to choose from or enter your own
+* Set a timer and/or word count to keep you on track
+* Convert to a real project when you're ready
+* Set things up so you always do a warm-up at the start of each session
+
+### More great features
+* Import/Export
+* Integrated spell checker and synonym lookup
+* Automatic chapter save
+* Automatic, configurable backups
+* Global find
+* Set up the text how you like it
+* Tagging
+* Configurable interface
+* Achievements
+* Interactive tips
+* Encrypt your work
+* Logging
+
+    </description>
+    <releaseNotes>https://github.com/garybentley/quollwriter/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

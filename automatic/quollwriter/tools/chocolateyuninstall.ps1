@@ -1,13 +1,13 @@
-﻿$ErrorActionPreference = 'Stop'
+$ErrorActionPreference = 'Stop'
+
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
-  softwareName  = 'notepad3 *'
+  softwareName  = "Quoll Writer*"
   fileType      = 'EXE'
-  silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
+  silentArgs   = '-q'
   validExitCodes= @(0)
 }
 
-$uninstalled = $false
 [array]$key = Get-UninstallRegistryKey -SoftwareName $packageArgs['softwareName']
 
 if ($key.Count -eq 1) {

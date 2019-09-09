@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>q10.portable</id>
+    <version>1.2.21</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/q10.portable</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Q10 editor</title>
+    <authors>Joaquín Bernal</authors>
+    <projectUrl>http://www.baara.com/q10/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@96c2217e21fe7edee387db3925a8f36362f11d2c/Icons/q10_icon.png</iconUrl>
+    <copyright>Copyright © 2007 Baara Estudio</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/q10.portable/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.baara.com/q10/</docsUrl>
+    <mailingListUrl>http://groups.google.com/group/q10-editor</mailingListUrl>
+    <tags>q10 full-screen editor writing focus text embedded</tags>
+    <summary>A simple text editor for writers</summary>
+    <description>Q10 is a simple but powerful text editor designed and built with writers in mind.
+
+### Features
+
+* **Full-screen** - Focus on your work. Even if Mark Pilgrim doesn't like full-screen editors, some of us do.
+* **Live text statistics** - Word, page and character counts are updated live as you type.
+* **Programmable page count formula** - Specify what formula to use for page count calculation. You’re not constrained to the 250 words per page rule anymore.
+* **Customizable look and paragraph format** - Change the colors, line spacing, first line indent, paragraph spacing, font...
+* **Perfectly portable** - A single self-contained executable file. That’s all. Easy to use with a pendrive, so you can carry your writing environment with you everywhere. Q10 will remember the last file you worked on, even if the drive letter assigned to your pendrive changes from computer to computer.
+* **Easy to use timer alarm** - Perfect for timed writing sessions and word wars. When the time is over, it will tell you how many words you wrote in that period.
+* **Spell checker** - You don't make mistakes. I know it. You know it. But many people do, and Q10 lets them check their spelling.
+* **Notes** - Any paragraph starting with ".." is considered a note. You can get a list of all notes in the current document and jump instantly to any of them.
+* **Target count** - Displays completed percentage. You can choose units: words, pages, lines, paragraphs or characters. If NaNoWriMo is your thing, this is for you.
+* **Partial counts** - Keep track of the extension of current chapter or see how much content you've produced in the current writing session. You're free to use partial counts as you like: up to four counters with customizable labels and units: words, pages, lines, paragraphs or characters.
+* **Autocorrections and quick text** - Unlimited autocorrection entries to fix on the fly those persistent typing errors. Unlimited quick texts list for frequently used words or phrases, like character names, places, etc.
+* **Standard and clean text format** - You will be able to open your work with any text editor or word processor. Now and in the future.
+* **Encoding and line endings agnostic** - Reads and writes ANSI and UTF-8 texts, and line endings formats are not a problem for Q10.
+* **Typing sound effects** - Get that typewriter feeling again. For the trivia lovers among you, the typing sounds were taken from the movie "Amélie".
+* **Small, fast and stable** - Less than 360Kb in size, you don’t need huge frameworks or runtimes to use this beauty.
+* **Autosaving** - You can ask Q10 to save your work after some number of new paragraphs, or after some time has elapsed. If you're really paranoid, set Q10 to save every paragraph.
+* **Free** - Q10 is, and will be, freeware. Period.
+    </description>
+    <releaseNotes>http://www.baara.com/q10/</releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

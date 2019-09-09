@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>dopdf</id>
-    <version>10.1.112</version>
+    <version>10.2.114</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/dopdf</packageSourceUrl>
     <owners>Teknowledgist, schelljw</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -35,6 +35,13 @@
 * **No GhostScript**:  Doesn’t require 3rd party programs to make PDF files such as GhostScript. 
 * **Multi-language**: doPDF is the ONLY free pdf maker whose interface is currently available in 33 different languages.
 
+##### Microsoft Office plugins
+The doPDF installer also installs Microsoft Office plugins.  They are removed on an uninstall of doPDF.
+
+##### Install without telemetry
+By default, doPDF will install with anonymized telemetry enabled.  If you wish to disable it at install time, use the parameter `/NoTelemetry`
+
+Example: `choco install doPDF -y --params="'/NoTelemetry'"`
 
     </description>
     <releaseNotes>http://www.dopdf.com/forum/announcements-f2/changelog-dopdf-9-t4298.html</releaseNotes>
