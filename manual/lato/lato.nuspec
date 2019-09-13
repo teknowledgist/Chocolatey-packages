@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>lato</id>
+    <version>2.015</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/lato</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Lato (font)</title>
+    <authors>Łukasz Dziedzic, Adam Twardoch, Botio Nikoltchev</authors>
+    <projectUrl>http://www.latofonts.com/</projectUrl>
+    <copyright>Copyright © 2010-2015, Łukasz Dziedzic</copyright>
+    <licenseUrl>https://scripts.sil.org/ofl</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.latofonts.com/lato-free-fonts/#download</docsUrl>
+    <mailingListUrl>mailto://team@​latofonts.​com</mailingListUrl>
+    <tags>lato font unicode sanserif OFL embedded</tags>
+    <summary>Lato font family</summary>
+    <description>Lato is a sanserif typeface family designed in the Summer 2010 and extended in the Summer 2013 by Warsaw-based designer Łukasz Dziedzic ("Lato" means "Summer" in Polish). It tries to carefully balance some potentially conflicting priorities: it should seem quite "transparent" when used in body text but would display some original traits when used in larger sizes. The classical proportions, particularly visible in the uppercase, give the letterforms familiar harmony and elegance. At the same time, its sleek sanserif look makes evident the fact that Lato was designed in the 2010s, even though it does not follow any current trend. The semi-rounded details of the letters give Lato a feeling of warmth, while the strong structure provides stability and seriousness. 
+
+![Lato sample](http://www.latofonts.com/wp-content/uploads/2014/02/Screen-Shot-2014-02-27-at-11.42.52.png)
+
+In 2013-2014, the family was greatly extended to cover 3000+ glyphs over nine weights with italics. It now supports 100+ Latin-based languages, 50+ Cyrillic-based languages as well as Greek and IPA phonetics. The Lato fonts are available free of charge under the SIL Open Font License.
+    </description>
+    <releaseNotes>### Version 2.015 (2015-08-06)
+* Initial implementation of mark positioning (should work for most glyphs)
+* Autohinted using ttfautohint 1.3.
+    </releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,22 +1,14 @@
 import-module au
 
 function global:au_GetLatest {
-   $WebClient = New-Object System.Net.WebClient
-   $string = $WebClient.DownloadString('http://www.cs.unc.edu/~isenburg/lastools/download/CHANGES.txt')
-   $version = get-date ([datetime]($string.split("`n")[0] -replace "--.*",'')) -format yyyy.MM.dd
+   $MainPage = Invoke-WebRequest -Uri 'https://lastools.github.io/'
+   $text = $MainPage.AllElements | ? {$_.tagname -eq 'p' -and $_.innertext -match 'download.*txt'} |select -ExpandProperty innertext
 
-<#   $url = 'http://lastools.org/download/LAStools.zip'
-   Try {
-      $response = invoke-webrequest $url -DisableKeepAlive -UseBasicParsing -Method head -ErrorAction SilentlyContinue
-   } catch {
-      #do nothing
-   }
-   Finally {
-      if (-not ($response.StatusCode -eq 200)) {
-#>         $url = 'http://www.cs.unc.edu/~isenburg/lastools/download/LAStools.zip'
-#      }
-#   }
-   
+   $null = $text -match '[a-z]+ \d\d?[snrt][tdh] 20\d\d'
+   $version = get-date ($matches[0] -replace '(\d\d)[snrt][tdh]','$1') -format yyyy.MM.dd
+
+   $url = 'https://lastools.github.io/download/LAStools.zip'
+
    return @{ 
             Version = $version
             URL = $url
@@ -32,4 +24,4 @@ function global:au_SearchReplace {
    }
 }
 
-Update-Package
+Update-Package -NoCheckChocoVersion

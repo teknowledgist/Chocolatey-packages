@@ -1,0 +1,13 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The download for this font installer can be found on the home site:
+   http://www.latofonts.com/lato-free-fonts/#download
+by clicking the "Download TTF" button.
+
+Direct download:
+
+Version: 2.015
+URL: http://www.latofonts.com/download/Lato2OFL.zip
+Checksum: 42B54E96C07E299D967FC3227C7BD63A20D6CFB1DC8FD6DAE83628091E20A5B8

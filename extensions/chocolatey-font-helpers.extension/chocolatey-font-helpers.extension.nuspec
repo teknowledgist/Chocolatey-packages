@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>chocolatey-font-helpers.extension</id>
+    <version>0.0.2</version>
+    <packageSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-font-helpers.extension</packageSourceUrl>
+    <owners>bcurran3, Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Chocolatey Font Helpers Extension</title>
+    <authors>Teknowledgist and Bill Curran</authors>
+    <projectUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-font-helpers.extension</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bcurran3/ChocolateyPackages@890d1d6cc9259ff7bf154cb41d81b3d212e01515/mylogos/myunofficialChocolateylogo_icon.png</iconUrl>
+    <copyright>Public Domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/bcurran3/ChocolateyPackages/tree/master/chocolatey-font-helpers.extension</projectSourceUrl>
+    <tags>fonthelp font helper unofficial extension add-font remove-font bcurran3</tags>
+    <summary>Functions to make font packages easier.</summary>
+    <description>The **chocolatey-font-helpers.extension** provides helper functions to assist Chocolatey packages easily install and uninstall "loose" (i.e. without an installer) FNT, FON, OTF, TTC, and TTF fonts system-wide. 
+
+This extension is based on a [MS Blog post](https://blogs.technet.microsoft.com/deploymentguys/2010/12/04/adding-and-removing-fonts-with-windows-powershell/) and became all-but necessary when newer versions of Windows started redirecting the often-used `AddFontFile()` method into the user's profile rather than the `C:\Windows\Fonts` directory as it had for many previous years.
+
+These functions may be used in your Chocolatey package install/uninstall scripts by declaring this package a dependency in your package's nuspec.
+
+### USAGE:
+* **Single Font:** *Will return a "0" for success and a "1" for failure.*
+
+    `Install-ChocolateyFont "FilePath\FontName.ext"`
+    `Uninstall-ChocolateyFont "FontName.ext"`
+
+* **(New!) Multiple Fonts** *Will return the number of successful installs/uninstalls*
+
+    `Install-ChocolateyFont $ListOfFontPathsOrFolder -multiple` 
+    `Uninstall-ChocolateyFont $ListOfFontFileNames -multiple` 
+
+Let the easy-peasy font packages flow!
+
+***
+**Click here to [Patreon-ize](https://www.patreon.com/bcurran3) the package maintainer.**
+***
+    </description>
+    <releaseNotes>###CHANGE LOG:
+* 0.0.1 - initial release
+* 0.0.2 - Cleaned up and added multiple option
+    </releaseNotes>
+    <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
+  </metadata>
+</package>
