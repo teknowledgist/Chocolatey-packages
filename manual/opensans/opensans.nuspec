@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>opensans</id>
+    <version>1.101</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/opensans</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Open Sans (font)</title>
+    <authors>Steve Matteson</authors>
+    <projectUrl>https://fonts.google.com/specimen/Open+Sans</projectUrl>
+    <iconUrl>https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Open_Sans_sample.svg/203px-Open_Sans_sample.svg.png</iconUrl>
+    <copyright></copyright>
+    <licenseUrl>https://github.com/google/fonts/blob/master/apache/opensans/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <bugTrackerUrl>https://github.com/google/fonts/issues</bugTrackerUrl>
+    <tags>opensans font sans sanserif humanist unicode Google apache embedded</tags>
+    <summary>A highly legible humanist font.</summary>
+    <description>Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Director of Ascender Corp. This version contains the complete 897 character set, which includes the standard ISO Latin 1, Latin CE, Greek and Cyrillic character sets. Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms. 
+
+![Open Sans sample](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Open_Sans_sample.svg/203px-Open_Sans_sample.svg.png)
+
+    </description>
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
