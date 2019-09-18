@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>ubuntu.font</id>
+    <version>0.83</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/ubuntu.font</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Ubuntu Font Family</title>
+    <authors>Canonical</authors>
+    <projectUrl>https://design.ubuntu.com/font/</projectUrl>
+    <iconUrl>https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Ubuntu.svg/203px-Ubuntu.svg.png</iconUrl>
+    <copyright>Copyright 2010,2011 Canonical Ltd.</copyright>
+    <licenseUrl>https://ubuntu.com/legal/font-licence</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>ubuntu.font font sans sanserif unicode embedded</tags>
+    <summary>A modern, humanist font.</summary>
+    <description>The way typography is used says as much about our brand as the words themselves.
+
+The Ubuntu typeface has been specially created to complement the Ubuntu tone of voice. It has a contemporary style and contains characteristics unique to the Ubuntu brand that convey a precise, reliable and free attitude.
+
+![Ubuntu sample](https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Ubuntu.svg/406px-Ubuntu.svg.png)
+
+    </description>
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
