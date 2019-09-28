@@ -11,10 +11,11 @@
     <title>Open Sans (font)</title>
     <authors>Steve Matteson</authors>
     <projectUrl>https://fonts.google.com/specimen/Open+Sans</projectUrl>
-    <iconUrl>https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Open_Sans_sample.svg/203px-Open_Sans_sample.svg.png</iconUrl>
-    <copyright></copyright>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@840e8f921c8b6912d390f949c9d950de0b4b74e4/Icons/path-copy-copy_icon.png</iconUrl>
+    <copyright>Copyright 2010-2011, Google Corporation</copyright>
     <licenseUrl>https://github.com/google/fonts/blob/master/apache/opensans/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/googlefonts/opensans</projectSourceUrl>
     <bugTrackerUrl>https://github.com/google/fonts/issues</bugTrackerUrl>
     <tags>opensans font sans sanserif humanist unicode Google apache embedded</tags>
     <summary>A highly legible humanist font.</summary>
@@ -23,6 +24,7 @@
 ![Open Sans sample](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Open_Sans_sample.svg/203px-Open_Sans_sample.svg.png)
 
     </description>
+    <releasenotes>https://github.com/google/fonts/pull/785</releasenotes>
     <dependencies>
       <dependency id="chocolatey-font-helpers.extension" version="0.0.2" />
     </dependencies>

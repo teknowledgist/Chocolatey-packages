@@ -7,14 +7,9 @@ $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    fileType       = 'exe'
    File           = $InstallerFile
-   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-   validExitCodes = @(0)
+   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /NOCLOSEAPPLICATIONS /RESTARTEXITCODE=3010'
+   validExitCodes = @(0,3010)
 }
-
-$WarningString = "This installer is known to close the Explorer process.  `n" +
-               "If it doesn't automatically restart explorer, type 'explorer' on the `n" +
-               'command shell to restart it.'
-Write-Warning $WarningString
 
 Install-ChocolateyInstallPackage @InstallArgs
 

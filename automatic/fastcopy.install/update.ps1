@@ -1,5 +1,10 @@
 import-module au
 
+function isURIWeb($address) {
+   $uri = $address -as [System.URI]
+   $uri.AbsoluteURI -ne $null -and $uri.Scheme -match '[http|https]'
+}
+
 function global:au_GetLatest {
    $RootPage = 'https://fastcopy.jp'
    $HomePage = Invoke-WebRequest -Uri "$RootPage/en/"
@@ -18,12 +23,20 @@ function global:au_GetLatest {
                      Where-Object {($_.innertext -eq 'installer')} |
                      Select-Object -ExpandProperty href
    Foreach ($link in $links) {
+      if (-not (isURIWeb $link)) {
+         if (isURIWeb "$RootPage$link") {
+            $URL32 = "$RootPage$link"
+            break
+         } else { Continue }
+      }
       $DownPage = Invoke-WebRequest -Uri $link -ErrorAction SilentlyContinue
       if ($DownPage) { break }
    }
-   $URL32 = $DownPage.links | 
-            Where-Object {$_.href -match '\.(zip|exe)$'} | 
-            Select-Object -First 1 -ExpandProperty href
+   if ($DownPage -and (-not $URL32)) {
+      $URL32 = $DownPage.links | 
+               Where-Object {$_.href -match '\.(zip|exe)$'} | 
+               Select-Object -First 1 -ExpandProperty href
+   }
 
    return @{ 
             Version   = $version

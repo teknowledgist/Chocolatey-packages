@@ -10,8 +10,8 @@ if ($key.Count -ge 1) {
       PackageName     = $packageName
       FileType        = 'exe'
       File            = $key[0].UninstallString
-      SilentArgs      = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-      validExitCodes = @(0)
+      SilentArgs      = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /RESTARTEXITCODE=3010'
+      validExitCodes = @(0,3010)
    }
    Uninstall-ChocolateyPackage @UninstallArgs
 
