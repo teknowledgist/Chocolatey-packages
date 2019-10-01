@@ -7,7 +7,7 @@ $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    fileType       = 'exe'
    File           = $InstallerFile
-   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /NOCLOSEAPPLICATIONS /RESTARTEXITCODE=3010'
+   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /RESTARTEXITCODE=3010'
    validExitCodes = @(0,3010)
 }
 
