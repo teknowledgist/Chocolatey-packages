@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>3dslicer</id>
+    <version>4.10.2.28257</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/3dslicer</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>3D Slicer (Install)</title>
+    <authors>https://www.slicer.org/wiki/Documentation/Release/Acknowledgments</authors>
+    <projectUrl>https://www.slicer.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@dbc5e64398d5c887e77bfd76cf8556bed136c7e7/Icons/3dslicer_icon.png</iconUrl>
+    <licenseUrl>https://raw.githubusercontent.com/Slicer/Slicer/master/License.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Slicer/Slicer/</projectSourceUrl>
+    <docsUrl>https://www.slicer.org/wiki/Documentation/Release</docsUrl>
+    <mailingListUrl>https://discourse.slicer.org/</mailingListUrl>
+    <bugTrackerUrl>https://discourse.slicer.org/</bugTrackerUrl>
+    <tags>3dslicer medical health informatics visualization image processing OSS</tags>
+    <summary>A platform for the analysis and visualization of medical images</summary>
+    <description>3D Slicer is an open source software platform for medical image informatics, image processing, and three-dimensional visualization. Built over two decades through support from the National Institutes of Health and a worldwide developer community, Slicer brings free, powerful cross-platform processing tools to physicians, researchers, and the general public. 
+
+![3D Slicer sample](https://slicer.org/img/Slicer4Announcement-HiRes.png)
+
+    </description>
+    <releaseNotes>https://discourse.slicer.org/c/announcements/release-notes</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

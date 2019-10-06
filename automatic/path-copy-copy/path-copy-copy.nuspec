@@ -20,11 +20,11 @@
     <bugTrackerUrl>https://github.com/clechasseur/pathcopycopy/issues</bugTrackerUrl>
     <tags>path-copy-copy pathcopycopy pathcopy path explorer extension context FOSS embedded admin</tags>
     <summary>Copy file paths from Windows explorer's contextual menu</summary>
-    <description>A Windows Explorer add-on that adds a contextual menu item on all files and folders allowing the user to copy the path in various formats. Idea copied from "Path Copy".
+    <description>Path Copy Copy is a Windows Explorer extension that adds entries to the contextual menu shown for files and folders, allowing the user to copy the item's name or path in a variety of formats.  Idea copied from "Path Copy".
 
 Works on Windows XP or later.
 
-![The Path Copy Copy contextual menu items](screenshots/PathCopyCopyContextualMenu.png)
+![The Path Copy Copy contextual menu items](https://cdn.jsdelivr.net/gh/clechasseur/pathcopycopy@e934954b1577fc21d904b77184c78574ef47c16a/screenshots/PathCopyCopyContextualMenu.png)
     </description>
     <releaseNotes>https://github.com/clechasseur/pathcopycopy/blob/master/HISTORY</releaseNotes>
   </metadata>
