@@ -12,8 +12,9 @@ function global:au_GetLatest {
 
    $url64 = $urlstub -replace '.*?"([^ ]+\.exe).*','$1'
 
-   $version = $url64.split('-') | Where-Object {$_ -match '^[0-9.]+$'} |select -Last 1
-
+   $version = $url64.split('/') | Where-Object {$_ -match '^v[0-9.]+$'} |select -Last 1
+   $version = $version.trim('v')
+   
    return @{ 
             Version  = $version
             URL64    = "https://github.com" + $url64

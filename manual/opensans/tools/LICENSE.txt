@@ -1,4 +1,4 @@
-﻿From: https://github.com/google/fonts/blob/master/apache/opensans/LICENSE.txt
+﻿From: https://github.com/googlefonts/opensans/blob/master/LICENSE.txt
 
 
                                  Apache License

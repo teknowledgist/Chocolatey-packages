@@ -11,7 +11,7 @@ $packageArgs = @{
    validExitCodes= @(0, 3010)
 }
 
-$OfficeApps = 'winword.exe','excel.exe','outlook.exe','powerpnt.exe','vision.exe','infopath.exe','winproj.exe'
+$OfficeApps = 'excel.exe','Lync.exe','MSACCESS.EXE','MSPUB.EXE','OUTLOOK.EXE','powerpnt.exe','winword.exe'
 $OfficeVersions = 12,14,15,16
 
 $Found = $false

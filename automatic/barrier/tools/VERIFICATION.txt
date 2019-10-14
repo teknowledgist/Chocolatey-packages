@@ -11,7 +11,7 @@ letter into a numbered version as identifed below
 
 Direct Download:
 
-Version  : 2.3.1
-URL      : https://github.com/debauchee/barrier/releases/download/v2.3.1/BarrierSetup-2.3.1-release.exe
-CheckSum : 1EBAA8958370C791256571C853041A9F1759CAA33C8E33270C5AAC60E9EC0D92
+Version  : 2.3.2
+URL      : https://github.com/debauchee/barrier/releases/download/v2.3.2/BarrierSetup-2.3.2.exe
+CheckSum : A6A195C55C199B35C737D7494327B37DA94DED4EB2592871D4AD747AA8BAA39A
 

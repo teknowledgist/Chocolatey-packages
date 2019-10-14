@@ -1,7 +1,5 @@
 import-module au
 
-$Global:au_NoCheckUrl = $true
-
 function global:au_GetLatest {
    $DownloadURI = 'https://download.slicer.org/'
    $download_page = Invoke-WebRequest -Uri $DownloadURI
@@ -12,7 +10,7 @@ function global:au_GetLatest {
    $TData = $TRow -split '</?T[DH]>' | Where-Object {$_ -match 'version'} | Select-Object -First 1
 
    $HREF = $TData -replace '.*"/([^"]+)".*','$1'
-   $version = $TData -replace '.*version ([0-9.]+).*','$2'
+   $version = $TData -replace '.*version ([0-9.]+).*','$1'
    $revision = $TData -replace '.*revision ([0-9.]+).*','$1'
 
    $url64 = 'https://slicer.kitware.com/midas3/download?' + ($HREF -replace '/','=')

@@ -3,25 +3,22 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
 The binary download of each of the font files can be obtained here:
-   https://github.com/google/fonts/tree/master/apache/opensans
-   
-The binary download of the "Condensed" font files can be obtained here:
-   https://github.com/google/fonts/tree/master/apache/opensanscondensed
+   https://github.com/googlefonts/opensans/tree/master/hinted_ttfs
    
 Click the font file name and click the "download" button on the page that loads.
 
 FileName                                  Checksum
-OpenSans-Bold.ttf                    1b43de2449d39b65ff6f63315d4afda585f72fbbec2e3d9a56f59de6c75149d3
-OpenSans-BoldItalic.ttf              3575d2afaaad69970380237a5d6357b6db241f53b77607482eaf9f299b8c07ec
-OpenSansCondensed-Bold.ttf           0c6bc4fecd8b88179d09508a12de72fa51d9a0b9842077c29c37ab586e7b6668
-OpenSansCondensed-Light.ttf          8ae2a4d772519a12130bd844dab9916a575ac5ef8e371a643d6f67e15c7f8566
-OpenSansCondensed-LightItalic.ttf    aceec8387bad177ceb240bf628efe32c9b61f3c971d86a3cf00e4199142b81de
-OpenSans-ExtraBold.ttf               395f150240d43dff8baea6586baf5665337de57b8204a501fbd6148b2fe165b7
-OpenSans-ExtraBoldItalic.ttf         d5de39bcdd010089d9db8dd1aebaefaf9e691bf9a49282ff43e1d1869b417892
-OpenSans-Italic.ttf                  6cb918a707a06c4f98221d09344af4b98c9cb6184b13309a579caf0418d5eb74
-OpenSans-Light.ttf                   1c8d3cc6810ecd3623ebff7d2c3db1a44024260c5ae662f8166d69b9425828ed
-OpenSans-LightItalic.ttf             fda70df85987b394ff384b899703bc0e55ac7bdba94d06f47462e155cf0c0350
-OpenSans-Regular.ttf                 13c03e22a633919beb2847c58c8285fb8a735ee97097d7c48fd403f8294b05f8
-OpenSans-SemiBold.ttf                b4c2050b25d3d296d5cf58589ca00816dc72df42262c2f629d5c6a984a161aa4
-OpenSans-SemiBoldItalic.ttf          a8f2af8e79f46686b1cfcfb3a1fd53e94e88308d7c6ee7f85c733f4796fcc3a0
+OpenSans-Bold.ttf             25dedc298497e4ddeb1e28a053765533a5f99b484646ea442dcece2c6e94fb07   
+OpenSans-BoldItalic.ttf       7a1467336c8b53ffc691e770b6af0eb934664400002a25571e70c354a8a98eab   
+OpenSans-CondBold.ttf         0563923f524c3229bba2232d5ed7ed87eb5b84eee13efda3cf97defc1b26c0fe   
+OpenSans-CondLight.ttf        50ad9ef54c6f1e5fcfcacc6d945b6e582f60e5493108f473e3f0b1be93629ea9   
+OpenSans-CondLightItalic.ttf  24af348782e3c9ae37f62a8eb474530fb4104c0d973be6ecdfee207a34beb0b5   
+OpenSans-ExtraBold.ttf        1ccbf6c837d00fd66e98df360fde90e2e2dd6888692d80304ed4a5b80a62e52d   
+OpenSans-ExtraBoldItalic.ttf  4737e30a18b8d3615ca7f628e7d78d3c96c9d47a19a88d51d40b46a9effa5c5e   
+OpenSans-Italic.ttf           9fe05d748928135ea03feab3ef26a3b47df9a16d8bc277f0ef5cf0259723d592   
+OpenSans-Light.ttf            2cc4591751ee8a5deaa5e0c3403070c99f72fa361fa6edb16a053415adc576eb   
+OpenSans-LightItalic.ttf      964c3f6c9b092e324ce914498a110eac3d9b7b2dba3b580ce9b88f5758ed23f6   
+OpenSans-Regular.ttf          c0b84875a61a0ce4e66b31e6cd2caf2a802e9418198606947d71e43135793287   
+OpenSans-SemiBold.ttf         ae6ebc345f6362bf34d46b59cbcf7700bcc5a3c06628b5f53ebd9d0540e99135   
+OpenSans-SemiBoldItalic.ttf   05afbbab5c1f860a23d1222b354ea65a8411b67c330384d8de96e873d70c4bf4   
 
