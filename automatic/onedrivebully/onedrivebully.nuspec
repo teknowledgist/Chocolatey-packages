@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>onedrivebully</id>
+    <version>1.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/onedrivebully</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>OneDriveBully</title>
+    <authors>KTheodoridis</authors>
+    <projectUrl>https://github.com/ktheod/OneDriveBully</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@73902c5c7f051ab8da98792891b820f92fb257ca/Icons/onedrivebully_icon.png</iconUrl>
+    <copyright>Copyright © K.Theodoridis 2017</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/ktheod/OneDriveBully/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ktheod/OneDriveBully</projectSourceUrl>
+    <docsUrl>https://github.com/ktheod/OneDriveBully</docsUrl>
+    <mailingListUrl>mailto://odbully@outlook.com</mailingListUrl>
+    <bugTrackerUrl>https://github.com/ktheod/OneDriveBully/issues</bugTrackerUrl>
+    <tags>OneDriveBully OneDrive OneDrive4Business OD4B storage sync cloud Microsoft Office365 MSO365 SkyDrive embedded</tags>
+    <summary>Bully your OneDrive to sync Symbolic Link Folders</summary>
+    <description>Have a lot of folders you want to sync to OneDrive but not enough space in your main hard drive?
+
+I did, I had all my photos on the D:\ drive but OneDrive was requiring to copy them to the OneDrive folder in C:\ . But my C:\ is not big enough.
+
+OneDrive Bully was developed to solve exactly that.
+
+It uses Windows Symbolic Links to link your folders sitting outside your OneDrive folder in any hard drive or network path. OneDrive doesn't support it currently. It will simply ignore any changes to these folders.
+
+OneDrive Bully solves the issue by triggering OneDrive to sync, including these folders on a timer you set. The best thing is it is doing it without affecting the standard OneDrive application or requiring you to login to another OneDrive client.
+
+You can also double click the icon and force sync whenever you want.
+
+Saved the best for last, OneDrive is Free!
+    </description>
+    <releaseNotes>https://github.com/ktheod/OneDriveBully/blob/master/OneDriveBully/ChangeLog.txt</releaseNotes>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
