@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>synfig</id>
+    <version>1.2.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/synfig</packageSourceUrl>
+    <owners>Teknowledgist, efilnukefesin</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Synfig Studio (Install)</title>
+    <authors>Synfig Studio Development Team</authors>
+    <projectUrl>https://www.synfig.org/</projectUrl>
+    <iconUrl>http://www.synfig.org/img/logo.png</iconUrl>
+    <copyright>Copyright 2002 Robert B. Quattlebaum Jr., 
+Copyright 2002 Adrian Bentley, 
+Copyright 2006 Yue Shi Lai, 
+Copyright 2007-2009 Chris Moore, 
+Copyright 2007-2009 Paul Wise, 
+Copyright 2008-2009 Aurore D., 
+Copyright 2008-2009 Gerald Young, 
+Copyright 2008 David Roden, 
+Copyright 2008 Daniel Hornung, 
+Copyright 2008-2014 Carlos López González, 
+Copyright 2008-2009 Gerco Ballintijn, 
+Copyright 2009-2015 Konstantin Dmitriev, 
+Copyright 2009 Henrique Lopes Barone, 
+Copyright 2009 Carlos A. Sosa Navarro, 
+Copyright 2009 Ray Frederikson, 
+Copyright 2010-2012 Nikita Kitaev, 
+Copyright 2010 Brendon Higgins, 
+Copyright 2011-2014 Diego Barrios, 
+Copyright 2011-2014 Yu Chen, 
+Copyright 2012 Bertrand Greorie, 
+Copyright 2013-2015 Jerome Blanchi, 
+Copyright 2013-2015 Ivan Mahonin, 
+Copyright 2015 Denis Zdorovtsov, 
+Copyright 2011 Ramon Miranda, 
+Copyright 2015 Evgenij Katunov, 
+Copyright 2015 Max May
+</copyright>
+    <licenseUrl>https://www.gnu.org/licenses/gpl-2.0.en.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/synfig/synfig</projectSourceUrl>
+    <docsUrl>https://wiki.synfig.org/Category:Manual</docsUrl>
+    <mailingListUrl>https://forums.synfig.org/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/synfig/synfig/issues</bugTrackerUrl>
+    <tags>synfig synfg 2d animation vector graphics</tags>
+    <summary>Open-source 2D animation software</summary>
+    <description>Synfig Studio is a free, open-source and production-ready 2D animation software, designed as powerful industrial-strength solution for creating film-quality animation using a vector and bitmap artwork. It eliminates the need to create animation frame-by frame, allowing you to produce 2D animation of a higher quality with fewer people and resources.
+    
+    It is designed to produce film-quality animation with fewer people and resources and is built to eliminate the need to draw each frame individually using Morphing animation and/or Cutout animation.
+
+#### Features
+* **Vector Tweening** - Transform any vector shape into another! Synfig gives you powerful tools for full control on your vector artwork. Just set the key positions and inbetween frames will be calculated automatically.
+* **Layers and Filters** - Synfig provides 50+ layers to create artwork and animation of any complexity. Choose from various layer types: geometric, gradients, filters, distortions, transformations, fractals and others.
+* **Bones** - Full-featured bone system allows to create cutout animation using bitmap images or control your vector artwork. Use additional Skeleton Distortion layer to apply complex deformations to bitmap artwork.
+* **Advanced controls** - You can link parameters of various layers – directly or through mathematical expressions. This allows you to create advanced character puppets and other dynamic structures.
+
+    </description>
+    <releaseNotes>https://www.synfig.org/2018/09/15/synfig-studio-1-2-2-released/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
