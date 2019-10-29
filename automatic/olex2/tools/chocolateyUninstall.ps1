@@ -1,9 +1,18 @@
-﻿$packageName = 'Olex2'
+﻿$ErrorActionPreference = 'Stop'
 
-$InstallDir = Join-Path $env:ProgramData $packageName
+$DisplayedVersion = $env:ChocolateyPackageVersion.split('.')[0-1] -join '.'
 
-$DeskShortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'Olex2-1.2.lnk'
-$StartShortcut = Join-Path $env:ProgramData 'Microsoft\Windows\Start Menu\Programs\Olex2-1.2.lnk'
+$UnzipLog = Get-ChildItem $env:ChocolateyPackageFolder -Filter "*.zip.txt" |
+                  Sort-Object creationtime | Select-Object -last 1
+If ($UnzipLog) {
+   $InstallDir = Get-Content $UnzipLog.FullName | Select-Object -First 1
+} else {
+   $InstallDir = Join-Path $env:ProgramData "$env:ChocolateyPackageName-$DisplayedVersion"
+}
+
+$ShortcutName = "Olex2-$DisplayedVersion.lnk"
+$DeskShortcut = Join-Path "$env:PUBLIC\Desktop" $ShortcutName
+$StartShortcut = Join-Path $env:ProgramData "Microsoft\Windows\Start Menu\Programs\$ShortcutName"
 
 if ([System.IO.File]::Exists($DeskShortcut)) {
     Write-Debug "Found the desktop shortcut. Deleting it..."

@@ -6,7 +6,7 @@ function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri $Release
 
    $Revision = $download_page.Content -replace "^.*?(\d+)$",'$1'
-   $version = '1.2.8.' + $Revision
+   $version = '1.2.10.' + $Revision
 
    $url32 = 'http://www.olex2.org/olex2-distro/1.2/olex2-win32.zip'
    $url64 = 'http://www.olex2.org/olex2-distro/1.2/olex2-win64.zip'
@@ -28,6 +28,14 @@ function global:au_SearchReplace {
          "(^[$]checkSum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
     }
+}
+
+function global:au_BeforeUpdate() { 
+   Write-host "Grabbing splash screen with version number."
+   Write-Warning "Be sure to check the version before submitting!"
+   $OutFile  = Join-Path (Resolve-Path .) 'splash.jpg'
+   $URI      = ((split-path $Release) -replace '\\','/') + '/splash.jpg'
+   Invoke-WebRequest $URI -OutFile $OutFile
 }
 
 Update-Package

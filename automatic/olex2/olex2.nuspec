@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>olex2</id>
-    <version>1.2.8.5497</version>
+    <version>1.2.10.5506</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/olex2</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Olex²</title>
     <authors>Oleg Dolomanov, Horst Puschmann</authors>
     <projectUrl>http://www.olexsys.org/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/olex2_icon.png</iconUrl>
+    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/olex2color_icon.png</iconUrl>
     <copyright>Copyright © 2016 OlexSys</copyright>
     <licenseUrl>http://www.olex2.org/olex2-distro/1.2/update/licence.rtf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -39,6 +39,16 @@
 * Numerous drawing styles, including a few of predefined
 * Customisable main Menu and the GUI toolbar
 * Embedded Python and macro binding to the command line or interface elements
+
+### Install Options
+By default, this package deposits Olex² in C:\ProgramData\ and will *not* install a desktop icon.
+
+* `/Icon` - Installs the desktop icon.
+* `/INSTALLDIR:` - Deposits Olex² to a directory you specify
+
+Example usage:  `choco install olex2 -params '"/INSTALLDIR:""c:\Program Files"""'`
+_(note: the double-double quotes around the path are only needed if it contains spaces)_
+
     </description>
     <dependencies>
       <dependency id="vcredist2008" version="9.0.30729" />

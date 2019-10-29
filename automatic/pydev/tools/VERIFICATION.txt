@@ -7,6 +7,6 @@ https://sourceforge.net/projects/pydev/files/latest/download
 
 Direct Download:
 
-Version  : 7.3.0
-URL      : https://sourceforge.net/projects/pydev/files/pydev/PyDev%207.3.0/PyDev%207.3.0.zip
-CheckSum : 890E11FFB0387F446C91C2E15457BC790F25937AFB79DD7BA57530183C775C22
+Version  : 7.4.0
+URL      : https://sourceforge.net/projects/pydev/files/pydev/PyDev%207.4.0/PyDev%207.4.0.zip
+CheckSum : DFEAFB5C83C261BEE900F0A419C48C94B9621BA5638A83B5E8A1EAB8D0C54599
