@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>pinta</id>
+    <version>1.6</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/bleachbit.portable</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Pinta</title>
+    <authors>Andrew Davis, Cameron White, Don McComb, Jonathan Bergknoff, Jonathan Pobst, Marius Ungureanu, and Robert Nordan</authors>
+    <projectUrl>https://pinta-project.com/pintaproject/pinta/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@edc90dcbfe33d690a5236d55426978e37fd4f6c4/Icons/pinta_icon.png</iconUrl>
+    <copyright>Copyright (C) 2010 Jonathan Pobst</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/PintaProject/Pinta/master/license-mit.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/PintaProject/Pinta</projectSourceUrl>
+    <docsUrl>https://pinta-project.com/pintaproject/pinta/howto</docsUrl>
+    <mailingListUrl>http://groups.google.com/group/pinta</mailingListUrl>
+    <bugTrackerUrl>https://bugs.launchpad.net/pinta/+bugs</bugTrackerUrl>
+    <tags>pinta paint.net paint image editor drawing FOSS embedded</tags>
+    <summary>A free, open source program for drawing and image editing.</summary>
+    <description>Pinta is a free, open source drawing/editing program modeled after Paint.NET. Its goal is to provide users with a simple yet powerful way to draw and manipulate images on Linux, Mac, and Windows.
+
+![Pinta Screenshot](https://pinta-project.com/pintaproject/pinta/theme/images/ss1-thumb.jpg)
+
+#### Basics
+* **Drawing Tools** Use easy drawing tools to draw freehand, lines, rectangles, ellipses, and more.
+* **Adjustments and Effects** Pinta includes over 35 adjustments and effects for tweaking your images.
+* **Multilingual** Use Pinta in your language. Pinta is at least partially translated into over 55 languages.
+* **Full History** Don't be afraid to experiment, Pinta tracks your full history so you can always undo.
+* **Multiple Layers** Use layers to help separate and group elements of your image for easy editing.
+* **Your Workspace** Like docked windows? No problem. Floating windows? No problem. You can even mix and match. 
+    </description>
+    <releaseNotes>https://pinta-project.com/pintaproject/pinta/releases/1-6</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

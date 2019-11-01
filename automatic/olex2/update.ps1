@@ -1,15 +1,15 @@
 import-module au
 
-$Release = 'http://www.olex2.org/olex2-distro/1.2/update/version.txt'
+$Release = 'http://www.olex2.org/olex2-distro/1.3/update/version.txt'
 
 function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri $Release
 
    $Revision = $download_page.Content -replace "^.*?(\d+)$",'$1'
-   $version = '1.2.10.' + $Revision
+   $version = '1.3.0.' + $Revision
 
-   $url32 = 'http://www.olex2.org/olex2-distro/1.2/olex2-win32.zip'
-   $url64 = 'http://www.olex2.org/olex2-distro/1.2/olex2-win64.zip'
+   $url32 = 'http://www.olex2.org/olex2-distro/1.3/olex2-win32.zip'
+   $url64 = 'http://www.olex2.org/olex2-distro/1.3/olex2-win64.zip'
 
    return @{ 
             Version = $version

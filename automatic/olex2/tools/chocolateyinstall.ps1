@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$url32       = 'http://www.olex2.org/olex2-distro/1.2/olex2-win32.zip'
-$url64       = 'http://www.olex2.org/olex2-distro/1.2/olex2-win64.zip'
-$checkSum32  = 'ea508f67fa117ee9f72a4db49fa8c518c432bdd2180a727b5532bbad791679ed'
-$checkSum64  = 'ca8805c4165e01f53626a9c82e600b9a2937363f010f39bab9d7877c43991566'
+$url32       = 'http://www.olex2.org/olex2-distro/1.3/olex2-win32.zip'
+$url64       = 'http://www.olex2.org/olex2-distro/1.3/olex2-win64.zip'
+$checkSum32  = '47d7ba2ecf5eef54f06af994def8de344194fe609c7155f0afa64f85f2b9a0b1'
+$checkSum64  = '57efed2e0e890c834d1b0fd1fac97e656225cd1841a4d08d0d7ee6f9979d38b7'
 
 $DisplayedVersion = $env:ChocolateyPackageVersion.split('.')[0-1] -join '.'
 
