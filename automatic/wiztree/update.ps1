@@ -32,7 +32,7 @@ function global:au_SearchReplace {
 if ($MyInvocation.InvocationName -ne '.') { 
    function global:au_BeforeUpdate() { 
    Write-host "Downloading WizTree $($Latest.Version)"
-      Get-RemoteFiles -Purge
+      Get-RemoteFiles -Purge -NoSuffix
    }
 
    update -ChecksumFor none
