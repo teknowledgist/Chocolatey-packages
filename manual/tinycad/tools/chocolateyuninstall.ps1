@@ -2,7 +2,7 @@ $ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
    packageName   = $env:ChocolateyPackageName
-   softwareName  = 'TinyCAD*'
+   softwareName  = 'Synfig Studio*'
    fileType      = 'EXE'
    silentArgs   = '/S'
    validExitCodes= @(0)
