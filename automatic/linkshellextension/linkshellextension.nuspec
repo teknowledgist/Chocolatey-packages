@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>linkshellextension</id>
+    <version>3.9.3.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/linkshellextension</packageSourceUrl>
+    <owners>schinagl</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Link Shell Extension</title>
+    <authors>Hermann Schinagl</authors>
+    <iconUrl>https://schinagl.priv.at/nt/hardlinkshellext/symboliclinkicon_10.png</iconUrl>
+    <copyright>© 1999 - 2019 Hermann Schinagl</copyright>
+    <licenseUrl>http://schinagl.priv.at/nt/hardlinkshellext/license.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://schinagl.priv.at/nt/hardlinkshellext/hardlinkshellext.html#introduction</docsUrl>
+    <mailingListUrl>mailto:Hermann.Schinagl@gmx.net</mailingListUrl>
+    <tags>linkshellextension SPACE_SEPARATED</tags>
+    <summary>Explorer extension for easy creation of Hardlinks, Junctions, Volume Mountpoints and Symbolic Links</summary>
+    <description>Link Shell Extension (LSE) provides for the creation of Hardlinks, Junctions, Volume Mountpoints, Symbolic Links, a folder cloning process that utilises Hardlinks or Symbolic Links and a copy process taking care of Junctions, Symbolic Links, and Hardlinks. LSE, as its name implies is implemented as a Shell extension and is accessed from Windows Explorer, or similar file/folder managers.  The extension allows the user to select one or many files or folders, then using the mouse, complete the creation of the required Links - Hardlinks, Junctions or Symbolic Links or in the case of folders to create Clones consisting of Hard or Symbolic Links. LSE is supported on all Windows versions that support NTFS version 5.0 or later. Hardlinks, Junctions and Symbolic Links are NOT supported on FAT file systems, and nor is the Cloning and Smart Copy process supported on FAT file systems.</description>
+    <releaseNotes>[Changelog](http://schinagl.priv.at/nt/hardlinkshellext/linkshellextension.html#history)</releaseNotes>
+    <!-- =============================== -->      
+    <dependencies>
+      <dependency id="vcredist2017" version="14.16.27033" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
