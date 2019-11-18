@@ -26,13 +26,19 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
    @{
-      "tools\chocolateyInstall.ps1" = @{
-         "(^   url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-         "(^   url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
-         "(^   Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-         "(^   Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+      "tools\VERIFICATION.txt" = @{
+         "(^Version\s*:)(.*)"         = "`$1 $($Latest.Version)"
+         "(^x86 URL\s*:\s*)('.*')"    = "`$1'$($Latest.URL32)'"
+         "(^x86 SHA256\s*:\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+         "(^x64 URL\s*:\s*)('.*')"    = "`$1'$($Latest.URL64)'"
+         "(^x64 SHA256\s*:\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
       }
    }
 }
 
-Update-Package -NoCheckChocoVersion
+function global:au_BeforeUpdate() { 
+   Write-host "Downloading Link Shell Extension $($Latest.AppVersion) installer files"
+   Get-RemoteFiles -Purge -NoSuffix
+}
+
+update -ChecksumFor none
