@@ -1,8 +1,8 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
    packageName   = $env:ChocolateyPackageName
-   softwareName  = 'TinyCAD*'
+   softwareName  = 'Link Shell*'
    fileType      = 'EXE'
    silentArgs   = '/S'
    validExitCodes= @(0)

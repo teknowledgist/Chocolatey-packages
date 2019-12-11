@@ -4,13 +4,13 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>tinycad</id>
-    <version>2.90.00.686</version>
+    <version>3.00.00</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/bluebeamvu</packageSourceUrl>
-    <owners>Teknowledgist, dtgm, adgellida</owners>
+    <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>TinyCAD</title>
-    <authors>beischer, don_lucas, mattpyne, mlangezaal</authors>
-    <projectUrl>http://sourceforge.net/apps/mediawiki/tinycad/index.php?title=TinyCAD</projectUrl>
+    <authors>mattpyne, beischer, don_lucas, mlangezaal</authors>
+    <projectUrl>https://www.tinycad.net/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/tinycad_icon.png</iconUrl>
     <copyright>© 2017 - TinyCAD.net</copyright>
     <licenseUrl>https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html</licenseUrl>
@@ -32,7 +32,7 @@
     </description>
     <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
     <dependencies>
-      <dependency id="autohotkey.portable" version="1.1" />
+      <dependency id="vcredist2017" version="14.16" />
     </dependencies>
   </metadata>
   <files>

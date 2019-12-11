@@ -6,7 +6,7 @@ $DownloadArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = Join-Path $env:TEMP 'doPDF\doPDF_installer.exe'
    url          = 'http://download.dopdf.com/download/setup/dopdf-full.exe'
-   checksum     = 'c2139b8b6b3db7321a10b4a7d15d55149af6ad7c81478247023fb2f85de973d4'
+   checksum     = 'c961e5e8c0629620e1f9f12a62eba9dd46ee745f917a138e474efc01164d676b'
    checksumType = 'sha256'
    GetOriginalFileName = $true
 }
