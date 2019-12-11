@@ -4,11 +4,11 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>draftsight</id>
-    <version>2019.00</version>
+    <version>2019.02</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/draftsight</packageSourceUrl>
     <owners>Teknowledgist, BasicTheProgram</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Draftsight 2019 SP0 (trialware)</title>
+    <title>Draftsight 2019 SP2 (trialware)</title>
     <authors>Dassault Systèmes</authors>
     <projectUrl>https://www.3ds.com/products-services/draftsight-cad-software/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/draftsight2018_icon.png</iconUrl>
