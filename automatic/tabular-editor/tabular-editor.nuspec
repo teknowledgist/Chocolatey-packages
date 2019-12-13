@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>tabular-editor</id>
+    <version>2.9.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/tabular-editor</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Tabular Editor (Install)</title>
+    <authors>Daniel Otykier</authors>
+    <projectUrl>https://github.com/otykier/TabularEditor</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@1d998802f85dc4a9805b42f93aa057910783caa7/Icons/tabular-editor_icon.png</iconUrl>
+    <copyright>Copyright © 2016 otykier</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/otykier/TabularEditor/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/otykier/TabularEditor</projectSourceUrl>
+    <docsUrl>https://github.com/otykier/TabularEditor/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/otykier/TabularEditor/issues</bugTrackerUrl>
+    <tags>tabular-editor tabular editor measure calculate model analysis SSAS SQL embedded FOSS</tags>
+    <summary>A lightweight editor for SSAS Tabular Models</summary>
+    <description>Tabular Editor is a tool that lets you easily manipulate and manage measures, calculated columns, display folders, perspectives and translations in SQL Server Analysis Services (SSAS) Tabular Models (from Compatibility Level 1200 and onwards). The tool is written entirely in .NET WinForms (C#).
+    
+### Features
+* Load/save Model.bim files
+* Connect/deploy to SSAS Tabular Databases
+* Hierarchical display of model objects
+* Select and edit properties of multiple objects at once
+* Duplicate multiple objects and perform batch renamings
+* Drag and drop objects between display folders and tables
+* Add, edit and simulate perspectives and translations
+* View perspectives/translations within object context
+* Undo/Redo support
+* Replace tables
+* Roles and Row-Level Security
+* View table partition definitions
+* DAX expression editor with syntax highlighting (for measures and calculated columns)
+* Advanced Scripting
+* Custom actions to boost productivity
+* Scripting/referencing objects as DAX/TMSL/TOM(C#)
+* Deployment Wizard supporting partial deployment
+* Command-line options and deployment
+* Metadata Backup
+* Formula Fix-up and Formula Dependencies
+* Import/Export Translations
+* Save to Folder / Open from Folder (Experimental)
+* User Settings Files
+* Best Practice Analyzer
+
+    </description>
+    <releaseNotes>https://github.com/otykier/TabularEditor/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
