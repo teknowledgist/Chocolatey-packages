@@ -1,4 +1,4 @@
-From:  Files installed with TinyCAD
+From:  https://raw.githubusercontent.com/matt123p/TinyCAD/master/src/License.TXT
 --------------------------------------
 
                   GNU LESSER GENERAL PUBLIC LICENSE

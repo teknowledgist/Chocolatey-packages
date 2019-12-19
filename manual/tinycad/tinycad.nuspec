@@ -5,21 +5,21 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>tinycad</id>
     <version>3.00.00</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/bluebeamvu</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/tinycad</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>TinyCAD</title>
     <authors>mattpyne, beischer, don_lucas, mlangezaal</authors>
     <projectUrl>https://www.tinycad.net/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/tinycad_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@bf5b98fa9c60fdc33c4b26fa5e30774c01192215/Icons/tinycad_icon.png</iconUrl>
     <copyright>© 2017 - TinyCAD.net</copyright>
     <licenseUrl>https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://sourceforge.net/p/tinycad/code/HEAD/tree/</projectSourceUrl>
-    <docsUrl>https://sourceforge.net/p/tinycad/wiki/Home/</docsUrl>
-    <mailingListUrl>https://uk.groups.yahoo.com/neo/groups/tinycad/info</mailingListUrl>
-    <bugTrackerUrl>https://sourceforge.net/projects/tinycad/support?source=navbar</bugTrackerUrl>
-    <tags>tinycad circuit-diagram schematics PCB SPICE EDA embedded</tags>
+    <projectSourceUrl>https://github.com/matt123p/TinyCAD</projectSourceUrl>
+    <docsUrl>https://www.tinycad.net/Home/Documentation</docsUrl>
+    <mailingListUrl>https://forum.tinycad.net/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/matt123p/TinyCAD/issues</bugTrackerUrl>
+    <tags>tinycad circuit-diagram schematics PCB SPICE EDA embedded FOSS</tags>
     <summary>An open source schematic capture program</summary>
     <description>TinyCAD is a program for drawing circuit diagrams commonly known as schematic drawings. It supports standard and custom symbol libraries. It supports PCB layout programs with several netlist formats and can also produce SPICE simulation netlists.
 
@@ -27,10 +27,14 @@
 
 * Flat or Hierarchical Schematic Entry
 * Many popular PCB Layout compatible netlist formats
+* Searchable symbol library
+* Edit and create your own new symbols and libraries
+* Import and export libraries
 * Convenient support for embedding graphical images in drawings
+* Spread a complex schematic over more than one sheet 
 
     </description>
-    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <releaseNotes>https://github.com/matt123p/TinyCAD/tree/master/Release%20Notes</releaseNotes>
     <dependencies>
       <dependency id="vcredist2017" version="14.16" />
     </dependencies>

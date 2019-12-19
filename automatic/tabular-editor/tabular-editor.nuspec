@@ -50,6 +50,9 @@
 
     </description>
     <releaseNotes>https://github.com/otykier/TabularEditor/releases</releaseNotes>
+    <dependencies>
+      <dependency id="netfx-4.6.2" version="4.6.2" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
