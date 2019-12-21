@@ -1,0 +1,17 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The installer is available by clicking on the "Download for Windows" 
+button on the home page:  
+https://standardnotes.org/
+
+Or from the GitHub repository releases page:
+https://github.com/standardnotes/desktop/releases/latest
+
+Direct Download:
+
+Version  :  3.0.24
+URL      : 'https://github.com/standardnotes/desktop/releases/download/v3.0.24/Standard-Notes-Setup-3.0.24.exe'
+Checksum : '2C83F2431DC73D1208ED4011AF349DD10999FF91489C83F89EC1F8118E968010'
+

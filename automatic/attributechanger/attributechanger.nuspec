@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>attributechanger</id>
-    <version>9.10.5</version>
+    <version>9.50-rc</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/attributechanger</packageSourceUrl>
     <owners>Teknowledgist, ferventcoder</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

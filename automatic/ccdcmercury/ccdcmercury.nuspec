@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>ccdcmercury</id>
-    <version>4.2.0</version>
+    <version>4.3.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/ccdcmercury</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

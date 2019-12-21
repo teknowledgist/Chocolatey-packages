@@ -11,7 +11,7 @@
     <title>TinyCAD</title>
     <authors>mattpyne, beischer, don_lucas, mlangezaal</authors>
     <projectUrl>https://www.tinycad.net/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@bf5b98fa9c60fdc33c4b26fa5e30774c01192215/Icons/tinycad_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@69bbeb1d00ac44d0add30897245cf5631c6fea92/Icons/tinycad_icon.png</iconUrl>
     <copyright>© 2017 - TinyCAD.net</copyright>
     <licenseUrl>https://www.gnu.org/licenses/old-licenses/lgpl-2.1.en.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

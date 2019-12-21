@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>standardnotes</id>
+    <version>3.0.24</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/standardnotes</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Standard Notes</title>
+    <authors>Standard Notes Ltd.</authors>
+    <projectUrl>https://standardnotes.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/standardnotes/desktop@5833547c8d7ab737aabfc617ab91c1bb1ec06f67/app/icon/Icon-256x256.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://raw.githubusercontent.com/standardnotes/desktop/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/standardnotes/desktop</projectSourceUrl>
+    <docsUrl>https://standardnotes.org/getting-started</docsUrl>
+    <mailingListUrl>https://github.com/standardnotes/forum/issues</mailingListUrl>
+    <bugTrackerUrl>https://github.com/standardnotes/desktop/issues</bugTrackerUrl>
+    <tags>standardnotes notes private encryption sync FOSS embedded</tags>
+    <summary>A safe place for your notes, thoughts, and life's work</summary>
+    <description>Standard Notes is a safe place for your notes, thoughts, and life's work.
+
+Standard Notes is free and open-source to use on every platform, and comes standard with cross-platform sync and end-to-end privacy. 
+
+### Features
+* Automatic sync with no limit on data capacity
+* Unlimited devices
+* Web access
+* Offline access
+* **Simple** -- You'll spend less time fighting and more time writing. It's faster and lighter than most notes apps.
+* **Long-lasting.** -- Built carefully to optimize overall lifetime and long-term survivability.
+* **100% Private** -- Your notes are encrypted with AES-256 encryption and secured so only you can decrypt them. No one but you can read your notes (not even us).  [See the Privacy Manafesto](https://standardnotes.org/privacy)
+
+**Purchase the [Extended version](https://standardnotes.org/extensions)** to access [powerful extensions](https://standardnotes.org/extensions#editors).  Compose any kind of note, from rich text, to Markdown and code. Change the mood and find new inspiration with beautiful themes.
+
+    </description>
+    <releaseNotes>https://github.com/standardnotes/desktop/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
