@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>lmms</id>
+    <version>1.2.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/lmms</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <title>LMMS</title>
+    <authors>Tobias Doerffel</authors>
+    <projectUrl>https://lmms.io/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/LMMS/lmms@8154f886ed0d06f1915be179291507b6f1625443/cmake/nsis/assets/Logo.png</iconUrl>
+    <copyright>Copyright © 2008-2019 LMMS Developers</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/LMMS/lmms/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/LMMS/lmms</projectSourceUrl>
+    <docsUrl>https://docs.lmms.io/user-manual/</docsUrl>
+    <mailingListUrl>https://lmms.io/forum/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/LMMS/lmms/issues</bugTrackerUrl>
+    <tags>lmms music mixing beatbox synthesizer bassline editor MIDI FOSS embedded</tags>
+    <summary>A free, open-source music generation system</summary>
+    <description>LMMS is a sound generation system, synthesizer, beat/bassline editor and MIDI control system which can power an entire home studio. Sounds and tones can be generated, played and artfully arranged to create entire tracks easily, giving you the opportunity to create music from beginning to end. The tools to create the sounds, arrange the sounds and rhythms to create tracks, layer the tracks to create songs, and then save the songs to an output format are all there, ready for you to use. LMMS can also connect to your MIDI keyboard, allowing you to play music live.
+
+LMMS seems to have much in common (at leas in principle) with Apple's Garage Band, FL Studio (formerly Fruity Loops), Logic Studio, Beat Machine Pro and similar powerful audio tools. In terms of capability, LMMS easily matches the lower to middle-tier professional tools available, making it a great introduction to audio production which is constantly developing.
+
+### Features
+* Sequence, compose, mix and automate songs in one simple interface
+* Note playback via MIDI or typing keyboard
+* Consolidate instrument tracks using Beat+Bassline Editor
+* Fine tune patterns, notes, chords and melodies using Piano Roll Editor
+* Full user-defined track-based automation and computer-controlled automation sources
+* Import of MIDI files and Hydrogen project files
+* Built-in 64-bit VST instrument support with 32-bit VST bridge (64-bit Windows)
+* 16 built in synthesizers, including emultations of Roland ® TB-303, Commodore 64 ® SID microchip, Nintendo ® NES and GameBoy, Yamaha ® OPL2 chip and more
+* Embedded ZynAddSubFx: Polyphonic, mutlitimbral, microtonal, multi-voice additive, subtractive and pad synthesis all in one powerful plugin
+* Native multisample support for SoundFont ® (SF2), Giga (GIG) and Gravis UltraSound ® (GUS) formats for high quality instrument patches and banks
+* Drop-in LADSPA plug-in support
+* Drop-in VST ® effect plug-in support (Linux and Windows)
+* Built-in compressor, limiter, delay, reverb, distortion and bass enhancer
+* Bundled graphic and parametric equalizers
+* Built-in visualization/spectrum analyzer
+    </description>
+    <releaseNotes>https://github.com/LMMS/lmms/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

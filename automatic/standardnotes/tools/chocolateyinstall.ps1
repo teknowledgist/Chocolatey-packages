@@ -7,7 +7,7 @@ $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
    fileType       = 'EXE'
    file           = $fileLocation
-   softwareName   = "$env:ChocolateyPackageName*"
+   softwareName   = "Standard Notes*"
    silentArgs     = '/S'
    validExitCodes = @(0)
 }
