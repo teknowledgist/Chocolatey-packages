@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>icopy</id>
-    <version>1.6.5</version>
+    <version>1.6.6</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/icopy</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -41,7 +41,7 @@ iCopy can be run as a Windows application, but its functionality can entirely be
     </description>
     <releaseNotes>http://icopy.sourceforge.net/category/rel/</releaseNotes>
     <dependencies>
-      <dependency id="icopy.install" version="[1.6.5]" />
+      <dependency id="icopy.install" version="[1.6.6]" />
     </dependencies>
   </metadata>
   <files>
