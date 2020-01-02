@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>weasis</id>
+    <version>3.5.4</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/standardnotes</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Weasis Medical Viewer</title>
+    <authors>University Hospital of Geneva</authors>
+    <projectUrl>https://nroduit.github.io/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/nroduit/Weasis@534ac7be339ded37ab1d4372a50f11463d90f058/weasis-distributions/script/resources/linux/rpm/Weasis.png</iconUrl>
+    <copyright>© 2009-2019 Weasis Team</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/nroduit/Weasis/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/nroduit/Weasis</projectSourceUrl>
+    <docsUrl>https://nroduit.github.io/en/basics/</docsUrl>
+    <mailingListUrl>http://groups.google.com/forum/#!forum/weasis</mailingListUrl>
+    <bugTrackerUrl>https://github.com/nroduit/Weasis/issues</bugTrackerUrl>
+    <tags>weasis medical viewer imaging DICOM FLOSS embedded</tags>
+    <summary>A modular, multipurpose standalone and web-based DICOM viewer</summary>
+    <description>Weasis is a multipurpose standalone and web-based DICOM viewer with a highly modular architecture. It is a very popular clinical viewer used in healthcare by hospitals, health networks, multicenter research trials, and patients.
+
+It has been designed to meet several expectations of clinical information systems and their future evolution regarding medical imaging: providing web-based access to radiological images, as well as covering a considerable number of DICOM types and offering multimedia capabilities.
+
+## General Features
+* Flexible integration to HIS or PHR (see [integration documentation](https://nroduit.github.io/en/basics/customize/integration/))
+* Desktop distribution (Windows, Mac OS X, and Linux)
+* Web access through [weasis protocol](https://nroduit.github.io/en/getting-started/weasis-protocol)
+* Embedded DICOM viewer (portable distribution) in CD/DVD or other portable media
+* [Multi-language support](https://nroduit.github.io/en/getting-started/translating/)
+* [Configuration of preferences](https://nroduit.github.io/en/basics/customize/preferences/) on server-side and client-side
+* [API for building custom plug-ins](https://nroduit.github.io/en/basics/customize/build-plugins/)
+* DICOM Send (storeSCU and STOW-RS)
+* DICOM Query/Retrieve (C-GET, C-MOVE and WADO-URI) and DICOMWeb (QUERY and RETRIEVE)
+* Dicomizer module (allow importing standard images and convert them in DICOM)
+
+## Viewer Features
+* Display all kinds of DICOM files (including multi-frame, enhanced, MPEG-2, MPEG-4, MIME Encapsulation, SR, PR, KOS, AU, RT and ECG)
+* Viewer for common image formats (TIFF, BMP, GIF, JPEG, PNG, RAS, HDR, and PNM)
+* Image manipulation (pan, zoom, windowing, presets, rotation, flip, scroll, crosshair, filtering...)
+* Layouts for comparing series or studies
+* Advanced series synchronization options
+* Display Presentation States (GSPS) and Key Object Selection
+* Create key images (Key Object Selection object) by selection
+* Support of Modality LUTs, VOI LUTs, and Presentation LUTs (even non-linear)
+* Support of several screens with different calibration, support of HiDPI (High Dots Per Inch) monitors, full-screen mode
+* Multiplanar reconstructions and Maximum Intensity Projection
+* Display Structured Reports
+* Display and search into all DICOM attributes
+* Display cross-lines
+* Measurement and annotation tools
+* Region statistics of pixels (Min, Max, Mean, StDev, Skewness, Kurtosis, Entropy)
+* Histogram of modality values
+* SUV measurement
+* Save measurements and annotations in DICOM PR or XML file
+* Import CD/DVD and local DICOM files
+* Export DICOM with several options (DICOMDIR, ZIP, ISO image file with Weasis, TIFF, JPEG, PNG...)
+* Magnifier glass
+* Native and DICOM printing
+* Read DICOM image containing float or double data (Parametric Map)
+* DICOM ECG Viewer
+
+    </description>
+    <releaseNotes>https://github.com/nroduit/Weasis/blob/master/CHANGELOG.md</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

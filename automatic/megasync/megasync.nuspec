@@ -18,7 +18,7 @@
     <projectSourceUrl>https://github.com/meganz/MEGAsync</projectSourceUrl>
     <docsUrl>https://mega.nz/help/client/megasync</docsUrl>
     <bugTrackerUrl>https://github.com/meganz/MEGAsync/issues</bugTrackerUrl>
-    <tags>megasync mega sync cloud storage synchronization client</tags>
+    <tags>megasync mega sync cloud storage synchronization client notsilent</tags>
     <summary>Automated synchronization between your computer and your MEGA cloud</summary>
     <description>MEGAsync is an installable application that synchronises folders between your computer and your MEGA Cloud Drive. All files and subfolders will be replicated in both directions. Changes that you make on your device will also be made on the MEGA Cloud Drive in near to real time (within the limits of link / system latency and file transfer times). Similarly, changes made in your MEGA Cloud Drive (such as renaming, moving and deleting) will also be made to the synced folders on your device.
 
@@ -28,7 +28,12 @@
 * **Secure Collaboration** - Share data and communicate with your contacts securely, and see their updates in real time.
 * **Massive Storage Space** - Not only are we more secure than our major competitors, we also provide a more generous amount of free storage.
 * **Live Encrypted Backup** - With our real-time file synchronisation and versioning features, your data is always safe and recoverable.
-* **Public Source Code** - To enable independent verification of the correctness and integrity of our crypto model and its implementation, we publish the full source code of our client apps.    </description>
+* **Public Source Code** - To enable independent verification of the correctness and integrity of our crypto model and its implementation, we publish the full source code of our client apps.
+
+##### Note
+
+The MEGAsync client does not have a silent **uninstall**.  Two dialog windows appear confirming uninstallation.
+    </description>
     <releaseNotes>https://github.com/meganz/MEGAsync/releases</releaseNotes>
   </metadata>
   <files>
