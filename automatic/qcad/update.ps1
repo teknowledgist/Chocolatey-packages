@@ -12,14 +12,15 @@ function global:au_GetLatest {
    
    $url32 = "https://www.qcad.org$Stub32"
    $url64 = "https://www.qcad.org$Stub64"
-
    $newversion = ($stub64 -split '-')[1]
+
    $oldversion = '3.24.0'
    if ([version]$newversion -ne [version]$oldversion) {
       Write-Warning "New QCad version:  $version"
    } else {
-      Write-Warning "Same QCad version: nothing to do"
+      $url32 = $url64 = 'https://cdn.jsdelivr.net/gh/qcad/qcad@120b14d6d2f79d4332f528d5dcd908137dc60f14/support/doc/api/qcad_icon.png'
    }
+   
    return @{ 
             Version = $newversion
             URL32 = $url32

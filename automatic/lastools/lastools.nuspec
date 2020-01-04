@@ -27,7 +27,7 @@ LAStools is the fastest and most memory efficient solution for batch-scripted mu
 
 Included in LAStools is the open-source LiDAR compressor, LASzip, which is the de facto industry standard for compressed LiDAR. 
 
-####[License note](http://www.cs.unc.edu/~isenburg/lastools/LICENSE.txt)
+#### [License note](http://www.cs.unc.edu/~isenburg/lastools/LICENSE.txt)
 There are TWO parts to LAStools. One part is OPEN source (LGPL 2.1). The other part is CLOSED source and requires licensing for most commercial or government use. For education and evaluation purposes you can use and test LAStools as much as you need to.
     </description>
     <releaseNotes>http://www.cs.unc.edu/~isenburg/lastools/download/CHANGES.txt</releaseNotes>

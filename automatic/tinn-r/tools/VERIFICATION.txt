@@ -4,7 +4,7 @@ in verifying that this package's contents are trustworthy.
  
 The installer is available by following the link to download the
 particular version on this page:  
-   http://nbcgib.uesc.br/lec/software/editores/tinn-r/en#h10-download
+   https://nbcgib.uesc.br/tinnr/en/download
 or by getting the same download from SourceForge:
    https://sourceforge.net/projects/tinn-r/files/latest/download
 
