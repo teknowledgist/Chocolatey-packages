@@ -22,7 +22,7 @@
     <summary>Easily find path lengths</summary>
     <description>Path Length Checker is a stand-alone app that allows you to specify a root directory, and it gives you back a list of all paths (i.e. files and directories) in that root directory and their lengths. It includes features such as pattern matching and min/max length constraints, as well as the ability to specify a string that should replace the root directory in the results brought back, allowing you to quickly see path lengths if you were to move the files/folders to another location.
 
-    ![Example](https://cdn.jsdelivr.net/gh/deadlydog/PathLengthChecker@221aae256865998137f21f05f9cd79c081c19df5/docs/Images/PathLengthChecker.png)  
+![Example](https://cdn.jsdelivr.net/gh/deadlydog/PathLengthChecker@221aae256865998137f21f05f9cd79c081c19df5/docs/Images/PathLengthChecker.png)  
     </description>
     <releaseNotes>https://github.com/deadlydog/PathLengthChecker/releases</releaseNotes>
   </metadata>
