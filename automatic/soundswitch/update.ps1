@@ -14,31 +14,26 @@ function global:au_GetLatest {
    $version = $version.trim('v')
    
    return @{ 
-            Version  = $version
-            URL64    = "https://github.com$url"
-            Options  = @{
-               Headers = @{
-                  ContentType = 'application/octet-stream'
-               }
-            }
-         }
+            Version = $version
+            URL32   = "https://github.com$url"
+   }
 }
 
 
 function global:au_SearchReplace {
    @{
       "tools\VERIFICATION.txt" = @{
-         "(^Version\s+:).*"      = "`${1} $($Latest.Version)"
-         "(^URL\s+:).*"          = "`${1} $($Latest.URL32)"
-         "(^Checksum\s+:).*"     = "`${1} $($Latest.Checksum)"
+            "(^Version\s+:).*"      = "`${1} $($Latest.Version)"
+            "(^URL\s+:).*"          = "`${1} $($Latest.URL32)"
+            "(^Checksum\s+:).*"     = "`${1} $($Latest.Checksum32)"
       }
    }
 }
 
 function global:au_BeforeUpdate() { 
+   Write-host "Downloading SoundSwitch v$($Latest.Version) installer"
    Get-RemoteFiles -Purge -NoSuffix
 }
 
 
-update -ChecksumFor none
-if ($global:au_old_force -is [bool]) { $global:au_force = $global:au_old_force }
+update -ChecksumFor none -nocheckchocoversion

@@ -11,7 +11,7 @@ $InstallArgs = @{
    validExitCodes = @(0)
 }
 
-Get-Process -Name soundswitch -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
+Get-Process -Name $env:ChocolateyPackageName -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
 
 Install-ChocolateyInstallPackage @InstallArgs
 New-Item "$fileLocation.ignore" -Type file -Force | Out-Null
