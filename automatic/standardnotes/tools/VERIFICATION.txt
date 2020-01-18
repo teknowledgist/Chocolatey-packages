@@ -11,7 +11,7 @@ https://github.com/standardnotes/desktop/releases/latest
 
 Direct Download:
 
-Version  : 3.0.24
-URL      : https://github.com/standardnotes/desktop/releases/download/v3.0.24/Standard-Notes-Setup-3.0.24.exe
-Checksum : 2C83F2431DC73D1208ED4011AF349DD10999FF91489C83F89EC1F8118E968010
+Version  :  3.0.25
+URL      : https://github.com/standardnotes/desktop/releases/download/v3.0.25/Standard-Notes-Setup-3.0.25.exe
+$157F4D80F36EA05C60CD65A6B9BE5638BD7CA392339AFA58F351C315937E538B7
 

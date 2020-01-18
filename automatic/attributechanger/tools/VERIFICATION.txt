@@ -11,7 +11,7 @@ letter into a numbered version as identifed below
 
 Direct Download:
 
-Version  : 9.50-rc
-URL      : https://www.petges.lu/pubfiles/ac-950-rc.exe
-CheckSum : D912F099EDA2428767D800C1B55C6979CE487E978C70183B3783343C0C9C1E9F
+Version  : 9.50
+URL      : https://www.petges.lu/pubfiles/ac-950.exe
+CheckSum : 98228FEDD2413E7B55F0736FA808A19E9D6A256475F4573CDF8A9060DD4C6D6B
 
