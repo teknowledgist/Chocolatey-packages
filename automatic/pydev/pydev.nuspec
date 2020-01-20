@@ -52,7 +52,7 @@ This package drops the PyDev extension into a Chocolately-installed, [*Eclipse*]
     </description>
     <releaseNotes>http://www.pydev.org/history_pydev.html</releaseNotes>
     <dependencies>
-      <dependency id="jre8" version="8.0" />
+      <dependency id="adoptopenjdk8jre" version="8.222" />
       <dependency id="eclipse" version="4.6" />
     </dependencies>
   </metadata>

@@ -38,7 +38,7 @@ $InstallArgs = @{
    PackageName    = $packageName
    File           = Join-Path $WorkSpace "$packageName.msi"
    fileType       = 'msi'
-   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
+   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($packageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1 LICENSETYPE=0"
    validExitCodes = @(0, 3010, 1641)
 }
 
