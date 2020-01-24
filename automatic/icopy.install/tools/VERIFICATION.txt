@@ -7,7 +7,7 @@ on this page:  https://icopy.sourceforge.io/download/
 
 Direct Download:
 
-Version  : 1.6.6
-URL      : https://sourceforge.net/projects/icopy/files/iCopy/1.6.6/iCopy1.6.6setup.exe
-CheckSum : 730FCB1197A03167DA2CF5B25441403D39E864F192105983B9F127115518F76E
+Version  : 1.7.0
+URL      : https://sourceforge.net/projects/icopy/files/iCopy/1.7.0/iCopy1.7.0setup.exe
+CheckSum : 944D004FF4414D1C030FE871EEBA9D6BF528B1AFE7CC2B601BF12663DE307011
 

@@ -7,6 +7,6 @@ PDF24 can be downloaded from:
 
 Direct download:
 
-Version  : 9.0.1
-URL      : https://stx.pdf24.org/download/pdf24-creator-9.0.1.msi
-CheckSum : ADBE8D24DE26D0CA32C74AF9F6502DB79627A172C11F7682620DAD0D77B6E9A9
+Version  : 9.0.3
+URL      : https://stx.pdf24.org/download/pdf24-creator-9.0.3.msi
+CheckSum : 9055E4AB7290E573952D4A0718537D77371B58C20731BACDE7B9788FC3221A73

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pdf24</id>
-    <version>9.0.1</version>
+    <version>9.0.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdf24</packageSourceUrl>
     <owners>freaky-m0,jberezanski,teknowledgist,chocolatey,pocki_c</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -13,7 +13,7 @@
     <projectUrl>http://en.pdf24.org/creator.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@cc4b1558ccc7853df6d0cb4f1f79cb63caede42b/Icons/pdf24_icon.png</iconUrl>
     <copyright>geek Software GmbH</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/manual/pdf24/tools/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/pdf24/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://en.pdf24.org/pdf-creator-features.html</docsUrl>
     <mailingListUrl>https://help.pdf24.org/en/forums/forum/pdf24-creator</mailingListUrl>
