@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>hashmyfiles</id>
+    <version>2.36</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/hashmyfiles</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>hashmyfiles (Install)</title>
+    <authors>Nir Sofer</authors>
+    <projectUrl>https://www.nirsoft.net/utils/hash_my_files.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@8e6e4c49366580d42114228da74066e585b2cdc/Icons/hashmyfiles_icon.png</iconUrl>
+    <copyright>Copyright (c) 2007 - 2019 Nir Sofer</copyright>
+    <licenseUrl>https://www.nirsoft.net/utils/hash_my_files.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.nirsoft.net/utils/hash_my_files.html</docsUrl>
+    <mailingListUrl>https://www.nirsoft.net/contact-new.html</mailingListUrl>
+    <tags>hashmyfiles hash checksum MD5 SHA1 SHA256 SHA512 CRC32 context nirsoft embedded</tags>
+    <summary>Calculate multiple hashe values for multiple files</summary>
+    <description>HashMyFiles is small utility that allows you to calculate the MD5 and SHA1 hashes of one or more files in your system. You can easily copy the MD5/SHA1 hashes list into the clipboard, or save them into text/html/xml file.
+
+![HashMyFiles Window](https://www.nirsoft.net/utils/hashmyfiles.gif)
+
+HashMyFiles can also be launched from the context menu of Windows Explorer, and display the MD5/SHA1 hashes of the selected file or folder. 
+
+![Context menu](https://www.nirsoft.net/utils/hashmyfiles_contextmenu.png)
+
+HashMyFiles also has command line options.
+    </description>
+    <releaseNotes>https://www.nirsoft.net/utils/hash_my_files.html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

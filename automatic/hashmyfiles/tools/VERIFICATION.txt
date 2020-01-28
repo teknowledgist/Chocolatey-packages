@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest installers are available here:
+   https://www.nirsoft.net/utils/hash_my_files.html
+
+Direct Download:
+Version      : 2.36
+x86 URL      : http://www.nirsoft.net/utils/hashmyfiles.zip
+x86 CheckSum : DDA87E02D089FD351DB4544203B3FF4EF045053790C217DA872966475CF6B723
+x64 URL      : http://www.nirsoft.net/utils/hashmyfiles-x64.zip
+x64 CheckSum : BB979077A644ABF3641F1C4F9C4541AB3E0BFAA94A2CB47AECAD475D32B5F42D
