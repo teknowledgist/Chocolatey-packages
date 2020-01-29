@@ -1,7 +1,7 @@
 import-module au
 
 function global:au_GetLatest {
-   $DownloadURI = 'https://technelysium.com.au/wp/chromas/'
+   $DownloadURI = 'http://technelysium.com.au/wp/chromas/'
    $download_page = Invoke-WebRequest -Uri $DownloadURI
 
    $Link = $download_page.links |? {($_.href -match '\.exe') -and ($_.outertext -match 'free')}

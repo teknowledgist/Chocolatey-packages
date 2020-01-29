@@ -11,7 +11,7 @@
     <title>hashmyfiles (Install)</title>
     <authors>Nir Sofer</authors>
     <projectUrl>https://www.nirsoft.net/utils/hash_my_files.html</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@8e6e4c49366580d42114228da74066e585b2cdc/Icons/hashmyfiles_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@98e6e4c49366580d42114228da74066e585b2cdc/Icons/hashmyfiles_icon.png</iconUrl>
     <copyright>Copyright (c) 2007 - 2019 Nir Sofer</copyright>
     <licenseUrl>https://www.nirsoft.net/utils/hash_my_files.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
