@@ -6,7 +6,7 @@ function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri $Release
 
    $link = $download_page.links | 
-            Where-Object {$_.href -like "*win.zip"} | 
+            Where-Object {$_.href -like "*.msi"} | 
             Select-Object -First 1   
             
    $url = $Release + $link.href
@@ -28,7 +28,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_BeforeUpdate() { 
-   Write-host "Downloading SCP $($Latest.Version) zip file."
+   Write-host "Downloading SCP $($Latest.Version) installer file."
    Get-RemoteFiles -Purge
 }
 

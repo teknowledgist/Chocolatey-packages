@@ -4,9 +4,9 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy.portable</id>
-    <version>3.86</version>
+    <version>3.86.0.20200205</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy.portable</packageSourceUrl>
-    <owners>Teknowledgist, dtgm, MarkJohnson</owners>
+    <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>FastCopy (portable)</title>
     <authors>SHIROUZU Hiroaki</authors>

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>scp</id>
-    <version>4.0.9.110</version>
+    <version>4.0.10.119</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/scp</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -29,6 +29,8 @@
 * You can display statistics of letter and word-frequency usage.
 * You can define the method of reading text, the types of symbols used, together with their collating order and style of embedded text references.Many text files already exist in forms that SCP can handle. Several sample files are included in the SCP download.
 
+#### Install note
+SCP can be installed without a desktop icon by using the `--ia "DESKTOPICONS=no"` argument.
     </description>
   </metadata>
   <files>

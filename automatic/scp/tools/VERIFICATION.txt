@@ -2,17 +2,12 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
-The "regular" installer is available from:
+The latest installer is available from:
 http://www.textworld.com/scp/#Downloads
-
-The embedded installer was offered by the developer in response to a 
-question about preventing the desktop icon.  It differs from the 
-advertised downloads only in that it does not install a desktop icon.
-It can be downloaded from the same site at the URL below.  
 
 Direct Download:
 
-Version  : 4.0.9.110
-URL      : http://www.textworld.com/scp/scp32x409win.zip
-CheckSum : 37A80E8482DB02BF7D8985C8AA8AA0B5386B420B3D2EB3B1903CC1D267455E02
+Version  : 4.0.10.119
+URL      : http://www.textworld.com/scp/scp-4.0.10-win32-x86.msi
+CheckSum : 413EC071B77E3B50C25A57B8D3BA4382504ECFF9218E341822CFEEAF464227C8
 

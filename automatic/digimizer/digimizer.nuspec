@@ -4,23 +4,23 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>digimizer</id>
-    <version>5.3.5</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/digimizer</packageSourceUrl>
+    <version>5.4.3</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/digimizer</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Digimizer (Install)</title>
+    <title>Digimizer (trialware)</title>
     <authors>MedCalc Software</authors>
     <projectUrl>https://www.digimizer.com/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/Digimizer_icon.png</iconUrl>
     <copyright>© 2005-2016 MedCalc Software bvba</copyright>
     <licenseUrl>https://www.digimizer.com/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>https://www.digimizer.com/download/digimizermanual.pdf</docsUrl>
-    <mailingListUrl>mailto:info@medcalc.org</mailingListUrl>
+    <docsUrl>https://www.digimizer.com/manual/index.php</docsUrl>
+    <mailingListUrl>https://www.digimizer.com/contact.php</mailingListUrl>
     <bugTrackerUrl>https://www.digimizer.com/feedback.php</bugTrackerUrl>
-    <tags>digimizer image analysis measure medical admin </tags>
-    <summary>Free, easy-to-use and flexible image analysis software</summary>
-    <description>Digimizer is a free easy-to-use and flexible image analysis software package that allows precise manual measurements as well as automatic object detection with measurements of object characteristics.
+    <tags>digimizer image analysis measure medical</tags>
+    <summary>Easy-to-use and flexible image analysis software</summary>
+    <description>Digimizer is a easy-to-use and flexible image analysis software package that allows precise manual measurements as well as automatic object detection with measurements of object characteristics.
 
 Pictures may be X-rays, micrographs, etc. Supported file formats are JPG, GIF, TIFF, BMP, PNG, WMF, EMF and DICOM files.
 
