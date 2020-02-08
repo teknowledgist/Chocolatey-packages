@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>synfig</id>
-    <version>1.3.11-beta</version>
+    <version>1.3.12-beta</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/synfig</packageSourceUrl>
     <owners>Teknowledgist, efilnukefesin</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

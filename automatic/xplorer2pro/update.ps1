@@ -13,8 +13,8 @@ function global:au_GetLatest {
                                              ($_.href -match '\.exe')} | 
                                         Select-Object -ExpandProperty href
 
-   $url32 = $url32 -replace 'http:','https:'
-   $url64 = $url64 -replace 'http:','https:'
+   $url32 = 'http://zabkat.com/dl/xplorer2_setup.exe'  #$url32 -replace 'http:','https:'
+   $url64 = 'http://zabkat.com/dl/xplorer2_setup64.exe'  #$url64 -replace 'http:','https:'
 
    return @{ 
       Version    = $Version

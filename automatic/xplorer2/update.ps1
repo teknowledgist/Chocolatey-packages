@@ -1,16 +1,15 @@
 import-module au
 
 function global:au_GetLatest {
-   $DownloadPage = 'https://www.zabkat.com/alldown.htm'
-   $PageContent = Invoke-WebRequest -Uri $DownloadPage
+   $MainPage = 'https://www.zabkat.com'
+   $PageContent = Invoke-WebRequest -Uri "$MainPage/alldown.htm"
    $section = $PageContent.RawContent -split 'hredge' | Where-Object {$_ -match 'lite'}
    $line = $section.split('<>') | Where-Object {$_ -match 'Latest version'}
 
    $Version = $line -replace '[^0-9.]',''
    
-   $url32 = $PageContent.links |
-               Where-Object {$_.href -match 'lite.*\.exe'} |
-               Select-Object -ExpandProperty href
+   $null = $section.split('<>') | ? {$_ -match 'href="(.*)"'} |select -first 1
+   $url32 = "http://zabkat.com/dl/xplorer2_lite_setup.exe"
 
    return @{ 
       Version    = $Version
