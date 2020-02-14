@@ -15,15 +15,17 @@ $InstallArgs = @{
    packageName   = $env:ChocolateyPackageName
    softwareName  = 'K2Client*'
    fileType      = 'EXE'
-   url           = $fileLocation | Where-Object {$_.FullName -notmatch 'x64'} | Select-Object -ExpandProperty FullName
-   url64bit      = $fileLocation | Where-Object {$_.FullName -match 'x64'} | Select-Object -ExpandProperty FullName
+   File          = $fileLocation | Where-Object {$_.FullName -notmatch 'x64'} | Select-Object -ExpandProperty FullName
+   File64        = $fileLocation | Where-Object {$_.FullName -match 'x64'} | Select-Object -ExpandProperty FullName
    <#
-         checksum      = 'DA906F87D5023A0D51ED3AB34B0211274DD71CB1AC1B72418EDAEBF7D0573573'
-         checksum64    = 'EFDCAA5107C188371F43BEBDEACB3D0943B20C6804CE49E7EAFB943033DA42E3'
+         checksum      = 'da906f87d5023a0d51ed3ab34b0211274dd71cb1ac1b72418edaebf7d0573573'
+         checksum64    = 'efdcaa5107c188371f43bebdeacb3d0943b20c6804ce49e7eafb943033da42e3'
    #>
    silentArgs    = "-q -platform $BitLevel$HostSwitch -upg -v PROP_REBOOT=0 -v PROP_SHORTCUTS=0"
    validExitCodes= @(0)
 }
 
 Install-ChocolateyInstallPackage @InstallArgs
-New-Item "$fileLocation.ignore" -Type file -Force | Out-Null
+foreach ($item in $fileLocation) {
+   $null = Remove-Item $item.fullname -Force
+}
