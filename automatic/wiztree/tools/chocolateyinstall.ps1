@@ -1,7 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*.exe').FullName
+$fileLocation = (Get-ChildItem -Path $toolsDir -filter '*.exe' |
+                        Sort-Object lastwritetime | Select-Object -Last 1).FullName
 
 $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
@@ -14,4 +15,4 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-New-Item "$fileLocation.ignore" -Type file -Force | Out-Null
+Remove-Item $fileLocation -ea 0 -force
