@@ -23,9 +23,9 @@ $InstallArgs = @{
    packageName    = 'ccdcmercury'
    fileType       = 'EXE'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
-   url            = 'https://downloads.ccdc.cam.ac.uk/Mercury/4.3.0/mercurystandalone-4.3.0-windows-installer.exe'
+   url            = 'https://downloads.ccdc.cam.ac.uk/Mercury/4.3.1/mercurystandalone-4.3.1-windows-installer.exe'
    checksumType   = 'sha256'
-   checksum       = '143bdd6c74baa9ef98fd0c732e6096a85de092bd7c8c0b7cc19834151c50b7d0'
+   checksum       = '4d8b214f2fe00baa06460c9aaa6bc1ce84cbc749d95dca6efa3a5e76a20dddfe'
    silentArgs     = '--mode unattended --prefix "' + $InstallDir + '"'
    validExitCodes = @(0)
 }

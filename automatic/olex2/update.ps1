@@ -31,8 +31,8 @@ function global:au_SearchReplace {
 }
 
 function global:au_BeforeUpdate() { 
-   Write-host "Grabbing splash screen with version number."
-   Write-Warning "Be sure to check the version before submitting!"
+   Write-Warning "Grabbing Olex splash screen with version number."
+   Write-Warning "Be sure to confirm the Olex version before submitting!"
    $OutFile  = Join-Path (Resolve-Path .) 'splash.jpg'
    $URI      = ((split-path $Release) -replace '\\','/') + '/splash.jpg'
    Invoke-WebRequest $URI -OutFile $OutFile
