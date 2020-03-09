@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>ccdcmercury</id>
     <version>4.3.1</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/ccdcmercury</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/ccdcmercury</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>CCDC Mercury (incl. enCIFer)</title>
