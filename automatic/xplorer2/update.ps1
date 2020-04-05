@@ -27,4 +27,4 @@ function global:au_SearchReplace {
     }
 }
 
-Update-Package -ChecksumFor 32
+Update-Package -ChecksumFor 32 -nocheckchocoversion

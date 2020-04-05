@@ -2,26 +2,27 @@
 SetTimer, TimeOut, 60000
 
 ; License Agreement window
-WinWait, Setup - FreeFileSync, DirEdit
-WinGet, id, ID, Setup - FreeFileSync ahk_class TWizardForm, DirEdit
+WinWait, Setup - ahk_class TWizardForm, DirEdit
+WinGet, id, ID, Setup - ahk_class TWizardForm, DirEdit
 DetectHiddenText, Off
 
 ; Accept agreement button
-ControlClick, TNewRadioButton1, ahk_id %id%
+SetTitleMatchMode, RegEx
+ControlClick, > ?$, ahk_id %id%
 ; Next button
-ControlClick, TNewButton1, ahk_id %id%
+ControlClick, TNewButton4, ahk_id %id%
 sleep, 100
 
 ; Next button in Destination Location window
-ControlClick, TNewButton3, ahk_id %id%
+ControlClick, TNewButton6, ahk_id %id%
 sleep, 100
 
 ; Next on components page
-ControlClick, TNewButton3, ahk_id %id%
+ControlClick, TNewButton6, ahk_id %id%
 sleep, 100
 
 ; Next on animal picture page
-ControlClick, TNewButton3, ahk_id %id%
+ControlClick, TNewButton6, ahk_id %id%
 sleep 1000
 
 __Installing:

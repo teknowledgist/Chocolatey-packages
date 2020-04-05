@@ -14,7 +14,7 @@ function global:au_GetLatest {
    $url64 = "https://www.qcad.org$Stub64"
    $newversion = ($stub64 -split '-')[1]
 
-#   $oldversion = '3.24.2'
+#   $oldversion = '3.24.3'
 #   if ([version]$newversion -ne [version]$oldversion) {
 #      Write-Warning "New QCad version:  $newversion"
 #   } 

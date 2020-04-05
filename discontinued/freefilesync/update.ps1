@@ -15,7 +15,7 @@ function global:au_GetLatest {
 
    $version = $URLstub -replace '.*_([0-9.]+)_.*','$1'
 
-   $url = "$Release/$URLstub"
+   $url = "$Release$URLstub"
    $Source = "$Release/$SourceStub"
 
    return @{ Version = $version; URL32 = $url; Source = $Source}
@@ -24,20 +24,14 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
    @{
-      'tools\VERIFICATION.txt' = @{
-         '(^Version\s+:).*'      = "`${1} $($Latest.Version)"
-         '(^URL\s+:).*'          = "`${1} $($Latest.URL32)"
-         '(^Checksum\s+:).*'     = "`${1} $($Latest.Checksum32)"
-      }
+        "tools\chocolateyInstall.ps1" = @{
+            "(^   url\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
+            "(^   Checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+        }
       'FreeFileSync.nuspec' = @{
          "^(\s*<projectSourceUrl>).*(<\/projectSourceUrl>)" = "`${1}$($Latest.Source)`$2"
       }
    }
 }
 
-function global:au_BeforeUpdate() { 
-   Write-host "Downloading FreeFileSync $($Latest.Version) installer."
-   Get-RemoteFiles -Purge -NoSuffix
-}
-
-update -ChecksumFor none
+update

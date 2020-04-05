@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = $env:ChocolateyPackageName
-$url         = 'http://zabkat.com/xplorer2_lite_setup.exe'
+$url         = 'http://zabkat.com/dl/xplorer2_lite_setup.exe'
 $Checksum    = '09c8d8b225c5e677c68280f9730e8628c3aa72eff0ef7f3099c377f107db7cb8'
 
 # silent install requires AutoHotKey

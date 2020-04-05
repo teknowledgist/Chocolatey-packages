@@ -66,11 +66,11 @@ If (-not $pp.count) {
 $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
    fileType       = 'EXE'
-   url            = 'https://zabkat.com/xplorer2_setup.exe'
-   url64          = 'https://zabkat.com/xplorer2_setup64.exe'
+   url            = 'http://zabkat.com/dl/xplorer2_setup.exe'
+   url64          = 'http://zabkat.com/dl/xplorer2_setup64.exe'
    softwareName   = 'xplorer² Pro*'
-   checksum       = 'ee751a0de4e6e1cd397d3f4aeb3b32f2e13b8bb4608d4aa350782525b6efaf22'
-   checksum64     = '1257cfc22d34b2fce985ba5482ba1c40ffd7e8e55df06157c44155f874f7ed90'
+   checksum       = '24bfa8957eb1344f8215a1881b38250733c2a1184fad313d197f15b08e165e79'
+   checksum64     = '61c31a47566ebb7fc055b7509d1555fc183844fc44ca35563966b0b2a0efb67b'
    checksumType   = 'sha256'
    silentArgs     = $SilentArgs
    validExitCodes = @(0)
