@@ -16,14 +16,14 @@ $PackedInstaller = Get-ChocolateyWebFile @WebFileArgs
 $UnzipArgs = @{
    PackageName  = $env:ChocolateyPackageName
    FileFullPath = $PackedInstaller
-   Destination  = $WorkSpace
+   Destination  = $env:ChocolateyPackageFolder
 }
 
 Get-ChocolateyUnzip @UnzipArgs
 
 $InstallArgs = @{
    PackageName    = $env:ChocolateyPackageName
-   File           = (Get-ChildItem -Path $WorkSpace -Filter '*.msi').FullName
+   File           = (Get-ChildItem -Path $env:ChocolateyPackageFolder -Filter '*.msi').FullName
    fileType       = 'msi'
    silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
    validExitCodes = @(0, 3010, 1641)
