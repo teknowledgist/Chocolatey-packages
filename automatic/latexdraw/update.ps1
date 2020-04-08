@@ -1,19 +1,20 @@
 import-module au
 
 function global:au_GetLatest {
-   $DownloadURI = 'http://latexdraw.sourceforge.net/index.html'
-   $download_page = Invoke-WebRequest -Uri $DownloadURI
+   $AnnounceURI = 'http://latexdraw.sourceforge.net/index.html'
+   $announce_page = Invoke-WebRequest -Uri $AnnounceURI
 
-   $Link = $download_page.links | 
-               Where-Object {$_.href -match 'download$' -and $_.innertext -match '^[0-9.]+\s*$'}
+   $Link = $announce_page.links | 
+               Where-Object {$_.innerText -eq 'download'} | 
+               Select-Object -ExpandProperty href
    
-   $version = $Link.innerText.trim()
+   $version = $Link.split('/')[-2]
 
-   $url32 = "https://sourceforge.net/projects/latexdraw/files/latexdraw/$version/LaTeXDraw-$version-bin.zip"
+   $URL = "https://sourceforge.net/projects/latexdraw/files/latexdraw/$version/latexdraw-$version-win-binaries.zip"
 
    return @{ 
             Version  = $version
-            URL32    = $url32
+            URL32    = $URL
          }
 }
 
