@@ -4,15 +4,15 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>draftsight</id>
-    <version>2019.03.0.20190120</version>
+    <version>2020.0.2092</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/draftsight</packageSourceUrl>
     <owners>Teknowledgist, BasicTheProgram</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Draftsight 2019 SP3 (trialware)</title>
+    <title>Draftsight 2020 SP0(trialware)</title>
     <authors>Dassault Systèmes</authors>
     <projectUrl>https://www.3ds.com/products-services/draftsight-cad-software/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/draftsight2018_icon.png</iconUrl>
-    <copyright>Copyright © 2019 Dassault Systèmes</copyright>
+    <copyright>Copyright © 2020 Dassault Systèmes</copyright>
     <licenseUrl>https://www.3ds.com/products-services/draftsight-cad-software/eula</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <mailingListUrl>https://www.3ds.com/products-services/draftsight-cad-software/community/</mailingListUrl>
