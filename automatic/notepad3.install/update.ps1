@@ -2,29 +2,25 @@ import-module au
 
 function global:au_GetLatest {
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-   $Release = 'https://www.rizonesoft.com/downloads/notepad3/'
-   $PageText = Invoke-WebRequest -Uri $Release -UseBasicParsing
-#   $ie = New-Object -ComObject "InternetExplorer.Application"
-#   $ie.silent = $true
-#   $ie.Navigate("https://www.rizonesoft.com/downloads/notepad3/")
-#   while($ie.ReadyState -ne 4) {start-sleep -m 100}
-#   $body = $ie.Document.body.innerHTML
-#   [System.Runtime.Interopservices.Marshal]::ReleaseComObject($ie)
-#   Remove-Variable ie
 
    $downloaduri = 'https://www.rizonesoft.com/downloads/notepad3/'
    $download_page = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing   
-   $link = $download_page.links | Where-Object {$_.class -match 'exe'} | Select-Object -First 1   
+   $link64 = $download_page.links | Where-Object {$_.class -match 'exe'} | Select-Object -First 1   
+   $link32 = $download_page.links | 
+                  Where-Object {($_.class -match 'exe') -and ($_.outerhtml -match 'x86')} | 
+                  Select-Object -First 1   
 
-   $version = $link.title.split()[-1]
-   $filename = $link.outerhtml.split() | Where-Object {$_ -like '*.exe'}
+   $version = $link64.title.split()[-1]
+   $filename64 = $link64.outerhtml.split() | Where-Object {$_ -match '\.exe$'}
+   $filename32 = $link32.outerhtml.split() | Where-Object {$_ -match '\.exe$'}
    
-#   $version = $filename.split('_') | Where-Object {$_ -match '^[0-9.]+$'}
-   $url = "https://www.rizonesoft.com/shkarko/Notepad3/" + $filename 
+   $url64 = "https://www.rizonesoft.com/software/notepad3/" + $filename64
+   $url32 = "https://www.rizonesoft.com/software/notepad3/" + $filename32
 
    return @{ 
             Version  = $Version
-            URL32    = $URL
+            URL64    = $url64
+            URL32    = $url32
            }
 }
 
@@ -32,8 +28,10 @@ function global:au_SearchReplace {
    @{
       "tools\VERIFICATION.txt" = @{
          "(^Version\s+:).*"      = "`${1} $($Latest.Version)"
-         "(^URL\s+:).*"          = "`${1} $($Latest.URL32)"
-         "(^Checksum\s+:).*"     = "`${1} $($Latest.Checksum32)"
+         "(^x86 URL\s+:).*"          = "`${1} $($Latest.URL32)"
+         "(^x86 Checksum\s+:).*"     = "`${1} $($Latest.Checksum32)"
+         "(^x64 URL\s+:).*"          = "`${1} $($Latest.URL64)"
+         "(^x64 Checksum\s+:).*"     = "`${1} $($Latest.Checksum64)"
       }
    }
 }
@@ -42,7 +40,7 @@ function global:au_SearchReplace {
 #   (It is dot sourced in the meta-package.)
 if ($MyInvocation.InvocationName -ne '.') { 
    function global:au_BeforeUpdate() { 
-   Write-host "Downloading Notepad3 $($Latest.Version)"
+   Write-host "Downloading Notepad3 $($Latest.Version) files."
       Get-RemoteFiles -Purge -NoSuffix -FileNameBase "Notepad3_$($Latest.Version)" 
    }
 

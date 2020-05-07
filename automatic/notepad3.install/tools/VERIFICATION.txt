@@ -8,7 +8,9 @@ particular version on this page:
 
 Direct Download:
 
-Version  : 5.19.815.2595
-URL      : https://www.rizonesoft.com/shkarko/Notepad3/Notepad3_5.19.815.2595_Setup.exe
-CheckSum : 8F667C1DFE369E5DD92FE12224DD18A9C883A1383BE49BF4CF0EFB948DC5CEBD
+Version      : 5.20.414.1
+x86 URL      : https://www.rizonesoft.com/software/notepad3/Notepad3_5.20.414.1_x86_Setup.exe
+x86 CheckSum : A6F7E48E2FA827E1A516D1FA8D30E5DE02CCB08E1DDE443E9BA6DD48FEF6EB19
+x64 URL      : https://www.rizonesoft.com/software/notepad3/Notepad3_5.20.414.1_Setup.exe
+x64 CheckSum : 2001CC90A1F32685ED06C68FA97AF0037C92C9A73308CB21B2310E6EB0E88A0B
 
