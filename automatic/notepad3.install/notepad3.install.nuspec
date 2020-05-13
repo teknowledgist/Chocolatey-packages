@@ -16,7 +16,7 @@
     <licenseUrl>https://github.com/rizonesoft/Notepad3/blob/master/License.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/rizonesoft/Notepad3</projectSourceUrl>
-    <mailingListUrl>https://www.rizonesoft.com/forums/forum/product-support/notepad3/</mailingListUrl>
+    <mailingListUrl>https://www.rizonesoft.com/support/</mailingListUrl>
     <bugTrackerUrl>https://github.com/rizonesoft/Notepad3/issues</bugTrackerUrl>
     <tags>notepad3 notepad notepad2 text editor</tags>
     <summary>A light-weight Scintilla-based text editor for Windows.</summary>
@@ -58,7 +58,7 @@ MiniPath is based on code from [Florian Balmer's metapath](http://www.flos-freew
 * Minor cosmetic changes
 
     </description>
-    <releaseNotes>https://www.rizonesoft.com/downloads/notepad3/update/</releaseNotes>
+    <releaseNotes>https://github.com/rizonesoft/Notepad3/releases</releaseNotes>
     <dependencies>
     </dependencies>
   </metadata>
