@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>ccdcmercury</id>
-    <version>4.3.1</version>
+    <version>2020.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/ccdcmercury</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -33,21 +33,13 @@ Mercury is available as a free download. The version of Mercury provided to CSD 
 
 _In order to download this version of Mercury, you must first read and accept the [terms of the licence agreement](http://www.ccdc.cam.ac.uk/solutions/csd-system/components/mercury/licence/)._
 
+**IMPORTANT:** Mercury and EnCIFer now require activation in order to be used. This can be performed for free using the included CCDC Activator tool and selecting the CSD-Community option. You can also activate with a CSD System licence if you have one.
+
 ### Included software
 
 The latest version of Mercury is only distributed with [EnCIFer 1.5.2](http://www.ccdc.cam.ac.uk/Community/csd-community/encifer/) incorperated, and the installer drops icons for both on the desktop.  Version 1.5.2 of EnCIFer is not downloadable, installable nor uninstallable on its own.  The stand-alone, previous version of enCIFer is here](https://chocolatey.org/packages/encifer)
 </description>
-    <releaseNotes>From the end of [the help documentation](https://www.ccdc.cam.ac.uk/support-and-resources/CCDCResources/mercury.pdf).
-
-### Mercury 3.10
-* New features have been added to Mercury to aid the visualisation, understanding and modification of crystal structure symmetry including:
-    * The ability to view along a specific combination of either the unit cell axes (Unit Cell Directions) or the reciprocal cell axes (Miller Directions)
-    * Links directly to International Tables Volume A (Space-group symmetry) online from the crystal structure information
-    * The ability to reduce symmetry from the current space group to any valid subgroup
-* The underlying database of the CSD has been extended, which allows Mercury to provide direct display in the visualiser of the anisotropic displacement parameters (ADPs) for over 220,000 CSD entries
-* The Full Interaction Maps application has been expanded to include C-Br bromine and C-I iodine probes, which are particularly useful for analysing halogen bonding interactions
-* The Hydrogen-Bond Propensity application has been further improved and streamlined for usability
-* The CSD Python API menu has been improved to provide more feedback and information when running Python scripts within Mercury
+    <releaseNotes>At the end of [the help documentation](https://www.ccdc.cam.ac.uk/support-and-resources/CCDCResources/mercury.pdf).
     </releaseNotes>
     <dependencies>
       <dependency id="vcredist2013" version="12.0.30501" />

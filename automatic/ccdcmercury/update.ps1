@@ -12,7 +12,7 @@ function global:au_GetLatest {
                 Select-Object -ExpandProperty innertext -First 1
                 
    $version = ($Name -split ' ')[1]
-   $url = "https://downloads.ccdc.cam.ac.uk/Mercury/$version/mercurystandalone-$version-windows-installer.exe"
+   $url = "https://downloads.ccdc.cam.ac.uk/Mercury/$version/mercury-$version.0-windows-installer.exe"
 
    return @{ Version = $version; URL = $url }
 }
