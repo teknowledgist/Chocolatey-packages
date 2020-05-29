@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>rsat</id>
-    <version>2.1809.0.20190205</version>
+    <version>2.1809.0.20200528</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/rsat</packageSourceUrl>
     <owners>Teknowledgist, lowmach1ne</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -42,6 +42,7 @@ With the September 2018 release of Windows, RSAT is no longer a single install n
 * `/FS` - Install the File Services Management feature.
 * `/DNS` - Install the Domain Name Services Management feature.
 * `/DHCP` - Install the DHCP Management feature.
+* `/WSUS` - Install the WSUS Management feature.
 
 *Example:* `choco install rsat -params '"/AD /GP /DHCP"'`
 
