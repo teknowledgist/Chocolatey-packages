@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>miktex.install</id>
+    <version>2.9.7440</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/miktex.install</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>MiKTeX (Install)</title>
+    <authors>Christian Schenk</authors>
+    <projectUrl>http://miktex.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@c9dd968b548035ac3a749235c638f9a895df54b8/Icons/miktex_icon.png</iconUrl>
+    <copyright>Copyright © 2006-2020 Christian Schenk</copyright>
+    <licenseUrl>http://miktex.org/copying</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/MiKTeX/miktex</projectSourceUrl>
+    <docsUrl>https://miktex.org/docs</docsUrl>
+    <mailingListUrl>http://www.troubleshooting-tex.de/index-en.php</mailingListUrl>
+    <bugTrackerUrl>https://github.com/MiKTeX/miktex/issues</bugTrackerUrl>
+    <tags>miktex tex latex pdf typesetting foss</tags>
+    <summary>An implementation of TeX/LaTeX</summary>
+    <description>MiKTeX (pronounced mick-tech) is an up-to-date implementation of TeX/LaTeX and related programs. [TeX](https://en.wikipedia.org/wiki/TeX) is a typesetting system written by [Donald Ervin Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) who says that it is intended for the creation of beautiful books - and especially for books that contain a lot of mathematics. 
+
+MiKTeX comes with TeXworks, a TeX frontend which you can use it to edit and preview LaTeX documents. 
+
+MiKTeX's integrated package manager installs missing [components](https://miktex.org/packages) from the Internet, if required. 
+
+### Package Parameters
+
+* `/set:(option)` - Install the `essential`, `basic` (default), or `complete` set of TeX packages/tools.
+
+    </description>
+    <releaseNotes>https://github.com/MiKTeX/miktex/releases/latest</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
