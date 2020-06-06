@@ -12,7 +12,7 @@ $ZipArgs = @{
    checkSumType  = 'sha256'
    UnzipLocation = $toolsDir
 }
-Install-ChocolateyZipPackage @ZipArgs
+$null = Install-ChocolateyZipPackage @ZipArgs
 
 $MiKTeXsetup = Get-ChildItem $toolsDir 'miktexsetup.exe' | Select-Object -ExpandProperty FullName
 $null = New-Item "$MiKTeXsetup.ignore" -Type file -Force
@@ -23,16 +23,18 @@ $pp = Get-PackageParameters
 Switch ($pp['set']) {
    'essential' { $set = 'essential'
                   $msg = 'Downloading a "Essential" package set to install.'; break }
-   'Complete'  { $set = 'complete'
+   'complete'  { $set = 'complete'
                   $msg = 'Downloading a "Complete" package set to install.\n' + 
                          'This is large and may take some time.  Please be patient.'; break }
    default     { $set = 'basic'
                   $msg = 'Downloading a "Basic" package set to install.'; break }
 }
-Write-Host $msg -ForegroundColor DarkCyan
+Write-Host $msg -ForegroundColor Cyan
+
+
 
 # Is MiKTeX already installed?
-[array]$key = Get-UninstallRegistryKey -SoftwareName "miktex*"
+[array]$key = Get-UninstallRegistryKey -SoftwareName "miktex*" 
 if ($key.Count -gt 1) {
    Throw "More than one install of MiKTeX already exists!"
 } elseif ($key.Count -eq 1) {
@@ -41,50 +43,51 @@ if ($key.Count -gt 1) {
    $InitEXMF = Join-Path $InstallDir "initexmf.exe"
    $MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^miktex'}
    $MileStone = $MileStoneLine.split[-1]
-   Write-Host "Found MiKTeX milestone $MileStone currently installed." -ForegroundColor DarkCyan
-   Write-Host "Updating to the latest MiKTeX milestone." -ForegroundColor DarkCyan
+   Write-Host "Found MiKTeX milestone $MileStone currently installed." -ForegroundColor Cyan
+   Write-Host "Updating to the latest MiKTeX milestone." -ForegroundColor Cyan
 
    $MPM = Join-Path $InstallDir "mpm.exe"
    $SetupArgs = @{
-      Statements     = "/c `"$MPM`" --admin --verbose --update " +
-                        "> `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).update.log`" 2>&1"
-      ExetoRun       = $env:ComSpec
-      validExitCodes = @(0)
+      Statements       = "--admin --verbose --update"
+      ExetoRun         = $MPM
+      WorkingDirectory = $InstallDir
+      validExitCodes   = @(0)
    }
    $exitCode = Start-ChocolateyProcessAsAdmin @SetupArgs
 
 } elseif ($key.Count -eq 0) {
    # MiKTeX install requires first creating a local repository:
    $Repository = Join-Path $env:TEMP 'MiKTeX-repository'
+   Write-Verbose "Creating temporary MiKTeX repository at '$Repository'."
    $DownloadArgs = @{
-      Statements     = "/c `"$MiKTeXsetup`" --verbose --local-package-repository=`"$Repository`" " +
-                        "--package-set=$set download " +
-                        "> `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).download.log`" 2>&1"
-      ExetoRun       = $env:ComSpec
-      validExitCodes = @(0)
+      Statements       = "--verbose --local-package-repository=`"$Repository`" --package-set=$set download "
+      ExetoRun         = $MiKTeXsetup
+      WorkingDirectory = $toolsDir
+      validExitCodes   = @(0)
    }
    $exitCode = Start-ChocolateyProcessAsAdmin @DownloadArgs
 
    # Then the actual install:
+   Write-Verbose "Installing from temporary MiKTeX repository."
    $InstallArgs = @{
-      Statements     = "/c `"$MiKTeXsetup`" --verbose --local-package-repository=`"$Repository`" " +
-                        "--package-set=$set --shared install " #+
-#                        "> `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).install.log`" 2>&1"
-      ExetoRun       = $env:ComSpec
-      validExitCodes = @(0)
+      Statements       = "--verbose --local-package-repository=`"$Repository`" --package-set=$set --shared install "
+      ExetoRun         = $MiKTeXsetup
+      WorkingDirectory = $toolsDir
+      validExitCodes   = @(0)
    }
    $exitCode = Start-ChocolateyProcessAsAdmin @InstallArgs
 }
 
 # Once installed/updated, configure MiKTeX to automatically install missing packages on the fly
-[array]$key = Get-UninstallRegistryKey -SoftwareName "$env:ChocolateyPackageName*"
+[array]$key = Get-UninstallRegistryKey -SoftwareName "miktex*"
 $InstallDir = split-path ($key.UninstallString.split('"')[1])
 $InitEXMF = Join-Path $InstallDir "initexmf.exe"
+Write-Verbose "Adjusting settings so MiKTeX installs missing packages on the fly."
 $SetupArgs = @{
-   Statements     = "/c `"$InitEXMF`" --admin --verbose --set-config-value=[MPM]AutoInstall=1 " +
-                     "> `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).config.log`" 2>&1"
-   ExetoRun       = $env:ComSpec
-   validExitCodes = @(0)
+   Statements       = "--admin --verbose --set-config-value=[MPM]AutoInstall=1"
+   ExetoRun         = $InitEXMF
+   WorkingDirectory = $InstallDir
+   validExitCodes   = @(0)
 }
 $exitCode = Start-ChocolateyProcessAsAdmin @SetupArgs
 
