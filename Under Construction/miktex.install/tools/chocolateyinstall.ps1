@@ -1,18 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$ZipFiles = Get-ChildItem $toolsDir "*.zip" |Select-Object FullName
 
-# Grab the setup utility
 $ZipArgs = @{
-   PackageName   = $env:ChocolateyPackageName
-   Url           = 'https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x86/miktexsetup-2.9.7442.zip'
-   Url64         = 'https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x64/miktexsetup-2.9.7442-x64.zip'
-   checkSum      = '55c1e1b6ecff7afc734452ff9931b3a9dcc46b1aad8b32281dd85001749b8adf'
-   checkSum64    = '6e5996544cbd517b4c661f7642a9f6aae68cf85c92e56a7e1bb81ed33df1d153'
-   checkSumType  = 'sha256'
-   UnzipLocation = $toolsDir
+   PackageName    = $env:ChocolateyPackageName
+   FileFullPath   = $ZipFiles | Where-Object {$_ -notmatch 'x64'}
+   FileFullPath64 = $ZipFiles | Where-Object {$_ -match 'x64'}
+   Destination    = $toolsDir
 }
-$null = Install-ChocolateyZipPackage @ZipArgs
+$null = Get-ChocolateyUnzip @ZipArgs
 
 $MiKTeXsetup = Get-ChildItem $toolsDir 'miktexsetup.exe' | Select-Object -ExpandProperty FullName
 $null = New-Item "$MiKTeXsetup.ignore" -Type file -Force
@@ -31,7 +28,9 @@ Switch ($pp['set']) {
 }
 Write-Host $msg -ForegroundColor Cyan
 
-
+if ($pp['RepoPath']) {
+   $LocalRepo = [uri]($pp['RepoPath']).AbsoluteUri.StartsWith('file:')
+}
 
 # Is MiKTeX already installed?
 [array]$key = Get-UninstallRegistryKey -SoftwareName "miktex*" 
@@ -41,6 +40,10 @@ if ($key.Count -gt 1) {
    # Use MiKTeX's built-in updater
    $InstallDir = split-path ($key.UninstallString.split('"')[1])
    $InitEXMF = Join-Path $InstallDir "initexmf.exe"
+
+   if ($LocalRepo) {
+      
+   }
    $MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^miktex'}
    $MileStone = $MileStoneLine.split[-1]
    Write-Host "Found MiKTeX milestone $MileStone currently installed." -ForegroundColor Cyan
@@ -78,10 +81,17 @@ if ($key.Count -gt 1) {
    $exitCode = Start-ChocolateyProcessAsAdmin @InstallArgs
 }
 
-# Once installed/updated, configure MiKTeX to automatically install missing packages on the fly
+# Once installed/updated, confirm it's the correct milestone.
 [array]$key = Get-UninstallRegistryKey -SoftwareName "miktex*"
 $InstallDir = split-path ($key.UninstallString.split('"')[1])
 $InitEXMF = Join-Path $InstallDir "initexmf.exe"
+$MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^miktex'}
+$MileStone = $MileStoneLine.split[-1]
+If ([version]$MileStone -lt $env:ChocolateyPackageVersion) {
+   Throw "Repository was only able to update MiKTeX to v.$MileStone."
+}
+
+# configure MiKTeX to automatically install missing packages on the fly
 Write-Verbose "Adjusting settings so MiKTeX installs missing packages on the fly."
 $SetupArgs = @{
    Statements       = "--admin --verbose --set-config-value=[MPM]AutoInstall=1"
@@ -90,4 +100,5 @@ $SetupArgs = @{
    validExitCodes   = @(0)
 }
 $exitCode = Start-ChocolateyProcessAsAdmin @SetupArgs
+
 

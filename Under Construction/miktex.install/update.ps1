@@ -30,14 +30,20 @@ function global:au_GetLatest {
 }
 
 function global:au_SearchReplace {
-    @{
-        "tools\chocolateyInstall.ps1" = @{
-            "(^\s*Url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-            "(^\s*Url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^\s*Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-            "(^\s*Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
-        }
-    }
+   @{
+      "tools\VERIFICATION.txt" = @{
+         "(^Milestone\s*=\s*)('.*')"       = "`$1$($Latest.Version)"
+         "(^32-bit URL\s*=\s*)('.*')"      = "`$1$($Latest.URL32)"
+         "(^64-bit URL\s*=\s*)('.*')"      = "`$1$($Latest.URL64)"
+         "(^32-bit checksum\s*=\s*)('.*')" = "`$1$($Latest.Checksum32)"
+         "(^64-bit checksum\s*=\s*)('.*')" = "`$1$($Latest.Checksum64)"
+      }
+   }
 }
 
-update 
+function global:au_BeforeUpdate() { 
+   Write-host "Downloading MiKTeX setup utility $($Latest.AppVersion) installer files"
+   Get-RemoteFiles -Purge -NoSuffix
+}
+
+update -ChecksumFor none
