@@ -7,6 +7,6 @@ Tabular Editor can be downloaded from:
 
 Direct download:
 
-Version  : 2.9.8
-URL      : https://github.com/otykier/TabularEditor/releases/download/2.9.8/TabularEditor.Installer.msi
-CheckSum : 7863F30B8CEBB42ACC07A5F0086FB354BD0941BA70C6F1509CBAE2DA8CF11FC6
+Version  : 2.10.0
+URL      : https://github.com/otykier/TabularEditor/releases/download/2.10.0/TabularEditor.Installer.msi
+CheckSum : CC3627AAD749F02012D892EE7AAC6C94CB8614AE44BBA7EFD98B5B4E5CF6B6C8

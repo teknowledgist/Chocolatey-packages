@@ -3,8 +3,8 @@
 $packageArgs = @{
    packageName   = $env:chocolateyPackageName
    fileType      = 'msi'
-   url           = 'https://www.digimizer.com/download/digimizersetup.msi'
-   checksum      = '177f82e9774721a5ea805ee4d1e7340e857dbc074828f1d239128367738c13f5'
+   url           = 'https://www.digimizer.com/downloads/digimizersetup.msi'
+   checksum      = '991a99b44a29e5daf072aeaf73a067925fb7690ab024efb7a63728d283ecec39'
    checksumType  = 'sha256'
    silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes= @(0, 3010, 1641)

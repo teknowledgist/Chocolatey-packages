@@ -4,40 +4,76 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>openchrom</id>
-    <version>1.3.0</version>
+    <version>1.4.0.202005181029</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/openchrom</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>OpenChrom Community Edition</title>
+    <title>OpenChrom®</title>
     <authors>Lablicate</authors>
-    <projectUrl>https://www.openchrom.net/home</projectUrl>
+    <projectUrl>https://lablicate.com/platform/openchrom</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@64529d28c398f02e22b7dcfe2750bd44751024f2/Icons/openchrom_icon.png</iconUrl>
-    <copyright>Copyright (c) 2016 by Lablicate GmbH</copyright>
-    <licenseUrl>http://www.eclipse.org/legal/epl-v10.html</licenseUrl>
+    <copyright>Copyright © 2020 Lablicate GmbH</copyright>
+    <licenseUrl>https://github.com/OpenChrom/openchrom/blob/develop/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://sourceforge.net/projects/openchrom/files/</projectSourceUrl>
-    <docsUrl>https://wiki.openchrom.net</docsUrl>
-    <bugTrackerUrl>https://sourceforge.net/p/openchrom/bugs/</bugTrackerUrl>
-    <tags>openchrom chromatography chemistry spectrometry analysis eclipse oss</tags>
-    <summary>A tool for gas chromatography and mass spectrometry</summary>
-    <description>OpenChrom® Community Edition is a free, extendable and easy-to-use software tool for chromatographic and mass spectrometric data analysis based on the [Eclipse Rich Client Platform (RCP)](http://wiki.eclipse.org/index.php/Rich_Client_Platform). Its focus is on handling mass spectrometry data files natively. Hence, mass spectrometric data generated, for example, by GC/MS, LC/MS, HPLC-MS, ICP-MS or MALDI-MS may be imported directly, without prior conversion, for subsequent visualization and evaluation. Aside from the support of various vendor data formats, data may also be imported in common formats such as NetCDF, csv or mzXML. All data format converters are provided as separate plug-ins which are not open source but free to use. Moreover, OpenChrom® offers a nicely adaptable graphical user interface.
+    <docsUrl>https://github.com/OpenChrom/openchrom/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/OpenChrom/openchrom/issues</bugTrackerUrl>
+    <tags>openchrom SWTChart ChemClipse chromatography chemistry spectrometry analysis eclipse oss</tags>
+    <summary>Open source software for chromatography, spectrometry and spectroscopy</summary>
+    <description>OpenChrom® is an open source software for chromatography, spectrometry and spectroscopy and based on the [Eclipse Rich Client Platform (RCP)](http://wiki.eclipse.org/index.php/Rich_Client_Platform). Data from different systems can be imported and analyzed, hence it’s a vendor independent software. 
+
+Generally, it supports handling . Designed to analyze data from analytical pyrolysis, called Py-GC/MS, it has a strong focus on chromatography and nominal mass spectrometry. 
+
+#### Features
+* Native handling of GC/MS, GC/FID, HPLC-UV/VIS, FTIR, PCR and NMR data.
+* Analyze data from analytical pyrolysis, Py-GC/MS.
+* Methods for peak detection, integration, identification, quantitation and reporting. 
+* Internal (ISTD) and external standards (ESTD) for quantitation purposes. 
+* Filters to help optimize the measurements and calculate key values of the chromatographic data and help to point out problems like shifted retention times or degraded columns. 
+* Helps detect and identify peaks in a GC/MS file and to transfer these peaks to its corresponding GC/FID measurement for quantitation purposes. 
+* Works in target screening (TS) and non-target screening (NTS) mode. 
+* Extensible with [plugins](https://lablicate.com/marketplace/categories)
 
 OpenChrom® is tailored for data analysis purposes including processing, visualization and reporting. The implemented batch-processing features allow high-throughput evaluation. A continuously growing portfolio of processing and analysis procedures is provided. Extensions are welcome, as OpenChrom® is open source and uses a flexible approach, which allows others to implement their own methods, algorithms, filters, detectors or integrators.
 
-### Features
-* Vendor formats data import
-* Open formats data import
-* Export formats
-* Processing filters
-* Classifier
-* Background detection
-* Peak detection
-* Peak integration
-* Quantitation
-* Batch processing
-* Reporting
-* Office integration editor
-* Extensible with [plugins](https://marketplace.openchrom.net/)
+### Supported data formats:
+* Agilent ChemStation FID (*.D/ *.ch)
+* Thermo/Finnigan FID (*.dat)
+* Thermo/Finnigan FID (*.raw)
+* MassHunter (*.D/CPDET1A.CH)
+* PerkinElmer FID (*.raw)
+* Shimadzu GC10 FID (*.C0#)
+* Shimadzu FID (*.gcd)
+* Varian FID (*.run)
+* Agilent MSD (*.D/DATA.MS)
+* Agilent MSD (*.D/data01.icp)
+* Bruker Flex MSD (fid)
+* ChromTech MSD (*.dat)
+* Thermo/Finnigan MSD (*.cgm)
+* Thermo/Finnigan Element II (*.dat)
+* Thermo/Finnigan ICIS (*.dat)
+* Thermo/Finnigan ITDS (*.DAT)
+* Thermo/Finnigan ITS40 (*.MS)
+* Thermo/Finnigan MAT (*.dat)
+* Thermo/Finnigan RAW MSD (*.raw)
+* MassHunter MSD (*.D/AcqData)
+* NIST Database MSD (*.db)
+* Shimadzu MSD (*.qgd)
+* Shimadzu QP-5000 MSD (*.R##)
+* Shimadzu Database MSD (*.spc)
+* Bruker/Varian MSD (*.SMS)
+* Bruker/Varian MSD (*.XMS)
+* VG MSD (*.DAT_001)
+* Waters MSD (*.RAW/_FUNC001.DAT)
+* ABSciex DAD (*.wiff)
+* Agilent VWD (*.D/vwd1A.ch)
+* CAMAG VWD (*.DFM)
+* DataApex FID (*.PRM)
+* MassFinder FID/MSD (*.mfg)
+* MassFinder Library (*.mfl)
+* ABSciex Reports (*.txt)
+* EZChrom Reports (*.dat)
+* ChemStation Reports (*.ch)
     </description>
   </metadata>
   <files>
