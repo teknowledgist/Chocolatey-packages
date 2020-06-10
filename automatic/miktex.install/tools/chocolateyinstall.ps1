@@ -1,5 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$PackageMileStone = '2.9.7440'
+
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ZipFiles = Get-ChildItem $toolsDir '*.zip' |Select-Object -ExpandProperty FullName
 
@@ -31,7 +33,7 @@ Write-Host $msg -ForegroundColor Cyan
 $LocalRepo = $false
 $Repository = ''
 if ($pp['RepoPath']) {
-   $LocalRepo = -not ([uri]($pp['RepoPath']).hostnametype.tostring().equals('Dns'))
+   $LocalRepo = -not (([uri]($pp['RepoPath'])).hostnametype.tostring().equals('Dns'))
    $Repository = $pp['RepoPath']
 }
 
@@ -124,10 +126,9 @@ $InstallDir = split-path ($key.UninstallString.split('"')[1])
 $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
 $MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^MiKTeX:'}
 $MileStone = $MileStoneLine.split()[-1]
-write-host "MileStone:  $MileStone"
-write-host "Package version:  $env:ChocolateyPackageVersion"
-If ([version]$MileStone -lt [version]$env:ChocolateyPackageVersion) {
-   Throw "Repository was only able to update MiKTeX to v.$MileStone."
+Write-Verbose "Verified MiKTeX milestone $MileStone installed."
+If ([version]$MileStone -lt [version]$PackageMileStone) {
+   Throw "Repository was unable to provide MiKTeX milestone $PackageMileStone"
 }
 
 # configure MiKTeX to automatically install missing packages on the fly
