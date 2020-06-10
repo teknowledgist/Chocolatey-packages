@@ -32,11 +32,11 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
    @{
       "tools\VERIFICATION.txt" = @{
-         "(^Milestone\s*=\s*)('.*')"       = "`$1$($Latest.Version)"
-         "(^32-bit URL\s*=\s*)('.*')"      = "`$1$($Latest.URL32)"
-         "(^64-bit URL\s*=\s*)('.*')"      = "`$1$($Latest.URL64)"
-         "(^32-bit checksum\s*=\s*)('.*')" = "`$1$($Latest.Checksum32)"
-         "(^64-bit checksum\s*=\s*)('.*')" = "`$1$($Latest.Checksum64)"
+         "(^Milestone\s*=\s*)('.*')"       = "`$1'$($Latest.Version)'"
+         "(^32-bit URL\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
+         "(^64-bit URL\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
+         "(^32-bit checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+         "(^64-bit checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
       }
    }
 }

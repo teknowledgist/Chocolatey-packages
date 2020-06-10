@@ -31,7 +31,7 @@ Write-Host $msg -ForegroundColor Cyan
 $LocalRepo = $false
 $Repository = ''
 if ($pp['RepoPath']) {
-   $LocalRepo = [uri]($pp['RepoPath']).AbsoluteUri.StartsWith('file:')
+   $LocalRepo = -not ([uri]($pp['RepoPath']).hostnametype.tostring().equals('Dns'))
    $Repository = $pp['RepoPath']
 }
 
@@ -82,14 +82,14 @@ if ($key.Count -gt 1) {
       # Use a temporary repository if one not given
       $Repository = Join-Path $env:TEMP 'MiKTeX-repository'
       $LocalRepo = $true
-      Write-Verbose "Will use a temporary MiKTeX repository at '$Repository'."
+      $Temporary = " temporary"
    }
 
    if ($LocalRepo) {
       $RepoSwitch = "--local-package-repository=`"$Repository`""
 
       # Only create a repository if it is local; remote repositories need to be updated independently.
-      Write-Verbose "Creating MiKTeX repository at '$Repository'."
+      Write-Host "Creating a$Temporary repository at '$Repository'."
       $DownloadArgs = @{
          Statements       = "--verbose $RepoSwitch --package-set=$set download "
          ExetoRun         = $MiKTeXsetup
@@ -105,7 +105,7 @@ if ($key.Count -gt 1) {
    }
 
    # Now, do the actual install from identified repository
-   Write-Verbose 'Installing from temporary MiKTeX repository.'
+   Write-Host "Installing from$Temporary MiKTeX repository."
    $InstallArgs = @{
       Statements       = "--verbose $RepoSwitch --package-set=$set --shared install "
       ExetoRun         = $MiKTeXsetup
@@ -122,9 +122,11 @@ if ($key.Count -gt 1) {
 [array]$key = Get-UninstallRegistryKey -SoftwareName 'miktex*'
 $InstallDir = split-path ($key.UninstallString.split('"')[1])
 $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
-$MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^miktex'}
-$MileStone = $MileStoneLine.split[-1]
-If ([version]$MileStone -lt $env:ChocolateyPackageVersion) {
+$MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^MiKTeX:'}
+$MileStone = $MileStoneLine.split()[-1]
+write-host "MileStone:  $MileStone"
+write-host "Package version:  $env:ChocolateyPackageVersion"
+If ([version]$MileStone -lt [version]$env:ChocolateyPackageVersion) {
    Throw "Repository was only able to update MiKTeX to v.$MileStone."
 }
 

@@ -10,11 +10,11 @@ With the "All Downloads" tab displayed, expand the 32-bit and/or 64-bit
 and get the file via the "Download" button.
 
 Direct Download:
-Milestone       = 2.9.7440
-32-bit URL      = https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x86/miktexsetup-2.9.7442.zip
-32-bit checkSum = 55c1e1b6ecff7afc734452ff9931b3a9dcc46b1aad8b32281dd85001749b8adf
-64-bit URL      = https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x64/miktexsetup-2.9.7442-x64.zip
-64-bit checkSum = 6e5996544cbd517b4c661f7642a9f6aae68cf85c92e56a7e1bb81ed33df1d153
+Milestone       = '2.9.7440'
+32-bit URL      = 'https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x86/miktexsetup-2.9.7442.zip'
+32-bit checksum = '55C1E1B6ECFF7AFC734452FF9931B3A9DCC46B1AAD8B32281DD85001749B8ADF'
+64-bit URL      = 'https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x64/miktexsetup-2.9.7442-x64.zip'
+64-bit checksum = '6E5996544CBD517B4C661F7642A9F6AAE68CF85C92E56A7E1BB81ED33DF1D153'
 
 Note that the version of the Chocolatey package identifies the MiKTeX 
 "milestone", not the version of the setup utility embedded in the package.
