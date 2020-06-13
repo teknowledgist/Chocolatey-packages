@@ -1,0 +1,12 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest installers are available here:
+   https://yacy.net/download_installation/
+
+   
+Direct Download:
+Version  : 1.922.20191014.9966
+URL      : http://latest.yacy.net/yacy_v1.922_20191014_9966.exe
+CheckSum : 22C2C2C77FE613DECC5226C741795056647C96796ECAA188854820997D54B16B

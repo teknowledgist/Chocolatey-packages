@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>yacy</id>
+    <version>1.922.20191014.9966</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/yacy</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>YaCy</title>
+    <authors>YaCy developers</authors>
+    <projectUrl>https://yacy.net/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/yacy/yacy_search_server@2feec354a57a5bdadcc9327f251e6316d598d347/addon/YaCy256x256.png</iconUrl>
+    <copyright>Copyright © 2005-2019 YaCy contributors</copyright>
+    <licenseUrl>https://github.com/yacy/yacy_search_server/blob/master/COPYRIGHT</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/yacy/yacy_search_server</projectSourceUrl>
+    <docsUrl>https://yacy.net/demonstration_tutorial_screenshot/</docsUrl>
+    <mailingListUrl>https://searchlab.eu/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/yacy/yacy_search_server/issues</bugTrackerUrl>
+    <tags>yacy p2p search engine FOSS</tags>
+    <summary>Decentralized Web Search</summary>
+    <description>The YaCy search engine software provides results from a network of independent peers, instead of a central server. It is a distributed network where no single entity decides what to list or order it appears in.
+
+User privacy is central to YaCy, and it runs on each user's computer, where search terms are hashed before they being sent to the network. Everyone can create their individual search indexes and rankings, and a truly customized search portal.
+
+Each YaCy user is either part of a large search network (search indexes can be exchanged with other installation over a built-in peer-to-peer network protocol) or the user runs YaCy to produce a personal search portal that is either public or private.
+
+YaCy search portals can also be placed in an intranet environment, making it a replacement for commercial enterprise search solutions. A network scanner makes it easy to discover all available HTTP, FTP and SMB servers.
+
+To create a web index, YaCy has a web crawler for everybody, free of censorship and central data retention:
+
+* Search the web (automatically using all other YaCy peers)
+* Co-operative crawling; support for other crawlers
+* Intranet indexing and search
+* Set up your own search portal
+* All users have equal rights
+* Comprehensive concept to anonymise the users' index
+
+To be able to perform a search using the YaCy network, every user has to set up their own node. More users means higher index capacity and better distributed indexing performance.
+    </description>
+    <releaseNotes>https://github.com/yacy/yacy_search_server/releases</releaseNotes>
+    <!-- =============================== -->      
+    <dependencies>
+      <dependency id="openjdk" version="11.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -10,7 +10,7 @@ $uninstallEntry = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\$Di
 $uninstallEntryWow64 = "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\$DisplayName $AppVersion*"
 
 if ((Test-Path $uninstallEntry) -or (Test-Path $uninstallEntryWow64)) {
-   Write-Host "$($key.DisplayName) v$AppVersion already installed." -ForegroundColor Cyan
+   Write-Host "$DisplayName v$AppVersion already installed." -ForegroundColor Cyan
 } else {
    $PackageArgs = @{
      PackageName  = $packageName

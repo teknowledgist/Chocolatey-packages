@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>bluebeamvu</id>
     <version>2017.0.40</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/bluebeamvu</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/bluebeamvu</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Bluebeam Vu</title>
@@ -28,8 +28,11 @@
 * DMS Integration - Access SharePoint and ProjectWise documents
 * PDF Forms - Fill out and save PDF forms
 * Digital Signatures - Digitally sign PDFs
+
+## Discontinued
+[Vu as a standalone product has been deprecated.](https://support.bluebeam.com/articles/what-is-view-mode-2019/) Its functionality is now available in [Revu using View mode](https://support.bluebeam.com/articles/what-is-view-mode-2019/).
     </description>
-    <releaseNotes>http://support.bluebeam.com/articles/release-notes-bluebeam-revu/</releaseNotes>
+    <releaseNotes>https://support.bluebeam.com/articles/release-notes-bluebeam-revu/#2017.0.40</releaseNotes>
     <dependencies>
       <dependency id="vcredist2015" version="14.0.24212" />
       <dependency id="autohotkey.portable" version="1.1" />
