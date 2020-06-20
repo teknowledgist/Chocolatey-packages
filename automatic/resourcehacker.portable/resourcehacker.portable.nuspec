@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>resourcehacker.portable</id>
+    <version>5.1.7</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/resourcehacker.portable</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>ResourceHacker (Portable)</title>
+    <authors>Angus Johnson</authors>
+    <projectUrl>http://www.angusj.com/resourcehacker</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@671dfa4a14ab2c7e7ca4c0ea9365143ba7f39212/Icons/resourcehacker_icon.png</iconUrl>
+    <copyright>Copyright © 1998-2019 Angus Johnson</copyright>
+    <licenseUrl>http://www.angusj.com/resourcehacker/#download</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.angusj.com/resourcehacker</docsUrl>
+    <tags>resourcehacker portable hacker resource compile decomplile freeware</tags>
+    <summary>a freeware resource compiler and decompiler for Windows® applications</summary>
+    <description>Resource Hacker™ is a resource editor for 32bit and 64bit Windows® applications. It's both a resource compiler (for *.rc files), and a decompiler - enabling viewing and editing of resources in executables (*.exe; *.dll; *.scr; etc) and compiled resource libraries (*.res, *.mui). While Resource Hacker™ is primarily a GUI application, it also provides many options for compiling and decompiling resources from the command-line.
+
+### Features
+* Compiler supporting #INCLUDE, #IF and #IFDEF directives nested to multiple levels, and the #DEFINE, #UNDEF, #IF, #ELIF, #ELSE, #IFDEF, #IFNDEF, #INCLUDE, and #PRAGMA directives.  Compiler error messages are reported, even errors nested within INCLUDE statements
+* Viewing and Editing Resources.  Menu and Dialog resource types have their own WYSIWYG designers
+* Command Line Syntax with scripting support.
+
+    </description>
+    <releaseNotes>http://www.angusj.com/resourcehacker/#download</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
