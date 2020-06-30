@@ -3,12 +3,12 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <id>miktex.install</id>
-    <version>20.6</version>
+    <id>miktex</id>
+    <version>2.9.7440</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/miktex.install</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>MiKTeX (Install)</title>
+    <title>MiKTeX</title>
     <authors>Christian Schenk</authors>
     <projectUrl>http://miktex.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@c9dd968b548035ac3a749235c638f9a895df54b8/Icons/miktex_icon.png</iconUrl>
@@ -49,6 +49,9 @@ This package has only the MiKTeX setup utility embedded.  Any new install of MiK
 `choco install miktek.install --params '"/RepoPath:https://localserver.org/MiKTeX-Repo"'`
 
     </description>
+    <dependencies>
+      <dependency id="miktex.install" version="[2.9.7440]" />
+    </dependencies>
     <releaseNotes>https://github.com/MiKTeX/miktex/releases/latest</releaseNotes>
   </metadata>
   <files>
