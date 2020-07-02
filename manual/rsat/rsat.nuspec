@@ -43,7 +43,8 @@ With the September 2018 release of Windows, RSAT is no longer a single install n
 * `/DNS` - Install the Domain Name Services Management feature.
 * `/DHCP` - Install the DHCP Management feature.
 * `/WSUS` - Install the WSUS Management feature.
-
+* `/BL` - Install the BitLocker Drive Encryption Administration Utilities feature.
+      
 *Example:* `choco install rsat -params '"/AD /GP /DHCP"'`
 
     </description>
