@@ -104,6 +104,7 @@ If (($osInfo.Version.Major -ne 10) -or ($osInfo.BuildNumber -lt $1809Build)) {
    if ($pp.DNS) {$WhereArray += '($_.Name -like "Rsat.DNS*")'}
    if ($pp.DHCP) {$WhereArray += '($_.Name -like "Rsat.DHCP*")'}
    if ($pp.WSUS) {$WhereArray += '($_.Name -like "Rsat.WSUS*")'}
+   if ($pp.BL) {$WhereArray += '($_.Name -like "Rsat.BitLocker*")'} 
 
    if ($WhereArray.count -eq 0) {
       $WhereArray += '$_.Name -like "Rsat*"'
