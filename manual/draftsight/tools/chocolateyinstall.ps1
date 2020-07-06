@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'DraftSight'
-$url = 'https://dl-ak.solidworks.com/nonsecure/draftsight/2020SP0/DraftSight32.exe'
-$url64 = 'https://dl-ak.solidworks.com/nonsecure/draftsight/2020SP0/DraftSight64.exe'
-$checkSum = '7126d6e181b9efac411a094af86b5af5087e837af7a68115099095064c9f020f'
-$checkSum64 = 'd64fb5c760c5c9b73db7e06f37851f57d4e7284957126c144c55ad174db32244'
+$url = 'https://dl-ak.solidworks.com/nonsecure/draftsight/2020SP1-1/DraftSight32.exe'
+$url64 = 'https://dl-ak.solidworks.com/nonsecure/draftsight/2020SP1-2/DraftSight64.exe'
+$checkSum = 'e3c27bc9558f9140f5ed67ca1ee34ccadd5152483be62c57ca61072211f5dbc6'
+$checkSum64 = 'bbe86ec7446f524ab396b8a598a397e47851156cb8352da5c182e61a5bf91888'
 
 # if an older version of DraftSight has been run, the API service will prevent upgrading it.
 if (Get-Service -DisplayName "Draftsight API Service*" | Where { $_.status -eq 'running' }) {

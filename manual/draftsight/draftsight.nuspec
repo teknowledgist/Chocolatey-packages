@@ -4,11 +4,11 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>draftsight</id>
-    <version>2020.0.2092</version>
+    <version>2020.1.0062</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/draftsight</packageSourceUrl>
     <owners>Teknowledgist, BasicTheProgram</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Draftsight 2020 SP0 (trialware)</title>
+    <title>Draftsight 2020 SP1 (trialware)</title>
     <authors>Dassault Systèmes</authors>
     <projectUrl>https://www.3ds.com/products-services/draftsight-cad-software/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@ef96bd7480194826733836730a121b071824d0b9/Icons/draftsight_icon.png</iconUrl>
@@ -28,12 +28,12 @@ Its familiar user interface makes it easy to transition from other comparable CA
 ## Trialware
 * DraftSight 2019 for Windows® is [offered in paid versions only](https://www.draftsight.com/?int_campaign=3DS_Home_Offerings).
 * All free versions of DraftSight (2018 or earlier) will cease to run after 12/31/2019.
-    
-This package will install a trial that will work for 30 days before requiring registration.  
+
+This package will install a trial that will work for 30 days before requiring registration.
 
     </description>
     <releaseNotes>https://www.draftsight.com/?int_campaign=3DS_Download_ReleaseNotes</releaseNotes>
-    <dependencies> 
+    <dependencies>
       <dependency id="vcredist2015" version="14.0"/>
     </dependencies>
   </metadata>
