@@ -11,7 +11,8 @@ function global:au_GetLatest {
 
    $version = $Link -replace '.*\/v([0-9.]+)_.*','$1'
 
-   $URL = 'https://mega.nz/MEGAsyncSetup.exe'
+   $URL32 = 'https://mega.nz/MEGAsyncSetup32.exe'
+   $URL64 = 'https://mega.nz/MEGAsyncSetup64.exe'
 
    return @{ Version = $version; URL32 = $URL }
 }
@@ -20,8 +21,10 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
     @{
         "tools\chocolateyInstall.ps1" = @{
-            "^(   url\s*=\s*)('.*')"      = "`$1'$($Latest.URL32)'"
-            "^(   Checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
+            "^(   url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
+            "^(   Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
+            "^(   url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
+            "^(   Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
     }
 }

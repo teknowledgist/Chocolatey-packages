@@ -1,4 +1,4 @@
-﻿VERIFICATION
+VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
@@ -10,6 +10,7 @@ Sometimes, the site is down.
 It is also available at MajorGeeks:
 http://www.majorgeeks.com/files/details/usb_image_tool.html
 
-Version  :  1.76
-URL      :  https://www.alexpage.de/download/usbit/usbit.zip
-Checksum :  5226F8C8025CB2EE52B18F6541C008AFF7E891E45932E4CBF713E78B95D72B34
+Direct Download:
+Version  : 1.80
+URL      : http://www.alexpage.de/download/usbit/usbit.zip
+Checksum : 37DAA6913A699422BF25C9EAC5473340F6EF1FCCC890DE4E23F014780D249225

@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>usbit</id>
-    <version>1.76</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/usbit</packageSourceUrl>
+    <version>1.80</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/usbit</packageSourceUrl>
     <owners>Teknowledgist, tonigellida</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>USB Image Tool</title>
     <authors>Alexander Beug</authors>
     <projectUrl>http://www.alexpage.de/usb-image-tool/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/usbit_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@cc8e62402691a4244e127f1b7ee46e3b45a6e468/Icons/usbit_icon.png</iconUrl>
     <copyright>Copyright © 2006-2017 Alexander Beug</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/usbit/tools/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/usbit/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <mailingListUrl>http://www.alexpage.de/usb-image-tool/forum/</mailingListUrl>
     <tags>usbit USB image clone</tags>
@@ -35,7 +35,7 @@ USB Image Tool works with any device, that implements the USB Mass Storage proto
     <releaseNotes>https://www.alexpage.de/usb-image-tool/changelog/</releaseNotes>
     <!-- =============================== -->      
     <dependencies>
-      <dependency id="dotnet4.5" />
+      <dependency id="dotnet4.7" />
     </dependencies>
   </metadata>
   <files>
