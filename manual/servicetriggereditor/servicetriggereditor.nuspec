@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>servicetriggereditor</id>
+    <version>3.0.8.57</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/servicetriggereditor</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Service Trigger Editor (portable)</title>
+    <authors>Core Technologies Consulting, LLC</authors>
+    <projectUrl>https://www.coretechnologies.com/products/ServiceTriggerEditor/</projectUrl>
+    <iconUrl>https://cdn.coretechnologies.com/images/service-trigger-editor-logo_48x48.gif</iconUrl>
+    <copyright>Copyright © 2010 - 2019, Core Technologies Consulting, LLC</copyright>
+    <licenseUrl>https://www.coretechnologies.com/company/Core-Technologies-Consulting_Freeware-License-Agreement.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.coretechnologies.com/products/ServiceTriggerEditor/#adding-a-trigger</docsUrl>
+    <mailingListUrl>https://www.coretechnologies.com/company/contact</mailingListUrl>
+    <tags>servicetriggereditor service trigger services administration portable freeware</tags>
+    <summary>Manage Trigger-Start Services, to start/stop Windows Services on demand</summary>
+    <description> Service Trigger Editor is a free administrative utility that can add, change, or view the Triggers configured on Windows Services. It runs on all modern versions of Windows.
+
+The command-line SC tool (sc.exe) is good enough for occasional manipulation of service triggers, always having to resort to the command line becomes a drag.  Hence Service Trigger Editor was born. 
+    </description>
+    <releaseNotes>https://www.coretechnologies.com/products/ServiceTriggerEditor/VersionHistory.html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
