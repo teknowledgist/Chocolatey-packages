@@ -13,7 +13,7 @@
     <projectUrl>http://www.alexpage.de/usb-image-tool/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@cc8e62402691a4244e127f1b7ee46e3b45a6e468/Icons/usbit_icon.png</iconUrl>
     <copyright>Copyright © 2006-2017 Alexander Beug</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/usbit/tools/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/usbit/tools/license.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <mailingListUrl>http://www.alexpage.de/usb-image-tool/forum/</mailingListUrl>
     <tags>usbit USB image clone</tags>
