@@ -1,0 +1,1 @@
+﻿# Program is embedded and requires no installation or decompression.
