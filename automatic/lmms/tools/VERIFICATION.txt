@@ -10,8 +10,8 @@ https://github.com/LMMS/lmms/releases
 
 Direct Download:
 
-Version    : 1.2.1
-URL        : https://github.com/LMMS/lmms/releases/download/v1.2.1/lmms-1.2.1-win32.exe
-URL64      : https://github.com/LMMS/lmms/releases/download/v1.2.1/lmms-1.2.1-win64.exe
-Checksum   : E5C5FCD25228882363CB04DFFDE5FB20452030E51C6DD870D8C01701456758D3
-Checksum64 : 6EC4C40DF466E2B3D885C580FE0593915A766CB70CEC8FCCA19D5BE59BDF80C5
+Version    : 1.2.2
+URL        : https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms-1.2.2-win32.exe
+URL64      : https://github.com/LMMS/lmms/releases/download/v1.2.2/lmms-1.2.2-win64.exe
+Checksum   : CC701DF9FC1B9E9E756D020EDC4FCB90DE5C28ED1E8229AA561AD4A065CD001B
+Checksum64 : 5F20AF1D782468507417D0785826B1F064FADBA88ED1691E2DEF269922ACE56B

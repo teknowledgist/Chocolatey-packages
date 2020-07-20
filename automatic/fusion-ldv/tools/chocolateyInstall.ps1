@@ -2,6 +2,7 @@
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*.exe').FullName
+$BitLevel = Get-ProcessorBits
 
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
@@ -19,10 +20,21 @@ New-Item "$fileLocation.ignore" -Type file -Force | Out-Null
 $TargetPackage = 'lastools'
 $TargetLib = "$env:ChocolateyInstall\lib\$TargetPackage"
 $TargetUnzipLog = Get-ChildItem $TargetLib -Filter '*.zip.txt'
+$TargetDLL = 'laszip.dll'
+
+If (Get-ProcessorBits -eq 64) {
+   $TargetDLL = 'laszip64.dll'
+   $VarAttribs = @{
+         VariableName  = 'FUSION64'
+         VariableValue = 'TRUE'
+         VariableType  = 'Machine'
+   }
+   Install-ChocolateyEnvironmentVariable @VarAttribs
+}
 If ($TargetUnzipLog) {
    $TargetInstallLocation = Split-Path (Get-Content $TargetUnzipLog.FullName | Select-Object -First 1)
-   $dll = Get-ChildItem $TargetInstallLocation -Filter 'laszip.dll' -Recurse | 
-      Where-Object {$_.FullName -match '\\laszip\\'}
+   $dll = Get-ChildItem $TargetInstallLocation -Filter $TargetDLL -Recurse | 
+                  Where-Object {$_.FullName -match '\\laszip\\'}
 
    # Find where Fusion-LDV installed itself (no registry entry!)
    $StartMenu = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu'

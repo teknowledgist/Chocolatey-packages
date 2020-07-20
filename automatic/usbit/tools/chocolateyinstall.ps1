@@ -18,6 +18,6 @@ Get-ChocolateyUnzip @InstallArgs
 
 $StartPrograms = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs'
 $shortcutFilePath = Join-Path $StartPrograms 'USB Image Tool.lnk'
-$targetPath = (Get-ChildItem $env:ChocolateyPackageFolder -filter '*.exe' -recurse).fullname
+$targetPath = (Get-ChildItem $env:ChocolateyPackageFolder -filter '*tool.exe' -recurse).fullname
 
 Install-ChocolateyShortcut -shortcutFilePath $shortcutFilePath -targetPath $targetPath

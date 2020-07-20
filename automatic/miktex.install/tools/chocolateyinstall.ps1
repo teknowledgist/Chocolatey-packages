@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageMileStone = '20.6'
+$PackageMileStone = '20.6.29'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ZipFiles = Get-ChildItem $toolsDir '*.zip' |Select-Object -ExpandProperty FullName
@@ -42,41 +42,49 @@ if ($pp['RepoPath']) {
 if ($key.Count -gt 1) {
    Throw 'More than one install of MiKTeX already exists!'
 } elseif ($key.Count -eq 1) {
+   Write-Verbose "Found an install of MiKTeX."
    # Use MiKTeX's built-in updater
    $InstallDir = split-path ($key.UninstallString.split('"')[1])
    $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
-   $MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^miktex'}
+   Write-Verbose "Running 'initexmf.exe' to identify installed milestone."
+   $MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^(CurrentVersion|MiKTeX):'}
    $MileStone = $MileStoneLine.split[-1]
    Write-Host "Found MiKTeX milestone $MileStone currently installed." -ForegroundColor Cyan
-   Write-Host 'Updating to the latest MiKTeX milestone.' -ForegroundColor Cyan
 
-   if ($LocalRepo) {
-      if (test-path $Repository) {
-         Write-Verbose "Updating local MiKTeX repository at '$Repository'."
-      } else {
-         Write-Verbose "Local MiKTeX repository not found.  Creating one at '$Repository'."
+   If (([Version]$MileStone -lt [Version]$PackageMileStone) -or $env:ChocolateyForce) {
+      Write-Host 'Updating to the latest MiKTeX milestone.' -ForegroundColor Cyan
+
+      if ($LocalRepo) {
+         if (test-path $Repository) {
+            Write-Verbose "Updating local MiKTeX repository at '$Repository'."
+         } else {
+            Write-Verbose "Local MiKTeX repository not found.  Creating one at '$Repository'."
+         }
+         $DownloadArgs = @{
+            Statements       = "--verbose --local-package-repository=`"$Repository`" --package-set=$set download "
+            ExetoRun         = $MiKTeXsetup
+            WorkingDirectory = $toolsDir
+            validExitCodes   = @(0)
+         }
+         $exitCode = Start-ChocolateyProcessAsAdmin @DownloadArgs
+         if ($exitCode -ne 0) {
+            Throw 'Local Repository failure!'
+         }
       }
-      $DownloadArgs = @{
-         Statements       = "--verbose --local-package-repository=`"$Repository`" --package-set=$set download "
-         ExetoRun         = $MiKTeXsetup
-         WorkingDirectory = $toolsDir
+
+      $MPM = Join-Path $InstallDir 'mpm.exe'
+      if ($Repository -ne '') { $RepoSwitch = "--repository=`"$Repository`"" }
+      $SetupArgs = @{
+         Statements       = "--admin --verbose --update $RepoSwitch"
+         ExetoRun         = $MPM
+         WorkingDirectory = $InstallDir
          validExitCodes   = @(0)
       }
-      $exitCode = Start-ChocolateyProcessAsAdmin @DownloadArgs
-      if ($exitCode -ne 0) {
-         Throw 'Local Repository failure!'
-      }
+      $exitCode = Start-ChocolateyProcessAsAdmin @SetupArgs
+   } else {
+      Write-Verbose "Installed Milestone of MiKTeX is the same or newer than this package version."
+      Return
    }
-
-   $MPM = Join-Path $InstallDir 'mpm.exe'
-   if ($Repository -ne '') { $RepoSwitch = "--repository=`"$Repository`"" }
-   $SetupArgs = @{
-      Statements       = "--admin --verbose --update $RepoSwitch"
-      ExetoRun         = $MPM
-      WorkingDirectory = $InstallDir
-      validExitCodes   = @(0)
-   }
-   $exitCode = Start-ChocolateyProcessAsAdmin @SetupArgs
 
 } elseif ($key.Count -eq 0) {
    # MiKTeX install requires a repository
@@ -124,7 +132,8 @@ if ($key.Count -gt 1) {
 [array]$key = Get-UninstallRegistryKey -SoftwareName 'miktex*'
 $InstallDir = split-path ($key.UninstallString.split('"')[1])
 $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
-$MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^MiKTeX:'}
+Write-Verbose "Using 'initexmf.exe' to identify installed milestone."
+$MileStoneLine = & "$InitEXMF" --admin --report | Where-Object {$_ -match '^CurrentVersion:'}
 $MileStone = $MileStoneLine.split()[-1]
 Write-Verbose "Verified MiKTeX milestone $MileStone installed."
 If ([version]$MileStone -lt [version]$PackageMileStone) {

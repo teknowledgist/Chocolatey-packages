@@ -4,26 +4,26 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fusion-ldv</id>
-    <version>3.80</version>
+    <version>4.00</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fusion-ldv</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Fusion LiDAR Data Viewing system</title>
     <authors>Bob McGaughey</authors>
-    <projectUrl>http://forsys.sefs.uw.edu/fusion/fusionlatest.html</projectUrl>
+    <projectUrl>http://forsys.sefs.uw.edu/fusion/fusion_overview.html</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/fusion-ldv_icon.png</iconUrl>
     <copyright>Public Domain</copyright>
     <licenseUrl>http://forsys.sefs.uw.edu/fusion/fusionlatest.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <docsUrl>http://forsys.sefs.uw.edu/fusion/FUSION_manual.pdf</docsUrl>
+    <docsUrl>http://forsys.sefs.uw.edu/software/fusion/FUSION_manual.pdf</docsUrl>
     <tags>fusion LiDAR geographic GIS mapping public embedded</tags>
     <summary>A public domain LiDAR visualization system.</summary>
     <description>The Fusion LDV visualization system consists of two main programs, FUSION and LDV (LiDAR data viewer), implemented as Microsoft Windows applications coded in C++ using the Microsoft Foundation Classes. The primary FUSION display presents all project data using a 2D display typical of geographic information systems. It supports a variety of data types and formats but requires that all data be geo-referenced using the same projection system and units of measurement. LDV provides the 3D visualization environment, based on OpenGL, for the examination of spatially-explicit data subsets. 
     
     LiDAR technology offers fast, real-time collection of 3-D points that are accurately geo-referenced.</description>
-    <releaseNotes>http://forsys.sefs.uw.edu/fusion/fusionnotes.txt</releaseNotes>
+    <releaseNotes>http://forsys.sefs.uw.edu/software/fusion/fusionnotes.txt</releaseNotes>
     <dependencies>
-      <dependency id="lastools" version="2016.7" />
+      <dependency id="lastools" version="2019.08.12" />
     </dependencies>
   </metadata>
   <files>

@@ -35,7 +35,7 @@ USB Image Tool works with any device, that implements the USB Mass Storage proto
     <releaseNotes>https://www.alexpage.de/usb-image-tool/changelog/</releaseNotes>
     <!-- =============================== -->      
     <dependencies>
-      <dependency id="dotnet4.7" />
+      <dependency id="dotnet4.7" version="4.7" />
     </dependencies>
   </metadata>
   <files>

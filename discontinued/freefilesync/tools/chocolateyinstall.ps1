@@ -10,8 +10,8 @@ Write-Debug "Process ID:`t$($ahkProc.Id)"
  
 $packageArgs = @{
    packageName  = $env:ChocolateyPackageName
-   url          = 'https://www.freefilesync.org/download/FreeFileSync_10.19_Windows_Setup.exe'
-   Checksum     = '659fbc50b4f4bc210d7d06ab19b5b5f921254106070c30cef5da273874d5948f'
+   url          = 'https://www.freefilesync.org/download/FreeFileSync_10.25_Windows_Setup.exe'
+   Checksum     = 'de38ced68068569a5ffcc493ebba4f1791649aac1b119f57addc6a0c81711042'
    ChecksumType = 'sha256'
    fileType     = 'EXE'
    softwareName = "$env:ChocolateyPackageName*"
