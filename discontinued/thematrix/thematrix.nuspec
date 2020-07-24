@@ -11,7 +11,7 @@
     <title>The Matrix (screensaver)</title>
     <authors>Philip Symons</authors>
     <projectUrl>https://www.meticulous-software.co.uk/downloads.shtml</projectUrl>
-    <!-- <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/pathlengthchecker_icon.png</iconUrl> -->
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@4236281ac8ec0ef1fbcea4819ea8b5025ed544d6/Icons/thematrix_icon.png</iconUrl>
     <copyright>Copyright 2000-2010 - Meticulous Software</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/thematrix/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -22,8 +22,6 @@
     <description>This is the latest version of the Matrix Screensaver emulating the introduction to the movie and the code. Created because of the offical screensaver is completely awful. Ten years old and still the best... in fact, now even better!
 
 No spyware, no adware, no nagware, no ever-expanding bloat of pointless 'features', just pure, simple, and elegant as always.
-
-![TheMatrix](https://www.meticulous-software.co.uk/Images/thematrix.jpg)  
 
 The screen saver supports multiple monitors, so this time the Matrix really will have you...
 
