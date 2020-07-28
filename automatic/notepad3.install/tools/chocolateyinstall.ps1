@@ -14,10 +14,10 @@ If ($ZipFiles) {
          $ZipFile = $ZipFiles | Where-Object {$_.Name -notmatch 'x86'} 
       } else {
          $ZipFile = $ZipFiles | Where-Object {$_.Name -match 'x86'}
+      }
    } else { $ZipFile = $ZipFiles }
 
    Get-ChocolateyUnzip -FileFullPath $ZipFile.FullName -Destination $UnzipDir
-   }
 } else {
    $UnzipDir = $toolsDir
 }
@@ -38,7 +38,7 @@ if ($installers.count -eq 2) {
    $InstallArgs.add('File',$Installer32)
    $InstallArgs.add('File64',$Installer64)
 } else {
-   # if zipped, then there should be only one .exe
+   # if came zipped, then there should be only one .exe
    if ($BitLevel -eq '64') {
       $Installer64 = $installers | Where-Object {$_.name -notmatch 'x86'} | Select-Object -ExpandProperty fullname
       $InstallArgs.add('File64',$Installer64)

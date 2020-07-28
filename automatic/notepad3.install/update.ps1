@@ -5,14 +5,14 @@ function global:au_GetLatest {
 
    $downloaduri = 'https://www.rizonesoft.com/downloads/notepad3/'
    $download_page = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing   
-   $link64 = $download_page.links | Where-Object {$_.class -match 'exe'} | Select-Object -First 1   
+   $link64 = $download_page.links | Where-Object {$_.class -match '(exe|zip)'} | Select-Object -First 1   
    $link32 = $download_page.links | 
-                  Where-Object {($_.class -match 'exe') -and ($_.outerhtml -match 'x86')} | 
+                  Where-Object {($_.class -match '(exe|zip)') -and ($_.outerhtml -match 'x86')} | 
                   Select-Object -First 1   
 
    $version = $link64.title.split()[-1]
-   $filename64 = $link64.outerhtml.split() | Where-Object {$_ -match '\.exe$'}
-   $filename32 = $link32.outerhtml.split() | Where-Object {$_ -match '\.exe$'}
+   $filename64 = $link64.outerhtml.split() | Where-Object {$_ -match '\.(exe|zip)$'}
+   $filename32 = $link32.outerhtml.split() | Where-Object {$_ -match '\.(exe|zip)$'}
    
    $url64 = "https://www.rizonesoft.com/software/notepad3/" + $filename64
    $url32 = "https://www.rizonesoft.com/software/notepad3/" + $filename32
@@ -41,9 +41,9 @@ function global:au_SearchReplace {
 if ($MyInvocation.InvocationName -ne '.') { 
    function global:au_BeforeUpdate() { 
    Write-host "Downloading Notepad3 $($Latest.Version) files."
-      Get-RemoteFiles -Purge -NoSuffix -FileNameBase "Notepad3_$($Latest.Version)" 
+      Get-RemoteFiles -Purge -NoSuffix
    }
 
-   update -ChecksumFor none
+   update -ChecksumFor none -NoCheckChocoVersion
    if ($global:au_old_force -is [bool]) { $global:au_force = $global:au_old_force }
 }
