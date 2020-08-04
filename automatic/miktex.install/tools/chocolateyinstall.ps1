@@ -48,7 +48,7 @@ if ($key.Count -gt 1) {
    $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
    Write-Verbose "Running 'initexmf.exe' to identify installed milestone."
    $MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^(CurrentVersion|MiKTeX):'}
-   $MileStone = $MileStoneLine.split[-1]
+   $MileStone = $MileStoneLine.split()[-1]
    Write-Host "Found MiKTeX milestone $MileStone currently installed." -ForegroundColor Cyan
 
    If (([Version]$MileStone -lt [Version]$PackageMileStone) -or $env:ChocolateyForce) {

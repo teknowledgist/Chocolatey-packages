@@ -14,7 +14,11 @@ function global:au_GetLatest {
    $URL32 = 'https://mega.nz/MEGAsyncSetup32.exe'
    $URL64 = 'https://mega.nz/MEGAsyncSetup64.exe'
 
-   return @{ Version = $version; URL32 = $URL }
+   return @{ 
+      Version = $version
+      URL32 = $URL32
+      URL64 = $URL64
+   }
 }
 
 

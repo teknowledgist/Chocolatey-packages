@@ -6,6 +6,6 @@ Download via the green button on the DAX Studio homepage:
 https://daxstudio.org/
 
 Direct Download:
-Version  : 2.11.2
-URL      : https://github.com/DaxStudio/DaxStudio/releases/download/v2.11.2/DaxStudio_2_11_2_setup.exe
-CheckSum : 1A60F19DB62281000953D66EB04384A273BAE8D2CBADC62EC7707511F5B880DE
+Version  : 2.12.0
+URL      : https://github.com/DaxStudio/DaxStudio/releases/download/v2.12.0/DaxStudio_2_12_0_setup.exe
+CheckSum : E8370999CD63AC8A220D1946F913968D51C33F2D6AB315CF77CC0B4C42D8FEDA

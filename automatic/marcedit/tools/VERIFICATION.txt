@@ -7,11 +7,11 @@ All versions of MarcEdit can be downloaded from the official site:
 by selecting the correct build for your operating system.
 
 Direct download:
-Version    : 7.2.172
+Version    : 7.2.180
 x86 URL    : https://marcedit.reeset.net/software/marcedit7/MarcEdit_Setup32Admin.msi
-x86 SHA256 : A581DE632F12C3B57996D2FF3CEB186F9440F35974868648DD90F004670E722C
+x86 SHA256 : FB1A8AE6DD46D685835E0BFA52CE6A180540FC7A5E3E0DB28A07E2775916571E
 x64 URL    : https://marcedit.reeset.net/software/marcedit7/MarcEdit_Setup64Admin.msi
-x64 SHA256 : 076804A8E63C1070848803BC1DF05E4F37BA093B2F73645A0560BBEC9583F69F
+x64 SHA256 : A2A6A6111703D080B90BA6FD53D3FA2EACCA6E5554CE5289F7F9F43D1FD05135
 
 Note the URLs for the latest version are always the same.  Previous versions
 can be found in the archives by date, not version:

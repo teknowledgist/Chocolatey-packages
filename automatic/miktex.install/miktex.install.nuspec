@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>miktex.install</id>
-    <version>20.6.29</version>
+    <version>20.6.29.20200727</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/miktex.install</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -21,9 +21,12 @@
     <bugTrackerUrl>https://github.com/MiKTeX/miktex/issues</bugTrackerUrl>
     <tags>miktex tex latex pdf typesetting foss embedded</tags>
     <summary>An implementation of TeX/LaTeX</summary>
-    <description>MiKTeX (pronounced mick-tech) is an up-to-date implementation of TeX/LaTeX and related programs. [TeX](https://en.wikipedia.org/wiki/TeX) is a typesetting system written by [Donald Ervin Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) who says that it is intended for the creation of beautiful books - and especially for books that contain a lot of mathematics. 
+    <description><![CDATA[MiKTeX (pronounced mick-tech) is an up-to-date implementation of TeX/LaTeX and related programs. [TeX](https://en.wikipedia.org/wiki/TeX) is a typesetting system written by [Donald Ervin Knuth](https://en.wikipedia.org/wiki/Donald_Knuth) who says that it is intended for the creation of beautiful books - and especially for books that contain a lot of mathematics. 
 
 MiKTeX comes with TeXworks, a TeX frontend which you can use it to edit and preview LaTeX documents. 
+
+![FancyLaTeXOutput](https://mathvault.ca/wp-content/uploads/fancy-latex-output.png)
+The sky is the limit when it comes to TeX/LaTeX, with drawings, chemical equations, syntax trees, circuit diagrams, mathematical expressions, proof systems, chessboards and more! ([Image source](https://mathvault.ca/latex-guide))
 
 MiKTeX's integrated package manager installs missing [components](https://miktex.org/packages) from the Internet, if required. 
 
@@ -47,7 +50,7 @@ This package has only the MiKTeX setup utility embedded.  Any new install of MiK
 *Double-double quotes (i.e. `""path""`) are necessary for paths containing a space.*
 
 `choco install miktek.install --params '"/RepoPath:https://localserver.org/MiKTeX-Repo"'`
-
+]]>
     </description>
     <releaseNotes>https://github.com/MiKTeX/miktex/releases/latest</releaseNotes>
   </metadata>
