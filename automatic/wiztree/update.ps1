@@ -1,12 +1,12 @@
 import-module au
 
 function global:au_GetLatest {
-   $HomeURL = 'https://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/'
-   $PageText = Invoke-WebRequest -Uri $HomeURL
+   $HomeURL = 'https://wiztreefree.com'
+   $PageText = Invoke-WebRequest -Uri "$HomeURL/download"
 
    $Stub = $PageText.links | ? {$_.href -match 'wiztree.*\.exe'} |select -ExpandProperty href
 
-   $URL = "https://antibody-software.com$Stub"
+   $URL = "$HomeURL/$Stub"
 
    $Version = ($Stub -replace '.*?([0-9._]+).*?\.exe.*','$1' -replace '_','.').trim('.')
 

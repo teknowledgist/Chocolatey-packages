@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>miktex</id>
-    <version>20.6.29.20200727</version>
+    <version>20.7</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/miktex.install</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -52,7 +52,7 @@ This package has only the MiKTeX setup utility embedded.  Any new install of MiK
 `choco install miktek.install --params '"/RepoPath:https://localserver.org/MiKTeX-Repo"'`
 ]]>    </description>
     <dependencies>
-      <dependency id="miktex.install" version="[20.6.29.20200727]" />
+      <dependency id="miktex.install" version="[20.7]" />
     </dependencies>
     <releaseNotes>https://github.com/MiKTeX/miktex/releases/latest</releaseNotes>
   </metadata>

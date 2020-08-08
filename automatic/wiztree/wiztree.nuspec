@@ -10,28 +10,32 @@
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>WizTree</title>
     <authors>Antibody Software</authors>
-    <projectUrl>http://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/</projectUrl>
+    <projectUrl>https://wiztreefree.com</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@2b0f9ae47d47b9b699977be5d6a6c98f0f910180/Icons/wiztree_icon.png</iconUrl>
-    <copyright>Copyright © 2012-2018 Antibody Software Limited</copyright>
+    <copyright>Copyright © 2012-2020 Antibody Software Limited</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/wiztree/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://wiztreefree.com/guide</docsUrl>
+    <mailingListUrl>https://wiztreefree.com/contact</mailingListUrl>
     <tags>wiztree diskspace treemap treesize windirstat embedded donationware</tags>
     <summary>Find the files and folders using the most space on your hard drive - QUICKLY!</summary>
-    <description>WizTree is the world's fastest disk space analyzer. It scans your hard drive and shows you which files and folders are using the most disk space. It does this in the FASTEST way possible - you simply won't find any other application of this type that's quicker! Use the information WizTree provides to quickly locate and remove "space hogs" from your hard drive. 
+    <description>WizTree is a very high speed disk space analyser utility for Windows. It scans your hard drive and shows you which files and folders are using the most disk space. Your entire hard drive's file system is displayed visually, making it very easy to locate large files and folders. Use the information WizTree provides to quickly locate and remove "space hogs" from your hard drive.
 
 #### Features
-* Finds the files and folders using the most space on your hard drive
-* VERY Fast! WizTree reads the master file table (MFT) directly from NTFS formatted hard drives (similar to the way Everything Search Engine works)
-* Visual Treemap allows you to spot large files and large collections of smaller files at a glance
-* Finds the largest files on your hard drive. Every single file on your hard drive can be sorted in order of size.
-* File Name Search - quickly locate files by name or wildcard match
-* Sort the contents of your entire hard drive by folder size and optionally delete files and folders
-* Scan ALL hard drive file system types (NTFS, FAT, FAT32, network, etc) and/or individual folders
+* Disk Space Analysis:  Quickly identify what's using up the space on your hard drive and optionally delete files and folders to free up space.
+* Extremely Fast!:  WizTree reads the Master File Table (MFT) directly from NTFS formatted drives (similar to the way Everything Search Engine works)
+* Multiple File Systems:  BID can scan all hard drive types supported by Windows (NTFS, FAT, FAT32, network, etc).
+* Visual Treemap:  The visual treemap displays all files and folders visually based on their size. This allows you to spot large files and large collections of smaller files at a glance.
+* Find Largest Files:  The "File View" lists every individual file and folder on your hard drive in order of size.
+* File Name Search:  Quickly locate files by name or type using the file view search filter. Wildcard searches also supported (e.g. *.mp3)
+* Export File and MFT Data:  All or selected file information can be exported to CSV (comma separated values) file or copied to the clipboard. MFT files can be extracted and dumped to a file.
+* Import File and MFT Data:  Exported CSV and dumped MFT files can be imported back into WizTree for viewing. Great for tracking file system changes over time.
+* Command Line Support:  Exports of CSV and MFT files can be done via command line parameters. Great for automated auditing of hard drives.
 
-WizTree is FREE! However, if you find WizTree useful or are using WizTree in your business and would like to help to support further development, please make a donation. 
+WizTree is FREE for personal use! However, if you find WizTree useful or are using WizTree in your business and would like to help to support further development, [please make a donation](https://wiztreefree.com/donate). 
 
     </description>
-    <releaseNotes>http://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/#whatsnew</releaseNotes>
+    <releaseNotes>https://wiztreefree.com/whats-new</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

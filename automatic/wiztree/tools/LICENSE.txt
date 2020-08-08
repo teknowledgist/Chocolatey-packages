@@ -1,5 +1,5 @@
 ﻿Subject: Re: Antibody Software: WizTree license
-To: ***** <t**********@g****.com>
+To: ***** <teknowledgist@g****.com>
 Date: Wed, 28 Feb 2018 07:29:45 +1300
 
 Hi *****
@@ -15,7 +15,7 @@ Dominic
 
 On 28/02/2018 4:24 AM, ***** wrote:
 > This is an enquiry e-mail via http://antibody-software.com/web from:
-> ***** <t**********@g****.com>
+> ***** <teknowledgist@g****.com>
 >
 > Hi,
 >
@@ -34,6 +34,9 @@ From:  Installation folder (not available online)
 LICENSE
 
 WizTree is released as DONATIONWARE. It may not be resold.
+
+If you wish to use WizTree on all PCs in your organization 
+please purchase an "Enterprise license".
 
 Limitation of Liability
 THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY 
@@ -61,5 +64,5 @@ UNDERSTAND IT AND AGREE TO BE BOUND BY ITS TERMS
 AND CONDITIONS.
 
 WizTree
-Copyright © 2012-2017 Antibody Software Limited
+Copyright © 2012-2020 Antibody Software Limited
 www.antibody-software.com

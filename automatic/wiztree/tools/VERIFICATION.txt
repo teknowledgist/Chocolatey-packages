@@ -2,10 +2,10 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
-Download via the green button on the WizTree homepage:
-http://antibody-software.com/web/software/software/wiztree-finds-the-files-and-folders-using-the-most-disk-space-on-your-hard-drive/
+Download via the button on this page:
+https://wiztreefree.com/download
 
 Direct Download:
 Version  : 3.33
-URL      : https://antibody-software.com/files/wiztree_3_33_setup.exe
+URL      : https://wiztreefree.com/files/wiztree_3_33_setup.exe
 CheckSum : 18AF7955489A309A21C672122FBFD06FC60BD5351B71462DFAA6C8E2214B9A86
