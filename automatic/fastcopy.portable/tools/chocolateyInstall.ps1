@@ -22,6 +22,6 @@ Install-ChocolateyInstallPackage @InstallArgs
 Remove-Item $InstallerPath -ea 0 -force
 
 Get-ChildItem -Path $env:ChocolateyPackageFolder -filter 'setup.exe' -Recurse | 
-   ForEach-Object { $null = New-Item "$($_.FullName).ignore" -Type file -Force }
+   ForEach-Object { $null = Remove-Item $_.FullName -Force }
 
 

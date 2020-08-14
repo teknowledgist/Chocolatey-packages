@@ -39,5 +39,5 @@ Install-ChocolateyInstallPackage @InstallArgs
 
 $exes = Get-ChildItem $toolsDir -filter *.exe -Recurse |Select-Object -ExpandProperty fullname
 foreach ($exe in $exes) {
-   New-Item "$exe.ignore" -Type file -Force | Out-Null
+   Remove-Item $exe -ea 0 -force
 }

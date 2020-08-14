@@ -36,4 +36,4 @@ if (Test-Path $Shortcut) {
    Copy-Item $Shortcut "$env:ProgramData\Microsoft\Windows\Start Menu\Programs" -Force
 }
 
-New-Item "$InstallerPath.ignore" -Type file -Force | Out-Null
+Remove-Item $InstallerPath -ea 0 -force

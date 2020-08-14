@@ -15,6 +15,6 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs 
 
 foreach ($exe in $Installers) {
-   New-Item "$exe.ignore" -Type file -Force | Out-Null
+   Remove-Item $exe -ea 0 -force
 }
 

@@ -19,6 +19,6 @@ Get-ChocolateyUnzip @packageArgs
 $exes = Get-ChildItem $packageArgs.Destination -filter *.exe -Recurse |select -ExpandProperty fullname
 foreach ($exe in $exes) {
    if ($exe -notmatch 'clock(64)?.exe$') {
-      New-Item "$exe.ignore" -Type file -Force | Out-Null
+      Remove-Item $exe -ea 0 -force
    }
 }

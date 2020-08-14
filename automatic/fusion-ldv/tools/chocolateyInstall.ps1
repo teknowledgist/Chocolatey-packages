@@ -13,7 +13,7 @@ $InstallArgs = @{
 }
 
 Install-ChocolateyInstallPackage @InstallArgs
-New-Item "$fileLocation.ignore" -Type file -Force | Out-Null
+Remove-Item $fileLocation -ea 0 -force
 
 # To support compressed LiDAR data, the LASzip.dll file from 
 #   the lastools package needs to be found and copied.

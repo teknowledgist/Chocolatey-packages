@@ -22,7 +22,7 @@ foreach ($file in $files) {
       $target = $file.fullname
    } else {
       #generate an ignore file
-      New-Item "$($file.fullname).ignore" -type file -force | Out-Null
+      Remove-Item $file.fullname -ea 0 -force
    }
 }
 $shortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'hakchi2.lnk'
