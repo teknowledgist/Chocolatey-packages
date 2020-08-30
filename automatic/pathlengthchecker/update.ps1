@@ -8,7 +8,7 @@ function global:au_GetLatest {
 
    $stub = $download_page.rawcontent.split('"') | ? {$_ -match 'PathLengthChecker[0-9.]+\.zip$'}
 
-   $version = ($stub -split '/' | Where-Object {$_ -match '^[0-9.]+$'})
+   $version = ($stub -split '/' | Where-Object {$_ -match '^v?[0-9.]+$'}).trim('v')
 
    return @{ 
             Version    = $version
