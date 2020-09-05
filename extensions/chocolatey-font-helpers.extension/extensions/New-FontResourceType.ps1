@@ -48,13 +48,13 @@ Function New-FontResourceType {
 
            public static int AddFont(string fontFilePath) {
                FileInfo fontFile = new FileInfo(fontFilePath);
-               if (!fontFile.Exists) { return 0; }
+               if (!fontFile.Exists) { throw new FileNotFoundException("Font file not found"); }
                try {
                    int retVal = AddFontResource(fontFilePath);
                    bool posted = PostMessage(HWND_BROADCAST, WM.FONTCHANGE, IntPtr.Zero, IntPtr.Zero);
                    return retVal;
                }
-               catch { return 0; }
+               catch { throw; }
            }
 
            public static int RemoveFont(string fontFileName) {
@@ -63,7 +63,7 @@ Function New-FontResourceType {
                    bool posted = PostMessage(HWND_BROADCAST, WM.FONTCHANGE, IntPtr.Zero, IntPtr.Zero);
                    return retVal;
                }
-               catch { return 0; }
+               catch { throw; }
            }
        }
    }
