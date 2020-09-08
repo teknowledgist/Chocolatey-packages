@@ -85,6 +85,7 @@ function Install-ChocolateyFont {
       $FontName = $FolderObj.GetDetailsOf($FileObj,21)
 
       try {
+         $ErrorActionPreference = 'Stop'
          Copy-Item $File.FullName -destination $FontsFolder -Force
 
          $fontFinalPath = Join-Path $FontsFolder $File.Name
@@ -99,7 +100,7 @@ function Install-ChocolateyFont {
          }
       } catch {
          Write-Warning "An error occured installing '$($File.FullName)'"
-         if ($null -ne $error -and $null -ne $error[0]) {
+         if ($error -ne $null -and $error[0] -ne $null) {
             Write-Warning "$($error[0].ToString())"
             $error.clear()
          } else {
