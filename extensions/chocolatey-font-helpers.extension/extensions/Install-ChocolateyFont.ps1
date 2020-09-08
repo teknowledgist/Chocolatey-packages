@@ -99,8 +99,12 @@ function Install-ChocolateyFont {
          }
       } catch {
          Write-Warning "An error occured installing '$($File.FullName)'"
-         Write-Warning "$($error[0].ToString())"
-         $error.clear()
+         if ($null -ne $error -and $null -ne $error[0]) {
+            Write-Warning "$($error[0].ToString())"
+            $error.clear()
+         } else {
+            Write-Warning "$($_.ToString())"
+         }
       }
    }
    
