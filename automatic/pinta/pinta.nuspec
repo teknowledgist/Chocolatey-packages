@@ -10,13 +10,13 @@
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Pinta</title>
     <authors>Andrew Davis, Cameron White, Don McComb, Jonathan Bergknoff, Jonathan Pobst, Marius Ungureanu, and Robert Nordan</authors>
-    <projectUrl>https://pinta-project.com/pintaproject/pinta/</projectUrl>
+    <projectUrl>https://pinta-project.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@edc90dcbfe33d690a5236d55426978e37fd4f6c4/Icons/pinta_icon.png</iconUrl>
     <copyright>Copyright (C) 2010 Jonathan Pobst</copyright>
     <licenseUrl>https://raw.githubusercontent.com/PintaProject/Pinta/master/license-mit.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/PintaProject/Pinta</projectSourceUrl>
-    <docsUrl>https://pinta-project.com/pintaproject/pinta/howto</docsUrl>
+    <docsUrl>https://www.pinta-project.com/howto/</docsUrl>
     <mailingListUrl>http://groups.google.com/group/pinta</mailingListUrl>
     <bugTrackerUrl>https://bugs.launchpad.net/pinta/+bugs</bugTrackerUrl>
     <tags>pinta paint.net paint image editor drawing FOSS embedded</tags>
