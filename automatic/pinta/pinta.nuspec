@@ -1,11 +1,11 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pinta</id>
-    <version>1.6</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/pinta</packageSourceUrl>
+    <version>1.7</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pinta</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Pinta</title>
@@ -23,7 +23,7 @@
     <summary>A free, open source program for drawing and image editing.</summary>
     <description>Pinta is a free, open source drawing/editing program modeled after Paint.NET. Its goal is to provide users with a simple yet powerful way to draw and manipulate images on Linux, Mac, and Windows.
 
-![Pinta Screenshot](https://pinta-project.com/pintaproject/pinta/theme/images/ss1-thumb.jpg)
+![Pinta Screenshot](https://www.pinta-project.com/theme/images/ss1.png)
 
 #### Basics
 * **Drawing Tools** Use easy drawing tools to draw freehand, lines, rectangles, ellipses, and more.
@@ -33,7 +33,7 @@
 * **Multiple Layers** Use layers to help separate and group elements of your image for easy editing.
 * **Your Workspace** Like docked windows? No problem. Floating windows? No problem. You can even mix and match. 
     </description>
-    <releaseNotes>https://pinta-project.com/pintaproject/pinta/releases/1-6</releaseNotes>
+    <releaseNotes>https://github.com/PintaProject/Pinta/releases</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -14,5 +14,5 @@ $packageArgs = @{
 
 Install-ChocolateyInstallPackage @packageArgs
 
-New-Item "$fileLocation.ignore" -Type file -Force | Out-Null
+Remove-Item $fileLocation -Force
 

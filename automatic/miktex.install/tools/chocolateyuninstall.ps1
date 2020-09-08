@@ -11,7 +11,7 @@ if ($key.Count -gt 1) {
 } elseif ($key.Count -eq 1) {
    Write-Verbose 'Uninstalling MiKTeX using setup utility.'
    $InstallArgs = @{
-      Statements       = '--verbose --shared uninstall'
+      Statements       = '--verbose --shared=yes uninstall'
       ExetoRun         = $MiKTeXsetup
       WorkingDirectory = $toolsDir
       validExitCodes   = @(0)
