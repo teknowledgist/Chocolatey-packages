@@ -23,9 +23,9 @@ $InstallArgs = @{
    packageName    = 'ccdcmercury'
    fileType       = 'EXE'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
-   url            = 'https://downloads.ccdc.cam.ac.uk/Mercury/2020.1/mercury-2020.1.0-windows-installer.exe'
+   url            = 'https://downloads.ccdc.cam.ac.uk/Mercury/2020.2/mercury-2020.2.0-windows-installer.exe'
    checksumType   = 'sha256'
-   checksum       = 'c2c2c98170579f382bbe3bc96d352693b81c05b3f22c2db9121fb7c15dd4fbe0'
+   checksum       = 'd15fb76976bc92779f1c9dddd120ce3602d6e8d5401b45dc5c65f4ce6b4228eb'
    silentArgs     = '--mode unattended --prefix "' + $InstallDir + '"'
    validExitCodes = @(0)
 }

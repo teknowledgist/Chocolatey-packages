@@ -11,7 +11,7 @@ function global:au_GetLatest {
    if ($Version.length -eq 1) { $Version = "$Version.0.0" }
 
    $urlstub = $download_page.links | ? {$_.href -like '*.msi'} | select -ExpandProperty href -first 1
-   $url = $MainPage + $urlstub
+   $url = $MainPage + "/" + $urlstub
 
    return @{ Version = $version; URL = $url }
 }
