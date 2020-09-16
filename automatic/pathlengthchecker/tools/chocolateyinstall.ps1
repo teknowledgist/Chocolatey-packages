@@ -7,7 +7,7 @@ $Destination = Join-Path $env:ChocolateyPackageFolder "v$env:ChocolateyPackageVe
 
 Get-ChocolateyUnzip -FileFullPath $ZipFile -Destination $Destination
 
-$targetPath = Get-ChildItem $Destination -filter "*GUI.exe"
+$targetPath = Get-ChildItem $Destination -filter "*GUI.exe" -Recurse
 $null = New-Item "$($targetPath.FullName).gui" -Type file -Force
 
 $Linkname = $targetPath.BaseName + '.lnk'

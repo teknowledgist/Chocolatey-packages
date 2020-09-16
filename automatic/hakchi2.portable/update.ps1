@@ -54,4 +54,4 @@ function global:au_BeforeUpdate() {
    Get-RemoteFiles -Purge -NoSuffix 
 }
 
-update -ChecksumFor none
+update -ChecksumFor none -force
