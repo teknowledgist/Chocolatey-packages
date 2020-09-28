@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>onedrive</id>
+    <version>20.143.0716.0003</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/onedrive</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>OneDrive Sync Client</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://support.microsoft.com/en-us/office/sync-files-with-onedrive-in-windows-615391c4-2bd3-4aae-a42a-858262e42a49</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/onedrive_icon.png</iconUrl>
+    <copyright>© Microsoft Corporation</copyright>
+    <licenseUrl>https://www.microsoft.com/en-us/servicesagreement/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://support.microsoft.com/en-us/office/onedrive-video-training-1f608184-b7e6-43ca-8753-2ff679203132</docsUrl>
+    <mailingListUrl>https://answers.microsoft.com/en-us/msoffice/forum/msoffice_drive?dir=Desc</mailingListUrl>
+    <tags>onedrive backup cloud sync office office365 microsoft365</tags>
+    <summary>Any file, anywhere, always protected</summary>
+    <description>With OneDrive, you can sync files between your computer and the cloud, so you can get to your files from anywhere - your computer, your mobile device, and even through the OneDrive website at OneDrive.com. If you add, change, or delete a file or folder in your OneDrive folder, the file or folder is added, changed, or deleted on the OneDrive website and vice versa. You can work with your synced files directly in File Explorer and access your files even when you’re offline. Whenever you’re online, any changes that you or others make will sync automatically.
+    </description>
+    <releaseNotes>https://support.microsoft.com/en-us/office/onedrive-release-notes-845dcf18-f921-435e-bf28-4e24b95e5fc0</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
