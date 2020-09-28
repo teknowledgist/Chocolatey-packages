@@ -1,16 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$AppVersion = '3.10.9'   # may not match package version
+$AppVersion = '3.10.10'   # may not match package version
 
 $InstallArgs = @{
    packageName    = 'qgis-ltr'
    fileType       = 'EXE'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
-   url            = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.10.9-1-Setup-x86.exe'
-   url64bit       = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.10.9-1-Setup-x86_64.exe'
+   url            = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.10.10-2-Setup-x86.exe'
+   url64bit       = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.10.10-2-Setup-x86_64.exe'
    checksumType   = 'sha256'
-   checksum       = '32d851d2c4f42f2d44eedb0b32fe834399ae0425842e472705d747a7cc07a1e0'
-   checksum64     = '4d50e00213240e0c158a27af42e84ccbac6d0bbd93e76098db786da4567cfd93'
+   checksum       = '0365aa0d6d1fd165537dbe4f043f376e9967223d6b7ac7d153d790fb1bbe85b7'
+   checksum64     = '4496723facd037bf3e7f9aec128db00c12fb8621474d249b005815f09cd1397e'
    silentArgs     = '/S'
    validExitCodes = @(0)
 }

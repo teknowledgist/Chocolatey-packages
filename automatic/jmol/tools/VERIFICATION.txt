@@ -7,7 +7,7 @@ https://sourceforge.net/projects/jmol/files/Jmol-<Latest Version>-binary.zip
 
 Direct Download:
 
-Version  : 14.31.4
-URL      : https://sourceforge.net/projects/jmol/files/Jmol-14.31.4-binary.zip
-CheckSum : 400D22DB72016DDEB543420E03045A9FFCBB702578481F6E911B0DC4A0F279F3
+Version  : 14.31.8
+URL      : https://sourceforge.net/projects/jmol/files/Jmol-14.31.8-binary.zip
+CheckSum : 29293B84CEE806B07B694C15CCA72F5D550B3D30B99D709B6D029F0761054C9C
 

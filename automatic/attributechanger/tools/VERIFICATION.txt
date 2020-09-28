@@ -11,7 +11,7 @@ letter into a numbered version as identifed below
 
 Direct Download:
 
-Version  : 9.50.1
-URL      : https://www.petges.lu/pubfiles/ac-950a.exe
-CheckSum : 65c212caa171a091e91733c49a67c696bcdd3fef3750b4563fdc90069508254b
+Version  : 10.0.1
+URL      : https://www.petges.lu/pubfiles/ac-10_00a.exe
+CheckSum : 1EDFAE1657DC141784DBBFAD2268CFF1C7EF003120CB809D15F8B47593B72B25
 
