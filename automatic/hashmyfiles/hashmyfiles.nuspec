@@ -18,7 +18,7 @@
     <docsUrl>https://www.nirsoft.net/utils/hash_my_files.html</docsUrl>
     <mailingListUrl>https://www.nirsoft.net/contact-new.html</mailingListUrl>
     <tags>hashmyfiles hash checksum MD5 SHA1 SHA256 SHA512 CRC32 context nirsoft embedded</tags>
-    <summary>Calculate multiple hashe values for multiple files</summary>
+    <summary>Calculate multiple hash values for multiple files</summary>
     <description>HashMyFiles is small utility that allows you to calculate the MD5 and SHA1 hashes of one or more files in your system. You can easily copy the MD5/SHA1 hashes list into the clipboard, or save them into text/html/xml file.
 
 ![HashMyFiles Window](https://www.nirsoft.net/utils/hashmyfiles.gif)
