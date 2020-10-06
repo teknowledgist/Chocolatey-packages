@@ -10,6 +10,15 @@ $packageArgs = @{
    validExitCodes= @(0)
 }
 
+$osInfo = Get-WmiObject Win32_OperatingSystem | Select-Object Version, ProductType, Caption, BuildNumber
+Write-Verbose "Detected:  $($osInfo.Caption)"
+If (([version]$osInfo.Version).Major -ne 10) {
+   Write-Warning "OneDrive is not supported on $($osInfo.Caption)."
+   Write-Host "To try installing OneDrive manually, use this URL to download the current version:`n" -ForegroundColor Cyan 
+   Write-Host "   $($packageArgs.url)" -ForegroundColor Green
+   Throw "This package cannot install OneDrive onto $($osInfo.Caption)."
+}
+
 Install-ChocolateyPackage @packageArgs 
 
 <# This is a machine-wide install.  At least some versions of 
@@ -37,6 +46,7 @@ try {
       Write-Verbose 'Registry key information for default user install of OneDrive is backed up.'
    }
    $null = Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements 'UNLOAD HKLM\DefaultUser'
+   [gc]::collect()   # remove any memory handles to the file.
 } catch {
    $note = "Removal of default per-user install of OneDrive failed.`n" +
             "This should not affect OneDrive function but could slow`n" +

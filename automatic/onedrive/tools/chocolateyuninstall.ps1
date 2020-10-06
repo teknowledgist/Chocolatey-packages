@@ -12,6 +12,7 @@ if (Test-Path "$env:ChocolateyPackageFolder\RemovedKeyInfo.txt") {
    Set-ItemProperty -Path $KeyPath -Name $RegKey[0] -Value $RegKey[1] -Force
 
    $null = Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements 'UNLOAD HKLM\DefaultUser'
+   [gc]::collect()    # remove any memory handles to the file.
    Write-Verbose 'Previous registry key restored.'
 }
 
