@@ -13,7 +13,6 @@ $InstallArgs = @{
 }
 
 Install-ChocolateyInstallPackage @InstallArgs
-Remove-Item $fileLocation -ea 0 -force
 
 # To support compressed LiDAR data, the LASzip.dll file from 
 #   the lastools package needs to be found and copied.
@@ -57,4 +56,6 @@ If ($TargetUnzipLog) {
    Write-Warning 'Download from laszip.org and place LASzip.dll in Fusion-LDV directory.'
 }
 
+# Remove the installer file
+Remove-Item $fileLocation -ea 0 -force
 

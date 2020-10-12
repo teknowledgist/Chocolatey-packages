@@ -1,8 +1,8 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
 $packageArgs = @{
    packageName   = $env:ChocolateyPackageName
-   softwareName  = 'Slicer 4.10.2*'
+   softwareName  = 'Slicer 4.11.20200930*'
    fileType      = 'EXE'
    silentArgs   = '/S'
    validExitCodes= @(0)

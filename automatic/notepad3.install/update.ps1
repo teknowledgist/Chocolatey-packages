@@ -11,11 +11,13 @@ function global:au_GetLatest {
                   Select-Object -First 1   
 
    $version = $link64.title.split()[-1]
-   $filename64 = $link64.outerhtml.split() | Where-Object {$_ -match '\.(exe|zip)$'}
-   $filename32 = $link32.outerhtml.split() | Where-Object {$_ -match '\.(exe|zip)$'}
+#   $filename64 = $link64.outerhtml.split() | Where-Object {$_ -match '\.(exe|zip)$'}
+#   $filename32 = $link32.outerhtml.split() | Where-Object {$_ -match '\.(exe|zip)$'}
    
-   $url64 = "https://www.rizonesoft.com/software/notepad3/" + $filename64
-   $url32 = "https://www.rizonesoft.com/software/notepad3/" + $filename32
+#   $url64 = "https://www.rizonesoft.com/software/notepad3/" + $filename64
+#   $url32 = "https://www.rizonesoft.com/software/notepad3/" + $filename32
+   $url64 = $link64 | select -ExpandProperty href
+   $url32 = $link32 | select -ExpandProperty href
 
    return @{ 
             Version  = $Version

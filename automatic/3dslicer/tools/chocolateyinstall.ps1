@@ -4,8 +4,8 @@ $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
    softwareName   = 'Slicer*'
    fileType       = 'EXE'
-   url64bit       = 'https://slicer.kitware.com/midas3/download?bitstream=1023243'
-   checksum64     = '5a459896883fba721ab27052d74c6ba7d49bd73b1b87c3a2f389a0db76955a50'
+   url64bit       = 'https://slicer.kitware.com/midas3/download?bitstream=1340247'
+   checksum64     = '9d8255be9f4ae0926cfbc2fbb7fe844c6343adbbdded35ae06277366d444d88b'
    checksumType64 = 'sha256'
    silentArgs     = '/S'
    validExitCodes = @(0)
