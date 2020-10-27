@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>draftsight</id>
-    <version>2020.1.0062</version>
+    <version>2020.3.0058</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/draftsight</packageSourceUrl>
     <owners>Teknowledgist, BasicTheProgram</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
