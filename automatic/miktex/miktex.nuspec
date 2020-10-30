@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>miktex</id>
-    <version>20.10</version>
+    <version>20.10.0.20201030</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/miktex.install</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -25,7 +25,7 @@
 
 MiKTeX comes with TeXworks, a TeX frontend which you can use it to edit and preview LaTeX documents. 
 
-![FancyLaTeXOutput](https://mathvault.ca/wp-content/uploads/fancy-latex-output.png)
+![FancyLaTeXOutput](http://liantze.penguinattack.org/images/latexoutput.png)
 The sky is the limit when it comes to TeX/LaTeX, with drawings, chemical equations, syntax trees, circuit diagrams, mathematical expressions, proof systems, chessboards and more! ([Image source](https://mathvault.ca/latex-guide))
 
 MiKTeX's integrated package manager installs missing [components](https://miktex.org/packages) from the Internet, if required. 
@@ -39,10 +39,11 @@ MiKTeX's integrated package manager installs missing [components](https://miktex
 This package has only the MiKTeX setup utility embedded.  Any new install of MiKTeX involves using the setup utility to download and create a (temporary by default) repository and then installing from that repository.  This Chocolatey package can both establish a more permenant repository (for sharing with other computers) and use a specific (possibly private) repository from which to install MiKTeX.  Thus a single computer within a network could download MiKTeX from the internet and create a repository, and all other computers on the network could use that repository to install MiKTeX saving external bandwidth.
 
 #### Using a Custom Repository:
-* `/RepoPath:(path)` - with a share or URL as `(path)`.  This will install or update MiKTeX from a specific existing repository.  No attempt to update the repository itself will be made.  Upgrades **should** use this repository in the future by default.
+* `/RepoPath:(path)` or `/Mirror:(path)` - with a share or URL as `(path)`.  This will install or update MiKTeX from a specific existing repository.  No attempt to update the repository itself will be made.  Upgrades **should** use this repository in the future by default.  **Note:** If both `/RepoPath` (with a share/URL) and `/Mirror` are used, `/Mirror` will be ignored.
 
 #### Creating a Custom Repository:
 * `/RepoPath:(path)` - with a local directory as `(path)`.  This will create (or update) the repository in the (non-temporary) location.  MiKTeX will also be installed.  **Note:** The repository will not be shared or accessible through a URL without additional administrator actions and will not be removed on an uninstall.
+* *(optional)*`/Mirror:<URL>` - This will download MiKTeX files for populating the local repo from [a CTAN mirror](https://miktex.org/repositories).  *It is recommended to only use this if the default mirror as chosen by the MiKTeX setup utility doesn't work.* **Hint: Including `/Mirror` will write the list of "official", URLs to the Chocolatey log.
 
 #### Examples:
 
@@ -52,7 +53,7 @@ This package has only the MiKTeX setup utility embedded.  Any new install of MiK
 `choco install miktek.install --params '"/RepoPath:https://localserver.org/MiKTeX-Repo"'`
 ]]>    </description>
     <dependencies>
-      <dependency id="miktex.install" version="[20.10]" />
+      <dependency id="miktex.install" version="[20.10.0.20201030]" />
     </dependencies>
     <releaseNotes>https://github.com/MiKTeX/miktex/releases/latest</releaseNotes>
   </metadata>

@@ -35,6 +35,18 @@ $Repository = ''
 if ($pp['RepoPath']) {
    $LocalRepo = -not (([uri]($pp['RepoPath'])).hostnametype.tostring().equals('Dns'))
    $Repository = $pp['RepoPath']
+   if ($LocalRepo -and $pp['Mirror']) {
+      $Mirror = $pp['Mirror']
+   }
+} elseif ($pp['Mirror']) {
+   $Repository = $pp['Mirror']
+}
+
+# Include a list of mirrors in logs if Mirror is called
+if ($pp['Mirror']) {
+   $List = & $MiKTeXsetup --list-repositories
+   $List = $List -join "`n`t"
+   Write-Verbose "`nRegistered repositories:`n`t$list"
 }
 
 # Is MiKTeX already installed?
@@ -60,16 +72,18 @@ if ($key.Count -gt 1) {
          } else {
             Write-Verbose "Local MiKTeX repository not found.  Creating one at '$Repository'."
          }
+         if ($Mirror) {
+            Write-Verbose "Attempting to download from specified mirror:  $Mirror"
+            $MirrorSwitch = "--remote-package-repository=`"$Mirror`""
+         } else { $MirrorSwitch = '' }
+
          $DownloadArgs = @{
-            Statements       = "--verbose --local-package-repository=`"$Repository`" --package-set=$set download "
+            Statements       = "--verbose --local-package-repository=`"$Repository`" $MirrorSwitch --package-set=$set download "
             ExetoRun         = $MiKTeXsetup
             WorkingDirectory = $toolsDir
             validExitCodes   = @(0)
          }
          $exitCode = Start-ChocolateyProcessAsAdmin @DownloadArgs
-         if ($exitCode -ne 0) {
-            Throw 'Local Repository failure!'
-         }
       }
 
       $MPM = Join-Path $InstallDir 'mpm.exe'
@@ -97,19 +111,20 @@ if ($key.Count -gt 1) {
 
    if ($LocalRepo) {
       $RepoSwitch = "--local-package-repository=`"$Repository`""
+      if ($Mirror) {
+         Write-Verbose "Attempting to download from specified mirror:  $Mirror"
+         $MirrorSwitch = "--remote-package-repository=`"$Mirror`""
+      } else { $MirrorSwitch = '' }
 
       # Only create a repository if it is local; remote repositories need to be updated independently.
       Write-Host "Creating a$Temporary repository at '$Repository'."
       $DownloadArgs = @{
-         Statements       = "--verbose $RepoSwitch --package-set=$set download "
+         Statements       = "--verbose $RepoSwitch $MirrorSwitch --package-set=$set download "
          ExetoRun         = $MiKTeXsetup
          WorkingDirectory = $toolsDir
          validExitCodes   = @(0)
       }
       $exitCode = Start-ChocolateyProcessAsAdmin @DownloadArgs
-      if ($exitCode -ne 0) {
-         Throw 'Local Repository failure!'
-      }
    } else {
       $RepoSwitch = "--remote-package-repository=`"$Repository`""
    }
@@ -123,9 +138,6 @@ if ($key.Count -gt 1) {
       validExitCodes   = @(0)
    }
    $exitCode = Start-ChocolateyProcessAsAdmin @InstallArgs
-   if ($exitCode -ne 0) {
-      Throw "MiKTeX setup utility failed to install MiKTeX with error, $exitCode"
-   }
 }
 
 # Once installed/updated, confirm it's the correct milestone.
