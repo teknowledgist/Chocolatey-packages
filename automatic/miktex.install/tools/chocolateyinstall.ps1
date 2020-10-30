@@ -111,7 +111,7 @@ if ($key.Count -gt 1) {
          Throw 'Local Repository failure!'
       }
    } else {
-      $RepoSwitch = "--Remote-package-repository=`"$Repository`""
+      $RepoSwitch = "--remote-package-repository=`"$Repository`""
    }
 
    # Now, do the actual install from identified repository
