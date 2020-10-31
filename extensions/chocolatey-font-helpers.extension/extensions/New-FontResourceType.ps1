@@ -54,7 +54,7 @@ Function New-FontResourceType {
                    bool posted = PostMessage(HWND_BROADCAST, WM.FONTCHANGE, IntPtr.Zero, IntPtr.Zero);
                    return retVal;
                }
-               catch { throw; }
+               catch { throw new Win32Exception(Marshal.GetLastWin32Error()); }
            }
 
            public static int RemoveFont(string fontFileName) {
@@ -63,7 +63,7 @@ Function New-FontResourceType {
                    bool posted = PostMessage(HWND_BROADCAST, WM.FONTCHANGE, IntPtr.Zero, IntPtr.Zero);
                    return retVal;
                }
-               catch { throw; }
+               catch { throw new Win32Exception(Marshal.GetLastWin32Error()); }
            }
        }
    }

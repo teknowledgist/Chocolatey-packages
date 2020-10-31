@@ -75,6 +75,7 @@ function Uninstall-ChocolateyFont {
       }
 
       try {
+         $ErrorActionPreference = 'Stop'
          $retVal = [FontResource.AddRemoveFonts]::RemoveFont($FontPath)
          if ($retVal -eq 0) {
             Throw "Font resource, '$FontPath', removal failed"
@@ -88,7 +89,7 @@ function Uninstall-ChocolateyFont {
       catch
       {
          Write-Warning "An error occured removing '$Item'."
-         if ($null -ne $error -and $null -ne $error[0]) {
+         if ($error -ne $null -and $error[0] -ne $null) {
             Write-Warning "$($error[0].ToString())"
             $error.clear()
          } else {
