@@ -51,7 +51,10 @@ function Install-ChocolateyFont {
             '.ttc' = ' (TrueType)'
             '.otf' = ' (OpenType)'
    }
-   New-FontResourceType
+   try { $LoadedType = [FontResource.AddRemoveFonts].ispublic } catch {$LoadedType = $false}
+   if (-not $LoadedType) {
+      New-FontResourceType
+   }
 
    if (-not $Multiple) {
       If ($Paths.count -gt 1) {
@@ -100,6 +103,7 @@ function Install-ChocolateyFont {
          }
       } catch {
          Write-Warning "An error occured installing '$($File.FullName)'"
+         Write-Warning "Exception: $($_.Exception.Message)"
          if ($error -ne $null -and $error[0] -ne $null) {
             Write-Warning "$($error[0].ToString())"
             $error.clear()

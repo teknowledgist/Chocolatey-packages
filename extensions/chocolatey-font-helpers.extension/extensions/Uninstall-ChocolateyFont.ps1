@@ -43,7 +43,10 @@ function Uninstall-ChocolateyFont {
    $fontRegistryPath = 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts'
    $FontFileTypes = @('.fon','.fnt','.ttf','.ttc','.otf')
 
-   New-FontResourceType
+   try { $LoadedType = [FontResource.AddRemoveFonts].ispublic } catch {$LoadedType = $false}
+   if (-not $LoadedType) {
+      New-FontResourceType
+   }
 
    if ((-not $Multiple) -and ($FontFiles.count -gt 1)) {
       Throw "The '-multiple' switch must be used to install more than a single font."
@@ -89,6 +92,7 @@ function Uninstall-ChocolateyFont {
       catch
       {
          Write-Warning "An error occured removing '$Item'."
+         Write-Warning "Exception: $($_.Exception.Message)"
          if ($error -ne $null -and $error[0] -ne $null) {
             Write-Warning "$($error[0].ToString())"
             $error.clear()
