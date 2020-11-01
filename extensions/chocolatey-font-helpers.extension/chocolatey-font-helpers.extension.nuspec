@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>chocolatey-font-helpers.extension</id>
-    <version>0.0.3</version>
+    <version>0.0.3.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/extensions/chocolatey-font-helpers.extension</packageSourceUrl>
     <owners>bcurran3, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -45,6 +45,7 @@ Let the easy-peasy font packages flow!
 * 0.0.1 - initial release
 * 0.0.2 - Cleaned up and added multiple option
 * 0.0.3 - Better exception handling, tests for already loaded type
+* 0.0.3.1 - Corrected ignorant attempt at C-sharp exception handling 
     </releaseNotes>
     <bugTrackerUrl>https://github.com/bcurran3/ChocolateyPackages/issues</bugTrackerUrl>
   </metadata>
