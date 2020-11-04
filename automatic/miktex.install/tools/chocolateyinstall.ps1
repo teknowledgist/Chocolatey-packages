@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageMileStone = '20.10'
+$PackageMileStone = '20.11'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ZipFiles = Get-ChildItem $toolsDir '*.zip' |Select-Object -ExpandProperty FullName
@@ -32,29 +32,33 @@ Write-Host $msg -ForegroundColor Cyan
 
 $LocalRepo = $false
 $Repository = ''
+$Mirror = ''
 if ($pp['RepoPath']) {
    $LocalRepo = -not (([uri]($pp['RepoPath'])).hostnametype.tostring().equals('Dns'))
    $Repository = $pp['RepoPath']
-   if ($LocalRepo -and $pp['Mirror']) {
-      $Mirror = $pp['Mirror']
+   if (-not $LocalRepo) {
+      if ($Repository -match '^(https?:|ftp:)') {
+         Throw "RepoPath must be a local or UNC path!"
+      }
    }
-} elseif ($pp['Mirror']) {
-   $Repository = $pp['Mirror']
-}
-
+} 
 # Include a list of mirrors in logs if Mirror is called
 if ($pp['Mirror']) {
    $List = & $MiKTeXsetup --list-repositories
    $List = $List -join "`n`t"
    Write-Verbose "`nRegistered repositories:`n`t$list"
-}
+   
+   $Mirror = $pp['Mirror']
+   Write-Verbose "Attempting to download from specified mirror:  $Mirror"
+   $MirrorSwitch = "--remote-package-repository=`"$Mirror`""
+} else { $MirrorSwitch = '' }
 
 # Is MiKTeX already installed?
 [array]$key = Get-UninstallRegistryKey -SoftwareName 'miktex*' 
 if ($key.Count -gt 1) {
    Throw 'More than one install of MiKTeX already exists!'
 } elseif ($key.Count -eq 1) {
-   Write-Verbose "Found an install of MiKTeX."
+   Write-Verbose 'Found an install of MiKTeX.'
    # Use MiKTeX's built-in updater
    $InstallDir = split-path ($key.UninstallString.split('"')[1])
    $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
@@ -72,10 +76,6 @@ if ($key.Count -gt 1) {
          } else {
             Write-Verbose "Local MiKTeX repository not found.  Creating one at '$Repository'."
          }
-         if ($Mirror) {
-            Write-Verbose "Attempting to download from specified mirror:  $Mirror"
-            $MirrorSwitch = "--remote-package-repository=`"$Mirror`""
-         } else { $MirrorSwitch = '' }
 
          $DownloadArgs = @{
             Statements       = "--verbose --local-package-repository=`"$Repository`" $MirrorSwitch --package-set=$set download "
@@ -87,6 +87,7 @@ if ($key.Count -gt 1) {
       }
 
       $MPM = Join-Path $InstallDir 'mpm.exe'
+      if ($Repository -eq '' -and $Mirror -ne '') { $Repository = $Mirror }
       if ($Repository -ne '') { $RepoSwitch = "--repository=`"$Repository`"" }
       $SetupArgs = @{
          Statements       = "--admin --verbose --update $RepoSwitch"
@@ -96,7 +97,7 @@ if ($key.Count -gt 1) {
       }
       $exitCode = Start-ChocolateyProcessAsAdmin @SetupArgs
    } else {
-      Write-Verbose "Installed Milestone of MiKTeX is the same or newer than this package version."
+      Write-Verbose 'Installed Milestone of MiKTeX is the same or newer than this package version.'
       Return
    }
 
@@ -106,16 +107,12 @@ if ($key.Count -gt 1) {
       # Use a temporary repository if one not given
       $Repository = Join-Path $env:TEMP 'MiKTeX-repository'
       $LocalRepo = $true
-      $Temporary = " temporary"
+      $Temporary = ' temporary'
    }
 
-   if ($LocalRepo) {
-      $RepoSwitch = "--local-package-repository=`"$Repository`""
-      if ($Mirror) {
-         Write-Verbose "Attempting to download from specified mirror:  $Mirror"
-         $MirrorSwitch = "--remote-package-repository=`"$Mirror`""
-      } else { $MirrorSwitch = '' }
+   $RepoSwitch = "--local-package-repository=`"$Repository`""
 
+   if ($LocalRepo) {
       # Only create a repository if it is local; remote repositories need to be updated independently.
       Write-Host "Creating a$Temporary repository at '$Repository'."
       $DownloadArgs = @{
@@ -125,8 +122,6 @@ if ($key.Count -gt 1) {
          validExitCodes   = @(0)
       }
       $exitCode = Start-ChocolateyProcessAsAdmin @DownloadArgs
-   } else {
-      $RepoSwitch = "--remote-package-repository=`"$Repository`""
    }
 
    # Now, do the actual install from identified repository
