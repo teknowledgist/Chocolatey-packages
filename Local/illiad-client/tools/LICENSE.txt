@@ -1,0 +1,5 @@
+﻿From: <insert applicable license url here>
+
+LICENSE
+
+Atlas and/or OCLC do not publish nor provide a license for the ILLiad client.

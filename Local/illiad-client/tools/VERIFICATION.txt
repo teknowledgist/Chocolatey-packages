@@ -1,0 +1,14 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest versions of the ILLiad client installer can be downloaded from:
+https://support.atlas-sys.com/hc/en-us/articles/360012037614-ILLiad-Downloads
+
+(Downloads do require a password at this time.)
+
+Direct Download:
+Version  : 9.1.3
+URL      : http://illiad-update.atlas-sys.com/install/9.1/ILLiad_9.1.3_ClientSetup.exe
+CheckSum : cafceea45cb060077967c8d631f274829b122baecd5d8637f389c3bea52b4f0c
+

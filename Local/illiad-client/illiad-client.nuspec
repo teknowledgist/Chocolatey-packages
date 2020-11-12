@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>illiad-client</id>
+    <version>9.1.3</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/local/illiad-client</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>ILLiad client</title>
+    <authors>OCLC, Inc.</authors>
+    <projectUrl>https://www.atlas-sys.com/illiad</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@5c40bc2cb7fdd786cf84ff3e1bff7f87a8b5e338/Icons/illiad-client_icon.png</iconUrl>
+    <copyright>Copyright © Atlas Systems, Inc. 2019</copyright>
+    <!-- <licenseUrl>No_available_license_document</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <docsUrl>https://prometheus.atlas-sys.com/display/ILLiad/</docsUrl>
+    <mailingListUrl>https://support.atlas-sys.com/hc/en-us/community/topics</mailingListUrl>
+    <tags>illiad library resource sharing management loan OCLC commercial embedded</tags>
+    <summary>Interlibrary loan automation for the way you work</summary>
+    <description>ILLiad allows you to replace paper-based workflows, manage a high volume of requests and automate routine functions for borrowing and lending resources between libraries with integration into a variety of third-party systems. ILLiad allows your users to place and monitor their requests without librarian assistance and to get materials quickly.
+
+### Optional Parameters
+By default, this package will install all components of the ILLiad client installer put all the shortcuts on the public desktop (which can't be removed by unprivileged users) and require each user to set the path to the DB Connection (i.e. .dbc file).  Use the following optional package parameters to change that: 
+
+* `/Skip:(list-of-components)` - The components listed will not be installed.  Possible component names are: 'ILLiadClient', 'StaffManager', 'CustomizationManager', 'ElectronicDeliveryUtility', 'SAM', 'BillingManager'
+* `/NoIcons` - All icons created by the installer on the public desktop will be removed before completion.
+* `/CleanIcons` - The ILLiad icons created on the public desktop will be moved to an "ILLiad Tools" folder on the public desktop.  This essentially replaces 5 desktop icons with a single one for organization.  The "Atlas SQL Alias Manager" (not part of ILLiad) will remain on the desktop.  `/NoIcons` *takes precedence over this parameter.*
+* `/DBCfile:(local or UNC path to .dbc file)` - The path to an ILLiad .dbc file will be preset for the current user and future users (not other already established profiles) eliminating the need for users to use the "Alias Manager" on first use.  **Note** This package does not check the validity of the given path.
+* `/Default` - (only with `/DBCfile`) Sets the DBC file path as the system-wide default for ILLiad.
+
+Example:
+
+`choco install illiad-client --params '"/Skip:BillingManager /NoIcons /DBCfile:\\illiadserver\share\logon.dbc /Default"'`
+
+    </description>
+    <releaseNotes>https://support.atlas-sys.com/hc/en-us/sections/360002485474-Release-Notes</releaseNotes>
+    <!-- =============================== -->      
+
+    <dependencies>
+      <dependency id="dotnetfx" version="4.6.2" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
