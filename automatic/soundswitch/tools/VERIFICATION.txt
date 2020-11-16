@@ -9,7 +9,7 @@ or from the GitHub release page:
 
 Direct Download:
 
-Version  : 5.5.3
-URL      : https://github.com/Belphemur/SoundSwitch/releases/download/v5.5.3/SoundSwitch_v5.5.3.26916_Release_Installer.exe
-CheckSum : C229A8CDE65970CA977EF30FDBCAEB2720A67E2403338EE0D1945D0247D79FC2
+Version  : 5.5.4
+URL      : https://github.com/Belphemur/SoundSwitch/releases/download/v5.5.4/SoundSwitch_v5.5.4.33783_Release_Installer.exe
+CheckSum : C5E1488C25333726BE9E0EAA8D24ED2B092D7926EA7C43F771064630564C7261
 

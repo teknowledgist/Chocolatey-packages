@@ -6,7 +6,7 @@ Path Length Checker can be downloaded from the GitHub releases page:
    https://github.com/deadlydog/PathLengthChecker/releases
 
 Direct download:
-Version  : 1.6.0
-URL      : https://github.com/deadlydog/PathLengthChecker/releases/download/v1.6.0/PathLengthChecker1.6.0.zip
-CheckSum : F548629716125A2847BAA5F69635BB741765626971E4E544059DC6793ADEC072
+Version  : 1.8.0
+URL      : https://github.com/deadlydog/PathLengthChecker/releases/download/v1.8.0/PathLengthChecker1.8.0.zip
+CheckSum : A8FC1A612235A1A941FE86F8498D91CFD052346996FB9B7DCB11ABBCA4C6EED9
 

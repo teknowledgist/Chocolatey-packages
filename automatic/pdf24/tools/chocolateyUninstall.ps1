@@ -17,6 +17,6 @@ if ($key.Count -eq 1) {
    Write-Host "PDF24 not found.  It may have been uninstalled through other actions."
 }
 
-if (Test-Path 'HKLM:\SOFTWARE\Wow6432Node\PDFPrint') {
-   Remove-Item 'HKLM:\SOFTWARE\Wow6432Node\PDFPrint' -Recurse -Force
+if (Test-Path 'HKLM:\SOFTWARE\PDF24') {
+   Remove-Item 'HKLM:\SOFTWARE\PDF24' -Recurse -Force
 }

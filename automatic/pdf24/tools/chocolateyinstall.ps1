@@ -44,9 +44,9 @@ if ($pp['Fax']) {
 
 if ($pp['Basic']) {
    Write-Host 'You requested to configure the PDF Printer feature only.' -ForegroundColor Cyan
-   $RegPath = 'HKLM:\SOFTWARE\Wow6432Node'
-   if (-not (Test-Path "$RegPath\PDFPrint")) {
-      $null = New-Item -Path $RegPath -Name 'PDFPrint' -Force
+   $RegPath = 'HKLM:\SOFTWARE'
+   if (-not (Test-Path "$RegPath\PDF24")) {
+      $null = New-Item -Path $RegPath -Name 'PDF24' -Force
    }
    $Properties = @(
       'NoTrayIcon',
@@ -62,7 +62,7 @@ if ($pp['Basic']) {
       'NoMail'
    )
    ForEach ($item in $Properties) {
-      $null = New-ItemProperty -Path "$RegPath\PDFPrint" -Name $item -PropertyType DWORD -Value 1 -Force
+      $null = New-ItemProperty -Path "$RegPath\PDF24" -Name $item -PropertyType DWORD -Value 1 -Force
    }
 }
 
