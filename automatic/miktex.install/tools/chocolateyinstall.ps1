@@ -60,7 +60,7 @@ if ($key.Count -gt 1) {
 } elseif ($key.Count -eq 1) {
    Write-Verbose 'Found an install of MiKTeX.'
    # Use MiKTeX's built-in updater
-   $InstallDir = split-path ($key.UninstallString.split('"')[1])
+   $InstallDir = (Split-Path $key.UninstallString).trim('"')
    $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
    Write-Verbose "Running 'initexmf.exe' to identify installed milestone."
    $MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^(CurrentVersion|MiKTeX):'}
@@ -137,7 +137,7 @@ if ($key.Count -gt 1) {
 
 # Once installed/updated, confirm it's the correct milestone.
 [array]$key = Get-UninstallRegistryKey -SoftwareName 'miktex*'
-$InstallDir = split-path ($key.UninstallString.split('"')[1])
+$InstallDir = (Split-Path $key.UninstallString).trim('"')
 $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
 Write-Verbose "Using 'initexmf.exe' to identify installed milestone."
 $MileStoneLine = & "$InitEXMF" --admin --report | Where-Object {$_ -match '^CurrentVersion:'}

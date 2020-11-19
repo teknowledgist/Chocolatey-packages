@@ -7,7 +7,7 @@ if ($key.Count -gt 1) {
 } elseif ($key.Count -eq 1) {
    Write-Verbose "Found an install of MiKTeX."
    # Use MiKTeX's built-in updater
-   $InstallDir = split-path ($key.UninstallString.split('"')[1])
+   $InstallDir = (Split-Path $key.UninstallString).trim('"')
    $MiKTeXsetup = Join-Path $InstallDir 'miktexsetup.exe'
    Write-Verbose 'Uninstalling MiKTeX using integrated setup utility.'
    $InstallArgs = @{
