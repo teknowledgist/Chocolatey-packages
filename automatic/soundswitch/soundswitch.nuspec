@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>soundswitch</id>
-    <version>5.5.4</version>
+    <version>5.6.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/soundswitch</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -50,7 +50,7 @@ Comes in English, French, German, Korean, Norwegian Bokmål, Polish and Russian.
     <releaseNotes>https://github.com/Belphemur/SoundSwitch/releases/latest</releaseNotes>
     <!-- =============================== -->      
     <dependencies>
-      <dependency id="dotnet4.7.1" version="4.7.1" />
+      <dependency id="dotnet5-desktop-runtime" version="5.0" />
     </dependencies>
   </metadata>
   <files>
