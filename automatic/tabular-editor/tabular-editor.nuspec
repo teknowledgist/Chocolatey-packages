@@ -16,7 +16,7 @@
     <licenseUrl>https://raw.githubusercontent.com/otykier/TabularEditor/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/otykier/TabularEditor</projectSourceUrl>
-    <docsUrl>https://github.com/otykier/TabularEditor/wiki</docsUrl>
+    <docsUrl>https://docs.tabulareditor.com/</docsUrl>
     <bugTrackerUrl>https://github.com/otykier/TabularEditor/issues</bugTrackerUrl>
     <tags>tabular-editor tabular editor measure calculate model analysis SSAS SQL embedded FOSS</tags>
     <summary>A lightweight editor for SSAS Tabular Models</summary>
