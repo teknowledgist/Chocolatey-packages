@@ -4,10 +4,10 @@ $InstallArgs = @{
    packageName   = $env:ChocolateyPackageName
    softwareName  = 'Anaconda3'
    fileType      = 'EXE'
-   url           = 'https://repo.continuum.io/archive/Anaconda3-2020.07-Windows-x86.exe'
-   url64bit      = 'https://repo.continuum.io/archive/Anaconda3-2020.07-Windows-x86_64.exe'
-   checksum      = '19803e5ccc357b57051cf7fa272e6b499dfedf13790778dc24af302f894e3281'
-   checksum64    = '66acb9bdf7d2d5925df8762311a85ad72f57dfd340447bf00636d35a28454244'
+   url           = 'https://repo.continuum.io/archive/Anaconda3-2020.11-Windows-x86.exe'
+   url64bit      = 'https://repo.continuum.io/archive/Anaconda3-2020.11-Windows-x86_64.exe'
+   checksum      = '362de9bc1e9e368dcbcdee1a175a523983c48dd8c04f83caf8d7ceaf7956bddc'
+   checksum64    = 'aa523115daf31c431bb392faf75e70d35ada935e36dc7b1dd8902baee240bcc1'
    checksumType  = 'sha256'
    validExitCodes= @(0)
 }
