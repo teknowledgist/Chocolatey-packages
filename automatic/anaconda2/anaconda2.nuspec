@@ -47,7 +47,6 @@ You can change any of the defaults with package parameters:
     </description>
     <releaseNotes>http://docs.anaconda.com/anaconda/reference/release-notes/</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>
   </metadata>
   <files>

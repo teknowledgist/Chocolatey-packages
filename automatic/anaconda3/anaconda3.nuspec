@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>anaconda3</id>
-    <version>2020.07</version>
+    <version>2020.11</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/anaconda3</packageSourceUrl>
     <owners>Teknowledgist, Chantisnake</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -47,7 +47,6 @@ You can change any of the defaults with package parameters:
     </description>
     <releaseNotes>http://docs.anaconda.com/anaconda/reference/release-notes/</releaseNotes>
     <dependencies>
-      <dependency id="chocolatey-core.extension" version="1.1.0" />
     </dependencies>
   </metadata>
   <files>

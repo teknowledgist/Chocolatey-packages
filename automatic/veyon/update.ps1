@@ -7,7 +7,7 @@ function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $urlstubs = $download_page.rawcontent.split("<>") | 
-                Where-Object {$_ -match '\.exe"'} | Select-Object -First 2
+                Where-Object {$_ -match 'setup\.exe"'} | Select-Object -First 2
 
    $url32 = ($urlstubs | Where-Object {$_ -match 'win32'}) -replace '.*?"([^ ]+\.exe).*','$1'
    $url64 = ($urlstubs | Where-Object {$_ -match 'win64'}) -replace '.*?"([^ ]+\.exe).*','$1'
