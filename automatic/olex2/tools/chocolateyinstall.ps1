@@ -2,8 +2,8 @@
 
 $url32       = 'http://www.olex2.org/olex2-distro/1.3/olex2-win32.zip'
 $url64       = 'http://www.olex2.org/olex2-distro/1.3/olex2-win64.zip'
-$checkSum32  = '8a7cf469ebdb89e9ed46ad9528c7760c77e75a51c4f30e2685ce8ca8bf1cd65b'
-$checkSum64  = '6e0184df3819a4aef4f46656b296705f3431f7b8a10e7f1e4031807853177c07'
+$checkSum32  = 'e9f36065267bb83c18e12b7b44f17b86619b8d36346e70711248e25647c78863'
+$checkSum64  = '4c43548f418bb1eb483dd91dc6c434e1450f0a7c75ba7fab1e0e9ef39261f4ee'
 
 $DisplayedVersion = $env:ChocolateyPackageVersion.split('.')[0-1] -join '.'
 
