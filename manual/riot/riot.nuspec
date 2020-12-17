@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>riot</id>
+    <version>0.6.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/riot</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Radical Image Optimization Tool</title>
+    <authors>Lucian Sabo</authors>
+    <projectUrl>https://riot-optimizer.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@55825846816a3b6a46df0b5ddf3eea3ff7175adf/Icons/riot_icon.png</iconUrl>
+    <copyright>© 2004-2019 Lucian Sabo</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/riot/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://riot-optimizer.com/docs</docsUrl>
+    <mailingListUrl>http://luci.criosweb.ro/riot/bbpress</mailingListUrl>
+    <tags>riot image optimization jpeg gif png compression embedded</tags>
+    <summary>Lightweight, fast, simple, yet powerful image optimization</summary>
+    <description>Radical Image Optimization Tool (RIOT for short) is a free image optimizer that will let you to visually adjust compression parameters while keeping minimum filesize.
+
+It uses with a side by side (dual view) or single view interface to compare the original with the optimized image in real time and instantly see the resulting file size.
+
+It is lightweight, fast and simple to use, yet powerful for advanced users. You will be able to control compression, number of colors, metadata settings and much more, and select image format (JPG, GIF or PNG) for your output file.
+
+![Sample](https://riot-optimizer.com/wp-content/themes/responsive-child/core/images/featured-image.png)
+
+### Features
+
+* open many image types including Adobe Photoshop PSD, HDR, RAW and rare/scientific types
+* save and optimize JPEG, GIF and PNG with a simple, clean user interface
+* automatic optimization selects the most suitable format and parameters
+* works in dual view: (original + optimized image) or single view (optimized image).
+* in-place compare function (alternativelly display the original image over the optimized image to notice small pixel changes)
+* compress files to desired filesize threshold
+* fast processing (all is done in memory); see instant results including resulting filesize
+* batch support (process multiple files at once)
+* transparency handling options
+* decide if you want to keep metadata (comments, IPTC, Adobe XMP, EXIF profiles, ICC profiles).  Unsupported metadata is removed
+* transfer metadata between image formats (destination format must support them)
+* common tools: pan and zoom, rotate, flip
+* basic image adjustments: brightness, contrast, gamma, invert
+* visually reduce number of unique colors for PNG and GIF images in order to reduce filesize (two quantization methods are available: Xiaolin Wu and NeuQuant neural net)
+* resize image by using well known resample filters (ex: Lanczos3, Catmull Rom, Bicubic, and others)
+* out-of-the-box support for external PNG optimizers (optipng, pngout, etc)
+* compression and results are comparable to those of commercial products, even higher.
+* Adaptive logarithmic tone mapping algorithm (Drago) used for HDR images
+
+</description>
+    <releaseNotes>https://riot-optimizer.com/changelog/</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
