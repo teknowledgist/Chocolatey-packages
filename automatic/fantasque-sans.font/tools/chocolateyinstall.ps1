@@ -8,7 +8,7 @@ $UnzipArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileFullPath   = $fileLocation
    Destination    = $UnzipDir
-   SpecificFolder = "ubuntu-font-family-$env:ChocolateyPackageVersion"
+   SpecificFolder = "OTF"
 }
 
 Get-ChocolateyUnzip @UnzipArgs
