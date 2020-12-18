@@ -1,0 +1,11 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The zipped archive of the fonts can be obtained from this page:
+   https://github.com/belluzj/fantasque-sans/releases/latest
+   
+Direct download:
+url      : https://github.com/belluzj/fantasque-sans/releases/download/v1.8.0/FantasqueSansMono-Normal.zip
+version  : 1.8.0
+checksum : 84BE689E231FF773ED9D352E83DCCD8151D9E445F1CB0B88CB0E9330FC4D9CFC

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>fantasque-sans.font</id>
+    <version>1.8.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fantasque-sans.font</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Fantasque Sans Mono Font</title>
+    <authors>Jany Belluz</authors>
+    <projectUrl>https://github.com/belluzj/fantasque-sans</projectUrl>
+    <copyright>Copyright © 2013-2017, Jany Belluz</copyright>
+    <licenseUrl>https://github.com/belluzj/fantasque-sans/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <tags>fantasque-sans font sans sanserif monospaced embedded</tags>
+    <summary>An unassumingly cool programming font</summary>
+    <description>A programming font, designed with functionality in mind, and with some wibbly-wobbly handwriting-like fuzziness that makes it unassumingly cool.
+
+The font includes a bold version, with the same metrics as the regular one. Both versions include the same ranges of characters : latin letters, some accented glyphs (quite a lot), some greek letters, some arrows.
+
+![Sample](https://cdn.jsdelivr.net/gh/belluzj/fantasque-sans@ff9be0c44e744c7916316653c21e03b800e5fb54/Specimen/Specimen.png)
+    </description>
+    <releaseNotes>https://github.com/belluzj/fantasque-sans/blob/master/CHANGELOG.md</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
