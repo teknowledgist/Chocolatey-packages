@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageMileStone = '20.11'
+$PackageMileStone = '20.12'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $ZipFiles = Get-ChildItem $toolsDir '*.zip' |Select-Object -ExpandProperty FullName

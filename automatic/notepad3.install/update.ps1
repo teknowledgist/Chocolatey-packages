@@ -1,23 +1,17 @@
 import-module au
 
 function global:au_GetLatest {
-   [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
+   $Release = 'https://github.com/rizonesoft/Notepad3/releases/latest'
+   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
-   $downloaduri = 'https://www.rizonesoft.com/downloads/notepad3/'
-   $download_page = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing   
-   $link64 = $download_page.links | Where-Object {$_.class -match '(exe|zip)'} | Select-Object -First 1   
-   $link32 = $download_page.links | 
-                  Where-Object {($_.class -match '(exe|zip)') -and ($_.outerhtml -match 'x86')} | 
-                  Select-Object -First 1   
+   $urlstub = $download_page.rawcontent.split('"') | 
+                Where-Object {$_ -match '\.zip'} | Select-Object -First 1
 
-   $version = $link64.title.split()[-1]
-#   $filename64 = $link64.outerhtml.split() | Where-Object {$_ -match '\.(exe|zip)$'}
-#   $filename32 = $link32.outerhtml.split() | Where-Object {$_ -match '\.(exe|zip)$'}
+   $Version = $urlstub -replace ".*Notepad3_([0-9.]+)\.zip",'$1'
    
-#   $url64 = "https://www.rizonesoft.com/software/notepad3/" + $filename64
-#   $url32 = "https://www.rizonesoft.com/software/notepad3/" + $filename32
-   $url64 = $link64 | select -ExpandProperty href
-   $url32 = $link32 | select -ExpandProperty href
+   $url64 = "https://www.rizonesoft.com/software/notepad3/Notepad3_$($Version)_Setup.zip"
+   $url32 = "https://www.rizonesoft.com/software/notepad3/Notepad3_$($Version)_x86_Setup.zip"
 
    return @{ 
             Version  = $Version
