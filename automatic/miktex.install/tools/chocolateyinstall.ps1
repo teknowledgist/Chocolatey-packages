@@ -13,7 +13,8 @@ $ZipArgs = @{
 }
 $null = Get-ChocolateyUnzip @ZipArgs
 
-$MiKTeXsetup = Get-ChildItem $toolsDir 'miktexsetup.exe' | Select-Object -ExpandProperty FullName
+$MiKTeXsetup = Get-ChildItem $toolsDir 'miktexsetup*.exe' -Recurse | Select-Object -ExpandProperty FullName
+Write-Verbose "Found setup utility:  $MiKTeXsetup"
 $null = New-Item -Path "$MiKTeXsetup.ignore" -ItemType file -Force
 
 $pp = Get-PackageParameters
