@@ -8,5 +8,5 @@ https://riot-optimizer.com/thank-you-for-downloading-riot/
 There is a direct link to a dynamic DropBox URL on that page as well
 
 Version  : 0.6.2
-CheckSum : 944D004FF4414D1C030FE871EEBA9D6BF528B1AFE7CC2B601BF12663DE307011
+CheckSum : 33550e8fd30058fe00866ba022b8f9f3b2d4c4b4ab48f9dc50c1853a8b7fad6a
 

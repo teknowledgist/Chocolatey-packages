@@ -86,9 +86,10 @@ If (($osInfo.Version.Major -ne 10) -or ($osInfo.BuildNumber -lt $1809Build)) {
    Install-ChocolateyPackage @packageArgs
 
 } else {
-   # Based on https://gallery.technet.microsoft.com/Install-RSAT-for-Windows-75f5f92f
+   # Based on https://github.com/imabdk/Powershell/blob/master/Install-RSATv1809v1903v1909v2004v20H2.ps1
    $WSUSKey = 'HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU'
    if (Test-Path $WSUSKey) {
+      Write-Verbose 'Saving UseWUServer value and temporarily disabling WSUS.'
       $Save = (Get-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -ErrorAction SilentlyContinue).UseWUServer
       Set-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Value 0
       Restart-Service wuauserv
@@ -117,7 +118,7 @@ If (($osInfo.Version.Major -ne 10) -or ($osInfo.BuildNumber -lt $1809Build)) {
          Write-Host "`nAdding $($Item.Name) to Windows"
          $DISMobject = Add-WindowsCapability -Online -Name $Item.Name
          if ($DISMobject.RestartNeeded) {
-            Write-Warning "A reboot is required."
+            Write-Warning 'A reboot is required.'
          }
       }
       catch { Write-Warning -Message $_.Exception.Message; break }
@@ -127,6 +128,7 @@ If (($osInfo.Version.Major -ne 10) -or ($osInfo.BuildNumber -lt $1809Build)) {
 
    if (Test-Path $WSUSKey) {
       If ($Save -ne $null) {
+         Write-Verbose 'Restoring UseWUServer value and re-enabling WSUS.'
          Set-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Value $Save
       } else {
          Remove-ItemProperty -Path $WSUSKey -Name 'UseWUServer' -Force
