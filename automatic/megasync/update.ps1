@@ -1,15 +1,23 @@
 import-module au
 
 function global:au_GetLatest {
-   $Release = 'https://github.com/meganz/MEGAsync/releases'
+   $GitURL = 'https://github.com/meganz/MEGAsync/releases'
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $GitPage = Invoke-WebRequest -Uri $GitURL -UseBasicParsing
 
-   $Link = $download_page.rawcontent.split("<>") | 
+   $Link = $GitPage.rawcontent.split("<>") | 
                 Where-Object {$_ -match 'Win\.zip"'} |
                 Select-Object -First 1
 
-   $version = $Link -replace '.*\/v([0-9.]+)_.*','$1'
+   $GitVersion = $Link -replace '.*\/v([0-9.]+)_.*','$1'
+
+   $SPurl = 'https://www.softpedia.com/get/Internet/File-Sharing/MEGAsync.shtml'
+   $SPpage = Invoke-WebRequest -Uri $SPurl
+   $SPlink = $SPpage.links | Where-Object {$_.innertext -match 'download megasync'} | 
+                  Select-Object -ExpandProperty innertext -first 1
+   $SPversion = $SPlink -replace ".* ([0-9.]+) .*",'$1'
+
+   $version = ([version]$GitVersion,[version]$SPversion | Measure-Object -Maximum).Maximum.ToString()
 
    $URL32 = 'https://mega.nz/MEGAsyncSetup32.exe'
    $URL64 = 'https://mega.nz/MEGAsyncSetup64.exe'
