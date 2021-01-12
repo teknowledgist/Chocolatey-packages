@@ -8,9 +8,9 @@ or from the GitHub release page:
    https://github.com/praat/praat/releases/latest
 
 Direct download:
-Version      : 6.1.37
-x86 URL      : https://github.com/praat/praat/releases/download/v6.1.37/praat6137_win32.zip
-x86 CheckSum : AB46ED4D9B6A90E5B9E3BA64B53447C3283B27205C498E34486A1F4A0685973B
-x64 URL      : https://github.com/praat/praat/releases/download/v6.1.37/praat6137_win64.zip
-x64 CheckSum : 5A528D755354626BD04B4654C5745EFE9914EAC9924C22EE19F215FE60095812
+Version      : 6.1.38
+x86 URL      : https://github.com/praat/praat/releases/download/v6.1.38/praat6138_win32.zip
+x86 CheckSum : 4C52883B9DACB133845C4637B8F4864203373B9F7902E351B4D709B9E72EB41A
+x64 URL      : https://github.com/praat/praat/releases/download/v6.1.38/praat6138_win64.zip
+x64 CheckSum : FE254F5783512133009ECC9AFFA3A99BBC7802F0ADD272B516CE26C9A2E19B0A
 
