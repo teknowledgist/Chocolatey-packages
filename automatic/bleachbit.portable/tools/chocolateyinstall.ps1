@@ -2,9 +2,9 @@
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$ZipFile   = (Get-ChildItem $toolsDir -filter '*.zip').FullName
+$ZipFile   = Get-ChildItem -Path $toolsDir -Filter '*.zip' | Sort-Object LastWriteTime | Select-Object -Last 1
 
-Get-ChocolateyUnzip -FileFullPath $ZipFile -Destination $env:ChocolateyPackageFolder
+Get-ChocolateyUnzip -FileFullPath $ZipFile.FullName -Destination $env:ChocolateyPackageFolder
 
 $StartPrograms = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs'
 $ShortcutArgs = @{

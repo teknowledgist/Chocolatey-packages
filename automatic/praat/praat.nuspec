@@ -13,11 +13,11 @@
     <projectUrl>http://www.praat.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@f5df8275154486951e8b6876902a2a2dd7af5525/Icons/praat_icon.png</iconUrl>
     <copyright>Copyright © 1992-2018 by Paul Boersma and David Weenink</copyright>
-    <licenseUrl>http://www.fon.hum.uva.nl/praat/GNU_General_Public_License.txt</licenseUrl>
+    <licenseUrl>https://github.com/praat/praat/blob/master/main/GNU_General_Public_License.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/praat/praat</projectSourceUrl>
     <docsUrl>http://www.fon.hum.uva.nl/praat/manual/Intro.html</docsUrl>
-    <mailingListUrl>http://groups.yahoo.com/group/praat-users</mailingListUrl>
+    <mailingListUrl>https://groups.io/g/Praat-Users-List</mailingListUrl>
     <bugTrackerUrl>https://github.com/praat/praat/issues</bugTrackerUrl>
     <tags>praat sound visualization speech phonetics phonology analysis oss embedded</tags>
     <summary>Doing phonetics by computer</summary>
@@ -38,7 +38,7 @@
 
 For best results with phonetic characters in the TextGrid and Picture windows, you should also consider installing the [Charis SIL](https://chocolatey.org/packages/charissil) and/or the [Doulos SIL](https://chocolatey.org/packages/doulossil) fonts.
 
-Much of the "official" documentation is not designed to help linguists (who may not have a strong phonetics background) get the measurements and make the changes that they need for research.  Thus, be sure to also look at the regularly-updated guidebook, [*Using Praat for Linguistic Research* by Will Styler](http://wstyler.ucsd.edu/praat).
+Much of the "official" documentation is not designed to help linguists (who may not have a strong phonetics background) get the measurements and make the changes that they need for research.  Thus, be sure to also look at the regularly-updated guidebook, [*Using Praat for Linguistic Research* by Will Styler](http://savethevowels.org/praat/) or [*Welcome to SWPhonetics* by Sidney Wood](https://swphonetics.com/praat/introduction/).
     </description>
     <releaseNotes>http://www.fon.hum.uva.nl/praat/manual/What_s_new_.html</releaseNotes>
   </metadata>

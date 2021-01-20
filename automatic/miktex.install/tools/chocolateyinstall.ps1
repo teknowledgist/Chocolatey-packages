@@ -1,9 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageMileStone = '20.12'
+$PackageMileStone = '21.1'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$ZipFiles = Get-ChildItem $toolsDir '*.zip' |Select-Object -ExpandProperty FullName
+# Remove any previously unzipped installers
+Get-ChildItem $toolsDir -Filter *.exe -Recurse | ForEach-Object { Remove-Item $_.fullname -Force }
+
+$ZipFiles = Get-ChildItem -Path $toolsDir -Filter '*.zip' | Sort-Object LastWriteTime | Select-Object -ExpandProperty FullName -Last 2 
 
 $ZipArgs = @{
    PackageName    = $env:ChocolateyPackageName

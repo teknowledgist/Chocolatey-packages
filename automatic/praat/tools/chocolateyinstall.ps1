@@ -3,8 +3,13 @@
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 $BitLevel = Get-ProcessorBits
 
-$ZipFile   = (Get-ChildItem $toolsDir -filter "*.zip" |
-               Where-Object {$_.basename -match "$BitLevel`$"}).FullName
+# Remove old versions
+$null = Get-ChildItem $env:ChocolateyPackageFolder -Filter *.exe | Remove-Item -Force
+
+$ZipFile = Get-ChildItem $toolsDir -filter "*.zip" |
+               Where-Object {$_.basename -match "$BitLevel`$"} | 
+               Sort-Object LastWriteTime | 
+               Select-Object -ExpandProperty FullName -Last 1
 
 Get-ChocolateyUnzip -FileFullPath $ZipFile -Destination $env:ChocolateyPackageFolder
 
@@ -15,7 +20,7 @@ $targetPath = (Get-ChildItem $env:ChocolateyPackageFolder -filter "*.exe").fulln
 
 Install-ChocolateyShortcut -shortcutFilePath $shortcutFilePath -targetPath $targetPath
 
-$exes = Get-ChildItem $env:ChocolateyPackageFolder -filter *.exe |select -ExpandProperty fullname
+$exes = Get-ChildItem $env:ChocolateyPackageFolder -filter *.exe |Select-Object -ExpandProperty fullname
 foreach ($exe in $exes) {
    $null = New-Item "$exe.gui" -Type file -Force
 }

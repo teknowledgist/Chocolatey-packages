@@ -1,15 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'  # stop on all errors
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*.exe').FullName
+$InstallFile = Get-ChildItem -Path $toolsDir -Filter '*.exe' | Sort-Object LastWriteTime | Select-Object -Last 1
 
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileType       = 'exe'
-   File           = $fileLocation
+   File           = $InstallFile.FullName
    silentArgs     = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-"
    validExitCodes = @(0)
 }
 
 Install-ChocolateyInstallPackage @InstallArgs
-Remove-Item $fileLocation -ea 0 -force
+Remove-Item $InstallFile.FullName -ea 0 -force
