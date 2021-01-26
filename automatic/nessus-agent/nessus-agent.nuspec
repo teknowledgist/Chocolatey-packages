@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>nessus-agent</id>
+    <version>8.2.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/nessus-agent</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Nessus Agent</title>
+    <authors>Tenable, Inc.</authors>
+    <projectUrl>https://www.tenable.com/products/nessus/nessus-agents</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@10d651d658c309963aace96dd686250db8ae7b03/Icons/nessus_icon.png</iconUrl>
+    <copyright>Copyright © 1998-2020 Tenable, Inc.</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/nessus-agent/License.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://docs.tenable.com/NessusAgent.htm</docsUrl>
+    <tags>nessus agent tenable security vulnerability commercial</tags>
+    <summary>Visibility into IT assets for Tenable.io or Tenable.sc</summary>
+    <description>Nessus Agents™ compliment traditional network vulnerability scanning to give you visibility into additional IT assets—like endpoints, and other remote assets that intermittently connect to the internet. They collect asset and system information and send it back to Tenable.io® or Tenable.sc™ (formerly SecurityCenter) for analysis. You get a low footprint agent that extends scan coverage and increases scan flexibility.
+
+## KEY BENEFITS
+* **Extend scan coverage** to laptops and other transient devices.
+* **Remove credential headaches** –once deployed, agents no longer require host credentials to run future scans.
+* **Reduce network scan performance overhead**.
+* **Easy to deploy and can be installed anywhere**.
+* **Highly secure** –including leveraging encryption to protect your data.
+* **Scan quickly** –perform rapid scans on demand with little network impact.
+
+## Important 
+**Nessus Agent is a commercial product that requires a license to use.** [See the Licensing Requirement](https://docs.tenable.com/generalrequirements/Content/NessusLicensingRequirements.htm) for more information.
+
+**Nessus Agent is useless by itself!**  At a minimum, you should have the IP address/port of a Tenable server to which the Agent can connect and a *Linking Key* for the server.  Provide those (and other) options using the `--installarguments` (`--ia`) switch:
+
+##### Most Common
+* `NESSUS_SERVER=(IP Address):(port)`
+* `NESSUS_KEY=(Linking Key)`
+* `NESSUS_GROUPS="(Group names)"`
+
+##### Other options
+* `NESSUS_NAME`
+* `NESSUS_PROXY_AGENT`
+* `NESSUS_PROXY_PASSWORD`
+* `NESSUS_PROXY_SERVER`
+* `NESSUS_PROXY_USERNAME`
+* `NESSUS_CA_PATH`
+* `NESSUS_PROCESS_PRIORITY`
+* `NESSUS_PLUGINS_FILEPATH`
+
+#### Example:
+
+`choco install nessus-agent -y --ia 'NESSUS_GROUPS=""Group1,Another Group"" NESSUS_SERVER=""192.168.0.1:8834"" NESSUS_KEY=00abcd00000efgh11111i0k222lmopq3333st4455u66v777777w88xy9999zabc00'`
+
+*Use the `'` surrounding the arguments when calling Chocolatey with PowerShell.  When using cmd.exe, the arguments must be surrounded by `"` instead.*
+
+If Nessus Agent is installed without the server and/or key values, they can be added later, on the command line.  See [`nessuscli.exe /?`](https://docs.tenable.com/nessusagent/Content/NessusCLIAgent.htm) for more.
+    </description>
+    <releaseNotes>https://docs.tenable.com/releasenotes/Content/nessus/nessus.htm</releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
