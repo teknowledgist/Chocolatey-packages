@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>ocularis-client</id>
+    <version>5.8.0.785</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/local/ocularis-client</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Ocularis Client (Install)</title>
+    <authors>Qognify</authors>
+    <projectUrl>https://www.qognify.com/products/ocularis/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@76a32e637b12d7dfc4f86f4a986e7fd612dd98be/Icons/ocularis-client.png</iconUrl>
+    <copyright>© Copyright Qognify Inc 2002-2019</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/local/ocularis-client/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.qognify.com/wp-content/uploads/Ocularis_Installation_and_Licensing_Guide_5.9.pdf</docsUrl>
+    <bugTrackerUrl>https://www.qognify.com/support-training/support-request/</bugTrackerUrl>
+    <tags>ocularis-client ocularis video security visualization live</tags>
+    <summary>Video Management System client</summary>
+    <description>Organizations that place a premium on physical security and work with live video on a daily basis need a reliable and flexible tool that does not miss a single detail. Whether the operator in the control room or the security guard on the premises – video allows them to recognize critical events early and to assess situations faster and better.
+
+Ocularis is helping business owners, facility managers, and security professionals all over the world sleep better at night. The three models of Ocularis are designed to handle all types of security demands. Regardless of the scale of your operation, all Ocularis platforms provide the kind of surveillance intelligence that has proven crucial in real world situations.
+
+The client for Ocularis is best downloaded from the site hosted by the internal video server.  In this package it is held in the "hostname.private" file that is ignored by github.
+
+</description>
+    <releaseNotes>https://www.qognify.com/wp-content/uploads/Ocularis_5.9_release_notes-1-1.pdf</releaseNotes>
+    <!-- =============================== -->      
+    <dependencies>
+      <dependency id="xvid" version="1.3.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
