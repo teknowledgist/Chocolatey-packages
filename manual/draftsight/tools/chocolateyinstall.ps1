@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'DraftSight'
-$url = 'https://dl-ak.solidworks.com/nonsecure/draftsight/2020SP3-1/DraftSight32.exe'
-$url64 = 'https://dl-ak.solidworks.com/nonsecure/draftsight/2020SP3-1/DraftSight64.exe'
-$checkSum = 'a2ba6c33aace5a4e1a5c39278615e7251d8c6291722e89947ce95fed8fece531'
-$checkSum64 = '5364dec1f3d980086e94f041c2ebb2790c9f6990fd223e39e578ec3f2bee26cb'
+$url = 'https://dl-ak.solidworks.com/nonsecure/draftsight/2020SP4-1/DraftSight32.exe'
+$url64 = 'https://dl-ak.solidworks.com/nonsecure/draftsight/2020SP4-1/DraftSight64.exe'
+$checkSum = 'e8bea881bbdc7634745e046f55f37ee1d1d11c481b8069f4e28b299b8e99b2ff'
+$checkSum64 = '68a09d9f8e8ef742e65afa7c0a82bccc4167e58261f9c0b19f80ee67bc60d251'
 
 # if an older version of DraftSight has been run, the API service will prevent upgrading it.
 if (Get-Service -DisplayName "Draftsight API Service*" | Where { $_.status -eq 'running' }) {
@@ -33,6 +33,13 @@ $UnzipArgs = @{
 }
 
 Get-ChocolateyUnzip @UnzipArgs
+
+# Just guessing here, but:
+#
+# LICENSETYPE=0 req_trial
+# LICENSETYPE=1 req_activation
+# LICENSETYPE=2 req_license_dsls
+# LICENSETYPE=3 req_license_snl
 
 $InstallArgs = @{
     PackageName    = $packageName
