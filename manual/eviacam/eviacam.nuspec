@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>eviacam</id>
+    <version>2.1.0.20210123</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/eviacam</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Enable Viacam</title>
+    <authors>Cesar Mauri Loba</authors>
+    <projectUrl>http://viacam.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/cmauri/eviacam@5212fe3bf4b1495a820af8a7eccbeb1849ca2120/src/resources/eviacam.png</iconUrl>
+    <copyright>Copyright © 2008-13 Cesar Mauri Loba</copyright>
+    <licenseUrl>https://github.com/cmauri/eviacam/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/cmauri/eviacam</projectSourceUrl>
+    <docsUrl>https://eviacam.crea-si.com/help/en/contents.htm</docsUrl>
+    <mailingListUrl>https://sourceforge.net/projects/eviacam/forums/forum/898005</mailingListUrl>
+    <bugTrackerUrl>https://github.com/cmauri/eviacam/issues</bugTrackerUrl>
+    <tags>eviacam camera accessibility mouse emulation OSS embedded</tags>
+    <summary>Head-movement as mouse replacment via webcam</summary>
+    <description>Enable Viacam (eViacam) is a mouse replacement software that moves the pointer as you move your head.
+
+It works on standard PC equipped with a webcam. No additional hardware is required. 
+
+## Features
+* **Hands-free**: Control your computer with intuitive head movements. No need to use your hands!
+* **Wireless**: Works with any good quality webcam. No cables, no dots, no additional hardware required.
+* **Simple and Intuitive**: Simple installation, intuitive use. The integrated configuration wizard gets you started easily.
+* **Customizability**: Pointer speed, motion acceleration and smoothness, dwelling time, and many other variables can be adjusted to fit the user's needs.
+* **User autonomy**: Specifically designed to eliminate the need for assistance after installation.
+
+#### Useful note
+[Precision Gaze Mouse](https://precisiongazemouse.org/) is a one-click, FOSS application which provides and interesting approach for hands-free computer control. You can combine its eye-tracking technology with eViacam's face-tracking to get the best of both worlds: the speed of gaze tracking, and the precision of head tracking. You can instantly move the mouse pointer by just looking to the desired position and then use the movements of your head to reach the right spot with precision. [This page](https://precisiongazemouse.org/manual/#eviacam-instructions) describes how to set up it with eViacam. 
+    </description>
+    <releaseNotes>https://github.com/cmauri/eviacam/releases</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

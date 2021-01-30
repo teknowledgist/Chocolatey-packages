@@ -1,0 +1,13 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The link to the FOSSHub download of the installer is available on the home page:  
+https://eviacam.crea-si.com/#downloads
+
+Direct Download:
+
+Version  : 2.1.0
+URL      : https://www.fosshub.com/Enable-Viacam.html
+CheckSum : 995780108F9A112B6B3B4846D42D26A344BE86A51D76118FBE3CBA2DF6FF5307
+
