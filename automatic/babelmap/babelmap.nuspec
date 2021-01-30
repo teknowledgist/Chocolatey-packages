@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>babelmap</id>
+    <version>13.0.0.11</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/babelmap</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>BabelMap</title>
+    <authors>Andrew West</authors>
+    <projectUrl>https://www.babelstone.co.uk/Software/BabelMap.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@046dcc9bc317214c6089a5cb436ce29ecb97c3b2/Icons/babelmap_icon.png</iconUrl>
+    <copyright>Copyright © 2002-2020 Andrew West</copyright>
+    <licenseUrl>https://www.babelstone.co.uk/Software/BabelMap.html#Download</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.babelstone.co.uk/Software/BabelMap_Help.html</docsUrl>
+    <mailingListUrl>mailto:babelstone@gmail.com</mailingListUrl>
+    <tags>babelmap unicode font glyph viewer analysis typeface freeware</tags>
+    <summary>Unicode character map utility</summary>
+    <description>BabelMap is a free character map application for Windows that allows you to browse through the entire Unicode character repertoire of nearly 144,000 characters, or search for a particular character by name or by code point. Characters can then be copied to the clipboard for use in any Unicode-aware application. It also provides many useful [features and special utilities](https://www.babelstone.co.uk/Software/BabelMap_Features.html). BabelMap supports the most recent version of the Unicode Standard, currently [Unicode 13.0](http://www.unicode.org/versions/Unicode13.0.0/) (released March 2020).
+
+![BabelMap Example](https://www.babelstone.co.uk/Software/Images/BabelMap_13.png)
+
+Summary of Features
+* Browse through the entire Unicode code space block by block and character by character.
+* Tabbed display for Unicode planes (BMP, SMP, SIP, TIP, SSP, SPUA-A, SPUA-B), with options to display unassigned planes 4 through 13, and show unassigned ranges within assigned planes.
+* Display all characters using a single font, or define a composite font with different fonts used to display Unicode blocks.
+* Search for any Unicode character by character name; or go to a specified code point.
+* Paste any unknown Unicode character into the edit buffer and hit F2 to locate the character.
+* Edit buffer supports drag-and drop editing and the user-defined composite font.
+* Color code characters in the character grid by Unicode properties or version or script.
+* Advanced character search utility which allows you to find all Unicode characters that match specified criteria.
+* Character lookup tools for finding Han (CJKV) characters by radical/stroke or by Mandarin or Cantonese readings.
+* Character lookup tool for finding Yi (Nuosu) characters by radical/stroke.
+* Character lookup tool for finding Tangut characters by reference code.
+* Various tools providing detailed information about Unicode versions, scripts, planes, blocks.
+* Emoji data tool that lists data about all Unicode-defined emoji, and select single or composite emoji.
+* Show all Unicode properties for the selected character.
+* Show additional non-Unicode data for Han (CJKV), Tangut and Egyptian Hieroglyph characters.
+* Show summary information for all fonts installed on your system.
+* Show detailed information about any font on your system, including coverage of Unicode characters.
+* Export glyphs for any font to file as images.
+    </description>
+    <releaseNotes>https://www.babelstone.co.uk/Software/BabelMap_Versions.html</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

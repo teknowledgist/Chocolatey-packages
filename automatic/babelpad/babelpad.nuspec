@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>babelpad</id>
+    <version>13.0.0.11</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/babelpad</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>BabelPad</title>
+    <authors>Andrew West</authors>
+    <projectUrl>https://www.babelstone.co.uk/Software/BabelPad.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@174d8df68ae9c237a5d64629e6356e991b46475e/Icons/babelpad_icon.png</iconUrl>
+    <copyright>Copyright © 2002-2020 Andrew West</copyright>
+    <licenseUrl>https://www.babelstone.co.uk/Software/BabelPad.html#Download</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.babelstone.co.uk/Software/BabelPad_Help.html</docsUrl>
+    <mailingListUrl>mailto:babelstone@gmail.com</mailingListUrl>
+    <tags>babelpad unicode text edit notepad freeware</tags>
+    <summary>Unicode text editor</summary>
+    <description>BabelPad is a free Unicode text editor for Windows that supports the proper rendering of most complex scripts, and allows you to assign different fonts to different scripts in order to facilitate multi-script text editing. It also provides many useful [features and special utilities](https://www.babelstone.co.uk/Software/BabelPad_Features.html) for processing Unicode text. BabelPad supports the most recent version of the Unicode Standard, currently [Unicode 13.0](http://www.unicode.org/versions/Unicode13.0.0/) (released March 2020).
+
+![BabelPad Example](https://www.babelstone.co.uk/Software/Images/BabelPad_UDHR.png)
+
+## Summary of Features
+
+These are some of the key features of BabelPad. For more information see the [BabelPad Help](https://www.babelstone.co.uk/Software/BabelPad_Help.html) pages.
+
+* Open files in a wide variety of [Unicode or legacy encodings](https://www.babelstone.co.uk/Software/BabelPad_Encodings.html); save files in any Unicode encoding (UTF-8, UTF-16, UTF-32) or Unicode-compatible encoding (GB18030), or as ASCII text with escaped Unicode characters.
+* Able to open and edit very large (multi-megabyte) files.
+* Standard edit functionality, including drag-and-drop editing, multiple undo/redo, find and replace, and casing functions (for all casing scripts in Unicode).
+* Left-To-Right (LTR) or Right-To-Left (RTL) page layout; and support for bidirectional text.
+* Render text with either a single font or a user-defined composite font (where you can define which font to use for each Unicode block).
+* Render complex Unicode scripts using Microsoft's Uniscribe rendering engine or Universal Shaping Engine (for Windows 10).
+* Option to render all Unicode characters as individual spacing glyphs (i.e. with no shaping or joining of complex text).
+* Option to display text in different colours for different Unicode-defined scripts.
+* Convert Unicode text to/from a variety of escape codes (including converting to/from Unicode character names).
+* Convert between Unicode characters and code points by pressing Alt-X after a character or at the end of a code point.
+* Apply Unicode normalization (NFC, NFD, NFKC, NFKD) to text.
+* Convert Chinese text between traditional and simplified character forms.
+* Convert Chinese text to Mandarin pinyin readings.
+* Convert Japanese text between old and new character forms.
+* Convert between Vietnamese alphabet and VIQR.
+* Convert Extended Wylie Tibetan transliteration into Unicode Tibetan characters.
+* Convert between Yi (Nuosu) romanization and Unicode syllables.
+* Sort text according to the Unicode Collation Algorithm (UCA) or the CLDR Collation Algorithm.
+* Manipulate delimited columns of text (reorder, cut, copy, paste and sort columns delimited by tabs or any user-specified character or string).
+* Transcode from one list of characters or code points to another list of characters or code points
+* Batch replace one list of text strings with another list of text strings
+* Advanced character search utility which allows you to find all Unicode characters that match specified criteria.
+* Character Map utility to find and enter any Unicode character.
+* Supports user-defined custom keyboard layouts and text input methods ([file format](http://www.babelstone.co.uk/Software/BabelPad_Custom_Input_Method.html)).
+* Character lookup tools for finding Han (CJKV) characters by radical/stroke or by Mandarin or Cantonese readings.
+* Character lookup tool for finding Yi (Nuosu) characters by radical/stroke.
+* Character lookup tool for finding Tangut characters by reference code.
+* Various tools providing detailed information about Unicode versions, scripts, planes, blocks.
+* Emoji data tool that lists data about all Unicode-defined emoji, and select single or composite emoji.
+* Show all Unicode properties for the character at the current cursor position.
+* Show additional non-Unicode data for Han (CJKV), Tangut and Egyptian Hieroglyph characters.
+* Unicode code point and character name of character at the current cursor position is displayed on the status bar, with additional information for Han (CJKV) and Tangut characters.
+
+    </description>
+    <releaseNotes>https://www.babelstone.co.uk/Software/BabelPad_Versions.html</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
