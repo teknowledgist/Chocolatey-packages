@@ -7,7 +7,7 @@ http://forsys.sefs.uw.edu/fusion/fusionlatest.html
 
 Direct Download:
 
-Version  : 4.10
+Version  : 4.20
 URL      : http://forsys.sefs.uw.edu/software/fusion/fusionlatest.exe
-CheckSum : 7ABDE39CD934D3A104436A4D6FBAAC79873D323DB60AAE9F2B16C1227B3B7656
+CheckSum : FBDADA2E28797A22FB9B372FCDA494B452F51D16D535D96BEFB5CB092514D4F6
 
