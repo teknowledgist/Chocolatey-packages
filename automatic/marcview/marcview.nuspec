@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>marcview</id>
+    <version>3.12.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/marcview</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>MARCView</title>
+    <authors>OCLC Developer Network</authors>
+    <projectUrl>https://github.com/OCLC-Developer-Network/MARCView-Convert</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@74130ceb912e7ba1697dbb87519f8e0d17608473/Icons/marcview_icon.png</iconUrl>
+    <copyright>Copyright 2010 OCLC</copyright>
+    <licenseUrl>https://www.apache.org/licenses/LICENSE-2.0.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/OCLC-Developer-Network/MARCView-Convert</projectSourceUrl>
+    <docsUrl>https://github.com/OCLC-Developer-Network/MARCView-Convert/raw/master/documentation/MARCView_and_MARConvert.pdf</docsUrl>
+    <tags>marcview MARC records OCLC library catalog OSS embedded</tags>
+    <summary>View, search, and print any MARC21, UNIMARC, or MARCXML records</summary>
+    <description>MARCView™ is an easy-to-use Windows program to view, search, and print any file of MARC21, UNIMARC, or MARCXML bibliographic or authority records. Records are formatted for easy viewing. Although MARCView™ handles files of any number of records, searching is linear, so becomes slower for large files; about a million records is the practical limit for searching. The size of the file must be less than 2 GB.
+
+MARCView™ a simple file viewer. As such, it tries to read anything readable and does not ask the user much. For example, it ignores characters between records if it can. It does not report character conversion problems since the user can't do anything about them and they won't interfere with viewing. It does not report minor validation errors. This simplicity means that certain limitations are hard to fix.
+    </description>
+    <releaseNotes>https://github.com/OCLC-Developer-Network/MARCView-Convert/releases/latest</releaseNotes>
+    <!-- =============================== -->      
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
