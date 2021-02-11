@@ -56,7 +56,7 @@
 
 If Nessus Agent is installed without the server and/or key values, they can be added later, on the command line.  See [`nessuscli.exe /?`](https://docs.tenable.com/nessusagent/Content/NessusCLIAgent.htm) for more.
     </description>
-    <releaseNotes>https://docs.tenable.com/releasenotes/Content/nessus/nessus.htm</releaseNotes>
+    <releaseNotes>https://docs.tenable.com/releasenotes/Content/nessusagent/nessusagent.htm</releaseNotes>
     <dependencies>
     </dependencies>
   </metadata>
