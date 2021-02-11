@@ -1,0 +1,82 @@
+﻿From: License Agreement page of the installer
+
+LICENSE
+
+YOU MUST CAREFULLY READ THE FOLLOWING TERMS AND CONDITIONS 
+AND YOU MUST AGREE TO THEM IN ORDER TO USE THIS SOFTWARE.
+
+WARNING
+
+This computer program is protected by copyright law and international treaties. 
+Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe criminal 
+and civil penalties, and will be prosecuted to the maximum extent possible under law. 
+
+
+DEFINITIONS
+
+"Software" = The software, the documentation and everything included in the original distribution package(s).
+"Licensed version" = A version of this software that has been licensed for use in a company or in an organization. 
+"Unlicensed version" = The freeware version of this software that has been licensed only for personal, non-commercial use at home. 
+"Author" = The author(s) of this software.
+
+
+USE RESTRICTIONS 
+
+You may not: 
+1. Modify, reverse engineer, decompile, disassemble or otherwise attempt to reconstruct or discover the source code, or any parts of it, from the binaries of the Software.
+2. Create derivative works based on the Software (e.g. incorporating the Software in a commercial product or service without a proper license), except that You may create patches, bug fixes and additional features and bundle or distribute the Software.
+3. Rent, lease, sublicense, convey, distribute or otherwise transfer rights to the Software. 
+4. Remove any product identification, copyright, proprietary notices or labels from the Software.
+5. Distribute or re-distrubute the licensed version of this software or the license itself without written permission from the author.
+6. Sell or re-sell this software without written permission from the author.
+
+
+MAINTENANCE, SUPPORT AND UPDATES 
+
+The author is under no obligation to maintain or support or update the Software in any way, or to provide updates or error corrections. 
+
+
+CONFIDENTIALITY 
+
+The Software and any license authorization codes are confidential. You agree to take adequate steps to protect the Software 
+and any license authorization codes, if any, from unauthorized disclosure or use. You agree that You will not disclose the Software, 
+in source code or object code form, to any third party, except as otherwise provided herein. 
+
+
+DISCLAIMER
+
+The author expressly disclaims all warranties, whether express, implied or statutory, including, without limitation, the implied 
+warranties of merchantability, of fitness for a particular purpose, noninfringement of third party intellectual property rights, 
+and any warranty that may arise by reason of trade usage, custom, or course of dealing. Without limiting the foregoing, you 
+acknowledge that the software is provided "as is" and that the author does not warrant that the software will run uninterrupted 
+or error free nor that the  software will operate with hardware and/or software not provided by the author. This disclaimer of 
+warranty constitutes an essential part of the agreement. some states do not allow the exclusion of implied  warranties, so the 
+above exclusion may not apply to you, and you may have other rights, which vary from state to state. 
+
+
+LIMITED LIABILITY
+
+The entire risk as to results and performance of the software is assumed by you. under no circumstances will the author or its 
+licensors be liable for any direct or special, indirect, incidental, exemplary or consequential damages of any kind or nature 
+whatsoever, whether based on contract, warranty, tort (including negligence), strict liability or otherwise, arising out of or 
+in any way related to the software or this agreement, even if the author or its licensors have been advised of the possibility 
+of such damage or if such damage could have been reasonably foreseen, and notwithstanding any failure of essential purpose of 
+any exclusive remedy provided in this agreement. such limitation on damages includes, but is not limited to, damages for loss 
+of goodwill, lost profits, loss of data or software, work stoppage, computer failure or malfunction or impairment of other goods. 
+In no event will the author or its licensors be liable for the costs of procurement of substitute software or services. 
+in addition, inno event will the total liability of the author in connection with this agreement or the software exceed the actual 
+amount paid to the author, if any, for the software giving rise to the claim. you acknowledge that this software is not designed 
+or licensed for use in on-line equipment in hazardous environments such as operation of nuclear facilities, aircraft navigation 
+or control, or life-critical applications. The author expressly disclaims any liability resulting from use of the software in any 
+such on-line equipment in hazardous environments and accepts no liability in respect of any actions or claims based on the use of 
+the software in any such on-line equipment in hazardous environments by you. for purposes of this paragraph, the term "life-critical 
+application" means an application in which the functioning or malfunctioning of the software may result directly or indirectly in 
+physical injury or loss of human life.
+
+DISTRIBUTION
+
+The software may be freely distributed provided that it is not modified 
+and  the   original   archive  remains  intact  with  all  accompanying 
+files, and  provided  that no fee is charged (except for any reasonable
+fees necessary to cover costs of distribution media) and the author has
+been notified.

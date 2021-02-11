@@ -1,0 +1,11 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Download via the "Download Now" button on this page:
+http://www.blacksunsoftware.com/colormania.html
+
+Direct Download:
+Version  : 12.1
+URL      : http://www.blacksunsoftware.com/downloads/ColorManiaSetup.exe
+CheckSum : 6A97B04E3FC2C5874EDFD794B98757287574E86D37F3F5F4FBBF31EBA51BA9CC

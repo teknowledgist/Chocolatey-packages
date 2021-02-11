@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>colormania</id>
+    <version>12.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/colormania</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>ColorMania</title>
+    <authors>Peter Boey</authors>
+    <projectUrl>http://www.blacksunsoftware.com/colormania.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@0a098b80f48c6efb3f2b6d5bcc88b63f42304ea4/Icons/colormania_icon.png</iconUrl>
+    <copyright>Copyright © 2002-2020 Blacksun Software</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/colormania/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <bugTrackerUrl>http://www.blacksunsoftware.com/support.html</bugTrackerUrl>
+    <tags>colormania graphics color picker eyedropper magnifier freeware embedded</tags>
+    <summary>Advanced Color Picker Utility</summary>
+    <description>Colormania is an advanced color picker utility, especially created for web-designers, graphic artists and application developers.
+
+It supports various color models and is able to pick colors from anywhere on your screen. Accuracy on pixel level is even made easier with the built-in screen magnifier.
+
+![ColorMania Sample](http://www.blacksunsoftware.com/pics/colormania3.jpg)
+
+It's the perfect solution for previewing, identifying, testing and organizing color values. It can be a very difficult job to get your colors right for a unique or appealing design. ColorMania is designed specifically for this task and gives you full control over your color management.
+
+With the color grabber you can pick any color on your screen and the screen magnifier makes this even easier for you. The RGB and HSL sliders allow you to manipulate these colors in detail and you can store the colors you want in your own custom color schemes or palettes.
+
+ColorMania supports more color formats than any other color picker and can therefore be used in combination with a large number of other graphical programs (Photoshop, Gimp, Illustrator,..) and in different areas (web design, printing,...).
+
+The following formats are supported :
+* HTML Color Codes (Hex / CSS) : the most common color code in used in webdesign
+* Delphi Hex : used with Borland's Delphi language
+* VB Hex : used with Microsoft's Visual Basic
+* C++ Hex : used with C++
+* RGB Values : Red/Green/Blue used in many paint programs
+* RGB% Values : Red/Green/Blue used in some DTP as well as paint programs
+* HSV Values : Hue/Saturation/Value-Brightness used in graphics programs
+* CMY : Cyan/Magenta/Yellow also used in paint programs
+* CMYK : Cyan/Magenta/Yellow/BlacK used in DTP, paint programs
+* HLS : Hue/Lightness/Saturation
+* Photoshop : Used in Adobe Photoshop color picker
+* Powerbuilder : Used in Powerbuilder development environment (Sybase)
+* Android Transparent Format
+* CSS RGBA Format
+
+    </description>
+    <releaseNotes>http://www.blacksunsoftware.com/colormania.html</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
