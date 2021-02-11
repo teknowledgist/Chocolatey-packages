@@ -22,12 +22,9 @@
 
 ![BabelPad Example](https://www.babelstone.co.uk/Software/Images/BabelPad_UDHR.png)
 
-## Summary of Features
-
-These are some of the key features of BabelPad. For more information see the [BabelPad Help](https://www.babelstone.co.uk/Software/BabelPad_Help.html) pages.
+## Key Features
 
 * Open files in a wide variety of [Unicode or legacy encodings](https://www.babelstone.co.uk/Software/BabelPad_Encodings.html); save files in any Unicode encoding (UTF-8, UTF-16, UTF-32) or Unicode-compatible encoding (GB18030), or as ASCII text with escaped Unicode characters.
-* Able to open and edit very large (multi-megabyte) files.
 * Standard edit functionality, including drag-and-drop editing, multiple undo/redo, find and replace, and casing functions (for all casing scripts in Unicode).
 * Left-To-Right (LTR) or Right-To-Left (RTL) page layout; and support for bidirectional text.
 * Render text with either a single font or a user-defined composite font (where you can define which font to use for each Unicode block).
@@ -55,10 +52,10 @@ These are some of the key features of BabelPad. For more information see the [Ba
 * Character lookup tool for finding Tangut characters by reference code.
 * Various tools providing detailed information about Unicode versions, scripts, planes, blocks.
 * Emoji data tool that lists data about all Unicode-defined emoji, and select single or composite emoji.
-* Show all Unicode properties for the character at the current cursor position.
 * Show additional non-Unicode data for Han (CJKV), Tangut and Egyptian Hieroglyph characters.
 * Unicode code point and character name of character at the current cursor position is displayed on the status bar, with additional information for Han (CJKV) and Tangut characters.
 
+For more information see the [BabelPad Help](https://www.babelstone.co.uk/Software/BabelPad_Help.html) pages.
     </description>
     <releaseNotes>https://www.babelstone.co.uk/Software/BabelPad_Versions.html</releaseNotes>
     <!-- =============================== -->      
