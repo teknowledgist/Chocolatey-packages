@@ -23,7 +23,7 @@ $OrigLNK = Get-ChildItem -Path $UserStart -Filter "$env:ChocolateyPackageName.ln
 
 # Creating a Start Menu shortcut for all users.
 $StartPrograms = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs'
-If (Test-Path $OrigLNK) {
+If (($OrigLNK -ne $null) -and (Test-Path $OrigLNK)) {
    $NewLNK = Copy-Item $OrigLNK.FullName $StartPrograms -Force -PassThru
    $null = Remove-Item $OrigLNK.FullName
 } else {
