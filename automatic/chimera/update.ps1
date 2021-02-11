@@ -27,6 +27,7 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
     @{
         "tools\chocolateyInstall.ps1" = @{
+            "(^`$AppVersion = )('.*')"      = "`$1'$($Latest.Version)'"
             "(^\s*Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
     }

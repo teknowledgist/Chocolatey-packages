@@ -1,12 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$AppVersion = '1.15'
+
 $BaseURL = 'https://www.cgl.ucsf.edu'
 
 # Discovering download link
 $url = "$BaseURL/chimera/cgi-bin/secure/chimera-get.py"
 $PostParams = @{
    choice='Accept'
-   file="win64/chimera-$env:ChocolateyPackageVersion-win64.exe"
+   file="win64/chimera-$AppVersion-win64.exe"
 }
 $DownloadPage = Invoke-WebRequest $url -method Post -Body $postparams -UseBasicParsing
 
