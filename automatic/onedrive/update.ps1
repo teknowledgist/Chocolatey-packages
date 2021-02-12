@@ -28,4 +28,4 @@ function global:au_SearchReplace {
    }
 }
 
-Update-Package
+Update-Package -nocheckchocoversion

@@ -3,8 +3,8 @@
 $packageArgs = @{
    packageName   = $env:chocolateyPackageName
    fileType      = 'exe'
-   url           = 'https://go.microsoft.com/fwlink/?linkid=860984'
-   checksum      = '69C363ED2FC63485BE15DD6E3E9BA6710AB0414BC23E9E5E7FCC6E607BE3B806'
+   url           = 'https://go.microsoft.com/fwlink/?linkid=844652'
+   checksum      = 'f31ccdcff62dd9a84073f059c4de63e6059ceda5b2a68d00e3ab9444eabcbf38'
    checksumType  = 'sha256'
    silentArgs    = '/allusers /silent'
    validExitCodes= @(0)
@@ -27,12 +27,25 @@ Install-ChocolateyPackage @packageArgs
    What follows should prevent that redundant action.
    Reference:  https://byteben.com/bb/installing-the-onedrive-sync-client-in-per-machine-mode-during-your-task-sequence-for-a-lightening-fast-first-logon-experience/
 #> 
+$RegPath = "$env:windir\system32\reg.exe"
+$DefUReg = "$env:SystemDrive\Users\Default\NTUSER.DAT"
+$TempKey = 'HKLM\DefaultUser'
+
+try { 
+   [IO.File]::OpenWrite($DefUReg).close()
+   $unlocked = $true
+   Write-Debug 'Default user registry key is available.'
+} catch {
+   $unlocked = $false
+   Write-Debug 'Default user registry key is in use.  Attempting to release.'
+   # unsure if this will work.  Pulled from:  https://osd365.com/windows-10-sporadic-user-profile-corruption-default-ntuser-dat-locked-by-system/
+   Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements 'UNLOAD HKU\DefaultUserTemplate'
+}
 
 try {
-   $RegPath = "$env:windir\system32\reg.exe"
-   $KeyPath = 'HKLM:\DefaultUser\Software\Microsoft\Windows\CurrentVersion\Run'
+   $null = Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements "LOAD $TempKey $DefUReg"
 
-   $null = Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements "LOAD HKLM\DefaultUser `"$env:SystemDrive\Users\Default\NTUSER.DAT`""
+   $KeyPath = ([regex]'\\').replace($TempKey,':\',1) + '\Software\Microsoft\Windows\CurrentVersion\Run'
 
    $ODrunValue = (Get-ItemProperty -Path $KeyPath).OneDriveSetup
    if ($ODrunValue) {
