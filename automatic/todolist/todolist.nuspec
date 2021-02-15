@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>todolist</id>
+    <version>8.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/todolist</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>ToDoList</title>
+    <authors>AbstractSpoon Software</authors>
+    <projectUrl>http://www.abstractspoon.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/todolist_icon.png</iconUrl>
+    <copyright>Copyright © 2003-2020 AbstractSpoon</copyright>
+    <licenseUrl>http://abstractspoon.com/wiki/doku.php?id=free-open-source-software</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>http://www.codeproject.com/articles/5371/todolist</projectSourceUrl>
+    <docsUrl>http://abstractspoon.com/wiki/doku.php</docsUrl>
+    <mailingListUrl>https://groups.google.com/forum/#!forum/abstractspoon-todolist-support</mailingListUrl>
+    <bugTrackerUrl>https://www.abstractspoon.com/phpBB/viewforum.php?f=6</bugTrackerUrl>
+    <tags>todolist todo task manager productivity GTD FOSS embedded</tags>
+    <summary>Hierarchical task manager with native XML support for custom reporting</summary>
+    <description> ToDoList is software in the category of Task Management, Project Management, Productivity, “Getting Things Done” (GTD), Scheduling, and Collaboration.
+
+![ToDoList Example](http://abstractspoon.pbworks.com/f/app-window.png)
+
+We have a lot of choices to help us keep track of daily obligations. A simple list on paper of things “To Do” is enough for some people. Others prefer to use programs. People have preferences about where they keep track of tasks - with PC utilities (“thick app”), websites (“thin app”), on phone (“mobile”) apps. Some software is very general, with nothing more than a simple list of task names and due dates. Some get more sophisticated with nested tasks, where you need to complete the nested tasks in order to consider the main task complete. Some commercial software is Very sophisticated, and costs a lot - look at Microsoft Project and similar offerings. Some software is focused on specific industries, for construction, manufacturing, business consulting, website management, wedding planning, or even cooking recipes.
+
+ToDoList is general-purpose, Windows-based software, which can be used for simple “honey do” home lists or to manage complex multi-user projects for business. In addition to tracking the status of tasks, ToDoList includes a powerful system for logging and reporting time spent on tasks. Combined with powerful reporting mechanisms, this makes ToDoList an effective tool for client billing.
+
+What differentiates ToDoList from most other task management packages is the option to create hierarchies of tasks to break complex tasks down in to progressively more simple subtasks until no further simplification is required. Each subtask can be scheduled with a start and end date, a priority and various other attributes. As each sub-task is completed the parent tasks are updated in various ways to keep you informed of overall progress. Tasklists can also be printed or saved in various other formats for display and reporting purposes. 
+    </description>
+    <releaseNotes>https://www.abstractspoon.com/phpBB/viewtopic.php?f=5&t=842</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
