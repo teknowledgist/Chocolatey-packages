@@ -15,7 +15,7 @@
     <copyright>Copyright © 2020 Lablicate GmbH</copyright>
     <licenseUrl>https://github.com/OpenChrom/openchrom/blob/develop/LICENSE</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://sourceforge.net/projects/openchrom/files/</projectSourceUrl>
+    <projectSourceUrl>https://github.com/OpenChrom/openchrom</projectSourceUrl>
     <docsUrl>https://github.com/OpenChrom/openchrom/wiki</docsUrl>
     <bugTrackerUrl>https://github.com/OpenChrom/openchrom/issues</bugTrackerUrl>
     <tags>openchrom SWTChart ChemClipse chromatography chemistry spectrometry analysis eclipse oss</tags>

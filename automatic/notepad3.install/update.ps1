@@ -1,17 +1,21 @@
 import-module au
 
 function global:au_GetLatest {
-   $Release = 'https://github.com/rizonesoft/Notepad3/releases/latest'
+   $ReleaseURL = 'https://github.com/rizonesoft/Notepad3/releases/latest'
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $download_page = Invoke-WebRequest -Uri $ReleaseURL -UseBasicParsing
 
-   $urlstub = $download_page.rawcontent.split('"') | 
-                Where-Object {$_ -match '\.zip'} | Select-Object -First 1
+   $Release = $download_page.rawcontent.split('<|>') |
+                 Where-Object {$_ -match 'release ([0-9.]+)'} | Select-Object -first 1
 
-   $Version = $urlstub -replace ".*Notepad3_([0-9.]+)\.zip",'$1'
+   $Version = $Matches[1]
    
-   $url64 = "https://www.rizonesoft.com/software/notepad3/Notepad3_$($Version)_Setup.zip"
-   $url32 = "https://www.rizonesoft.com/software/notepad3/Notepad3_$($Version)_x86_Setup.zip"
+   $DownloadURL = 'https://www.rizonesoft.com/downloads/notepad3/'
+   $download_page = Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing
+   $Stubs = $download_page.Links | Where-Object {($_.title -match '5.20.915.1') -and ($_.outerhtml -match 'setup')}
+
+   $url64 = $Stubs | Where-Object {$_.outerHTML -notmatch 'x86'} | Select-Object -ExpandProperty href
+   $url32 = $Stubs | Where-Object {$_.outerHTML -match 'x86'} | Select-Object -ExpandProperty href
 
    return @{ 
             Version  = $Version
