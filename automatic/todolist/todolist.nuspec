@@ -1,17 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>todolist</id>
-    <version>8.0</version>
+    <version>8.0.16</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/todolist</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>ToDoList</title>
     <authors>AbstractSpoon Software</authors>
     <projectUrl>http://www.abstractspoon.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/todolist_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@944400d1829eabb80f2b866788d194c9b37060c2/Icons/todolist_icon.png</iconUrl>
     <copyright>Copyright © 2003-2020 AbstractSpoon</copyright>
     <licenseUrl>http://abstractspoon.com/wiki/doku.php?id=free-open-source-software</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -31,8 +31,11 @@ ToDoList is general-purpose, Windows-based software, which can be used for simpl
 
 What differentiates ToDoList from most other task management packages is the option to create hierarchies of tasks to break complex tasks down in to progressively more simple subtasks until no further simplification is required. Each subtask can be scheduled with a start and end date, a priority and various other attributes. As each sub-task is completed the parent tasks are updated in various ways to keep you informed of overall progress. Tasklists can also be printed or saved in various other formats for display and reporting purposes. 
     </description>
-    <releaseNotes>https://www.abstractspoon.com/phpBB/viewtopic.php?f=5&t=842</releaseNotes>
+    <releaseNotes>https://www.abstractspoon.com/phpBB/viewtopic.php?f=5&amp;t=842</releaseNotes>
     <!-- =============================== -->      
+    <dependencies>
+      <dependency id="vcredist2010" version="10.0" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

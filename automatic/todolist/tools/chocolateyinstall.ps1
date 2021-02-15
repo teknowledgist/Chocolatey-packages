@@ -19,14 +19,14 @@ Get-ChocolateyUnzip @InstallArgs
 
 $StartPrograms = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs'
 $shortcutFilePath = Join-Path $StartPrograms 'ToDoList.lnk'
-$targetPath = (Get-ChildItem $InstallArgs.Destination -filter 'ToDoList.exe' -recurse).fullname
+$targetPath = Get-ChildItem $InstallArgs.Destination -filter 'ToDoList.exe' -recurse
 
-Install-ChocolateyShortcut -shortcutFilePath $shortcutFilePath -targetPath $targetPath
+Install-ChocolateyShortcut -shortcutFilePath $shortcutFilePath -targetPath $targetPath.FullName
 
-$null = New-Item "$targetPath.gui" -Force
+$null = New-Item "$($targetPath.FullName).gui" -Force
 
-Get-ChildItem $InstallArgs.Destination -filter 'ToDoList.exe' -recurse | 
-               Where-Object {$_.Name -ne "$env:ChocolateyPackageName.exe"} |
+Get-ChildItem $targetPath.DirectoryName -filter '*.exe' -recurse | 
+               Where-Object {$_.name -ne $targetPath.name} |
                ForEach-Object {
                      $null = New-Item "$($_.fullname).ignore" -Force
                }

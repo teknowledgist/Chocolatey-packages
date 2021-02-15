@@ -2,12 +2,12 @@ VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
-The installer is available on this page:  
-https://github.com/debauchee/barrier/releases/latest
+The installer is available on the home page:  
+http://www.abstractspoon.com/
 
 Direct Download:
 
-Version  : 
-URL      : 
-CheckSum : 
+Version  : 8.0.16
+URL      : http://abstractspoon.pbwiki.com/f/todolist_exe.zip
+CheckSum : ED4A0445BC7630CFFD6C9FD03774CB2DC942ACB98D4A34F4DFD1AF03B36070AB
 
