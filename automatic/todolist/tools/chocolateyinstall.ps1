@@ -23,11 +23,11 @@ $targetPath = Get-ChildItem $InstallArgs.Destination -filter 'ToDoList.exe' -rec
 
 Install-ChocolateyShortcut -shortcutFilePath $shortcutFilePath -targetPath $targetPath.FullName
 
-$null = New-Item "$($targetPath.FullName).gui" -Force
+$null = New-Item -Path "$($targetPath.FullName).gui" -ItemType File -Force
 
 Get-ChildItem $targetPath.DirectoryName -filter '*.exe' -recurse | 
                Where-Object {$_.name -ne $targetPath.name} |
                ForEach-Object {
-                     $null = New-Item "$($_.fullname).ignore" -Force
+                     $null = New-Item -Path "$($_.fullname).ignore" -ItemType File -Force
                }
 
