@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>photoresizerok</id>
+    <version>1.20</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/photoresizerok</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PhotoResizerOK</title>
+    <authors>Nenad Hrg</authors>
+    <projectUrl>http://www.softwareok.com/?seite=Freeware/PhotoResizerOK</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/photoresizerok_icon.png</iconUrl>
+    <copyright>© Nenad Hrg 2008-2021</copyright>
+    <licenseUrl>https://www.softwareok.com/?seite=Freeware/PhotoResizerOK/Eula</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.softwareok.com/?seite=faq-PhotoResizerOK&faq=0</docsUrl>
+    <mailingListUrl>https://www.softwareok.com/?seite=News</mailingListUrl>
+    <bugTrackerUrl>https://www.softwareok.com/?seite=kontakt</bugTrackerUrl>
+    <tags>photoresizerok photo resize jpg png bmp raw exif watermark freeware embedded</tags>
+    <summary>Quickly reduce your photo file sizes</summary>
+    <description> PhotoResizerOK is easy to use for beginners, but also good for professional photographers who want to quickly distribute copies of their original RAW images as reduced, watermarked JPG images.
+    
+![Watermark example](https://www.softwareok.com/?seite=Freeware/PhotoResizerOK/Screenshot-3)
+
+### Key features
+* Convert images to other file formats 
+* Freely selectable compression 
+* Reduce the size of images 
+* Very fast (> 1 GB / minute)  
+* Optional multiline watermark
+* Also supports RAW images  ( e.g. Canon camera)
+* Copies image information (EXIF, rating, ..)
+* Low CPU usage
+* Optional translation function
+* Multilingual
+* ... and a lot more
+ 
+    </description>
+    <releaseNotes>https://www.softwareok.com/?seite=Freeware/PhotoResizerOK/History</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
