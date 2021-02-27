@@ -1,4 +1,4 @@
-﻿VERIFICATION
+VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
@@ -6,8 +6,8 @@ The latest installers are available here:
    https://www.softwareok.com/?Download=PhotoResizerOK
 
 Direct Download:
-Version      : 
-x86 URL      : 
-x86 CheckSum : 
-x64 URL      : 
+Version      : 1.21
+x86 URL      : https://www.softwareok.com/Download/PhotoResizerOK.zip
+x86 CheckSum : 63D16EBCAB7C0AEA06A7CD8FD58E2220F87AA2B6F823859E59B4762930F23185
+x64 URL      : https://www.softwareok.com/Download/PhotoResizerOK_x64.zip
 x64 CheckSum : 
