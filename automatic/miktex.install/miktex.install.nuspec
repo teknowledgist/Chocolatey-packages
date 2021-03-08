@@ -54,7 +54,7 @@ This package has only the MiKTeX setup utility embedded.  Any new install of MiK
 
 * On a workstation in the same network, you might use:
 
-`choco install miktex.install --params '"/RepoPath://localserver/MiKTeX-Repo"'`
+`choco install miktex.install --params '"/RepoPath:\\localserver\MiKTeX-Repo"'`
 ]]>
     </description>
     <releaseNotes>https://github.com/MiKTeX/miktex/releases/latest</releaseNotes>
