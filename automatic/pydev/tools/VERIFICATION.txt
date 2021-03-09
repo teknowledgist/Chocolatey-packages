@@ -7,6 +7,6 @@ https://sourceforge.net/projects/pydev/files/latest/download
 
 Direct Download:
 
-Version  : 8.1.0
-URL      : https://sourceforge.net/projects/pydev/files/pydev/PyDev%208.1.0/PyDev%208.1.0.zip
-CheckSum : F82EEDED44C19C0BC4B42D9E447ECAAA862600AFB4D84D1F85F155B61C8604A9
+Version  : 8.2.0
+URL      : https://sourceforge.net/projects/pydev/files/pydev/PyDev%208.2.0/PyDev%208.2.0.zip
+CheckSum : 5B5A5E576C0B339C00BC7C7B6DB039FF23EF6E67F3C93AF31C13D6DD7CCD6C83

@@ -8,9 +8,9 @@ particular version on this page:
 
 Direct Download:
 
-Version      : 5.20.915.1
-x86 URL      : https://www.rizonesoft.com/software/notepad3/Notepad3_5.20.722.1_x86_Setup.zip
-x86 CheckSum : A3D02D669EA4D50A712851F7D1E6BBADEE7B146D8DF15BAF0C5991B37F894CE5
-x64 URL      : https://www.rizonesoft.com/software/notepad3/Notepad3_5.20.722.1_Setup.zip
-x64 CheckSum : 3D90C3A915E537EE856A2AA731A306E65C64A079612C202F6E6759AC95B1EDCB
+Version      : 5.21.227.1
+x86 URL      : https://www.rizonesoft.com/download/8108/
+x86 CheckSum : 942F09879E73F5EC6AB6433B34A384FE5059D854EE2FBFD968C0C5421888E8BE
+x64 URL      : https://www.rizonesoft.com/download/3939/
+x64 CheckSum : 46DF412A4F757AC8C835ED9129601349C056F8A24D0244AFDFDF3BFD39B071EF
 

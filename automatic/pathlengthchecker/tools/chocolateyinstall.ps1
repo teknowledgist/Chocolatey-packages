@@ -2,7 +2,16 @@
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
-$ZipFile   = (Get-ChildItem $toolsDir -filter "*.zip").FullName
+# Remove old versions
+$Previous = Get-ChildItem $env:ChocolateyPackageFolder -Filter v* | Where-Object { $_.PSIsContainer }
+if ($Previous) {
+   $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
+}
+
+$ZipFile = Get-ChildItem $toolsDir -filter "*.zip" |
+               Sort-Object LastWriteTime | 
+               Select-Object -ExpandProperty FullName -Last 1
+
 $Destination = Join-Path $env:ChocolateyPackageFolder "v$env:ChocolateyPackageVersion"
 
 Get-ChocolateyUnzip -FileFullPath $ZipFile -Destination $Destination

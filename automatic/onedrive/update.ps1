@@ -5,15 +5,14 @@ function global:au_GetLatest {
    
    $download_page = Invoke-WebRequest -Uri "$Release" -UseBasicParsing
 
-   $p = $download_page.RawContent -split "</?p>" | Where-Object {$_ -match 'Download OneDrive for Windows'}
-   
-   $null = $p -match 'href="([^"]+)'
-   $url = $Matches[1]
-
    $versionstring = $download_page.RawContent -split ">|<" | 
                      Where-Object {$_ -match '^Version'} | 
                      Select-Object -first 1
    $version = $versionstring.split()[1]
+   
+   $url = $download_page.Links | 
+                  Where-Object {($_ -match $version) -and ($_.href -like 'http*')} | 
+                  Select-Object -First 1 -ExpandProperty href
 
    return @{ Version = $version; URL32 = $url }
 }

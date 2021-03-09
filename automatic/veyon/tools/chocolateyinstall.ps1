@@ -1,7 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$files = Get-ChildItem $toolsDir -Filter '*.exe'
+$files = Get-ChildItem $toolsDir -Filter '*.exe' |
+               Sort-Object LastWriteTime | 
+               Select-Object -Last 2
 
 $File32 = ($files | Where-Object {$_.Name -match "win32"}).fullname
 $File64 = ($files | Where-Object {$_.Name -match "win64"}).fullname
