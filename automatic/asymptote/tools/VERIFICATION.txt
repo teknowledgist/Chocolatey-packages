@@ -1,0 +1,14 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest binary of Asymptote is available from SourceForge:
+https://sourceforge.net/projects/asymptote/files/<latest version>\
+
+Direct Download:
+
+Version      : 2.68
+x86 URL      : 
+x86 CheckSum : 
+x64 URL      : 
+x64 CheckSum : 

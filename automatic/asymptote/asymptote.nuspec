@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>asymptote</id>
+    <version>2.68</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/asymptote</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Asymptote</title>
+    <authors>Andy Hammerlindl, John Bowman, Tom Prince</authors>
+    <projectUrl>https://asymptote.sourceforge.io/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/asymptote_icon.png</iconUrl>
+    <copyright>Copyright © 2004-20 Andy Hammerlindl, John Bowman, and Tom Prince</copyright>
+    <licenseUrl>https://github.com/vectorgraphics/asymptote/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/vectorgraphics/asymptote</projectSourceUrl>
+    <docsUrl>https://asymptote.sourceforge.io/doc/index.html</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/asymptote/discussion/409349/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/vectorgraphics/asymptote/issues</bugTrackerUrl>
+    <tags>asymptote vector graphics language technical drawing latex figures mathematics OSS embedded</tags>
+    <summary>The Vector Graphics Language</summary>
+    <description>Asymptote is a powerful, descriptive, vector-graphics language with a natural coordinate-based framework for technical drawing, inspired by [MetaPost](https://en.wikipedia.org/wiki/MetaPost) but with an improved C++-like syntax. Asymptote provides the same high-quality typesetting for figures that LaTeX does for scientific and mathematics text.
+    
+A major advantage of Asymptote over other graphics packages is that it is a programming language, as opposed to just a graphics program.
+
+You can even run it in your browser without installing it, using the [Asymptote Web Application](https://tinyurl.com/asyweb). Just enter the code: **import workcone;** (including the semicolon) and click the `Run` button.
+
+![Venn diagram example](https://a.fsdn.com/con/app/proj/asymptote/screenshots/14498.jpg/max/max/1)
+
+### Features of Asymptote:
+* provides a portable standard for typesetting mathematical figures, just as TeX/LaTeX has become the standard for typesetting equations;
+* generates high-quality PostScript, PDF, SVG, WebGL, and PRC vector graphics;
+* embeds 3D vector WebGL graphics within HTML files;
+* embeds 3D vector PRC graphics within PDF files;
+* inspired by MetaPost, with a much cleaner, powerful C++-like programming syntax and IEEE floating-point numerics;
+* runs on all major platforms (UNIX, MacOS, Microsoft Windows);
+* mathematically oriented (e.g. rotation of vectors by complex multiplication);
+* LaTeX typesetting of labels (for document consistency);
+* uses the simplex method and deferred drawing to solve overall size constraint issues between fixed-sized objects (labels and arrowheads) and objects that should scale with figure size;
+* fully generalizes MetaPost path construction algorithms to three dimensions;
+* compiles commands into virtual machine code for speed without sacrificing portability;
+* high-level graphics commands are implemented in the Asymptote language itself, allowing them to be tailored to specific applications. 
+
+### Recommended additional packages
+* [MiKTeX](https://chocolatey.org/packages/miktex.install) or another TEX implementation (i.e. [TeX Live](https://chocolatey.org/packages/texlive)) will be required to typeset labels.
+* [Ghostscript](https://chocolatey.org/packages/ghostscript.app)
+* [ImageMagick](https://chocolatey.org/packages/imagemagick.app) is required to support output formats other than HTML, PDF, SVG, and PNG.
+* [Python3](https://chocolatey.org/packages/python3) or [Anaconda3](https://chocolatey.org/packages/anaconda3) is only needed if you wish to try out the graphical user interface ([see Chapter 11](https://asymptote.sourceforge.io/doc/GUI.html#GUI) of the documentation.)
+
+    </description>
+    <releaseNotes>https://asymptote.sourceforge.io/ChangeLog</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
