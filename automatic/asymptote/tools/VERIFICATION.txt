@@ -1,4 +1,4 @@
-﻿VERIFICATION
+VERIFICATION
 Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
  
@@ -7,8 +7,8 @@ https://sourceforge.net/projects/asymptote/files/<latest version>\
 
 Direct Download:
 
-Version      : 2.68
-x86 URL      : 
-x86 CheckSum : 
-x64 URL      : 
-x64 CheckSum : 
+Version      : 2.69
+x86 URL      : https://sourceforge.net/projects/asymptote/files/2.69/asymptote-2.69-setup-32.exe
+x86 CheckSum : D4A2D7A42EF0905BBE750E25602B6102F128AAC26910DF2A3D873C7DEF02220B
+x64 URL      : https://sourceforge.net/projects/asymptote/files/2.69/asymptote-2.69-setup.exe
+x64 CheckSum : C604B56CC7049C1EDE53BCF841354C78826282AD915444AEA4437EF8F1DDFBFF

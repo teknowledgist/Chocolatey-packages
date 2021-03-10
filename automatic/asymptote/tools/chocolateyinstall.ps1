@@ -21,5 +21,12 @@ $packageArgs = @{
 Install-ChocolateyInstallPackage @packageArgs
 
 foreach ($File in $Files) {
-   Remove-Item $exe -ea 0 -force
+   Remove-Item $File -ea 0 -force
 }
+
+Write-Debug 'Moving Start Menu shortcuts from user to all users.'
+$UserSM = "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\"
+$AllUSM = "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\"
+Copy-Item -Path "$($UserSM)Asymptote" -Destination $AllUSM -Recurse -Force
+Remove-Item -Path "$($UserSM)Asymptote" -Recurse
+
