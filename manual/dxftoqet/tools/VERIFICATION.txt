@@ -1,0 +1,15 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Start at the QElectroTech page dedicated to DXFtoQET:
+  https://qelectrotech.org/test/lang-en/dxftoqet.php
+Click the linke for Downloading the Windows build.
+Click on the most recent directory.  The version is assigned by the date.
+Click on the .exe link to download.
+
+Direct Download:
+
+Version:  2020.05.05
+URL:      https://download.tuxfamily.org/qet/builds/dxf_to_elmt/windows/2020-05-05/DXFtoQET.exe
+SHA256:   F9B2F6FFF62F4E8CFC6D7ACE18B1EBB31E72B747D18B0F91D7BB26118630B2F1

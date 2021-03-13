@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>dxftoqet</id>
+    <version>2020.05.05</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/dxftoqet</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>DXFtoQET Converter</title>
+    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <projectUrl>https://qelectrotech.org/test/lang-en/dxftoqet.php</projectUrl>
+    <!--<iconUrl></iconUrl>-->
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/rdsivd/DXFtoQET-2020</projectSourceUrl>
+    <!--<docsUrl></docsUrl>-->
+    <mailingListUrl>https://qelectrotech.org/forum/viewforum.php?id=12</mailingListUrl>
+    <bugTrackerUrl>https://github.com/rdsivd/DXFtoQET-2020/issues</bugTrackerUrl>
+    <tags>dxftoqet DXF QET ELMT conversion converter QElectroTech OSS embedded</tags>
+    <summary>Convert a .DXF file into an .ELMT file</summary>
+    <description>The DXFtoQET converter is a stand-alone application to convert a Drawing eXchange Format (or "DXF") file -- an ASCII-based, vector-image, CAD data, format file -- into a QElectroTech (or "QET") Element Data (or "ELMT") file which can be opened and edited in the [QElectroTech](https://chocolatey.org/packages/qelectrotech) element editor.
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
