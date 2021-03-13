@@ -21,7 +21,7 @@ function global:au_SearchReplace {
          "(^x86 URL\s+:).*"          = "`${1} $($Latest.URL32)"
          "(^x86 Checksum\s+:).*"     = "`${1} $($Latest.Checksum32)"
          "(^x64 URL\s+:).*"          = "`${1} $($Latest.URL64)"
-         "(^x64 Checksum\s+:).*"     = "`${1} $($Latest.Checksum364)"
+         "(^x64 Checksum\s+:).*"     = "`${1} $($Latest.Checksum64)"
       }
    }
 }
