@@ -9,7 +9,7 @@
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>DXFtoQET Converter</title>
-    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <authors>Ronny Desmedt, Laurent Trinques</authors>
     <projectUrl>https://qelectrotech.org/test/lang-en/dxftoqet.php</projectUrl>
     <!--<iconUrl></iconUrl>-->
     <!-- <copyright>Year Software Vendor</copyright> -->

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>qet</id>
+    <version>0.80.7124</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/qelectrotech</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>QElectroTech</title>
+    <authors>QET contributors</authors>
+    <projectUrl>https://qelectrotech.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@565c145ea86b3a3726cfd2a3c184c9bf29178247/Icons/qet_icon.png</iconUrl>
+    <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://git.tuxfamily.org/qet/qet.git/tag/?id=0.8.0</projectSourceUrl>
+    <docsUrl>https://download.tuxfamily.org/qet/manual_0.7/build/index.html</docsUrl>
+    <mailingListUrl>https://qelectrotech.org/forum/</mailingListUrl>
+    <bugTrackerUrl>https://qelectrotech.org/bugtracker/</bugTrackerUrl>
+    <tags>QET QElectroTech electric diagrams schematics CAD OSS embedded</tags>
+    <summary>Free software to create electric diagrams</summary>
+    <description>QElectroTech, or QET in short, is a libre and open source desktop application to create diagrams and schematics.
+The software is primarily intended to create electrical documentation but it can also be used to draw any kinds of diagrams, such as those made in pneumatics, hydraulics, process industries, electronics...
+Generally speaking, QET is a **CAD/CAE editor focusing on schematics drawing features.**
+
+This means that there are no embedded simulating or calculating functionalities and it is not planned to implement them.
+
+![Venn diagram example](https://qelectrotech.org/gallery/photos/equipement_d%27un_volet_roulant.png)
+
+### Features
+* Toolbars and panels can be enabled/disabled, moved and displayed the way you want to work.  
+* Stack panels (as tabs), place them on the sides (as docks), or completely separated from the main window (as windows).  
+* The GUI fits to small or big screens, and even to multi-display configurations.
+* Translated in 19 languages.  
+* Create professional quality technical documentation
+* Size, look, and information of the folios (sheets) are fully configurable.  
+* Individually set vertical and horizontal headers (printed rulers), number of columns and rows and width/height of each column/row.
+* Create and edit titlebocks with the embedded titleblock editor to display with custom variables.
+* Add a full automatic generated table of content with 2 mouse clicks.
+* Choose from more than 7.000 included electric, logic, pneumatic, hydraulic and fluid symbols.  
+* ...create your own elements (symbols or anything else) with the element editor.  
+* Quickly search all collections with the integrated search engine.  
+* Draw complex schematics with drag-and-drop from the collection panel.
+* Aligned elements are automatically connected or connected from point to point by pulling a conductor with the mouse.
+* Link elements together to display a cross reference text.  
+* Cross references are automatically updated on the fly.
+* Modify the path of any conductor
+* Accurately zoom with the mouse wheel over the drawing area to catch the smallest details.
+* Export elements' information to a parts list in .csv format.
+* Print or export to pdf whole documents or selected parts.
+* Alternatively, export to vector (svg) or pixel (png, jpg, bmp) format images.
+* Open and edit several projects at the same time
+* Import images (.bmp, .jpg, .png, .svg) and basic shapes (lines, rectangles, ellipses, polygons)
+* Edit the thickness, the line style and the color of conductors
+* Define autonumber patterns for conductors, symbols and folios
+* Take advantage of the open xml standard of elements and projects to create custom tools
+* Search and replace Widget (Ctrl + F) in entire project
+* Conductor numbers can be exported to csv file.
+
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

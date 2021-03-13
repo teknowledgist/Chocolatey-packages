@@ -1,0 +1,16 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Start at the QElectroTech download page:
+  https://qelectrotech.org/download.html
+Click the link for Windows
+Click on the .exe link to download.
+
+Direct Download:
+
+Version    : 0.80.7124
+x86 URL    : https://download.tuxfamily.org/qet/tags/2021221/Windows/Installer_QElectroTech-0.80%2bgit7124-1.exe
+x86 SHA256 : 9A0F2637016C83C9269ABFDDC42576084C3100A51E48675D97C970288649A06E
+x64 URL    : https://download.tuxfamily.org/qet/tags/2021221/Windows/Installer_QElectroTech-0.80_x86_64-win64%2bgit7124-1.exe
+x64 SHA256 : FA8BCD6D898F9F1CE0A496AA3E8DD98724EDAAB7A1008C5E1F64894E1835FADB

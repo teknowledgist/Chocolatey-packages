@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-if (Get-ProcessorBits -ne 64) {
+if (-not (Get-ProcessorBits -compare 64)) {
    Throw "$env:ChocolateyPackageName only runs on 64-bit systems."
 }
 
