@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>epsviewer</id>
+    <version>3.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/epsviewer</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>EPSViewer</title>
+    <authors>ideaMK.com</authors>
+    <!-- projectUrl is required for the community feed -->
+    <projectUrl>https://epsviewer.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@fefc04858600a30d7e485860108f5ec8e0c9c777/Icons/epsviewer_icon.png</iconUrl>
+    <copyright>Copyright © 2010 IdeaMK</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/epsviewer/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://epsviewer.org/tutorial.aspx</docsUrl>
+    <tags>epsviewer EPS PS postscript printing image viewer freeware embedded notsilent</tags>
+    <summary>Simple, free PS/EPS viewer</summary>
+    <description>EPS Viewer is a free for use software tool for opening Encapsulated PostScript (EPS) graphics files and Adobe PostScript page description language files.  It can display the image preview and provides options to convert opened image and save them in other file formats as .jpg, .gif, .png and others extensions. 
+    
+### What is a PS file?
+The .ps file extension, associated with Adobe PostScript, is known in electronic and desktop publishing areas as a page description language file. Image saved in PostScript, may contain vector graphics, raster graphics or text and **can be printed directly by a PostScript printer without being opened in an application**.  Adobe PostScript 3 is a worldwide printing and imaging standard and is used by print service providers, publishers, corporations, and government agencies. PostScript enables reliable printing of visually rich documents although .ps files have largely been replaced by other page layout formats, such as PDF. 
+
+### What is an EPS file?
+Encapsulated PostScript (EPS) file format is used in vector based images in Adobe Illustrator.  EPS files can contain text and graphics and also include preview image in bitmap format.  There are two types of EPS file. One type is a vector based graphics file that can be opened and easily edited in any vector based programs.  EPS Viewer supports resizing these EPS files as they contains instructions for creating lines, points, areas and colors. This means EPS images can be resized without losing any quality.  The second type of EPS file is the flattened, set-resolution "photo" type file that can be opened in Photoshop or other programs for image editing.  EPS Viewer supports both types of EPS file and can convert EPS files to other photo formats.
+
+### Features
+* **Zoom In/Out:**  You can zoom in/out both with mouse and with slider control.
+* **Rotate image:**  Rotating image can be done 90 degrees clockwise or counter-clockwise, just with clicking on arrow toolbars.
+* **Pan image:**  Pan image with the mouse.
+* **Resize image:**  On the top toolbar is the original image size which can be changed by inserting new size parameters.
+* **Convert image:**  Opened EPS image can be converted/saved in other image format as JPEG(.jpg), Bitmap(.bmp), PNG(.png), GIF(.gif) and TIFF(.tiff).
+* **Clean and Free:** EPS Viewer is a freeware and does not contain any form of malware, including but not limited to: spyware, viruses, trojans and backdoors.
+* **Stable and fast:** EPS Viewer uses only libraries that are needed for processing, and the interface is sample and easy to use.
+* **User-friendly interface:** EPS Viewer is very simple and easy to use. All you need is to open EPS file, zoom, resize and save in other format if you want.
+
+    </description>
+    <dependencies>
+      <dependency id="dotnet3.5" version="3.5" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

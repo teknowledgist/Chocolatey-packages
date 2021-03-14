@@ -1,0 +1,13 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The EPSViewer installer is available from the home page:
+   https://epsviewer.org/download.aspx
+
+Direct Download:
+
+Version  : 3.2
+URL      : https://psviewer.org/epsviewersetup.exe
+CheckSum : 9511EB232DE656F3B2451E724C112222845AE94A0BED3AE76F142ECABD63576A
+
