@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>powerbi-reportbuilder</id>
+    <version>15.6.01532.0005</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/powerbi-reportbuilder</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>powerbi-reportbuilder (Install)</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://docs.microsoft.com/en-us/power-bi/paginated-reports/report-builder-power-bi</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@7af6c36a9802c6ea5f337dde07fc9a975409ec22/Icons/powerbi-reportbuilder_icon.png</iconUrl>
+    <copyright>© Microsoft</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/powerbi-reportbuilder/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://docs.microsoft.com/en-us/power-bi/paginated-reports/report-builder-power-bi</docsUrl>
+    <mailingListUrl>https://ideas.powerbi.com/forums/265200-power-bi</mailingListUrl>
+    <tags>powerbi-reportbuilder Power Bi data analytics visualize report</tags>
+    <summary>A tool for authoring paginated, Power Bi reports</summary>
+    <description>Power BI Report Builder is a tool for authoring paginated reports that you can publish to the Power BI service. When you design a paginated report, you're creating a report definition that specifies what data to retrieve, where to get it, and how to display it. When you run the report, the report processor takes the report definition you have specified, retrieves the data, and combines it with the report layout to generate the report. You preview your report in Report Builder. Then publish your report to the Power BI service.
+
+![Example report](https://docs.microsoft.com/en-us/power-bi/paginated-reports/media/report-builder-power-bi/report-builder-get-started-paginated-report.png)
+
+### Jump-start report creation
+* Start with the Table, Matrix, or Chart wizard.
+* Start with the Map wizard to create reports that display aggregated data against a geographic or geometric background. 
+
+### Design your report
+* Create paginated reports with table, matrix, chart, and free-form report layouts.
+* Report from a variety of data sources. 
+* Modify existing reports. 
+* Modify your data. 
+* Add charts, gauges, sparklines, and indicators. 
+* Add interactive features such as document maps, show/hide buttons, and drillthrough links.
+* Embed or reference images and other resources, including external content.
+
+### Manage your report
+* Save the definition of the report.
+* Choose a presentation format including MHTML, PDF, XML, CSV, Word, and Excel.
+* Set up subscriptions. 
+
+    </description>
+    <dependencies>
+      <dependency id="dotnetfx" version="4.7.2.20180712" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
