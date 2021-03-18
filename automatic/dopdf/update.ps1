@@ -2,11 +2,11 @@ import-module au
 
 function global:au_GetLatest {
    $HomeURL = 'http://www.dopdf.com/'
-   $page = Invoke-WebRequest -Uri $HomeURL
+   $page = Invoke-WebRequest -Uri $HomeURL -UseBasicParsing
 
-   $null = $page.allelements |? {($_.tagname -eq "span") -and ($_.innertext -match '\d+\.\d+\.\d+')}
+   $null = $page.rawcontent -match '<span>dopdf (\d+\.\d+\.\d+)'
 
-   $version = $Matches[0]
+   $version = $Matches[1]
 
    $URL32 = 'http://download.dopdf.com/download/setup/dopdf-full.exe'
 
