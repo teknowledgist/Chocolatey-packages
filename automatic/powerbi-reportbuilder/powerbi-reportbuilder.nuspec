@@ -41,6 +41,35 @@
 * Choose a presentation format including MHTML, PDF, XML, CSV, Word, and Excel.
 * Set up subscriptions. 
 
+### Language options
+By default this package will install the English (US) language release of Power Bi Report Builder.  Other language installations can be requested using the `Language` Package Parameter.  The following languages are available:
+
+* **zh-CN** -- Chinese (Simplified)
+* **zh-TW** -- Chinese (Traditional)
+* **cs-CZ** -- Czech
+* **da-DK** -- Danish
+* **nl-NL** -- Dutch
+* **fi-FI** -- Finnish
+* **fr-FR** -- French
+* **de-DE** -- German
+* **el-GR** -- Greek
+* **hu-HU** -- Hungarian
+* **it-IT** -- Italian
+* **ja-JP** -- Japanese
+* **ko-KR** -- Korean
+* **nb-NO** -- Norwegian (Bokm&#229;l)
+* **pl-PL** -- Polish
+* **pt-BR** -- Portuguese (Brazil)
+* **pt-PT** -- Portuguese (Portugal)
+* **ru-RU** -- Russian
+* **es-ES** -- Spanish
+* **sv-SE** -- Swedish
+* **tr-TR** -- Turkish
+
+Example:  `choco install powerbi-reportbuilder --params="'/Language:es-ES'"`
+
+
+
     </description>
     <dependencies>
       <dependency id="dotnetfx" version="4.7.2.20180712" />
