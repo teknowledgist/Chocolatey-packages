@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>redshift-odbc</id>
+    <version>1.4.19</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/redshift-odbc</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Amazon Redshift ODBC Driver</title>
+    <authors>Amazon Web Services, Inc.</authors>
+    <projectUrl>https://docs.aws.amazon.com/redshift/latest/mgmt/configure-odbc-connection.html</projectUrl>
+    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/redshift-odbc.png</iconUrl>-->
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://s3.amazonaws.com/redshift-downloads/drivers/Amazon+Redshift+ODBC+and+JDBC+Driver+License+Agreement.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.20.1001/Amazon+Redshift+ODBC+Driver+Install+Guide.pdf</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>redshift-odbc aws cloud amazon redshift odbc</tags>
+    <summary>ODBC driver for Amazon Redshift</summary>
+    <description>You can use an ODBC connection to connect to your Amazon Redshift cluster from many third-party SQL client tools and applications. To do this, set up the connection on your client computer or Amazon EC2 instance. If your client tool supports JDBC, you might choose to use that type of connection rather than ODBC due to the ease of configuration that JDBC provides. However, if your client tool doesn't support JDBC, follow the steps in this section to configure an ODBC connection.
+
+Amazon Redshift provides ODBC drivers for Linux, Windows, and macOS X operating systems. Before you install an ODBC driver, determine whether your SQL client tool is 32-bit or 64-bit. Install the ODBC driver that matches the requirements of your SQL client tool. Otherwise, the connection doesn't work. If you use more than one SQL client tool on the same computer or instance, make sure that you download the appropriate drivers. You might need to install both the 32-bit and the 64-bit drivers if the tools differ in their system architecture. 
+    </description>
+    <releaseNotes>https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.20.1001/Amazon+Redshift+ODBC+Driver+Release+Notes.pdf</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
