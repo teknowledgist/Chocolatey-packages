@@ -7,7 +7,7 @@ http://www.abstractspoon.com/
 
 Direct Download:
 
-Version  : 8.0.19
+Version  : 8.0.20
 URL      : http://abstractspoon.pbwiki.com/f/todolist_exe.zip
-CheckSum : F730AA5E6351D6B974C3C4ED1C30A8D439608DDE92EB4FC2A3253E9AE8149E72
+CheckSum : 974C9889A22B3236DF295CC29A4531E8C2FFB9B56E081C0EC927EBA9FFA066D4
 

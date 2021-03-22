@@ -8,10 +8,14 @@ function global:au_GetLatest {
    $urlstub = $download_page.rawcontent.split('"') | 
                 Where-Object {$_ -match '\.msi$'} |
                 Select-Object -First 1
-   $url = "https://github.com$urlstub"
+   If ($urlstub -match '^https:') {
+      $url = $urlstub
+   } else {
+      $url = "https://github.com$urlstub"
+   }
 
-   $version = $urlstub.split('/') | ? {$_ -match '^v?[0-9.]+$'} | select -Last 1
-   $version = $version.trim('v')
+   $null = $download_page.links |? {$_.href -match '/tag/([0-9.]+)'}
+   $version = $Matches[1]
 
    return @{ Version = $version; URL32 = $url }
 }

@@ -6,12 +6,12 @@ function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri "$Release"
 
    $url = $download_page.links |
-               Where-Object {($_.innertext -match 'connexion.*only') -and ($_.href -match '\.exe$')} | 
+               Where-Object {($_.innertext -match 'connexion.*only') -and ($_.href -match '\.exe')} | 
                Select-Object -ExpandProperty href
    
-   if ($url -match '([0-9][0-9.]+)') {
-      $version = $Matches[0].trim('.')
-   }
+   $File = $url.split('/') | ? {$_ -match '([0-9][0-9.]+).*\.exe'}
+   $version = $Matches[1]
+  
    
    return @{ 
       Version = $version
