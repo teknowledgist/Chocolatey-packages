@@ -1,28 +1,31 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>redshift-odbc</id>
-    <version>1.4.19</version>
+    <version>1.4.20.1001</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/redshift-odbc</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Amazon Redshift ODBC Driver</title>
     <authors>Amazon Web Services, Inc.</authors>
     <projectUrl>https://docs.aws.amazon.com/redshift/latest/mgmt/configure-odbc-connection.html</projectUrl>
-    <!--<iconUrl>http://cdn.rawgit.com/__REPLACE_YOUR_REPO__/master/icons/redshift-odbc.png</iconUrl>-->
-    <!-- <copyright>Year Software Vendor</copyright> -->
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@14baab2d1d75b8b54debfd517ea48332c9bd7f5d/Icons/redshift-odbc_icon.png</iconUrl>
+    <copyright>Copyright © 2020 Amazon Web Services, Inc.</copyright>
     <licenseUrl>https://s3.amazonaws.com/redshift-downloads/drivers/Amazon+Redshift+ODBC+and+JDBC+Driver+License+Agreement.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.20.1001/Amazon+Redshift+ODBC+Driver+Install+Guide.pdf</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
-    <tags>redshift-odbc aws cloud amazon redshift odbc</tags>
+    <tags>redshift-odbc aws cloud amazon redshift odbc sql</tags>
     <summary>ODBC driver for Amazon Redshift</summary>
-    <description>You can use an ODBC connection to connect to your Amazon Redshift cluster from many third-party SQL client tools and applications. To do this, set up the connection on your client computer or Amazon EC2 instance. If your client tool supports JDBC, you might choose to use that type of connection rather than ODBC due to the ease of configuration that JDBC provides. However, if your client tool doesn't support JDBC, follow the steps in this section to configure an ODBC connection.
+    <description>Amazon Redshift provides ODBC drivers to allow third-party SQL client tools and applications to make an ODBC connection to an Amazon Redshift cluster.  To do this, set up the connection on your client computer or Amazon EC2 instance.  
 
-Amazon Redshift provides ODBC drivers for Linux, Windows, and macOS X operating systems. Before you install an ODBC driver, determine whether your SQL client tool is 32-bit or 64-bit. Install the ODBC driver that matches the requirements of your SQL client tool. Otherwise, the connection doesn't work. If you use more than one SQL client tool on the same computer or instance, make sure that you download the appropriate drivers. You might need to install both the 32-bit and the 64-bit drivers if the tools differ in their system architecture. 
+In Microsoft Windows, you typically set driver options when you configure a data source name (DSN). You can also set driver options in the connection string when you connect programmatically, or by adding or changing registry keys in `HKEY_LOCAL_MACHINE\SOFTWARE\ODBC\ODBC.INI\your_DSN`.  For information about how to set up ODBC driver configuration options, see [Amazon Redshift ODBC driver installation and configuration guide](https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.20.1001/Amazon+Redshift+ODBC+Driver+Install+Guide.pdf).
+
+*(If your client tool supports JDBC, you might choose to use that type of connection rather than ODBC due to the ease of configuration that JDBC provides.)* 
+
     </description>
     <releaseNotes>https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.20.1001/Amazon+Redshift+ODBC+Driver+Release+Notes.pdf</releaseNotes>
     <!-- =============================== -->      
