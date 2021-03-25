@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>psqlodbc</id>
+    <version>13.00.0000</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/psqlodbc</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PostgreSQL ODBC Driver</title>
+    <authors>PostgreSQL Global Development Group</authors>
+    <projectUrl>https://odbc.postgresql.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@9d1223eb6b956c691a3482853a9d7277d4436369/Icons/psqlodbc_icon.png</iconUrl>
+    <copyright>Copyright © 1998  Insight Distribution Systems, Copyright © 1998 - 2020 The PostgreSQL Global Development Group</copyright>
+    <licenseUrl>https://opensource.org/licenses/LGPL-2.1</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://git.postgresql.org/gitweb/?p=psqlodbc.git</projectSourceUrl>
+    <docsUrl>https://odbc.postgresql.org/</docsUrl>
+    <mailingListUrl>http://www.postgresql.org/list/pgsql-odbc/</mailingListUrl>
+    <bugTrackerUrl>https://www.postgresql.org/list/pgsql-bugs/</bugTrackerUrl>
+    <tags>psqlodbc postgresql pg odbc sql </tags>
+    <summary>A library to talk to the PostgreSQL DBMS using ODBC.</summary>
+    <description>**psqlODBC** is *the* official PostgreSQL ODBC Driver.  It allows third-party SQL client tools and applications to make an ODBC connection to a PostgreSQL database.
+    </description>
+    <releaseNotes>https://odbc.postgresql.org/docs/release.html</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

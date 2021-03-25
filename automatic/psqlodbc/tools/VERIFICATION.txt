@@ -1,0 +1,16 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest (and previous) versions of the PostgreSQL ODBC driver installer
+can be downloaded from the PostgreSQL download site:
+   https://www.postgresql.org/ftp/odbc/versions/
+Click the "MSI" link and the version and bit-level to download.
+
+Direct Download:
+Version         : 13.00.0000
+32-bit URL      : https://ftp.postgresql.org/pub/odbc/versions/msi/psqlodbc_13_00_0000-x86.zip
+32-bit checksum : 672F99C732BF2A8ED906795AE056D5C9DDEAFDBC49229DE95AB2AA81F279B31D
+64-bit URL      : https://ftp.postgresql.org/pub/odbc/versions/msi/psqlodbc_13_00_0000-x64.zip
+64-bit checksum : B83B4DECEFF32B7032978E4A343C413E7B39BAB7114B7BA7C7AB52C23CAA8B71
+
