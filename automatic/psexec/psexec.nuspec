@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>psexec</id>
+    <version>2.33</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/psexec</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PsExec</title>
+    <authors>Mark Russinovich</authors>
+    <projectUrl>https://docs.microsoft.com/en-us/sysinternals/downloads/psexec</projectUrl>
+    <copyright>Copyright © 1999-2012 Mark Russinovich</copyright>
+    <licenseUrl>https://docs.microsoft.com/en-us/sysinternals/license-terms</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://docs.microsoft.com/en-us/sysinternals/downloads/psexec#using-psexec</docsUrl>
+    <mailingListUrl>https://docs.microsoft.com/en-us/answers/topics/windows-sysinternals-pstools.html</mailingListUrl>
+    <tags>psexec pstools sysinternals process remote microsoft</tags>
+    <summary>Execute processes on remote systems</summary>
+    <description>Utilities like Telnet and remote control programs like Symantec's PC Anywhere let you execute programs on remote systems, but they can be a pain to set up and require that you install client software on the remote systems that you wish to access. PsExec is a light-weight telnet-replacement that lets you execute processes on other systems, complete with full interactivity for console applications, without having to manually install client software. PsExec's most powerful uses include launching interactive command-prompts on remote systems and remote-enabling tools like IpConfig that otherwise do not have the ability to show information about remote systems.
+
+Note: some anti-virus scanners report that one or more of the tools are infected with a "remote admin" virus. None of the PsTools contain viruses, but they have been used by viruses, which is why they trigger virus notifications.</description>
+    <releaseNotes>https://techcommunity.microsoft.com/t5/sysinternals-blog/bg-p/Sysinternals-Blog</releaseNotes>
+    <!-- =============================== -->      
+
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
