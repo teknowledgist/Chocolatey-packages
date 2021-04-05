@@ -3,10 +3,10 @@
 $params = @{
    PackageName   = 'redshift-odbc'
    FileType      = 'msi'
-   Url           = 'https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.20.1001/AmazonRedshiftODBC32-1.4.20.1001.msi'
-   Url64bit      = 'https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.20.1001/AmazonRedshiftODBC64-1.4.20.1001.msi'
-   Checksum      = '184723a2b70d5e3afb2b581b6f9c6766335b962926efeed462cffd3f2548fa38'
-   Checksum64    = '95433df62b3870dc18d78cdc6e682a56f0eef173650190f7e264ca4bbb4c98fb'
+   Url           = 'https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.27.1000/AmazonRedshiftODBC32-1.4.27.1000.msi'
+   Url64bit      = 'https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.27.1000/AmazonRedshiftODBC64-1.4.27.1000.msi'
+   Checksum      = '4bc3189af1d8f9961fc66e633b53849b7c637b1d40c1424033a5e8bd6825c178'
+   Checksum64    = '554b0d4cbb557f3204ca199ff3476725a7b9fcb633fe0ba9edbcaa87296db9a0'
    ChecksumType  = "sha256"
    silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes= @(0, 3010, 1641)
