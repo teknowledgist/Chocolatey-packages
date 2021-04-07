@@ -67,4 +67,4 @@ function global:au_BeforeUpdate() {
    }
 }
 
-Update-Package -ChecksumFor all -Force
+Update-Package -ChecksumFor all
