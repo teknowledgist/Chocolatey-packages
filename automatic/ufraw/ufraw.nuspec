@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>ufraw</id>
+    <version>0.19.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/ufraw</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Unidentified Flying Raw (Install)</title>
+    <authors>Udi Fuchs</authors>
+    <projectUrl>http://ufraw.sourceforge.net/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@cdf419759eb57d534a2e11c489dca54e8c554bb7/Icons/ufraw_icon.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>http://sourceforge.net/p/ufraw/code/</projectSourceUrl>
+    <docsUrl>http://ufraw.sourceforge.net/Guide.html</docsUrl>
+    <mailingListUrl>http://sourceforge.net/p/ufraw/mailman/</mailingListUrl>
+    <bugTrackerUrl>http://sourceforge.net/p/ufraw/bugs/</bugTrackerUrl>
+    <tags>ufraw raw camera image photo gimp dcraw Nikon Cannon OSS embedded</tags>
+    <summary>Read and manipulate raw images</summary>
+    <description>The Unidentified Flying Raw (UFRaw) is a utility to read and manipulate raw images from digital cameras. UFRaw has a graphical user interface, so you can simply open a raw file and experiment with the controls to see how they affect the image. It reads raw images using Dave Coffin's raw conversion utility - [DCRaw](http://www.cybercom.net/%7Edcoffin/dcraw/). UFRaw supports color management workflow based on [Little CMS](http://www.littlecms.com/), allowing the user to apply ICC color profiles. For Nikon users UFRaw has the advantage that it can read the camera's tone curves. Even if you don't own a Nikon, you can still apply a Nikon curve to your images.
+
+The guiding concept in the development of UFRaw is to give all the essential (and some non-essential) information and control over the raw conversion, with the hope that all the exposure and white balance issues could be resolved during the raw conversion. The obvious advantage is full use of the raw data. 
+
+[Supported Cameras](http://ufraw.sourceforge.net/Cameras.html)
+
+    </description>
+    <releaseNotes>http://ufraw.sourceforge.net/index.html#news</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

@@ -1,0 +1,12 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest verion of the UFRaw installer file is available on SourceForge:
+https://sourceforge.net/projects/ufraw/files/latest/download
+
+Direct Download:
+
+Version  : 0.19.2
+URL      : https://sourceforge.net/projects/ufraw/files/ufraw/ufraw-0.19.2/ufraw-0.19.2-2-setup.exe
+CheckSum : 5BC7A132CA7483AACD09D00AC0D6DDA106D585FE227AF4EF34DABC9EE81A9844
