@@ -18,12 +18,14 @@
     <docsUrl>https://helpx.adobe.com/photoshop/using/adobe-dng-converter.html#main-pars_header_7</docsUrl>
     <tags>adobe-dnc adobe dnc raw photoshop lightroom image converter commercial</tags>
     <summary>Convert camera-specific raw files to a more universal DNG raw file.</summary>
-    <description>The Adobe DNG Converter enables you to easily convert camera-specific raw files from supported cameras to a more universal, DNG (Digital Negative) file which is a lossless raw image format designed by Adobe for digital photography.
+    <description>The Adobe Digital Negative Converter enables you to easily convert camera-specific raw files from supported cameras to a more universal, DNG ("digital negative") file which is a lossless raw image format designed by Adobe for digital photography.
 
 Adobe DNG Converter gives you the possibility to process an entire directory including subfolders and skip images if the destination file already exists. You can select the location where the converted files are saved, preserve the subfolders structure, create a naming scheme for the converted images, and configure the preferences settings in terms of compatibility mode, compression, and original raw file embedding options.
 
-## Raw files and DNG 
+## Compatibility
+Adobe Digital Negative Converter will only install on Windows 10 (64-bit) version 1809 or later; LTSC versions are not supported.
 
+## Raw files and DNG 
 A raw file contains the "raw" data captured by the digital camera sensor before it has been converted to JPEG or TIFF formats.  When working with raw files, the file is not compressed or processed in the camera. Instead, software gives the user complete control over the conversion settings. For example, white balance is not applied to the raw file but is stored with the file so the software can default to the originally-intended setting. Other information contained in a DNG file includes standard EXIF metadata (just like in JPEG files), date, time, camera used, and camera settings.
 
 #### Raw files offer the following benefits:
@@ -35,7 +37,6 @@ A raw file contains the "raw" data captured by the digital camera sensor before 
 * Flexibility of converting a single file using multiple conversion settings
 
 ## The Digital Negative (DNG) format
-
 Digital Negative (DNG) is an openly published raw file specification. This format is freely available for other software and hardware vendors to support. Consequently, it can be a safer file format to use for long-term archival purposes because it eliminates worries that the raw file will no longer be readable once the camera-specific format that created it becomes obsolete.
 
 The Digital Negative specification allows for not only all of the pixel information stored in current raw formats, but also for all of the additional, proprietary metadata that many manufacturers include. The original raw file can also be embedded in the DNG format to ensure that proprietary metadata from the manufacturer is not lost.
