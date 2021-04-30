@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>dopdf</id>
-    <version>10.9.133</version>
+    <version>11.0.134</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/dopdf</packageSourceUrl>
     <owners>Teknowledgist, schelljw</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -46,8 +46,8 @@ Example: `choco install doPDF -y --params="'/NoTelemetry'"`
     </description>
     <releaseNotes>http://www.dopdf.com/forum/announcements-f2/changelog-dopdf-9-t4298.html</releaseNotes>
     <dependencies>
-      <dependency id="autohotkey.portable" version="1.1" />
       <dependency id="dotnet4.5" version="4.5" />
+      <dependency id="vstor2010" version="10.0" />
     </dependencies>
   </metadata>
   <files>

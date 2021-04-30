@@ -6,7 +6,7 @@ $DownloadArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = Join-Path $env:TEMP 'doPDF\doPDF_installer.exe'
    url          = 'http://download.dopdf.com/download/setup/dopdf-full.exe'
-   checksum     = 'cecd701a2a4feb4e874fb51ecaf23d79fe772a35e0825b4814cd54297c9222ad'
+   checksum     = '076265d6f720fc0cd3949b1772f4129b7fa1ddfcb8a5d071a74b6e524351bee0'
    checksumType = 'sha256'
    GetOriginalFileName = $true
 }
@@ -30,28 +30,18 @@ try {
    Throw "Unexpected error while checking Print Spooler service: $($_.Exception.Message)"
 }
 
-If ($pp.contains('notelemetry')) {
-   Write-Host 'doPDF will attempt to install with telemetry disabled.' -ForegroundColor Cyan
-   $SilentArgs = ''
-   $ahkExe = 'AutoHotKey'
-   $toolsDir    = $(Split-Path -parent $MyInvocation.MyCommand.Definition)
-   $ahkFile = Join-Path $toolsDir 'chocolateyInstall.ahk'
-   $ahkProc = Start-Process -FilePath $ahkExe -ArgumentList "$ahkFile" -PassThru
-   $ahkId = $ahkProc.Id
-   Write-Debug "$ahkExe start time:`t$($ahkProc.StartTime.ToShortTimeString())"
-   Write-Debug "Process ID:`t$ahkId"
-} else {
-   Write-Host 'doPDF will install with default options.' -ForegroundColor Cyan
-   # This may install an MS Office plugin and will leave telemetry enabled
-   $SilentArgs = '/SILENT /VERYSILENT /SUPPRESSMSGBOXES /NOCANCEL /NORESTART /Languages="es-en"'
-} 
-
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileType       = 'exe'
    File           = $LocalFile
-   silentArgs     = $SilentArgs
+   silentArgs     = '/SILENT /VERYSILENT /SUPPRESSMSGBOXES /NOCANCEL /NORESTART /Languages="es-en"'
    validExitCodes = @(0)
 }
 Install-ChocolateyInstallPackage @InstallArgs
+
+If ($pp.contains('NoTelemetry')) {
+   Write-Host 'Attempting to disable telemetry.' -ForegroundColor Cyan
+   $KeyPath = 'HKLM:\SOFTWARE\Softland\novaPDF 11\doPdf_Softland'
+   Set-ItemProperty -Path $KeyPath -Name 'SendTelemetry' -Value 'False' -Force
+}
 
