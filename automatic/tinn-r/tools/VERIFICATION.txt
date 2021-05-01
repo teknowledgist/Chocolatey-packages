@@ -10,7 +10,7 @@ or by getting the same download from SourceForge:
 
 Direct Download:
 
-Version  : 6.1.1.6
-URL      : https://sourceforge.net/projects/tinn-r/files/Tinn-R%20setup/6.1.1.6/Tinn-R_6.01.01.06_setup.exe
-CheckSum : 940EB87B1A97A37CB68416DBCCE91521F90810B2CCC1E75AA42D0716B0225CB0
+Version  : 8.1.2.8
+URL      : https://sourceforge.net/projects/tinn-r/files/Tinn-R%20setup/8.1.2.8/Tinn-R_8.01.02.08_setup.exe
+CheckSum : 3C9EDCA2DE95073C065A83C50BC34BBBB68B136AD46106E70838E35E33A676B4
 
