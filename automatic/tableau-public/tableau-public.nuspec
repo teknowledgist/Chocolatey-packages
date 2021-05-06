@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>tableau-public</id>
+    <version>2021.1.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/tableau-desktop</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Tableau Public</title>
+    <authors>Tableau Software, LLC</authors>
+    <projectUrl>https://public.tableau.com/s/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/meek2100/chocolatey-packages@b74110ad1b39cba75d6d9698e3fa564d93614cf5/icons/tableau.png</iconUrl>
+    <copyright>© 2003-2021 Tableau Software, LLC</copyright>
+    <licenseUrl>https://www.tableau.com/eula</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.tableau.com/learn</docsUrl>
+    <mailingListUrl>https://community.tableau.com/s/</mailingListUrl>
+    <bugTrackerUrl>https://www.tableau.com/support/public</bugTrackerUrl>
+    <tags>tableau-desktop tableau visual analytics </tags>
+    <summary>A public, visual-analytics platform</summary>
+    <description>Tableau Public is a free platform to publicly share and explore data visualizations online.  Visualize and publish data on topics you care about. Explore and be inspired by creations from like-minded data enthusiasts.
+    
+* **Share publicly** - Visualizations published to Tableau Public are available for anyone to see online. Tableau Public is a platform for public (not private) data.
+* **Free with few limits** - Anyone can explore and contribute to the millions of visualizations on Tableau Public. Saving locally and refreshing data are limited.
+* **Fully hosted** - Vizzes on Tableau Public can handle millions of viewers. All infrastructure is managed by Tableau Public at no cost.
+
+## Install options
+The Tableau Public installer has a some optional properties that can be utilized with the `--installarguments` (`--ia`) switch.  [A full list of options can be found here](https://help.tableau.com/current/desktopdeploy/en-us/desktop_deploy_automate.htm#installer_properties).  Common properties:
+
+* `SENDTELEMETRY=0` - To disable the default setting ([Tableau Privacy Policy](https://www.tableau.com/privacy?_ga=2.4397299.179784972.1568650941-2122171103.1563227196))
+* `DESKTOPSHORTCUT=0` - To prevent the default action
+* `STARTMENUSHORTCUT=0` - To prevent the default action
+* `AUTOUPDATE=0` - To disable the default to install [maintenance upgrades (not release upgrades)](https://help.tableau.com/current/desktopdeploy/en-us/desktop_deploy_upgrade.htm#major_upgrade_vs_maintenance_upgrade).
+
+##### Example install
+`choco install tableau-desktop --ia '"DESKTOPSHORTCUT=0 SENDTELEMETRY=0"'`
+
+
+    </description>
+    <releaseNotes>https://www.tableau.com/support/releases</releaseNotes>
+    <!-- =============================== -->      
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
