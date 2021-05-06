@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>lmms</id>
-    <version>1.2.2</version>
+    <version>1.2.2.20210505</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/lmms</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <title>LMMS</title>

@@ -1,7 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$Installers = Get-ChildItem -Path $toolsDir -Filter '*.exe'
+$Installers = Get-ChildItem -Path $toolsDir -filter '*.exe' |
+                        Sort-Object lastwritetime | Select-Object -Last 2
 
 $packageArgs = @{
    packageName    = $env:ChocolateyPackageName

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>wiztree</id>
-    <version>3.39</version>
+    <version>3.40</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/wiztree</packageSourceUrl>
     <owners>DDoSolitary, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
