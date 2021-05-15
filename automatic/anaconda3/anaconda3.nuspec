@@ -7,12 +7,12 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/anaconda3</packageSourceUrl>
     <owners>Teknowledgist, Chantisnake</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Anaconda Distribution (Python 3.x)</title>
+    <title>Anaconda Individual Edition (Python 3.x)</title>
     <authors>Anaconda, Inc.</authors>
     <projectUrl>https://www.anaconda.com/distribution/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@c908a814128b78210e1acd0db1e0e263b80f033f/Icons/anaconda_icon.png</iconUrl>
     <copyright>© Copyright 2015, Anaconda, Inc.</copyright>
-    <licenseUrl>https://docs.anaconda.com/anaconda/eula/</licenseUrl>
+    <licenseUrl>https://www.anaconda.com/eula-anaconda-individual-edition</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/ContinuumIO</projectSourceUrl>
     <docsUrl>https://docs.anaconda.com/anaconda/</docsUrl>
@@ -24,23 +24,23 @@
 
 Anaconda Distribution contains conda and Anaconda Navigator.  You can try both conda and Navigator to see which is right for you to manage your packages and environments. You can even switch between them, and the work you do with one can be viewed in the other.
 
-Download the [Anaconda Cheat Sheet](https://docs.anaconda.com/_downloads/Anaconda-Starter-Guide-Cheat-Sheet.pdf) (48 KB PDF) for a quick guide to using Anaconda.
+Download the [Anaconda Cheat Sheet](https://docs.anaconda.com/anaconda/user-guide/cheatsheet/#) (694 KB PDF) for a quick guide to using Anaconda, or take a look at [DataCamp.com's "Cheat Sheet For Beginners"](https://www.datacamp.com/community/tutorials/python-data-science-cheat-sheet-basics).
 
 ##### Package Defaults
 Anaconda Python:
 
-  * will install for **all users**
-  * **will not** be added to the path
-  * **will** be registered as the default Python
-  * will install to `$ChocolateyToolsLocation\Anaconda3` (i.e. `C:\Tools\Anaconda3` by default)
+* will install for **all users**
+* **will not** be added to the path
+* **will** be registered as the default Python
+* will install to `$ChocolateyToolsLocation\Anaconda3` (i.e. `C:\Tools\Anaconda3` by default)
 
 You can change any of the defaults with package parameters:
 
-  * `/JustMe` - Install for only the current user.
-  * `/AddToPath` - Add Anaconda Python to the path.
-  * `/DoNotRegister` - Do not register Anaconda Python as the default Python.
-  * `/D:(path)` - Choose another, *existing*, parent directory to place the 'Anaconda3' directory.
-  
+* `/JustMe` - Install for only the current user.
+* `/AddToPath` - Add Anaconda Python to the path.
+* `/DoNotRegister` - Do not register Anaconda Python as the default Python.
+* `/D:(path)` - Choose another, *existing*, parent directory to place the 'Anaconda3' directory.
+
 ###### Example : 
   `choco install anaconda3 --params '"/AddToPath /D:c:\MyTools"'`
 
