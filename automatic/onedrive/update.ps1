@@ -13,6 +13,11 @@ function global:au_GetLatest {
    $url = $download_page.Links | 
                   Where-Object {($_ -match $version) -and ($_.href -like 'http*')} | 
                   Select-Object -First 1 -ExpandProperty href
+   if (-not $url) {
+      # MS seeme to recycle download links for a few versions in a row
+      $CIcontent = Get-Content 'tools\chocolateyInstall.ps1'
+      $url = ($CIcontent -match '^   url\s*=' ).split()[-1].trim("'")
+   }
 
    return @{ Version = $version; URL32 = $url }
 }
