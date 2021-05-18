@@ -36,6 +36,7 @@ if ($Keys) {
    } elseif ($Keys.Count -eq 1) {
       $TargetKey = $Keys[0]
       $TargetVersion = [version]($TargetKey.DisplayName -replace '[^0-9.]','')
+      Write-Verbose "QGIS version, $TargetVersion, already installed."
    }
 
    $PkgShortVersion = [version](([version]$env:ChocolateyPackageVersion).tostring(2))
@@ -45,7 +46,7 @@ if ($Keys) {
       if (Test-Path ($env:ChocolateyPackageFolder + "-ltr")) {
          $nuspec = Get-ChildItem ($env:ChocolateyPackageFolder + "-ltr") -Filter "*.nuspec" | Select-Object -First 1
          $text = (Get-Content $nuspec.fullname | Select-String '<version>[0-9.]*</version>').Matches.Value
-         $LTRPkgShortVer = [version]([version]($text -replace '[^0-9.]','').ToString(2))
+         $LTRPkgShortVer = [version](([version]($text -replace '[^0-9.]','')).ToString(2))
          if ($LTRPkgShortVer -ge [version]($TargetVersion.tostring(2))) {
             # QGIS may have changed major.minor version.  
             # If newest install conflicts with LTR install don't uninstall.
