@@ -3,8 +3,8 @@
 $packageArgs = @{
    packageName   = $env:chocolateyPackageName
    fileType      = 'exe'
-   url           = 'https://oneclient.sfx.ms/Win/Prod/21.073.0411.0002/OneDriveSetup.exe'
-   checksum      = '1F45A8FA46A576C08CA826395FCDDD2B0F0D60E2D3E9C637596181665F5E4984'
+   url           = 'https://go.microsoft.com/fwlink/?linkid=860984'
+   checksum      = '958f719fe7aa15f5c2f4b63ea9c3e6003df85783ca02c6eb079a34882fa8d0ba'
    checksumType  = 'sha256'
    silentArgs    = '/allusers /silent'
    validExitCodes= @(0)
