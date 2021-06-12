@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $Url      = 'https://download.sysinternals.com/files/PSTools.zip'
-$Checksum = '0d6ba2f1f2bf290b71bde12f095a6c9697aac7794bc2523f86b383b82f73a430'
+$Checksum = 'fc9a9d961eb4e9f069d53d29c7c3ef7d00b11754807b528c43a44e9e57e1cfae'
 
 # Remove old versions
 $null = Get-ChildItem -Path $env:ChocolateyPackageFolder -Filter *.exe | Remove-Item -Force
