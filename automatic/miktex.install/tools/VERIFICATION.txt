@@ -10,7 +10,7 @@ With the "All Downloads" tab displayed, expand the 32-bit and/or 64-bit
 and get the file via the "Download" button.
 
 Direct Download:
-Milestone       = '21.3'
+Milestone       = '21.6'
 32-bit URL      = 'https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x86/miktexsetup-4.1.zip'
 32-bit checksum = '466A17828E9A20069AD60CBA32A86294D198A2F75D1392A2F1553AA5A26B0994'
 64-bit URL      = 'https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x64/miktexsetup-4.1-x64.zip'

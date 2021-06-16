@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageMileStone = '21.3'
+$PackageMileStone = '21.6'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Remove any previously unzipped installers
@@ -57,14 +57,16 @@ if ($pp['Mirror']) {
    $MirrorSwitch = "--remote-package-repository=`"$Mirror`""
 } else { $MirrorSwitch = '' }
 
+if ($pp['ThisUser']) { $Shared = 'no' } else { $shared = 'yes'}
+
 # Is MiKTeX already installed?
 [array]$key = Get-UninstallRegistryKey -SoftwareName 'miktex*' 
 if ($key.Count -gt 1) {
    Throw 'More than one install of MiKTeX already exists!'
 } elseif ($key.Count -eq 1) {
-   Write-Verbose 'Found an install of MiKTeX.'
    # Use MiKTeX's built-in updater
    $InstallDir = (Split-Path $key.UninstallString).trim('"')
+   Write-Verbose "Found an install of MiKTeX at '$InstallDir'."
    $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
    Write-Verbose "Running 'initexmf.exe' to identify installed milestone."
    $MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^(CurrentVersion|MiKTeX):'}
@@ -131,7 +133,7 @@ if ($key.Count -gt 1) {
    # Now, do the actual install from identified repository
    Write-Host "Installing from$Temporary MiKTeX repository."
    $InstallArgs = @{
-      Statements       = "--verbose $RepoSwitch --package-set=$set --shared install "
+      Statements       = "--verbose $RepoSwitch --package-set=$set --shared=$Shared install "
       ExetoRun         = $MiKTeXsetup
       WorkingDirectory = $toolsDir
       validExitCodes   = @(0)

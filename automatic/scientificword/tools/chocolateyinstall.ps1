@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'ScientificWord'
-$url         = 'https://s3-us-west-1.amazonaws.com/download.mackichan.com/sw-6.0.30-windows-installer.exe'
-$Checksum    = '237166a8b1dd88208a83168f93c21f7156295c1d8e92101f0710b793883447e5'
+$url         = 'https://s3-us-west-1.amazonaws.com/download-mackichan-com/sw-6.1.0-windows-installer.exe'
+$Checksum    = '03b43ff1c28c244f3e8cb6d1e3676c382632f2350a7a074c2b8578a137066bb1'
 
 $packageArgs = @{
   packageName   = $packageName
