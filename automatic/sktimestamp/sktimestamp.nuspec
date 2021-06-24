@@ -10,7 +10,7 @@
     <title>sktimestamp (Install)</title>
     <authors>Stefan Kueng</authors>
     <projectUrl>http://stefanstools.sourceforge.net/SKTimeStamp.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/sktimestamp_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@a519a29e40a07102fb4ce2cd5be16fab59993574/Icons/sktimestamp_icon.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <licenseUrl>http://www.gnu.org/licenses/old-licenses/gpl-2.0.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>lc-easy</id>
+    <version>4.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/lceasy</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>LC Easy (demo)</title>
+    <authors>Mary L. Kish and John H. White</authors>
+    <projectUrl>https://librarytools.com/lc-easy</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@443454449fcb380e1631215ce58229c0a7dd4be6/Icons/lc-easy_icon.png</iconUrl>
+    <copyright>Copyright © 2021 LibraryTools.com</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/lceasy/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <mailingListUrl>https://librarytools.com/contact</mailingListUrl>
+    <tags>lc-easy LCEasy Library Congress Classification LoC tutorial training demo</tags>
+    <summary>Training for the Library of Congress Classification System</summary>
+    <description>LC Easy provides training and practice on the Library of Congress Classification System. It's designed for new library staff, providing an introductory tutorial and lots of practice, as well as corrective feedback and intervention when necessary. It provides a variety of challenges and offers helpful hints. LC Easy 4.0 also works well for library staff who have been away for some time or are looking for refresher.
+
+* Practice exercises for both beginners and wizards simulating real library tasks, such as book sorting and shelf reading, all designed to provide diverse and challenging call numbers, including elements which commonly cause errors.
+* A game engine randomly generates new call numbers every time, with varying levels of complexity. Library staff can keep practicing until they become confident or go back at any time for review.
+* Personalized certificates for completing the tutorial and any additional exercises. Supervisors have access to performance reports.
+    </description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
