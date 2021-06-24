@@ -9,12 +9,16 @@ function global:au_GetLatest {
    
    $NewVersion = $Matches[1]
 
-   $url32 = $download_page.Links | 
-              Where-Object {$_.href -match "$NewVersion.*x86\.exe`$"} | 
+   $url = $download_page.Links | 
+              Where-Object {$_.href -match "$NewVersion.*\.msi`$"} | 
               Select-Object -ExpandProperty href
-   $url64 = $download_page.Links | 
-              Where-Object {$_.href -match "$NewVersion.*64\.exe`$"} | 
-              Select-Object -ExpandProperty href
+
+   $SumURL = $download_page.Links |
+        Where-Object {$_.href -match "$NewVersion.*\.sha256sum`$"} |
+        Select-Object -ExpandProperty href
+   $SumFile = "$env:temp\QGIS$NewVersion-SHA256.txt"
+   Invoke-WebRequest $SumURL -OutFile $SumFile
+   $Checksum32 = (Get-Content $SumFile -ReadCount 1).split()[0]
 
    $LTRversion = ($download_page.Links | 
                     Where-Object {
@@ -26,8 +30,8 @@ function global:au_GetLatest {
    return @{ 
       Version    = $NewVersion
       LTRVersion = $LTRversion
-      URL32      = $url32
-      URL64      = $url64
+      URL        = $url
+      Checksum32 = $Checksum32
    }
 }
 
@@ -36,12 +40,10 @@ function global:au_SearchReplace {
    @{
       "tools\chocolateyInstall.ps1" = @{
          "(^[$]LTRversion = )('.*')"     = "`$1'$($Latest.LTRversion)'"
-         "(^   url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-         "(^   url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
+         "(^   url\s*=\s*)('.*')"        = "`$1'$($Latest.URL)'"
          "(^   Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-         "(^   Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
       }
    }
 }
 
-Update-Package -NoCheckUrl
+Update-Package -NoCheckUrl -ChecksumFor none

@@ -1,18 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $NewRelease = $env:ChocolateyPackageVersion
-$LTRversion = '3.16.7'
+$LTRversion = '3.16.8'
 
 $InstallArgs = @{
    packageName    = 'qgis'
-   fileType       = 'EXE'
+   fileType       = 'MSI'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
-   url            = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.18.3-1-Setup-x86.exe'
-   url64bit       = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.18.3-1-Setup-x86_64.exe'
+   url            = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.20.0-4.msi'
    checksumType   = 'sha256'
-   checksum       = '76c08c9b3f744b56d4aaf3f627bd71679ebb959126bf9c9124ce35a313353ba0'
-   checksum64     = 'eef1811f106626b6220022bb9c0fdace8c7b89053da65e2b9f7acddc32ec9dd8'
-   silentArgs     = '/S'
+   checksum       = 'fb8c0611318bf0077f61572ee237a5c3e2f05ee4f846f143426d2eb22d7e6744'
+   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes = @(0)
 }
 
@@ -85,9 +83,17 @@ if ($TargetKey) {
             Remove-Item $Item.FullName -Recurse -Force 
          }
       }
+      if ($TargetKey.UninstallString -match '\.exe$') {
+         $exeToRun = $TargetKey.UninstallString
+         $Switches = '/S'
+      } else {
+         $exeToRun = 'msiexec.exe'
+         $ID = ($TargetKey.UninstallString -split '/x')[-1]
+         $Switches = "/x$ID /qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$TargetVersion.MsiUninstall.log`""
+      }
       $UninstallArgs = @{
-         ExeToRun       = $TargetKey.UninstallString
-         Statements     = '/S'
+         ExeToRun       = $exeToRun
+         Statements     = $Switches
          ValidExitCodes = @(0)
       }
       $null = Start-ChocolateyProcessAsAdmin @UninstallArgs

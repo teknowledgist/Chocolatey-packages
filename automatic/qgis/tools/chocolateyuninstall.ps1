@@ -6,10 +6,18 @@ $AppShortVersion = ([version]$env:ChocolateyPackageVersion).tostring(2)
 
 if ($key.Count -eq 1) {
    $UninstallArgs = @{
-      PackageName = $env:ChocolateyPackageName
-      FileType    = 'exe'
-      SilentArgs  = '/S'
-      File        = $key[0].UninstallString
+      PackageName    = $env:ChocolateyPackageName
+      ValidExitCodes = @(0)
+   }
+   if ($key.UninstallString -match '\.exe$') {
+      $UninstallArgs.File       = $key.UninstallString
+      $UninstallArgs.FileType   = 'EXE'
+      $UninstallArgs.SilentArgs = '/S'
+   } else {
+      $ID = ($key.UninstallString -split '/x')[-1]
+      $UninstallArgs.File       = 'msiexec.exe'
+      $UninstallArgs.FileType   = 'MSI'
+      $UninstallArgs.SilentArgs = "$ID /qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$AppShortVersion.MsiUninstall.log`""
    }
    Uninstall-ChocolateyPackage @UninstallArgs
 
