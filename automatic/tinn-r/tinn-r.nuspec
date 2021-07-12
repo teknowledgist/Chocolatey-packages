@@ -4,13 +4,13 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>tinn-r</id>
-    <version>8.1.3.4</version>
+    <version>8.1.3.5</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/tinn-r</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Tinn-R</title>
     <authors>José Cláudio Faria, Philippe Grosjean, Enio Galinkin Jelihovschi, Philipe Silva Farias</authors>
-    <projectUrl>https://nbcgib.uesc.br/tinnr/en/</projectUrl>
+    <projectUrl>https://tinn-r.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@d787bd727666b25e03bb92be0c60af219951e68d/Icons/Tinn-R_icon.png</iconUrl>
     <copyright>Copyright © 2001-2016</copyright>
     <licenseUrl>https://github.com/jcfaria/Tinn-R/blob/master/LICENSE</licenseUrl>
@@ -49,7 +49,7 @@ This parameter can be passed to the installer with the use of `-params`.
 For example : 
 `choco install tinn-r -params '"/Default"'`
     </description>
-    <releaseNotes>https://nbcgib.uesc.br/tinnr/en/download#patch</releaseNotes>
+    <releaseNotes>https://tinn-r.org/en/download#patch</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

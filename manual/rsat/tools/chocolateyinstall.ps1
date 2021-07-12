@@ -10,7 +10,9 @@ $osInfo.Version = [version]$osInfo.Version
 if ($osInfo.Version -lt [version]'6.0') {
    Throw 'The Remote System Administration Toolkit (RSAT) requires Windows Vista or later.'
 }
-elseif ($osInfo.ProductType -ne 1) {
+# OperatingSystemSKU = 175 Windows 10 Enterprise multi-session, see also:
+#     https://docs.microsoft.com/en-us/azure/virtual-desktop/configure-automatic-updates#create-a-query-based-collection
+elseif ($osInfo.ProductType -ne 1 -and $osInfo.OperatingSystemSKU -ne 175) {
    Write-Warning 'The Remote System Administration Toolkit (RSAT) is built into Windows Server, so no need for an actual install.'
    Return
 }
