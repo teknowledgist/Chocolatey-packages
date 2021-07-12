@@ -3,24 +3,28 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>scientificword</id>
-    <version>6.1.0</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/scientificword</packageSourceUrl>
+    <version>6.1.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/scientificword</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Scientific Word (Install)</title>
+    <title>Scientific Word (Final Release)</title>
     <authors>MacKichan Software, Inc.</authors>
-    <projectUrl>https://www.mackichan.com/index.html?products/sw.html</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/scientificword_icon.png</iconUrl>
+    <projectUrl>https://www.mackichan.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@0bb730e97aa3f50e6330542dcc1bc511da6d2879/Icons/scientificword_icon.png</iconUrl>
     <copyright>Copyright © 2017, MacKichan Software, Inc.</copyright>
-    <licenseUrl>https://www.mackichan.com/index.html?products/licensing/EULA.html</licenseUrl>
+    <licenseUrl>https://web.archive.org/web/20210411045642if_/https://www.mackichan.com/index.html?products/licensing/EULA.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <docsUrl>ftp://ftp.mackichan.com/download/version60/creatingdocs-60.pdf</docsUrl>
-    <mailingListUrl>http://forum.mackichan.com/</mailingListUrl>
+    <docsUrl>https://s3-us-west-2.amazonaws.com/mackichan-com-ftp/pub/download/version60/creatingdocs-60.pdf</docsUrl>
     <tags>scientificword scientific word tex latex typesetting trial admin</tags>
     <summary>Makes typesetting and publishing with LaTeX easier.</summary>
     <description>Scientific Word Version 6 brings you the ease of entering text and mathematics in natural notation in an easy-to-use word processing system. With its entirely new Mozilla-based architecture, Scientific Word 6 provides more flexibility for your workplace. You can save or export your documents in multiple formats, according to your publication and portability needs. Your documents are saved as xml files which makes them completely portable across platforms. Sharing your work with colleagues is easier than ever.
     
 Because Scientific Word 6 is a front end to LaTeX, you do not have to learn the LaTeX syntax. When you typeset, LaTeX automatically generates footnotes, indexes, bibliographies, tables of contents, and cross-references. 
+
+# [MacKichan Software, Inc. has gone out of business](https://www.mackichan.com/)
+MacKichan Software, Inc., after providing word processing software for those who speak the language of mathematics for forty years (under several names), closed its doors on June 30, 2021. This marks the end of sales and support for the MacKichan Software products.
+
+We expect to make Scientific Word an open source product eventually. 
 
 ### Trial Version
 * By default, this package will install a limited, trial version of Scientific Word without the ability to save or print.  
@@ -44,7 +48,7 @@ If you already have a license file or [RLM license server](http://www.reprisesof
 _(note: the double-double quotes around the path are only needed if it contains spaces)_
 
     </description>
-    <releaseNotes>https://www.mackichan.com/index.html?techtalk/v60/1002updatesv6.htm</releaseNotes>
+    <releaseNotes>https://www.mackichan.com/techtalk/v60/1002updatesv6.htm</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
