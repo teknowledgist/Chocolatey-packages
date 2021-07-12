@@ -1,11 +1,10 @@
-﻿$packageName  = 'crystalexplorer'
-$FriendlyName = 'Crystal Explorer'
+﻿$ErrorActionPreference = 'Stop'
 
-[array]$key = Get-UninstallRegistryKey -SoftwareName "$FriendlyName*"
+[array]$key = Get-UninstallRegistryKey -SoftwareName "Crystal Explorer*"
 
 if ($key.Count -eq 1) {
    $UninstallArgs = @{
-      PackageName     = $packageName
+      PackageName     = $env:ChocolateyPackageName
       FileType        = 'exe'
       File            = $key[0].UninstallString
       SilentArgs      = '/S'
@@ -14,13 +13,15 @@ if ($key.Count -eq 1) {
    Uninstall-ChocolateyPackage @UninstallArgs
 
 } elseif ($key.Count -gt 1) {
-   Throw "Multiple installs found.  Could not safely uninstall $FriendlyName!"
+   Throw "Multiple installs found.  Could not safely uninstall Crystal Explorer!"
 } else {
-   Write-Host "$FriendlyName not found.  It may have been uninstalled through other actions."
+   Write-Host "Crystal Explorer not found.  It may have been uninstalled through other actions."
 }
 
-$shortcut = Join-Path ([Environment]::GetFolderPath("Desktop")) "$packageName.lnk"
-
-if (Test-Path $shortcut) {
-   Remove-Item $shortcut
+$StartPrograms = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs'
+$shortcut = Join-Path $StartPrograms "$env:ChocolateyPackageName.lnk"
+ 
+if ([System.IO.File]::Exists($shortcut)) {
+    Write-Debug "Found the Start Menu shortcut. Deleting it..."
+    [System.IO.File]::Delete($shortcut)
 }
