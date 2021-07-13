@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageMileStone = '21.6'
+$PackageMileStone = '21.6.28'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Remove any previously unzipped installers
@@ -56,8 +56,6 @@ if ($pp['Mirror']) {
    Write-Verbose "Attempting to download from specified mirror:  $Mirror"
    $MirrorSwitch = "--remote-package-repository=`"$Mirror`""
 } else { $MirrorSwitch = '' }
-
-if ($pp['ThisUser']) { $Shared = 'no' } else { $shared = 'yes'}
 
 # Is MiKTeX already installed?
 [array]$key = Get-UninstallRegistryKey -SoftwareName 'miktex*' 
@@ -130,8 +128,17 @@ if ($key.Count -gt 1) {
       $exitCode = Start-ChocolateyProcessAsAdmin @DownloadArgs
    }
 
+
    # Now, do the actual install from identified repository
-   Write-Host "Installing from$Temporary MiKTeX repository."
+   $installmsg = "Installing from$Temporary MiKTeX repository for "
+   if ($pp['ThisUser']) { 
+      $Shared = 'no' 
+      $installmsg += 'just this user.'
+   } else { 
+      $shared = 'yes'
+      $installmsg += 'all users.'
+   }
+   Write-Host $installmsg
    $InstallArgs = @{
       Statements       = "--verbose $RepoSwitch --package-set=$set --shared=$Shared install "
       ExetoRun         = $MiKTeXsetup

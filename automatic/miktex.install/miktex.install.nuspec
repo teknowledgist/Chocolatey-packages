@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>miktex.install</id>
-    <version>21.6</version>
+    <version>21.6.28</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/miktex.install</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -34,7 +34,6 @@ MiKTeX's integrated package manager installs missing [components](https://miktex
 
 * `/Set:(option)` - Download and install the `essential`, `basic` (default), or `complete` set of TeX packages/tools.
 * `/Mirror:(URL)` - This will use the `(url)`, [a CTAN mirror](https://miktex.org/repositories) to download MiKTeX.  It is recommended to only use this if the default mirror as chosen by the MiKTeX setup utility doesn't work for some reason.* **Hint:** Including `/Mirror` (valid or not) will write the list of "official", URLs to the Chocolatey log.
-* `/ThisUser` - This will install MiKTeX for only this user.  **Note: This can cause confusion for other users as Chocolatey will claim MiKTeX is installed but other users will (potentially) not be able to see/use it.
 
 ## Custom Repository Parameter (optional)
 
