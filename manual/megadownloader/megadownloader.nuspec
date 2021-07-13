@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>megadownloader</id>
+    <version>1.8</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/megadownloader</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>MegaDownloader (portable)</title>
+    <authors>Andrew Soliño</authors>
+    <projectUrl>https://megadownloaderapp.blogspot.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/megadownloader_icon.png</iconUrl>
+    <copyright>Copyright Andrew Soliño 2013</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/manual/megadownloader/tools/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>http://adf.ly/6501382/megadownloader-17-src</projectSourceUrl>
+    <docsUrl>https://megadownloaderapp.blogspot.com/2013/02/faq-english.html</docsUrl>
+    <tags>megadownloader mega download links steganography streaming</tags>
+    <summary>A download client for MEGA.CO.NZ</summary>
+    <description>MegaDownloader is a standalone, unofficial, download client for MEGA.CO.NZ, allowing you to easily download files from MEGA.CO.NZ 
+
+## Why MegaDownloader?
+
+* Fast: You can download multiple files simultaneously with multiple connections per file, squeezing the bandwidth.
+* Lightweight: Takes up less than 2MB and consumes little resources. It doesn't create  giant temporary files. Just uses a small buffer in memory and stores the file directly in disk.
+* Secure: MegaDownloader does not show ads or banners when using it. It doesn't collect information from user. Only connects to MEGA.CO.NZ to download the files, and periodically checks for updates. Nothing else. And sensitive internal information is stored locally encrypted using DPAPI and AES.
+* Simple: Its interface is simple to use: add links and start downloading. That's all!
+* Complete: It allows pausing, stopping and resuming file downloads. It enqueues files, grouping them by packages, automatically decompresses RAR/Zip/7z files, detects links from the clipboard, can limit the download speed, is multilingual, can be controlled from the phone / remotely with its integrated web server, can be configured to automatically start or shut down the PC when finish, can reconnect in case of error, etc. Ah, and [you can watch videos online via streaming](http://megadownloaderapp.blogspot.com.es/2013/02/watch-videos-online-streaming-tutorial.html).
+    </description>
+    <releaseNotes>https://megadownloaderapp.blogspot.com/2020/04/megadownloader-18-is-out.html</releaseNotes>
+    <!-- =============================== -->      
+
+    <dependencies>
+      <dependency id="dotnet4.0" version="4.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

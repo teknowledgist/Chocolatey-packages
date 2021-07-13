@@ -1,0 +1,16 @@
+﻿From: Content of RAR file
+
+LICENSE
+
+MegaDownloader
+Author: Andrew Soliño - January 2013.
+
+The usage license is free, however THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT OF THIRD PARTY RIGHTS. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR HOLDERS INCLUDED IN THIS NOTICE BE LIABLE FOR ANY CLAIM, OR ANY SPECIAL INDIRECT OR CONSEQUENTIAL DAMAGES, OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE. 
+
+Except as contained in this notice, the name of a copyright holder shall not be used in advertising or otherwise to promote the sale, use or other dealings in this Software without prior written authorization of the copyright holder. 
+
+Modification of the software is not allowed. 
+Only non-profit usage is allowed.
+You can redistribute it freely, but only under the condition of not modifying it, and maintaining all its information (authors, acknowledgments, etc.). 
+It is not allowed to redistribute it supplanting the authorship or removing information from the authors.
+If you do not agree to this license, do not use the program.
