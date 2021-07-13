@@ -13,7 +13,7 @@ function global:au_GetLatest {
    $StreamReader.Close()
 
    $Version = [version]'0.0'
-   foreach ($file in ($fileList | ? {$_ -match '^DNGConverter_[0-9_]+\.exe'})) {
+   foreach ($file in ($fileList | ? {$_ -match 'DNGConverter_(x64_)?[0-9_]+\.exe'})) {
       $VersionString = $file -replace '.*?_([0-9_]+)\.exe','$1'
       [version]$FileVersion = $VersionString.replace('_','.')
       if ($FileVersion -gt $Version) {

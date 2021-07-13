@@ -4,12 +4,12 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>crystalexplorer</id>
-    <version>17.5.0.20210711</version>
+    <version>21.5</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/crystalexplorer</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Crystal Explorer</title>
-    <authors>M.J. Turner,J.J. McKinnon,S.K. Wolff,D.J. Grimwood,P.R. Spackman,D. Jayatilaka,M.A.Spackman</authors>
+    <authors>P.R. Spackman, M.J. Turner, J.J. McKinnon, S.K. Wolff, D.J. Grimwood, D. Jayatilaka, M.A. Spackman</authors>
     <projectUrl>https://www.crystalexplorer.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@2068eefae74f456a971ad58a570eff15c35c2bc7/Icons/crystalexplorer_icon.png</iconUrl>
     <copyright>Copyright © 2005-2017 The University of Western Australia. </copyright>

@@ -1,29 +1,27 @@
 import-module au
 
-$Start = 'http://crystalexplorer.scb.uwa.edu.au'
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri "$Start/downloads.html"
+   $DPageURL = 'https://www.crystalexplorer.net/download.html'
+   $download_page = Invoke-WebRequest -Uri $DPageURL
 
-   $path = $download_page.Links | 
-               Where-Object {$_.innertext -like "*.exe" } |
+   $URL64 = $download_page.Links | 
+               Where-Object {$_.href -like "*.exe" } |
                Select-Object -ExpandProperty href -First 1
 
-   $version = ($path -split '-')[1]
-   $url = "$start/$path"
+   $version = $URL64.split('-')[1]
 
-   return @{ Version = $version; URL = $url }
+   return @{ Version = $version; URL64 = $URL64 }
 }
 
 
 function global:au_SearchReplace {
     @{
-        "tools\chocolateyInstall.ps1" = @{
-            "(^[$]url\s*=\s*)('.*')"      = "`$1'$($Latest.URL)'"
-            "(^[$]Checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-            "(^[$]version\s*=\s*)('.*')"  = "`$1'$($Latest.version)'"
-        }
+      "tools\chocolateyInstall.ps1" = @{
+         "(^   url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
+         "(^   Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+      }
     }
 }
 
-update -ChecksumFor 32
+update -ChecksumFor 64
