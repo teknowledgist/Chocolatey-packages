@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>mupdf</id>
+    <version>1.18.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/mupdf.install</packageSourceUrl>
+    <owners>Teknowledgist, braderhart</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>MuPDF</title>
+    <authors>Artifex Software</authors>
+    <projectUrl>https://mupdf.com</projectUrl>
+    <iconUrl>https://git.ghostscript.com/?p=mupdf.git;a=blob_plain;f=platform/ios/MuPDF/Images.xcassets/AppIcon.appiconset/Icon-167.png;hb=e7bcc0c0205680e8cfc51e63b4028bf8d18a4251g</iconUrl>
+    <copyright>2006-2020 Artifex Software, Inc.</copyright>
+    <licenseUrl>https://mupdf.com/license</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://git.ghostscript.com/?p=mupdf.git</projectSourceUrl>
+    <docsUrl>https://mupdf.com/docs</docsUrl>
+    <bugTrackerUrl>https://bugs.ghostscript.com</bugTrackerUrl>
+    <tags>mupdf pdf reader viewer admin</tags>
+    <summary>MuPDF is a lightweight PDF, XPS, and E-book viewer.</summary>
+    <description> MuPDF is a lightweight PDF, XPS, and E-book viewer.
+
+MuPDF consists of a software library, command line tools, and viewers for various platforms.
+
+The renderer in MuPDF is tailored for high quality anti-aliased graphics. It renders text with metrics and spacing accurate to within fractions of a pixel for the highest fidelity in reproducing the look of a printed page on screen.
+
+The viewer is small, fast, yet complete. It supports many document formats, such as PDF, XPS, OpenXPS, CBZ, EPUB, and FictionBook 2. You can annotate PDF documents and fill out forms with the mobile viewers (this feature is coming soon to the desktop viewer as well).
+
+The command line tools allow you to annotate, edit, and convert documents to other formats such as HTML, SVG, PDF, and CBZ. You can also write scripts to manipulate documents using Javascript. 
+    </description>
+    <releaseNotes>https://mupdf.com/release_history</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
