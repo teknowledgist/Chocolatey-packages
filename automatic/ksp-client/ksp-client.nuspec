@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>ksp-client</id>
+    <version>7.7.1.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/local/ksp-client</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Sassafras KeyServer Platform Client ("KeyAccess")</title>
+    <authors>Sassafras</authors>
+    <projectUrl>http://www.sassafras.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@984302e79afe84f8f021c7f300091c4b8544f86e/Icons/ksp-client_icon.png</iconUrl>
+    <copyright>Copyright © 1990-2018 Sassafras Software Inc.</copyright>
+    <licenseUrl>https://www.sassafras.com/license/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.sassafras.com/documentation/</docsUrl>
+    <tags>ksp-client ksp k2 keyaccess keyserver allsight client sassafras inventory license tracking commercial enterprise</tags>
+    <summary>Vital component for IT Asset Management and Cost Reduction</summary>
+    <description>The Sassafras KeyServer Platform Client pairs with the a KeyServer/AllSight server to discover hardware attributes and installed software applications, delivering trustworthy details about each Windows, Mac, and Linux machine (including virtual and thin-client) where it is installed. Sassafras’ cloud-hosted Product Recognition Service (PRS) then normalizes virtually every software product installed on client computers.
+    
+Sassafras provides IT Administrators and other stakeholders real-time access to hardware and software inventory, usage stats, license management, and compliance reports. Live availability maps with integrated intelligent software search give students on-demand access to available assets.
+
+## Notes
+* This package is useless by itself.  You will need a [Sassafras KSP](https://www.sassafras.com/) back-end which is a licensed, enterprise product.  
+* The KSPclient is forward and backward compatible with a wide range of versions of KeyServer/AllSight.
+
+### Options
+#### Host parameter
+The KSP server ("KeyServer") with which the client will interface is best specified at installation using a `/Host` package parameter argument for example:
+
+`choco install k2client --params '"/Host:ksp.example.com"'`
+
+#### Source parameter
+You may specify a `/Source` package parameter to an alternate server (i.e. a local server, not [Sassafras](https://www.sassafras.com/download)) from which KSPclient can be downloaded.  Newer versions of KeyServer/AllSight can push updated clients and can share the latest client for an initial install by this package. (Contact Sassafras support to find out how.)  *If the installers are altered or of a different version than this package, the `--ignorechecksums` switch must be used.* For example:
+
+`choco install k2client --params '"/Host:k2.example.com /Source:k2.example.com"'`
+
+#### Additional installer options
+The KSPclient has [additional options ](https://www.sassafras.com/hrl/7.6/deployment.html#options) that should normally not be needed but can be used via `--installarguments` (or `--ia`).  For example:
+
+`choco install k2client --params '"/Host:k2.example.com"' --ia '"-v PROP_LOCKED=1"'
+
+    </description>
+    <releaseNotes>https://www.sassafras.com/release-history/</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
