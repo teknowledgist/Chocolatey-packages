@@ -8,7 +8,7 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/powerbi-reportbuilder</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>powerbi-reportbuilder (Install)</title>
+    <title>Power BI Report Builder (Install)</title>
     <authors>Microsoft</authors>
     <projectUrl>https://docs.microsoft.com/en-us/power-bi/paginated-reports/report-builder-power-bi</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@7af6c36a9802c6ea5f337dde07fc9a975409ec22/Icons/powerbi-reportbuilder_icon.png</iconUrl>

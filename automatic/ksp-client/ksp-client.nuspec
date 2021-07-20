@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>ksp-client</id>
     <version>7.7.1.2</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/local/ksp-client</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/ksp-client</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Sassafras KeyServer Platform Client ("KeyAccess")</title>
@@ -13,7 +13,7 @@
     <projectUrl>http://www.sassafras.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@984302e79afe84f8f021c7f300091c4b8544f86e/Icons/ksp-client_icon.png</iconUrl>
     <copyright>Copyright © 1990-2018 Sassafras Software Inc.</copyright>
-    <licenseUrl>https://www.sassafras.com/license/</licenseUrl>
+    <licenseUrl>https://www.sassafras.com/eula/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://www.sassafras.com/documentation/</docsUrl>
     <tags>ksp-client ksp k2 keyaccess keyserver allsight client sassafras inventory license tracking commercial enterprise</tags>
