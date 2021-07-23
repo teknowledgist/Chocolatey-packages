@@ -18,7 +18,7 @@ if ($pp['Language']) {
    $Lang = Import-Csv "$toolsDir\LanguageChecksums.csv" -Delimiter '|' | 
                Where-Object {$_.Code -eq $pp['Language']}
    if ($Lang.URL -and $Lang.SHA256) {
-      Write-Host "$($Lang.Name) download url and checksum identified." -ForegroundColor Cyan
+      Write-Host "$($Lang.Language) download url and checksum identified." -ForegroundColor Cyan
       $packageArgs.url = $Lang.URL
       $packageArgs.checksum = $Lang.SHA256
    } else {

@@ -29,7 +29,7 @@ function global:au_GetLatest {
       $confirmURL = "https://www.microsoft.com/$($Lang.split('|')[0])/download/confirmation.aspx?id=$ID&amp;$UID=1"
       $confirmpage = Invoke-WebRequest $confirmURL -UseBasicParsing
       $LangURL = $confirmpage.rawcontent.split('"') | Where-Object {$_ -match '\.msi$'} | Select-Object -first 1
-      $CSV += "$Lang|$LangURL"
+      $CSV += "$([System.Net.WebUtility]::HtmlDecode($Lang))|$LangURL"
    }
    $CSV | Out-File '.\tools\LanguageChecksums.csv' -Force
 
