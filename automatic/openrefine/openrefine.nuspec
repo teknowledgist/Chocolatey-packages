@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>openrefine</id>
+    <version>3.4.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/openrefine</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>OpenRefine (portable)</title>
+    <authors>Metaweb Technologies, Inc.</authors>
+    <projectUrl>https://openrefine.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/OpenRefine/OpenRefine@b02404d30861ef9a9f7fe937b8167f1cd3e4e8e2/graphics/icon/openrefine.ico</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://github.com/OpenRefine/OpenRefine/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/OpenRefine/OpenRefine</projectSourceUrl>
+    <docsUrl>https://openrefine.org/documentation.html</docsUrl>
+    <mailingListUrl>http://groups.google.com/group/openrefine/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/OpenRefine/OpenRefine/issues</bugTrackerUrl>
+    <tags>openrefine metadata data data-science wikidata datamining google python java OSS</tags>
+    <summary>A free, open source, powerful tool for working with messy data</summary>
+    <description>OpenRefine (previously Google Refine) is a Java-based power tool for working with messy data: cleaning it; transforming it from one format into another; and extending it with web services and external data.
+
+OpenRefine always keeps your data private on your own computer until YOU want to share or collaborate. Your private data never leaves your computer unless you want it to. (It works by running a small server on your computer and you use your web browser to interact with it)
+
+OpenRefine is available in more than 15 languages.
+
+OpenRefine is part of Code for [Science and Society](https://codeforscience.org/). 
+
+    </description>
+    <releaseNotes>https://github.com/OpenRefine/OpenRefine/releases/latest</releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
