@@ -4,7 +4,7 @@
   <metadata>
     <id>lc-easy</id>
     <version>4.0</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/lceasy</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/lc-easy</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>LC Easy (demo)</title>
@@ -12,7 +12,7 @@
     <projectUrl>https://librarytools.com/lc-easy</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@443454449fcb380e1631215ce58229c0a7dd4be6/Icons/lc-easy_icon.png</iconUrl>
     <copyright>Copyright © 2021 LibraryTools.com</copyright>
-    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/lceasy/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/lc-easy/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <mailingListUrl>https://librarytools.com/contact</mailingListUrl>
     <tags>lc-easy LCEasy Library Congress Classification LoC tutorial training demo</tags>
