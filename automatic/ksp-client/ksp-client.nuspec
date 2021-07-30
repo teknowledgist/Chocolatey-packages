@@ -28,14 +28,14 @@ Sassafras provides IT Administrators and other stakeholders real-time access to 
 
 ### Options
 #### Host parameter
-The KSP server ("KeyServer") with which the client will interface is best specified at installation using a `/Host` package parameter argument for example:
+The KSP server ("KeyServer") with which the client will interface is best specified at installation using a `/Host` package parameter argument. For example:
 
 `choco install k2client --params '"/Host:ksp.example.com"'`
 
 #### Source parameter
 You may specify a `/Source` package parameter to an alternate server (i.e. a local server, not [Sassafras](https://www.sassafras.com/download)) from which KSPclient can be downloaded.  Newer versions of KeyServer/AllSight can push updated clients and can share the latest client for an initial install by this package. (Contact Sassafras support to find out how.)  *If the installers are altered or of a different version than this package, the `--ignorechecksums` switch must be used.* For example:
 
-`choco install k2client --params '"/Host:k2.example.com /Source:k2.example.com"'`
+`choco install k2client --params '"/Host:k2.example.com /Source:k2.example.com/kami"'`
 
 #### Additional installer options
 The KSPclient has [additional options ](https://www.sassafras.com/hrl/7.6/deployment.html#options) that should normally not be needed but can be used via `--installarguments` (or `--ia`).  For example:
