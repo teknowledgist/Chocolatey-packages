@@ -1,15 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $NewRelease = $env:ChocolateyPackageVersion
-$LTRversion = '3.16.8'
+$LTRversion = '3.16.9'
 
 $InstallArgs = @{
    packageName    = 'qgis'
    fileType       = 'MSI'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
-   url            = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.20.0-4.msi'
+   url64bit       = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.20.1-1.msi'
    checksumType   = 'sha256'
-   checksum       = 'fb8c0611318bf0077f61572ee237a5c3e2f05ee4f846f143426d2eb22d7e6744'
+   checksum64     = 'a91065082ec9e613257b16974a90fbc2fc69976483f6cb8e90280a440c018efd'
    silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes = @(0)
 }

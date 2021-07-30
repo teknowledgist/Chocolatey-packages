@@ -18,7 +18,7 @@ function global:au_GetLatest {
         Select-Object -ExpandProperty href
    $SumFile = "$env:temp\QGIS$NewVersion-SHA256.txt"
    Invoke-WebRequest $SumURL -OutFile $SumFile
-   $Checksum32 = (Get-Content $SumFile -ReadCount 1).split()[0]
+   $Checksum64 = (Get-Content $SumFile -ReadCount 1).split()[0]
 
    $LTRversion = ($download_page.Links | 
                     Where-Object {
@@ -30,8 +30,8 @@ function global:au_GetLatest {
    return @{ 
       Version    = $NewVersion
       LTRVersion = $LTRversion
-      URL        = $url
-      Checksum32 = $Checksum32
+      URL64      = $url
+      Checksum64 = $Checksum64
    }
 }
 
@@ -40,8 +40,8 @@ function global:au_SearchReplace {
    @{
       "tools\chocolateyInstall.ps1" = @{
          "(^[$]LTRversion = )('.*')"     = "`$1'$($Latest.LTRversion)'"
-         "(^   url\s*=\s*)('.*')"        = "`$1'$($Latest.URL)'"
-         "(^   Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
+         "(^   url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
+         "(^   Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
       }
    }
 }
