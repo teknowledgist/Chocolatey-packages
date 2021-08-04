@@ -19,7 +19,7 @@ elseif ($osInfo.ProductType -ne 1 -and $osInfo.OperatingSystemSKU -ne 175) {
 # See here for determining the edition of Windows via SKU:
 #   https://superuser.com/questions/1328506/windows-edition-on-non-english-systems
 # The list below are the valid SKUs for Windows editions that can have RSAT
-elseif ((1,4,6,16,27,28,48,49,70,72,84,103,121,122,125,126,129,130,133,161,162) -notcontains ($osInfo.OperatingSystemSKU)) {
+elseif ((1,4,6,16,27,28,48,49,70,72,84,103,121,122,125,126,129,130,133,161,162,175) -notcontains ($osInfo.OperatingSystemSKU)) {
    Throw 'The Remote System Administration Toolkit (RSAT) can only install on Professional, Enterprise, or Education editions of Windows.'
 }
 
