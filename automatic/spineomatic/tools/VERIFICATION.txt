@@ -1,0 +1,14 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest version of the "SpineLabeler.exe" file that is SpineOMatic
+can be downloaded from:
+
+https://github.com/ExLibrisGroup/SpineOMatic/releases/latest
+
+Direct Download:
+
+Version : 8.1.2
+URL     : https://github.com/ExLibrisGroup/SpineOMatic/releases/download/v8.1.2/SpineLabeler.exe
+SHA256  : 2D55F7C0BC9D99E47D4D038AC7A4EB2F4E4BB0D9F9A1040A78BBCB859AEB1756

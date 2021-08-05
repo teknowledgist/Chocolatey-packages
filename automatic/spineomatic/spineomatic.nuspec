@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>spineomatic</id>
+    <version>8.1.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/spineomatic</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>SpineOMatic</title>
+    <authors>ExLibris Group</authors>
+    <projectUrl>https://developers.exlibrisgroup.com/blog/SpineOMatic-Label-Printing-Software-for-Alma/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ExLibrisGroup/SpineOMatic@2d178f7c0f56f27a419963ee5186e390a33260ad/library.ico</iconUrl>
+    <copyright>Copyright (c) 2018 Boston College Libraries</copyright>
+    <licenseUrl>https://github.com/ExLibrisGroup/SpineOMatic/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ExLibrisGroup/SpineOMatic</projectSourceUrl>
+    <docsUrl>https://github.com/ExLibrisGroup/SpineOMatic/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/ExLibrisGroup/SpineOMatic/issues</bugTrackerUrl>
+    <tags>spineomatic spinelabeler spine labels books library exlibris alma OSS embedded</tags>
+    <summary>Print spine labels for items in ExLibris' Alma system</summary>
+    <description>SpineOMatic is a Windows application that works with Ex Libris’ Alma to print spine labels, pocket labels, flag slips, or other custom labels to a variety of desktop or networked printers, singly or in batches. It’s easy to download and install, and is highly configurable.
+
+![Example](https://developers.exlibrisgroup.com/wp-content/uploads/2018/11/som_interface.png)
+
+You can use Ex Libris’ call number and holdings parsing, or you can let SpineOMatic parse the labels for you. SpineOMatic’s parsers can format spine labels for:
+
+* Library of Congress and LC Children’s Literature
+* Dewey Decimal
+* National Library of Medicine (NLM)
+* Superintendent of Documents (SuDoc)
+* Other (user-defined) schemes
+
+Parsing rules are flexible, and can be tweaked on the fly to match almost any library’s labelling requirements.
+Label prefixes (such as `MEDIA`, `OVERSIZE` or `Ref.`) can be added automatically above the spine label for items that are not shelved in the general collection.
+
+### Package options
+These options are available using package parameters (`--params`):
+
+* `/path:(path)` - The folder path to put the SpineOMatic executable. For install or uninstall.  (Default: "C:\Spine")
+* `/settings:(path)` - The path to an optional applications settings file to be used to avoid manual configuration (e.g. Alma API key entry).
+
+Example:  `choco install spineomatic --params '"/settings:\\server\share\spineinfo.txt"'`
+
+    </description>
+    <releaseNotes>https://github.com/ExLibrisGroup/SpineOMatic/releases</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
