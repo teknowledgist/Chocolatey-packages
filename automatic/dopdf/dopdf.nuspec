@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>dopdf</id>
-    <version>11.0.170</version>
+    <version>11.1.181</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/dopdf</packageSourceUrl>
     <owners>Teknowledgist, schelljw</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
