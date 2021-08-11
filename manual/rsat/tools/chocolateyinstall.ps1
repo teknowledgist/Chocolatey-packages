@@ -27,15 +27,9 @@ $web = New-Object Net.WebClient
 if ($osInfo.Version.Major -eq 6) {
    switch ($osInfo.Version.Minor) {
       0 { # Vista
-            If (Get-OSArchitectureWidth -eq 64) {
-               Throw 'Vista x64 is not supported.'; return
-            }
-            $html = $web.DownloadString('https://www.microsoft.com/download/confirmation.aspx?id=21090') 
-            $Checksum = '507c857b6a7cb15abaa36730b57d65487587ea62d7cf73f7b24542c1ef70038a' }
+            Throw 'Windows Vista is not supported.'; return }
       1 { # Win7
-            $html = $web.DownloadString('https://www.microsoft.com/download/confirmation.aspx?id=7887') 
-            $Checksum = 'fcc36f0686f23bf57b0c719dfc86b06e8d2b501f93a08ed81704d15ab1726b41'
-            $Checksum64 = '1d9f49878fff72d9954ec58cf10b72d8edc3d9126c10b1c4155b7912e2450f3c' }
+            Throw 'Windows 7 is not supported.'; return  }
       2 { # Win8
             $html = $web.DownloadString('https://www.microsoft.com/download/confirmation.aspx?id=28972') 
             $Checksum = '050aefe2568de7e9e28d75c6752a8287cbbb0f2a0f2be5dd0e0c75ba29aff941'
