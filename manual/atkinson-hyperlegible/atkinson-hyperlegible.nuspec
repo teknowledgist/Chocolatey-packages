@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>atkinson-hyperlegible</id>
+    <version>1.006</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/atkinson-hyperlegible</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Atkinson Hyperlegible (font)</title>
+    <authors>Braille Institute</authors>
+    <projectUrl>https://brailleinstitute.org/freefont</projectUrl>
+    <copyright>Copyright © 2020 Braille Institute of America, Inc.</copyright>
+    <!-- If there is a license Url available, it is required for the community feed -->
+    <licenseUrl>https://raw.githubusercontent.com/googlefonts/atkinson-hyperlegible/main/OFL.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/googlefonts/atkinson-hyperlegible</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/googlefonts/atkinson-hyperlegible/issues</bugTrackerUrl>
+    <tags>atkinson-hyperlegible font blind low-vision braille OSS embedded</tags>
+    <summary>Award-winning font designed specifically to help with legibility and improve readability for people with low vision</summary>
+    <description>Atkinson Hyperlegible is a new typeface, offering greater legibility and readability for low vision readers. The font is named after Braille Institute founder, J. Robert Atkinson. What makes it different from traditional typography design is that it focuses on letterform distinction to increase character recognition, ultimately improving readability.
+
+The Braille Institute has made this free for anyone to use, under the SIL Open Font License.
+
+The typeface was a Winner of Fast Company’s 2019 Innovation By Design Award.
+
+* Four fonts, including two weights (regular, bold, italics, italics bold)
+* 1,340 total glyphs across all fonts, 335 per font
+* Accent characters supporting 27 languages
+* For designers and anyone interested in making written materials easier to read across the entire visual-ability spectrum
+* Improve legibility and readability for low vision readers
+
+## Unique design features
+* Differentiates common misinterpreted letters and numbers using various design techniques:   
+![Sample of Atkinson Hyperlegible font characters to show concepts of Recognizable Footprints and Differentiated Letterforms](https://brailleinstitute.org/wp-content/uploads/2020/02/BIA_AtkinsonHyerlegible-recognizable-footprints-differentiated-letterforms-transparent.png)
+* **Recognizable Footprints** - Character boundaries clearly defined, ensuring understanding across the visual-ability spectrum
+* **Differentiated letterforms** - similar letter pairs are differentiated from each other to dramatically increase legibility
+* **Unambiguous Characters** - designed to increase legibility and distinction
+* **Exaggerated forms** - shaping of letters is exaggerated to provide better clarity
+* **Opened Counterspace** - open areas of certain letters are expanded to provide greater distinction
+* **Angled spurs and differentiated tails** - increase recognition and define distinctive style
+
+Informational sheet about Atkinson Hyperlegible font, with samples of informational brochures, business card, and more with text in the font: [Download Summary Document [.pdf]](https://github.com/googlefonts/atkinson-hyperlegible/blob/main/docs/BIA_AtkinsonHyerlegible-Specimen_2020-02-10.pdf)
+    </description>
+    <!-- =============================== -->      
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.3.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

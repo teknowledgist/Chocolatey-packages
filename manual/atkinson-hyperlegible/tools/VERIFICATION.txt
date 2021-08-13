@@ -1,0 +1,14 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The included .zip file can be downloaded from the Google Fonts site:
+
+https://fonts.google.com/specimen/Atkinson+Hyperlegible
+
+by clicking on the "Download family" button.
+
+Direct download:
+Version:  1.006  (determined by dropping fonts onto https://fontdrop.info/)
+URL:      https://fonts.google.com/download?family=Atkinson%20Hyperlegible
+SHA256:   510f3ee52d49bb90f88e8ae4a2476f51cbb4b50f549def1d93385d1b632ec623
