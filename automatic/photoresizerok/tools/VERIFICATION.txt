@@ -6,8 +6,8 @@ The latest installers are available here:
    https://www.softwareok.com/?Download=PhotoResizerOK
 
 Direct Download:
-Version      : 1.51
+Version      : 1.66
 x86 URL      : https://www.softwareok.com/Download/PhotoResizerOK.zip
-x86 CheckSum : B86BC4C75875B7AF203C95CDA6DDD6B0F48FDA13BB20891254DDD4499C38EB74
+x86 CheckSum : D19DC6F459DB5296863D74666310BF28982160300F720C678F91D7CB542AF6AD
 x64 URL      : https://www.softwareok.com/Download/PhotoResizerOK_x64.zip
-x64 CheckSum : F91DE517F2DB980467A80C47964750F5D61B343102EE1A12036CD5FBF7372039
+x64 CheckSum : D838484336902C679D7BE0991A89C3CB05258CD8E7F125A2DC3E6AA081F89F22

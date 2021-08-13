@@ -11,7 +11,7 @@
     <title>MegaDownloader (portable)</title>
     <authors>Andrew Soliño</authors>
     <projectUrl>https://megadownloaderapp.blogspot.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/megadownloader_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@3817646100fcd7d1cc9ca104eed6fdc18bf69d0f/Icons/megadownloader_icon.png</iconUrl>
     <copyright>Copyright Andrew Soliño 2013</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/manual/megadownloader/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
