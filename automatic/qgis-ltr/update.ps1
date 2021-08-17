@@ -18,12 +18,27 @@ function global:au_GetLatest {
 
    $LTRversion = $url32 -replace ".*?-([0-9.]+)-.*",'$1'
 
+   $SumURL32 = $download_page.Links |
+        Where-Object {$_.href -match "$LTRversion.*x86\.exe.*\.sha256sum`$"} |
+        Select-Object -ExpandProperty href
+   $Sum32File = "$env:temp\QGIS$LTRVersion-x86SHA256.txt"
+   Invoke-WebRequest $SumURL32 -OutFile $Sum32File
+   $Checksum32 = (Get-Content $Sum32File -ReadCount 1).split()[0]
+
+   $SumURL64 = $download_page.Links |
+        Where-Object {$_.href -match "$LTRversion.*64\.exe.*\.sha256sum`$"} |
+        Select-Object -ExpandProperty href
+   $Sum64File = "$env:temp\QGIS$LTRVersion-x64SHA256.txt"
+   Invoke-WebRequest $SumURL64 -OutFile $Sum64File
+   $Checksum64 = (Get-Content $Sum64File -ReadCount 1).split()[0]
 
    return @{ 
             Version      = $LTRversion
             AppVersion   = $LTRversion
             URL32        = $url32
             URL64        = $url64
+            Checksum32   = $Checksum32
+            Checksum64   = $Checksum64
            }
 }
 
@@ -43,4 +58,4 @@ function global:au_SearchReplace {
    }
 }
 
-Update-Package
+Update-Package -ChecksumFor none -NoCheckChocoVersion
