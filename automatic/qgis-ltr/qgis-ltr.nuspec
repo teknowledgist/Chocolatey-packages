@@ -46,6 +46,9 @@ Uninstallation should remove only the installed, Chocolatey package version.
     </description>
     <releaseNotes>https://qgis.org/en/site/forusers/visualchangelog316</releaseNotes>
     <dependencies>
+      <dependency id="vcredist2008" version="9.0.30729" />
+      <dependency id="vcredist2010" version="10.0.40219" />
+      <dependency id="vcredist2013" version="12.0.21005" />
     </dependencies>
   </metadata>
   <files>
