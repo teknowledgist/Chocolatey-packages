@@ -17,7 +17,7 @@ $exes = Get-ChildItem $ZipArgs.UnzipLocation -filter *.exe -Recurse |select -Exp
 $txts = Get-ChildItem $ZipArgs.UnzipLocation -filter *.txt -Recurse |select -ExpandProperty fullname
 
 foreach ($exe in $exes) {
-   if ($txts -notcontains ($exe.trim('.exe') + '_README.txt')) {
+   if ($txts -notcontains ($exe.replace('.exe', '') + '_README.txt')) {
       New-Item "$exe.ignore" -Type file -Force | Out-Null
    }
 }
