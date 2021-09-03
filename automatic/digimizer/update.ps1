@@ -1,21 +1,18 @@
 import-module au
 
-$MainPage = 'https://www.digimizer.com'
-
 function global:au_GetLatest {
+   $MainPage = 'https://www.digimizer.com'
    $download_page = Invoke-WebRequest -Uri "$MainPage/download.php"
 
-   $FooterString = $download_page.AllElements | ? {$_.id -eq 'footer'} |select -ExpandProperty innertext
-   $Version = $FooterString.split(';-') | ? { $_ -match 'version'}
-   $Version = $Version -replace '[^0-9]*([0-9.]*).*','$1'
+   $FooterString = $download_page.AllElements | Where-Object {$_.id -eq 'footer'} |Select-Object -ExpandProperty innertext
+   $Version = $FooterString.split(' ') | Where-Object {($_ -match '\.') -and ($_ -match '[0-9.]+')}
    if ($Version.length -eq 1) { $Version = "$Version.0.0" }
 
-   $urlstub = $download_page.links | ? {$_.href -like '*.msi'} | select -ExpandProperty href -first 1
-   $url = $MainPage + "/" + $urlstub
+   $urlstub = $download_page.links | Where-Object {$_.href -like '*.msi'} | Select-Object -ExpandProperty href -first 1
+   $url = $MainPage + "/download/" + $urlstub
 
    return @{ Version = $version; URL = $url }
 }
-
 
 function global:au_SearchReplace {
     @{

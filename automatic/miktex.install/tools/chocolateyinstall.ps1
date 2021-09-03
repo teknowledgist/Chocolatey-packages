@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageMileStone = '21.7'
+$PackageMileStone = '21.8'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Remove any previously unzipped installers
@@ -62,12 +62,13 @@ if ($pp['Mirror']) {
 if ($key.Count -gt 1) {
    Throw 'More than one install of MiKTeX already exists!'
 } elseif ($key.Count -eq 1) {
+   if ($key.PSPath -match 'HKEY_CURRENT_USER') { $admin = '' } else { $admin = '--admin' }
    # Use MiKTeX's built-in updater
    $InstallDir = (Split-Path $key.UninstallString).trim('"')
    Write-Verbose "Found an install of MiKTeX at '$InstallDir'."
    $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
    Write-Verbose "Running 'initexmf.exe' to identify installed milestone."
-   $MileStoneLine = & $InitEXMF --admin --report | Where-Object {$_ -match '^(CurrentVersion|MiKTeX):'}
+   $MileStoneLine = & $InitEXMF $admin --report | Where-Object {$_ -match '^(CurrentVersion|MiKTeX):'}
    $MileStone = $MileStoneLine.split()[-1]
    Write-Host "Found MiKTeX milestone $MileStone currently installed." -ForegroundColor Cyan
 
@@ -94,7 +95,7 @@ if ($key.Count -gt 1) {
       if ($Repository -eq '' -and $Mirror -ne '') { $Repository = $Mirror }
       if ($Repository -ne '') { $RepoSwitch = "--repository=`"$Repository`"" }
       $SetupArgs = @{
-         Statements       = "--admin --verbose --update $RepoSwitch"
+         Statements       = "$admin --verbose --update $RepoSwitch"
          ExetoRun         = $MPM
          WorkingDirectory = $InstallDir
          validExitCodes   = @(0)
@@ -132,9 +133,11 @@ if ($key.Count -gt 1) {
    # Now, do the actual install from identified repository
    $installmsg = "Installing from$Temporary MiKTeX repository for "
    if ($pp['ThisUser']) { 
+      $admin = ''
       $Shared = 'no' 
       $installmsg += 'just this user.'
    } else { 
+      $admin = '--admin'
       $shared = 'yes'
       $installmsg += 'all users.'
    }
@@ -153,7 +156,7 @@ if ($key.Count -gt 1) {
 $InstallDir = (Split-Path $key.UninstallString).trim('"')
 $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
 Write-Verbose "Using 'initexmf.exe' to identify installed milestone."
-$MileStoneLine = & "$InitEXMF" --admin --report | Where-Object {$_ -match '^CurrentVersion:'}
+$MileStoneLine = & "$InitEXMF" $admin --report | Where-Object {$_ -match '^CurrentVersion:'}
 $MileStone = $MileStoneLine.split()[-1]
 Write-Verbose "Verified MiKTeX milestone $MileStone installed."
 If ([version]$MileStone -lt [version]$PackageMileStone) {
@@ -163,7 +166,7 @@ If ([version]$MileStone -lt [version]$PackageMileStone) {
 # configure MiKTeX to automatically install missing packages on the fly
 Write-Verbose 'Adjusting settings so MiKTeX installs missing packages on the fly.'
 $SetupArgs = @{
-   Statements       = '--admin --verbose --set-config-value=[MPM]AutoInstall=1'
+   Statements       = "$admin --verbose --set-config-value=[MPM]AutoInstall=1"
    ExetoRun         = $InitEXMF
    WorkingDirectory = $InstallDir
    validExitCodes   = @(0)

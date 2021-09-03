@@ -5,13 +5,14 @@
 if ($key.Count -gt 1) {
    Throw 'More than one install of MiKTeX found!  Cannot uninstall without risking other copies.'
 } elseif ($key.Count -eq 1) {
+   if ($key.PSPath -match 'HKEY_CURRENT_USER') { $shared = 'no' } else { $shared = 'yes' }
    Write-Verbose "Found an install of MiKTeX."
    # Use MiKTeX's built-in updater
    $InstallDir = (Split-Path $key.UninstallString).trim('"')
    $MiKTeXsetup = Join-Path $InstallDir 'miktexsetup.exe'
    Write-Verbose 'Uninstalling MiKTeX using integrated setup utility.'
    $InstallArgs = @{
-      Statements       = '--verbose --shared=yes uninstall'
+      Statements       = "--verbose --shared=$shared uninstall"
       ExetoRun         = $MiKTeXsetup
       WorkingDirectory = $InstallDir
       validExitCodes   = @(0)

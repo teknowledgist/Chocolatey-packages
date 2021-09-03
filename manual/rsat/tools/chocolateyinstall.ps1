@@ -27,9 +27,9 @@ $web = New-Object Net.WebClient
 if ($osInfo.Version.Major -eq 6) {
    switch ($osInfo.Version.Minor) {
       0 { # Vista
-            Throw 'Windows Vista is not supported.'; return }
+            Throw "$($osInfo.Caption) is not supported."}
       1 { # Win7
-            Throw 'Windows 7 is not supported.'; return  }
+            Throw "$($osInfo.Caption) is not supported."}
       2 { # Win8
             $html = $web.DownloadString('https://www.microsoft.com/download/confirmation.aspx?id=28972') 
             $Checksum = '050aefe2568de7e9e28d75c6752a8287cbbb0f2a0f2be5dd0e0c75ba29aff941'
