@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-
 # Remove old versions
 $null = Get-ChildItem $env:ChocolateyPackageFolder -Filter $env:ChocolateyPackageName* | 
             Where-Object { $_.PSIsContainer } | Remove-Item -Force -Recurse
+
+$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 
 $ZipFile = Get-ChildItem $toolsDir -filter "*.zip" |
                Sort-Object LastWriteTime | 

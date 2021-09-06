@@ -4,21 +4,22 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mupdf</id>
-    <version>1.18.0</version>
+    <version>1.18.0.20210906</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/mupdf.install</packageSourceUrl>
     <owners>Teknowledgist, braderhart</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>MuPDF</title>
     <authors>Artifex Software</authors>
     <projectUrl>https://mupdf.com</projectUrl>
-    <iconUrl>https://git.ghostscript.com/?p=mupdf.git;a=blob_plain;f=platform/ios/MuPDF/Images.xcassets/AppIcon.appiconset/Icon-167.png;hb=e7bcc0c0205680e8cfc51e63b4028bf8d18a4251g</iconUrl>
+    <iconUrl>https://git.ghostscript.com/?p=mupdf.git;a=blob_plain;f=docs/logo/mupdf-icon.png;hb=HEAD</iconUrl>
     <copyright>2006-2020 Artifex Software, Inc.</copyright>
     <licenseUrl>https://mupdf.com/license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://git.ghostscript.com/?p=mupdf.git</projectSourceUrl>
     <docsUrl>https://mupdf.com/docs</docsUrl>
+    <mailingListUrl>https://discord.com/invite/SnXWzqzjKs</mailingListUrl>
     <bugTrackerUrl>https://bugs.ghostscript.com</bugTrackerUrl>
-    <tags>mupdf pdf reader viewer admin</tags>
+    <tags>mupdf pdf xps ebook epub reader viewer AGPL embedded</tags>
     <summary>MuPDF is a lightweight PDF, XPS, and E-book viewer.</summary>
     <description> MuPDF is a lightweight PDF, XPS, and E-book viewer.
 
