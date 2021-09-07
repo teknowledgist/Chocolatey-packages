@@ -19,7 +19,7 @@ and clicking the "Desktop" link at the bottom of the page under the
 
 
 Direct download: 
-Version  : 2.7.10
+Version  : 2.7.12
 URL      : https://masterpassword.app/masterpassword-gui.jar
-Checksum : 13eebbf03749346bf962591aa62cbe354f44e5b14ae8f90075a55b6b1eaed688
+Checksum : d2f4812982f2714acad638a5af858a29423c62c86946ff22d192326a848ff6ea
 

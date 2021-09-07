@@ -3,9 +3,9 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
-    <id>mpw.portable</id>
-    <version>2.7.10</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mpw.portable</packageSourceUrl>
+    <id>mpw</id>
+    <version>2.7.12</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/mpw</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>MasterPassword Java-Gui</title>
@@ -19,7 +19,7 @@
     <docsUrl>https://masterpassword.app/how/</docsUrl>
     <mailingListUrl>https://help.masterpassword.app/</mailingListUrl>
     <bugTrackerUrl>https://gitlab.com/MasterPassword/MasterPassword/issues</bugTrackerUrl>
-    <tags>MasterPassword password mpw security portable</tags>
+    <tags>MasterPassword password mpw security portable stateless spectre FOSS embedded</tags>
     <summary>A stateless password management solution.</summary>
     <description>Master Password is a completely new way of thinking about passwords.
 
@@ -46,9 +46,17 @@ There are about three steps to using Master Password:
 2. Enter the name of the site.
 3. View or copy/paste the generated (not stored!) password.
 
+# Master Password is no longer actively maintained.
+
+Master Password is announcing a massive rewrite, modernizing the solution and clearing the way for exciting new capabilities.
+
+The project is re-launching as [Spectre](https://spectre.app/), still fully open-source Free Software
+
+All development effort has moved to the [Spectre project](https://gitlab.com/spectre.app) which as of the creation of this package does not have a Windows desktop option.
+
     </description>
     <dependencies>
-      <dependency id="jre8" version="8.0" />
+      <dependency id="mpw.portable" version="[2.7.12]" />
     </dependencies>
   </metadata>
   <files>
