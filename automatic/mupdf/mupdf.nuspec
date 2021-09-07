@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mupdf</id>
     <version>1.18.0.20210906</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/mupdf.install</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/mupdf</packageSourceUrl>
     <owners>Teknowledgist, braderhart</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>MuPDF</title>
