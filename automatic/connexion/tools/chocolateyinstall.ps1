@@ -5,28 +5,30 @@ $WorkSpace = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:chocolateyPack
 $WebFileArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = Join-Path $WorkSpace "$env:ChocolateyPackageName.exe"
-   Url          = 'https://help.oclc.org/@api/deki/files/11721/ClientOnly2.63.exe?revision=1'
-   Checksum     = '07dbb0e9a856ac9f336aff51145bd58547b2d9abb29b946841914d1e62036768'
+   Url          = 'https://help.oclc.org/@api/deki/files/12679/ConnexClient3.0.7905.exe?revision=1'
+   Checksum     = '9f677b0628ef35717399e5093a978868e9b1e11090034c768b014a232e3b8078'
    ChecksumType = 'sha256'
    GetOriginalFileName = $true
 }
-
 $PackedInstaller = Get-ChocolateyWebFile @WebFileArgs
 
 $UnzipArgs = @{
    PackageName  = $env:ChocolateyPackageName
    FileFullPath = $PackedInstaller
-   Destination  = $env:ChocolateyPackageFolder
+   Destination  = Join-Path $env:TEMP "$env:ChocolateyPackageName-UnZipped"
 }
-
 Get-ChocolateyUnzip @UnzipArgs
 
-$InstallArgs = @{
-   PackageName    = $env:ChocolateyPackageName
-   File           = (Get-ChildItem -Path $env:ChocolateyPackageFolder -Filter '*.msi').FullName
-   fileType       = 'msi'
-   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
-   validExitCodes = @(0, 3010, 1641)
+$MSIs = Get-ChildItem -Path $UnzipArgs.Destination -Filter '*.msi' 
+
+foreach ($MSI in $MSIs) {
+   $InstallArgs = @{
+      PackageName    = $MSI.BaseName
+      File           = $MSI.FullName
+      fileType       = 'msi'
+      silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($MSI.BaseName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
+      validExitCodes = @(0, 3010, 1641)
+   }
+   Install-ChocolateyInstallPackage @InstallArgs
 }
 
-Install-ChocolateyInstallPackage @InstallArgs

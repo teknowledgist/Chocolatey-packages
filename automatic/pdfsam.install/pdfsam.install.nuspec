@@ -34,8 +34,7 @@
     </description>
     <releaseNotes>https://github.com/torakiki/pdfsam/releases/latest</releaseNotes>
     <dependencies>
-<!--      <dependency id="jre8" version="8.0" />
--->    </dependencies>
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

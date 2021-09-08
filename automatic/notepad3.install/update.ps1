@@ -6,9 +6,9 @@ function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri $ReleaseURL -UseBasicParsing
 
    $Release = $download_page.rawcontent.split('<|>') |
-                 Where-Object {$_ -match 'release ([0-9.]+)'} | Select-Object -first 1
+                 Where-Object {$_ -match 'release(_| )([0-9.]+)'} | Select-Object -first 1
 
-   $Version = $Matches[1]
+   $Version = $Matches[2]
    
    $DownloadURL = 'https://www.rizonesoft.com/downloads/notepad3/'
    $download_page = Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing

@@ -1,18 +1,17 @@
 import-module au
 
-$Release = 'https://www.oclc.org/support/software-reports/cataloging-software-downloads.en.html'
+$Release = 'https://help.oclc.org/Librarian_Toolbox/Software_downloads/Download_cataloging_software?sl=en'
 
 function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri "$Release"
 
-   $url = $download_page.links |
-               Where-Object {($_.innertext -match 'connexion.*only') -and ($_.href -match '\.exe')} | 
-               Select-Object -ExpandProperty href
-   
-   $File = $url.split('/') | ? {$_ -match '([0-9][0-9.]+).*\.exe'}
-   $version = $Matches[1]
-  
-   
+   $Link = $download_page.links |
+               Where-Object {($_.innertext -match '\.exe')} |
+               Select-Object -First 1
+
+   $url = $Link.href
+   $version = $link.title.trim('.exe') -replace '[^0-9.]',''
+
    return @{ 
       Version = $version
       URL32 = $url

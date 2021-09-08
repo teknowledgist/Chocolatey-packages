@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>connexion</id>
-    <version>2.63.0.20210421</version>
+    <version>3.0.7905</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/connexion</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -13,7 +13,7 @@
     <projectUrl>https://help.oclc.org/Metadata_Services/Connexion</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@26e2f1f27444590beac15ec871b273a6b1398b9c/Icons/connexion_icon.png</iconUrl>
     <copyright>©2002-2012 OCLC Online Computer Library Center, Inc.</copyright>
-    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/connexion/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://help.oclc.org/Metadata_Services/Connexion/Connexion_client_3_0/Connexion_client_basics/Get_support/OCLC_Software_License_Agreement?sl=en</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://help.oclc.org/Metadata_Services/Connexion/Connexion_client_documentation</docsUrl>
     <mailingListUrl>https://www.oclc.org/en/contacts/support.html</mailingListUrl>
@@ -76,9 +76,11 @@ Catalogers can use the Connexion client for the following functions:
 * Install and use RLIN21 keyboards for entering Arabic, Cyrillic, Hebrew, and Latin scripts
 * Add variant name headings using MARC-8 non-Latin character sets to LC authority file records
     </description>
+    <releaseNotes>https://help.oclc.org/Metadata_Services/Connexion/Connexion_client_3_0/Connexion_client_basics/Get_started/Update_Connexion_client</releaseNotes>
     <!-- =============================== -->      
     <dependencies>
-      <dependency id="dotnet4.5" version="4.5" />
+      <dependency id="dotnetfx" version="4.8" />
+      <dependency id="made2010" version="2021.02" />
     </dependencies>
   </metadata>
   <files>
