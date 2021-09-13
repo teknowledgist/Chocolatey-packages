@@ -33,7 +33,7 @@
 #>
 function Uninstall-ChocolateyFont { 
    param(
-      [Parameter(Mandatory=$true)][string[]]$FontFiles,
+      [Parameter(Mandatory=$false)][string[]]$FontFiles,
       [Parameter(Mandatory=$false)][switch]$Multiple=$false
    )
    
@@ -48,8 +48,22 @@ function Uninstall-ChocolateyFont {
       New-FontResourceType
    }
 
+   if (-not $FontFiles) {
+      $InstalledLogFile = Join-Path $env:ChocolateyPackageFolder 'FontFilesInstalled.log'
+      if (-not (Test-Path $InstalledLogFile)) {
+         $Msg = "Font file names were not provided and the 'FontFilesInstalled.log' file was not found! `n" +
+                  'No fonts can be removed if they are not identified.'
+         Throw $Msg
+      } else {
+         $FontFiles = Get-Content $InstalledLogFile
+         if ($FontFiles.count -gt 1) {
+            $Multiple = $true
+         }
+      }
+   }
+
    if ((-not $Multiple) -and ($FontFiles.count -gt 1)) {
-      Throw "The '-multiple' switch must be used to install more than a single font."
+      Throw "The '-multiple' switch must be used to uninstall more than a single font."
    }
 
    # Get installed font names and filenames
