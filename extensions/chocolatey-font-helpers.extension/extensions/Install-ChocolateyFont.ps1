@@ -41,7 +41,7 @@ function Install-ChocolateyFont {
    )
    
    # Establish some basic starting points
-   $successes = 0
+   $SuccessList = @()
    $FontsFolder = (New-Object -ComObject Shell.Application).namespace(0x14).self.path
    $fontRegistryPath = 'HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts'
    $FontFileTypes = @{
@@ -61,14 +61,21 @@ function Install-ChocolateyFont {
          Throw "The '-multiple' switch must be used to install more than a single font."
       } elseif (Test-Path $Paths -PathType Container) {
          Throw "The '-multiple' switch must be used to install all fonts in a folder."
+      } elseif ($Paths -match '\*') {
+         Throw "The '-multiple' switch must be used to install more than a single font."
       }
       $FilePaths = $Paths
-   } elseif (Test-Path $Paths -PathType Container) {
-      $FilePaths = Get-ChildItem $Paths -Include ('*.fon','*.otf','*.ttc','*.ttf') -Recurse | 
-                     Select-Object -ExpandProperty FullName
    } else {
-      $FilePaths = $Paths
+      $FilePaths = @()
+      Foreach ($Item in $Paths) {
+         if (($Item -match '\*') -or (Test-Path $Item -PathType Container)) {
+            $FilePaths += Get-ChildItem "$Item" -Include ('*.fon','*.otf','*.ttc','*.ttf') -Recurse | 
+                              Select-Object -ExpandProperty FullName
+         } else { $FilePaths += $Item }
+      }
    }
+
+   Write-Verbose "Files requested for installation:  $($FilePaths.count)"
 
    foreach ($Path in $FilePaths) {
       # Skip non-supported file types
@@ -98,8 +105,8 @@ function Install-ChocolateyFont {
             Throw "Font resource, '$($File.FullName)', installation failed"
          } else {
             Write-Verbose "Font resource, '$($File.FullName)', installed successfully"
+            $SuccessList += $File.Name
             Set-ItemProperty -Path "$($fontRegistryPath)" -Name "$FontName$($FontFileTypes.item($File.Extension))" -Value "$($File.Name)" -Type STRING -Force
-            $successes++
          }
       } catch {
          Write-Warning "An error occured installing '$($File.FullName)'"
@@ -113,9 +120,16 @@ function Install-ChocolateyFont {
       }
    }
    
+   if ($SuccessList) {
+      # Uninstalling will be much easier if the successfully 
+      # installed font files are logged for later reference.
+      $InstalledLogFile = Join-Path $env:ChocolateyPackageFolder 'FontFilesInstalled.log'
+      $SuccessList | Out-File $InstalledLogFile -Force
+   }
+
    If ($Multiple) {
-      Return $successes
-   } elseif ($successes) {
+      Return $SuccessList.count
+   } elseif ($SuccessList.count) {
       Return 0
    } else {
       Return 1
