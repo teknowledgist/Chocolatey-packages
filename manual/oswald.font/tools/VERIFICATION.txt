@@ -1,0 +1,24 @@
+﻿VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The newest build of the individual, Oswald font files can be 
+directly downloaded by digging into the GitHub repository:
+
+https://github.com/googlefonts/OswaldFont/tree/main/fonts/otf
+
+Click on each font and then click the "download" button.
+
+A potentially easier method is to download the zipped repository
+(https://github.com/googlefonts/OswaldFont/archive/refs/heads/main.zip)
+and then unzip and extract the files in .\fonts\otf.
+
+As of 2021.08.16, the version 4.102 had checksums:
+
+FileName                SHA256
+Oswald-Bold.otf         4eb788c37c5555c679268180c56985ae4d32e0ccc8d0a51e8fc6d8922a889fa1
+Oswald-ExtraLight.otf   0f9a3566caeae8370a6367f976fc208f1cba914b0b075a2ed4c3ebf944cef98f
+Oswald-Light.otf        d697c03e5f92f8bbc53693b6be902a33973f5e98dc9657328337c2d5fdf253a5
+Oswald-Medium.otf       ff0fea924e7fa10d3eb86ba103a976829c8d7bdd16ac6ab2008c98d5b3906843
+Oswald-Regular.otf      44ff2bf5f59c621853b917fede78785340ed97c99811a88e147bfe2b770fb11b
+Oswald-SemiBold.otf     e0148061d76919e8c1f5186ce8a0f0128b994fb5398cfee677e4378c89439b1a

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>oswald.font</id>
+    <version>4.102</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/oswald.font</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Oswald Font</title>
+    <authors>Vernon Adams</authors>
+    <projectUrl>https://fonts.google.com/specimen/Oswald</projectUrl>
+    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/oswald.font.png</iconUrl>-->
+    <copyright>Copyright 2016 The Oswald Project Authors</copyright>
+    <licenseUrl>http://scripts.sil.org/OFL</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/googlefonts/OswaldFont</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/googlefonts/OswaldFont/issues</bugTrackerUrl>
+    <tags>oswald.font oswald font googlefonts gothic otf FOSS embedded</tags>
+    <summary>A reworking of a classic gothic typeface</summary>
+    <description>_Oswald is a reworking of the classic style historically represented by the 'Alternate Gothic' sans serif typefaces. The characters of Oswald were initially re-drawn and reformed to better fit the pixel grid of standard digital screens. Oswald is designed to be used freely across the internet by web browsers on desktop computers, laptops and mobile devices.
+
+Since the initial launch in 2011, Oswald was updated continually by Vernon Adams until 2014. Vernon added Light and Bold weights, support for more Latin languages, tightened the spacing and kerning and made many glyph refinements throughout the family based on hundreds of users' feedback. In 2016 the family was updated by Kalapi Gajjar and Alexei Vanyashin to complete the work started by Vernon, and support languages that use the Cyrillic script. In January 2019, it was updated with a variable font Weight axis.
+</description>
+    <releaseNotes>https://raw.githubusercontent.com/googlefonts/OswaldFont/main/FONTLOG.txt</releaseNotes>
+    <!-- =============================== -->
+
+    <!-- Specifying dependencies and version ranges? https://docs.nuget.org/create/versioning#specifying-version-ranges-in-.nuspec-files -->
+    <!--<dependencies>
+      <dependency id="" version="__MINIMUM_VERSION__" />
+      <dependency id="" version="[__EXACT_VERSION__]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_INCLUSIVE]" />
+      <dependency id="" version="[_MIN_VERSION_INCLUSIVE, MAX_VERSION_EXCLUSIVE)" />
+      <dependency id="" />
+      <dependency id="chocolatey-core.extension" version="1.1.0" />
+    </dependencies>-->
+    <!-- chocolatey-core.extension - https://community.chocolatey.org/packages/chocolatey-core.extension
+         - You want to use Get-UninstallRegistryKey on less than 0.9.10 (in chocolateyUninstall.ps1)
+         - You want to use Get-PackageParameters and on less than 0.11.0
+         - You want to take advantage of other functions in the core community maintainer's team extension package
+    -->
+
+    <!--<provides>NOT YET IMPLEMENTED</provides>-->
+    <!--<conflicts>NOT YET IMPLEMENTED</conflicts>-->
+    <!--<replaces>NOT YET IMPLEMENTED</replaces>-->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
