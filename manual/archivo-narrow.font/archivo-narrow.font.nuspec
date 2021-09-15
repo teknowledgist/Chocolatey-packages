@@ -11,14 +11,14 @@
     <title>Archivo Narrow Font</title>
     <authors>Héctor Gatti</authors>
     <projectUrl>https://www.omnibus-type.com/fonts/archivo-narrow/</projectUrl>
-    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/oswald.font.png</iconUrl>-->
+    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/archivo-narrow.font.png</iconUrl>-->
     <copyright>Copyright © 2019, The Archivo Narrow Project Authors</copyright>
     <licenseUrl>http://scripts.sil.org/OFL</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/googlefonts/OswaldFont</projectSourceUrl>
-    <bugTrackerUrl>https://github.com/googlefonts/OswaldFont/issues</bugTrackerUrl>
-    <tags>oswald.font oswald font googlefonts gothic otf FOSS embedded</tags>
-    <summary>A reworking of a classic gothic typeface</summary>
+    <projectSourceUrl>https://github.com/Omnibus-Type/ArchivoNarrow</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/Omnibus-Type/ArchivoNarrow/issues</bugTrackerUrl>
+    <tags>archivo-narrow.font archivo narrow font googlefonts grotesque otf FOSS embedded</tags>
+    <summary>Archivo is a grotesque sans serif typeface family </summary>
     <description>Archivo Narrow was designed by Héctor Gatti to be used simultaneously in print and digital platforms. The technical and aesthetic characteristics of the font are both crafted for high performance typography. Archivo is a grotesque sans serif typeface family from Omnibus-Type. It was originally designed for highlights and headlines. This family is reminiscent of late nineteenth century American typefaces. 
 
 ![Archivo Narrow sample](http://www.identifont.com/samples2/google/ArchivoNarrow.gif)
