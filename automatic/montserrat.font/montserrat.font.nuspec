@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>montserrat.font</id>
+    <version>7.222</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/montserrat.font</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Montserrat Font</title>
+    <authors>Julieta Ulanovsky</authors>
+    <projectUrl>https://fonts.google.com/specimen/Montserrat</projectUrl>
+    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/montserrat.font.png</iconUrl>-->
+    <copyright>Copyright © 2011 The Montserrat Project Authors</copyright>
+    <licenseUrl>http://scripts.sil.org/OFL</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/googlefonts/Montserrat</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/JulietaUla/Montserrat/issues</bugTrackerUrl>
+    <tags>montserrat.font montserrat font googlefonts ttf otf FOSS embedded</tags>
+    <summary>Early 20th century urban typeface</summary>
+    <description>The old posters and signs in the traditional Montserrat neighborhood of Buenos Aires inspired Julieta Ulanovsky to design this typeface and rescue the beauty of urban typography that emerged in the first half of the twentieth century. As urban development changes that place, it will never return to its original form and loses forever the designs that are so special and unique. The letters that inspired this project have work, dedication, care, color, contrast, light and life, day and night! These are the types that make the city look so beautiful. The Montserrat Project began with the idea to rescue what is in Montserrat and set it free under a libre license, the SIL Open Font License.
+
+![Montserrat sample](http://fontpro.com/font-display/montserrat_35810.png)
+
+Julieta Ulanovsky began this project in 2010 while a post-graduate student of typeface design at the FADU, University of Buenos Aires. She launched it as a Kickstarter project in 2011, in order to complete the first public release and share it with the world through Google Fonts. Since then it has been developed by Julieta in collaboration with several designers. In 2015, a full set of weights and italics were developed by Julieta in collaboration with Ale Paul, Carolina Giovagnoli, Andrés Torresi, Juan Pablo del Peral and Sol Matas. In 2017, Jacques Le Bailly reworked the entire Latin design, and in parallel Juan Pablo del Peral and Sol Matas developed the initial Cyrillic extension with review and advise from Maria Doreuli and Alexei Vanyashin. Technical reviews were made by Lasse Fister, Kalapi GajjarBordawekar and Marc Foley. Special thanks also to Thomas Linard, Valeria Dulitzky, Belén Quirós, and Germán Rozo.
+
+## Options
+* **OTF or TTF** -- OTF fonts are installed by default.  To install TTF fonts instead, use a `/TTF` package parameter.
+* **Normal and/or Alternative** -- This package installs only the "normal" Montserrat family of fonts, but can optionally install just the "Alternates" or both families using a `/Alt` or `/Both` package parameter.
+* Examples:   
+    `choco install montserrat.font --params '"/TTF /Alt"'`   
+    `choco install montserrat.font --params '"/Both"'`   
+    
+    </description>
+    <releaseNotes>https://github.com/JulietaUla/Montserrat/releases</releaseNotes>
+    <!-- =============================== -->
+
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
