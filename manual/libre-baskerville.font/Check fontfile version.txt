@@ -1,0 +1,2 @@
+$Dir = (New-Object -ComObject "Shell.Application").namespace("$pwd")
+$dir.getdetailsof(($dir.parsename('ArchivoNarrow-Regular.otf')), 166)

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>libre-baskerville.font</id>
+    <version>1.000</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/libre-baskerville.font</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Libre Baskerville Font</title>
+    <authors>Pablo Impallari, Rodrigo Fuenzalida</authors>
+    <projectUrl>https://fonts.google.com/specimen/Libre+Baskerville</projectUrl>
+    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/libre-baskerville.font.png</iconUrl>-->
+    <copyright>Copyright © 2012, Pablo Impallari</copyright>
+    <licenseUrl>http://scripts.sil.org/OFL</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/impallari/Libre-Baskerville</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/impallari/Libre-Baskerville/issues</bugTrackerUrl>
+    <tags>libre-baskerville.font baskerville font googlefonts ttf FOSS embedded</tags>
+    <summary></summary>
+    <description>Libre Baskerville is a web font optimized for body text (typically 16px.) It is based on the American Type Founder's Baskerville from 1941, but it has a taller x-height, wider counters and less contrast that allow it to work on small sizes in any screen.
+
+![Libre Baskerville sample](https://imgs1.fontbrain.com/imgs/c5/d9/609b9a33bff8b5b193731d789d70/sp-720x400-333333-penultimate.png)
+
+</description>
+    <!-- =============================== -->
+
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>

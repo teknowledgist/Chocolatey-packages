@@ -1,0 +1,12 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The zipped font files are downloadable from the Google Fonts page:
+
+https://fonts.google.com/specimen/Libre+Baskerville
+
+Direct Download:
+Version : 1.000
+URL     : https://fonts.google.com/download?family=Libre%20Baskerville
+SHA256  : 4e015df9eb813829184840220efe515d0248222e4bee14d44e4840fc94180790
