@@ -1,0 +1,12 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The zipped font files are downloadable from the Archivo Narrow homepage:
+
+https://www.omnibus-type.com/fonts/archivo-narrow/
+
+Direct Download:
+Version : 2.001
+URL     : https://www.omnibus-type.com/wp-content/uploads/Archivo-Narrow.zip?1579544312
+SHA256  : 54bca0e49e1091f617e4a1aaebd38dde0350a4f5d4c92f2afd30b02ed61eb180

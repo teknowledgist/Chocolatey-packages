@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>archivo-narrow.font</id>
+    <version>2.001</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/archivo-narrow.font</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Archivo Narrow Font</title>
+    <authors>Héctor Gatti</authors>
+    <projectUrl>https://www.omnibus-type.com/fonts/archivo-narrow/</projectUrl>
+    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/oswald.font.png</iconUrl>-->
+    <copyright>Copyright © 2019, The Archivo Narrow Project Authors</copyright>
+    <licenseUrl>http://scripts.sil.org/OFL</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/googlefonts/OswaldFont</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/googlefonts/OswaldFont/issues</bugTrackerUrl>
+    <tags>oswald.font oswald font googlefonts gothic otf FOSS embedded</tags>
+    <summary>A reworking of a classic gothic typeface</summary>
+    <description>Archivo Narrow was designed by Héctor Gatti to be used simultaneously in print and digital platforms. The technical and aesthetic characteristics of the font are both crafted for high performance typography. Archivo is a grotesque sans serif typeface family from Omnibus-Type. It was originally designed for highlights and headlines. This family is reminiscent of late nineteenth century American typefaces. 
+
+![Archivo Narrow sample](http://www.identifont.com/samples2/google/ArchivoNarrow.gif)
+
+## Options
+* **OTF or TTF** -- OTF fonts are installed by default.  To install TTF fonts instead, use a `/TTF` package parameter.
+* Example:   
+    `choco install archivo-narrow.font --params '"/TTF"'`   
+    
+</description>
+    <!-- =============================== -->
+
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
