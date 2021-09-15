@@ -30,16 +30,16 @@ These functions may be used in your Chocolatey package install/uninstall scripts
     `Install-ChocolateyFont "FilePath\FontName.ext"`
     `Uninstall-ChocolateyFont "FontName.ext"`
 
-* **Multiple Fonts** *Will return the number of successful installs/uninstalls*
+* **Multiple Fonts:** *Will return the number of successful installs/uninstalls*
 
     `Install-ChocolateyFont $ListOfFontPathsOrFolder -multiple` 
     `Uninstall-ChocolateyFont $ListOfFontFileNames -multiple` 
 
-* **(New!)** Install accepts wildcards (must use `-multiple`)
+* **(New!) Wildcards:** Install now accepts a wildcard (must use `-multiple`)
 
-    `Install-ChocolateyFont "BaseFontName*.otf" -multiple
+    `Install-ChocolateyFont "FilePath\BaseFontName*.ext" -multiple`
     
-* **(New!)** Uninstall-ChocolateyFont should work with no parameters.  It should now look for a log file (`FontFilesInstalled.log`) created in the font package directory by Ininstall-ChocolateyFont.  No need to specify the font file names to remove what was installed.
+* **(New!)** Uninstall-ChocolateyFont should now work with *zero* parameters.  Install should create a log file ("FontFilesInstalled.log") in the `$env:ChocolateyPackageFolder`.  Uninstall will use that (if present) to identify the fonts to remove.  Your *entire* `ChocolateyUninstall.ps1` could be a simple as: `Remove-Font`
 
 Let the easy-peasy font packages flow!
 
