@@ -34,6 +34,7 @@ MiKTeX's integrated package manager installs missing [components](https://miktex
 
 * `/Set:(option)` - Download and install the `essential`, `basic` (default), or `complete` set of TeX packages/tools.
 * `/Mirror:(URL)` - This will use the `(url)`, [a CTAN mirror](https://miktex.org/repositories) to download MiKTeX.  It is recommended to only use this if the default mirror as chosen by the MiKTeX setup utility doesn't work for some reason.* **Hint:** Including `/Mirror` (valid or not) will write the list of "official", URLs to the Chocolatey log.
+* `/ThisUser` - This will install MiKTeX for only this user.  **Note: This can cause confusion for other users as Chocolatey will claim MiKTeX is installed but other users will (potentially) not be able to see/use it.
 
 ## Custom Repository Parameter (optional)
 
@@ -49,12 +50,12 @@ This package has only the MiKTeX setup utility embedded.  Any new install of MiK
 
 * On a server, you might use:
 
-`choco install miktex --params '"/Set:complete /RepoPath:""c:\Shared Files\MiKTeX-Repo"""'`
+`choco install miktex.install --params '"/Set:complete /RepoPath:""c:\Shared Files\MiKTeX-Repo"""'`
 *Double-double quotes (i.e. `""path""`) are necessary for paths containing a space.*
 
 * On a workstation in the same network, you might use:
 
-`choco install miktex --params '"/RepoPath://localserver/MiKTeX-Repo"'`
+`choco install miktex.install --params '"/RepoPath:\\localserver\MiKTeX-Repo"'`
 ]]>
     </description>
     <dependencies>

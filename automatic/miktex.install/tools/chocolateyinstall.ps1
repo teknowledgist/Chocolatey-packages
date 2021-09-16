@@ -156,7 +156,11 @@ if ($key.Count -gt 1) {
 $InstallDir = (Split-Path $key.UninstallString).trim('"')
 $InitEXMF = Join-Path $InstallDir 'initexmf.exe'
 Write-Verbose "Using 'initexmf.exe' to identify installed milestone."
-$MileStoneLine = & "$InitEXMF" $admin --report | Where-Object {$_ -match '^CurrentVersion:'}
+
+$ErrorActionPreference = 'SilentlyContinue'
+$MileStoneLine = & "$InitEXMF" $admin --report 2>&1 | Where-Object {$_ -match '^CurrentVersion:'}
+$ErrorActionPreference = 'Stop'
+
 $MileStone = $MileStoneLine.split()[-1]
 Write-Verbose "Verified MiKTeX milestone $MileStone installed."
 If ([version]$MileStone -lt [version]$PackageMileStone) {
