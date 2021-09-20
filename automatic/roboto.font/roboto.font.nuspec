@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>roboto.font</id>
+    <version>2.136</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/roboto.font</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Roboto Font</title>
+    <authors>Christian Robertson</authors>
+    <projectUrl>https://fonts.google.com/specimen/roboto</projectUrl>
+    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/roboto.font.png</iconUrl>-->
+    <copyright>Copyright © 2011 Google Inc.</copyright>
+    <licenseUrl>http://scripts.sil.org/OFL</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/googlefonts/roboto</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/googlefonts/roboto/issues</bugTrackerUrl>
+    <tags>roboto.font roboto font googlefonts ttf FOSS embedded</tags>
+    <summary>Google’s signature family of fonts</summary>
+    <description>Roboto has a dual nature. It has a mechanical skeleton and the forms are largely geometric. At the same time, the font features friendly and open curves. While some grotesks distort their letterforms to force a rigid rhythm, Roboto doesn’t compromise, allowing letters to be settled into their natural width. This makes for a more natural reading rhythm more commonly found in humanist and serif types.
+    
+![Roboto sample](https://i1.wp.com/www.downloadfonts.io/wp-content/uploads/2018/09/Roboto-Font.jpg)
+
+Roboto is the default font on Android and Chrome OS, and the recommended font for Google’s visual language, Material Design.
+
+## Options
+By default this package installs both of the related, "Normal" and "Condensed" Roboto families of fonts, but can optionally install just one family using a `/Normal` or `/Condensed` package parameter.
+
+* Examples:   
+    `choco install roboto.font --params '"/Normal"'`   
+    `choco install roboto.font --params '"/Condensed"'`   
+    
+    </description>
+    <releaseNotes>https://github.com/googlefonts/roboto/releases</releaseNotes>
+    <!-- =============================== -->
+
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
