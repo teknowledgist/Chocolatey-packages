@@ -4,21 +4,21 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>markdown-edit</id>
-    <version>1.35</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/markdown-edit</packageSourceUrl>
+    <version>1.35.0.20210920</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/markdown-edit</packageSourceUrl>
     <owners>Mike Ward, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Markdown Edit</title>
     <authors>Mike Ward</authors>
-    <projectUrl>http://markdownedit.com</projectUrl>
+    <projectUrl>https://github.com/mike-ward/Markdown-Edit/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/mike-ward/Markdown-Edit@fe591e5c633b78bcfe341293da8b1b49ccf08c7f/src/MarkdownEdit/logo.png</iconUrl>
     <copyright>Copyright (c) 2014 Mike Ward</copyright>
-    <licenseUrl>https://cdn.rawgit.com/mike-ward/Markdown-Edit/master/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/mike-ward/Markdown-Edit/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://github.com/mike-ward/Markdown-Edit/wiki</docsUrl>
     <projectSourceUrl>https://github.com/mike-ward/Markdown-Edit/</projectSourceUrl>
     <bugTrackerUrl>https://github.com/mike-ward/Markdown-Edit/issues</bugTrackerUrl>
-    <tags>markdown commonmark editor text admin</tags>
+    <tags>markdown-edit markdown commonmark editor text FOSS embedded</tags>
     <summary>A full-featured Markdown editor for Windows with an emphasis on content and keyboard shortcuts</summary>
     <description>Markdown Edit is a Windows desktop CommonMark (a.k.a. Markdown) editor with an emphasis on content and keyboard shortcuts. There is minimal window chrome and most functions are accessed through keyboard shortcuts. There is no main menu, status bar, tabbed windows or other distractions.
 
@@ -57,8 +57,11 @@
 ### Notes
 * This package *may* fail to install if the system is not rebooted after the .NET v4.7 dependency is installed.  If Markdown Edit does install with that reboot pending, it could encounter problems until the reboot is completed.
 * Markdown Edit is not supported for Windows 7.  It may work, but -- at a minimum -- the tool bar will be missing icons unless [the Win8+ version of Segoe UI Symbol font](http://www.askvg.com/fix-unknown-characters-or-vertical-rectangles-are-showing-in-place-of-metro-icons-in-windows-8-start-screen-and-login-screen/) is installed.  [See here for more info.](https://github.com/mike-ward/Markdown-Edit/issues/14)
+
+## Discontinued
+The Markdown-Edit project is no longer maintained.  
     </description>
-    <releaseNotes>http://markdownedit.com/blog.html</releaseNotes>
+    <releaseNotes>https://github.com/mike-ward/Markdown-Edit/releases</releaseNotes>
     <dependencies>
       <dependency id="DotNet4.7" />
     </dependencies>
