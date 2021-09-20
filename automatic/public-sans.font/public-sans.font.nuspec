@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>public-sans.font</id>
+    <version>1.008</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/public-sans.font</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Public Sans Font</title>
+    <authors>U.S. Web Design System (USWDS)</authors>
+    <projectUrl>https://public-sans.digital.gov/</projectUrl>
+    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/public-sans.font.png</iconUrl>-->
+    <licenseUrl>https://github.com/uswds/public-sans/blob/develop/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/uswds/public-sans</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/uswds/public-sans/issues</bugTrackerUrl>
+    <tags>public-sans.font public sans font uswds otf FOSS embedded</tags>
+    <summary>A strong, neutral typeface for interfaces, text, and headings.</summary>
+    <description>Public Sans is based off of an interpretation and expansion of the 1912 Morris Fuller Benton classic and developed by the United States Web Design System.
+    
+![Public Sans sample](https://blogfonts.com/fonts/p/980/161980/img/public-sans-s0.png)
+    
+    </description>
+    <releaseNotes>https://github.com/googlefonts/public-sans/releases</releaseNotes>
+    <!-- =============================== -->
+
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
