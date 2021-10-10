@@ -9,9 +9,9 @@
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Anaconda Individual Edition (Python 3.x)</title>
     <authors>Anaconda, Inc.</authors>
-    <projectUrl>https://www.anaconda.com/distribution/</projectUrl>
+    <projectUrl>https://www.anaconda.com/products/individual</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@c908a814128b78210e1acd0db1e0e263b80f033f/Icons/anaconda_icon.png</iconUrl>
-    <copyright>© Copyright 2015, Anaconda, Inc.</copyright>
+    <copyright>© Copyright 2021, Anaconda, Inc.</copyright>
     <licenseUrl>https://www.anaconda.com/eula-anaconda-individual-edition</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/ContinuumIO</projectSourceUrl>
@@ -45,7 +45,7 @@ You can change any of the defaults with package parameters:
   `choco install anaconda3 --params '"/AddToPath /D:c:\MyTools"'`
 
     </description>
-    <releaseNotes>http://docs.anaconda.com/anaconda/reference/release-notes/</releaseNotes>
+    <releaseNotes>https://docs.anaconda.com/anaconda/reference/release-notes/</releaseNotes>
     <dependencies>
     </dependencies>
   </metadata>
