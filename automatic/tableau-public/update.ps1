@@ -8,8 +8,9 @@ function global:au_GetLatest {
                      Select-Object -ExpandProperty innertext
    $Version = $innertext.split()[-1]
 
-   $URL64 = "https://downloads.tableau.com/public/TableauPublicDesktop-64bit-$($Version.replace('.','-'))-0.exe"
-   
+#   $URL64 = "https://downloads.tableau.com/public/TableauPublicDesktop-64bit-$($Version.replace('.','-')).exe"
+   $URL64 = "https://public.tableau.com/s/download/public/pc64"
+
    return @{ 
             Version  = $Version
             URL64    = $URL64

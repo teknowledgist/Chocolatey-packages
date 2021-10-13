@@ -1,7 +1,7 @@
 import-module au
 
 function global:au_GetLatest {
-   $ArchiveURL = 'https://repo.continuum.io/archive/'
+   $ArchiveURL = 'https://repo.anaconda.com/archive/'
    $List = Invoke-WebRequest -Uri $ArchiveURL
 
    $version = "1.0"
@@ -12,8 +12,8 @@ function global:au_GetLatest {
          if ([version]$v -gt [version]$version) {$version = $v}
       }
 
-   $URL32 = "https://repo.continuum.io/archive/Anaconda3-$version-Windows-x86.exe"
-   $URL64 = "https://repo.continuum.io/archive/Anaconda3-$version-Windows-x86_64.exe"
+   $URL32 = "https://repo.anaconda.com/archive/Anaconda3-$version-Windows-x86.exe"
+   $URL64 = "https://repo.anaconda.com/archive/Anaconda3-$version-Windows-x86_64.exe"
 
    return @{ 
             Version  = $Version
