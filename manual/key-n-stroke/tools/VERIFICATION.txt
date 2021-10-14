@@ -1,0 +1,14 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The latest binary of Key-n-Stroke is available on the GitHub repository:
+   https://github.com/Phaiax/Key-n-Stroke
+The "Download" section has a link to get v1.0.0.0.  Copy that link and
+change the version number to "1.0.1".
+
+Direct Download:
+
+Version  : 1.0.1.0
+URL      : https://github.com/Phaiax/Key-n-Stroke/raw/master/Releases/v1.0.1/Key-n-Stroke.exe
+CheckSum : 9a19415560a13e775ba0f2a98c5abaf9007d969bf901995241725921ab728493

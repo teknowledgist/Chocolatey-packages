@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>key-n-stroke</id>
+    <version>1.0.1.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/key-n-stroke</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Key'n'Stroke</title>
+    <authors>Daniel Seemer (Phaiax)</authors>
+    <projectUrl>https://github.com/Phaiax/Key-n-Stroke</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@a8e4dee61de98985157b8ece1cc0d4476a895f29/Icons/key-n-stroke_icon.png</iconUrl>
+    <copyright>Copyright © 2011 Daniel Seemer</copyright>
+    <licenseUrl>https://github.com/Phaiax/Key-n-Stroke/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/Phaiax/Key-n-Stroke</projectSourceUrl>
+    <docsUrl>https://github.com/Phaiax/Key-n-Stroke</docsUrl>
+    <bugTrackerUrl>https://github.com/Phaiax/Key-n-Stroke/issues</bugTrackerUrl>
+    <tags>key-n-stroke present visualize keystroke mouse click cursor OSS embedded</tags>
+    <summary>Displays keystrokes in an overlay window and visualize mouse clicks.</summary>
+    <description>Key'n'Stroke makes it easy for your audience to follow your actions on the screen. 
+
+### Features
+* Highlights mouse cursor position: ![Mouse example](https://raw.githubusercontent.com/Phaiax/Key-n-Stroke/master/Screenshots/mouse.png)
+* Visually indicate mouse clicks.
+* Display keystrokes in an overlay at the bottom of the screen: ![Keystroke history example](https://raw.githubusercontent.com/Phaiax/Key-n-Stroke/master/Screenshots/bottom_right.png)
+* Displays special keys (e.g. volume up) and shortcuts.
+* Customizable icons, colors, font, size, position, text placement and text orientation.
+* Icon in notification area.
+* Works with high-dpi screens.
+* Works with multi-dpi screen setups.
+
+### Note:  
+Key'n'Stroke requires Windows 10 to run.
+
+</description>
+    <releaseNotes>https://github.com/Phaiax/Key-n-Stroke#releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
