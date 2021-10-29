@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>workrave</id>
+    <version>1.10.48</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/markdown-edit</packageSourceUrl>
+    <owners>Teknowledgist, Claud</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Workrave</title>
+    <authors>Raymond Penners and Rob Caelers</authors>
+    <projectUrl>https://workrave.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@53ba7a3722b504352c8ad48034c0fc1cdc8ec43c/Icons/workrave_icon.png</iconUrl>
+    <copyright>Copyright © 2001-2020 Raymond Penners and Rob Caelers</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/rcaelers/workrave/main/COPYING</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/rcaelers/workrave</projectSourceUrl>
+    <docsUrl>https://workrave.org/docs/</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/workrave/mailman/search/?mail_list=workrave-user</mailingListUrl>
+    <bugTrackerUrl>https://github.com/rcaelers/workrave-website/issues</bugTrackerUrl>
+    <tags>workrave work microbreak health rsi FOSS embedded</tags>
+    <summary>Take a break, relax and prevent RSI</summary>
+    <description>Workrave is a free program that assists in the recovery and prevention of Repetitive Strain Injury (RSI). It monitors your keyboard and mouse usage and using this information, it frequently alerts you to take microbreaks, rest breaks and restricts you to your daily computer usage. 
+
+### Features
+* Microbreaks - Workrave frequently reminds you take a short microbreak. Typically, every 3 minutes you get a microbreak that lasts about 30 seconds. 
+* Rest breaks - Several times a day, Workrave reminds you to take a break away from your computer. A rest break typically lasts about 10 minutes.
+* Daily Limit - Workrave keeps track of the amount of time you use your computer. When you have reached the configured daily computer usage limit, you are prompted to stop using the computer for the day.
+* Break warning - When it is time to take a break, Workrave presents a gentle non-obtrusive reminder. 
+* Break timer window - The timer window shows the progress of all three breaks. 
+* Statistics - Workrave collects a number of statistics on your computer usage. Per day, you can see the number of breaks you took, the number of breaks you ignored and postponed and the amount of time you use your computer on daily, weekly and monthly basis.
+* Exercises - At the start of a restbreak, Workrave can show a number of exercises that you can perform.
+* Settings - Workrave is highly configurable. 
+
+    </description>
+    <releaseNotes>https://github.com/rcaelers/workrave/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>

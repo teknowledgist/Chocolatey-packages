@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>nasm</id>
+    <version>2.15.05</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/key-n-stroke</packageSourceUrl>
+    <owners>Teknowledgist,dch,andyli</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>NetWide Assembler (install)</title>
+    <authors>The NASM development team</authors>
+    <projectUrl>https://www.nasm.us/</projectUrl>
+    <iconUrl>https://www.nasm.us/images/nasm.png</iconUrl>
+    <copyright>Copyright © 1996-2020 The NASM development team</copyright>
+    <licenseUrl>https://github.com/netwide-assembler/nasm/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/netwide-assembler/nasm</projectSourceUrl>
+    <docsUrl>https://www.nasm.us/docs.php</docsUrl>
+    <mailingListUrl>https://lists.nasm.us/</mailingListUrl>
+    <bugTrackerUrl>https://bugzilla.nasm.us/</bugTrackerUrl>
+    <tags>nasm SPACE_SEPARATED</tags>
+    <summary>An asssembler for the x86 CPU architecture</summary>
+    <description>The Netwide Assembler, NASM, is an 80x86 and x86-64 assembler designed for portability and modularity. It supports a range of object file formats, including Linux and *BSD a.out, ELF, Mach-O, 16-bit and 32-bit .obj (OMF) format, COFF (including its Win32 and Win64 variants.) It can also output plain binary files, Intel hex and Motorola S-Record formats. Its syntax is designed to be simple and easy to understand, similar to the syntax in the Intel Software Developer Manual with minimal complexity. It supports all currently known x86 architectural extensions, and has strong support for macros.
+    </description>
+    <releaseNotes>https://nasm.us/doc/nasmdocc.html</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
