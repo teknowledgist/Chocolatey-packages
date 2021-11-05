@@ -1,0 +1,21 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+The current and past binaries of NASM are available from the main site:
+   https://www.nasm.us/
+and clicking on the version number for "Stable" under "Latest version".
+
+Specifically:
+   https://www.nasm.us/pub/nasm/releasebuilds/<version>
+
+Once there, the "win32" and "win64" folders contain the binaries used
+in this package.
+
+Direct Download:
+
+Version      : 2.15.05
+x86 URL      : http://www.nasm.us/pub/nasm/releasebuilds/2.15.05//win32/nasm-2.15.05-installer-x86.exe
+x86 CheckSum : 576DCD994F6229D18057F16EF9C7A7C830A148DD83DADAA5A8D83A8E0397EED2
+x64 URL      : http://www.nasm.us/pub/nasm/releasebuilds/2.15.05//win64/nasm-2.15.05-installer-x64.exe
+x64 CheckSum : A02325B9FE54F917F5D6A3036637B38DBB6ADDF6F7BA9D344D9B943A143FE7D0
