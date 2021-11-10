@@ -19,7 +19,7 @@
     <docsUrl>https://brlcad.org/wiki/</docsUrl>
     <mailingListUrl>https://sourceforge.net/p/brlcad/mailman/</mailingListUrl>
     <bugTrackerUrl>https://sourceforge.net/p/brlcad/bugs/</bugTrackerUrl>
-    <tags>brl-cad SPACE_SEPARATED</tags>
+    <tags>brl-cad cad solid modeling raytrace dwg dwf FOSS embedded</tags>
     <summary>BRL-CAD is a powerful open source cross-platform solid modeling system.</summary>
     <description>BRL-CAD is a constructive solid geometry (CSG) solid modeling computer-aided design (CAD) system. It includes an interactive geometry editor, ray tracing support for graphics rendering and geometric analysis, computer network distributed framebuffer support, scripting, image-processing and signal-processing tools. The entire package is distributed in source code and binary form.
 

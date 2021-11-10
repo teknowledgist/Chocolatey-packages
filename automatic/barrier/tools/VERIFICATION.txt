@@ -7,7 +7,7 @@ https://github.com/debauchee/barrier/releases/latest
 
 Direct Download:
 
-Version  : 2.3.3
-URL      : https://github.com/debauchee/barrier/releases/download/v2.3.3/BarrierSetup-2.3.3-release.exe
-CheckSum : 13090FDA8E71B3FD1E21C7A1F495D28731B18FAA12B3D7D1A0FF1BEDD0AB5257
+Version  : 2.4.0
+URL      : https://github.com/debauchee/barrier/releases/download/v2.4.0/BarrierSetup-2.4.0-release.exe
+CheckSum : 7E66B7B4D13312E607EDD06F8EA38F3C9B09B3E8AEA2B55250C00B25F9892885
 
