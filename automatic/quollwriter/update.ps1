@@ -1,12 +1,14 @@
 import-module au
 
-$Release = 'https://github.com/garybentley/quollwriter/releases/latest'
+$Release = 'https://github.com/garybentley/quollwriter/releases'
 
 function global:au_GetLatest {
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
    $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
-   $null = $download_page.Links | Where-Object {$_.outerhtml -match 'Version ([0-9.]+)'}
+   $null = $download_page.Links | 
+               Where-Object {$_.outerhtml -match 'Version ([0-9.]+)'} |
+               Select-Object -First 1
    $version = $Matches[1]
 
    $url = "http://quollwriter.com/download/windows/"

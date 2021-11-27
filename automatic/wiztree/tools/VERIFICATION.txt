@@ -6,6 +6,6 @@ Download via the button on this page:
 https://wiztreefree.com/download
 
 Direct Download:
-Version  : 4.05
-URL      : https://wiztreefree.com/files/wiztree_4_05_setup.exe
-CheckSum : 2CD38A95C7ED1FFFA6BE2A0E0B6EE952A24995142B3A49D34BF56CA0DEE99635
+Version  : 4.06
+URL      : https://wiztreefree.com/files/wiztree_4_06_setup.exe
+CheckSum : 7D307410BB456BE794360355F648CD20247896F93F91A3BEB2B04549CA809BA1

@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $Installer = Get-ChildItem (Split-Path $MyInvocation.MyCommand.Definition) -Filter '*.msi' | 
-					Sort-Object LastWriteTime | Select-Object -Last 1
+               Sort-Object LastWriteTime | Select-Object -Last 1
 
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName

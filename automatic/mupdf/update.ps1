@@ -1,7 +1,7 @@
 import-module au
 
 function global:au_GetLatest {
-   $releases = 'https://mupdf.com/downloads'
+   $releases = 'https://mupdf.com/releases/index.html'
    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
    $url  = $download_page.links | 
@@ -11,7 +11,7 @@ function global:au_GetLatest {
    $version = $url.split('-')[1]
 
    return @{
-      URL32   = "$releases/$url"
+      URL32   = "$url"
       Version = $version
    }
 }

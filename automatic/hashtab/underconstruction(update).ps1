@@ -1,7 +1,7 @@
 import-module au
 
 function global:au_GetLatest {
-   $Release = 'http://implbits.com/products/hashtab/'
+   $Release = 'http://implbits.com/'
    $PageText = Invoke-WebRequest -Uri $Release
 
    $stub = $PageText.links | ? {$_.innertext -match 'download'} | select -ExpandProperty href
