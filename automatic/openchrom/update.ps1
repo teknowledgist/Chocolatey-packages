@@ -1,7 +1,11 @@
 import-module au
 
 $FilesPage = 'https://sourceforge.net/projects/openchrom/files/'
-
+<#
+There are versioning timestamps here:  https://github.com/OpenChrom/openchrom/wiki/changelog
+Also, that timestamp seems to match the "executable.win32.win32.x86_64" binary artifact in
+   the ".\p2\org.eclipse.equinox.p2.core\cache\artifacts.xml" file of the downloadable zip.
+#>
 function global:au_GetLatest {
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
    $download_page = Invoke-WebRequest -Uri $FilesPage
