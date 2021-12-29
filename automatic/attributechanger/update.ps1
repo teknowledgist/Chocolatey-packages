@@ -32,9 +32,9 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
    @{
       "tools\VERIFICATION.txt" = @{
-         "(^Version\s+:).*"      = "`${1} $($Latest.Version)"
-         "(^URL\s+:).*"          = "`${1} $($Latest.URL32)"
-         "(^Checksum\s+:).*"     = "`${1} $($Latest.Checksum32)"
+         "(^Version\s+:).*"    = "`${1} $($Latest.Version)"
+         "(^URL\s+:).*"        = "`${1} $($Latest.URL32)"
+         "(^SHA-256\s+:).*"    = "`${1} $($Latest.Checksum32)"
       }
    }
 }
