@@ -4,8 +4,8 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>workrave</id>
-    <version>1.10.48</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/markdown-edit</packageSourceUrl>
+    <version>1.10.49</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/workrave</packageSourceUrl>
     <owners>Teknowledgist, Claud</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Workrave</title>

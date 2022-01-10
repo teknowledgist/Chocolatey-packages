@@ -6,6 +6,6 @@ Binaries can be downloaded here:
 https://github.com/veyon/veyon/releases/tag/v4.0.8
 
 Direct download:
-Version  : 1.10.48
-URL      : https://github.com/rcaelers/workrave/releases/download/v1_10_48/workrave-win32-v1.10.48.exe
-CheckSum : 1DE1D7B45A99C8974C67FDD29B925AA7B71F8DADEC58AD49F79B9A1F10021D44
+Version  : 1.10.49
+URL      : https://github.com/rcaelers/workrave/releases/download/v1_10_49/workrave-win32-v1.10.49.exe
+CheckSum : CBE872A7CA1D5223203546CAAFDCFDFDA3769D0DBCF067D3B6C9C88EE918B14C

@@ -9,11 +9,11 @@ function global:au_GetLatest {
                Select-Object -ExpandProperty innerhtml
    $TData = $TRow -split '</?T[DH]>' | Where-Object {$_ -match 'version'} | Select-Object -First 1
 
-   $HREF = $TData -replace '.*"/([^"]+)".*','$1'
+   $HREF = $TData -replace '.*"/bitstream/([^"]+)".*','$1'
    $version = $TData -replace '.*version ([0-9.]+).*','$1'
    $revision = $TData -replace '.*revision ([0-9.]+).*','$1'
 
-   $url64 = 'https://slicer.kitware.com/midas3/download?' + ($HREF -replace '/','=')
+   $url64 = "https://slicer-packages.kitware.com/api/v1/item/$HREF/download"
 
    return @{ 
             Version      = "$version.$revision"
