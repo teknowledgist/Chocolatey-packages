@@ -1,14 +1,15 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*.exe').FullName
+$fileLocation = (Get-ChildItem -Path $toolsDir -filter '*.exe' |
+                        Sort-Object lastwritetime | Select-Object -Last 1).FullName
 
 $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
    fileType       = 'EXE'
    file           = $fileLocation
    softwareName   = "$env:ChocolateyPackageName*"
-  silentArgs      = '/quiet /norestart'
+  silentArgs      = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
    validExitCodes = @(0)
 }
 

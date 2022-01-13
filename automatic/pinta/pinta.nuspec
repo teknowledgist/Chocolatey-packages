@@ -34,6 +34,8 @@
 * **Your Workspace** Like docked windows? No problem. Floating windows? No problem. You can even mix and match. 
     </description>
     <releaseNotes>https://github.com/PintaProject/Pinta/releases</releaseNotes>
+    <dependencies>
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

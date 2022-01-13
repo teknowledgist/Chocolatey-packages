@@ -11,4 +11,4 @@ https://pinta-project.com/pintaproject/pinta/releases
 Direct download:
 Version  : 2.0.1
 URL      : https://github.com/PintaProject/Pinta/releases/download/2.0.1/Pinta.exe
-Checksum : CB27413C74AD0CCCE5934CF1F8A60FFB36171600618E84C0254CB778814D609E
+Checksum : 71862f9d8add3218ac75e7e848e1e7d86c2a833d0484e6f74b8f2bf8e08f8afe
