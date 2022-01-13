@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>riot</id>
-    <version>0.6.2</version>
+    <version>1.0.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/riot</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -29,24 +29,27 @@ It is lightweight, fast and simple to use, yet powerful for advanced users. You 
 
 ### Features
 
-* open many image types including Adobe Photoshop PSD, HDR, RAW and rare/scientific types
+* open many image types including Adobe Photoshop PSD, HDR, RAW and rare/scientific types (*up to 128 bpp, integer and floating point*)
 * save and optimize JPEG, GIF and PNG with a simple, clean user interface
 * automatic optimization selects the most suitable format and parameters
-* works in dual view: (original + optimized image) or single view (optimized image).
-* in-place compare function (alternativelly display the original image over the optimized image to notice small pixel changes)
+* works in dual view: (*original + optimized image*) or single view (*optimized image*).
+* in-place compare function (*alternativelly display the original image over the optimized image to notice small pixel changes*)
 * compress files to desired filesize threshold
-* fast processing (all is done in memory); see instant results including resulting filesize
-* batch support (process multiple files at once)
+* fast processing (*all is done in memory*); see instant results including resulting filesize
+* batch support (*process multiple files at once*)
 * transparency handling options
-* decide if you want to keep metadata (comments, IPTC, Adobe XMP, EXIF profiles, ICC profiles).  Unsupported metadata is removed
-* transfer metadata between image formats (destination format must support them)
+* decide if you want to keep metadata (*comments, IPTC, Adobe XMP, EXIF profiles, ICC profiles*).  Unsupported metadata is removed
+* transfer metadata between image formats (*destination format must support them*)
 * common tools: pan and zoom, rotate, flip
 * basic image adjustments: brightness, contrast, gamma, invert
-* visually reduce number of unique colors for PNG and GIF images in order to reduce filesize (two quantization methods are available: Xiaolin Wu and NeuQuant neural net)
-* resize image by using well known resample filters (ex: Lanczos3, Catmull Rom, Bicubic, and others)
-* out-of-the-box support for external PNG optimizers (optipng, pngout, etc)
+* visually reduce number of unique colors for PNG and GIF images in order to reduce filesize (*two quantization methods are available: Xiaolin Wu and NeuQuant neural net*)
+* resize image by using well known resample filters (*ex: Lanczos3, Catmull Rom, Bicubic, and others*)
+* out-of-the-box support for external PNG optimizers (*optipng, pngout, etc*)
 * compression and results are comparable to those of commercial products, even higher.
-* Adaptive logarithmic tone mapping algorithm (Drago) used for HDR images
+* Adaptive logarithmic tone mapping algorithm (*Drago*) used for HDR images
+
+### Breaking change
+There is no longer an installer for a 32-bit version of RIOT. Accordingly, this package will only install/upgrade on 64-bit systems.
 
 </description>
     <releaseNotes>https://riot-optimizer.com/changelog/</releaseNotes>

@@ -25,22 +25,20 @@ You may:
 
 -install and use any or all Product Elements included in the Product, as specified in the individual Terms of Use or License for each Product Element;
 -copy the Product, provided that such copies contain all the original Product's contents and proprietary notices.
--permit other individuals to use the Product under the terms listed above.
 -place the Product in his original package on the Internet or any other public access network;
--use RIOT.DLL in your applications as a plugin and deploy it, provided that such copies contain all the original Product's contents and proprietary notices
+-use RIOT.DLL in your applications as a plugin and deploy it, provided that such copies contain all the original Product's contents and proprietary notices and you have a written consent from the author for your specific application.
 
 You may not:
 
 -extract portions of a Product Element not permitted by the Terms of Use or Licenses for the Product Element;
 -sell licenses for the Product;
 -include the Product or any Product Element in any other collection or other product without the author's consent;
--distribute the Product or any Product Elements without the author's consent
 -remove any proprietary notices on the Product or on any Product Element.
+-gain any revenue directly or indirectly from using this product unless this is specifically permitted by the AUthor
 
 Title: Title, ownership rights, and intellectual property rights in and to the Product and all component works within it shall remain to The author or the original copyright holders. The Product and all Product Elements within it are protected by the copyright laws of the European Union and international copyright treaties.
 
 Warranty: The author provides no warranties for the Product, but if used as directed and in conjunction with the operating systems for which it was designed, the Product should substantially achieve the functionality described in the documentation. The author does not warrant that your use of the Product will be uninterrupted or that its operation will be error free. In no event shall The author or any Contributors be liable to the licensed user for any special, indirect, incidental, or consequential damages, including (but not limited to) loss of revenues or loss of profits.
 
-Copyright © 2008-2009 Lucian Sabo
-luciansabo@gmail.com
-Rev: 05 May 2009
+Copyright © 2004-2021 Lucian Sabo
+Rev: 21 Jan 2021
