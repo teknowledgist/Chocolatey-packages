@@ -6,8 +6,8 @@ $packageArgs = @{
    fileType      = 'EXE'
    url           = 'https://s3.amazonaws.com/blstudio/Studio2.0/Studio+2.0_32.exe'
    url64bit      = 'https://s3.amazonaws.com/blstudio/Studio2.0/Studio+2.0.exe'
-   checksum      = '1dccc7f8524d2858e2b188133b61fd53d9db8ba7248a056b568f6d747c96d802'
-   checksum64    = 'fbb3eece8ab2000d7b948054abfcb021c96a9259bd99cfd76c1ddecf1eeb7051'
+   checksum      = '020d62e6a9fd76a0d3f2a0ab15d5597a73db7ee804e22d92a3ba28c059deff48'
+   checksum64    = 'c581f40d58235aa7af34609c1ba0ecbe4891162730438cfeb012acb852fe06ef'
    checksumType  = 'sha256'
    silentArgs    = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).Install.log`""
    validExitCodes= @(0)
