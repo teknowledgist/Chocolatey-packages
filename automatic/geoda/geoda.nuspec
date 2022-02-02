@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>geoda</id>
-    <version>1.18.0.0</version>
+    <version>1.20.0.8</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/geoda</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -12,24 +12,40 @@
     <authors>Center for Spatial Data Science (CSDS)</authors>
     <projectUrl>https://geodacenter.github.io/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@85290e2431b5ea98a18c220f29643db751d80412/Icons/geoda_icon.png</iconUrl>
-    <copyright>Copyright © 2003-2016 Luc Anselin</copyright>
+    <copyright>Copyright © 2003-2021 Luc Anselin</copyright>
     <licenseUrl>http://www.gnu.org/licenses/gpl-3.0.html</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/GeoDaCenter/geoda/</projectSourceUrl>
-    <docsUrl>http://geodacenter.github.io/documentation.html</docsUrl>
-    <mailingListUrl>https://groups.google.com/forum/#!forum/openspace-list</mailingListUrl>
+    <docsUrl>https://geodacenter.github.io/documentation.html</docsUrl>
+    <mailingListUrl>http://groups.google.com/group/openspace-list?lnk=</mailingListUrl>
     <bugTrackerUrl>https://github.com/GeoDaCenter/geoda/issues</bugTrackerUrl>
     <tags>geoda esda spatial statistics maps gis admin embedded</tags>
     <summary>An introduction to spatial data analysis.</summary>
     <description>GeoDa is a free and open source software tool that serves as an introduction to spatial data analysis. It is designed to facilitate new insights from data analysis by exploring and modeling spatial patterns.
 
-GeoDa was developed by [Dr. Luc Anselin](http://spatial.uchicago.edu/directory/luc-anselin-phd) and his [team](http://spatial.uchicago.edu/directories/full/all). The program provides a user-friendly and graphical interface to methods of exploratory spatial data analysis (ESDA), such as spatial autocorrelation statistics, and basic spatial regression analysis for lattice data (points and polygons).
+GeoDa was developed by [Dr. Luc Anselin](https://en.wikipedia.org/wiki/Luc_Anselin) and his [team](https://spatial.uchicago.edu/directories/full/team). The program provides a user-friendly and graphical interface to methods of exploratory spatial data analysis (ESDA), such as spatial autocorrelation statistics for aggregate data (several thousand records), and basic spatial regression analysis for point and polygon data (tens of thousands of records). To work with big data in GeoDa it should first be aggregated to areal units.
 
-GeoDa supports a large variety of vector data in different formats. You can work with shapefiles, geodatabases, GeoJSON, MapInfo, GML, KML, and other vector data formats supported by the GDAL library. The program also converts coordinates in table format (.csv, .dbf, .xls, .ods) to one of these spatial data formats and converts data between different file formats (such as .csv to .dbf or shapefile to GeoJSON). 
+### GeoDa Abilities
+* [Work with a large variety of vector data in different formats.](https://geodacenter.github.io/formats.html) 
+* Convert coordinates in table format (.csv, .dbf, .xls, .ods) to spatial data formats.
+* Multi-layer support!
+* Explore Statistical Results through Linked Maps and Charts.
+* Analyze Spatial and Temporal Patterns Across Linked Views.
+* Ground-Truth Map Results with Basemaps.
+* Compare Averages Across Time and Space.
+* Detect Relationships in Multivariate Space.
+* Find Statistically Significant Spatial Clusters.
+* Compare a Suite of Spatially Constrained Cluster Techniques.
+* Determine if Changes Over Time Are Spatially Clustered.
+* Test if Multiple Variables Are Clustered in Space.
+* Map Patterns of Non-Spatial Cluster Statistics
+* Find the Threshold Where Spatial Correlation Ends.
+* Explore the Impact of Flexible Data Categorization.
+
     </description>
     <releaseNotes>https://github.com/GeoDaCenter/geoda/releases</releaseNotes>
     <dependencies>
-      <dependency id="vcredist2010" version="10.0" />
+      <dependency id="vcredist140" version="14.28.29913" />
     </dependencies>
   </metadata>
   <files>

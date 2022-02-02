@@ -13,9 +13,21 @@ if ($key.Count -eq 1) {
 }
 
 $Bitness = Get-OSArchitectureWidth
-
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$InstallerFile = (Get-ChildItem -Path $toolsDir -Filter "*$($Bitness)bit.exe").FullName
+# Remove any previous installer files
+Get-ChildItem $toolsDir -filter *.exe -Recurse | ForEach-Object { Remove-Item $_.fullname -Force }
+
+$ZipFile = Get-ChildItem -Path $toolsDir -Filter "*x$Bitness*.zip" | 
+               Sort-Object LastWriteTime | 
+               Select-Object -ExpandProperty FullName -Last 1 
+$ZipArgs = @{
+   PackageName    = $env:ChocolateyPackageName
+   FileFullPath   = $ZipFile
+   Destination    = $toolsDir
+}
+$null = Get-ChocolateyUnzip @ZipArgs
+
+$InstallerFile = (Get-ChildItem -Path $toolsDir -Filter "*.exe" -Recurse).FullName
 
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
@@ -27,8 +39,9 @@ $InstallArgs = @{
 
 Install-ChocolateyInstallPackage @InstallArgs
 
-$exes = Get-ChildItem $toolsDir -filter *.exe -Recurse |select -ExpandProperty fullname
-foreach ($exe in $exes) {
-   Remove-Item $exe -ea 0 -force
+$binaries = Get-ChildItem "$toolsDir\*.zip","$toolsdir\*.exe" -Recurse |
+               Select-Object -ExpandProperty fullname
+foreach ($bin in $binaries) {
+   Remove-Item $bin -ea 0 -force
 }
 

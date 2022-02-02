@@ -1,21 +1,20 @@
 import-module au
 
-$Release = 'https://geodacenter.github.io/download_windows.html'
-
 function global:au_GetLatest {
+   $Release = 'https://geodacenter.github.io/download_windows.html'
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
    $download_page = Invoke-WebRequest -Uri $Release
 
-   $regex = '^.*?/(.*?\.zip).*'
-   $urls = $download_page.links | ? {$_.href -match 'geoda-.*\.exe'} | select -ExpandProperty href -First 2
-   $url64 = $urls[0]
-   $url32 = $urls[1]
+   $Links = $download_page.links | 
+               Where-Object {$_.href -match 'geoda-.*\.zip'} | 
+               Select-Object -First 2
+   $url64 = $Links[0].href
+   $url32 = $Links[1].href
 
-   $version = (($urls[0] -split '/')[-1] -split '-')[1]
+   $Version = ($links[0].innertext.split() | Where-Object {$_ -match '^v?[0-9.]+$'}).trim('v')
 
    return @{ 
-            AppVersion = $Version
-            Version    = $version
+            Version    = $Version
             URL32      = $url32
             URL64      = $url64
            }
@@ -25,7 +24,7 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
     @{
       "tools\VERIFICATION.txt" = @{
-         "(^Version\s+:).*"      = "`${1} $($Latest.AppVersion)"
+         "(^Version\s+:).*"      = "`${1} $($Latest.Version)"
          "(^x86 URL\s+:).*"      = "`${1} $($Latest.URL32)"
          "(^x86 Checksum\s+:).*" = "`${1} $($Latest.Checksum32)"
          "(^x64 URL\s+:).*"      = "`${1} $($Latest.URL64)"
@@ -36,7 +35,7 @@ function global:au_SearchReplace {
 
 
 function global:au_BeforeUpdate() { 
-   Write-host "Downloading GeoDa $($Latest.AppVersion) installer files"
+   Write-host "Downloading GeoDa $($Latest.Version) installer files"
    Get-RemoteFiles -Purge -NoSuffix
 }
 
