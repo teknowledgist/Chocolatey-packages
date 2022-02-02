@@ -11,13 +11,13 @@
     <title>Workrave</title>
     <authors>Raymond Penners and Rob Caelers</authors>
     <projectUrl>https://workrave.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@53ba7a3722b504352c8ad48034c0fc1cdc8ec43c/Icons/workrave_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/rcaelers/workrave@c14c5d68fbc802dc9d0d969e939f355647400439/ui/data/images/128x128/workrave.png</iconUrl>
     <copyright>Copyright © 2001-2020 Raymond Penners and Rob Caelers</copyright>
     <licenseUrl>https://raw.githubusercontent.com/rcaelers/workrave/main/COPYING</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/rcaelers/workrave</projectSourceUrl>
     <docsUrl>https://workrave.org/docs/</docsUrl>
-    <mailingListUrl>https://sourceforge.net/p/workrave/mailman/search/?mail_list=workrave-user</mailingListUrl>
+    <mailingListUrl>https://github.com/rcaelers/workrave/discussions</mailingListUrl>
     <bugTrackerUrl>https://github.com/rcaelers/workrave-website/issues</bugTrackerUrl>
     <tags>workrave work microbreak health rsi FOSS embedded</tags>
     <summary>Take a break, relax and prevent RSI</summary>

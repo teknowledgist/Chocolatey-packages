@@ -3,9 +3,9 @@ Verification is intended to assist the Chocolatey moderators and community
 in verifying that this package's contents are trustworthy.
 
 Direct download: 
-Version  : 2.5.7
-URL      : https://github.com/henrypp/chrlauncher/releases/download/v.2.5.7/chrlauncher-2.5.7-bin.zip
-Checksum : B305167B7CC2F593FF5EAED0B8D7713BE1D50736F26477006B22D5120CA09AF8
+Version  : 2.6
+URL      : https://github.com/henrypp/chrlauncher/releases/download/v.2.6/chrlauncher-2.6-bin.zip
+Checksum : C698E8BAED23EE1AD9366B475F52436BBBE95BAEB3CA022E198A33865835CC99
 
 An independent Checksum is in this file:
-https://github.com/henrypp/chrlauncher/releases/download/v.2.5.7/chrlauncher-2.5.7.sha256
+https://github.com/henrypp/chrlauncher/releases/download/v.2.6/chrlauncher-2.6.sha256
