@@ -4,18 +4,17 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>hashtab</id>
-    <version>6.0.0.3401</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/hashtab</packageSourceUrl>
+    <version>6.0.0.3402</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/hashtab</packageSourceUrl>
     <owners>angryhussord, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>HashTab</title>
     <authors>Implbits Software LLC</authors>
     <projectUrl>http://implbits.com/products/hashtab/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/hashtab_icon.png</iconUrl>
-    <copyright>© Implbits Software</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/manual/hashtab/tools/LICENSE.txt</licenseUrl>
+    <copyright>Copyright © 2016 Implbits Software</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/hashtab/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <docsUrl>http://implbits.com/support/#collapsehtqna</docsUrl>
     <tags>hashtab checksum hash md5 sha1 sha2 ripemd haval whirlpool sha256 file embedded</tags>
     <summary>An Explorer extension to calculate file checksums for many hash algorithms.</summary>
     <description>HashTab provides OS extensions to calculate file hashes.
@@ -30,8 +29,8 @@ To use, just right-click on any file and select `Properties`. The new tab called
 * Purposely designed to feel like a native feature of Windows. Simply select any file, go to properties, and use the new “File Hashes” tab. 
 * Save hashes to checksum files
 
-#### License Note:
-There is no license fee if HashTab is installed on your personal Computers or if the software is installed on Computers owned and operated by a non-commercial, charitable, or chartered educational organization.  After a 30 day evaluation, all other users and organizations must purchase a license key or uninstall and discontinue using the Software.  For more information on obtaining a commercial license key, please visit http://implbits.com or contact sales@implbits.com.
+#### Discontinued
+[Implbits Software, LLC is going out of business.](https://web.archive.org/web/20220118193833/http://implbits.com/)  "Soon", a release of Hashtab as an Open Source project will be put on Github.  Until then, this Chocolatey package may be the only place to get the verifiable installer.
     </description>
     <releaseNotes>http://implbits.com/products/hashtab/</releaseNotes>
   </metadata>

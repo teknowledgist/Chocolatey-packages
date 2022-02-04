@@ -1,0 +1,17 @@
+VERIFICATION
+Verification is intended to assist the Chocolatey moderators and community
+in verifying that this package's contents are trustworthy.
+ 
+Implbits Software, LLC (the author of Hashtab) is out of business.  The
+website (and download) are no longer online.  The SHA256 checksum/hash 
+of the installer embedded in this package can be verified against the 
+hash as shown on the last snapshot of the website available on the 
+Internet Archive "Wayback Machine":
+
+https://web.archive.org/web/20220118193833/http://implbits.com/
+
+Former Direct Download:
+Version : 6.0.0.34
+URL     : http://implbits.com/products/hashtab/./HashTab_v6.0.0.34_Setup.exe
+SHA256  : 85CAA9EA0BB91DA273E4D02B5F0A1C1736CC7314C4F2C839882339CC69DDAF10
+
