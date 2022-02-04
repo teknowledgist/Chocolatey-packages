@@ -11,7 +11,7 @@ letter into a numbered version as identifed below
 
 Direct Download:
 
-Version : 11.0-rc
-URL     : https://www.petges.lu/pubfiles/ac-11_00-rc.exe
-SHA-256 : 27CDBB7FFFC47B5187CAB736293F9A3507197ECF61ADC5A2881E8A8E5177C5B9
+Version : 11.0-rc2
+URL     : https://www.petges.lu/pubfiles/ac-11_00-rc2.exe
+SHA-256 : 86C4FD9D8F2EDD35B9A4AA8955EC947D7273C227BA42567A43B5B0D783B7E75D
 
