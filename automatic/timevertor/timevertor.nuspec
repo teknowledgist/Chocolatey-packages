@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>timevertor</id>
+    <version>1.4.3</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/timevertor</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>TimeVertor (portable)</title>
+    <authors>Henry++</authors>
+    <projectUrl>http://www.henrypp.org/product/timevertor</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/henrypp/timevertor@516e11a0f44189f72e24a68981d6ef8bb40a2051/src/res/100.ico</iconUrl>
+    <copyright>Copyright (c) 2012-2021, Henry++</copyright>
+    <licenseUrl>https://github.com/henrypp/timevertor/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/henrypp/timevertor</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/henrypp/timevertor/issues</bugTrackerUrl>
+    <tags>timevertor time timestamp datetime conversion portable embedded FOSS</tags>
+    <summary>A tiny and completely free application for datetime conversion.</summary>
+    <description>TimeVertor is tiny and completely free application for datetime conversion to human-readable, RFC 822, ISO 8601, UNIX Timestamp, Mac Timestamp, Microsoft Timestamp and FILETIME. 
+    
+![Example Window](https://www.henrypp.org/images/timevertor.png)
+
+    </description>
+    <releaseNotes>https://github.com/henrypp/timevertor/blob/master/CHANGELOG.md</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
