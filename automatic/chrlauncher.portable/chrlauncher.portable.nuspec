@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>chrlauncher.portable</id>
     <version>2.6</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/chrlauncher</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/chrlauncher.portable</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>chrlauncher (portable)</title>
