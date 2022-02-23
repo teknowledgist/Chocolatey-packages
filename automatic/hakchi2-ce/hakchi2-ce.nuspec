@@ -10,13 +10,14 @@
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Hakchi2 CE</title>
     <authors>princess_daphie, DanTheMan827, and skogaby</authors>
-    <projectUrl>https://github.com/TeamShinkansen/Hakchi2-CE</projectUrl>
+    <projectUrl>https://github.com/TeamShinkansen/Hakchi2-CE#readme</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/hakchi2_icon.png</iconUrl>
     <copyright>Copyright © 2021 Team Shinkansen</copyright>
     <licenseUrl>https://github.com/TeamShinkansen/Hakchi2-CE/blob/mainline/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/TeamShinkansen/Hakchi2-CE</projectSourceUrl>
     <docsUrl>https://github.com/TeamShinkansen/Hakchi2-CE/wiki</docsUrl>
+    <mailingListUrl>https://discord.gg/UUvqsAR</mailingListUrl>
     <bugTrackerUrl>https://github.com/TeamShinkansen/Hakchi2-CE/issues</bugTrackerUrl>
     <tags>hakchi2-ce hakchi NES Nintendo game portable embedded</tags>
     <summary>A ROM-management tool for NES Mini</summary>
@@ -25,7 +26,7 @@
 The aim of this fork is to not only provide new UI features and enhancements, but also bring the core of hakchi2 up to date with the rest of the modding ecosystem (i.e. USB host support, SD support).
 
 This application can add more games (game ROMs) to your NES/SNES Classic Mini or Famicom Mini. All you need is to connect it to a Windows PC via Micro-USB cable. No soldering or disassembling required.
-https://github.com/ClusterM/hakchi2
+https://github.com/TeamShinkansen/hakchi2
 
 ### Features
 * Change any game settings (including command-line arguments)
@@ -50,5 +51,6 @@ https://github.com/ClusterM/hakchi2
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
