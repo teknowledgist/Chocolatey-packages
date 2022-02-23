@@ -1,11 +1,9 @@
 import-module au
 
 function global:au_GetLatest {
-   $MainPage = Invoke-WebRequest -Uri 'https://lastools.github.io/'
-   $text = $MainPage.AllElements | ? {$_.tagname -eq 'p' -and $_.innertext -match 'download.*txt'} |select -ExpandProperty innertext
+   $MainPage = Invoke-WebRequest -Uri 'https://lastools.github.io/download/CHANGES.txt'
 
-   $null = $text -match '[a-z]+ \d\d?[snrt][tdh] 20\d\d'
-   $version = get-date ($matches[0] -replace '(\d\d?)[snrt][tdh]','$1') -format yyyy.MM.dd
+   $version = get-date ($mainpage.content.split('-')[0]) -format yyyy.MM.dd
 
    $url = 'https://lastools.github.io/download/LAStools.zip'
 
