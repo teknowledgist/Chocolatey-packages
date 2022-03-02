@@ -1,7 +1,4 @@
-﻿From the bottom of the "instructions.txt" file included in the zip download.
-
-
-Warranty
+﻿Warranty
 ========
 
 There is absolutely no warranty of any kind whatsoever, either 

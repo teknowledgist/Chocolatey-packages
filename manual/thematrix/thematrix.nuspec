@@ -4,8 +4,8 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>thematrix</id>
-    <version>1.14</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/thematrix</packageSourceUrl>
+    <version>1.15</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/thematrix</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>The Matrix (screensaver)</title>
@@ -13,7 +13,7 @@
     <projectUrl>https://www.meticulous-software.co.uk/downloads.shtml</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@4236281ac8ec0ef1fbcea4819ea8b5025ed544d6/Icons/thematrix_icon.png</iconUrl>
     <copyright>Copyright 2000-2010 - Meticulous Software</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/thematrix/tools/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/thematrix/tools/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://www.meticulous-software.co.uk/release114.htm</docsUrl>
     <mailingListUrl>https://www.meticulous-software.co.uk/contacts.shtml</mailingListUrl>
@@ -27,9 +27,10 @@ The screen saver supports multiple monitors, so this time the Matrix really will
 
 If you like the screensaver and feel so inclined, please [donate](https://www.meticulous-software.co.uk/donationware.htm).
     </description>
-    <releaseNotes>https://www.meticulous-software.co.uk/release114.htm</releaseNotes>
+    <releaseNotes>https://www.meticulous-software.co.uk/release115.htm</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
