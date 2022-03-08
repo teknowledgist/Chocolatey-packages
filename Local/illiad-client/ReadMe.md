@@ -1,7 +1,7 @@
 ILLiad allows you to replace paper-based workflows, manage a high volume of requests and automate routine functions for borrowing and lending resources between libraries with integration into a variety of third-party systems. ILLiad allows your users to place and monitor their requests without librarian assistance and to get materials quickly.
 
 ### Optional Parameters
-By default, this package will install all components of the ILLiad client installer put all the shortcuts on the public desktop (which can't be removed by unprivileged users) and require each user to set the path to the DB Connection (i.e. .dbc file).  Use the following optional package parameters to change that: 
+By default, this package will install all components of the ILLiad client installer, put all the shortcuts on the public desktop (which can't be removed by unprivileged users) and require each user to set the path to the DB Connection (i.e. .dbc file).  Use the following optional package parameters to change that: 
 
 * `/Skip:(list-of-components)` - The components listed will not be installed.  Possible component names are: 'ILLiadClient', 'StaffManager', 'CustomizationManager', 'ElectronicDeliveryUtility', 'SAM', 'BillingManager'
 * `/NoIcons` - All icons created by the installer on the public desktop will be removed before completion.

@@ -12,13 +12,19 @@ if (-not (Test-Path $fileLocation)) {
 }
 
 # Extract the MSI bits for product code identification
-$SetupArgs = @{
-   Statements       = "/s /f2$env:Temp\TestLog.log /x /b$env:Temp"
-   ExetoRun         = $fileLocation
-   WorkingDirectory = $env:Temp
-   validExitCodes   = @(-3)  # This "fail code" is expected here
+$ExtractArgs = @{
+   ArgumentList = "/s /f2$env:Temp\TestLog.log /x /b$env:Temp"
+   FilePath     = $fileLocation
+   PassThru      = $true
 }
-$exitCode = Start-ChocolateyProcessAsAdmin @SetupArgs
+$ExtractProc = Start-Process @ExtractArgs  # This should "fail" with a -3 code
+
+$i = 0
+Do {
+   start-sleep -Milliseconds 500
+   Write-Host ("`rCollecting Info..." + ('.'*$i)) -NoNewline
+   $i++
+} While (-not $ExtractProc.HasExited)
 
 # Gather the product code for this version
 if (Test-Path "$env:Temp\Setup.ini") {
