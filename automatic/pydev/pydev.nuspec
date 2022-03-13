@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pydev</id>
-    <version>9.2.0</version>
+    <version>9.3.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pydev</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -17,9 +17,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://sourceforge.net/projects/pydev/files/pydev/</projectSourceUrl>
     <docsUrl>http://www.pydev.org/manual.html</docsUrl>
-    <mailingListUrl>https://sourceforge.net/p/pydev/mailman/</mailingListUrl>
-    <bugTrackerUrl>https://stackoverflow.com/questions/tagged/pydev</bugTrackerUrl>
-    <tags>pydev eclipse python jython ide development code plugin embedded foss admin</tags>
+    <mailingListUrl>https://stackoverflow.com/questions/tagged/pydev</mailingListUrl>
+    <bugTrackerUrl>https://www.brainwy.com/</bugTrackerUrl>
+    <tags>pydev eclipse python jython ide development code plugin embedded foss</tags>
     <summary>A Python IDE for Eclipse.</summary>
     <description>PyDev is a Python IDE extension for Eclipse which may be used for Python, Jython and IronPython development (and is among the leading tools for Python coding).
 
@@ -40,6 +40,7 @@ It comes with many goodies such as:
 - [Unittest integration](http://www.pydev.org/manual_adv_pyunit.html)
 - [Code coverage](http://www.pydev.org/manual_adv_coverage.html)
 - [PyLint integration](http://www.pydev.org/manual_adv_pylint.html)
+- [MyPy integration](https://www.pydev.org/manual_adv_mypy.html)
 - Find References (Ctrl+Shift+G)
 - and [many others](http://www.pydev.org/manual_adv_features.html).
 
