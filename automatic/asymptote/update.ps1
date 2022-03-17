@@ -9,7 +9,7 @@ function global:au_GetLatest {
                 Select-Object -ExpandProperty title
    $version = $Title.split('/')[1]
 
-   $URL32 = "https://sourceforge.net/projects/asymptote/files/$version/asymptote-$($version)-setup-32.exe"
+   $URL32 = "https://sourceforge.net/projects/asymptote/files/$version/asymptote-$($version)-setup-32/asymptote-$($version)-setup-32.exe"
    $URL64 = "https://sourceforge.net/projects/asymptote/files/$version/asymptote-$($version)-setup.exe"
 
    return @{ 
