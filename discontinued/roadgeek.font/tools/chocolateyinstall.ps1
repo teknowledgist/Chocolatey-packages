@@ -11,10 +11,7 @@ $UnzipArgs = @{
 }
 Get-ChocolateyUnzip @UnzipArgs
 
-$FontFiles = Get-ChildItem $UnzipDir -Include "*.OTF" -Recurse | 
-                  Select-Object -ExpandProperty FullName
-
-$Installed = Add-Font $FontFiles -Multiple
+$Installed = Add-Font $UnzipDir -Multiple
 
 If ($Installed -eq 0) {
    Throw 'All font installation attempts failed!'
