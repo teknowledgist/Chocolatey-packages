@@ -6,9 +6,9 @@ The extension can be downloaded from the official download link:
 - https://github.com/TeamShinkansen/Hakchi2-CE/releases
 
 or directly:
-Version : 3.9.2
-URL     : https://github.com/TeamShinkansen/Hakchi2-CE/releases/download/v3.9.2/hakchi2-ce-3.9.2-installer.exe
-SHA256  : E85781C92775D5920E3838536994B068DBACF81571240F118EFC3A1EB04CD46F
+Version : 3.9.3
+URL     : https://github.com/TeamShinkansen/Hakchi2-CE/releases/download/v3.9.3/hakchi2-ce-3.9.3-installer.exe
+SHA256  : 57B8708D5246878B48A98A08C9B0B4E28D9A4D4D3291820DF5ECBFF0FE90CF34
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

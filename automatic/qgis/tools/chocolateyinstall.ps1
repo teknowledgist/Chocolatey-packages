@@ -7,9 +7,9 @@ $InstallArgs = @{
    packageName    = 'qgis'
    fileType       = 'MSI'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
-   url64bit       = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.24.0-2.msi'
+   url64bit       = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.24.1-1.msi'
    checksumType   = 'sha256'
-   checksum64     = '58bde6d908d17b4435efa9b15d80187ec140a6b59c137f74677ff82a152a6cbf'
+   checksum64     = 'fe59f7707aca1885346ec01e165d6cdf99579375718b2cd9f55585ec4708d5fd'
    silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes = @(0)
 }
