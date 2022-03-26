@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pdf24</id>
-    <version>10.8.0</version>
+    <version>11.0.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdf24</packageSourceUrl>
     <owners>freaky-m0,jberezanski,teknowledgist,chocolatey,pocki_c</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -13,11 +13,11 @@
     <projectUrl>https://tools.pdf24.org/en/creator</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@cc4b1558ccc7853df6d0cb4f1f79cb63caede42b/Icons/pdf24_icon.png</iconUrl>
     <copyright>geek Software GmbH</copyright>
-    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/pdf24/tools/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/pdf24/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://creator.pdf24.org/manual/</docsUrl>
     <mailingListUrl>https://help.pdf24.org/en/forums/forum/pdf24-creator</mailingListUrl>
-    <tags>pdf24 pdf pdfcreator printer embedded</tags>
+    <tags>pdf24 pdf pdfcreator printer</tags>
     <summary>A free and easy solution to many PDF problems</summary>
     <description>The free, PDF24 PDF Creator is a program to create PDF files from almost any application.  The PDF creator functions as a virtual PDF printer and provides some PDF editing features.
 

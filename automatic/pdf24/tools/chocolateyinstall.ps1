@@ -5,9 +5,11 @@ $Installer = (Get-ChildItem $toolsDir -Filter '*.msi').FullName
 
 $InstallArgs = @{
    packageName   = $env:ChocolateyPackageName
-   fileType      = 'MSI' 
-   File          = $Installer
    softwareName  = "$env:ChocolateyPackageName*"
+   fileType      = 'MSI' 
+   url           = 'https://stx.pdf24.org/download/pdf24-creator-11.0.1.msi'
+   checksum      = 'e1e7554d3a99285352134f94126fe001ca93cc2641520629e2a3a9675c26f08a'
+   checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
    silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes= @(0, 3010, 1641)
 }
@@ -68,5 +70,5 @@ if ($pp['Basic']) {
 
 $InstallArgs.silentArgs = "$($InstallArgs.silentArgs)$I$F"
 
-Install-ChocolateyInstallPackage @InstallArgs
+Install-ChocolateyPackage @InstallArgs
 
