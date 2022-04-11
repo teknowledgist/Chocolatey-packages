@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xplorer2pro</id>
-    <version>4.5.0.1</version>
+    <version>5.0.0.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xplorer2pro</packageSourceUrl>
     <owners>Werner van Deventer, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -16,7 +16,7 @@
     <licenseUrl>http://zabkat.com/x2lic.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://zabkat.com/x2h_0.htm</docsUrl>
-    <mailingListUrl>http://netez.com/bbs/</mailingListUrl>
+    <mailingListUrl>https://forum.zabkat.com/viewforum.php?f=18</mailingListUrl>
     <bugTrackerUrl>http://zabkat.com/contact.htm</bugTrackerUrl>
     <tags>xplorer2pro xplorer2 xplorer explorer shell file manage search filter preview tabs dual-pane trial notsilent</tags>
     <summary>Reclaim control of your files and folders.</summary>
@@ -45,17 +45,22 @@
 ### Trial-ware
 This package installs a fully-functional, **21-day trial version** of *xplorer² professional*.
 
-### Installation Package Parameters
-A simple, silent install of **xplorer²** uses default options that -- in some cases -- require a re-install to change.  The following package parameters can be set to choose other install options:
+### Installation Arguments
+A default install of **xplorer²** uses options that -- in some cases -- require a re-install to change.  The installer has a some options that can be utilized with the `--installarguments` (`--ia`) switch.
 
- * `/Icon:(0/1)` - Put an **xplorer²** icon on the desktop (default: 1)
- * `/Skin:(0/1)` - Use a "modern" (i.e. ribbon) skin interface (default: 1)
- * `/Replace:(0/1)` - Open all folders with **xplorer²** (i.e. replace Windows Explorer) (default: 0)
- * `/All:(0/1)` - Replace for all users (Requires `/Replace:1`) (default: 0)
- * `/Menu:(0/1)` - Add "Open with xplorer²" to *folder* context menus (default: 1)
- * `/Language:` - Set **xplorer²** to use an optional language.  (Available: *English, German, French, Spanish, Italian, Japanese, Greek, Dutch, Swedish, Serbian, Czech, Polish, Bulgarian, Chinese Trad, Russian, Brazilian, Chinese Simpl*) (Default: English)
+* `DESKTOP=(0/1)` - Don't create a desktop shortcut
+* `QUICK=(0/1)` - Don't create a QuickLaunch shortcut
+* `WINDOWS=(0/1)` - Run xplorer² when Windows start
+* `EDITOR=(0/1)` - Editor² Quick Launch shortcut
+* `TRANSL=`Set xplorer² to use an optional language. (Available: *English, German, French, Spanish, Italian, Japanese, Greek, Dutch, Swedish, Serbian, Czech, Polish, Bulgarian, Chinese Trad, Russian, Brazilian, Chinese Simpl*) (Default: English)
+* `REPLACE=(0/1)` - Open all folders with xplorer² (replace windows explorer)
+* `SINGLE=(0/1)` - Use a separate single-pane window for integration (not recommended)
+* `SKIN=(0/1)` - Modern skin
+* `CONTEXT=(0/1)` - Add to folders context menu
+* `ALLUSERS=(0/1)` - Replace explorer for all users on this PC
+* `MONITOR=(0/1)` - Multi-monitor manifest
 
-Example: `choco install xplorer2pro -y --params="'/Icon:0 /Skin:0 /Replace:1 /Language:German'"`
+Example: `choco install xplorer2pro -y --ia="'/DESKTOP:0 /SKIN:0 /REPLACE:1 /TRANSL:German'"`
 
 To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
 

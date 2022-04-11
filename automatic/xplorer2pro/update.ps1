@@ -1,11 +1,14 @@
 import-module au
 
 function global:au_GetLatest {
-   $DownloadPage = 'https://www.zabkat.com/alldown.htm'
-   $PageContent = Invoke-WebRequest -Uri $DownloadPage
-   if ($PageContent.RawContent -match 'Latest version: \d.\d.\d.\d') {
-      $Version = $matches[0].split()[-1]
-   }
+   $ChangeLogURL = 'https://www.zabkat.com/changes.txt'
+   $ChangeLog = Invoke-WebRequest -Uri $ChangeLogURL
+
+   $Vline = $PageContent.RawContent.split("`n") | ? {$_ -match '^\['} | select -first 1
+   $Version = $Vline.split()[0].trim('[]')
+
+   $DownURL = 'https://www.zabkat.com/alldown.htm'
+   $PageContent = Invoke-WebRequest -Uri $DownURL
 
    $url32,$url64 = $PageContent.Links | Where-Object {
                                              ($_.innertext -match 'MAIN download server') -and 
@@ -13,26 +16,28 @@ function global:au_GetLatest {
                                              ($_.href -match '\.exe')} | 
                                         Select-Object -ExpandProperty href
 
-   $url32 = 'http://zabkat.com/dl/xplorer2_setup.exe'  #$url32 -replace 'http:','https:'
-   $url64 = 'http://zabkat.com/dl/xplorer2_setup64.exe'  #$url64 -replace 'http:','https:'
+   $url32 = 'http://mirror3.free-downloads.net/13343/xplorer2_setup.exe'  #$url32 -replace 'http:','https:'
+   $url64 = 'http://mirror3.free-downloads.net/13343/xplorer2_setup64.exe'  #$url64 -replace 'http:','https:'
 
    return @{ 
       Version    = $Version
-      URL32      = $url32
-      URL64      = $url64
    }
 }
 
 
 function global:au_SearchReplace {
     @{
-        "tools\chocolateyInstall.ps1" = @{
-            "(^\s*URL\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-            "(^\s*URL64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
-            "(^\s*Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-            "(^\s*Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+        "legal\VERIFICATION.md" = @{
+            "(^- Version\s*:\s*)(.*)"      = "`$1$($Latest.Version)"
+            "(^- x32 SHA256\s*:\s*)(.*)"   = "`$1$($Latest.Checksum32)"
+            "(^- x64 SHA256\s*:\s*)('.*')" = "`$1$($Latest.Checksum64)"
         }
     }
 }
 
-Update-Package -ChecksumFor all
+function global:au_BeforeUpdate() { 
+   Write-host "Downloading Xplorer2 Pro $($Latest.Version) installer file"
+   Get-RemoteFiles -Purge -NoSuffix 
+}
+
+update -ChecksumFor none
