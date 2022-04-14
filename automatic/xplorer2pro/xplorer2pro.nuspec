@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xplorer2pro</id>
-    <version>5.0.0.3</version>
+    <version>5.2.0.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xplorer2pro</packageSourceUrl>
     <owners>Werner van Deventer, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -26,16 +26,20 @@
 * Full shell namespace browser
 * Dual panes and folder tabs
 * Preview documents, images, music etc.
-* Desktop search using all file attributes
+* Fast desktop search using all file attributes
 * Folder sizes and disk space visualization
-* Synchronize folder contents
+* Compare and synchronize folders
 * Search for duplicate files to free space
+* Manage files from many folders at once
 * Advanced copy, delete and rename operations
+* Robust file transfers
 * Filename color coding
-* Execute custom commands (even DOS)
+* Execute DOS commands and scripts
 * Macros to automate complex file management
 * Programable columns
-* Fully customizable
+* Fully customizable user interface
+* Individual folder settings
+* Help and assistance where you need it
 * Modern ribbon UI or traditional menu bar
 * Everyday efficiency and control
 * Manage large folders with ease
@@ -46,35 +50,28 @@
 This package installs a fully-functional, **21-day trial version** of *xplorer² professional*.
 
 ### Installation Arguments
-A default install of **xplorer²** uses options that -- in some cases -- require a re-install to change.  The installer has a some options that can be utilized with the `--installarguments` (`--ia`) switch.
+A default install of **xplorer²** has options that -- in some cases -- require a re-install to change.  The installer has a some options that can be utilized with the `--installarguments` (`--ia`) switch.
 
-* `DESKTOP=(0/1)` - Don't create a desktop shortcut
-* `QUICK=(0/1)` - Don't create a QuickLaunch shortcut
-* `WINDOWS=(0/1)` - Run xplorer² when Windows start
-* `EDITOR=(0/1)` - Editor² Quick Launch shortcut
-* `TRANSL=`Set xplorer² to use an optional language. (Available: *English, German, French, Spanish, Italian, Japanese, Greek, Dutch, Swedish, Serbian, Czech, Polish, Bulgarian, Chinese Trad, Russian, Brazilian, Chinese Simpl*) (Default: English)
-* `REPLACE=(0/1)` - Open all folders with xplorer² (replace windows explorer)
-* `SINGLE=(0/1)` - Use a separate single-pane window for integration (not recommended)
-* `SKIN=(0/1)` - Modern skin
-* `CONTEXT=(0/1)` - Add to folders context menu
-* `ALLUSERS=(0/1)` - Replace explorer for all users on this PC
-* `MONITOR=(0/1)` - Multi-monitor manifest
+* `/DESKTOP=0` - Do not create a desktop shortcut
+* `/QUICK=1` - Create a QuickLaunch shortcut
+* `/WINDOWS=1` - Run xplorer² when Windows starts
+* `/SKIN=0` - Do not use a modern skin
+* `/CONTEXT=0` - Do not create "Add to folders" context menu
+* `/MONITOR=0` - Do not use a multi-monitor manifest
+* `/EDITOR=1` - Editor² Quick Launch shortcut
+* `/TRANSL=` - Set xplorer² to use an optional language. (Available: *English, German, French, Spanish, Italian, Japanese, Greek, Dutch, Swedish, Serbian, Czech, Polish, Bulgarian, Chinese Trad, Russian, Brazilian, Chinese Simpl*) (Default: English)
+* `/REPLACE=1` - Open all folders with xplorer² (replace Windows Explorer)
+* `/SINGLE=1` - Use a separate single-pane window for integration (not recommended)
+* `/ALLUSERS=1` - Replace explorer for all users on this PC
+* `/D=(path)` - Use *(path)* as an alternate install location (paths with spaces may be tricky to quote)
 
 Example: `choco install xplorer2pro -y --ia="'/DESKTOP:0 /SKIN:0 /REPLACE:1 /TRANSL:German'"`
-
-To have choco remember parameters on upgrade, be sure to set `choco feature enable -n=useRememberedArgumentsForUpgrades`.
-
-### Uninstallation Package Parameters
-The default uninstall will remove registry settings for **xplorer²** including bookmarks.  Use the following package parameter to leave registry settings and bookmarks:
-
- * `/Keep` - Keep **xplorer²** registry settings and bookmarks
-
-Example:  `choco uninstall xplorer2pro -y --params="'/Keep'"`
 
     </description>
     <releaseNotes>http://zabkat.com/changes.txt</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
