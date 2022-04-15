@@ -7,13 +7,8 @@ function global:au_GetLatest {
    $Vline = $ChangeLog.RawContent.split("`n") | ? {$_ -match '^\['} | select -first 1
    $Version = $Vline.split()[0].trim('[]')
 
-   $url32 = 'http://mirror3.free-downloads.net/13343/xplorer2_setup.exe'  #$url32 -replace 'http:','https:'
-   $url64 = 'http://mirror3.free-downloads.net/13343/xplorer2_setup64.exe'  #$url64 -replace 'http:','https:'
-
    return @{ 
       Version = $Version
-      URL32   = $url32
-      URL64   = $url64
    }
 }
 
@@ -30,7 +25,7 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate() { 
    Write-host "Downloading Xplorer2 Pro $($Latest.Version) installer file"
-   Get-RemoteFiles -Purge -NoSuffix 
+   Write-warning "The zabcat.com site won't allow proper download.  It must be manually downloaded."
 }
 
 update -ChecksumFor none

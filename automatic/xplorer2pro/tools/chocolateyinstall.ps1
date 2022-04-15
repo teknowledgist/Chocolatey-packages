@@ -5,8 +5,8 @@ $Files = Get-ChildItem $toolsDir -Filter '*.exe' |
                Sort-Object LastWriteTime | 
                Select-Object -Last 2
 
-$File32 = ($Files | Where-Object {$_.Name -match 'x86\.exe'}).fullname
-$File64 = ($Files | Where-Object {$_.Name -match 'x64\.exe'}).fullname
+$File32 = ($Files | Where-Object {$_.Name -notmatch '64\.exe'}).fullname
+$File64 = ($Files | Where-Object {$_.Name -match '64\.exe'}).fullname
 
 $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
