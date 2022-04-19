@@ -18,4 +18,4 @@ You can use one of the following methods to obtain the checksum:
 
 ## License
 File 'LICENSE.txt' is obtained from:
-- https://git.ghostscript.com/?a=blob;f=COPYING;p=mupdf.git
+- https://www.gnu.org/licenses/agpl-3.0.txt

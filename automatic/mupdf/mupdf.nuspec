@@ -13,7 +13,7 @@
     <projectUrl>https://mupdf.com</projectUrl>
     <iconUrl>https://git.ghostscript.com/?p=mupdf.git;a=blob_plain;f=docs/logo/mupdf-icon.png;hb=HEAD</iconUrl>
     <copyright>2006-2020 Artifex Software, Inc.</copyright>
-    <licenseUrl>https://mupdf.com/license</licenseUrl>
+    <licenseUrl>https://www.gnu.org/licenses/agpl-3.0.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://git.ghostscript.com/?p=mupdf.git</projectSourceUrl>
     <docsUrl>https://mupdf.com/docs</docsUrl>
