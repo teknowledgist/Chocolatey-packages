@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>attributechanger</id>
-    <version>11.0-rc3</version>
+    <version>11.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/attributechanger</packageSourceUrl>
     <owners>Teknowledgist, ferventcoder</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -13,7 +13,7 @@
     <projectUrl>https://www.petges.lu/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/attributechanger_icon.png</iconUrl>
     <copyright>Copyright © 1999 - 2018 Romain PETGES</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/attributechanger/tools/LICENSE.md</licenseUrl>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/attributechanger/legal/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://www.petges.lu/support/</docsUrl>
     <mailingListUrl>https://www.petges.lu/contact/</mailingListUrl>
@@ -34,5 +34,6 @@
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

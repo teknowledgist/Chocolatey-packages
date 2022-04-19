@@ -22,7 +22,7 @@ function global:au_GetLatest {
       }
    }
 
-   $url64 = "$FTPFolder$FileName"
+   $url64 = "https://download.adobe.com/pub/adobe/dng/win/$FileName"
 
    return @{ 
             Version      = $version.ToString()

@@ -1,15 +1,15 @@
 import-module au
 
 function global:au_GetLatest {
-   $Release = 'https://sourceforge.net/projects/asymptote/files/'
-   $Files_page = Invoke-WebRequest -Uri $Release
+   $news = 'https://sourceforge.net/p/asymptote/news/'
+   $NewsPage = Invoke-WebRequest -Uri $News
 
-   $Title = $Files_page.links |
-                Where-Object {$_.innertext -match 'latest version'} | 
-                Select-Object -ExpandProperty title
-   $version = $Title.split('/')[1]
+   $LatestText = $NewsPage.links |
+                Where-Object {$_.innertext -match 'released'} | 
+                Select-Object -ExpandProperty innerText -first 1
+   $version = $LatestText.split() | Where-Object {$_ -match '^[0-9.]+$'}
 
-   $URL32 = "https://sourceforge.net/projects/asymptote/files/$version/asymptote-$($version)-setup-32/asymptote-$($version)-setup-32.exe"
+   $URL32 = "https://sourceforge.net/projects/asymptote/files/$version/asymptote-$($version)-setup-32.exe"
    $URL64 = "https://sourceforge.net/projects/asymptote/files/$version/asymptote-$($version)-setup.exe"
 
    return @{ 
