@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>idle-logoff</id>
+    <version>1.2.8134</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/idle-logoff</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Lithnet Idle-Logoff</title>
+    <authors>Ryan Newington</authors>
+    <projectUrl>https://github.com/lithnet/idle-logoff</projectUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://github.com/lithnet/idle-logoff/blob/master/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/lithnet/idle-logoff</projectSourceUrl>
+    <docsUrl>https://github.com/lithnet/idle-logoff/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/lithnet/idle-logoff/issues</bugTrackerUrl>
+    <tags>idle-logoff lithnet idle session GPO logoff embedded FOSS</tags>
+    <summary>A group-policy enabled utility for logging off idle windows user sessions</summary>
+    <description>The Lithnet Idle Logoff tool is a simple utility that allows you to log off users, reboot, or shutdown a computer after a period of user inactivity, and optionally display a warning message before this happens. It was designed specifically with kiosk and student lab scenarios in mind.
+
+* The tool runs in the background of each user session when installed
+* It logs the user out after a preset period of inactivity
+* It provides the ability to control all settings via a group policy
+
+The app simply queries the relevant Windows API for the time since the user last interacted with the computer, and calls the logoff function after the specified period has elapsed. 
+    </description>
+    <releaseNotes>https://github.com/lithnet/idle-logoff/releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
