@@ -1,0 +1,22 @@
+﻿From installer License Agreement window
+=======================================
+
+Desktop Icon Save and Restore
+Copyright © 2001-2020 by Jamie O’Connell
+License for use and distribution
+License for file:  DKTICNRS.DLL and DesktopCmd.exe
+
+1) You may use Desktop Restore on any number of computers, including computers 
+   in a commercial organization. You don't need to register or pay for Desktop Restore.  
+2) You may freely distribute Desktop Restore as long as no money is charged for it. 
+
+Note: If you really like the program and wish to contribute, we do accept donations 
+on the application website, but you are not required to do so.
+
+Contact
+Please report bugs and direct comments to: JamieOConnell@midiox.com
+The official application web site is: http://www.midiox.com
+
+Disclaimer
+DESKTOP ICON SAVE AND RESTORE (DKTICNRS.DLL) IS  PROVIDED WITHOUT ANY  WARRANTY, 
+EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO FITNESS FOR A PARTICULAR PURPOSE.

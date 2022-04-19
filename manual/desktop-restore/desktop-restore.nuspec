@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>desktop-restore</id>
+    <version>1.7.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/desktop-restore</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Desktop Restore</title>
+    <authors>Jamie O’Connell</authors>
+    <projectUrl>http://www.midiox.com/index.htm?http://www.midiox.com/desktoprestore.htm</projectUrl>
+    <!-- <iconUrl></iconUrl> -->
+    <copyright> Copyright © 2001-2020 by Jamie O’Connell</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/desktop-restore/legal/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.midiox.com/html/desktop.htm</docsUrl>
+    <mailingListUrl>http://www.midiox.com/cgi-bin/yabb/YaBB.pl?board=DesktopRestore</mailingListUrl>
+    <bugTrackerUrl>http://www.midiox.com/cgi-bin/yabb/YaBB.pl?board=DesktopRestore</bugTrackerUrl>
+    <tags>desktop-restore desktop windows icons layout resolution shell embedded</tags>
+    <summary>Restores desktop icon positions</summary>
+    <description>Desktop Restore is a tiny application that operates as a Shell extension.  It records the layout and positions of icons and programs on the Windows desktop, and permits restoration of the layout.  
+    </description>
+    <releaseNotes>http://www.midiox.com/html/desktop.htm</releaseNotes>
+    <dependencies></dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
