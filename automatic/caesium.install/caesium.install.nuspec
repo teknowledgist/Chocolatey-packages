@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>caesium.install</id>
+    <version>2.0.0-beta4</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/caesium.install</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Caesium Image Compressor (Install)</title>
+    <authors>Matteo Paonessa</authors>
+    <projectUrl>https://saerasoft.com/caesium/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/Lymphatus/caesium-image-compressor@1179e5601b9783103889ec917d7211162c61b6b1/resources/icons/logo.png</iconUrl>
+    <copyright>Copyright © 2010-2013 Matteo Paonessa</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/Lymphatus/caesium-image-compressor/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/projects/caesium/files/1.7.0/</projectSourceUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/caesium/bugs/</bugTrackerUrl>
+    <tags>caesium image compression jpeg embedded oss</tags>
+    <summary>Compress your pictures up to 90% without visible quality loss.</summary>
+    <description>Caesium is simple open source image compressor. It compresses BMP, JPG and PNG formats.  It allows you to save a lot of space and quickly upload your pictures on the web.  The software allows you to view instantly the compression results, helping you to decide how much optimization you need. Caesium can set different compression levels to each image, saving a lot of time, ensuring great results. 
+    </description>
+    <releaseNotes>https://github.com/Lymphatus/caesium-image-compressor/blob/master/CHANGELOG.md</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist140" version="14.28.29913" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
