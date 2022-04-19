@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $NewRelease = $env:ChocolateyPackageVersion
-$LTRversion = ''
+$LTRversion = '3.22.5'
 
 $InstallArgs = @{
    packageName    = 'qgis'

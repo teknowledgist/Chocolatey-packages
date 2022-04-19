@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qgis</id>
-    <version>3.24.1</version>
+    <version>3.24.1.20220419</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qgis</packageSourceUrl>
     <owners>Snowflake, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -19,7 +19,7 @@
     <docsUrl>https://www.qgis.org/en/docs/index.html</docsUrl>
     <mailingListUrl>http://lists.osgeo.org/mailman/listinfo/qgis-user</mailingListUrl>
     <bugTrackerUrl>https://www.qgis.org/en/site/getinvolved/development/bugreporting.html#bugs-features-and-issues</bugTrackerUrl>
-    <tags>qgis GIS mapping geographic geospatial admin</tags>
+    <tags>qgis GIS mapping geographic geospatial FOSS</tags>
     <summary>A Free and Open Source Geographic Information System</summary>
     <description>QGIS is a user friendly Open Source Geographic Information System (GIS) licensed under the GNU General Public License. QGIS is an official project of the Open Source Geospatial Foundation (OSGeo). It runs on Linux, Unix, Mac OSX, Windows and Android and supports numerous vector, raster, and database formats and functionalities.
 

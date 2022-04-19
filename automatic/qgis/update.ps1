@@ -20,12 +20,9 @@ function global:au_GetLatest {
    Invoke-WebRequest $SumURL -OutFile $SumFile
    $Checksum64 = (Get-Content $SumFile -ReadCount 1).split()[0]
 
-   $LTRversion = ($download_page.Links | 
-                    Where-Object {
-                       ($_.href -match "QGIS.*x86\.exe`$") -and 
-                       ($_.href -notmatch "$newversion")
-                    } | Select-Object -ExpandProperty href
-                 ) -replace ".*?-([0-9.]+)-.*",'$1'
+   $null = $download_page.content.split("`n") | Where-Object {$_ -cmatch 'long-term repositories currently offer QGIS ([0-9.]*)'}
+   $LTRversion = $Matches[1]
+
 
    return @{ 
       Version    = $NewVersion
