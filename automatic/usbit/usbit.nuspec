@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>usbit</id>
-    <version>1.84</version>
+    <version>1.85</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/usbit</packageSourceUrl>
     <owners>Teknowledgist, tonigellida</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

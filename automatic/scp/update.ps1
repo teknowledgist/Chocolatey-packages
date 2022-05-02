@@ -11,7 +11,7 @@ function global:au_GetLatest {
             
    $url = $Release + $link.href
 
-   $version = $link.innerText -replace '[^0-9]*(.*[0-9])\).*','$1' -replace '[^0-9.]+','.'
+   $version = $url.split('-') | ? {$_ -match '^[0-9.]+$'}
 
    return @{ Version = $version; URL32 = $url }
 }

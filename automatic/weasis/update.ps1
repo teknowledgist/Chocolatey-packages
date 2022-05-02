@@ -6,12 +6,13 @@ function global:au_GetLatest {
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
    $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
-   $urlstubs = $download_page.rawcontent.split("<>") | 
+   $urlstub = $download_page.rawcontent.split("<>") | 
                 Where-Object {$_ -match '\.msi"'} | Select-Object -First 1
 
-   $URL64 = ($urlstubs | Where-Object {$_ -match 'x86-64'}) -replace '.*?"([^ ]+\.msi).*','$1'
+   $URL64 = $urlstub -replace '.*?"([^ ]+\.msi).*','$1'
 
-   $version = ($URL64.split('/') | Where-Object {$_ -match '^v[0-9.]+$'}).trim("v")
+   $versionstring = $urlstub.split('/') | ? {$_ -match '^v?[0-9.]+'}
+   $version = $versionstring.trim('v')
 
    return @{ 
       Version = $version

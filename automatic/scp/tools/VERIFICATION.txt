@@ -7,7 +7,7 @@ http://www.textworld.com/scp/#Downloads
 
 Direct Download:
 
-Version  : 4.0.10.119
-URL      : http://www.textworld.com/scp/scp-4.0.10-win32-x86.msi
-CheckSum : 413EC071B77E3B50C25A57B8D3BA4382504ECFF9218E341822CFEEAF464227C8
+Version  : 5.0.0
+URL      : http://www.textworld.com/scp/simple-concordance-program-5.0.0-win-x64.msi
+CheckSum : 6B65087A2EE8C3D36DE21C8B8391FD8430476DD9F42786C80A80D627280DAFCF
 

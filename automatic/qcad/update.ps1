@@ -14,10 +14,6 @@ function global:au_GetLatest {
    $url64 = "https://www.qcad.org$Stub64"
    $newversion = ($stub64 -split '-')[1]
 
-#   $oldversion = '3.24.3'
-#   if ([version]$newversion -ne [version]$oldversion) {
-#      Write-Warning "New QCad version:  $newversion"
-#   } 
    $FakeURL = 'https://cdn.jsdelivr.net/gh/qcad/qcad@120b14d6d2f79d4332f528d5dcd908137dc60f14/support/doc/api/qcad_icon.png'
 
    return @{ 
@@ -43,7 +39,6 @@ function global:au_SearchReplace {
 
 function global:au_BeforeUpdate() { 
    Write-Warning "New QCad version:  $($Latest.Version)"
-   Write-warning "The QCad site won't allow proper download.  It must be manually downloaded."
 }
 
 Update-Package
