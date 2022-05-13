@@ -1,0 +1,43 @@
+VOSviewer 1.6.18 (https://www.vosviewer.com)
+
+Copyright (c) 2009-2022 Nees Jan van Eck and Ludo Waltman
+
+It is permitted, free of charge, to use and/or distribute this
+software, provided that the above copyright notice and this permission
+notice are retained. It is not permitted to modify this software.
+
+======================================================================
+
+VOSviewer uses the following libraries:
+* Apache Commons CSV 1.6
+  (https://github.com/apache/commons-csv)
+* Apache OpenNLP 1.5.3
+  (https://github.com/apache/opennlp)
+* Azure Identity Client Library for Java 1.3.3
+  (https://github.com/Azure/azure-sdk-for-java/tree/main/sdk/identity/azure-identity)
+* Dropbox Core SDK for Java 4.0.0
+  (https://github.com/dropbox/dropbox-sdk-java)
+* FreeHEP VectorGraphics 2.3
+  (https://github.com/freehep/freehep-vectorgraphics)
+* Google Drive API Client Library for Java v3-rev110-1.23.0
+  (https://github.com/googleapis/google-api-java-client-services/tree/master/clients/google-api-services-drive/v3)
+* Google OAuth Client Library for Java 1.23.0
+  (https://github.com/googleapis/google-oauth-java-client)
+* JAI ImageIO Core 1.3.1
+  (https://github.com/jai-imageio/jai-imageio-core)
+* JBusyComponent 1.2.2
+  (http://code.google.com/p/jbusycomponent)
+* JSON in Java 20180813
+  (https://github.com/stleary/JSON-java)
+* juniversalchardet 2.0.0
+  (https://github.com/albfernandez/juniversalchardet)
+* Microsoft Graph SDK for Java 4.0.0
+  (https://github.com/microsoftgraph/msgraph-sdk-java)
+* networkanalysis 1.1.0
+  (https://github.com/CWTSLeiden/networkanalysis)
+* Radiance Substance 1.0.2
+  (https://github.com/kirill-grouchnikov/radiance)
+* Unirest for Java 1.4.9
+  (https://github.com/Kong/unirest-java)
+For copyright, license, and disclaimer information for each of these
+libraries, we refer to the above listed web addresses.
