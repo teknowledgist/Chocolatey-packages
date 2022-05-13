@@ -40,6 +40,7 @@ Example:
 
     <dependencies>
       <dependency id="dotnetfx" version="4.6.2" />
+      <dependency id="vcredist140" version="14.20" />
     </dependencies>
   </metadata>
   <files>
