@@ -57,13 +57,13 @@ If (($JRKversion -lt $JEVversion) -and ($JEVversion)) {
    #    Add a JavaSoft registry key so VOSviewer will run.
    $null = New-Item "HKLM:\SOFTWARE\JavaSoft\JRE\$JEVversion" -Force | 
             New-ItemProperty -Name JavaHome -Value $env:Java_Home -Force
-   $Warning = 'JavaSoft registry key has been added to allow VOSviewer to start.'
+   Write-Warning 'JavaSoft registry key has been added to allow VOSviewer to start.'
    return
 }
 
 If ((-not $JRKversion) -and (-not $JEVversion)) {
    # If no (easily) apparent Java installed, warn but continue.
-   $Warning = "VOSviewer requires JRE v8+ (and a JavaSoft registry entry).`n`tNo compatible Java installation was identified."
+   Write-Warning "VOSviewer requires JRE v8+ (and a JavaSoft registry entry).`n`tNo compatible Java installation was identified."
    return
 }
 

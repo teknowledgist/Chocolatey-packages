@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>vosviewer</id>
+    <version>1.6.18</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/vosviewer</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>VOSviewer</title>
+    <authors>Nees Jan van Eck and Ludo Waltman </authors>
+    <projectUrl>https://www.vosviewer.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@242a6f57101fe2a28de4f2ceeb655223acb307f2/Icons/vosviewer_icon.png</iconUrl>
+    <copyright>Copyright © 2009-2022 Nees Jan van Eck and Ludo Waltman</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/vosviewer/legal/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.vosviewer.com/documentation/Manual_VOSviewer_1.6.18.pdf</docsUrl>
+    <mailingListUrl>https://www.vosviewer.com/contact</mailingListUrl>
+    <tags>vosviewer visualization bibliographic citation data mining literature embedded</tags>
+    <summary>Tool for visualizing scientific literature landscapes</summary>
+    <description>VOSviewer is a software tool for constructing and visualizing bibliometric networks. These networks may for instance include journals, researchers, or individual publications, and they can be constructed based on citation, bibliographic coupling, co-citation, or co-authorship relations. VOSviewer also offers text mining functionality that can be used to construct and visualize co-occurrence networks of important terms extracted from a body of scientific literature.
+
+## Highlights
+#### Data
+
+* **Web of Science, Scopus, Dimensions, Lens, and PubMed.** Co-authorship networks, citation-based networks, and co-occurrence networks can be created based on data downloaded from Web of Science, Scopus, Dimensions, and Lens. Co-authorship networks and co-occurrence networks can also be created based on PubMed data.
+* **Crossref, Europe PMC, and OpenAlex.** Networks can also be created based on data retrieved through the APIs of Crossref, Europe PMC, and OpenAlex. These APIs can be queried interactively in VOSviewer.
+* **Semantic Scholar, OpenCitations, and WikiData.** For a given set of DOIs, networks can also be created based on data retrieved through the APIs of Semantic Scholar, OpenCitations, and WikiData.
+
+#### Visualization
+
+* **Zooming and scrolling.** Visualizations of bibliometric networks can be explored in full detail using zoom and scroll functionality similar to for instance Google Maps. A smart labeling algorithm prevents labels from overlapping each other.
+* **Density and overlay visualizations.** Density visualizations provide a quick overview of the main areas in a bibliometric network. Overlay visualizations can for instance be used to show developments over time.
+* **Screenshots.** Screenshots of bibliometric network visualizations can be created at a high resolution and can be saved in many popular graphical file formats, both bitmap and vector formats.
+
+#### Techniques
+
+* **Advanced layout and clustering techniques.** State-of-the-art techniques for network layout and network clustering are provided. Layout and clustering results can be fine-tuned using various parameters.
+* **Natural language processing techniques.** Natural language processing techniques are available for creating term co-occurrence networks based on English-language textual data. Relevant and non-relevant terms can be distinguished algorithmically.
+* **Creating bibliometric networks.** A number of advanced features are available for creating bibliometric networks (e.g., co-authorship, bibliographic coupling, and co-citation networks). For instance, the influence of publications with many authors, many citations, or many references can be reduced using a fractional counting approach. Data cleaning can be performed using thesaurus files.
+
+## Dependency note
+The VOSviewer package can be installed without a dependency, but it requires a Java Runtime Environment v8+ to start.  Any flavor of Java should work, but the application will not start without the Oracle JavaSoft registry key configured.  Some JRE packages can do this at install.  For example, the [Temurin17jre](https://community.chocolatey.org/packages/Temurin17jre) can be installed to work with VOSviewer via `choco install temurin17jre --params="/ADDLOCAL=FeatureOracleJavaSoft"`.  This package will do some basic checks for compatible Java and create the registry key for you in some cases.
+
+    </description>
+    <releaseNotes>https://www.vosviewer.com/</releaseNotes>
+    <!-- =============================== -->
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
