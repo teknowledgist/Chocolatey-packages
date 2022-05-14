@@ -18,7 +18,7 @@ function global:au_GetLatest {
       
    $version = $text.split()[-1]
    
-   $url = "https://stx.pdf24.org/download/pdf24-creator-$version.msi"
+   $url = "https://download2.pdf24.org/pdf24-creator-$version.msi"
 
    return @{ Version = $version; URL32 = $url }
 }

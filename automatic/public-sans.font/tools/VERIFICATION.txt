@@ -7,6 +7,6 @@ The zipped font files are downloadable from the GitHub latest release page:
 https://github.com/uswds/public-sans/releases/latest
 
 Direct Download:
-Version : 2.000
-URL     : https://github.com/uswds/public-sans/releases/download/v2.000/public-sans-v2.000.zip
-SHA256  : 3498D0CE45C230428BB171B227FEABF5C13ACF66E8E456C628F2D1779221AD6A
+Version : 2.001
+URL     : https://github.com/uswds/public-sans/releases/download/v2.001/public-sans-v2.001.zip
+SHA256  : DD839C4436D4FFC4563517F64C47B8EAE2DA54E867AAD3173DA1BD7FEF104597
