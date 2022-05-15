@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>smartrename</id>
+    <version>1.1.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/SmartRename</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>SmartRename</title>
+    <authors>Chris Davis</authors>
+    <projectUrl>https://github.com/chrdavis/SmartRename</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@d0c9c42d13260640274c2ed0aa0913b61477085c/Icons/smartrename_icon.png</iconUrl>
+    <copyright>Copyright (c) 2017 Chris Davis</copyright>
+    <licenseUrl>https://github.com/chrdavis/SmartRename/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/chrdavis/SmartRename</projectSourceUrl>
+    <docsUrl>https://github.com/chrdavis/SmartRename</docsUrl>
+    <bugTrackerUrl>https://github.com/chrdavis/SmartRename/issues</bugTrackerUrl>
+    <tags>SmartRename Windows explorer shell extension bulk rename regex embedded FOSS</tags>
+    <summary>A Windows Shell Extension for more advanced bulk renaming using search and replace or regular expressions</summary>
+    <description>Have you ever needed to modify the file names of a large number of files but didn't want to rename all of the files the same name? Wanted to do a simple search/replace on a sub-string of various file names? Wanted to perform a regular expression rename on multiple items?
+
+SmartRename is a Windows Shell Extension for advanced bulk renaming using search and replace or regular expressions. SmartRename allows simple search and replace or more advanced regular expression matching. While you type in the search and replace input fields, the preview area will show what the items will be renamed to. SmartRename then calls into the Windows Explorer file operations engine to perform the rename. This has the benefit of allowing the rename operation to be undone after SmartRename exits.
+
+![Demo](https://github.com/chrdavis/SmartRename/blob/master/Images/SmartRenameDemo.gif)
+
+### Options
+* Use Regular Expressions
+* Case Sensitive
+* Match All Occurrences
+* Exclude Files
+* Exclude Folders
+* Exclude Subfolder Items
+* Enumerate Items
+* Item Name Only
+* Item Extension Only
+
+    </description>
+    <releaseNotes>https://github.com/chrdavis/SmartRename/releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
