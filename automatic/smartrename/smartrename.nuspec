@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>smartrename</id>
     <version>1.1.2</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/SmartRename</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/smartrename</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>SmartRename</title>
