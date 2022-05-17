@@ -9,7 +9,7 @@ $packageArgs = @{
    packageName   = $env:chocolateyPackageName
    fileType      = 'msi'
    File          = $Installers | Where-Object {$_ -match '32\.msi'}
-   File64         = $Installers | Where-Object {$_ -match '32\.msi'}
+   File64        = $Installers | Where-Object {$_ -match '64\.msi'}
    silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes= @(0, 3010, 1641)
 }
