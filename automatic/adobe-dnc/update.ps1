@@ -1,35 +1,21 @@
 import-module au
 
 function global:au_GetLatest {
-   $FTPFolder = 'ftp://ftp.adobe.com/pub/adobe/dng/win/'
+   $WhatsNew = 'https://helpx.adobe.com/camera-raw/using/whats-new.html'
+   $Content = Invoke-WebRequest $WhatsNew -UseBasicParsing
+   $null = $content.RawContent.split("`n") -split '<p>' | 
+               Where-Object {$_ -match 'Adobe Camera Raw.*([0-9][0-9]\.[0-9.]+)'}
 
-   $FTPRequest = [System.Net.FtpWebRequest]::Create($FTPFolder)
-   $FTPRequest.Method = [System.Net.WebRequestMethods+FTP]::ListDirectory
-   $FTPRequest.UseBinary = $False
-   $FTPRequest.KeepAlive = $False
-   $ResponseStream = $FTPRequest.GetResponse().GetResponseStream()
-   $StreamReader = New-Object System.IO.Streamreader $ResponseStream
-   $fileList = (($StreamReader.ReadToEnd()) -split [Environment]::NewLine)
-   $StreamReader.Close()
+   $version = $Matches[1]
+   $URLversion = $version.replace('.','_')
 
-   $Version = [version]'0.0'
-   foreach ($file in ($fileList | ? {$_ -match 'DNGConverter_(x64_)?[0-9_]+\.exe'})) {
-      $VersionString = $file -replace '.*?_([0-9_]+)\.exe','$1'
-      [version]$FileVersion = $VersionString.replace('_','.')
-      if ($FileVersion -gt $Version) {
-         $Version = $FileVersion
-         $FileName = $file
-      }
-   }
-
-   $url64 = "https://download.adobe.com/pub/adobe/dng/win/$FileName"
+   $url64 = "https://download.adobe.com/pub/adobe/dng/win/AdobeDNGConverter_x64_$URLversion.exe"
 
    return @{ 
             Version      = $version.ToString()
             URL64        = $url64
          }
 }
-
 
 function global:au_SearchReplace {
    @{
@@ -39,6 +25,5 @@ function global:au_SearchReplace {
       }
    }
 }
-
 
 update -ChecksumFor 64
