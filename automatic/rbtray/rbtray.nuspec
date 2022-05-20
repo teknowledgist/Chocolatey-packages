@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>rbtray</id>
+    <version>4.14</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/rbtray</packageSourceUrl>
+    <owners>teknowledgist, ccarpo</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>RBTray</title>
+    <authors>Nikolay Redko, J.D. Purcell, Benbuck Nason</authors>
+    <projectUrl>https://github.com/benbuck/rbtray</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@1e414c2174c5dd72d37045f045fa66dd1f0e6af2/Icons/rbtray_icon.png</iconUrl>
+    <copyright>Copyright © 1998-2011 Nikolay Redko, J.D. Purcell, Copyright © 2015 Benbuck Nason</copyright>
+    <licenseUrl>https://github.com/benbuck/rbtray/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/benbuck/rbtray</projectSourceUrl>
+    <docsUrl>https://github.com/benbuck/rbtray#using</docsUrl>
+    <bugTrackerUrl>https://github.com/benbuck/rbtray/issues</bugTrackerUrl>
+    <tags>rbtray tray hotkey minimize window embedded FOSS</tags>
+    <summary>Minimize windows to the system tray</summary>
+    <description>RBTray is a small Windows program that runs in the background and allows almost any window to be minimized to the system tray by:
+
+* Right-clicking its minimize button
+* Shift-right-clicking its title bar
+* Using the Control-Alt-Down hotkey
+
+Note that not all of these methods will work for every window, so please use whichever one works for your needs.
+
+### Install options
+By default, this package will install rbtray to start upon login for any user.  If you would prefer to have rbtray start only on user request, use the package parameter, `/NoAutoStart`.
+
+In some cases, the first two methods of "tray-ifying" windows can cause problems with some software because of they way they intercept (or "hook") mouse events.  If you believe this will be an issue, you can use a `/NoHook` package parameter and the Start Menu icon will be configured so that RBTray only activates via the `CTRL-ALT-DOWN` method.
+
+##### example
+
+* `choco install rbtray --params '"/NoAutoStart /NoHook"'`
+    </description>
+    <releaseNotes>https://github.com/benbuck/rbtray/releases</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
