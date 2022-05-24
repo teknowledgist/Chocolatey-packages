@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>meazure</id>
+    <version>3.0.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/meazure</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Meazure</title>
+    <authors>Baron Roberts, Cecie</authors>
+    <projectUrl>https://github.com/cthing/meazure</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@1bfbf798d0b97aa35b002f233b2f8ee20700294d/Icons/meazure_icon.png</iconUrl>
+    <copyright>Copyright © 2001-2017 C Thing Software</copyright>
+    <licenseUrl>https://github.com/cthing/meazure/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/cthing/meazure</projectSourceUrl>
+    <docsUrl>https://github.com/cthing/meazure/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/cthing/meazure/issues</bugTrackerUrl>
+    <tags>meazure measurement ruler grid protractor angle colorpicker embedded FOSS</tags>
+    <summary>Screen magnification, measurement, capture and color sampling for Windows.</summary>
+    <description>Meazure is a tool for easily measuring and capturing portions of the screen. Tasks such as measuring the size of a window, capturing an image, determining the color of a pixel, and determining the screen size and resolution can all be easily accomplished using Meazure.
+
+Meazure provides a number of different types of tools for measuring and capturing the screen:
+
+* Cursor Tool
+* Point Tool
+* Line Tool
+* Rectangle Tool
+* Circle Tool
+* Angle Tool
+* Window Tool
+
+The measurement tools provide a number of key features including:
+
+* Capture of arbitrary portions of the screen (Rectangle Tool, Circle Tool, and Window Tool)
+* Display of measurements in a variety of units
+* Measurement using the mouse of keyboard including fine adjustment
+
+In addition to the tools listed above, a set of rulers and a grid can be placed on the screen. A magnifier is also provided to help position the measurement tools and to read the color of screen pixels.
+
+Meazure remembers the settings for all measurement tools between runs of the program. In addition, Meazure allows you to save the tool positions to a file. These files, called profiles, can be used to represent an alternate screen size or a required image size.
+    </description>
+    <releaseNotes>https://github.com/cthing/meazure/releases</releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
