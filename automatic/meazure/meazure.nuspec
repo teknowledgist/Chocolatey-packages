@@ -11,7 +11,7 @@
     <title>Meazure</title>
     <authors>Baron Roberts, Cecie</authors>
     <projectUrl>https://github.com/cthing/meazure</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@1bfbf798d0b97aa35b002f233b2f8ee20700294d/Icons/meazure_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@8f649e2710be10581a9c563d92172529b6ea2014/Icons/meazure_icon.png</iconUrl>
     <copyright>Copyright © 2001-2017 C Thing Software</copyright>
     <licenseUrl>https://github.com/cthing/meazure/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
