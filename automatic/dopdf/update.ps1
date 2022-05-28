@@ -8,7 +8,7 @@ function global:au_GetLatest {
 
    $version = $Matches[1]
 
-   $URL32 = 'http://download.dopdf.com/download/setup/dopdf-full.exe'
+   $URL32 = 'https://download.dopdf.com/download/setup/dopdf-full.exe'
 
    return @{ 
             Version  = $Version

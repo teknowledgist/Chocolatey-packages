@@ -4,21 +4,21 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xplorer2pro</id>
-    <version>5.2.0.0</version>
+    <version>5.2.0.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xplorer2pro</packageSourceUrl>
     <owners>Werner van Deventer, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>xplorer² Pro (Trial)</title>
     <authors>Zabkat</authors>
     <projectUrl>http://zabkat.com/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/xplorer2_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@3d1d77f7351bd784da1b3ff3d9996e54c8bc6484/Icons/xplorer2_icon.png</iconUrl>
     <copyright>©2002-2017 ZABKAT</copyright>
     <licenseUrl>http://zabkat.com/x2lic.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://zabkat.com/x2h_0.htm</docsUrl>
     <mailingListUrl>https://forum.zabkat.com/viewforum.php?f=18</mailingListUrl>
     <bugTrackerUrl>http://zabkat.com/contact.htm</bugTrackerUrl>
-    <tags>xplorer2pro xplorer2 xplorer explorer shell file manage search filter preview tabs dual-pane trial notsilent</tags>
+    <tags>xplorer2pro xplorer2 xplorer explorer shell file manage search filter preview tabs dual-pane trial</tags>
     <summary>Reclaim control of your files and folders.</summary>
     <description>**xplorer² professional** is a desktop file manager combining the simplicity of Windows Explorer with the speed and efficiency of traditional dual pane orthodox file managers, helping you be **productive** with your documents, pictures, music, source code and other files. 
 
@@ -65,7 +65,7 @@ A default install of **xplorer²** has options that -- in some cases -- require 
 * `/ALLUSERS=1` - Replace explorer for all users on this PC
 * `/D=(path)` - Use *(path)* as an alternate install location (paths with spaces may be tricky to quote)
 
-Example: `choco install xplorer2pro -y --ia="'/DESKTOP:0 /SKIN:0 /REPLACE:1 /TRANSL:German'"`
+Example: `choco install xplorer2pro -y --ia='"/DESKTOP:0 /SKIN:0 /REPLACE:1 /TRANSL:German"'`
 
     </description>
     <releaseNotes>http://zabkat.com/changes.txt</releaseNotes>
