@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>xplorer2ultimate</id>
+    <version>5.2.0.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xplorer2ultimate</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>xplorer² Ultimate (Trial)</title>
+    <authors>Zabkat</authors>
+    <projectUrl>http://zabkat.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@b489fbb2096dce5684ac90796cb80dd760f3fbe7/Icons/xplorer2ultimate_icon.png</iconUrl>
+    <copyright>©2002-2017 ZABKAT</copyright>
+    <licenseUrl>http://zabkat.com/x2lic.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://zabkat.com/x2h_0.htm</docsUrl>
+    <mailingListUrl>https://forum.zabkat.com/viewforum.php?f=18</mailingListUrl>
+    <bugTrackerUrl>http://zabkat.com/contact.htm</bugTrackerUrl>
+    <tags>xplorer2ultimate xplorer2 xplorer explorer shell file manage search filter preview tabs dual-pane trial</tags>
+    <summary>Reclaim control of your files and folders.</summary>
+    <description>**xplorer² Ultimate** is a desktop file manager combining the simplicity of Windows Explorer with the speed and efficiency of traditional dual pane orthodox file managers, helping you be **productive** with your documents, pictures, music, source code and other files. 
+
+### Power at your fingertips:
+* Full shell namespace browser
+* Dual panes and folder tabs
+* Preview documents, images, music etc.
+* Fast desktop search using all file attributes
+* Folder sizes and disk space visualization
+* Compare and synchronize folders
+* Search for duplicate files to free space
+* Manage files from many folders at once
+* Advanced copy, delete and rename operations
+* Robust file transfers
+* Filename color coding
+* Execute DOS commands and scripts
+* Macros to automate complex file management
+* Programable columns
+* Fully customizable user interface
+* Individual folder settings
+* Help and assistance where you need it
+* Modern ribbon UI or traditional menu bar
+* Everyday efficiency and control
+* Manage large folders with ease
+* Lightweight system resource use
+* Native 32/64 bit and Unicode versions 
+
+### Ultimate features over [*xplorer² Pro*](https://community.chocolatey.org/packages/xplorer2pro)
+* Orders of magnitude faster file content searches
+* A natural, "Google-like", simpler search interface
+* View and search for through 1000+ different file properties
+* Can optionally create a portable version (not via this Chocolatey package) to use anywhere
+* Can integrate with Total Commander WCX packer plugins
+* User-defined file properties
+* A duplicate detection algorithm that can scan an entire hard disk in seconds instead of hours
+
+### Trial-ware
+This package installs a fully-functional, **21-day trial version** of *xplorer² Ultimate*.
+
+### Installation Arguments
+A default install of **xplorer²** has options that -- in some cases -- require a re-install to change.  The installer has a some options that can be utilized with the `--installarguments` (`--ia`) switch.
+
+* `/DESKTOP=0` - Do not create a desktop shortcut
+* `/QUICK=1` - Create a QuickLaunch shortcut
+* `/WINDOWS=1` - Run xplorer² when Windows starts
+* `/SKIN=0` - Do not use a modern skin
+* `/CONTEXT=0` - Do not create "Add to folders" context menu
+* `/MONITOR=0` - Do not use a multi-monitor manifest
+* `/EDITOR=1` - Editor² Quick Launch shortcut
+* `/TRANSL=` - Set xplorer² to use an optional language. (Available: *English, German, French, Spanish, Italian, Japanese, Greek, Dutch, Swedish, Serbian, Czech, Polish, Bulgarian, Chinese Trad, Russian, Brazilian, Chinese Simpl*) (Default: English)
+* `/REPLACE=1` - Open all folders with xplorer² (replace Windows Explorer)
+* `/SINGLE=1` - Use a separate single-pane window for integration (not recommended)
+* `/ALLUSERS=1` - Replace explorer for all users on this PC
+* `/D=(path)` - Use *(path)* as an alternate install location (paths with spaces may be tricky to quote)
+
+Example: `choco install xplorer2ultimate -y --ia='"/DESKTOP:0 /SKIN:0 /REPLACE:1 /TRANSL:German"'`
+
+    </description>
+    <releaseNotes>http://zabkat.com/changes.txt</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
