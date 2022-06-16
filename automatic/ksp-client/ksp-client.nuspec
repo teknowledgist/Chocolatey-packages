@@ -13,7 +13,7 @@
     <projectUrl>http://www.sassafras.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@984302e79afe84f8f021c7f300091c4b8544f86e/Icons/ksp-client_icon.png</iconUrl>
     <copyright>Copyright © 1990-2018 Sassafras Software Inc.</copyright>
-    <licenseUrl>https://www.sassafras.com/eula/</licenseUrl>
+    <licenseUrl>https://www.sassafras.com/legal-sla/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://www.sassafras.com/documentation/</docsUrl>
     <tags>ksp-client ksp k2 keyaccess keyserver allsight client sassafras inventory license tracking commercial enterprise</tags>
