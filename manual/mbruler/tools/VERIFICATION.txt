@@ -14,6 +14,6 @@ CheckSum : f7a245c32e0f9a4336e36b9b500fe750fb71b16574bf957287cf56c86ec210b5
 
 Direct Download of installer for Windows 10:
 --------------------------------------------
-Version  : 5.3
-URL      : http://www.markus-bader.de/MB-Ruler/mbruler53_10.zip
-CheckSum : b18eaa214c02bcd85ec271238382b646b0a19b0f35d65f5738a6c4343a619553
+Version  : 5.4
+URL      : http://www.markus-bader.de/MB-Ruler/mbruler54.zip
+CheckSum : ee355798f91d1686af3a9cbce7cd20e3f65f6947c02d99dd7c7bdde7081c174d

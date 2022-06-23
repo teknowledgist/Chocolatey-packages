@@ -1,18 +1,19 @@
 $ErrorActionPreference = 'Stop'  # stop on all errors
 
-$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$osVersion = [version](Get-WmiObject Win32_OperatingSystem | Select-Object -ExpandProperty Version)
-
-if ($osVersion.Major -lt 10) {
-   $fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*.zip' | ? {$_.name -notmatch '_10'}).FullName
-} else {
-   $fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*_10.zip').FullName
+if ([version]((Get-WmiObject Win32_OperatingSystem).version) -lt [version]'10.0') {
+   Throw "This version of MB-Ruler requires at least Windows 10.  Please install an earlier version of this package."
 }
+
+$toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
+
+$ZipFile = Get-ChildItem -Path $toolsDir -Filter '*.zip' | 
+               Sort-Object LastWriteTime | Select-Object -ExpandProperty FullName -Last 1
 
 $WorkingFolder = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:ChocolateyPackageVersion"
 
 # Extract zip
-Get-ChocolateyUnzip -FileFullPath $fileLocation -Destination $WorkingFolder
+Get-ChocolateyUnzip -FileFullPath $ZipFile -Destination $WorkingFolder
+Remove-Item $ZipFile -Force 
 
 $InstallArgs = @{
    packageName   = $env:ChocolateyPackageName

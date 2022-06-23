@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mbruler</id>
-    <version>5.3.0.20180802</version>
+    <version>5.4</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mbruler</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -18,7 +18,7 @@
     <docsUrl>http://www.markus-bader.de/MB-Ruler/tutorial.php</docsUrl>
     <mailingListUrl>http://www.markus-bader.de/MB-Ruler/maillist.php</mailingListUrl>
     <bugTrackerUrl>http://mb-ruler.idea.informer.com/</bugTrackerUrl>
-    <tags>ruler measure distance scale protractor angle embedded notsilent</tags>
+    <tags>mbruler ruler measure distance scale protractor angle embedded notsilent</tags>
     <summary>A triangular screen ruler for on-screen measurements.</summary>
     <description>MB-Ruler offers several measurement instruments for measuring distances and angles on the screen.
 
@@ -34,6 +34,9 @@ All measurement instruments are displayed in an unobtrusive, almost-transparent 
 * remote interface
 
 The general use of MB-Ruler is very easy. All functions can be accessed through the context menu (right mouse button) of the MB-Ruler Icon in the taskbar.  Help on using MB-Ruler can be found [here](http://www.markus-bader.de/MB-Ruler/help/quickstart.freeware.htm) and [here](http://www.markus-bader.de/MB-Ruler/tutorial.php).
+
+### Windows 10 requirement
+Version 5.4 of MB-Ruler requires Windows 10 (or newer).
 
 ### License
 MB-Ruler is freeware for private and **non-commercial** use.  
