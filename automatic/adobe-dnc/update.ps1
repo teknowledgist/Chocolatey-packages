@@ -4,7 +4,8 @@ function global:au_GetLatest {
    $WhatsNew = 'https://helpx.adobe.com/camera-raw/using/whats-new.html'
    $Content = Invoke-WebRequest $WhatsNew -UseBasicParsing
    $null = $content.RawContent.split("`n") -split '<p>' | 
-               Where-Object {$_ -match 'Adobe Camera Raw.*([0-9][0-9]\.[0-9.]+)'}
+               Where-Object {$_ -match 'version ([0-9][0-9]\.[0-9.]+)'} |
+               Select Object -first 1
 
    $version = $Matches[1]
    $URLversion = $version.replace('.','_')

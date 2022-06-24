@@ -24,7 +24,7 @@ function global:au_SearchReplace {
 }
 
 function global:au_BeforeUpdate() { 
-   Write-host "Downloading Xplorer2 Pro $($Latest.Version) installer file"
+   Write-host "Downloading Xplorer2 Ultimate $($Latest.Version) installer file"
    Write-warning "The zabcat.com site won't allow proper download.  It must be manually downloaded."
 }
 
