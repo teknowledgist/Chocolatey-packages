@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>date-reminder</id>
+    <version>3.37</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/date-reminder</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Date Reminder</title>
+    <authors>Horst Schaeffer</authors>
+    <projectUrl>https://www.horstmuc.de/wrem.htm</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@16e5d69aa5628f18c46e0e183f664bdbf2af8538/Icons/date-reminder_icon.png</iconUrl>
+    <copyright>© 2003-2021, Horst Schaeffer</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/date-reminder/legal/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.horstmuc.de/wrem.htm</docsUrl>
+    <tags>date-reminder calendar event notice alert freeware embedded</tags>
+    <summary>Reminds you of recurring or nonrecurring events</summary>
+    <description>Date Reminder reminds you of recurring or nonrecurring events, like birthdays, bills to pay, appointments etc...
+    
+The program can be run from the Startup folder with an option to show only, if there are any alerts for this day. If Date Reminder is kept in the System Tray (optional), if will also alert you after standby or hibernation.
+
+The reminders are listed in chronological order, with recurring events showing only once (the next one). This gives you an instant view of the alerts (at top), as well as a full list of all reminders. Other view modes: Alerts only, History.
+
+![Example](https://www.horstmuc.de/img/remindere.png)
+
+## Features
+* Events may recur every year, month, week, day, or every 10 days, every 2 weeks, every 3 month etc.
+* For monthly or annual reminders you can preselect a specific day (e.g. "first monday") of the month
+* Reminders can be marked "done", i.e. "dealt with". Past events will remain in the list until they are marked "done".
+* A group symbol (column ::) is available to mark different types of events.
+* An advance notice marker can be set a number of days before an event.
+* An extra calendar box, sizable for one or more month, always highlights the date of the currently selected line.
+* Second text line with launching capability (shows in status bar): Double click to load a file, program, website etc., or just use it for additional text.
+* Date format according to the user's regional settings (a different format can be specified in the INI file).
+* The user interface is controlled by language files. English (default) and 20 other languages are included. Additional language files can be created. Unicode support. 
+
+    </description>
+    <releaseNotes>
+* Fixed: Data window position issue in case very long reminder text in list
+* Event data window: title added
+* Files without BOM: auto-detect UTF-8, UTF-16 
+* PureBasic compiler 5.73
+    </releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
