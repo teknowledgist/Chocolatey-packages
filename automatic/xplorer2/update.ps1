@@ -9,11 +9,11 @@ function global:au_GetLatest {
    $Version = $line -replace '[^0-9.]',''
    
    $null = $section.split('<>') | ? {$_ -match 'href="(.*)"'} |select -first 1
-   $url32 = "http://zabkat.com/dl/xplorer2_lite_setup.exe"
+   $url32 = "http://zabkat.com/dl/$($Matches[1])"
 
    return @{ 
       Version    = $Version
-      URL32      = $url32
+      ManualURL  = $url32
    }
 }
 
@@ -27,4 +27,11 @@ function global:au_SearchReplace {
     }
 }
 
-Update-Package -ChecksumFor 32 -nocheckchocoversion
+function global:au_BeforeUpdate() { 
+   Write-host "Downloading Xplorer2 Lite $($Latest.Version) installer file"
+   Write-warning "The zabcat.com site won't allow proper download.  " +
+                  "It must be manually downloaded from:`n " +
+                  $($Latest.ManualURL32)
+}
+
+update -ChecksumFor none

@@ -1,6 +1,8 @@
 <?xml version="1.0"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
   <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xplorer2</id>
     <version>5.0.0.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xplorer2pro</packageSourceUrl>
@@ -8,16 +10,15 @@
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>xplorer² Lite</title>
     <authors>Zabkat</authors>
-    <!-- projectUrl is required for the community feed -->
-    <projectUrl>http://zabkat.com/x2lite.htm</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/xplorer2_icon.png</iconUrl>
+    <projectUrl>https://www.zabkat.com/x2lite.htm</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@3d1d77f7351bd784da1b3ff3d9996e54c8bc6484/Icons/xplorer2_icon.png</iconUrl>
     <copyright>©2002-2017 ZABKAT</copyright>
     <licenseUrl>http://zabkat.com/x2lic.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://zabkat.com/x2h_0.htm</docsUrl>
     <mailingListUrl>https://forum.zabkat.com/viewforum.php?f=20</mailingListUrl>
     <bugTrackerUrl>http://zabkat.com/contact.htm</bugTrackerUrl>
-    <tags>xplorer2 xplorer explorer file browser manager notsilent</tags>
+    <tags>xplorer2 xplorer explorer shell file manage search filter preview tabs dual-pane embedded notsilent</tags>
     <summary>Reclaim control of your files and folders.</summary>
     <description>**xplorer² Lite** is utterly affordable file management power.
 
@@ -28,6 +29,7 @@ All the shell goodies from Windows Explorer — none of the hassle! The free, li
 * Side by side views for easy file management
 * Filter and select with wildcards
 * Synchronize folders 
+* Manage files with color tags 
 
 ### Freeware license
 This free version of xplorer² is for private (home) or academic (school and university) and general **non-profit** use only. You cannot use it in any commercial context, including but not limited to: corporate, office, military, government etc. All commercial users must [obtain a license for the full version](http://zabkat.com/x2buy.htm).   
@@ -41,5 +43,6 @@ This free version of xplorer² is for private (home) or academic (school and uni
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

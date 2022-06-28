@@ -1,0 +1,78 @@
+LICENSE AGREEMENT: TERMS AND CONDITIONS OF USE
+
+IMPORTANT NOTICE.  THIS LICENSE AGREEMENT IS A LEGAL AGREEMENT BETWEEN 
+YOU (EITHER AN INDIVIDUAL OR A SINGLE ENTITY) AND ZABARAKATRANEMIA OR 
+ANY SUBSIDIARY, AND ITS SUPPLIERS ("ZABKAT"). BY INSTALLING OR USING 
+THIS SOFTWARE IN ANY WAY YOU ACKNOWLEDGE THAT YOU HAVE READ, 
+UNDERSTAND AND AGREE TO THE TERMS OF THIS AGREEMENT. IF YOU DO NOT 
+AGREE TO THESE TERMS, DO NOT INSTALL OR USE THIS SOFTWARE IN ANY WAY 
+AND PROMPTLY RETURN THE SOFTWARE AND ALL ACCOMPANYING MATERIALS TO 
+YOUR PLACE OF PURCHASE.
+
+LICENSE GRANT.  ZABKAT grants you a non-exclusive license to use this 
+software, and any associated documentation ("Software") as indicated 
+herein.  If you have purchased a Single User License, you may install 
+and use one copy of the Software EITHER on any computer you have 
+exclusive access to, OR to a single computer accessible by many users.
+The Software is in "use" on a computer when it has been loaded into
+temporary memory (i.e. RAM) or installed into permanent memory (e.g. 
+hard disk or other storage device) of that computer.  For multi-user
+multi-computer use you must purchase a Multiple User License that 
+enables you to install and use the Software on the number of 
+computers authorized at the time of purchase.
+
+OTHER RESTRICTIONS.  You shall not: (a) remove any product 
+identification, copyright notices, or other notices or proprietary 
+restrictions from this Software; (b) sell, lease, rent, transfer, copy 
+or distribute this Software; (c) cause or permit reverse engineering, 
+disassembly, decompilation or alteration of this Software except and 
+only to the extent that such activity is expressly permitted by 
+applicable law notwithstanding this limitation.
+
+COPYRIGHT/OWNERSHIP.  This Software is licensed and not sold. This 
+Software and its source code are proprietary products of ZABKAT and 
+are protected by copyright and other intellectual property laws. You 
+acquire only the right to use the Software and do not acquire any 
+rights, express or implied, in the Software or media containing the 
+Software other than those specified in this License.  ZABKAT shall at 
+all times retain all rights, title, interest, including intellectual 
+property rights, in the Software and media.
+
+TERM.  This License is effective until terminated.  You may terminate 
+it at any time by destroying the Software, together with all copies 
+thereof. This license will also terminate if you fail to comply with 
+any term or condition of this Agreement.  Upon such termination, you 
+agree to destroy the Software, together with all copies thereof.
+
+TRADEMARKS.  ZABKAT, and other names of ZABKAT and ZABKAT products 
+referred to herein are trademarks or registered trademarks of ZABKAT 
+in the United Kingdom and other countries.  All other brands and 
+product names are trademarks of their respective holders.
+
+DISCLAIMER OF WARRANTIES. THIS SOFTWARE IS DISTRIBUTED 'AS IS' AND 
+YOU, ITS USER, ASSUME ALL RISKS WHEN INSTALLING OR USING IT.  TO THE 
+MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, ZABKAT DISCLAIMS ALL 
+WARRANTIES EXPRESS OR IMPLIED, BY OPERATION OF LAW OR OTHERWISE.  
+ZABKAT DISCLAIMS THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS 
+FOR A PARTICULAR PURPOSE. ZABKAT DOES NOT WARRANT THAT THE SOFTWARE IS 
+NON-INFRINGING, THAT IT WILL MEET YOUR REQUIREMENTS OR THAT ITS 
+OPERATION WILL BE UNINTERRUPTED, ERROR-FREE OR VIRUS-FREE. 
+ 
+LIMITATION OF LIABILITY. IN NO EVENT SHALL ZABKAT BE LIABLE FOR ANY 
+DAMAGES OF ANY KIND INCLUDING DIRECT, INDIRECT, SPECIAL, INCIDENTAL OR 
+CONSEQUENTIAL DAMAGES (WHICH SHALL INCLUDE WITHOUT LIMITATION, DAMAGES 
+FOR LOSS OF BUSINESS OR PROFITS, BUSINESS INTERRUPTION, LOSS OF 
+BUSINESS INFORMATION, OR OTHER PECUNIARY LOSS) WHETHER BASED ON 
+CONTRACT, TORT OR OTHER LEGAL THEORY, ARISING OUT OF THE USE OF OR 
+INABILITY TO USE THE SOFTWARE, EVEN IF ZABKAT HAS BEEN ADVISED OF THE 
+POSSIBILITY OF SUCH DAMAGES.
+ 
+MISCELLANEOUS.  In the event of invalidity of any provision of this 
+Agreement, the parties agree that such invalidity shall not affect the 
+validity of the remaining portions.  The Agreement is governed by the 
+laws of United Kingdom. The United Nations Convention on Contracts for 
+the International Sale of Goods is specifically disclaimed.  This is 
+the entire agreement between you and ZABKAT, which supersedes any 
+prior agreement, whether written or oral, relating to this subject 
+matter.
+
