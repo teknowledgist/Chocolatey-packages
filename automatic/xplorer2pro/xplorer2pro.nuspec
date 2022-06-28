@@ -65,7 +65,7 @@ A default install of **xplorer²** has options that -- in some cases -- require 
 * `/ALLUSERS=1` - Replace explorer for all users on this PC
 * `/D=(path)` - Use *(path)* as an alternate install location (paths with spaces may be tricky to quote)
 
-Example: `choco install xplorer2pro -y --ia='"/DESKTOP:0 /SKIN:0 /REPLACE:1 /TRANSL:German"'`
+Example: `choco install xplorer2pro -y --ia='"/DESKTOP=0 /SKIN=0 /REPLACE=1 /TRANSL=German"'`
 
     </description>
     <releaseNotes>http://zabkat.com/changes.txt</releaseNotes>
