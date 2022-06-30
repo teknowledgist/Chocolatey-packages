@@ -10,9 +10,11 @@ function global:au_GetLatest {
                      Select-Object -first 1
    $version = $versionstring.split()[1]
    
-   $url = $download_page.Links | 
-                  Where-Object {($_ -match $version) -and ($_.href -like 'http*')} | 
-                  Select-Object -First 1 -ExpandProperty href
+   $paragraph = $download_page.rawcontent -split '</?p' | 
+                  Where-Object {$_ -match $version } | Select-Object -first 1
+   $url = $paragraph.split('"') | 
+            Where-Object {$_ -like 'http*'} | Select-Object -First 1
+
    if (-not $url) {
       # MS seeme to recycle download links for a few versions in a row
       $CIcontent = Get-Content 'tools\chocolateyInstall.ps1'
