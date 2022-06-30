@@ -16,14 +16,14 @@ $InstallArgs = @{
 $pp = Get-PackageParameters
 
 # QGIS install is best done with older versions uninstalled
-[array]$Keys = Get-UninstallRegistryKey -SoftwareName "QGIS *"
+[array]$Keys = Get-UninstallRegistryKey -SoftwareName 'QGIS *'
 if ($Keys) {
    $TargetKey = $null
    # Only want to uninstall the latest, Long Term Release version.
    # First, gather only the versions older than this LTR package.
    [array]$Keys = $Keys | Where-Object {[version]($_.DisplayName -replace '[^0-9.]','') -le [version]$AppVersion}
    if ($Keys.Count -gt 1) {
-      Write-Warning "Multiple, previously-installed Long Term Release versions of QGIS found."
+      Write-Warning 'Multiple, previously-installed Long Term Release versions of QGIS found.'
       # If there are several old versions, only remove the most recent.
       $MaxVer = [version]'0.0'
       Foreach ($key in $Keys) {
@@ -33,7 +33,7 @@ if ($Keys) {
             $TargetKey = $key
          }
       }
-      if (-not $pp.contains("Keep")) {
+      if (-not $pp.contains('Keep')) {
          Write-Warning "Only the newest version (v$($MaxVer.ToString())) will be removed before installing version $AppVersion"
       }
    } elseif ($Keys.Count -eq 1) {
@@ -42,11 +42,11 @@ if ($Keys) {
    $TargetVersion = $TargetKey.DisplayName -replace '[^0-9.]',''
    $TargetShortVersion = [version](([version]$TargetVersion).tostring(2))
    $AppShortVersion = [version](([version]$AppVersion).tostring(2))
-   if ($pp.contains("Keep")) {
-      Write-Host "You have requested for this package to NOT uninstall any previous installs of QGIS." -ForegroundColor Cyan
+   if ($pp.contains('Keep')) {
+      Write-Host 'You have requested for this package to NOT uninstall any previous installs of QGIS.' -ForegroundColor Cyan
    }
-   if ((-not $pp.contains("Keep")) -or ($TargetShortVersion -eq $AppShortVersion)) {
-      if ($pp.contains("Keep")) {
+   if ((-not $pp.contains('Keep')) -or ($TargetShortVersion -eq $AppShortVersion)) {
+      if ($pp.contains('Keep')) {
          Write-warning "Multiple installs of minor (xx.yy) releases are not possible.  Version $TargetVersion will be uninstalled."
       }
       # The QGIS uninstaller sometimes leaves stuff behind that still prevents install
@@ -58,7 +58,7 @@ if ($Keys) {
       if ( Test-Path "$env:PUBLIC\Desktop\QGIS $TargetShortVersion") { 
          Remove-Item "$env:PUBLIC\Desktop\QGIS $TargetShortVersion" -Recurse -Force 
       }
-      $OrphanedLinks = Get-ChildItem "$env:PUBLIC\Desktop\" -Filter "*.lnk" 
+      $OrphanedLinks = Get-ChildItem "$env:PUBLIC\Desktop\" -Filter '*.lnk' 
       Foreach ($Item in $OrphanedLinks) {
          $LinkTarget = (new-object -comobject Wscript.Shell).CreateShortcut($Item.FullName).TargetPath
          if ($LinkTarget -match "QGIS $TargetShortVersion") {
@@ -68,9 +68,18 @@ if ($Keys) {
 
       Write-Host "Uninstalling older QGIS version $TargetVersion. Please wait." -ForegroundColor Cyan
       $UninstallArgs = @{
-         ExeToRun       = $TargetKey.UninstallString
-         Statements     = '/S'
+         PackageName    = $env:ChocolateyPackageName
          ValidExitCodes = @(0)
+      }
+      if ($key.UninstallString -match '\.exe$') {
+         $UninstallArgs.File       = $key.UninstallString
+         $UninstallArgs.FileType   = 'EXE'
+         $UninstallArgs.SilentArgs = '/S'
+      } else {
+         $ID = ($key.UninstallString -split '/x')[-1]
+         $UninstallArgs.File       = 'msiexec.exe'
+         $UninstallArgs.FileType   = 'MSI'
+         $UninstallArgs.SilentArgs = "$ID /qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$AppShortVersion.MsiUninstall.log`""
       }
       $null = Start-ChocolateyProcessAsAdmin @UninstallArgs
       # The uninstaller starts another process and immediately returns.  
@@ -79,5 +88,5 @@ if ($Keys) {
 }
 
 # Finally, install.
-Write-Host "Installing QGIS can take a few minutes.  Please be patient." -ForegroundColor Cyan
+Write-Host 'Installing QGIS can take a few minutes.  Please be patient.' -ForegroundColor Cyan
 Install-ChocolateyPackage @InstallArgs
