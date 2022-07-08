@@ -20,18 +20,19 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
     @{
-        "tools\chocolateyInstall.ps1" = @{
-            "(^[$]URL\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-            "(^[$]Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
+        "legal\VERIFICATION.md" = @{
+            "(^- Version\s*\:\s*)(.*)"  = "`$1$($Latest.URL32)"
+            "(^- SHA256\s*\:\s*)(.*)"   = "`$1$($Latest.Checksum32)"
         }
     }
 }
 
 function global:au_BeforeUpdate() { 
    Write-host "Downloading Xplorer2 Lite $($Latest.Version) installer file"
-   Write-warning "The zabcat.com site won't allow proper download.  " +
+   $msg = "The zabcat.com site won't allow proper download.  " +
                   "It must be manually downloaded from:`n " +
-                  $($Latest.ManualURL32)
+                  $Latest.ManualURL32
+   Write-warning $msg
 }
 
 update -ChecksumFor none

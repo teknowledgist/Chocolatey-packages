@@ -6,9 +6,9 @@ The Meazure installer can be downloaded from the GitHub releases page:
 - https://github.com/cthing/meazure/releases
 
 or directly:
-- Version : 3.0.2
-- URL     : https://github.com/cthing/meazure/releases/download/3.0.2/meazr302x64.exe
-- SHA256  : 7388FB0FEC06F66CDA33291F8B65E5611802667E393D5A181D75F1841E8FA6B7
+- Version : 4.0.0
+- URL     : https://github.com/cthing/meazure/releases/download/4.0.0/meazr400x64.exe
+- SHA256  : 4478CCA366237CE65E0F2805A74E9F2919F87E87B0A58ED999DEE0367CFC8ACF
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
