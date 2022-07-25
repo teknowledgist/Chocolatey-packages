@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>connexion</id>
-    <version>3.0.7905</version>
+    <version>3.1.8196</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/connexion</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

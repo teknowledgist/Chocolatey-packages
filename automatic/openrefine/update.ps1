@@ -1,17 +1,16 @@
 import-module au
 
-$Release = 'https://github.com/OpenRefine/OpenRefine/releases/latest'
-
 function global:au_GetLatest {
+   $Release = 'https://github.com/OpenRefine/OpenRefine/releases/latest'
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
    $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
-   $urlstub = $download_page.rawcontent.split() | 
-                Where-Object {$_ -match 'win-with-java.*\.zip"'} |
+   $urlstring = $download_page.rawcontent.split() | 
+                Where-Object {$_ -match 'win-with-java.*zip"'} |
                 Select-Object -First 1
-   $url = "https://github.com" + $($urlstub -replace '.*?"([^ ]+\.zip).*','$1')
+   $url = ($urlstring.split('"') | ? {$_ -like 'https*'}) -replace '&amp;','&'
 
-   $version = $url.split('/') | ? {$_ -match '^[0-9.]+$'}
+   $version = $url -replace '.*v=([0-9.]+).*','$1'
 
    return @{ 
       Version    = $Version

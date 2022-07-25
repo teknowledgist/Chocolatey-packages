@@ -2,7 +2,7 @@
 
 $packageArgs = @{
    packageName   = $env:ChocolateyPackageName
-   softwareName  = 'Slicer 5.0.2*'
+   softwareName  = 'Slicer 5.0.3*'
    fileType      = 'EXE'
    silentArgs   = '/S'
    validExitCodes= @(0)

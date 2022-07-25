@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageMileStone = '22.3'
+$PackageMileStone = '22.7'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Remove any previously unzipped installers

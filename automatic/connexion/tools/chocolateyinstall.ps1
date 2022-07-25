@@ -5,8 +5,8 @@ $WorkSpace = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:chocolateyPack
 $WebFileArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = Join-Path $WorkSpace "$env:ChocolateyPackageName.exe"
-   Url          = 'https://help.oclc.org/@api/deki/files/12679/ConnexClient3.0.7905.exe?revision=1'
-   Checksum     = '9f677b0628ef35717399e5093a978868e9b1e11090034c768b014a232e3b8078'
+   Url          = 'https://help.oclc.org/@api/deki/files/13899/ConnexClient3.1.8196.exe?revision=1'
+   Checksum     = 'fc23ca79d205916b1b9e56a81e50c3b5189dfd5c5655d5a7dcf76d5801dd5f55'
    ChecksumType = 'sha256'
    GetOriginalFileName = $true
 }
