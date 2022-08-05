@@ -1,8 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $Url      = 'https://download.sysinternals.com/files/PSTools.zip'
-$PSEChecksum = '57492d33b7c0755bb411b22d2dfdfdf088cbbfcd010e30dd8d425d5fe66adff4'
-$PSEChecksum64 = 'a9affdcdb398d437e2e1cd9bc1ccf2d101d79fc6d87e95e960e50847a141faa4'
+$PSEChecksum = '08C6E20B1785D4EC4E3F9956931D992377963580B4B2C6579FD9930E08882B1C'
+$PSEChecksum64 = '5910B49C041B80F6E8D2E8E10752A9062FEBE4A2EDD15F07C6B1961B3C79C129'
 
 # Remove old versions
 $null = Get-ChildItem -Path $env:ChocolateyPackageFolder -Filter *.exe | Remove-Item -Force
@@ -11,7 +11,7 @@ $WorkSpace = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:chocolateyPack
 
 # PSExec is a subcomponent of PSTools in which any other subcomponent
 #    could change without any change to PSExec.  This makes tracking
-#    the checksum very difficult, so that aspect is skipped here.
+#    the version very difficult, so the download checksum is skipped here.
 $WebFileArgs = @{
    packageName         = $env:ChocolateyPackageName
    FileFullPath        = Join-Path $WorkSpace "$env:ChocolateyPackageName.zip"
@@ -29,6 +29,7 @@ Get-ChocolateyUnzip @UnzipArgs
 
 $PSEfile = Get-ChildItem $WorkSpace -Filter 'psexec*.exe' 
 Foreach ($EXEfile in $PSEfile) {
+   # Instead, the checksums of the actual PSExec binaries are compared.
    $ChecksumArgs = @{
       File         = $EXEfile.Fullname
       ChecksumType = 'SHA256'
@@ -42,4 +43,5 @@ Foreach ($EXEfile in $PSEfile) {
    Copy-Item $EXEfile.fullname -Destination $env:ChocolateyPackageFolder -Force
 }
 
+# None of the other binaries are verified, so delete them all.
 Get-ChildItem $WorkSpace -Exclude 'psexec*.exe' -Recurse | ForEach-Object {Remove-Item $_.Fullname -Force}
