@@ -41,6 +41,10 @@ The measurement tools provide a number of key features including:
 In addition to the tools listed above, a set of rulers and a grid can be placed on the screen. A magnifier is also provided to help position the measurement tools and to read the color of screen pixels.
 
 Meazure remembers the settings for all measurement tools between runs of the program. In addition, Meazure allows you to save the tool positions to a file. These files, called profiles, can be used to represent an alternate screen size or a required image size.
+
+#### Version Requirement
+Meazure requires Windows 10 version 1607 or newer.
+
     </description>
     <releaseNotes>https://github.com/cthing/meazure/releases</releaseNotes>
     <dependencies>

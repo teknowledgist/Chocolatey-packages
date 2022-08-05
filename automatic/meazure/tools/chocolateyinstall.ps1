@@ -1,5 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$Build = Get-WmiObject Win32_OperatingSystem | Select-Object -ExpandProperty BuildNumber
+$1607Build = 14393
+if ($Build -lt $1607Build) {
+   Throw 'Meazure requires Windows 10 version 1607 or newer to install.  Exiting.'
+}
+
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $InstallFile = Get-ChildItem -Path $toolsDir -Filter '*.exe' | 
                   Sort-Object LastWriteTime | Select-Object -Last 1
