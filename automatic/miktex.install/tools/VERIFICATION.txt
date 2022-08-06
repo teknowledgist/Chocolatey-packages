@@ -5,14 +5,12 @@ in verifying that this package's contents are trustworthy.
 The embedded MiKTeX setup utility (which does NOT contain all the 
 sub-packages that make up a MiKTeX installation) is available here:
    https://miktex.org/download
-With the "All Downloads" tab displayed, expand the 32-bit and/or 64-bit
-"MiKTeX Setup Utility" sections.  There you can see the SHA-256 hash,
-and get the file via the "Download" button.
+With the "All Downloads" tab displayed, expand "MiKTeX Setup Utility" 
+sections.  There you can see the SHA-256 hash, and get the file via the 
+"Download" button.
 
 Direct Download:
-Milestone       = '22.7'
-32-bit URL      = 'https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x86/miktexsetup-4.2.zip'
-32-bit checksum = '9FB30F32211B2369CD4D4AC1DF5F5169777B1758AA9204906E64BB1511A198B8'
+Milestone       = '22.7.30'
 64-bit URL      = 'https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x64/miktexsetup-4.2-x64.zip'
 64-bit checksum = 'E866F27AA24EA0CA27EECC631ABAE3E750E42A94A49A01814D686B0BD2E14877'
 

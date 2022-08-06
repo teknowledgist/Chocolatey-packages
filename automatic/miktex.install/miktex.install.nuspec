@@ -56,6 +56,9 @@ This package has only the MiKTeX setup utility embedded.  Any new install of MiK
 * On a workstation in the same network, you might use:
 
 `choco install miktex.install --params '"/RepoPath:\\localserver\MiKTeX-Repo"'`
+
+## 64-bit only
+Starting with the 22.7.26 release of MiKTeX, the 32-bit version has been depreciated.
 ]]>
     </description>
     <releaseNotes>https://github.com/MiKTeX/miktex/releases/latest</releaseNotes>

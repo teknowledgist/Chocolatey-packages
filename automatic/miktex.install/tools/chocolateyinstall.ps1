@@ -1,17 +1,21 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageMileStone = '22.7'
+$PackageMileStone = '22.7.30'
+
+if (Get-ProcessorBits -compare 32) {
+   Thow "MiKTeX for Windows no longer has a 32-bit option available."
+}
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
 # Remove any previously unzipped installers
 Get-ChildItem $toolsDir -Filter *.exe -Recurse | ForEach-Object { Remove-Item $_.fullname -Force }
 
-$ZipFiles = Get-ChildItem -Path $toolsDir -Filter '*.zip' | Sort-Object LastWriteTime | Select-Object -ExpandProperty FullName -Last 2 
+$ZipFile = Get-ChildItem -Path $toolsDir -Filter '*.zip' | 
+               Sort-Object LastWriteTime | Select-Object -ExpandProperty FullName -Last 1 
 
 $ZipArgs = @{
    PackageName    = $env:ChocolateyPackageName
-   FileFullPath   = $ZipFiles | Where-Object {$_ -notmatch 'x64'}
-   FileFullPath64 = $ZipFiles | Where-Object {$_ -match 'x64'}
+   FileFullPath64 = $ZipFile
    Destination    = $toolsDir
 }
 $null = Get-ChocolateyUnzip @ZipArgs
