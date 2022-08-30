@@ -7,6 +7,6 @@ Tabular Editor can be downloaded from:
 
 Direct download:
 
-Version  : 2.16.7
-URL      : https://cdn.tabulareditor.com/files/TabularEditor.2.16.7.Installer.msi
-CheckSum : 3026F36DB5FF7180BE734F4CEBEC1C5F1DE91CF362C4E2A8D793799B46D8334D
+Version  : 2.17.1
+URL      : https://cdn.tabulareditor.com/files/TabularEditor.2.17.1.Installer.msi
+CheckSum : 2ECC2061133148D1D0BCEEAD3EE3A200FA5B69D0114355B27045F7497E1DD8A4

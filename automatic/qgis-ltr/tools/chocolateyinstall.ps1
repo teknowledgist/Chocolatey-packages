@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$AppVersion = '3.22.9'   # may not match package version
+$AppVersion = '3.22.10'   # may not match package version
 
 $InstallArgs = @{
    packageName    = 'qgis-ltr'
    fileType       = 'MSI'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
-   url64bit       = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.22.9-2.msi'
+   url64bit       = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.22.10-1.msi'
    checksumType   = 'sha256'
-   checksum64     = '61a9b4b92b46aa35f0814612a97c9e977e5dd0037dc1414c983242e533f7f3f8'
+   checksum64     = '1f7a2ef28f5970724bd7a832f1d0be024c74bd655587dad964175058c72b87c0'
    silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes = @(0)
 }
@@ -26,11 +26,11 @@ if ($Keys) {
       Write-Warning 'Multiple, previously-installed Long Term Release versions of QGIS found.'
       # If there are several old versions, only remove the most recent.
       $MaxVer = [version]'0.0'
-      Foreach ($key in $Keys) {
-         $v = [version]($key.DisplayName -replace '[^0-9.]','')
+      Foreach ($SingleKey in $Keys) {
+         $v = [version]($SingleKey.DisplayName -replace '[^0-9.]','')
          if ($v -ge $Maxver) { 
             $MaxVer = $v 
-            $TargetKey = $key
+            $TargetKey = $SingleKey
          }
       }
       if (-not $pp.contains('Keep')) {
@@ -71,15 +71,20 @@ if ($Keys) {
          PackageName    = $env:ChocolateyPackageName
          ValidExitCodes = @(0)
       }
-      if ($key.UninstallString -match '\.exe$') {
-         $UninstallArgs.File       = $key.UninstallString
-         $UninstallArgs.FileType   = 'EXE'
-         $UninstallArgs.SilentArgs = '/S'
+      if ($TargetKey.UninstallString -match 'msiexec\.exe') {
+         Write-Verbose "Found MSI installer."
+         $exeToRun = 'msiexec.exe'
+         $ID = ($TargetKey.UninstallString -split '/x')[-1]
+         $Switches = "/x$ID /qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$TargetVersion.MsiUninstall.log`""
       } else {
-         $ID = ($key.UninstallString -split '/x')[-1]
-         $UninstallArgs.File       = 'msiexec.exe'
-         $UninstallArgs.FileType   = 'MSI'
-         $UninstallArgs.SilentArgs = "$ID /qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$AppShortVersion.MsiUninstall.log`""
+         Write-Verbose "Found EXE installer"
+         $exeToRun = $TargetKey.UninstallString
+         $Switches = '/S'
+      }
+      $UninstallArgs = @{
+         ExeToRun       = $exeToRun
+         Statements     = $Switches
+         ValidExitCodes = @(0)
       }
       $null = Start-ChocolateyProcessAsAdmin @UninstallArgs
       # The uninstaller starts another process and immediately returns.  

@@ -10,9 +10,9 @@ sections.  There you can see the SHA-256 hash, and get the file via the
 "Download" button.
 
 Direct Download:
-Milestone       = '22.7.30'
-64-bit URL      = 'https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x64/miktexsetup-4.2-x64.zip'
-64-bit checksum = 'E866F27AA24EA0CA27EECC631ABAE3E750E42A94A49A01814D686B0BD2E14877'
+Milestone       = '22.8.28'
+64-bit URL      = 'https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x64/miktexsetup-5.1-x64.zip'
+64-bit checksum = '33C9742F2A833B01F5D1C15949FD7A23DCEE40BF59A068E5F49D28060C65AECD'
 
 Note that the version of the Chocolatey package identifies the MiKTeX 
 "milestone", not the version of the setup utility embedded in the package.
