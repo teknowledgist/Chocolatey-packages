@@ -16,8 +16,8 @@
     <licenseUrl>https://www.digimizer.com/license/</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://www.digimizer.com/manual/index.php</docsUrl>
-    <mailingListUrl>https://www.digimizer.com/contact.php</mailingListUrl>
-    <bugTrackerUrl>https://www.digimizer.com/feedback.php</bugTrackerUrl>
+    <mailingListUrl>https://www.digimizer.com/contact/</mailingListUrl>
+    <bugTrackerUrl>https://www.digimizer.com/contact/feedback.php</bugTrackerUrl>
     <tags>digimizer image analysis measure medical</tags>
     <summary>Easy-to-use and flexible image analysis software</summary>
     <description>Digimizer is a easy-to-use and flexible image analysis software package that allows precise manual measurements as well as automatic object detection with measurements of object characteristics.
