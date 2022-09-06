@@ -1,9 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'; # stop on all errors
 
 $ToolsDir   = Split-Path -parent $MyInvocation.MyCommand.Path
+$PackageFolder = Split-Path -Parent $toolsDir
 
 # Remove previous versions
-$Previous = Get-ChildItem $env:ChocolateyPackageFolder -filter "$env:ChocolateyPackageName*" | Where-Object { $_.PSIsContainer }
+$Previous = Get-ChildItem $PackageFolder -filter "$env:ChocolateyPackageName*" | Where-Object { $_.PSIsContainer }
 if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
@@ -13,7 +14,7 @@ $ZipFile = Get-ChildItem $ToolsDir -Filter "*.zip"
 $UnzipArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = $ZipFile.FullName
-   Destination  = Join-Path $env:ChocolateyPackageFolder $ZipFile.BaseName
+   Destination  = Join-Path $PackageFolder $ZipFile.BaseName
 }
 Get-ChocolateyUnzip @UnzipArgs
 
@@ -22,7 +23,6 @@ $StartPrograms = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Progr
 $shortcutFilePath = Join-Path $StartPrograms 'VOSviewer.lnk'
 
 Install-ChocolateyShortcut -shortcutFilePath $shortcutFilePath -targetPath $targetPath
-
 
 # Check for a JavaSoft registry path for a compatible version.  
 If (Test-Path 'HKLM:\SOFTWARE\JavaSoft\JRE') {

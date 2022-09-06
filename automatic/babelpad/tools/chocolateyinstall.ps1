@@ -1,7 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
+$PackageFolder = Split-Path -Parent $toolsDir
+
 # Remove previous versions
-$Previous = Get-ChildItem $env:ChocolateyPackageFolder -filter "*.exe" 
+$Previous = Get-ChildItem $PackageFolder -filter "*.exe" 
 if ($Previous) {
    $Previous | % { Remove-Item $_.FullName -Recurse -Force }
 }

@@ -1,9 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$ToolsDir   = Join-Path $env:ChocolateyPackageFolder 'tools'
+$toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
+$PackageFolder = Split-Path -Parent $toolsDir
 
 # Remove previous versions
-$Previous = Get-ChildItem $env:ChocolateyPackageFolder -filter 'hakchi*' | ?{ $_.PSIsContainer }
+$Previous = Get-ChildItem $PackageFolder -filter 'hakchi*' | ?{ $_.PSIsContainer }
 if ($Previous) {
    $Previous | % { Remove-Item $_.FullName -Recurse -Force }
 }
@@ -15,7 +16,7 @@ $ZipFile = Get-ChildItem $toolsDir -filter "*.zip" |
 $InstallArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = $ZipFile
-   Destination  = (Join-path $env:ChocolateyPackageFolder ($env:ChocolateyPackageName.split('.')[0] + $env:ChocolateyPackageVersion))
+   Destination  = (Join-path $PackageFolder ($env:ChocolateyPackageName.split('.')[0] + $env:ChocolateyPackageVersion))
 }
 Get-ChocolateyUnzip @InstallArgs
 

@@ -1,13 +1,16 @@
 $ErrorActionPreference = 'Stop'
 
+$toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
+$PackageFolder = Split-Path -Parent $toolsDir
+
 # Restore the per-user install of the built-in OneDrive (if it was there)
-if (Test-Path "$env:ChocolateyPackageFolder\RemovedKeyInfo.txt") {
+if (Test-Path "$PackageFolder\RemovedKeyInfo.txt") {
    $RegPath = "$env:windir\system32\reg.exe"
    $KeyPath = 'HKLM:\DefaultUser\Software\Microsoft\Windows\CurrentVersion\Run'
 
    $null = Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements "LOAD HKLM\DefaultUser `"$env:SystemDrive\Users\Default\NTUSER.DAT`""
 
-   $RegKey = (Get-Content "$env:ChocolateyPackageFolder\RemovedKeyInfo.txt" | 
+   $RegKey = (Get-Content "$PackageFolder\RemovedKeyInfo.txt" | 
                   Where-Object {$_ -match '='}).split('=').trim()
    Set-ItemProperty -Path $KeyPath -Name $RegKey[0] -Value $RegKey[1] -Force
 

@@ -1,9 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$PackageFolder = Split-Path -Parent $toolsDir
 
 # Remove previous versions
-$Previous = Get-ChildItem $env:ChocolateyPackageFolder -filter "$env:ChocolateyPackageName*" | Where-Object { $_.PSIsContainer }
+$Previous = Get-ChildItem $PackageFolder -filter "$env:ChocolateyPackageName*" | Where-Object { $_.PSIsContainer }
 if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
@@ -16,7 +17,7 @@ $UnZipArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileFullPath   = $ZipFiles | Where-Object {$_.basename -match '86$'} | Select-Object -ExpandProperty fullname
    FileFullPath64 = $ZipFiles | Where-Object {$_.basename -match '64$'} | Select-Object -ExpandProperty fullname
-   Destination    = Join-Path $env:ChocolateyPackageFolder "$($env:ChocolateyPackageName)_v$env:ChocolateyPackageVersion"
+   Destination    = Join-Path $PackageFolder "$($env:ChocolateyPackageName)_v$env:ChocolateyPackageVersion"
 }
 Get-ChocolateyUnzip @UnZipArgs
 

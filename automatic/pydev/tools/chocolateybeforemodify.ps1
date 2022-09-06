@@ -1,8 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
- 
-$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
 
-$logPath = Join-Path $Env:ChocolateyPackageFolder "PyDevInstallLocation.txt"
+$toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
+$PackageFolder = Split-Path -Parent $toolsDir
+
+$logPath = Join-Path $PackageFolder "PyDevInstallLocation.txt"
 $installationPath = Get-Content $logPath
 Write-Verbose "Previous Installation Path: $installationPath"
  

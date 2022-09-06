@@ -1,5 +1,8 @@
 ﻿$ErrorActionPreference = 'Stop' 
 
+$toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
+$PackageFolder = Split-Path -Parent $toolsDir
+
 $packageArgs = @{
    packageName   = $env:chocolateyPackageName
    fileType      = 'exe'
@@ -55,7 +58,7 @@ try {
                      "was removed from \Software\Microsoft\Windows\CurrentVersion\Run`r`n" +
                      "Do not alter this file or the key  will not be restored on`r`n" +
                      'uninstallation of this package.'
-      $BackedUpKey | out-file -FilePath "$env:ChocolateyPackageFolder\RemovedKeyInfo.txt" -Force
+      $BackedUpKey | out-file -FilePath "$PackageFolder\RemovedKeyInfo.txt" -Force
       Write-Verbose 'Registry key information for default user install of OneDrive is backed up.'
    }
    $null = Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements 'UNLOAD HKLM\DefaultUser'

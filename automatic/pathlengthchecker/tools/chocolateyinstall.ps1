@@ -1,9 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$PackageFolder = Split-Path -Parent $toolsDir
 
 # Remove old versions
-$Previous = Get-ChildItem $env:ChocolateyPackageFolder -Filter v* | Where-Object { $_.PSIsContainer }
+$Previous = Get-ChildItem $PackageFolder -Filter v* | Where-Object { $_.PSIsContainer }
 if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
@@ -12,7 +13,7 @@ $ZipFile = Get-ChildItem $toolsDir -filter "*.zip" |
                Sort-Object LastWriteTime | 
                Select-Object -ExpandProperty FullName -Last 1
 
-$Destination = Join-Path $env:ChocolateyPackageFolder "v$env:ChocolateyPackageVersion"
+$Destination = Join-Path $PackageFolder "v$env:ChocolateyPackageVersion"
 
 Get-ChocolateyUnzip -FileFullPath $ZipFile -Destination $Destination
 

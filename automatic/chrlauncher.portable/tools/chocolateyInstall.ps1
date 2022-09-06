@@ -1,10 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'  # stop on all errors
 
-$ToolsDir   = Join-Path $env:ChocolateyPackageFolder 'tools'
+$toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
+$PackageFolder = Split-Path -Parent $toolsDir
 $BitLevel = Get-ProcessorBits
 
 # Capture the newest, previous version's settings
-$INIs = Get-ChildItem $env:ChocolateyPackageFolder -Filter '*.ini' -Recurse | 
+$INIs = Get-ChildItem $PackageFolder -Filter '*.ini' -Recurse | 
                Where-Object {$_.Directory -match "\\$BitLevel\\"}
 if ($INIs) {
    $NewestVersion = $INIs | ForEach-Object {
@@ -17,7 +18,7 @@ if ($INIs) {
 }
 
 # Remove previous versions
-$Previous = Get-ChildItem $env:ChocolateyPackageFolder | 
+$Previous = Get-ChildItem $PackageFolder | 
                Where-Object{($_.name -match '(chrlauncher)|(v[0-9.]+)') -and $_.PSIsContainer }
 if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
@@ -26,7 +27,7 @@ if ($Previous) {
 $InstallArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = (Get-ChildItem $ToolsDir -Filter "*.zip").FullName
-   Destination  = (Join-path $env:ChocolateyPackageFolder  "v$env:ChocolateyPackageVersion")
+   Destination  = (Join-path $PackageFolder  "v$env:ChocolateyPackageVersion")
 }
 
 Get-ChocolateyUnzip @InstallArgs

@@ -1,7 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+$toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
+$PackageFolder = Split-Path -Parent $toolsDir
+
 # Remove previous versions
-$Previous = Get-ChildItem $env:ChocolateyPackageFolder -filter "*.exe" 
+$Previous = Get-ChildItem $PackageFolder -filter "*.exe" 
 if ($Previous) {
    $Previous | % { Remove-Item $_.FullName -Force }
 }
@@ -21,11 +24,11 @@ if ($BitLevel -eq '64') {
 $UnZipArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = $ZipFile
-   Destination  = $env:ChocolateyPackageFolder
+   Destination  = $PackageFolder
 }
 Get-ChocolateyUnzip @UnZipArgs
 
-$GUI = (Get-ChildItem $env:ChocolateyPackageFolder -filter *.exe).fullname
+$GUI = (Get-ChildItem $PackageFolder -filter *.exe).fullname
 $null = New-Item "$GUI.gui" -Type file -Force
 
 $StartPrograms = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs'

@@ -1,7 +1,10 @@
 $ErrorActionPreference = 'Stop'
 
+$toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
+$PackageFolder = Split-Path -Parent $toolsDir
+
 # Find which fonts were installed
-$UnzipLog = Get-ChildItem $env:ChocolateyPackageFolder -Filter '*.zip.txt' |
+$UnzipLog = Get-ChildItem $PackageFolder -Filter '*.zip.txt' |
                   Sort-Object creationtime | Select-Object -last 1
 If ($UnzipLog) {
    $FontLines = Get-Content $UnzipLog.FullName | Where-Object {$_ -match '\.otf$'}
