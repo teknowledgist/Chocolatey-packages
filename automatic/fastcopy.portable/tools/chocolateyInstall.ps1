@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 $InstallerPath = (Get-ChildItem -Path $toolsDir -filter '*.exe' |
                         Sort-Object lastwritetime | Select-Object -Last 1).FullName
 
@@ -15,14 +15,14 @@ $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileType       = 'exe'
    File           = "$InstallerPath"
-   silentArgs     = "/silent /Extract /dir=`"$PackageFolder`""
+   silentArgs     = "/silent /Extract /dir=`"$FolderOfPackage`""
    validExitCodes = @(0)
 }
 
 Install-ChocolateyInstallPackage @InstallArgs
 Remove-Item $InstallerPath -ea 0 -force
 
-Get-ChildItem -Path $PackageFolder -filter 'setup.exe' -Recurse | 
+Get-ChildItem -Path $FolderOfPackage -filter 'setup.exe' -Recurse | 
    ForEach-Object { $null = Remove-Item $_.FullName -Force }
 
 

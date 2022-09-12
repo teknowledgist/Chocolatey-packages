@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 
 # Remove previous versions
-$Previous = Get-ChildItem $PackageFolder -filter "*.exe" 
+$Previous = Get-ChildItem $FolderOfPackage -filter "*.exe" 
 if ($Previous) {
    $Previous | % { Remove-Item $_.FullName -Recurse -Force }
 }

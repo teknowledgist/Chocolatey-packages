@@ -3,9 +3,9 @@
 $BitLevel = Get-ProcessorBits
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 
-$Destination = Join-Path $PackageFolder "v$env:ChocolateyPackageVersion ($BitLevel-bit)"
+$Destination = Join-Path $FolderOfPackage "v$env:ChocolateyPackageVersion ($BitLevel-bit)"
 
 $Zip32File   = (Get-ChildItem $toolsDir -filter "*x86.zip").FullName
 $Zip64File   = (Get-ChildItem $toolsDir -filter "*x64.zip").FullName

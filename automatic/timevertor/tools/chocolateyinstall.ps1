@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 $BitLevel = Get-ProcessorBits
 
 # Remove previous versions
-$Previous = Get-ChildItem $PackageFolder -filter "$env:ChocolateyPackageName*" | 
+$Previous = Get-ChildItem $FolderOfPackage -filter "$env:ChocolateyPackageName*" | 
                Where-Object{ $_.PSIsContainer }
 if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
@@ -15,7 +15,7 @@ $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileFullPath   = (Get-ChildItem $ToolsDir -Filter '*.zip').FullName
    SpecificFolder = "$env:ChocolateyPackageName\$BitLevel"
-   Destination    = (Join-path $PackageFolder ($env:ChocolateyPackageName + '_' + $env:ChocolateyPackageVersion))
+   Destination    = (Join-path $FolderOfPackage ($env:ChocolateyPackageName + '_' + $env:ChocolateyPackageVersion))
 }
 Get-ChocolateyUnzip @InstallArgs
 

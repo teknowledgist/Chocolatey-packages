@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $ToolsDir   = Split-Path -parent $MyInvocation.MyCommand.Path
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 
 # First find where eclipse is installed
 $HostPackage = 'eclipse'
@@ -24,5 +24,5 @@ $installArgs = @{
 
 Get-ChocolateyUnzip @installArgs
 
-$logPath = Join-Path $PackageFolder "PyDevInstallLocation.txt"
+$logPath = Join-Path $FolderOfPackage "PyDevInstallLocation.txt"
 Set-Content $logPath $dropins -Encoding UTF8 -Force

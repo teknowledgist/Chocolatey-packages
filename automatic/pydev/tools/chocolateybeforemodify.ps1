@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = Split-Path -Parent $MyInvocation.MyCommand.Definition
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 
-$logPath = Join-Path $PackageFolder "PyDevInstallLocation.txt"
+$logPath = Join-Path $FolderOfPackage "PyDevInstallLocation.txt"
 $installationPath = Get-Content $logPath
 Write-Verbose "Previous Installation Path: $installationPath"
  

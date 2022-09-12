@@ -1,21 +1,21 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 
 # Remove previous versions
-$Previous = Get-ChildItem $PackageFolder -filter "$env:ChocolateyPackageName*" | Where-Object { $_.PSIsContainer }
+$Previous = Get-ChildItem $FolderOfPackage -filter "$env:ChocolateyPackageName*" | Where-Object { $_.PSIsContainer }
 if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
 
-$ToolsDir   = Join-Path $PackageFolder 'tools'
+$ToolsDir   = Join-Path $FolderOfPackage 'tools'
 $ZipFile = Get-ChildItem $ToolsDir -filter '*.zip' | Sort-Object LastWriteTime | Select-Object -Last 1
 
 $InstallArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = $ZipFile.FullName
-   Destination  = (Join-path $PackageFolder ($env:ChocolateyPackageName + '_' + $env:ChocolateyPackageVersion))
+   Destination  = (Join-path $FolderOfPackage ($env:ChocolateyPackageName + '_' + $env:ChocolateyPackageVersion))
 }
 
 Get-ChocolateyUnzip @InstallArgs

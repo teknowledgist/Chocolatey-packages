@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 
 $Url      = 'https://download.sysinternals.com/files/PSTools.zip'
 $PSEChecksum = '08C6E20B1785D4EC4E3F9956931D992377963580B4B2C6579FD9930E08882B1C'
 $PSEChecksum64 = '5910B49C041B80F6E8D2E8E10752A9062FEBE4A2EDD15F07C6B1961B3C79C129'
 
 # Remove old versions
-$null = Get-ChildItem -Path $PackageFolder -Filter *.exe | Remove-Item -Force
+$null = Get-ChildItem -Path $FolderOfPackage -Filter *.exe | Remove-Item -Force
 
 $WorkSpace = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:chocolateyPackageVersion"
 
@@ -43,7 +43,7 @@ Foreach ($EXEfile in $PSEfile) {
       $ChecksumArgs.add('Checksum',$PSEChecksum)
    }
    Get-ChecksumValid @ChecksumArgs
-   Copy-Item $EXEfile.fullname -Destination $PackageFolder -Force
+   Copy-Item $EXEfile.fullname -Destination $FolderOfPackage -Force
 }
 
 # None of the other binaries are verified, so delete them all.

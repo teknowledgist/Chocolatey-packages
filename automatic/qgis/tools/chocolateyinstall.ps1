@@ -1,7 +1,7 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 
 $NewRelease = $env:ChocolateyPackageVersion
 $LTRversion = '3.22.10'
@@ -44,8 +44,8 @@ if ($Keys) {
 
    If ($TargetVersion -le [version]$LTRversion) {
       # Want to avoid removing QGIS-LTR package installs
-      if (Test-Path ($PackageFolder + "-ltr")) {
-         $nuspec = Get-ChildItem ($PackageFolder + "-ltr") -Filter "*.nuspec" | Select-Object -First 1
+      if (Test-Path ($FolderOfPackage + "-ltr")) {
+         $nuspec = Get-ChildItem ($FolderOfPackage + "-ltr") -Filter "*.nuspec" | Select-Object -First 1
          $text = (Get-Content $nuspec.fullname | Select-String '<version>[0-9.]*</version>').Matches.Value
          $LTRPkgShortVer = [version](([version]($text -replace '[^0-9.]','')).ToString(2))
          if ($LTRPkgShortVer -ge [version]($TargetVersion.tostring(2))) {

@@ -1,11 +1,11 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 
 $DisplayedVersion = $env:ChocolateyPackageVersion.split('.')[0-1] -join '.'
 
-$UnzipLog = Get-ChildItem $PackageFolder -Filter "*.zip.txt" |
+$UnzipLog = Get-ChildItem $FolderOfPackage -Filter "*.zip.txt" |
                   Sort-Object creationtime | Select-Object -last 1
 If ($UnzipLog) {
    $InstallDir = Get-Content $UnzipLog.FullName | Select-Object -First 1

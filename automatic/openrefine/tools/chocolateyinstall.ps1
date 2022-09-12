@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 
 # Remove previous versions
-$Previous = Get-ChildItem $PackageFolder -filter 'openrefine*' | ?{ $_.PSIsContainer }
+$Previous = Get-ChildItem $FolderOfPackage -filter 'openrefine*' | ?{ $_.PSIsContainer }
 if ($Previous) {
    $Previous | % { Remove-Item $_.FullName -Recurse -Force }
 }
@@ -24,17 +24,17 @@ $ZipFile = Get-ChocolateyWebFile @WebFileArgs
 $UnzipArgs = @{
    PackageName  = $env:ChocolateyPackageName
    FileFullPath = $ZipFile
-   Destination  = $PackageFolder
+   Destination  = $FolderOfPackage
 }
 Get-ChocolateyUnzip @UnzipArgs
 
-$Target = get-childitem $PackageFolder -Filter openrefine.exe -recurse
+$Target = get-childitem $FolderOfPackage -Filter openrefine.exe -recurse
 $StartMenu = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs'
 $shortcut = Join-Path $StartMenu 'OpenRefine.lnk'
 
 Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $Target.FullName -RunAsAdmin
 
-$files = get-childitem $PackageFolder -Filter *.exe -Exclude openrefine* -Recurse 
+$files = get-childitem $FolderOfPackage -Filter *.exe -Exclude openrefine* -Recurse 
 foreach ($file in $files) {
   #generate an ignore file
   $null = New-Item "$file.ignore" -type file -force

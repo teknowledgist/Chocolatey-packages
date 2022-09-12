@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $ToolsDir = Split-Path -parent $MyInvocation.MyCommand.Path
-$PackageFolder = Split-Path -Parent $toolsDir
+$FolderOfPackage = Split-Path -Parent $toolsDir
 
 # Remove previous versions
-$PreviousEXE = Get-ChildItem $PackageFolder -filter "clock.exe" -Recurse
+$PreviousEXE = Get-ChildItem $FolderOfPackage -filter "clock.exe" -Recurse
 if ($PreviousEXE) {
    Remove-Item (Split-Path $PreviousEXE.FullName) -Recurse -Force
 }
@@ -12,7 +12,7 @@ if ($PreviousEXE) {
 $packageArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = (Get-ChildItem $ToolsDir -Filter "*.7z").FullName
-   Destination  = Join-Path $PackageFolder "v$env:ChocolateyPackageVersion"
+   Destination  = Join-Path $FolderOfPackage "v$env:ChocolateyPackageVersion"
 }
 
 Get-ChocolateyUnzip @packageArgs
