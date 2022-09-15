@@ -28,11 +28,11 @@ $UnzipArgs = @{
 }
 Get-ChocolateyUnzip @UnzipArgs
 
-$Target = get-childitem $FolderOfPackage -Filter openrefine.exe -recurse
 $StartMenu = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs'
 $shortcut = Join-Path $StartMenu 'OpenRefine.lnk'
+$Target = get-childitem $FolderOfPackage -Filter openrefine.exe -recurse
 
-Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $Target.FullName -RunAsAdmin
+Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $Target.FullName -WorkingDirectory $Target.DirectoryName
 
 $files = get-childitem $FolderOfPackage -Filter *.exe -Exclude openrefine* -Recurse 
 foreach ($file in $files) {
