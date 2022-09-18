@@ -7,8 +7,8 @@ https://sourceforge.net/projects/asymptote/files/<latest version>\
 
 Direct Download:
 
-Version      : 2.82
-x86 URL      : https://sourceforge.net/projects/asymptote/files/2.82/asymptote-2.82-setup-32.exe
-x86 CheckSum : 7C244FF5B7455B0EA029DD522AED8523871694CD77A748929077AAF0F6B9632B
-x64 URL      : https://sourceforge.net/projects/asymptote/files/2.82/asymptote-2.82-setup.exe
-x64 CheckSum : 56199843A45EADC3A36C40FFBAC52FB9DCDB7DEEEE4B2FCC0DBD71C5E8511F02
+Version      : 2.83
+x86 URL      : https://sourceforge.net/projects/asymptote/files/2.83/asymptote-2.83-setup-32.exe
+x86 CheckSum : 046DC251BB2A52092F5C92AA706AE1F69768E829A18B7A366BA8EEEF6A47BF25
+x64 URL      : https://sourceforge.net/projects/asymptote/files/2.83/asymptote-2.83-setup.exe
+x64 CheckSum : AEDB1E30BB949E00CD2E266ABA3810D411A1CE6FAAE116D1A35664FD64734616

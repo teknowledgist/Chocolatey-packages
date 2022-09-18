@@ -24,8 +24,8 @@ $InstallArgs = @{
    fileType      = 'EXE'
    url           = "$DownloadServer/ksp-client-i386$CondensedVersion.exe"
    url64bit      = "$DownloadServer/ksp-client-x64$CondensedVersion.exe"
-   checksum      = '77b4c5e6f7db65991fd8439a4b50ebe9ae2b4e3d8459183896a2355ecd7b2388'
-   checksum64    = 'dce96128f5b94a7be5b30d0fc7704f4d666655a95d4664b9a3a4b492e3ffdb14'
+   checksum      = '8ea7d9a147f7fbd1938d026c23475379c4ab21d807988772c6b8f46160794ea5'
+   checksum64    = 'e384ef3161c17c840eb1d1de920bff5f8c1330b78af8774e531648dfba343f20'
    checksumType  = 'sha256'
    silentArgs    = "-q -platform $BitLevel -upg $HostSwitch -v PROP_REBOOT=0 -v PROP_SHORTCUTS=0"
    validExitCodes= @(0)
