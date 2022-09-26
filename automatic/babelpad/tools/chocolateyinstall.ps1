@@ -13,7 +13,7 @@ $ZipArgs = @{
    packageName   = $env:ChocolateyPackageName
    unzipLocation = Split-path (Split-path $MyInvocation.MyCommand.Definition)
    url           = 'https://www.babelstone.co.uk/Software/Download/BabelPad.zip'
-   checksum      = '248677a56ce527521ad3145428debf1505ec838a031264c24339f73c8807a60b'
+   checksum      = 'da08d7c1b36d9c8c0483458a1a46506cdb38f89e677b3a3f5687b0d7c4ba4c52'
    checksumType  = 'sha256' 
 }
 
