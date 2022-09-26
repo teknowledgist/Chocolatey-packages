@@ -34,6 +34,19 @@ if ($pp['settings']) {
    }
 }
 
+if ($pp['LabelText']) {
+   if (Test-path $pp['LabelText']) {
+      Write-Verbose "New LabelText file found: $($pp['LabelText'])"
+      if (Test-Path "$Destination\MyLabelText.txt") {
+         $BackupFile = Join-Path $Destination "Previous_MyLableText_$env:ChocolateyPackageVersion.txt"
+         Write-Verbose "Previous settings file found.  It will be saved as: $BackupFile"
+         Rename-Item -Path "$Destination\MyLabelText.txt" -NewName $BackupFile -Force
+      }
+      Copy-Item -Path $pp['LabelText'] -Destination "$Destination\MyLabelText.txt"
+   } else {
+      Write-Warning "New LabelText file NOT found!: $($pp['LabelText'])"
+   }
+}
 
 $Null = Copy-Item -Path $App -Destination $Destination -Force
 $null = Remove-Item -Path $App -Force

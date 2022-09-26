@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>spineomatic</id>
-    <version>8.1.2</version>
+    <version>8.1.2.20220919</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/spineomatic</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -40,8 +40,9 @@ These options are available using package parameters (`--params`):
 
 * `/path:(path)` - The folder path to put the SpineOMatic executable. For install or uninstall.  (Default: "C:\Spine")
 * `/settings:(path)` - The path to an optional applications settings file to be used to avoid manual configuration (e.g. Alma API key entry).
+* `/LabelText:(path)` - The path to an optional LabelText file to be used to avoid manual configuration.
 
-Example:  `choco install spineomatic --params '"/settings:\\server\share\spineinfo.txt"'`
+Example:  `choco install spineomatic --params '"/settings:\\server\share\spineinfo.txt /LabelText:\\server\share\MyLabelText.txt"'`
 
     </description>
     <releaseNotes>https://github.com/ExLibrisGroup/SpineOMatic/releases</releaseNotes>
