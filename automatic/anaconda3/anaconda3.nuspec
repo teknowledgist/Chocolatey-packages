@@ -30,16 +30,16 @@ Download the [Anaconda Cheat Sheet](https://docs.anaconda.com/anaconda/user-guid
 Anaconda Python:
 
 * will install for **all users**
-* **will not** be added to the path
 * **will** be registered as the default Python
 * will install to `$ChocolateyToolsLocation\Anaconda3` (i.e. `C:\Tools\Anaconda3` by default)
+* **will not** be added to the path
 
 You can change any of the defaults with package parameters:
 
 * `/JustMe` - Install for only the current user.
-* `/AddToPath` - Add Anaconda Python to the path.
 * `/DoNotRegister` - Do not register Anaconda Python as the default Python.
 * `/D:(path)` - Choose another, *existing*, parent directory to place the 'Anaconda3' directory.
+* `/AddToPath` - Add Anaconda Python to the path. *Note: As of Anaconda Distribution 2022.05, the option to add Anaconda to the PATH environment variable during an All Users installation (the default for this package) has been disabled. This was done to address a [security exploit](https://nvd.nist.gov/vuln/detail/CVE-2022-26526). You can still add Anaconda to the PATH environment variable during a JustMe installation.*
 
 ###### Example : 
   `choco install anaconda3 --params '"/AddToPath /D:c:\MyTools"'`

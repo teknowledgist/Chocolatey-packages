@@ -31,6 +31,9 @@ else {
 if (!$pp['AddToPath']) { $P = '0' } 
 else { 
    Write-Host 'You have opted to add Anaconda Python to the path.' -ForegroundColor Cyan
+   if ($T -eq 'AllUsers') {
+      Write-Warning 'Adding to the path is disabled for AllUser installs as of the 2022.05 release!'
+   }
    $P = '1'
 }
 
