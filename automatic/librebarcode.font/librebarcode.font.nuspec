@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>librebarcode.font</id>
+    <version>1.008</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/librebarcode.font</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Libre Barcode Font</title>
+    <authors>Lasse Fister</authors>
+    <projectUrl>https://graphicore.github.io/librebarcode/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@8841cd06247ca01c7f7150c5493565761973c35f/Icons/librebarcode.font_icon.png</iconUrl>
+    <copyright>Copyright © 2017-2019 The Libre Barcode Project Authors</copyright>
+    <licenseUrl>https://github.com/graphicore/librebarcode/blob/master/OFL.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/graphicore/librebarcode</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/graphicore/librebarcode/issues</bugTrackerUrl>
+    <tags>librebarcode.font librebarcode barcode font code39 3of9 code128 EAN13 UPC12 ttf FOSS embedded</tags>
+    <summary>Popular, scannable barcode fonts with or without text</summary>
+    <description>Libre Barcode fonts enable you to write barcodes in the formats below, with or without human-readable text below the code. 
+
+* [Code 39 (and extended)](https://graphicore.github.io/librebarcode/documentation/code39)
+* [Code 128](https://graphicore.github.io/librebarcode/documentation/code128)
+* [EAN-13/UPC-12](https://graphicore.github.io/librebarcode/documentation/ean13)
+
+## Options
+By default this package installs all of the barcode fonts, but can optionally install just one family (with and without text) using a package parameter as follows:
+
+* Install only the code39 fonts   
+    `choco install librebarcode.font --params '"/39"'`   
+* Install only the code39-extended fonts   
+    `choco install librebarcode.font --params '"/39e"'`   
+* Install only the code128 fonts   
+    `choco install librebarcode.font --params '"/128"'`   
+* Install only the code39 fonts   
+    `choco install librebarcode.font --params '"/13"'`   
+
+Multiple parameters can be given to install more than one font family.  E.G. `--params '"/39 /128"'`
+
+    </description>
+    <releaseNotes>https://github.com/graphicore/librebarcode/releases</releaseNotes>
+    <!-- =============================== -->
+
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+    <!--Building from Linux? You may need this instead: <file src="tools/**" target="tools" />-->
+  </files>
+</package>
