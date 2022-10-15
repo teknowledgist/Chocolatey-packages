@@ -14,8 +14,8 @@ $WorkSpace = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:chocolateyPack
 $WebFileArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = Join-Path $WorkSpace "$env:ChocolateyPackageName.exe"
-   Url          = 'https://oss.sonatype.org/service/local/artifact/maven/content?r=releases&g=org.openrefine&a=openrefine&v=3.6.1&c=win-with-java&p=zip'
-   Checksum     = 'f57181a63d4dfea8f340a296e2000a66584cd855d2719db14d1416e1a8708b8c'
+   Url          = 'https://oss.sonatype.org/service/local/artifact/maven/content?r=releases&g=org.openrefine&a=openrefine&v=3.6.2&c=win-with-java&p=zip'
+   Checksum     = '42d9d3413025f8e2266dcf22c3c24a5d4b8f480ac9945b597e79c8cd70cba4ba'
    ChecksumType = 'sha256'
    GetOriginalFileName = $true
 }

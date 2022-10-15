@@ -7,6 +7,6 @@ https://sourceforge.net/projects/pydev/files/latest/download
 
 Direct Download:
 
-Version  : 9.3.0
-URL      : https://sourceforge.net/projects/pydev/files/pydev/PyDev%209.3.0/PyDev%209.3.0.zip
-CheckSum : 45398EDF2ADB56078A80BC88A919941578F0C0B363EFBDD011BFD158A99B112E
+Version  : 10.0.0
+URL      : https://sourceforge.net/projects/pydev/files/pydev/PyDev%2010.0.0/PyDev%2010.0.0.zip
+CheckSum : F481EC44BD4B60FBACAB81A1D05914070C30016428CE93A6C4D8FEF29080E0C2

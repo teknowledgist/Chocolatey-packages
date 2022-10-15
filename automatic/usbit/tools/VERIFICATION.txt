@@ -11,6 +11,6 @@ It is also available at MajorGeeks:
 http://www.majorgeeks.com/files/details/usb_image_tool.html
 
 Direct Download:
-Version  : 1.85
+Version  : 1.90
 URL      : https://www.alexpage.de/download/usbit/usbit.zip
-Checksum : 1DC0570EF107D8414AF7F3E925C8622C719E3D635CC61E14A33CE1EF312F7FAD
+Checksum : C57E634851B9F0FF981362414811E89B8D47186566B1F59A4CC3ECB560BB2D1C
