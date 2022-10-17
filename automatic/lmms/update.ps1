@@ -2,25 +2,19 @@ import-module au
 
 
 function global:au_GetLatest {
-   $Release = 'https://github.com/LMMS/lmms/releases/latest'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/LMMS/lmms'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlstubs = $download_page.rawcontent.split("<>") | 
-                Where-Object {$_ -match '\.exe"'} | Select-Object -First 2
-
-   $url32 = ($urlstubs | Where-Object {$_ -match 'win32'}) -replace '.*?"([^ ]+\.exe).*','$1'
-   $url64 = ($urlstubs | Where-Object {$_ -match 'win64'}) -replace '.*?"([^ ]+\.exe).*','$1'
-
-   $version = ($url64.split('/') | Where-Object {$_ -match '^v[0-9.]+$'}).trim('v')
+   $version = $Release.Tag.trim('v.')
+   $URL32 = $Release.Assets | Where-Object {$_.FileName -match 'win32\.exe'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $URL64 = $Release.Assets | Where-Object {$_.FileName -match 'win64\.exe'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
       Version = $version
-      URL32   = "https://github.com" + $url32
-      URL64   = "https://github.com" + $url64
+      URL32   = $URL32
+      URL64   = $URL64
    }
 }
-
 
 function global:au_SearchReplace {
    @{

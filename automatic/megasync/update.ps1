@@ -1,15 +1,10 @@
 import-module au
 
 function global:au_GetLatest {
-   $GitURL = 'https://github.com/meganz/MEGAsync/releases'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $GitPage = Invoke-WebRequest -Uri $GitURL -UseBasicParsing
+   $Repo = 'https://github.com/meganz/MEGAsync'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $Link = $GitPage.rawcontent.split("<>") | 
-                Where-Object {$_ -match 'Win\.zip"'} |
-                Select-Object -First 1
-
-   $GitVersion = $Link -replace '.*\/v([0-9.]+)_.*','$1'
+   $GitVersion = ($Release.Tag -replace '.*?([0-9.]+).*','$1').trim('.')
 
    $SPurl = 'https://www.softpedia.com/get/Internet/File-Sharing/MEGAsync.shtml'
    try { $SPpage = Invoke-WebRequest -Uri $SPurl }

@@ -12,13 +12,10 @@ function global:au_GetLatest {
    $url64 = 'https://miktex.org' + $URLstub
    # The version number in the url is the version of the setup utility, but not
    #   the "milestone" of the MiKTeX core run-time library.
-   $LatestRelease = 'https://github.com/MiKTeX/miktex/releases/latest'
-   [Net.ServicePointManager]::SecurityProtocol = 'tls12, tls11, tls'
-   $LatestPage = Invoke-WebRequest -Uri $LatestRelease -UseBasicParsing
-   $CodeURL = $LatestPage.Links | 
-                  Where-Object {$_.href -match 'zip$'} | 
-                  Select-Object -ExpandProperty href
-   $milestone = $CodeURL.trim('.zip').split('/')[-1]
+   $Repo = 'https://github.com/MiKTeX/miktex'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
+
+   $milestone = $Release.Tag.trim('v.')
 
    return @{ 
       Milestone = $milestone

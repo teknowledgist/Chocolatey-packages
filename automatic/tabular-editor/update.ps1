@@ -1,21 +1,11 @@
 import-module au
 
 function global:au_GetLatest {
-   $Release = 'https://github.com/otykier/TabularEditor/releases/latest'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri "$Release" -UseBasicParsing
+   $Repo = 'https://github.com/otykier/TabularEditor'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlstub = $download_page.rawcontent.split('"') | 
-                Where-Object {$_ -match '\.msi$'} |
-                Select-Object -First 1
-   If ($urlstub -match '^https:') {
-      $url = $urlstub
-   } else {
-      $url = "https://github.com$urlstub"
-   }
-
-   $null = $download_page.links |? {$_.href -match '/tag/([0-9.]+)'}
-   $version = $Matches[1]
+   $version = $Release.Tag.trim('v.')
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.msi'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ Version = $version; URL32 = $url }
 }

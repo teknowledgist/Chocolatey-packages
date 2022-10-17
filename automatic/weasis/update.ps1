@@ -1,22 +1,15 @@
 import-module au
 
-$Release = 'https://github.com/nroduit/Weasis/releases/latest'
-
 function global:au_GetLatest {
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/nroduit/Weasis'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlstub = $download_page.rawcontent.split("<>") | 
-                Where-Object {$_ -match '\.msi"'} | Select-Object -First 1
-
-   $URL64 = $urlstub -replace '.*?"([^ ]+\.msi).*','$1'
-
-   $versionstring = $urlstub.split('/') | ? {$_ -match '^v?[0-9.]+'}
-   $version = $versionstring.trim('v')
+   $version = $Release.Tag.trim('v.')
+   $URL64 = $Release.Assets | Where-Object {$_.FileName -match '\.msi'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
       Version = $version
-      URL64   = "https://github.com" + $URL64
+      URL64   = $URL64
    }
 }
 

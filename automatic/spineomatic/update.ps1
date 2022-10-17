@@ -1,16 +1,11 @@
 import-module au
 
-$Release = 'https://github.com/ExLibrisGroup/SpineOMatic/releases/latest'
-
 function global:au_GetLatest {
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/ExLibrisGroup/SpineOMatic'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $href = $download_page.rawcontent.split("") | Where-Object {$_ -match 'href.*\.exe'}
-
-   $url = "https://github.com" + $href.trim('"').split('"')[-1]
-
-   $version = $url -replace ".*/v?([0-9.]+)/.*",'$1'
+   $version = $Release.Tag.trim('v.')
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.exe'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ Version = $version; URL32 = $url }
 }

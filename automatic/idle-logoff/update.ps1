@@ -1,20 +1,15 @@
 import-module au
 
 function global:au_GetLatest {
-   $Release = 'https://github.com/lithnet/idle-logoff/releases/latest'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/lithnet/idle-logoff'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $URLtxt = $download_page.rawcontent.split("<>") | 
-                Where-Object {$_ -match '\.msi"'} | Select-Object -First 1
-
-   $URLstub = ($URLtxt | Where-Object {$_ -match '\.msi'}) -replace '.*?"([^ ]+\.msi).*','$1'
-
-   $version = ($URLstub.tostring().split('/') | Where-Object {$_ -match '^v[0-9.]+$'}).trim("v")
+   $version = $Release.Tag.trim('v.')
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.msi'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
       Version = $version
-      URL32   = "https://github.com$URLstub"
+      URL32   = $URL
    }
 }
 

@@ -1,22 +1,18 @@
 import-module au
 
-$Release = 'https://github.com/praat/praat/releases/latest'
-
 function global:au_GetLatest {
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/praat/praat'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urls = $download_page.rawcontent.split(" ") | Where-Object {$_ -match 'win(32|64)\.zip"'}
-   $Stub64 = ($urls | Where-Object {$_ -match 'win64'}).trim('"').split('"')[-1]
-   $Stub32 = ($urls | Where-Object {$_ -match 'win32'}).trim('"').split('"')[-1]
-
-   $version = ($urls[0] -split '/' | Where-Object {$_ -match '^v[0-9.]+$'}).trim('v')
+   $version = $Release.Tag.trim('v.')
+   $URL32 = $Release.Assets | Where-Object {$_.FileName -match 'win32\.zip'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $URL64 = $Release.Assets | Where-Object {$_.FileName -match 'win64\.zip'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
             AppVersion = $Version
             Version    = $version
-            URL32      = "https://github.com$Stub32"
-            URL64      = "https://github.com$Stub64"
+            URL32      = $URL32
+            URL64      = $URL64
            }
 }
 

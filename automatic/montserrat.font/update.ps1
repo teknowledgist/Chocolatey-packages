@@ -1,19 +1,12 @@
 import-module au
 
-$Release = 'https://github.com/JulietaUla/Montserrat/releases/latest'
-
 function global:au_GetLatest {
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
-
-   $urlstub = $download_page.rawcontent.split('"') | 
-                  Where-Object {$_ -match '\.zip'} | Select-Object -First 1
-
-   $version = $urlstub.trim('.zip').split('/')[-1].trim('v')
+   $Repo = 'https://github.com/JulietaUla/Montserrat'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
    return @{ 
-      Version = $version
-      URL32     = "https://github.com$urlstub"
+      Version = $Release.Tag.trim('v.')
+      URL32   = $Release.ZipBallURL
    }
 }
 

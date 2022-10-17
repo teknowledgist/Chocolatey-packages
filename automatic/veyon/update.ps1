@@ -1,23 +1,17 @@
 import-module au
 
-$Release = 'https://github.com/veyon/veyon/releases/latest'
-
 function global:au_GetLatest {
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/veyon/veyon'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlstubs = $download_page.rawcontent.split("<>") | 
-                Where-Object {$_ -match 'setup\.exe"'} | Select-Object -First 2
-
-   $url32 = ($urlstubs | Where-Object {$_ -match 'win32'}) -replace '.*?"([^ ]+\.exe).*','$1'
-   $url64 = ($urlstubs | Where-Object {$_ -match 'win64'}) -replace '.*?"([^ ]+\.exe).*','$1'
-
-   $version = $url64.split('-') | Where-Object {$_ -match '^[0-9.]+$'} |select -Last 1
+   $version = $Release.Tag.trim('v.')
+   $URL32 = $Release.Assets | Where-Object {$_.FileName -match 'win32-setup\.exe'} | Select-Object -Last 1 -ExpandProperty DownloadURL
+   $URL64 = $Release.Assets | Where-Object {$_.FileName -match 'win64-setup\.exe'} | Select-Object -Last 1 -ExpandProperty DownloadURL
 
    return @{ 
       Version = $version
-      URL32   = "https://github.com" + $url32
-      URL64   = "https://github.com" + $url64
+      URL32   = $URL32
+      URL64   = $URL64
    }
 }
 

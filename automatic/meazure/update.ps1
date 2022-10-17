@@ -1,18 +1,15 @@
 import-module au
 
 function global:au_GetLatest {
-   $Release = 'https://github.com/cthing/meazure/releases/latest'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/cthing/meazure'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $URLstub = $download_page.links | Where-Object {$_.href -match '\.exe'} | 
-               Select-Object -ExpandProperty href -First 1
-
-   $version = ($URLstub.split('/') | Where-Object {$_ -match '^v?[0-9.]+$'}).trim("v.")
+   $version = $Release.Tag.trim('v.')
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.exe'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
       Version = $version
-      URL64   = "https://github.com$URLstub"
+      URL64   = $URL
    }
 }
 

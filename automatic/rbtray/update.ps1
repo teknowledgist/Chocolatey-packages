@@ -1,22 +1,17 @@
 import-module au
 
 function global:au_GetLatest {
-   $Release = 'https://github.com/benbuck/rbtray/releases/latest'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/benbuck/rbtray'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $URLs = $download_page.links | Where-Object {$_.href -match '\.zip'} | 
-               Select-Object -ExpandProperty href -First 2
-
-   $URLstub32 = $urls | Where-Object {$_ -match 'x86\.zip$'}
-   $URLstub64 = $urls | Where-Object {$_ -match 'x64\.zip$'}
-
-   $version = ($URLstub64.split('/') | Where-Object {$_ -match '^v?[0-9.]+$'}).trim("v.")
+   $version = $Release.Tag.trim('v.')
+   $URL32 = $Release.Assets | Where-Object {$_.FileName -match 'x86\.zip$'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $URL64 = $Release.Assets | Where-Object {$_.FileName -match 'x64\.zip$'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
       Version = $version
-      URL32   = "https://github.com$URLstub32"
-      URL64   = "https://github.com$URLstub64"
+      URL32   = $URL32
+      URL64   = $URL64
    }
 }
 

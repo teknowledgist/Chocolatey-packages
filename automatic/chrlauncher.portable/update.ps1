@@ -1,19 +1,12 @@
 import-module au
 
-$Release = 'https://github.com/henrypp/chrlauncher/releases/latest'
-
 function global:au_GetLatest {
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/henrypp/chrlauncher'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlstub = $download_page.rawcontent.split("<>") | 
-                Where-Object {$_ -match 'chrlauncher-.*?-bin\.zip"'} |
-                Select-Object -First 1
-   $url = "https://github.com" + $($urlstub -replace '.*?"([^ ]+\.zip).*','$1')
-
-   $version = ($urlstub -split '-')[1]
-
-   $CheckFile = $url -replace "-bin\.zip",'.sha256'
+   $version = $Release.Tag.trim('v.')
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '-bin\.zip'} | Select-Object -ExpandProperty DownloadURL
+   $CheckFile = $Release.Assets | Where-Object {$_.FileName -match '\.sha256'} | Select-Object -ExpandProperty DownloadURL
 
    return @{ 
             Version   = $version

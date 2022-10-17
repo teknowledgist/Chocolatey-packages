@@ -1,21 +1,15 @@
 import-module au
 
 function global:au_GetLatest {
-   $DownloadURI = 'https://github.com/OCLC-Developer-Network/MARCView-Convert/releases/latest'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing
+   $Repo = 'https://github.com/OCLC-Developer-Network/MARCView-Convert'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlHREF = $download_page.rawcontent.split("<>") | 
-                Where-Object {$_ -match '\.exe"'} | Select-Object -First 1
+   $version = $Release.Tag.trim('v.')
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.exe'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
-   $urlstub = $urlHREF -replace '.*?"([^ ]+\.exe).*','$1'
-
-   $version = $urlstub.split('/') | Where-Object {$_ -match '^v?[0-9.]+$'} |select -Last 1
-   $version = $version.trim('v')
-   
    return @{ 
             Version = $version
-            URL32   = "https://github.com$urlstub"
+            URL32   = $URL
    }
 }
 

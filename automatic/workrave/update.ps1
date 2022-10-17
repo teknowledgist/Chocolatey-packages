@@ -1,26 +1,17 @@
 import-module au
 
 function global:au_GetLatest {
-   $DownloadURI = 'https://github.com/rcaelers/workrave/releases/latest'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing
+   $Repo = 'https://github.com/rcaelers/workrave'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlstub = $download_page.rawcontent.split("<>") | 
-                Where-Object {$_ -match '\.exe"'} | Select-Object -First 1
+   $version = $Release.Tag.trim('v.').replace('_','.')
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.exe'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
-   $url = $urlstub -replace '.*?"([^ ]+\.exe).*','$1'
-
-   $version = $url.replace('_','.').split('/') | 
-                  Where-Object {$_ -match '^v[0-9.]+$'} |
-                  Select-Object -Last 1
-   $version = $version.trim('v')
-   
    return @{ 
             Version = $version
-            URL32   = "https://github.com$url"
+            URL32   = $URL
    }
 }
-
 
 function global:au_SearchReplace {
    @{

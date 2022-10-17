@@ -3,18 +3,15 @@ import-module au
 $Release = 'https://github.com/uswds/public-sans/releases/latest'
 
 function global:au_GetLatest {
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/uswds/public-sans'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlstring = $download_page.rawcontent.split(' ') | 
-                  Where-Object {$_ -match '\.zip'} | Select-Object -First 1
-   $urlstub = $urlstring.trim('"').split('"')[-1]
-
-   $version = $urlstub.split('/').trim('v') | Where-Object {$_ -match '^[0-9.]+$'}
+   $version = $Release.Tag.trim('v.')
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.zip'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
       Version = $version
-      URL32     = "https://github.com$urlstub"
+      URL32   = $URL
    }
 }
 

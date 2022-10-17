@@ -3,18 +3,12 @@ import-module au
 $Global:au_NoCheckUrl = $true
 
 function global:au_GetLatest {
-   $DownloadURI = 'https://github.com/debauchee/barrier/releases/latest'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing
+   $Repo = 'https://github.com/debauchee/barrier'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlstub = $download_page.rawcontent.split("<>") | 
-                Where-Object {$_ -match '\.exe"'} | Select-Object -First 1
+   $version = $Release.Tag.trim('v.')
+   $URL64 = $Release.Assets | Where-Object {$_.FileName -match '\.exe'} | Select-Object -ExpandProperty DownloadURL
 
-   $url64 = $urlstub -replace '.*?"([^ ]+\.exe).*','$1'
-
-   $version = $url64.split('/') | Where-Object {$_ -match '^v[0-9.]+$'} |select -Last 1
-   $version = $version.trim('v')
-   
    return @{ 
             Version  = $version
             URL64    = "https://github.com" + $url64

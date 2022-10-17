@@ -1,22 +1,17 @@
 import-module au
 
 function global:au_GetLatest {
-   $Release = 'https://github.com/chrdavis/SmartRename/releases/latest'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/chrdavis/SmartRename'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $URLs = $download_page.links | Where-Object {$_.href -match '\.msi'} | 
-               Select-Object -ExpandProperty href -First 2
-
-   $URLstub32 = $urls | Where-Object {$_ -match '32\.msi$'}
-   $URLstub64 = $urls | Where-Object {$_ -match '64\.msi$'}
-
-   $version = ($URLstub64.split('/') | Where-Object {$_ -match '^v?[0-9.]+$'}).trim("v.")
+   $version = $Release.Tag.trim('v.')
+   $URL32 = $Release.Assets | Where-Object {$_.FileName -match '32\.msi$'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $URL64 = $Release.Assets | Where-Object {$_.FileName -match '64\.msi$'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
       Version = $version
-      URL32   = "https://github.com$URLstub32"
-      URL64   = "https://github.com$URLstub64"
+      URL32   = $URL32
+      URL64   = $URL64
    }
 }
 

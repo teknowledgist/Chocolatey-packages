@@ -2,18 +2,13 @@ import-module au
 
 
 function global:au_GetLatest {
-   $Release = 'https://github.com/henrypp/timevertor/releases/latest'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/henrypp/timevertor'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlstub = $download_page.rawcontent.split("<>") | 
-                Where-Object {$_ -match 'bin\.zip"'} |
-                Select-Object -First 1
-   $url = "https://github.com" + $($urlstub -replace '.*?"([^ ]+\.zip).*','$1')
+   $version = $Release.Tag.trim('v.')
+   $URL = $Release.Assets | Where-Object {$_.FileName -match 'bin\.zip'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $CheckFile = $Release.Assets | Where-Object {$_.FileName -match '\.sha256'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
-   $version = ($urlstub -split '-')[1]
-
-   $CheckFile = $url -replace "-bin\.zip",'.sha256'
    $TempSum = "$env:temp\timevertor.SHA256.txt"
    Invoke-WebRequest $CheckFile -OutFile $TempSum
    $Checksum32 = (Get-Content $TempSum | Where-Object {$_ -like '*bin.zip'}).split()[0]

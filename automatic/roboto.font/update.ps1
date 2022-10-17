@@ -1,20 +1,21 @@
 import-module au
 
-$Release = 'https://github.com/googlefonts/roboto/releases'
-
 function global:au_GetLatest {
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
+   $Repo = 'https://github.com/googlefonts/roboto'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlstring = $download_page.rawcontent.split(' ') | 
-                  Where-Object {$_ -match 'href.*-hinted\.zip'} | Select-Object -First 1
-   $urlstub = $urlstring.trim('"').split('"')[-1]
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '-hinted\.zip'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
-   $version = $urlstub.split('/').trim('v') | Where-Object {$_ -match '^[0-9.]+$'}
+   if ($URL) { 
+      $version = $Release.Tag.trim('v.')
+   } else {
+      $version = '0.1'
+      $URL = $Release.ZipballURL
+   }
 
    return @{ 
       Version = $version
-      URL32     = "https://github.com$urlstub"
+      URL32   = $URL
    }
 }
 
