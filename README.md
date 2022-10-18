@@ -1,8 +1,24 @@
-# Chocolatey-packages
+# Chocolatey package sources for the [Chocolatey Community Repository](https://chocolatey.org/packages)
 
-### Description
+[![Build status](https://ci.appveyor.com/api/projects/status/a4a5f2s7q2wpxnpg/branch/master?svg=true)](https://ci.appveyor.com/project/teknowledgist/chocolatey-packages/branch/master)
+[![](http://transparent-favicon.info/favicon.ico)](#)
+[Update status - (not finished)](https://gist.github.com/teknowledgist/)
+[![](http://transparent-favicon.info/favicon.ico)](#)
+[chocolatey/Teknowledgist](https://chocolatey.org/profiles/Teknowledgist )
 
-This repository contains [chocolatey packages](https://chocolatey.org/profiles/teknowledgist) created and maintained by me.  
+----
+
+The packages in the `automatic` directory of this repository are automatically updated using [AU](https://github.com/majkinetor/au).
+
+----
+
+If a package is out of date by more than a day or two, please open a [Outdated package issue](https://github.com/teknowledgist/chocolatey-packages/issues/new?template=outdated-package.md)
+
+Or contact me directly via the contact maintainers button on one of my packages on the Chocolatey Community Repository if you don't have/want a Github account.
+
+Files for each package are located in their own directories, with the exception of the icons, which are located in the `Icons` directory.
+
+
 
 #### Self-imposed guidelines
 
