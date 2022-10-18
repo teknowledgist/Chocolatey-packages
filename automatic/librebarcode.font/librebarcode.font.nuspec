@@ -21,7 +21,7 @@
     <summary>Popular, scannable barcode fonts with or without text</summary>
     <description>Libre Barcode fonts enable you to write barcodes in the formats below, with or without human-readable text below the code. 
 
-* [Code 39 (and extended)](https://graphicore.github.io/librebarcode/documentation/code39)
+* [Code 39, a.k.a. "3of9" (and extended)](https://graphicore.github.io/librebarcode/documentation/code39)
 * [Code 128](https://graphicore.github.io/librebarcode/documentation/code128)
 * [EAN-13/UPC-12](https://graphicore.github.io/librebarcode/documentation/ean13)
 
@@ -34,7 +34,7 @@ By default this package installs all of the barcode fonts, but can optionally in
     `choco install librebarcode.font --params '"/39e"'`   
 * Install only the code128 fonts   
     `choco install librebarcode.font --params '"/128"'`   
-* Install only the code39 fonts   
+* Install only the EAN-13/UPC-12 fonts   
     `choco install librebarcode.font --params '"/13"'`   
 
 Multiple parameters can be given to install more than one font family.  E.G. `--params '"/39 /128"'`
