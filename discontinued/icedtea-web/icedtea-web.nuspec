@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>icedtea-web</id>
+    <version>1.8.8</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/icedtea-web</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>IcedTea-Web</title>
+    <authors>AdoptOpenJDK</authors>
+    <projectUrl>https://github.com/AdoptOpenJDK/IcedTea-Web</projectUrl>
+    <iconUrl>http://rawcdn.githack.com/AdoptOpenJDK/IcedTea-Web/master/launchers/win-installer/icon.ico</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://github.com/AdoptOpenJDK/IcedTea-Web/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/AdoptOpenJDK/IcedTea-Web</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/AdoptOpenJDK/IcedTea-Web/issues</bugTrackerUrl>
+    <tags>icedtea-web java javaws webstart jnlp embedded FOSS</tags>
+    <summary>IcedTeaWeb is an open source implementation of [JSR-56](http://www.jcp.org/en/jsr/detail?id=56) that is better known as Java Web Start.</summary>
+    <description>IcedTea-web provides a free-software Java Web browser plugin. It was the first to make it suitable to enable support for Java applets in 64-bit Mozilla Firefox, among others. IcedTea-web also provides a free Java Web Start (Java Network Launching Protocol (JNLP)) implementation. 
+    
+    By default, IcedTea-Web is installed into the OpenJDK directory and has the same executable name (javaws.exe) as Java Web Start. To configure settings, such as security or certificates, start the control panel by running itweb-settings.exe.
+    </description>
+    <releaseNotes>https://github.com/AdoptOpenJDK/IcedTea-Web/blob/1.8/ChangeLog</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
