@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>openwebstart</id>
+    <version>1.6.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/openwebstart</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>OpenWebStart</title>
+    <authors>Karakun</authors>
+    <projectUrl>https://openwebstart.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@e2fe3500f52e14c929fc219279c78e326038ca3b/Icons/openwebstart_icon.png</iconUrl>
+    <!-- <copyright></copyright> -->
+    <licenseUrl>https://github.com/karakun/OpenWebStart/blob/master/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/karakun/OpenWebStart</projectSourceUrl>
+    <docsUrl>https://openwebstart.com/docs/OWSGuide.html</docsUrl>
+    <bugTrackerUrl>https://github.com/karakun/OpenWebStart/issues</bugTrackerUrl>
+    <mailingListUrl>https://board.karakun.com/viewforum.php</mailingListUrl>
+    <tags>openwebstart java web start JWS javaws FOSS embedded</tags>
+    <summary>Run JNLP files with the latest Java version</summary>
+    <description>Java Web Start (JWS) was deprecated in Java 9, and starting with Java 11, Oracle removed JWS from their JDK distributions. This means that clients that have the latest version of Java installed can no longer use JWS-based applications. And since public support of Java 8 has ended in Q2/2019, companies no longer get any updates and security fixes for Java Web Start.
+
+OpenWebStart is an open source reimplementation of the Java Web Start technology that provides the most commonly used features of Java Web Start and the JNLP standard, so that you can continue using applications based on Java Web Start and JNLP without any change.
+
+### Note
+
+**You do need a version of Java installed in addition to OpenWebStart in order to run JNLP files.**  [Choose your flavor](https://community.chocolatey.org/packages?q=openjdk)
+    </description>
+    <releaseNotes>https://github.com/karakun/OpenWebStart/releases/latest</releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>

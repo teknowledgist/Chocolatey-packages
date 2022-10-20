@@ -21,7 +21,14 @@
     <summary>IcedTeaWeb is an open source implementation of [JSR-56](http://www.jcp.org/en/jsr/detail?id=56) that is better known as Java Web Start.</summary>
     <description>IcedTea-web provides a free-software Java Web browser plugin. It was the first to make it suitable to enable support for Java applets in 64-bit Mozilla Firefox, among others. IcedTea-web also provides a free Java Web Start (Java Network Launching Protocol (JNLP)) implementation. 
     
-    By default, IcedTea-Web is installed into the OpenJDK directory and has the same executable name (javaws.exe) as Java Web Start. To configure settings, such as security or certificates, start the control panel by running itweb-settings.exe.
+By default, IcedTea-Web is installed into the OpenJDK directory and has the same executable name (javaws.exe) as Java Web Start. To configure settings, such as security or certificates, start the control panel by running itweb-settings.exe.
+
+IcedTea-Web 1.8.x is compatible with OpenJDK 8 builds. It is known that software which is based on IcedTea-Web supports the execution of OpenJDK 11 based JNLP applications but IcedTea-Web does not contain any tests to check OpenJDK 11 support.  
+
+### Discontinued
+
+IcedTea-Web was discontinued when its developer, AdoptOpenJDK moved to the Eclipse Foundation and became TemurinJDK.  The future Java Web Start is with [OpenWebStart](https://openwebstart.com/) which [Chocolatey can install](https://community.chocolatey.org/packages/openwebstart).
+
     </description>
     <releaseNotes>https://github.com/AdoptOpenJDK/IcedTea-Web/blob/1.8/ChangeLog</releaseNotes>
     <!-- =============================== -->
