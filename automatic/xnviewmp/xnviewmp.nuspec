@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>xnviewmp</id>
+    <version>1.3.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xnviewmp</packageSourceUrl>
+    <owners>Teknowledgist, Vaquero</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>XnView MP</title>
+    <authors>Gougelet Pierre-Emmanuel</authors>
+    <projectUrl>https://www.xnview.com/en/xnviewmp/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/xnviewmp_icon.png</iconUrl>
+    <copyright>Copyright © 1991-2022 Pierre-e Gougelet</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/xnviewmp.install/legal/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <mailingListUrl>https://newsgroup.xnview.com/viewforum.php?f=68</mailingListUrl>
+    <tags>xnviewmp XnView image picture photo graphics viewer convert nconvert organizer Freeware meta embedded</tags>
+    <summary>XnViewMP is the enhanced version to [XnView](https://chocolatey.org/packages/XnView) and is a powerful cross-platform media browser, viewer and converter. Compatible with more than [500 formats](http://www.xnview.com/en/xnviewmp/#formats).</summary>
+    <description>XnView MP is a versatile and powerful photo viewer, image management, image resizer. XnView is one of the most stable, easy-to-use, and comprehensive photo editors. All common picture and graphics formats are supported (JPEG, TIFF, PNG, GIF, WEBP, PSD, JPEG2000, OpenEXR, camera RAW, HEIC, PDF, DNG, CR2). 
+    
+## Features
+* **Photo Viewer** - With XnView you can browse, organize, and view your images in numerous ways.
+* **Photo Editor** - XnView allows you to process your images with an arsenal of editing tools.
+* **Unrivaled Compatibility** - XnView MP supports more than **[500 image formats](https://www.xnview.com/en/image_formats/)** and exports to about **70 different** file formats.
+* **Batch Conversion** - XnView MP comes with an easy to use yet powerful batch conversion module. This same module also powers XnConvert.
+* And Much More!  Virtually all of standard XnView's much loved features have been preserved in XnView MP and many features have actually been tweaked and enhanced.
+
+### Compared to XnView
+* **Optimized Performance** - Considerable improvements have been made in terms of performance (speed-optimized loading, improved caching, multi-core processing, 64bits version, etc...)
+* **Multi-Platform** - **Windows, Mac OS X** and **Linux** are now supported in both **32 and 64 bit** versions.
+* **World-Wide compatible** - XnViewMP finally offers **Unicode** support, **Enhanced translations** for many languages as well as a brand new and convenient **modular interface**.
+
+#### Freeware
+
+XnView MP is provided as FREEWARE (NO Adware, NO Spyware) **for private or educational use** (including non-profit organizations).  If you enjoy using XnView, Don't hesitate to [help the developer with a small donation](https://secure.shareit.com/shareit/checkout.html?PRODUCT[300587021]=2).
+
+**If you intend to use XnView in a company, you must [purchase a license](https://order.shareit.com/product?vendorid=200195932&amp;productid=300864708).**
+
+**Please Note**: This is an automatically updated package. If you find it is out of date by more than a day or two, please contact the maintainer(s) and let them know the package is no longer updating correctly.
+    </description>
+    <releaseNotes>https://www.xnview.com/en/xnviewmp/#changelog</releaseNotes>
+    <dependencies>
+      <dependency id="xnviewmp.install" version="[1.3.1]" />
+    </dependencies>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
