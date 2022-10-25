@@ -11,7 +11,7 @@
     <title>XnView MP(Install)</title>
     <authors>Gougelet Pierre-Emmanuel</authors>
     <projectUrl>https://www.xnview.com/en/xnviewmp/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/xnviewmp_icon.png</iconUrl>
+    <iconUrl>http://www.xnview.com/assets/img/app-xnviewmp-512.png</iconUrl>
     <copyright>Copyright © 1991-2022 Pierre-e Gougelet</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/xnviewmp.install/legal/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
