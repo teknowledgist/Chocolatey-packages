@@ -27,7 +27,7 @@ IcedTea-Web 1.8.x is compatible with OpenJDK 8 builds. It is known that software
 
 ### Discontinued
 
-IcedTea-Web was discontinued when its developer, AdoptOpenJDK moved to the Eclipse Foundation and became TemurinJDK.  The future Java Web Start is with [OpenWebStart](https://openwebstart.com/) which [Chocolatey can install](https://community.chocolatey.org/packages/openwebstart).
+IcedTea-Web was discontinued when its developer, AdoptOpenJDK moved to the Eclipse Foundation and became TemurinJDK.  The future of Java Web Start is with [OpenWebStart](https://openwebstart.com/).
 
     </description>
     <releaseNotes>https://github.com/AdoptOpenJDK/IcedTea-Web/blob/1.8/ChangeLog</releaseNotes>
