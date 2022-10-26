@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
+$toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
 $Installer = Get-ChildItem $toolsDir -filter '*.msi' | 
                   Sort-Object LastWriteTime | 
                   Select-Object -ExpandProperty fullname -Last 1
