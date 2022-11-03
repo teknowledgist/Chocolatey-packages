@@ -5,9 +5,9 @@ $InstallArgs = @{
    softwareName  = 'Anaconda3'
    fileType      = 'EXE'
    url           = 'https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86.exe'
-   url64bit      = 'https://repo.anaconda.com/archive/Anaconda3-2022.05-Windows-x86_64.exe'
+   url64bit      = 'https://repo.anaconda.com/archive/Anaconda3-2022.10-Windows-x86_64.exe'
    checksum      = 'cd8c688349bcd1f429e3b383620fb0d19f52be0f765b2eae78d63b41aefb2e73'
-   checksum64    = '2766eb102f9d65da36d262b651777358de39fbe5f1a74f9854a2e5e29caeeeec'
+   checksum64    = '38b9d53a579843fe41fd05fd3c4f9ac3887f580e7bd9b43f220bbc3aea2367eb'
    checksumType  = 'sha256'
    validExitCodes= @(0)
 }

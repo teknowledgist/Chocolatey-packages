@@ -3,16 +3,16 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>anaconda3</id>
-    <version>2022.05</version>
+    <version>2022.10</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/anaconda3</packageSourceUrl>
     <owners>Teknowledgist, Chantisnake</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Anaconda Individual Edition (Python 3.x)</title>
+    <title>Anaconda Distribution (Python 3.x)</title>
     <authors>Anaconda, Inc.</authors>
     <projectUrl>https://www.anaconda.com/products/individual</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@c908a814128b78210e1acd0db1e0e263b80f033f/Icons/anaconda_icon.png</iconUrl>
     <copyright>© Copyright 2021, Anaconda, Inc.</copyright>
-    <licenseUrl>https://www.anaconda.com/eula-anaconda-individual-edition</licenseUrl>
+    <licenseUrl>https://legal.anaconda.com/policies/en/?name=end-user-license-agreements#anaconda-distribution</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/ContinuumIO</projectSourceUrl>
     <docsUrl>https://docs.anaconda.com/anaconda/</docsUrl>
@@ -44,6 +44,8 @@ You can change any of the defaults with package parameters:
 ###### Example : 
   `choco install anaconda3 --params '"/AddToPath /D:c:\MyTools"'`
 
+### 64-bit only
+The 2022.05 release is the last of Anaconda Distribution that will support Windows 32-bit (win-32).
     </description>
     <releaseNotes>https://docs.anaconda.com/anaconda/reference/release-notes/</releaseNotes>
     <dependencies>
