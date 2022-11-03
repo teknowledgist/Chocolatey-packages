@@ -8,8 +8,8 @@ $InstallArgs = @{
    packageName  = $env:ChocolateyPackageName
    softwareName = "$env:ChocolateyPackageName*"
    fileType     = 'EXE' 
-   File         = $EXEs | ? {$_ -notmatch 'x64'}
-   File64       = $EXEs | ? {$_ -match 'x64'}
+   File         = $EXEs | Where-Object {$_ -notmatch 'x64'}
+   File64       = $EXEs | Where-Object {$_ -match 'x64'}
    silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
    validExitCodes = @(0)
 }
