@@ -2,11 +2,11 @@ import-module au
 
 function global:au_GetLatest {
    $news = 'https://sourceforge.net/p/asymptote/news/'
-   $NewsPage = Invoke-WebRequest -Uri $News
+   $NewsPage = Invoke-WebRequest -Uri $News -UseBasicParsing
 
    $LatestText = $NewsPage.links |
-                Where-Object {$_.innertext -match 'released'} | 
-                Select-Object -ExpandProperty innerText -first 1
+                Where-Object {$_.outerhtml -match 'released'} | 
+                Select-Object -ExpandProperty outerhtml -first 1
    $version = $LatestText.split() | Where-Object {$_ -match '^[0-9.]+$'}
 
    $URL32 = "https://sourceforge.net/projects/asymptote/files/$version/asymptote-$($version)-setup-32.exe"

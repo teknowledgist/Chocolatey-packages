@@ -1,28 +1,26 @@
 import-module au
 
-$DownloadURI = 'https://www.qgis.org/en/site/forusers/download.html'
-
 function global:au_GetLatest {
+   $downloaduri = 'https://www.qgis.org/en/site/forusers/alldownloads.html'
    $download_page = Invoke-WebRequest -Uri $DownloadURI
 
-   $null = $download_page.content.split("`n") | Where-Object {$_ -cmatch 'current version is QGIS ([0-9.]*)'}
+#   $null = $download_page.content.split("`n") | Where-Object {$_ -cmatch 'current version is QGIS ([0-9.]*)'}
    
-   $NewVersion = $Matches[1]
+#   $NewVersion = $Matches[1]
 
-   $url = $download_page.Links | 
-              Where-Object {$_.href -match "$NewVersion.*\.msi`$"} | 
-              Select-Object -ExpandProperty href
+   $row = $download_page.AllElements | ? {($_.tagname -eq 'tr') -and ($_.innertext -match 'latest release.*installer')}
+   $url = $row.outerhtml.split('"') | ? {$_ -match '/downloads/.*\.msi$'}
+   $SumURL = $row.outerhtml.split('"') | ? {$_ -match '/downloads/.*\.sha256sum$'}
 
-   $SumURL = $download_page.Links |
-        Where-Object {$_.href -match "$NewVersion.*\.sha256sum`$"} |
-        Select-Object -ExpandProperty href
    $SumFile = "$env:temp\QGIS$NewVersion-SHA256.txt"
    Invoke-WebRequest $SumURL -OutFile $SumFile
    $Checksum64 = (Get-Content $SumFile -ReadCount 1).split()[0]
 
-   $null = $download_page.content.split("`n") | Where-Object {$_ -cmatch 'long-term repositories currently offer QGIS ([0-9.]*)'}
-   $LTRversion = $Matches[1]
+   $NewVersion = $url.split('-') | ? {$_ -match '^[0-9.]+$'}
 
+   $LTRrow = $download_page.AllElements | ? {($_.tagname -eq 'tr') -and ($_.innertext -match 'long term release.*installer')}
+   $LTRurl = $LTRrow.outerhtml.split('"') | ? {$_ -match '/downloads/.*\.msi$'}
+   $LTRversion = $LTRurl.split('-') | ? {$_ -match '^[0-9.]+$'}
 
    return @{ 
       Version    = $NewVersion
