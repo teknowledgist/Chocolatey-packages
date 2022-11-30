@@ -25,7 +25,8 @@
     
     With the Import Excel PowerShell module, you can easily export any data to Excel just as you would a .csv file. You can pipe the results of a SQL Server query or a REST API—the list goes on and on.
 
-## Example:  Add a pivot table to spreadsheet
+# Examples:
+## Add a pivot table to spreadsheet
 
 Categorize, sort, filter, and summarize any amount data with pivot tables. Then add charts.
 
@@ -46,7 +47,21 @@ South,Delaware,712,508.55
 $data | Export-Excel .\salesData.xlsx -AutoNameRange -Show -PivotRows Region -PivotData @{'Units'='sum'} -PivotChartType PieExploded3D
 ```
 
-![Example table with chart](https://cdn.jsdelivr.net/gh/dfinke/ImportExcel@390aca0496498a364a53f15529f65dbc64d5b815\images/SalesDataChartPivotTable.png)
+That code alone will create two Excel sheets/tabs:
+
+![Example table with chart](https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@717f46e81c41f1f820f91d7453a63a573d431fdb/automatic/importexcel.powershell/smallExample.png)
+
+## Create a separate CSV file for each Excel sheet
+
+The [yearlyRetailSales.xlsx](https://github.com/dfinke/ImportExcel/blob/master/Examples/Import-Excel) has 12 sheets of retail data for the year.
+
+This single line of PowerShell converts any number of sheets in an Excel workbook to separate CSV files.
+
+```powershell
+(Import-Excel .\yearlyRetailSales.xlsx *).GetEnumerator() |
+ForEach-Object { $_.Value | Export-Csv ($_.key + '.csv') }
+```
+
     </description>
     <releaseNotes>https://github.com/dfinke/ImportExcel/blob/master/changelog.md</releaseNotes>
   </metadata>
