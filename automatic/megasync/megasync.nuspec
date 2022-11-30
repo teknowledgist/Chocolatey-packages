@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>megasync</id>
-    <version>4.7.2</version>
+    <version>4.7.3.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/megasync</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -30,9 +30,10 @@
 * **Live Encrypted Backup** - With our real-time file synchronisation and versioning features, your data is always safe and recoverable.
 * **Public Source Code** - To enable independent verification of the correctness and integrity of our crypto model and its implementation, we publish the full source code of our client apps.
 
-##### Note
+##### Notes
 
-The MEGAsync client does not have a silent **uninstall**.  Two dialog windows appear confirming uninstallation.
+* The MEGAsync install is known to close all instances of Windows Explorer.  It can be reopened via **unelevated** CMD or PowerShell prompt by entering `explorer.exe`.
+* The MEGAsync client does not have a silent **uninstall**.  Two dialog windows appear confirming uninstallation.
     </description>
     <releaseNotes>https://github.com/meganz/MEGAsync/releases</releaseNotes>
   </metadata>
