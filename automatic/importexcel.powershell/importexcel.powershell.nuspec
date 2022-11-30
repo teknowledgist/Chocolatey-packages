@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>importexcel.powershell</id>
+    <version>7.8.3</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/importexcel.powershell</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>ImportExcel (PowerShell Module)</title>
+    <authors>Teknowledgist</authors>
+    <projectUrl>https://github.com/dfinke/ImportExcel</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@d790b38783ece807645d95a561eb9fc107e8327a/Icons/importexcel_icon.png</iconUrl>
+    <copyright>c 2020 All rights reserved</copyright>
+    <licenseUrl>https://github.com/dfinke/ImportExcel/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/dfinke/ImportExcel</projectSourceUrl>
+    <docsUrl>https://github.com/dfinke/ImportExcel#basic-usage</docsUrl>
+    <mailingListUrl>https://github.com/dfinke/ImportExcel/discussions</mailingListUrl>
+    <bugTrackerUrl>https://github.com/dfinke/ImportExcel/issues</bugTrackerUrl>
+    <tags>importexcel excel powershell module core FOSS embedded</tags>
+    <summary>PowerShell module to import/export Excel spreadsheets, without Excel</summary>
+    <description>Automate Excel with PowerShell without having Excel installed. Works on Windows, Linux and MAC. Creating Tables, Pivot Tables, Charts and much more just got a lot easier.
+    
+    With the Import Excel PowerShell module, you can easily export any data to Excel just as you would a .csv file. You can pipe the results of a SQL Server query or a REST API—the list goes on and on.
+
+## Example:  Add a pivot table to spreadsheet
+
+Categorize, sort, filter, and summarize any amount data with pivot tables. Then add charts.
+
+```powershell
+$data = ConvertFrom-Csv @"
+Region,State,Units,Price
+West,Texas,927,923.71
+North,Tennessee,466,770.67
+East,Florida,520,458.68
+East,Maine,828,661.24
+West,Virginia,465,053.58
+North,Missouri,436,235.67
+South,Kansas,214,992.47
+North,North Dakota,789,640.72
+South,Delaware,712,508.55
+"@
+
+$data | Export-Excel .\salesData.xlsx -AutoNameRange -Show -PivotRows Region -PivotData @{'Units'='sum'} -PivotChartType PieExploded3D
+```
+
+![Example table with chart](https://cdn.jsdelivr.net/gh/dfinke/ImportExcel@390aca0496498a364a53f15529f65dbc64d5b815\images/SalesDataChartPivotTable.png)
+    </description>
+    <releaseNotes>https://github.com/dfinke/ImportExcel/blob/master/changelog.md</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
