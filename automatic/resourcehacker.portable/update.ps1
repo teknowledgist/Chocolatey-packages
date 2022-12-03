@@ -8,7 +8,7 @@ function global:au_GetLatest {
    $VersionText = $download_page.AllElements |
                         Where-Object {$_.innertext -match '^version'} | 
                         Select-Object -First 1 -ExpandProperty innertext
-   $Version = $VersionText -replace '.* ([0-9.]+) .*','$1'
+   $Version = $VersionText -replace '.* ([0-9.]+).*','$1'
 
    $url = 'http://www.angusj.com/resourcehacker/resource_hacker.zip'
 
