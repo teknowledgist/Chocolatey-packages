@@ -2,7 +2,7 @@ import-module au
 
 
 function global:au_GetLatest {
-   $DPageURL = 'https://www.crystalexplorer.net/download.html'
+   $DPageURL = 'https://crystalexplorer.net/download/'
    $download_page = Invoke-WebRequest -Uri $DPageURL
 
    $URL64 = $download_page.Links | 
