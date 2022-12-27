@@ -17,7 +17,7 @@ function global:au_SearchReplace {
     @{
         "legal\VERIFICATION.md" = @{
             "(^- Version\s*:)(.*)"      = "`${1} $($Latest.Version)"
-            "(^- x32 SHA256\s*:)(.*)"   = "`${1} $($Latest.Checksum32)"
+#            "(^- x32 SHA256\s*:)(.*)"   = "`${1} $($Latest.Checksum32)"
             "(^- x64 SHA256\s*:)(.*)"   = "`${1} $($Latest.Checksum64)"
         }
     }
