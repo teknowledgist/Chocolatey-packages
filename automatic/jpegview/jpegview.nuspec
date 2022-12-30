@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>jpegview</id>
+    <version>1.0.40</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/transwiz</packageSourceUrl>
+    <owners>Teknowledgist, rgl</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>JPEGView</title>
+    <authors>David Kleiner, sylikc</authors>
+    <projectUrl>https://github.com/sylikc/jpegview</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@32062a628d31c49f30b0e812b649d5470489639f/Icons/jpegview_icon.png</iconUrl>
+    <copyright>Copyright (C) 2006-2018 David Kleiner (dkleiner) and 2020-2022 Kevin M (sylikc)</copyright>
+    <licenseUrl>https://github.com/sylikc/jpegview/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/sylikc/jpegview</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/sylikc/jpegview/issues</bugTrackerUrl>
+    <tags>jpegview image viewer jpeg bmp png gif tiff FOSS embedded</tags>
+    <summary>A fast, highly configurable, minimal-GUI, image viewer/adjuster</summary>
+    <description>JPEGView is a lean, fast and highly configurable viewer/editor for JPEG, BMP, PNG, WEBP, TGA, GIF and TIFF images with a minimal GUI. Basic on-the-fly image processing is provided - allowing adjusting typical parameters as sharpness, color balance, rotation, perspective, contrast and local under-/overexposure.
+
+### Features
+
+* Small and fast, uses SSE2 and up to 4 CPU cores
+* High quality resampling filter, preserving sharpness of images
+* Basic image processing tools can be applied realtime during viewing
+* Movie mode to play folder of JPEGs as movie
+
+This is a fork of the excellent project [JPEGView by David Kleiner](https://sourceforge.net/projects/jpegview/). 
+    </description>
+    <releaseNotes>https://github.com/sylikc/jpegview/blob/master/CHANGELOG.txt</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
