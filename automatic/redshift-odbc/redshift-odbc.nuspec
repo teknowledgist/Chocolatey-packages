@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>redshift-odbc</id>
-    <version>1.4.59.1000</version>
+    <version>1.4.62.1000</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/redshift-odbc</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -15,7 +15,7 @@
     <copyright>Copyright © 2020 Amazon Web Services, Inc.</copyright>
     <licenseUrl>https://s3.amazonaws.com/redshift-downloads/drivers/Amazon+Redshift+ODBC+and+JDBC+Driver+License+Agreement.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <docsUrl>https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.59.1000/Amazon+Redshift+ODBC+Connector+Install+Guide.pdf</docsUrl>
+    <docsUrl>https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.62.1000/Amazon+Redshift+ODBC+Connector+Install+Guide.pdf</docsUrl>
     <!--<mailingListUrl></mailingListUrl>-->
     <!--<bugTrackerUrl></bugTrackerUrl>-->
     <tags>redshift-odbc aws cloud amazon redshift odbc sql</tags>
@@ -27,7 +27,7 @@ In Microsoft Windows, you typically set driver options when you configure a data
 *(If your client tool supports JDBC, you might choose to use that type of connection rather than ODBC due to the ease of configuration that JDBC provides.)* 
 
     </description>
-    <releaseNotes>https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.59.1000/Amazon+Redshift+ODBC+Connector+Release+Notes.pdf</releaseNotes>
+    <releaseNotes>https://s3.amazonaws.com/redshift-downloads/drivers/odbc/1.4.62.1000/Amazon+Redshift+ODBC+Connector+Release+Notes.pdf</releaseNotes>
     <!-- =============================== -->      
   </metadata>
   <files>

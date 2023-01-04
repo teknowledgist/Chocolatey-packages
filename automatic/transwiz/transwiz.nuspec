@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>transwiz</id>
+    <version>1.19</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/transwiz</packageSourceUrl>
+    <owners>Teknowledgist, JWeller27</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Transwiz</title>
+    <authors>ForensiT Software Ltd</authors>
+    <projectUrl>https://www.forensit.com/move-computer.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@56c191cf18ae1af5269ca7f88d3c923ae22d078f/Icons/transwiz_icon.png</iconUrl>
+    <copyright>Copyright 2022 © ForensiT Software Ltd</copyright>
+    <licenseUrl>https://www.forensit.com/Move/END-USER%20LICENSE%20AGREEMENT.rtf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.forensit.com/Downloads/Transwiz%20User%20Guide.pdf</docsUrl>
+    <mailingListUrl>https://forum.forensit.com/move-computer_forum3.html</mailingListUrl>
+    <tags>transwiz profile account freeware</tags>
+    <summary>Transwiz makes it easy to transfer your personal data and settings to a new computer</summary>
+    <description>Transwiz will pack your existing personal data and settings into a standard zip archive for easy transfer to another computer. The Wizard will then unpack the archive on the new computer and restore your user profile - automatically reconfiguring the profile as necessary for the new Operating System. The Wizard will also rename the new computer and join it to your domain as required.
+
+Transwiz can transfer profile data from Windows XP, Vista, Windows 7, Windows 8 and Windows 10, and to machines running Windows XP, Windows 7, and Windows 10. You can use the same archive file to transfer your user profile to and from 32-bit and 64-bit versions of Windows. Unfortunately Transwiz does not support Azure accounts.
+
+### Features
+* Simple Wizard interface for backing up and restoring user profiles
+* Automatically converts Windows 7 profiles to Windows 10
+* Multi-language support
+* Creates a standard zip archive
+* Transfer from Windows XP/Vista/Windows 7/Windows 8 and Windows 10
+* Backup additional folder locations
+* Exclude unwanted folders and file types
+* Automatically join a domain
+* Freeware Edition
+
+### Any account, any domain, any language
+
+Transwiz enables you to move a user's profile and assign it to any user account on any domain in any language. By separating the user account from the user data, Transwiz enables you to move user accounts as well as computers.
+
+### Freeware
+
+The Personal Edition of Transwiz is Freeware and offers a simple Wizard interface to transfer profile data between Windows workstations. 
+    </description>
+    <releaseNotes>https://forum.forensit.com/transwiz-change-log_topic1815.html</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
