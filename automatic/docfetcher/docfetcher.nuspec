@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>docfetcher</id>
+    <version>1.1.25.20230104</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/docfetcher</packageSourceUrl>
+    <owners>Teknowledgist, Mik</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>DocFetcher (Install)</title>
+    <authors>DocFetcher Development Team</authors>
+    <projectUrl>https://docfetcher.sourceforge.net/en/index.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@8953eab7f1eb6bfc8a6180897f3db1c871ecfcc1/Icons/docfetcher_icon.png</iconUrl>
+    <copyright>Copyright (c) 2007-2021 DocFetcher Development Team</copyright>
+    <licenseUrl>https://sourceforge.net/p/docfetcher/wiki/License/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://sourceforge.net/p/docfetcher/code/ci/master/tree/</projectSourceUrl>
+    <docsUrl>https://sourceforge.net/p/docfetcher/wiki/FAQ/</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/docfetcher/discussion/702424</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/docfetcher/bugs/</bugTrackerUrl>
+    <tags>docfetcher search content index FOSS embedded</tags>
+    <summary>An Open Source desktop search application for searching the contents of files on your computer.</summary>
+    <description>DocFetcher is an Open Source desktop search application: It allows you to search the contents of files on your computer. — You can think of it as Google for your local files. 
+    
+### Notable Features
+
+* **Crap-free interface**
+* **Private with `NO` data collection**
+* **Free and Open Source**
+* **Index only what you need**
+* **64-bit support**
+* **Unicode support**
+* **Archive support**: zip, 7z, rar, and tar.*. The file extensions for zip archives can be customized and it can handle an unlimited nesting of archives.
+* **Search in source code files**: The file extensions by which DocFetcher recognizes plain text files can be customized, so you can use DocFetcher for searching in any kind of source code and other text-based file formats. (This works quite well in combination with the customizable zip extensions, e.g. for searching in Java source code inside Jar files.)
+* **Outlook PST files**: DocFetcher allows searching for Outlook emails, which Microsoft Outlook typically stores in PST files.
+* **Detection of HTML pairs**: By default, DocFetcher detects pairs of HTML files (e.g. a file named "foo.html" and a folder named "foo_files"), and treats the pair as a single document. This feature may seem rather useless at first, but it turned out that this dramatically increases the quality of the search results when you're dealing with HTML files, since all the "clutter" inside the HTML folders disappears from the results.
+* **Regex-based exclusion of files from indexing**: You can use regular expressions to exclude certain files from indexing.
+* **Mime-type detection**: You can use regular expressions to turn on "mime-type detection" for certain files, meaning that DocFetcher will try to detect their actual file types not just by looking at the filename, but also by peeking into the file contents. This comes in handy for files that have the wrong file extension.
+* **Powerful query syntax**: In addition to basic constructs like OR, AND and NOT DocFetcher also supports, among other things: Wildcards, phrase search, fuzzy search ("find words that are similar to..."), proximity search ("these two words should be at most 10 words away from each other"), boosting ("increase the score of documents containing...")
+
+### Supported Document Formats
+
+* Microsoft Office (doc, xls, ppt)
+* Microsoft Office 2007 and newer (docx, xlsx, pptx, docm, xlsm, pptm)
+* Microsoft Outlook (pst)
+* OpenOffice.org (odt, ods, odg, odp, ott, ots, otg, otp)
+* Portable Document Format (pdf)
+* EPUB (epub)
+* HTML (html, xhtml, ...)
+* TXT and other plain text formats (customizable)
+* Rich Text Format (rtf)
+* AbiWord (abw, abw.gz, zabw)
+* Microsoft Compiled HTML Help (chm)
+* MP3 Metadata (mp3)
+* FLAC Metadata (flac)
+* JPEG Exif Metadata (jpg, jpeg)
+* Microsoft Visio (vsd)
+* Scalable Vector Graphics (svg)
+
+### Raising the memory (optional)
+DocFetcher has a default memory limit of 256 MB.  If you try to index a very, very large number of files, and/or if some of the indexed files are really huge, DocFetcher may hit that memory limit. This package (running as an administrator) will copy additional, optional launchers with larger memory limits into the application directory (typ. `C:\Program Files (x86)\DocFetcher`).  This will allow non-admins to easily start DocFetcher to use more memory and optionally create a shortcut to their launcher of choice.
+    </description>
+    <releaseNotes>https://sourceforge.net/p/docfetcher/wiki/ChangeLog/</releaseNotes>
+    <!-- =============================== -->
+    <dependencies>
+      <dependency id="temurin8jre" version="8.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
