@@ -17,6 +17,6 @@ You can use one of the following methods to obtain the checksum:
 
 
 ## License
-File 'LICENSE.md' is obtained from:
+File 'LICENSE.txt' is obtained from:
 - https://www.eclipse.org/org/documents/epl-1.0/EPL-1.0.txt
 
