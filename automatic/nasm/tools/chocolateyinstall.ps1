@@ -1,5 +1,12 @@
 ﻿$ErrorActionPreference = 'Stop'
 
+# On upgrades, the NASM installer sometimes adds an additional Start 
+#   Menu folder without removing the old one.  Take an inventory 
+#   before install attempt.
+$StartMenu = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu'
+$PreSMfolders = Get-ChildItem $StartMenu -Filter "Netwide Assembler*" -Recurse -Directory | 
+                     Select-Object -ExpandProperty fullname
+
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $Files = Get-ChildItem $toolsDir -Filter '*.exe' |
                Sort-Object LastWriteTime | 
@@ -24,9 +31,27 @@ foreach ($File in $Files) {
    Remove-Item $File.fullname -ea 0 -force
 }
 
-# The NASM installer includes the version in the Start Menu folder, but
-#   doesn't change the number on updates.  Removing the number is simplest.
-$StartMenu = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu'
-$SMfolder = Get-ChildItem $StartMenu -Filter "Netwide Assembler*" -Recurse -Directory
-$null = Rename-Item $SMfolder.FullName ($SMfolder.FullName -replace '[0-9.]','').trim() -Force
+# Take another inventory of NASM Start Menu folders after install
+$PostSMfolders = Get-ChildItem $StartMenu -Filter "Netwide Assembler*" -Recurse -Directory |
+                     Select-Object -ExpandProperty fullname
+
+if ($PostSMfolders.count -eq 1) {
+   $Folder2Rename = $PostSMfolders
+} elseif (($PostSMfolders.count - $PreSMfolders.count) -eq 1) {
+   # Remove old NASM Start Menu folders
+   $PostSMfolders | ForEach-Object {
+      if ($PreSMfolders -contains $_) {
+         Remove-Item $_ -Recurse -Force
+      } else {
+         $Folder2Rename = $_
+      }
+   }
+}
+
+if ($Folder2Rename) {
+   # Rename the remaining folder to strip the version number.
+   $null = Rename-Item $Folder2Rename ($Folder2Rename -replace '[0-9.]','').trim() -Force
+} else {
+   Write-Warning "Can't rename NASM Start Menu folder!"
+}
 
