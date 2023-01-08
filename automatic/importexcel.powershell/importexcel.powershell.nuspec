@@ -9,7 +9,7 @@
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>ImportExcel (PowerShell Module)</title>
-    <authors>Teknowledgist</authors>
+    <authors>Doug Finke</authors>
     <projectUrl>https://github.com/dfinke/ImportExcel</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@d790b38783ece807645d95a561eb9fc107e8327a/Icons/importexcel_icon.png</iconUrl>
     <copyright>c 2020 All rights reserved</copyright>

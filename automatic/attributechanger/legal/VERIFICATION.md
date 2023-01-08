@@ -6,9 +6,9 @@ The installer can be downloaded from the official download page:
 - https://www.petges.lu/download/
 
 or directly:
-- Version: 11.0
-- URL:     https://www.petges.lu/pubfiles/ac-11_00.exe
-- SHA256 Checksum: 9BAE22DA36DE57F38CC0BA4E6A1A5A25B998C2C698FB74B6ADE00F1021EAB9D3
+- Version: 11.10
+- URL:     https://www.petges.lu/pubfiles/ac-11_10.exe
+- SHA256 Checksum: 26DBCF9B0D460929117D01FF23691C7752154FA02E053F16A168F4A0C37B94A4
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

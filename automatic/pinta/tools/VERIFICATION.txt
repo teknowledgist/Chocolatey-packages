@@ -9,6 +9,6 @@ download page here:
 https://pinta-project.com/pintaproject/pinta/releases
 
 Direct download:
-Version  : 2.0.2
-URL      : https://github.com/PintaProject/Pinta/releases/download/2.0.2/Pinta.exe
-Checksum : 66A58A19A0F254A24C90F662114D8B1380E5F8693DC4792F9E216EBE4D11608F
+Version  : 2.1
+URL      : https://github.com/PintaProject/Pinta/releases/download/2.1/Pinta.exe
+Checksum : 8004D141D5A9853A373AD7267AA463B26C6E9BFCAB79BC832048FD8D0E8BF394

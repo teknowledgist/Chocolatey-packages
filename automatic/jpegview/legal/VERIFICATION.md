@@ -6,11 +6,11 @@ The installers can be downloaded from the official download link:
 - https://github.com/sylikc/jpegview/releases/latest
 
 or directly:
-- Version    : 1.0.40
-- x86 URL    : https://github.com/sylikc/jpegview/releases/download/v1.0.40/JPEGView32_en-us_1.0.40.msi
-- x86 SHA256 : E04F98B991A4A5BC497F968A78A990BDD3C22966388AED6CC57BEF457C01F428
-- x64 URL    : https://github.com/sylikc/jpegview/releases/download/v1.0.40/JPEGView64_en-us_1.0.40.msi
-- x64 SHA256 : A51BD6B6BD7F81F31B08491D3A187F1B8B255247CCE765FDD8DC5B55FE619F4F
+- Version    : 1.1.41.1
+- x86 URL    : https://github.com/sylikc/jpegview/releases/download/v1.1.41.1/JPEGView32_en-us_1.1.41.1.msi
+- x86 SHA256 : 761935CDA45AC7AFBE2311F4EC86F27B7B6FD42D3F6233058C5637A0232FC5C4
+- x64 URL    : https://github.com/sylikc/jpegview/releases/download/v1.1.41.1/JPEGView64_en-us_1.1.41.1.msi
+- x64 SHA256 : 6A616834F391725E7E662E49C189FD3D11BD17B9490F7C02C1C1F64162EDE238
 
 
 ## Verify
