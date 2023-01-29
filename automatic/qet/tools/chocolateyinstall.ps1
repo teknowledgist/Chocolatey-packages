@@ -3,7 +3,7 @@
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $File = Get-ChildItem $toolsDir -Filter '*.exe' |
                Sort-Object LastWriteTime | 
-               Select-Object -Last  -ExpandProperty Fullname
+               Select-Object -Last 1 -ExpandProperty Fullname
 
 $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
