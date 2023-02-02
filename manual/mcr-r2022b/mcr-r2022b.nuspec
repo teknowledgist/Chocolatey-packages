@@ -15,7 +15,7 @@
     <copyright>Copyright 2001-2019 The MathWorks, Inc.</copyright>
     <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/mcr-r2022b/matlabruntime_license_agreement.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <docsUrl>https://www.mathworks.com/help/compiler/deployment-process.html</docsUrl>
+    <docsUrl>https://www.mathworks.com/help/compiler/matlab-runtime.html</docsUrl>
     <bugTrackerUrl>https://www.mathworks.com/support/search_results.html?q=asset_type%3A%22Bug%2BReports%22+product%3A%22MATLAB+Compiler%22</bugTrackerUrl>
     <tags>MATLAB compiler runtime math mathematics library</tags>
     <summary>Run compiled MATLAB applications.</summary>
@@ -26,6 +26,7 @@
 * Multiple versions of the MATLAB Runtime may simultaneously exist on a target machine. This allows applications compiled with different versions of the MATLAB Runtime to execute side by side on the same machine.
 * The MATLAB Runtime Compiler is large (4GB).  It will take some time to download and install.
     </description>
+    <releaseNotes>https://www.mathworks.com/help/matlab/release-notes.html</releaseNotes>
     <dependencies>
     </dependencies>
   </metadata>
