@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>text-grab</id>
+    <version>3.2.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/text-grab</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Text-Grab</title>
+    <authors>Joseph Finney</authors>
+    <projectUrl>https://github.com/TheJoeFin/Text-Grab</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/theJoeFin/Text-Grab@c8c1ca7fb15ba4e7e30999446e8720630e67c2b5/Text-Grab/Images/Text-Grab-Icon.png</iconUrl>
+    <copyright>Copyright © 2020 Joseph Finney</copyright>
+    <licenseUrl>https://github.com/TheJoeFin/Text-Grab/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/TheJoeFin/Text-Grab</projectSourceUrl>
+    <docsUrl>https://github.com/TheJoeFin/Text-Grab#text-grab-has-four-modes</docsUrl>
+    <bugTrackerUrl>https://github.com/TheJoeFin/Text-Grab/issues</bugTrackerUrl>
+    <tags>text-grab textgrab ocr wpf screen capture portable FOSS embedded</tags>
+    <summary>OCR any text displayed on your screen</summary>
+    <description>This is a minimal optical character recognition (OCR) utility for Windows 10/11 which makes all visible text available to be copied.
+
+Too often text is trapped within images, videos, or within parts of applications and cannot be selected. Text Grab takes a screenshot, passes that image to the OCR engine, then puts the text into the clipboard for use anywhere. The OCR is done locally by Windows API. This enables Text Grab to have essentially no UI and not require a constantly running background process. Working with text can be much more than just copying text from images, so Text Grab has a range of different modes to make working with text fast and easy.
+
+![Full Screen Example](https://cdn.jsdelivr.net/gh/theJoeFin/Text-Grab@c8c1ca7fb15ba4e7e30999446e8720630e67c2b5/images/2-3-Full-Screen-Grab-med.gif)
+
+Text Grab is designed to have multiple modes, from minimal to fully featured; all focused on productivity. By using Windows 10’s OCR capabilities Text Grab can launch quickly without needing to run in the background. Pinning Text Grab to the Taskbar enables launching via keyboard shortcut. Now with version 2.4 when the background process is enabled Text Grab can be activated from anywhere using global hotkeys. The full-screen mode is designed to be used hundreds of times a day. Reducing clicks and menus means saving time, which is the primary focus of Text Grab. The Grab Frame tool can be positioned on top of any text content for quick OCR any time. When it comes to manipulating the text you've copied the Edit Text Window offers a wide range of tools to speed up common tasks and take the raw text into clean usable content.
+    </description>
+    <releaseNotes>https://github.com/TheJoeFin/Text-Grab/releases</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
