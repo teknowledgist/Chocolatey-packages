@@ -8,7 +8,7 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mcr-r2019a</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>MATLAB Compiler Runtime R2020b</title>
+    <title>MATLAB Compiler Runtime R2021b</title>
     <authors>The Mathworks, Inc.</authors>
     <projectUrl>https://www.mathworks.com/products/compiler.html</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@f5f5b9f6b5afc7dc7446a22954b865f21bd7d80c/Icons/matlab_icon.png</iconUrl>
