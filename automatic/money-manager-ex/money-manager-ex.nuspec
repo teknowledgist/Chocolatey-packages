@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>money-manager-ex</id>
+    <version>1.6.3</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/money-manager-ex</packageSourceUrl>
+    <owners>cole.mike, Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Money Manager Ex (MMEX)</title>
+    <authors>MMEX Contributors</authors>
+    <projectUrl>https://moneymanagerex.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/moneymanagerex/moneymanagerex@3b390843722ab39f7d0de34eb25cc7aaa41396a3/resources/mmexlogo.png</iconUrl>
+    <copyright>Copyright © 2014-2023 Money Manager EX</copyright>
+    <licenseUrl>https://github.com/moneymanagerex/moneymanagerex/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://moneymanagerex.org/moneymanagerex/en_GB/index.html</docsUrl>
+    <mailingListUrl>https://forum.moneymanagerex.org</mailingListUrl>
+    <tags>money-manager-ex MMEX money finance cash currency budget FOSS embedded</tags>
+    <summary>Open-source, cross-platform, software that helps you organize your finances and keep track of where, when and to who the money goes.</summary>
+    <description>Money Manager Ex (MMEX) is a personal money management system, for any one starting out in keeping track of their money, and their spending habits. Based on simple principles, thus allowing anyone with little, to no knowledge of finance and general book keeping, to successfully manage their money. MMEX does this by attempting to models the real financial world, to help us (the user) maintain our personal finances. The Money Manager EX Software, is Open Source, and free to use. 
+
+### Features
+MoneyManager Ex has all the features you would expect in a finance management application
+
+* **Accounts and Currencies** - Wizard to simply create accounts and start to use MMEX. Multiple currencies for each account to have more flexibility.
+* **Transactions** - Take note of all expenses and incoming in a clear view: divide and highlight them with different status. Search, filter and sort by every field to have a clear situation of bank accounts at any time.
+* **Payees and Categories** - Categories indicate the reason an expenditure is made or an income is received. Payees are the people or the institutions that give money or who are paid for goods and services.
+* **Repeating Transactions** - Special transactions set up in order to have the transaction entered into the database at some future date. They generally occur at regular intervals based on a schedule.
+* **Stocks and Shares** - Allows the tracking of Stocks and Shares to be incorporated with your general day to day transactions.
+* **Assets** - Track fixed assets and incorporate them within total financial worth. Every single asset could be undervalued/increased by a specific rate per year or left unchanged.
+* **Budgeting** - Set up a budget for a year and/or a month. Then compare money spent versus actual budget with specific or custom reports.
+* **Attachments** - Store all related documents attaching all file types to every element type (transaction, account, asset etc..). In this way it is possible to have always on hand invoices, receipts, contracts directly within MMEX.
+* **General Reports** - Create your own reports with custom SQL queries, LUA functions and HTML + JS frontend. They will become available with standard reports and you can run them directly from report menu.
+* **Import and Export** - Import data from QIF (Quicken Interchange Format) and CSV (Comma-Separated Values) files. Export data to QIF, CSV and HTML.
+* **Multi-Language** - More than 30 translations available that allow to have Money Manager EX interface in your native language. Documentation available in 8 different languages.
+* **Cross Platform** - We provide builds for the most common operating systems: Windows, MacOS and Linux Ubuntu. It is possible to use it also on other OS building it directly from source code.
+* **Free and Open Source** - OpenSource software, free download without ads and charges. It can be freely used, changed, and shared by anyone.
+
+    </description>
+    <releaseNotes>https://github.com/moneymanagerex/moneymanagerex/releases</releaseNotes>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
