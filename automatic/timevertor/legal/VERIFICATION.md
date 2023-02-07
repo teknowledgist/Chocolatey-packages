@@ -2,8 +2,8 @@
 Verification is intended to assist the Chocolatey moderators and community in verifying that this package's contents are trustworthy.
 
 ## Download
-The extension can be downloaded from the official download link:
-- https://mupdf.com/downloads
+The extension can be downloaded from the source releases page:
+- https://github.com/henrypp/timevertor/releases
 
 or directly:
 Version : 1.4.3
