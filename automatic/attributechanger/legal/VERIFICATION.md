@@ -5,6 +5,10 @@ Verification is intended to assist the Chocolatey moderators and community in ve
 The installer can be downloaded from the official download page:
 - https://www.petges.lu/download/
 
+Some versions on the site are concluded with a letter, but the nuspec syntax
+restricts lettered versions to beta status.  This package converts the
+letter into a numbered version as needed.
+
 or directly:
 - Version: 11.10
 - URL:     https://www.petges.lu/pubfiles/ac-11_10.exe
