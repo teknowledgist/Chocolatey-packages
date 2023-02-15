@@ -22,19 +22,14 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
     @{
-      'legal\VERIFICATION.md' = @{
-         '(- Version\s+:).*'    = "`${1} $($Latest.Version)"
-         '(- x86 URL\s+:).*'    = "`${1} $($Latest.URL32)"
-         '(- x86 SHA256\s+:).*' = "`${1} $($Latest.Checksum32)"
-         '(- x64 URL\s+:).*'    = "`${1} $($Latest.URL64)"
-         '(- x64 SHA256\s+:).*' = "`${1} $($Latest.Checksum64)"
+      'tools\chocolateyinstall.ps1' = @{
+         '^(\s+Url\s+=).*'        = "`${1} '$($Latest.URL32)'"
+         '^(\s+Url64bit\s+=).*'   = "`${1} '$($Latest.URL64)'"
+         '^(\s+Checksum\s+=).*'   = "`${1} '$($Latest.Checksum32)'"
+         '^(\s+Checksum64\s+=).*' = "`${1} '$($Latest.Checksum64)'"
       }
     }
 }
 
-function global:au_BeforeUpdate() { 
-   Write-host "Downloading XnView MP $($Latest.Version) zip files"
-   Get-RemoteFiles -Purge -NoSuffix
-}
 
-update -ChecksumFor none 
+update -ChecksumFor all

@@ -2,26 +2,29 @@
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $FolderOfPackage = Split-Path -Parent $toolsDir
-
-$Zips = Get-ChildItem $toolsDir -Filter '*.zip' | Sort-Object LastWriteTime | 
-            Select-Object -Last 2 -ExpandProperty FullName
+write-host "Folder:  $FolderOfPackage"
+write-host "PackageName:  $env:ChocolateyPackageName"
 
 # Remove previous versions
-$Previous = Get-ChildItem $FolderOfPackage -filter "$env:ChocolateyPackageName*" | 
+$Previous = Get-ChildItem $FolderOfPackage -filter "v*" | 
                Where-Object { $_.PSIsContainer }
 if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
 
 $InstallArgs = @{
-   packageName    = $env:ChocolateyPackageName
-   Destination    = "$FolderOfPackage\$env:ChocolateyPackageName_$env:ChocolateyPackageVersion"
-   FileFullPath   = $Zips | Where-Object {$_ -notmatch 'x64'}
-   FileFullPath64 = $Zips | Where-Object {$_ -match 'x64'}
+   packageName   = $env:ChocolateyPackageName
+   UnzipLocation = "$FolderOfPackage\v$env:ChocolateyPackageVersion"
+   Url           = 'https://download.xnview.com/XnViewMP-win.zip'
+   Url64bit      = 'https://download.xnview.com/XnViewMP-win-x64.zip'
+   Checksum      = '3e811ce18fcd0132f43ee3697278a0c29c3b93cb0e800170b53577f7a3ad8910'
+   Checksum64    = '4e69331efef712824fd63869ae9bb6a8fa3f05416687ec3ee350eadfa83b4537'
+   ChecksumType  = 'SHA256'
 }
 
-Install-ChocolateyInstallPackage @InstallArgs
+Install-ChocolateyZipPackage @InstallArgs
 
-foreach ($file in $Zips) {
-   Remove-Item $file -ea 0 -force
+$UnzippedEXEs = Get-ChildItem "$FolderOfPackage\v*" -Filter '*.exe' -Recurse -Exclude 'xnviewmp.exe'
+foreach ($exe in $UnzippedEXEs) {
+   $null = New-Item "$($exe.fullname).ignore" -Force
 }
