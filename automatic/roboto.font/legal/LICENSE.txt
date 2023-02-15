@@ -1,4 +1,4 @@
-﻿From:  https://github.com/googlefonts/roboto/blob/main/LICENSE
+﻿From:  https://github.com/googlefonts/roboto-classic/blob/master/LICENSE.txt
 =================================================================
 
                                  Apache License

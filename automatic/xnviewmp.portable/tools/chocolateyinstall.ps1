@@ -2,8 +2,6 @@
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $FolderOfPackage = Split-Path -Parent $toolsDir
-write-host "Folder:  $FolderOfPackage"
-write-host "PackageName:  $env:ChocolateyPackageName"
 
 # Remove previous versions
 $Previous = Get-ChildItem $FolderOfPackage -filter "v*" | 

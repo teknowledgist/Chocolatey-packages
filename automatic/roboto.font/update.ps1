@@ -1,10 +1,10 @@
 import-module au
 
 function global:au_GetLatest {
-   $Repo = 'https://github.com/googlefonts/roboto'
+   $Repo = 'https://github.com/googlefonts/roboto-classic'
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $URL = $Release.Assets | Where-Object {$_.FileName -match '-hinted\.zip'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.zip'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    if ($URL) { 
       $version = $Release.Tag.trim('v.')
@@ -22,10 +22,10 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
    @{
-      "tools\VERIFICATION.txt" = @{
-            "(^Version\s+:).*" = "`${1} $($Latest.Version)"
-            "(^URL\s+:).*"     = "`${1} $($Latest.URL32)"
-            "(^SHA256\s+:).*"  = "`${1} $($Latest.Checksum32)"
+      "legal\VERIFICATION.md" = @{
+            "^(- Version\s+:).*" = "`${1} $($Latest.Version)"
+            "^(- URL\s+:).*"     = "`${1} $($Latest.URL32)"
+            "^(- SHA256\s+:).*"  = "`${1} $($Latest.Checksum32)"
       }
    }
 }

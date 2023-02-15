@@ -8,6 +8,7 @@ $UnzipArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileFullPath   = $fileLocation
    Destination    = $UnzipDir
+   SpecificFolder = 'hinted\static'
 }
 Get-ChocolateyUnzip @UnzipArgs
 
