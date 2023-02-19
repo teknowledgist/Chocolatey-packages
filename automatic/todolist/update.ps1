@@ -12,7 +12,7 @@ function global:au_GetLatest {
 
    return @{ 
             Version  = $Version
-            URL32    = 'http://abstractspoon.pbwiki.com/f/todolist_exe.zip'
+            URL32    = 'https://github.com/abstractspoon/ToDoList_Downloads/raw/master/Latest/todolist_exe.zip'
            }
 }
 

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>quollwriter</id>
-    <version>2.6.14</version>
+    <version>3.0.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/quollwriter</packageSourceUrl>
     <owners>Teknowledgist, schelljw</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

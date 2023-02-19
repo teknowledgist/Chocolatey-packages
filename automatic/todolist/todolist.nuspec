@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>todolist</id>
-    <version>8.1.16</version>
+    <version>8.1.18</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/todolist</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -23,7 +23,7 @@
     <summary>Hierarchical task manager with native XML support for custom reporting</summary>
     <description> ToDoList is software in the category of Task Management, Project Management, Productivity, “Getting Things Done” (GTD), Scheduling, and Collaboration.
 
-![ToDoList Example](http://abstractspoon.pbworks.com/f/app-window.png)
+![ToDoList Example](https://www.abstractspoon.com/images/tasktree-view.png)
 
 We have a lot of choices to help us keep track of daily obligations. A simple list on paper of things “To Do” is enough for some people. Others prefer to use programs. People have preferences about where they keep track of tasks - with PC utilities (“thick app”), websites (“thin app”), on phone (“mobile”) apps. Some software is very general, with nothing more than a simple list of task names and due dates. Some get more sophisticated with nested tasks, where you need to complete the nested tasks in order to consider the main task complete. Some commercial software is Very sophisticated, and costs a lot - look at Microsoft Project and similar offerings. Some software is focused on specific industries, for construction, manufacturing, business consulting, website management, wedding planning, or even cooking recipes.
 

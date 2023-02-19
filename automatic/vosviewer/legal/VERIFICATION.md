@@ -6,9 +6,9 @@ The VOSviewer zip file can be downloaded from the official download page:
 - https://www.vosviewer.com/download
 
 or directly:
-- Version : 1.6.18
-- URL : https://www.vosviewer.com/downloads/VOSviewer_1.6.18_exe.zip
-- SHA256 Checksum : 5BF9B21257D56CE219B5023C7A121B1CB251A08E6133701C7C2A2D318A79A41C
+- Version : 1.6.19
+- URL : https://www.vosviewer.com/downloads/VOSviewer_1.6.19_exe.zip
+- SHA256 Checksum : 3766E3F7A5224B9936E7679D491C1C7B368F0BE3FA2132CA2550ADDB56020F19
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

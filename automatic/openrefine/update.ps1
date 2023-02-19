@@ -5,7 +5,7 @@ function global:au_GetLatest {
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
    $version = $Release.Tag.trim('v.')
-   $URL = $Release.Description.split("()") | ? {$_ -match 'with-java'}
+   $URL = $Release.Assets | Where-Object {$_.FileName -match 'with-java'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
       Version = $Version

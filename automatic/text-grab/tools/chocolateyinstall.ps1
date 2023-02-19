@@ -9,18 +9,16 @@ if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
 
-$ZipFile = Get-ChildItem $toolsDir -filter '*.zip' |
-               Sort-Object LastWriteTime | 
-               Select-Object -ExpandProperty fullname -Last 1
+$ZipFile = 'Text-Grab-Self-Contained-2023-01-22.zip'
 
 $UnZipArgs = @{
    packageName    = $env:ChocolateyPackageName
-   FileFullPath   = $ZipFile
+   FileFullPath   = Join-Path $toolsDir $ZipFile
    Destination    = Join-Path $FolderOfPackage "$($env:ChocolateyPackageName)_v$env:ChocolateyPackageVersion"
 }
 Get-ChocolateyUnzip @UnZipArgs
 
-Remove-Item $ZipFile -Force 
+Remove-Item (Join-Path $toolsDir $ZipFile) -Force 
 
 $ShortcutArgs = @{
    ShortcutFilePath = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs\Text-Grab.lnk'

@@ -1,3 +1,5 @@
+From:  https://github.com/TheJoeFin/Text-Grab/blob/main/LICENSE
+==============================================
 MIT License
 
 Copyright (c) 2020 Joseph Finney

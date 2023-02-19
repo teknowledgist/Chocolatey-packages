@@ -6,8 +6,8 @@ Binaries can be downloaded here:
 https://github.com/veyon/veyon/releases/tag/v4.0.8
 
 Direct download:
-Version    : 4.7.4.0
-URL        : https://github.com/veyon/veyon/releases/download/v4.7.4/veyon-4.7.4.0-win32-setup.exe
-CheckSum   : C3586197EB25A6B4BE79A24F61D3FD50CB8C8AA6CFB3551740AB3DF8C2BDDA22
-URL64      : https://github.com/veyon/veyon/releases/download/v4.7.4/veyon-4.7.4.0-win64-setup.exe
-CheckSum64 : ACD6BBC59B738DD39F8EE636D3DAC5AC0613A5536FFA3B8672CE84C89EAB66F7
+Version    : 4.7.5
+URL        : https://github.com/veyon/veyon/releases/download/v4.7.5/veyon-4.7.5.0-win32-setup.exe
+CheckSum   : A2542DAB3C33FD6B4B02BCDADE5C3E70DD1D53649CA104967628FB953254EB0F
+URL64      : https://github.com/veyon/veyon/releases/download/v4.7.5/veyon-4.7.5.0-win64-setup.exe
+CheckSum64 : 1D10B21F44B9E16F8F42A78E4875B4611A2D011E99EA0D51B76C03B569E5D1EC

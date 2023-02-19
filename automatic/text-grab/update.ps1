@@ -5,11 +5,12 @@ function global:au_GetLatest {
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
    $version = $Release.Tag.trim('v.')
-   $URL32 = $Release.Assets | Where-Object {$_.FileName -match '\.zip$'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $Asset = $Release.Assets | Where-Object {$_.FileName -match '\.zip$'} | Select-Object -First 1 
 
    return @{ 
       Version = $version
-      URL32   = $URL32
+      URL32   = $Asset.DownloadURL
+      ZipFile = $Asset.FileName
    }
 }
 
@@ -21,11 +22,14 @@ function global:au_SearchReplace {
             "(^- URL:).*"     = "`${1} $($Latest.URL32)"
             "(^- SHA256+:).*" = "`${1} $($Latest.Checksum32)"
       }
+      'tools\chocolateyinstall.ps1' = @{
+            '^(\$ZipFile = ).*' = "`${1}'$($Latest.ZipFile)'"
+      }
    }
 }
 
 function global:au_BeforeUpdate() { 
-   Write-host "Downloading RBTray $($Latest.Version) zip files"
+   Write-host "Downloading RBTray $($Latest.Version) zip file"
    Get-RemoteFiles -Purge -nosuffix
 }
 
