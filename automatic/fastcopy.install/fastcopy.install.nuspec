@@ -47,7 +47,7 @@ You can modify this software, because all source code has been opened to the pub
     <releaseNotes>https://fastcopy.jp/help/fastcopy_eng.htm#history</releaseNotes>
     <language>en-US</language>
     <dependencies>
-      <dependency id="autohotkey.portable" version="1.1" />
+      <dependency id="autohotkey.portable" version="[1.1,2.0)" />
     </dependencies>
   </metadata>
   <files>
