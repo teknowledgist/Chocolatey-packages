@@ -16,7 +16,6 @@
     <licenseUrl>https://github.com/rizonesoft/Notepad3/blob/master/License.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/rizonesoft/Notepad3</projectSourceUrl>
-    <mailingListUrl>https://www.rizonesoft.com/support/</mailingListUrl>
     <bugTrackerUrl>https://github.com/rizonesoft/Notepad3/issues</bugTrackerUrl>
     <tags>notepad3 notepad notepad2 text editor meta</tags>
     <summary>A light-weight Scintilla-based text editor for Windows.</summary>
