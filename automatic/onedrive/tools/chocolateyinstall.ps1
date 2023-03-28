@@ -7,7 +7,7 @@ $packageArgs = @{
    packageName   = $env:chocolateyPackageName
    fileType      = 'exe'
    url           = 'https://go.microsoft.com/fwlink/?linkid=860984'
-   checksum      = '4441704f8cfa08229ec3f110c6878f5f5203d4a4c87ca29e0a7a9baf09309c72'
+   checksum      = 'a8386771e700d230e406a98557358152c605cd3ef0cb33abba1a2ec4b5eaf090'
    checksumType  = 'sha256'
    silentArgs    = '/allusers /silent'
    validExitCodes= @(0)
