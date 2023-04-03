@@ -29,4 +29,4 @@ function global:au_SearchReplace {
    }
 }
 
-Update-Package -ChecksumFor all
+Update-Package -ChecksumFor 64

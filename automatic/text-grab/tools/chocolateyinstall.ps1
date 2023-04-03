@@ -9,7 +9,7 @@ if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
 
-$ZipFile = 'Text-Grab-Self-Contained-2023-01-22.zip'
+$ZipFile = 'Text-Grab-Self-Contained-2023-03-10.zip'
 
 $UnZipArgs = @{
    packageName    = $env:ChocolateyPackageName

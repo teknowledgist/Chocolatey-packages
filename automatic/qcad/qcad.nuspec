@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qcad</id>
-    <version>3.27.9</version>
+    <version>3.28.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qcad</packageSourceUrl>
     <owners>Teknowledgist,petervbeck</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
