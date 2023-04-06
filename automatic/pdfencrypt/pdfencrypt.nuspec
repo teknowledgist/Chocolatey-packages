@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>pdfencrypt</id>
+    <version>1.1.8461.14277</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdfencrypt</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>PDFEncrypt</title>
+    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <projectUrl>https://pdfencrypt.net/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@c335fe815c8ee406c166cc4d00252032147911a4/Icons/pdfencrypt_icon.png</iconUrl>
+    <copyright>Copyright © 2019-2023 PDFEncrypt.net/Ryan Griggs</copyright>
+    <licenseUrl>https://pdfencrypt.net/license/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ryangriggs/PDFEncrypt</projectSourceUrl>
+    <docsUrl>https://pdfencrypt.net/faq/</docsUrl>
+    <mailingListUrl>https://pdfencrypt.net/feedback/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/ryangriggs/PDFEncrypt/issues</bugTrackerUrl>
+    <tags>pdfencrypt pdf encryption FOSS embedded</tags>
+    <summary>Password protect (encrypt) PDF files for free.</summary>
+    <description>PDFEncrypt is a free, simple, open-source utility to encrypt PDF files using standard PDF encryption algorithms.  When a document is encrypted, its contents become unreadable. An authorized user can decrypt the document to obtain access to the contents. If a PDF document is encrypted with a password, the user must specify the password before the document can be viewed in many PDF readers (e.g. Adobe Reader or Adobe Acrobat among others).  
+    </description>
+    <releaseNotes>https://github.com/ryangriggs/PDFEncrypt/releases/latest</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
