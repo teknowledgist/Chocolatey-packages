@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>openwebstart</id>
-    <version>1.6.0</version>
+    <version>1.7.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/openwebstart</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>OpenWebStart</title>
     <authors>Karakun</authors>
     <projectUrl>https://openwebstart.com/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@e2fe3500f52e14c929fc219279c78e326038ca3b/Icons/openwebstart_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/karakun/OpenWebStart@4fc9e17ed93bd7c7f83a994ad9221d4bf840a36b/openwebstart/src/main/resources/com/openwebstart/ui/app-256.png</iconUrl>
     <!-- <copyright></copyright> -->
     <licenseUrl>https://github.com/karakun/OpenWebStart/blob/master/LICENSE.md</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -25,9 +25,14 @@
 
 OpenWebStart is an open source reimplementation of the Java Web Start technology that provides the most commonly used features of Java Web Start and the JNLP standard, so that you can continue using applications based on Java Web Start and JNLP without any change.
 
-### Note
+#### Custom configuration
+If you wish to use your own [`response.varfile`](https://openwebstart.com/docs/OWSGuide.html#_unattended_installation), use the `config` package parameter:
 
-**You do need a version of Java installed in addition to OpenWebStart in order to run JNLP files.**  [Choose your flavor](https://community.chocolatey.org/packages?q=openjdk)
+`choco install openwebstart --param '"/config:(path to file)"'`
+
+## Java required!
+
+**OpenWebStart will install without Java, but a version of Java must also be installed to run JNLP files.**  [Choose your flavor](https://community.chocolatey.org/packages?q=openjdk)
     </description>
     <releaseNotes>https://github.com/karakun/OpenWebStart/releases/latest</releaseNotes>
     <dependencies>
