@@ -4,8 +4,8 @@ $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 $FolderOfPackage = Split-Path -Parent $toolsDir
 
 $Url      = 'https://download.sysinternals.com/files/PSTools.zip'
-$PSEChecksum = '13D1579FFB64805B401836DC99A170CC2A8E2045EB541CA22686C4B58DF61389'
-$PSEChecksum64 = '5629EC60095102AC48DBAE1898261D66A2BA4A7A29BD114087BA0A4393518659'
+$PSEChecksum = '078163D5C16F64CAA5A14784323FD51451B8C831C73396B967B4E35E6879937B'
+$PSEChecksum64 = 'EDFAE1A69522F87B12C6DAC3225D930E4848832E3C551EE1E7D31736BF4525EF'
 
 # Remove old versions
 $null = Get-ChildItem -Path $FolderOfPackage -Filter *.exe | Remove-Item -Force

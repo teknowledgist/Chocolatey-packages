@@ -7,10 +7,10 @@ function global:au_GetLatest {
    $TRow = $download_page.ParsedHtml.getElementsByTagName('tr') | 
                Where-Object {$_.innertext -match 'stable release'} | 
                Select-Object -ExpandProperty innerhtml
-   $TData = $TRow -split '</?T[DH]>' | Where-Object {$_ -match 'version'} | Select-Object -First 1
+   $TData = $TRow -split '</?T[DH]>' | Where-Object {$_ -match 'revision'} | Select-Object -First 1
 
    $HREF = $TData -replace '.*"/bitstream/([^"]+)".*','$1'
-   $version = $TData -replace '.*version ([0-9.]+).*','$1'
+   $version = $TData -replace '.*>([0-9.]+).*','$1'
    $revision = $TData -replace '.*revision ([0-9.]+).*','$1'
 
    $url64 = "https://slicer-packages.kitware.com/api/v1/item/$HREF/download"

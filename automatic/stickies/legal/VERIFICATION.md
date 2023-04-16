@@ -10,9 +10,9 @@ restricts lettered versions to beta status.  This package converts the
 letter into a numbered version as needed.
 
 or directly:
-- Version : 10.1.3
-- URL     : https://www.zhornsoftware.co.uk/stickies/stickies_setup_10_1c.exe
-- SHA256  : CF5CAD37C983E62599D50025D748B9FAF2151B272646AE600C873ED4F5D922C4
+- Version : 10.1.4
+- URL     : https://www.zhornsoftware.co.uk/stickies/stickies_setup_10_1d.exe
+- SHA256  : AC2AF052CC05BAA75ABC12631F9BB3B8B08996D94059C70015DD46A47CF1B913
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
