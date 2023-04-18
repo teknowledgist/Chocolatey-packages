@@ -18,7 +18,7 @@
     <projectSourceUrl>https://www.cgl.ucsf.edu/chimera/docs/sourcecode.html</projectSourceUrl>
     <docsUrl>https://www.cgl.ucsf.edu/chimera/docindex.html</docsUrl>
     <mailingListUrl>http://plato.cgl.ucsf.edu/mailman/listinfo/chimera-users</mailingListUrl>
-    <bugTrackerUrl>https://plato.cgl.ucsf.edu/trac/chimera/query</bugTrackerUrl>
+    <bugTrackerUrl>https://www.rbvi.ucsf.edu/trac/chimera/query</bugTrackerUrl>
     <tags>chimera chemistry molecular modeling python nonsilent admin</tags>
     <summary>An extensible molecular modeling system</summary>
     <description>UCSF Chimera is a highly extensible program for interactive visualization and analysis of molecular structures and related data, including density maps, supramolecular assemblies, sequence alignments, docking results, trajectories, and conformational ensembles. High-quality images and animations can be generated. Chimera includes complete documentation and several tutorials, and can be downloaded free of charge for academic, government, nonprofit, and personal use. Chimera is developed by the [Resource for Biocomputing, Visualization, and Informatics](http://www.rbvi.ucsf.edu/) (RBVI), funded by the [National Institutes of Health](http://www.nih.gov/) (NIGMS P41-GM103311). 

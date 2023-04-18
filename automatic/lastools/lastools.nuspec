@@ -10,7 +10,7 @@
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>LAStools software suite for LiDAR processing</title>
     <authors>Martin Isenburg</authors>
-    <projectUrl>https://rapidlasso.de/category/products/lastools/</projectUrl>
+    <projectUrl>https://rapidlasso.de/product-overview/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/LAStools_icon.png</iconUrl>
     <copyright>Copyright © 2007-2015, rapidlasso GmbH</copyright>
     <licenseUrl>https://github.com/LAStools/LAStools/blob/master/LICENSE.txt</licenseUrl>
