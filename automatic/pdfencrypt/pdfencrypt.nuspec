@@ -9,7 +9,7 @@
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>PDFEncrypt</title>
-    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <authors>Ryan Griggs</authors>
     <projectUrl>https://pdfencrypt.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@c335fe815c8ee406c166cc4d00252032147911a4/Icons/pdfencrypt_icon.png</iconUrl>
     <copyright>Copyright © 2019-2023 PDFEncrypt.net/Ryan Griggs</copyright>
