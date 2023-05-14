@@ -6,9 +6,9 @@ The extension can be downloaded from the official download link:
 - https://mupdf.com/downloads
 
 or directly:
-- Version: 1.21.0
-- URL:     https://mupdf.com/downloads/archive/mupdf-1.21.0-rc1-windows.zip
-- SHA256 Checksum: F257EA8F09C22910D499C5720BEA9600F8C94C49E0170A639D22246D9B8FDBFE
+- Version: 1.22.1
+- URL:     https://mupdf.com/downloads/archive/mupdf-1.22.1-windows.zip
+- SHA256 Checksum: E65FBE742C1B1C312B0B5AD2CFDFD170867DF9417659ABEBC779D88EFCCE754E
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
