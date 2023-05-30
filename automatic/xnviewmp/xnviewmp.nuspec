@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xnviewmp</id>
-    <version>1.4.4</version>
+    <version>1.4.5</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xnviewmp</packageSourceUrl>
     <owners>Teknowledgist, Vaquero</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -42,7 +42,7 @@ XnView MP is provided as FREEWARE (NO Adware, NO Spyware) **for private or educa
     </description>
     <releaseNotes>https://www.xnview.com/en/xnviewmp/#changelog</releaseNotes>
     <dependencies>
-      <dependency id="xnviewmp.install" version="[1.4.4]" />
+      <dependency id="xnviewmp.install" version="[1.4.5]" />
     </dependencies>
     <!-- =============================== -->
   </metadata>

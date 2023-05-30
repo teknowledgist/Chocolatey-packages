@@ -2,18 +2,26 @@ import-module au
 
 function global:au_GetLatest {
    $Release = 'https://www.xnview.com/en/xnviewmp/'
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
-   $URLs = $download_page.links |
+   $HTML = New-Object -Com "HTMLFile"
+   try {
+      $html.IHTMLDocument2_write($download_page)    # if MS Office installed
+   } catch {
+      $html.write([Text.Encoding]::Unicode.GetBytes($download_page))   # No MS Office
+   }
+   
+   $VersionText = $HTML.getElementsByClassName("h5") |
+                     Where-Object {$_.innertext -match '^download'} | 
+                     Select-Object -ExpandProperty innertext
+   $Version = $VersionText -replace '.*?([0-9.]+).*','$1'
+
+   $URLs = $HTML.links |
                Where-Object {$_.href -match '\.exe'} |
                Select-Object -First 2 -ExpandProperty href
 
-   $VersionText = $download_page.AllElements | 
-                     Where-Object {$_.class -eq 'h5 fw-bold'} | 
-                     Select-Object -First 1 -ExpandProperty innertext
-
    return @{ 
-            Version = $VersionText.split()[0]
+            Version = $Version
             URL32   = $URLs | Where-Object {$_ -notmatch 'x64'}
             URL64   = $URLs | Where-Object {$_ -match 'x64'}
            }
