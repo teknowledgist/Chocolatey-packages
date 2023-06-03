@@ -6,11 +6,11 @@ The OpenWebStart installers can be downloaded from the GitHub releases page:
 - https://github.com/karakun/OpenWebStart/releases
 
 or directly:
-- Version    : 1.7.0
-- x86 URL    : https://github.com/karakun/OpenWebStart/releases/download/v1.7.0/OpenWebStart_windows-x32_1_7_0.exe
-- x86 SHA256 : 8B4A3B0ECE5944FD510538DF90A8080ED4AF4079BBA06A5577437FD717782A95
-- x64 URL    : https://github.com/karakun/OpenWebStart/releases/download/v1.7.0/OpenWebStart_windows-x64_1_7_0.exe
-- x64 SHA256 : 592EC684878149A04E9C435444FD1FF49255CC98A0191F88D66AC2B2E49AE68A
+- Version    : 1.8.0
+- x86 URL    : https://github.com/karakun/OpenWebStart/releases/download/v1.8.0/OpenWebStart_windows-x32_1_8_0.exe
+- x86 SHA256 : 74B9D5417ECCDB4835004AA1000EFC855DF7CCA42CA59181BC60E5DA872065CB
+- x64 URL    : https://github.com/karakun/OpenWebStart/releases/download/v1.8.0/OpenWebStart_windows-x64_1_8_0.exe
+- x64 SHA256 : 818D2A4412BA4FC209F56B58D06F984DE8092767324D87CB4B2A970E4E5D22F9
 
 
 ## Verify
