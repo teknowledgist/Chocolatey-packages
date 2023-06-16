@@ -19,7 +19,7 @@ function global:au_GetLatest {
 
    return @{ 
       Version = $version
-      URL64 = $url64 
+      URL64 = $url64 -replace '&amp;','&'
    }
 }
 

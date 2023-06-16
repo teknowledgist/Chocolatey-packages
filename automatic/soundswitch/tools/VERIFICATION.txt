@@ -9,7 +9,7 @@ or from the GitHub release page:
 
 Direct Download:
 
-Version  : 6.6.1
-URL      : https://github.com/Belphemur/SoundSwitch/releases/download/v6.6.1/SoundSwitch_v6.6.1.0_Release_Installer.exe
-CheckSum : 6BD15562EBAA2BA7236FCE0681349DD43DFC5492F24417257FB363A87E101AB4
+Version  : 6.7.2
+URL      : https://github.com/Belphemur/SoundSwitch/releases/download/v6.7.2/SoundSwitch_v6.7.2.0_Release_Installer.exe
+CheckSum : 7C76F094FEEAB4EFC4ECC25A166A75A73CAC6592A6C86648A88576267761B710
 
