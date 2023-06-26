@@ -14,8 +14,8 @@ $WorkSpace = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:chocolateyPack
 $WebFileArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = Join-Path $WorkSpace "$env:ChocolateyPackageName.exe"
-   Url          = 'https://github.com/OpenRefine/OpenRefine/releases/download/3.7.2/openrefine-win-with-java-3.7.2.zip'
-   Checksum     = '149a3bbed1e242291e69913affb6e2bf7a2685b3071f0c522e9a46ce309db0bf'
+   Url          = 'https://github.com/OpenRefine/OpenRefine/releases/download/3.7.3/openrefine-win-with-java-3.7.3.zip'
+   Checksum     = '1ca577e3c46990a6f15f15ed424347a07308a622030ab407730b74d8e49c4fbf'
    ChecksumType = 'sha256'
    GetOriginalFileName = $true
 }
