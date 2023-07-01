@@ -3,7 +3,7 @@
 $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
    url            = 'https://download.microsoft.com/download/F/F/9/FF945E45-7D61-49DD-B982-C5D93D3FB0CF/PowerBiReportBuilder.msi'
-   checksum       = '8cdc79a11434b18cd46b849a59ac6143d324507d8c49bb83c8ca265830e02431'
+   checksum       = '360d1ba14003f2c1748f8a23a17a2e2efef84768a0d825c16d42a0b0e2a67131'
    checksumType   = 'SHA256'
    fileType       = 'MSI'
    silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
