@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$Checksum = '2BC980912E457875761C5A472E449973BDAB05B2BF7041E0891DB80CA362CA4A'
+$Checksum = 'E218383CB964CB5E0EC8F62F38E9BF8D3863155695FE8319DF98A82A0436393D'
 
 # Poke/prime the CDN before download
 $null = Get-WebHeaders -url 'https://www.venea.net/cdn/push/nettraffic'

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>nettraffic</id>
-    <version>1.66.2</version>
+    <version>1.66.8</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/nettraffic</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -12,7 +12,7 @@
     <authors>VENEA.NET</authors>
     <projectUrl>https://www.venea.net/web/nettraffic</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@9a15fd5087e4f0a9d4d3e420f289993252330b91/Icons/nettraffic_icon.png</iconUrl>
-    <copyright>Copyright © 2020 VENEA.NET</copyright>
+    <copyright>Copyright © 2023 VENEA.NET</copyright>
     <licenseUrl>https://www.venea.net/web/nettraffic#license</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://www.venea.net/web/nettraffic_screens</docsUrl>
