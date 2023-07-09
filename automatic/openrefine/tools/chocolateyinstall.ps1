@@ -4,9 +4,9 @@ $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 $FolderOfPackage = Split-Path -Parent $toolsDir
 
 # Remove previous versions
-$Previous = Get-ChildItem $FolderOfPackage -filter 'openrefine*' | ?{ $_.PSIsContainer }
+$Previous = Get-ChildItem $FolderOfPackage -filter 'openrefine*' | Where-Object { $_.PSIsContainer }
 if ($Previous) {
-   $Previous | % { Remove-Item $_.FullName -Recurse -Force }
+   $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
 
 $WorkSpace = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:chocolateyPackageVersion"

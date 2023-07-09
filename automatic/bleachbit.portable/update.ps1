@@ -20,27 +20,24 @@ function global:au_GetLatest {
    @{
       Version = $version
       URL32   = "https://download.bleachbit.org/$filename"
+      SumURL  = "https://download.bleachbit.org/bleachbit-$version-sha256sum.txt"
    }
 }
 
 function global:au_SearchReplace {
    @{
-      ".\tools\VERIFICATION.txt"      = @{
-         "(?i)(x86:).*"        = "`${1} $($Latest.URL32)"
-         "(?i)(checksum32:).*" = "`${1} $($Latest.Checksum32)"
-         "(?i)(type:).*"       = "`${1} $($Latest.ChecksumType32)"
+      "legal\VERIFICATION.md" = @{
+            "(^- Version:).*" = "`${1} $($Latest.Version)"
+            "(^- URL:).*"     = "`${1} $($Latest.URL32)"
+            "(^- SHA256+:).*" = "`${1} $($Latest.Checksum32)"
+            "^    https.*"    = "    $($Latest.SumURL)"
       }
    }
 }
 
-# A few things should only be done if the script is run directly (i.e. not "dot sourced")
-#   (It is dot sourced in the meta-package.)
-if ($MyInvocation.InvocationName -ne '.') { 
-   function global:au_BeforeUpdate() { 
-   Write-host "Downloading BleachBit $($Latest.Version)"
-      Get-RemoteFiles -Purge -NoSuffix 
-   }
-
-   update -ChecksumFor none
-   if ($global:au_old_force -is [bool]) { $global:au_force = $global:au_old_force }
+function global:au_BeforeUpdate() { 
+Write-host "Downloading BleachBit Portable $($Latest.Version)"
+   Get-RemoteFiles -Purge -NoSuffix 
 }
+
+update -ChecksumFor none

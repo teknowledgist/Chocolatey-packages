@@ -11,7 +11,7 @@
     <title>BleachBit (portable)</title>
     <authors>Andrew Ziem</authors>
     <projectUrl>https://www.bleachbit.org/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/chocolatey-community/chocolatey-coreteampackages@0c81599a51b9f9c9418ba8dd46caf6d3081ec8ac/icons/bleachbit.svg</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/bleachbit/bleachbit@5aa5d4eba0614b0e2e28d009f54f2d1251763d8a/bleachbit.png</iconUrl>
     <copyright>© 2008 Andrew Ziem</copyright>
     <licenseUrl>https://github.com/bleachbit/bleachbit/blob/master/COPYING</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
@@ -25,26 +25,28 @@
 BleachBit has many useful features designed to help you easily [clean](https://www.bleachbit.org/features/cleaner) your computer to free space and maintain privacy.
 
 ## Features
-* Delete your private files so completely that "even God can't read them" according to South Carolina Representative Trey Gowdy.
+
+* Delete your private files so completely that "even God can't read them" according to South Carolina Representative [Trey Gowdy](https://www.bleachbit.org/news/bleachbit-stifles-investigation-hillary-clinton).
 * Simple operation: read the descriptions, check the boxes you want, click preview, and click delete.
 * Multi-platform: Linux and Windows
-* Free of charge and no money trail
+* [Free of charge](https://www.bleachbit.org/features/cost) and no money trail
 * Free to share, learn, and modify (open source)
 * No adware, spyware, malware, backdoors, browser toolbars, or "value-added software"
-* Translated to 63 languages besides American English
+* [Translated](https://www.bleachbit.org/features/translations) to 64 languages besides American English
 * Shred files to hide their contents and prevent data recovery
 * Shred any file (such as a spreadsheet on your desktop)
 * Overwrite free disk space to hide previously deleted files
 * Portable app for Windows: run without installation
-* Command line interface for scripting and automation
-* CleanerML allows anyone to write a new cleaner using XML
-* Automatically import and update winapp2.ini cleaner files (a separate download) giving Windows users access to 2500+ additional cleaners
+* [Command line interface](https://docs.bleachbit.org/doc/command-line-interface.html) for scripting and automation
+* [CleanerML](https://docs.bleachbit.org/doc/cleanerml.html) allows anyone to write a new cleaner using XML
+* Automatically import and update [winapp2.ini](https://www.bleachbit.org/documentation/winapp2_ini) cleaner files (a separate download) giving Windows users access to 2500+ additional cleaners
 * Frequent software updates with new features
-* Advanced wiping on Windows (requires administrator access and local file system)
+* Advanced wiping on Windows (requires BleachBit 2.0 with administrator access and local file system)
     </description>
     <releaseNotes>https://www.bleachbit.org/news</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
