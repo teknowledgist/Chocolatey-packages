@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>ispy</id>
+    <version>7.2.6.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinuted/ispy</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>iSpy</title>
+    <authors>iSpyConnect</authors>
+    <projectUrl>https://www.ispyconnect.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ispysoftware/iSpy@5fae6383d7aff3209114395870563c8ae7a98d2b/Resources/ispy.png</iconUrl>
+    <copyright>Copyright © iSpyConnect.com, 2022</copyright>
+    <licenseUrl>https://github.com/ispysoftware/iSpy/blob/master/lgpl-3.0.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ispysoftware/iSpy</projectSourceUrl>
+    <docsUrl>https://www.ispyconnect.com/userguide.aspx</docsUrl>
+    <mailingListUrl>https://www.reddit.com/r/ispyconnect/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/ispysoftware/iSpy/issues</bugTrackerUrl>
+    <tags>ispy camera security surveillance webcams cams foss embedded</tags>
+    <summary>Open source camera security software</summary>
+    <description>iSpy is the world’s most popular open source video surveillance application. It's compatible with the the vast majority of consumer webcams and IP cameras. With more than 2 million users worldwide, iSpy works with more cameras and devices than anything else on the market.
+
+The number one use of iSpy is small business security, but home monitoring, neighborhood watch, checking in on the kids, desktop monitoring and mobile access through a iSpyConnect.com are valued features.
+
+Facial recognition and detection of changes in lighting and audio offer the subtleties that set the software apart from competitors.
+
+Getting started with iSpy is easy: all you need is a webcam or IP camera connected to your computer or network.
+
+iSpy connects to the camera and shows the live view. You can then define specific areas of the video that iSpy should watch for movement, and set a threshold value for the amount of motion that would trigger automatic recording.
+
+iSpy was designed to provide a low-cost alternative to expensive surveillance systems. It has become a highly scalable application that can be tailored to record and take actions on specific incidents as defined by the user either locally or remotely.
+
+## Discontinued
+iSpyConnect started a [new platform to replace iSpy called Agent](https://www.ispyconnect.com/features.aspx) which runs as a service and has a full local and remote UI that works on all devices and doesn't require port forwarding for remote access. Agent has all the features of iSpy plus a lot more. 
+    </description>
+    <releaseNotes>http://www.ispyconnect.com/producthistory.aspx?productid=11</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
