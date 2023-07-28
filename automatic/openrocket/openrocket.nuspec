@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>openrocket</id>
+    <version>22.02</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/openrocket</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>OpenRocket</title>
+    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <projectUrl>https://openrocket.info/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/openrocket/openrocket@de741793fab4df5192c447b94cecb2bb365cf40f/snap/gui/openrocket.png</iconUrl>
+    <copyright>Copyright (C) 2007-2022 Sampo Niskanen and others</copyright>
+    <licenseUrl>https://github.com/openrocket/openrocket/blob/unstable/LICENSE.TXT</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/openrocket/openrocket</projectSourceUrl>
+    <docsUrl>http://wiki.openrocket.info/Main_Page</docsUrl>
+    <mailingListUrl>https://openrocket.info/contact.html</mailingListUrl>
+    <bugTrackerUrl>https://github.com/openrocket/openrocket/issues</bugTrackerUrl>
+    <tags>openrocket rocketry simulator design FOSS embedded</tags>
+    <summary>Everything you need to design, simulate and fly better rockets</summary>
+    <description>OpenRocket is a free, fully featured model rocket simulator that allows you to design and simulate your rockets before you build and flying them.
+
+![Main-Window](https://openrocket.info/screenshots/01.Main-Window.png)
+
+### Reliable simulations
+Leverage state of the art Six-Degrees-of-Freedom flight simulation with over 50 variables. Analyse all aspects of your simulation with advanced plotting and exporting.
+
+### Easily design your models with CAD technology
+Replicate all features of your existing model or new design. Everything from the density of materials to the quality of finish on the outside of your model. Choose from a massive catalog of existing components and materials, or make up your own and save for reuse later. You can even export your design drawings to PDF for building.
+
+### Optimize your designs for certain characteristics
+As well as being able to tweak your model with real time feedback in design mode, there is also an AI assistant that can help you automatically adjust parameters given an optimization goal. Fly higher and longer with unique designs.
+
+### Fine tune your design with realtime performance data feedback
+Performance data such as center of pressure, center of gravity, maximum altitude, max velocity and stability are all updated in real time as you work in design mode. See the effect of your changes the instant that you make them.
+
+### Design with Multiple Stages and Cluster your Motors
+Staging events for your flight is no problem. Multi stage, dual deployment and other event triggers can be incorporated into your design. Clustering is no problem either. Automatically arrange your cluster via several preset configurations and tune to match your exact needs.
+
+### Choose the best and safest motors for your model
+With a huge database of motor data from ThrustCurve you can find the most appropriate motors for your model specifications. Easily filter and search the database for motors that are suitable for your design.
+    </description>
+    <releaseNotes>https://github.com/openrocket/openrocket/releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
