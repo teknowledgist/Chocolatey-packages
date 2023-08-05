@@ -9,7 +9,7 @@
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>OpenRocket</title>
-    <authors>__REPLACE_AUTHORS_OF_SOFTWARE_COMMA_SEPARATED__</authors>
+    <authors>Sampo Niskanen</authors>
     <projectUrl>https://openrocket.info/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/openrocket/openrocket@de741793fab4df5192c447b94cecb2bb365cf40f/snap/gui/openrocket.png</iconUrl>
     <copyright>Copyright (C) 2007-2022 Sampo Niskanen and others</copyright>

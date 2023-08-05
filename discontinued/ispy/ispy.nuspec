@@ -6,7 +6,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>ispy</id>
     <version>7.2.6.0</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinuted/ispy</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/ispy</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>iSpy</title>
