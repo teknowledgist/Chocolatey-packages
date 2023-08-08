@@ -5,15 +5,15 @@ $Release = 'https://studio.bricklink.com/v2/build/studio.page'
 function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri "$Release"
 
-   $text = $download_page.Scripts | ? {$_.innertext -match '\.exe'} | select -exp outertext
+   $vstring = $download_page.rawcontent.split('{') | ? {$_ -match 'strVersion'} | select -last 1
+   $null = $vstring.split(',') | ? {$_ -match '[0-9._]{3,10}'}
+   $versionString = $Matches[0]
+   $version = $versionString.replace('_','.')
    
-   $urllines = $text.split('{;}') |? {$_ -match '\.exe'}
-   $url32 = ($urllines | ? {$_ -match 'win32'}) -replace ".*'(https.*\.exe)'",'$1'
-   $url64 = ($urllines | ? {$_ -match 'win64'}) -replace ".*'(https.*\.exe)'",'$1'
-   
-   $vline = $text.replace('"','').split('{,}') |? {$_ -match '^version'} | select -Last 1
-   $version = $vline.replace('_','.').split(':')[-1]
-   
+   $url32 = "https://s3.amazonaws.com/blstudio/Studio2.0/Archive/$versionString/Studio+2.0_32.exe"
+   $url64 = "https://s3.amazonaws.com/blstudio/Studio2.0/Archive/$versionString/Studio+2.0.exe"
+
+
    return @{ 
       Version = $version
       URL32   = $url32
@@ -25,9 +25,9 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
     @{
        "tools\chocolateyInstall.ps1" = @{
-          "(^\s*Url\s*=\s*)('.*')" = "`$1'$($Latest.URL32)'"
-          "(^\s*Checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
-          "(^\s*Url64bit\s*=\s*)('.*')" = "`$1'$($Latest.URL64)'"
+          "(^\s*Url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
+          "(^\s*Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
+          "(^\s*Url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
           "(^\s*Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
        }
     }

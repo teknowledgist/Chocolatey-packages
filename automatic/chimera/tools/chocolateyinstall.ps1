@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$AppVersion = '1.17.1'
+$AppVersion = '1.17.3'
 
 $BaseURL = 'https://www.cgl.ucsf.edu'
 
@@ -22,7 +22,7 @@ $packageArgs = @{
    fileType      = 'EXE'
    url64bit      = $BaseURL + $URLstub
    softwareName  = 'UCSF Chimera*' 
-   checksum64    = 'a274d6445d13046268a1fc9b288704cb532489e721dddf01ede857a46affa0c3'
+   checksum64    = '9b5420731f2149e0881d33ed62d6ebb445f225779574a120b18ed3b42f36cd35'
    checksumType64= 'sha256'
    silentArgs   = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
    validExitCodes= @(0)

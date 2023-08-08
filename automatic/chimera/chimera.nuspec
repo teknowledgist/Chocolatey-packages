@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>chimera</id>
-    <version>1.17.1</version>
+    <version>1.17.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/chimera</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -17,7 +17,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://www.cgl.ucsf.edu/chimera/docs/sourcecode.html</projectSourceUrl>
     <docsUrl>https://www.cgl.ucsf.edu/chimera/docindex.html</docsUrl>
-    <mailingListUrl>http://plato.cgl.ucsf.edu/mailman/listinfo/chimera-users</mailingListUrl>
+    <mailingListUrl>https://mail.cgl.ucsf.edu/mailman/mailman3/lists/chimera-users.cgl.ucsf.edu/</mailingListUrl>
     <bugTrackerUrl>https://www.rbvi.ucsf.edu/trac/chimera/query</bugTrackerUrl>
     <tags>chimera chemistry molecular modeling python nonsilent admin</tags>
     <summary>An extensible molecular modeling system</summary>

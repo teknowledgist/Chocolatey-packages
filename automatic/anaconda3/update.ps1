@@ -8,11 +8,15 @@ function global:au_GetLatest {
 
    $List.links | Where-Object {$_.href -match "Anaconda3.*Windows"} | 
       ForEach-Object {
-         $v = ($_.href.split('-')[1])
-         if ([version]$v -gt [version]$version) {$version = $v}
+         $vstring = $_.href -replace 'Anaconda3-([0-9.-]+)-Windows.*','$1'
+         $v = $vstring -replace '-','.'
+         if ([version]$v -gt [version]$version) {
+            $version = $v
+            $versionString = $vstring
+         }
       }
 
-   $URL64 = "https://repo.anaconda.com/archive/Anaconda3-$version-Windows-x86_64.exe"
+   $URL64 = "https://repo.anaconda.com/archive/Anaconda3-$versionString-Windows-x86_64.exe"
 
    return @{ 
             Version  = $Version

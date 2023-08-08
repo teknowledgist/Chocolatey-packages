@@ -14,8 +14,9 @@ function global:au_GetLatest {
    }
 
    return @{ 
-      Version = $version
-      URL32   = $URL
+      Version     = $version
+      VersionText = $version   # Chocolatey versions strip leading 0's
+      URL32       = $URL
    }
 }
 
@@ -27,11 +28,14 @@ function global:au_SearchReplace {
             "^(- URL\s+:).*"     = "`${1} $($Latest.URL32)"
             "^(- SHA256\s+:).*"  = "`${1} $($Latest.Checksum32)"
       }
+      "tools\chocolateyinstall.ps1" = @{
+            "^([$]RepoVersion =).*" = "`${1} '$($Latest.VersionText)'"
+      }
    }
 }
 
 function global:au_BeforeUpdate() { 
-   Write-host "Downloading Roboto font $($Latest.Version) zip file"
+   Write-host "Downloading Roboto font $($Latest.VersionText) zip file"
    Get-RemoteFiles -Purge -nosuffix
 }
 

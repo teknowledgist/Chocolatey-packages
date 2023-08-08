@@ -4,11 +4,13 @@ $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*.zip').FullName
 $UnzipDir = Join-Path $env:TEMP $env:ChocolateyPackageName
 
+$RepoVersion = '3.008'
+
 $UnzipArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileFullPath   = $fileLocation
    Destination    = $UnzipDir
-   SpecificFolder = 'hinted\static'
+   SpecificFolder = "Roboto_v$RepoVersion\hinted\static"
 }
 Get-ChocolateyUnzip @UnzipArgs
 
