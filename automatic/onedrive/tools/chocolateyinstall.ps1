@@ -6,8 +6,8 @@ $FolderOfPackage = Split-Path -Parent $toolsDir
 $packageArgs = @{
    packageName   = $env:chocolateyPackageName
    fileType      = 'exe'
-   url           = 'https://go.microsoft.com/fwlink/?linkid=844652'
-   checksum      = 'acf4edf2609eb1fa0ddc47efc827b29fbcd6c2863afddf6b6959d528a06c4654'
+   url           = 'https://go.microsoft.com/fwlink/?linkid=860984'
+   checksum      = '1e3ba0d951fa6196204c4c63e2387fcf42c71396e856654d07da7bd76bbc9eac'
    checksumType  = 'sha256'
    silentArgs    = '/allusers /silent'
    validExitCodes= @(0)
