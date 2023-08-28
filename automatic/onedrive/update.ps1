@@ -7,24 +7,13 @@ function global:au_GetLatest {
 
    $vstrings = $download_page.RawContent -split ">|<" | 
                      Where-Object {$_ -match '^Version'} | 
-                     Select-Object -first 2
-   $vs = $vstrings | ForEach-Object {$_.split()[1]}
-   $regex = "($($vs[0]))|($($vs[1]))"
+                     Select-Object -first 1
+   $Version = $vstrings.split()[1]
 
-   $paragraph = $download_page.rawcontent -split '</?p' | 
-                  Where-Object {$_ -match $regex } | Select-Object -first 1
-   $url = $paragraph.split('"') | 
-            Where-Object {$_ -like 'http*'} | Select-Object -First 1
-
-   $Version = $vs | Where-Object {$paragraph -match $_}
-
-   if (-not $url) {
-      # MS seeme to recycle download links for a few versions in a row
-      $CIcontent = Get-Content 'tools\chocolateyInstall.ps1'
-      $url = ($CIcontent -match '^   url\s*=' ).split()[-1].trim("'")
+   return @{ 
+      Version = $Version
+      URL32   = "https://oneclient.sfx.ms/Win/Installers/$Version/amd64/OneDriveSetup.exe"
    }
-
-   return @{ Version = $version; URL32 = $url }
 }
 
 
