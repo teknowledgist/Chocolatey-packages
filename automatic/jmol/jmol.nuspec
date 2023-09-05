@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>jmol</id>
-    <version>16.1.31</version>
+    <version>16.1.35</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/jmol</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -91,7 +91,7 @@
 * PSI3  Output files from the PSI3 suite of quantum chemical programs
 * CRYSTAL  Output files from CRYSTAL, a computational tool for solid state chemistry and physics. Theoretical Chemistry Group, Univ. Torino, Italy.
 </description>
-    <releaseNotes>https://sourceforge.net/projects/jmol/files/Jmol/Version%2016.1/Version%2016.1.31/</releaseNotes>
+    <releaseNotes>https://sourceforge.net/projects/jmol/files/Jmol/Version%2016.1/Version%2016.1.35/</releaseNotes>
     <dependencies>
       <dependency id="temurin11jre" version="11.0" />
     </dependencies>

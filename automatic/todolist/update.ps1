@@ -5,7 +5,7 @@ function global:au_GetLatest {
    $PageText = Invoke-WebRequest -Uri $HomeURL
 
    $null = $PageText.links | 
-               Where-Object {$_.innertext -match "([0-9][0-9.]+) is available"} | 
+               Where-Object {$_.innertext -match "([0-9][0-9.]+)( \(Stable Release\))? is available"} | 
                Select-Object -First 1
 
    $Version = $Matches[1]

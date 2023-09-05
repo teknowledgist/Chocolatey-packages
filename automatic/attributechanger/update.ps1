@@ -6,9 +6,9 @@ function global:au_GetLatest {
    $DownloadURI = 'https://www.petges.lu/download/'
    $download_page = Invoke-WebRequest -Uri $DownloadURI
 
-   $Link = $download_page.links |? {$_.href -match '\.exe'} | select -First 1
+   $Link = $download_page.links |Where-Object {$_.href -match '\.exe'} | Select-Object -First 1
    
-   $version = $Link.innerText.split()[-1]
+   $version = $Link.innerText.split() |Where-Object {$_ -match '[0-9.]+'}
    
    if ($version -match '[a-z]') {
       $NumEquiv = ([byte][char]$matches[0])-96

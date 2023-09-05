@@ -10,6 +10,10 @@ function global:au_GetLatest {
 
    $version = $string.split() | Where-Object {$_ -match '^[0-9.]+$'}
 
+   $Checksum = $page.AllElements | 
+                  Where-Object {$_.innertext -match '^[0-9a-f]{64}$'} | 
+                  Select-Object -ExpandProperty innertext -First 1
+
    $URL32 = $page.allelements | Where-Object {
                                  ($_.tagname -eq 'a') -and 
                                  ($_.outertext -match '^\s*Installer') -and 
@@ -18,8 +22,9 @@ function global:au_GetLatest {
    $URL32 = $URL32 -replace '&amp;','&'
 
    return @{ 
-            Version  = $Version
-            URL32    = $URL32
+            Version    = $Version
+            URL32      = $URL32
+            Checksum32 = $Checksum
            }
 }
 
@@ -32,4 +37,4 @@ function global:au_SearchReplace {
    }
 }
 
-Update-Package -ChecksumFor 32
+Update-Package -ChecksumFor none -nocheckurl
