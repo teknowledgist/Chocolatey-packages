@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>caesium.install</id>
-    <version>2.0.0-rc2</version>
+    <version>2.5.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/caesium.install</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -19,11 +19,16 @@
     <bugTrackerUrl>https://sourceforge.net/p/caesium/bugs/</bugTrackerUrl>
     <tags>caesium image compression jpeg embedded oss</tags>
     <summary>Compress your pictures up to 90% without visible quality loss.</summary>
-    <description>Caesium is simple open source image compressor. It compresses BMP, JPG and PNG formats.  It allows you to save a lot of space and quickly upload your pictures on the web.  The software allows you to view instantly the compression results, helping you to decide how much optimization you need. Caesium can set different compression levels to each image, saving a lot of time, ensuring great results. 
+    <description>### Caesium is a free software developed for simplicity and effectiveness.
+
+Caesium is image compression software that helps you store, send and share digital pictures, supporting JPG, PNG and WebP formats. You can quickly reduce the file size (and resolution, if you want) by preserving the overall quality of the image.
+
+Providing a simple yet effective interface with a real-time preview and multiple image processing at the same time, everyone will be able to reach the best result. Advanced users will find extra features, like metadata storing options or folder structure support.
+
+Caesium is one of the most popular image optimization software available helping photographers, bloggers, webmasters, businesses or casual users at storing, sending and sharing digital pictures.
     </description>
     <releaseNotes>https://github.com/Lymphatus/caesium-image-compressor/blob/master/CHANGELOG.md</releaseNotes>
     <dependencies>
-      <dependency id="vcredist140" version="14.28.29913" />
     </dependencies>
   </metadata>
   <files>

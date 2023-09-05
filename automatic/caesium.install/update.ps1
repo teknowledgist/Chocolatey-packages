@@ -1,19 +1,13 @@
 import-module au
 
 function global:au_GetLatest {
-   $Release = 'https://github.com/Lymphatus/caesium-image-compressor/releases'
-   [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri "$Release" -UseBasicParsing
+   $Repo = 'https://github.com/Lymphatus/caesium-image-compressor'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $urlstub = $download_page.rawcontent.split('"') | 
-                Where-Object {$_ -match '\.exe$'} |
-                Select-Object -First 1
-   $url = "https://github.com$urlstub"
+   $version = $Release.Tag.trim('v.')
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.exe'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
-   $version = $urlstub.split('/') | ? {$_ -match '^v[0-9].*$'} | select -Last 1
-   $version = $version.trim('v') -replace '\.(\d)$','$1'
-
-   return @{ Version = $version; URL64 = $url }
+   return @{ Version = $version; URL64 = $URL }
 }
 
 
@@ -22,7 +16,7 @@ function global:au_SearchReplace {
       "legal\VERIFICATION.md" = @{
          "(^Version\s+:).*"  = "`${1} $($Latest.Version)"
          "(^URL\s+:).*"      = "`${1} $($Latest.URL64)"
-         "(^SHA256\s+:).*" = "`${1} $($Latest.Checksum64)"
+         "(^SHA256\s+:).*"   = "`${1} $($Latest.Checksum64)"
       }
    }
 }
