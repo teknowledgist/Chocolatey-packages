@@ -8,7 +8,7 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/publishorperish</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Publish or Perish</title>
+    <title>Harzing's Publish or Perish</title>
     <authors>Tarma Software Research Ltd</authors>
     <projectUrl>https://harzing.com/resources/publish-or-perish</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@689cd8f59be72dd3f7d03c86311c103fa7b5e680/Icons/publishorperish_icon.png</iconUrl>
