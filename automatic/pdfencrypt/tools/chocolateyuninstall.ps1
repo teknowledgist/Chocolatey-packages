@@ -1,7 +1,5 @@
 $ErrorActionPreference = 'Stop'
 
-Get-Process -Name soundswitch -ErrorAction SilentlyContinue | Stop-Process -Force -ErrorAction SilentlyContinue
-
 $packageArgs = @{
   packageName   = $env:ChocolateyPackageName
   softwareName  = 'pdfencrypt*'
