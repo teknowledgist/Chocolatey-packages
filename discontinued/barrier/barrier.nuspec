@@ -4,8 +4,8 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>barrier</id>
-    <version>2.4.0.001</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/barrier</packageSourceUrl>
+    <version>2.4.0.002</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/barrier</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Barrier</title>
@@ -37,10 +37,13 @@ Whereas Synergy has moved beyond its goals from the 1.x era, Barrier aims to mai
 
 **Communication.** Everything we do is in the open. Our issue tracker will let you see if others are having the same problem you're having and will allow you to add additional information. You will also be able to see when progress is made and how the issue gets resolved.
 
+### Discontinuation
+[The Barrier project is considered unmaintained](https://github.com/debauchee/barrier/discussions/1892).  [The active maintainers for Barrier have moved to a fork of the project called "Input-Leap"](https://github.com/input-leap/input-leap/issues/1414).  This package will remain until a release of Input-Leap with official binaries is released and a Chocolatey package is created.
+
     </description>
     <releaseNotes>https://github.com/debauchee/barrier/releases</releaseNotes>
     <dependencies>
-      <dependency id="vcredist2017" version="14.16" />
+      <dependency id="vcredist140" version="14.16" />
     </dependencies>
   </metadata>
   <files>
