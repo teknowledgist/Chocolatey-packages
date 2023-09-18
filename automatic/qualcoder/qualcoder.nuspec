@@ -19,7 +19,7 @@
     <docsUrl>https://github.com/ccbogel/QualCoder/wiki</docsUrl>
     <mailingListUrl>https://github.com/ccbogel/QualCoder/discussions</mailingListUrl>
     <bugTrackerUrl>https://github.com/ccbogel/QualCoder/issues</bugTrackerUrl>
-    <tags>qualcoder SPACE_SEPARATED</tags>
+    <tags>qualcoder qualitative data analysis statistics QDA NVIVO ATLAS.ti FOSS</tags>
     <summary>Open source software for qualitative data analysis</summary>
     <description>QualCoder is free, open source software for qualitative data analysis. With QualCoder you can code text, images, audio and video, write journal notes and memos. You can categorise codes into a tree-like hierarchical categorisation scheme. Coding for audio and video requires the VLC media player. Coder comparison reports can be generated for text coding using the Cohen’s Kappa statistic. A graph displaying codes and categories can be generated to visualise the coding hierarchy. Most reports can be exported as html, open document text (ODT) or as plain text files.
     </description>
