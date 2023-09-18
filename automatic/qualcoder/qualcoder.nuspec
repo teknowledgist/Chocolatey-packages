@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>qualcoder</id>
+    <version>3.3</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qualcoder</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>QualCoder (portable)</title>
+    <authors>Colin Curtain</authors>
+    <projectUrl>https://qualcoder.wordpress.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/ccbogel/QualCoder@cb3ec9bcd347adaba5d81fef5d83f40c6a338c64/qualcoder/GUI/qualcoder128.png</iconUrl>
+    <copyright>Copyright (c) 2023 Colin Curtain</copyright>
+    <licenseUrl>https://github.com/ccbogel/QualCoder/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ccbogel/QualCoder</projectSourceUrl>
+    <docsUrl>https://github.com/ccbogel/QualCoder/wiki</docsUrl>
+    <mailingListUrl>https://github.com/ccbogel/QualCoder/discussions</mailingListUrl>
+    <bugTrackerUrl>https://github.com/ccbogel/QualCoder/issues</bugTrackerUrl>
+    <tags>qualcoder SPACE_SEPARATED</tags>
+    <summary>Open source software for qualitative data analysis</summary>
+    <description>QualCoder is free, open source software for qualitative data analysis. With QualCoder you can code text, images, audio and video, write journal notes and memos. You can categorise codes into a tree-like hierarchical categorisation scheme. Coding for audio and video requires the VLC media player. Coder comparison reports can be generated for text coding using the Cohen’s Kappa statistic. A graph displaying codes and categories can be generated to visualise the coding hierarchy. Most reports can be exported as html, open document text (ODT) or as plain text files.
+    </description>
+    <releaseNotes>https://github.com/ccbogel/QualCoder/releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
