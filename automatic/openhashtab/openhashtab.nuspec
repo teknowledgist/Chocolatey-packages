@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>openhashtab</id>
+    <version>3.0.4</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/openhashtab</packageSourceUrl>
+    <owners>Teknowledgist, Yato</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>OpenHashTab</title>
+    <authors>namazso</authors>
+    <projectUrl>https://github.com/namazso/OpenHashTab</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/namazso/OpenHashTab@49adb0d8911bc42d85c78f9e3271d0a985d1e2f7/OpenHashTab/icon.png</iconUrl>
+    <copyright>Copyright 2019 namazso</copyright>
+    <licenseUrl>https://github.com/namazso/OpenHashTab/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/namazso/OpenHashTab</projectSourceUrl>
+    <docsUrl>https://github.com/namazso/OpenHashTab/blob/master/README.md</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/namazso/OpenHashTab/issues?q=is%3Aissue+is%3Aopen+sort%3Aupdated-desc</bugTrackerUrl>
+    <tags>openhashtab hashtab hash checksum CRC32 MD5 SHA1 SHA2 SHA3 BLAKE3 FOSS embedded</tags>
+    <summary>File hashing and checking shell extension</summary>
+    <description>OpenHashTab is a shell extension for conveniently calculating and checking file hashes from file properties.
+
+## Features
+
+* Support for 28 algorithms
+* High performance hash calculation
+* Native Windows looks
+* High DPI screen support
+* Long path support\*
+* Multilingual (Consider contributing to translation!)
+* Check hashes against VirusTotal with a button
+* Hash checking against a checksum file (Supported: hex hash next to file, \*sum output (hex or base64), corz .hash, SFV)
+* Hash export to file or clipboard (Supported: \*sum output, corz .hash, SFV)
+* Optional context menu option for faster access
+* File associations and standalone mode
+
+\* to the extent Windows and configuration supports it. [Enable long paths](https://www.tenforums.com/tutorials/51704-enable-disable-win32-long-paths-windows-10-a.html) on 1607+ for better support.
+
+![Screenshot](https://github.com/namazso/OpenHashTab/assets/8676443/727943b2-8070-4dcc-b0a4-e1149fca0245)
+    </description>
+    <releaseNotes>https://github.com/namazso/openhashtab/releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
