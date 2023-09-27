@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$Checksum = '0A7B1F68B7C68608028ADFBB1BE6ACBC22587B5B070AE324ACB97211C0B01F95'
+$Checksum = '243cf8cf7d2480df6fb8f093d10df8caa01f1c3b4f59aefc6b13d06a66df278b'
 
 # Poke/prime the CDN before download
 $null = Get-WebHeaders -url 'https://www.venea.net/cdn/push/nettraffic'
@@ -12,6 +12,9 @@ $DownArgs = @{
    filename       = $Destination
 }
 Get-Webfile @DownArgs 
+
+# Stop the script if running as part of Automatic Updates to prevent install
+if ($MyInvocation.scriptname -match '\\au\\') { throw "au_break: $Destination" }
 
 Get-ChecksumValid -File $Destination -Checksum $Checksum -ChecksumType 'sha256'
 
@@ -49,7 +52,7 @@ Remove-Item -Path $UserUninstall -Recurse
 Write-Debug 'Moving Start Menu shortcuts from user to all users.'
 $UserSM = "$env:USERPROFILE\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\NetTraffic"
 $AllUSM = "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\"
-Copy-Item -Path $UserSM -Destination $AllUSM -Recurse
+Copy-Item -Path $UserSM -Destination $AllUSM -Recurse -Force
 Remove-Item -Path $UserSM -Recurse
 
 If (!$pp['AutoRun']) { 

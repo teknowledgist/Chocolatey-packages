@@ -3,7 +3,7 @@ import-module au
 
 function global:au_GetLatest {
    $Release = 'https://www.venea.net/cdn/push/nettraffic'
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $version = $download_page.content.split()[1].trim('.zip')
 
@@ -21,4 +21,4 @@ function global:au_SearchReplace {
    }
 }
 
-Update-Package -ChecksumFor 32 -nocheckchocoversion
+Update-Package -ChecksumFor 32 -NoCheckChocoVersion -NoCheckUrl

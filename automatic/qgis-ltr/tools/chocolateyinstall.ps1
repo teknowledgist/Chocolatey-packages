@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$AppVersion = '3.28.10'   # may not match package version
+$AppVersion = '3.28.11'   # may not match package version
 
 $InstallArgs = @{
    packageName    = 'qgis-ltr'
    fileType       = 'MSI'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
-   url64bit       = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.28.10-1.msi'
+   url64bit       = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.28.11-1.msi'
    checksumType   = 'sha256'
-   checksum64     = '8997d14416d77abacddc9e51d90a3ffa6395456ef40deee79935ea3cc7276324'
+   checksum64     = 'f345fd07e4e752988381a183410b32a1336fd49a037fbd597c370a11d402e6f5'
    silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes = @(0)
 }
