@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy.portable</id>
-    <version>4.2.2</version>
+    <version>5.4.2</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy.portable</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -12,7 +12,7 @@
     <authors>SHIROUZU Hiroaki</authors>
     <projectUrl>https://fastcopy.jp/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/FastCopy_icon.png</iconUrl>
-    <copyright>Copyright © 2004-2017 by SHIROUZU Hiroaki</copyright>
+    <copyright>Copyright © 2004-2023 by SHIROUZU Hiroaki</copyright>
     <licenseUrl>https://fastcopy.jp/help/fastcopy_eng.htm#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <docsUrl>https://fastcopy.jp/help/fastcopy_eng.htm</docsUrl>
@@ -38,10 +38,10 @@
 * Addition of [a setting to Drives that are always run in parallel (e.g. SSD-RAID).](https://fastcopy.jp/help/fastcopy_eng.htm#ssd_raid)
 
 #### Notes
-* A Pro version license key is required for use in the workplace. [Click here for purchase/more information](https://fastcopy.jp/pro/).
+* A Pro version license key is required for use in the workplace beyond a 2-week trial period. [Click here for purchase/more information](https://fastcopy.jp/pro/).
 
     </description>
-    <releaseNotes>http://ipmsg.org/tools/fastcopy.html.en#history</releaseNotes>
+    <releaseNotes>https://fastcopy.jp/help/fastcopy_eng.htm#history</releaseNotes>
     <language>en-US</language>
     <dependencies>
     </dependencies>

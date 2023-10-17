@@ -10,7 +10,7 @@ sections.  There you can see the SHA-256 hash, and get the file via the
 "Download" button.
 
 Direct Download:
-Milestone       = '23.9.24'
+Milestone       = '23.10.12'
 64-bit URL      = 'https://miktex.org/download/ctan/systems/win32/miktex/setup/windows-x64/miktexsetup-5.5.0+1763023-x64.zip'
 64-bit checksum = '0571E90F6D94353089B4F189FD82A532F9FE559A388C7E7F1102B14B3C1AE27D'
 

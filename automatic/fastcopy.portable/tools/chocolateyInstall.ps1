@@ -2,25 +2,25 @@
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $FolderOfPackage = Split-Path -Parent $toolsDir
-$InstallerPath = (Get-ChildItem -Path $toolsDir -filter '*.exe' |
-                        Sort-Object lastwritetime | Select-Object -Last 1).FullName
 
-if (-not $InstallerPath) {
-   $ZipPath = (Get-ChildItem -Path $toolsDir -filter '*.zip').FullName
-   Get-ChocolateyUnzip -FileFullPath $ZipPath -Destination $toolsDir
-   $InstallerPath = (Get-ChildItem -Path $toolsDir -filter '*.exe').FullName
+# Remove previous versions
+$Previous = Get-ChildItem $FolderOfPackage -filter 'FastCopy*' | Where-Object { $_.PSIsContainer }
+if ($Previous) {
+   $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
 
-$InstallArgs = @{
-   packageName    = $env:ChocolateyPackageName
-   FileType       = 'exe'
-   File           = "$InstallerPath"
-   silentArgs     = "/silent /Extract /dir=`"$FolderOfPackage`""
-   validExitCodes = @(0)
+$packageArgs = @{
+   packageName   = $env:ChocolateyPackageName
+   softwareName  = 'FastCopy' 
+   fileType      = 'EXE'
+   url           = 'https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy5.4.2_installer.exe'
+   checksum      = '378b93f3d80a09b6f7f80423363bf8add13a1e40dc92862b5dfc260ab665c7f8'
+   checksumType  = 'sha256'
+   silentArgs    = "/silent /Extract /dir=`"$FolderOfPackage`""
+   validExitCodes= @(0)
 }
 
-Install-ChocolateyInstallPackage @InstallArgs
-Remove-Item $InstallerPath -ea 0 -force
+Install-ChocolateyPackage @packageArgs
 
 Get-ChildItem -Path $FolderOfPackage -filter 'setup.exe' -Recurse | 
    ForEach-Object { $null = Remove-Item $_.FullName -Force }

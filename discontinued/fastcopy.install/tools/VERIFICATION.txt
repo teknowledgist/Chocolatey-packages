@@ -6,7 +6,11 @@ The download files are linked from this page:  https://fastcopy.jp/en/
 
 Direct Download:
 
-Version  : 5.2.6
+<<<<<<< Updated upstream
+Version  : 5.4.2
+=======
+Version  : 5.4.2
+>>>>>>> Stashed changes
 URL      : https://github.com/FastCopyLab/FastCopyDist2/raw/main/FastCopy5.0.5_installer.exe
 CheckSum : 
 

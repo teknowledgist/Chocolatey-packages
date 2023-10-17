@@ -4,45 +4,47 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy</id>
-    <version>4.2.2</version>
+    <version>5.4.2</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy</packageSourceUrl>
-    <owners>Teknowledgist, dtgm, MarkJohnson</owners>
+    <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>FastCopy</title>
     <authors>SHIROUZU Hiroaki</authors>
-    <projectUrl>https://fastcopy.jp/en/</projectUrl>
+    <projectUrl>https://fastcopy.jp/</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/FastCopy_icon.png</iconUrl>
-    <copyright>Copyright © 2004-2017 by SHIROUZU Hiroaki</copyright>
+    <copyright>Copyright © 2004-2023 by SHIROUZU Hiroaki</copyright>
     <licenseUrl>https://fastcopy.jp/help/fastcopy_eng.htm#license</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <projectSourceUrl>https://fastcopy.jp</projectSourceUrl>
-    <mailingListUrl>https://groups.google.com/forum/#!forum/fastcopy-bb-eng</mailingListUrl>
     <docsUrl>https://fastcopy.jp/help/fastcopy_eng.htm</docsUrl>
-    <tags>fastcopy copy delete notsilent embedded</tags>
+    <bugTrackerUrl>https://github.com/FastCopyLab/FastCopy/issues</bugTrackerUrl>
+    <tags>fastcopy copy delete gui cli</tags>
     <summary>The Fastest Copy/Delete Software on Windows.</summary>
     <description>FastCopy is **the Fastest Copy/Delete Software on Windows**.
 
-It supports UNICODE and over MAX_PATH (260 characters) file pathnames.
+### Features
+* FastCopy is the Fastest Copy/Backup Software on Windows
+* It supports UNICODE and over MAX_PATH (260 characters) file pathnames.
+* Because it uses multi-threads for Read/Write/Verify, Overlapped I/O, Direct I/O, so it brings out the best speed of devices.
+* It supports Include/Exclude filter like a UNIX wildcard.
+* It runs fast and does not hog resources, because MFC is not used. (Designed using Win32 API and C Runtime only)
 
-It automatically selects different methods depending on whether the source and destination directories are on the same or different drive.
-* **Different drive:** Reading and writing are processed respectively in parallel by separate threads.
-* **Same drive:**	Reading is processed until the buffer fills. When the buffer is filled, writing is started and processed in bulk.
+### New Features
+* [Addition of Perfect Verify.](https://fastcopy.jp/help/fastcopy_eng.htm#setting_verify) (Pro version only)
+* Support for Windows 11 shell extension.
+* Improved asynchronous I/O algorithm for further speed enhancements.
+* 20% to 30% speed increase in high-speed SSD environments due to [pre-allocation of space during privileged mode.](https://fastcopy.jp/help/fastcopy_eng.htm#prealloc)
+* Addition of ["Verify," "FC Verify Info Disp," and "FC Verify Info Check (Pro version only)"](https://fastcopy.jp/help/fastcopy_eng.htm#mode) to main commands.
+* Support for [CPU affinity.](https://fastcopy.jp/help/fastcopy_eng.htm#setting_cpu)
+* Addition of [a setting to Drives that are always run in parallel (e.g. SSD-RAID).](https://fastcopy.jp/help/fastcopy_eng.htm#ssd_raid)
 
-Reading/Writing is processed with no OS cache so other applications do not become slow.
-
-It can achieve reading/writing performance that is close to the device limit.
-
-Include/Exclude filter (UNIX Wildcard style) can be specified. In ver3.0 or later, relative paths can be specified.
-
-It runs fast and does not hog resources, because MFC is not used. (Designed using Win32 API and C Runtime only)
-
-You can modify this software, because all source code has been opened to the public under the GPL ver3 license. 
+#### Notes
+* A Pro version license key is required for use in the workplace beyond a 2-week trial period. [Click here for purchase/more information](https://fastcopy.jp/pro/).
 
     </description>
     <releaseNotes>https://fastcopy.jp/help/fastcopy_eng.htm#history</releaseNotes>
     <language>en-US</language>
     <dependencies>
-      <dependency id="fastcopy.portable" version="[4.2.2]" />
+      <dependency id="fastcopy.portable" version="[5.4.2]" />
     </dependencies>
   </metadata>
   <files>

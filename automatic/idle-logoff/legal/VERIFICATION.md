@@ -6,9 +6,9 @@ The latest version can be downloaded from the official GitHub page:
 - https://github.com/lithnet/idle-logoff/releases/latest
 
 or directly:
-- Version: 1.2.8134
-- URL: https://github.com/lithnet/idle-logoff/releases/download/v1.2.8134/lithnet.idlelogoff.setup.msi
-- SHA256 Checksum: FCB7B3613754701A3E69C0CDFC3CDDA3ACA59596590F5E9CC40C52810141F217
+- Version: 1.2.8689
+- URL: https://github.com/lithnet/idle-logoff/releases/download/v1.2.8689/lithnet.idlelogoff.setup.msi
+- SHA256 Checksum: 64D08C806D894A6639AF06ABFFD2B2425DFA1DEB3AC7FCFB59925DE7BAD0672B
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
