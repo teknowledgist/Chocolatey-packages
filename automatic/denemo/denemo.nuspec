@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>denemo</id>
+    <version>2.6.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/denemo</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Denemo (portable)</title>
+    <authors>Matthew Hiller</authors>
+    <projectUrl>https://denemo.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@aa97972034e6c985ec1e2b167a178f85b8ac1d10/Icons/denemo_icon.png</iconUrl>
+    <copyright>Copyright © 2009 - 2021 Denemo Project</copyright>
+    <licenseUrl>https://git.savannah.gnu.org/cgit/denemo.git/tree/COPYING</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://git.savannah.gnu.org/cgit/denemo.git</projectSourceUrl>
+    <docsUrl>https://git.savannah.gnu.org/gitweb/?p=denemo.git;a=blob_plain;f=docs/denemo-manual.html;hb=HEAD</docsUrl>
+    <mailingListUrl>http://lists.gnu.org/mailman/listinfo/denemo-devel</mailingListUrl>
+    <bugTrackerUrl>http://savannah.gnu.org/bugs/?group=denemo</bugTrackerUrl>
+    <tags>denemo lilypond music score FOSS</tags>
+    <summary>Denemo is a free (GPL) music notation editor.</summary>
+    <description>Denemo is a free music notation program for GNU/Linux, Mac OSX and Windows that lets you rapidly enter notation which it typesets using the [LilyPond][] music engraver. Music can be typed in at the [PC-Keyboard][], or played in via [MIDI controller][], or input acoustically into a microphone plugged into your computer’s soundcard.
+
+**Denemo uses LilyPond** which generates beautiful sheet music to the highest publishing standards. During input Denemo displays the staffs in a simple fashion, so you can enter and edit the music efficiently. The typesetting is done in the background while you work, and is generally flawless publication quality. Some final tweaks can be done on the typeset score [with the mouse][] if needed.
+
+**Unique to Denemo** are methods to enter music in a musical, rather than mechanical, manner. This can be used for transcribing scores.
+
+**Another great feature** is the ability to put links in the score to the original source document that you transcribed from. 
+
+**Beginner to Professional:** Denemo can be used for a brief student homework all the way to a full-scale opera. Support is there for creating the widest range of notation – Tablature, Chord Charts, Fret Diagrams, Drums, transposing instruments, ossia, ottava, cue, title pages, table-of-contents, critical commentaries, footnotes quoting music, and more with LilyPond’s extensive syntax available for even more demanding uses.
+
+[LilyPond]: https://denemo.org/lilypond
+[PC-Keyboard]: https://vimeo.com/65174334
+[MIDI controller]: https://vimeo.com/65174334
+[with the mouse]: https://vimeo.com/64408182
+
+    </description>
+    <releaseNotes>https://git.savannah.gnu.org/cgit/denemo.git/tree/ChangeLog</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
