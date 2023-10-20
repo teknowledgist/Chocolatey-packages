@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>frescobaldi</id>
+    <version>3.3.0.20231019</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/frescobaldi</packageSourceUrl>
+    <owners>StefanMUC,Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Frescobaldi</title>
+    <authors>Federico Bruni,Jean Abou-Samra</authors>
+    <projectUrl>https://frescobaldi.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/frescobaldi/frescobaldi@e8a79eee1573b1ee1c329e2a8a38e2bc2d2c3ed3/frescobaldi.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>http://www.gnu.org/licenses/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/frescobaldi/frescobaldi</projectSourceUrl>
+    <docsUrl>https://frescobaldi.org/uguide</docsUrl>
+    <mailingListUrl>http://groups.google.com/group/frescobaldi</mailingListUrl>
+    <bugTrackerUrl>https://github.com/frescobaldi/frescobaldi/issues</bugTrackerUrl>
+    <tags>frescobaldi lilypond music score FOSS embedded</tags>
+    <summary>An application to make editing LilyPond music scores faster and easier</summary>
+    <description>Frescobaldi is a light-weight, but powerful editor for LilyPond music files.  It aims to be powerful, yet lightweight and easy to use. Frescobaldi is [Free Software](http://www.gnu.org/philosophy/free-sw.html), freely available under the [General Public License](http://www.gnu.org/licenses/gpl.html).
+
+![main-editor](https://frescobaldi.org/images/frescobaldi1-small-en.png)
+
+## Features:
+
+- Powerful text editor with syntax highlighting and automatic completion
+- Music view with advanced two-way Point-and-Click
+- Midi player to proof-listen LilyPond-generated MIDI files
+- Midi capturing to enter music
+- Powerful Score Wizard to quickly setup a music score
+- Snippet Manager to store and apply text snippets, templates or scripts
+- Use multiple versions of LilyPond, automatically selects the correct version
+- Built-in LilyPond documentation browser and built-in help
+- Configurable document outline view to navigate large LilyPond scores easily
+- Smart layout-control functions like coloring specific objects in the PDF
+- Import ABC, Midi and MusicXML using the LilyPond-provided tools
+- Experimental export to MusicXML
+- Modern user interface with configurable colors, fonts and keyboard shortcuts
+- Translated into: Dutch, English, French, German, Italian, Swedish, Czech,
+  Russian, Spanish, Galician, Turkish, Polish, Brazilian and Ukrainian.
+
+## Music functions:
+
+- Transpose music
+- Change music from relative to absolute and vice versa
+- Change the language used for note names
+- Change the rhythm (double, halve, add/remove dots, copy, paste) etc
+- Hyphenate lyrics using word-processor hyphenation dictionaries
+- Add spanners, dynamics, articulation easily using the Quick Insert panel
+- Update LilyPond syntax using convert-ly, with display of differences
+
+    </description>
+    <releaseNotes>https://github.com/frescobaldi/frescobaldi/blob/master/CHANGELOG.md</releaseNotes>
+    <!-- =============================== -->
+    <dependencies>
+      <dependency id="vcredist140" version="14.10" />
+      <dependency id="lilypond" version="2.24" />
+    </dependencies>
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
