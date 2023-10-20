@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>lilypond</id>
+    <version>2.24.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/lilypond</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>LilyPond (portable)</title>
+    <authors>Han-Wen Nienhuys,Jan Nieuwenhuizen</authors>
+    <projectUrl>https://lilypond.org/index.html</projectUrl>
+    <iconUrl>https://gitlab.com/uploads/-/system/project/avatar/18695663/lilypond.png</iconUrl>
+    <licenseUrl>https://lilypond.org/gpl.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://gitlab.com/lilypond/lilypond/</projectSourceUrl>
+    <docsUrl>https://lilypond.org/manuals.html</docsUrl>
+    <mailingListUrl>https://lists.gnu.org/mailman/listinfo/lilypond-user</mailingListUrl>
+    <bugTrackerUrl>https://lilypond.org/bug-reports.html</bugTrackerUrl>
+    <tags>lilypond music notation engraving FOSS embedded</tags>
+    <summary>Music notation for everyone</summary>
+    <description>LilyPond is a music engraving program, devoted to producing the highest-quality sheet music possible. It brings the aesthetics of traditionally engraved music to computer printouts. LilyPond is free software and part of the [GNU Project][].
+
+## Beutiful Sheet Music
+
+![Music Sheet][]
+LilyPond is a powerful and flexible tool for engraving tasks of all kinds, for example [classical music][] (like the example above by J.S. Bach), [complex notation][], [early music][], [modern music][], [tablature][], [vocal music][], [lead sheets][], [educational materials][], [large orchestral projects][], [customized output][], and even [Schenker graphs][].
+
+## Music Compiler
+LilyPond is a music compiler, not graphical score editing software; Music is not written by dragging notes from a graphical toolbar and placing them on a dynamically refreshing score.  Rather, music is written by typing [simple text "code"](https://lilypond.org/text-input.html). Point LilyPond at a text file describing the music, and the text is interpreted (or "compiled") by LilyPond.  The result is beautifully engraved sheet music that can be viewed on-screen or printed. 
+
+## Front-end Graphical Interfaces
+* [Frescobaldi](https://community.chocolatey.org/packages/frescobaldi)
+* [Denemo](https://community.chocolatey.org/packages/denemo)
+* [Spontini-Editor](https://github.com/paopre/Spontini)
+* [other options](https://lilypond.org/easier-editing.html)
+
+[gnu project]: http://gnu.org/
+[music sheet]: http://lilypond.org/pictures/bwv861-lilypond.png
+[classical music]: http://lilypond.org/examples.html#Classical-Music
+[complex notation]: http://lilypond.org/examples.html#Complex-Notation
+[early music]: http://lilypond.org/examples.html#Early-Music
+[modern music]: http://lilypond.org/examples.html#Modern-Music
+[tablature]: http://lilypond.org/examples.html#Tablature
+[vocal music]: http://lilypond.org/examples.html#Vocal-Music
+[lead sheets]: http://lilypond.org/examples.html#Lead-Sheets
+[educational materials]: http://lilypond.org/examples.html#Educational-Applications
+[large orchestral projects]: http://lilypond.org/examples.html#Large-Projects
+[customized output]: http://lilypond.org/examples.html#Customized-Output
+[schenker graphs]: http://lilypond.org/examples.html#Schenker-Graphs
+[examples]: https://lilypond.org/examples.html
+    </description>
+    <releaseNotes>https://lilypond.org/changes.html</releaseNotes>
+    <!-- =============================== -->
+
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
