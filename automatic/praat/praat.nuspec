@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>praat</id>
-    <version>6.3.18</version>
+    <version>6.3.20</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/praat</packageSourceUrl>
     <owners>Doc, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
