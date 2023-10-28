@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>openpuff</id>
+    <version>4.01</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/openpuff</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>OpenPuff (portable)</title>
+    <authors>EmbeddedSW</authors>
+    <projectUrl>https://embeddedsw.net/OpenPuff_Steganography_Home.html</projectUrl>
+    <iconUrl>https://embeddedsw.net/images/OpenPuff.jpg</iconUrl>
+    <copyright>EmbeddedSW © 2018</copyright>
+    <licenseUrl>http://www.gnu.org/licenses/lgpl.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://embeddedsw.net/libObfuscate_download.html</projectSourceUrl>
+    <docsUrl>https://embeddedsw.net/doc/OpenPuff_Help_EN.pdf</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>openpuff steganography obfuscate cryptography security encoding FOSS embedded</tags>
+    <summary>Data hiding and watermarking made easy, safe and free</summary>
+    <description>OpenPuff is a professional steganography tool with unique features, suitable for highly sensitive data covert transmission.
+
+* **Carrier chains:**  Data is split among many carriers. Only the correct carrier sequence enables unhiding. Moreover, up to 256Mb can be hidden, if you have enough carriers at disposal. Last carrier will be filled with random bits in order to make it undistinguishable from others.
+* **Supported formats:**  Images, audios, videos, flash, adobe.
+* **Layers of security:**  Data, before carrier injection, is encrypted (1), scrambled (2), whitened (3) and encoded (4).
+
+1. **Layer 1 - Modern multi-cryptography:**  A set of 16 modern [256bit open-source cryptography algorithms](https://embeddedsw.net/Cipher_Reference_Home.html) (chosen from AES Process [1997-2000], NESSIE Process [2000-2003] and CRYPTREC Process [2000-2003]) has been joined into a doublepassword multi-cryptography algorithm (256bit+256bit):AES / Anubis / Camellia / Cast-256 / Clefia / FROG / Hierocrypt3 / Idea-NXT / MARS / RC6 / Safer+ / SC2000 / Serpent / Speed / Twofish / Unicorn-A
+2. **Layer 2 - CSPRNG based scrambling:**  Encrypted data is always scrambled to break any remaining stream pattern. A new cryptographically secure pseudo random number generator (CSPRNG) is seeded with a third password (256bit) and data is globally shuffled with random indexes.
+3. **Layer 3 - CSPRNG based whitening:**  Scrambled data is always mixed with a high amount of noise, taken from an independent CSPRNG seeded with hardware entropy.
+4. **Layer 4 - Adaptive non-linear encoding:**  Whitened data is always encoded using a non-linear function that takes also original carrier bits as input. Modified carriers will need much less change and deceive many [steganalysis tests](https://embeddedsw.net/Randomness_Test_Home.html) (e.g.: chi square test).
+
+* **Extra security - Deniable steganography:**  Top secret data can be protected using less secret data as a decoy.
+* **Source code:**  This program relies on the [libObfuscate](https://embeddedsw.net/libObfuscate_Cryptography_Home.html) system-independent open-source library. Users and developers are absolutely free to link to the core library (100% of the cryptography and obfuscation code), read it and modify it.
+
+![Main-Window](https://embeddedsw.net/images/OpenPuff_Screenshot.jpg)
+    </description>
+    <!-- <releaseNotes>__REPLACE_OR_REMOVE__MarkDown_Okay</releaseNotes> -->
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
