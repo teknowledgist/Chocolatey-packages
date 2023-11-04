@@ -2,9 +2,16 @@ import-module au
 
 function global:au_GetLatest {
    $DownloadURI = 'https://download.slicer.org/'
-   $download_page = Invoke-WebRequest -Uri $DownloadURI
+   $download_page = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing
 
-   $TRow = $download_page.ParsedHtml.getElementsByTagName('tr') | 
+   $HTML = New-Object -Com "HTMLFile"
+   try {
+      $html.IHTMLDocument2_write($download_page)    # if MS Office installed
+   } catch {
+      $html.write([Text.Encoding]::Unicode.GetBytes($download_page))   # No MS Office
+   }
+
+   $TRow = $HTML.getElementsByTagName('tr') | 
                Where-Object {$_.innertext -match 'stable release'} | 
                Select-Object -ExpandProperty innerhtml
    $TData = $TRow -split '</?T[DH]>' | Where-Object {$_ -match 'revision'} | Select-Object -First 1
