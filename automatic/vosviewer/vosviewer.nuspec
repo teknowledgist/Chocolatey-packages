@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>vosviewer</id>
-    <version>1.6.19</version>
+    <version>1.6.20</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/vosviewer</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -15,7 +15,7 @@
     <copyright>Copyright © 2009-2022 Nees Jan van Eck and Ludo Waltman</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/vosviewer/legal/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <docsUrl>https://www.vosviewer.com/documentation/Manual_VOSviewer_1.6.19.pdf</docsUrl>
+    <docsUrl>https://www.vosviewer.com/documentation/Manual_VOSviewer_1.6.20.pdf</docsUrl>
     <mailingListUrl>https://www.vosviewer.com/contact</mailingListUrl>
     <tags>vosviewer visualization bibliographic citation data mining literature embedded</tags>
     <summary>Tool for visualizing scientific literature landscapes</summary>

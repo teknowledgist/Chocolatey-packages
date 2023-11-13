@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>bleachbit.portable</id>
-    <version>4.4.2</version>
+    <version>4.6.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/bleachbit.portable</packageSourceUrl>
     <owners>chocolatey,dtgm</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
