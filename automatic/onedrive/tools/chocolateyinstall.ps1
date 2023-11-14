@@ -39,34 +39,45 @@ try {
    $unlocked = $true
    Write-Debug 'Default user registry key is available.'
 } catch {
-   $unlocked = $false
    Write-Debug 'Default user registry key is in use.  Attempting to release.'
-   # unsure if this will work.  Pulled from:  https://osd365.com/windows-10-sporadic-user-profile-corruption-default-ntuser-dat-locked-by-system/
-   Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements 'UNLOAD HKU\DefaultUserTemplate'
+   try {
+      # unsure if this will work.  Pulled from:  https://osd365.com/windows-10-sporadic-user-profile-corruption-default-ntuser-dat-locked-by-system/
+      Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements 'UNLOAD HKU\DefaultUserTemplate'
+      $unlocked = $true
+      Write-Debug 'Releasing the default user registry key was successful.'
+   } catch {
+      $unlocked = $false
+      Write-Debug 'Releasing the default user registry key failed.'
+   }
 }
 
-try {
-   $null = Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements "LOAD $TempKey $DefUReg"
+if ($unlocked) {
+   try {
+      $null = Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements "LOAD $TempKey $DefUReg"
 
-   $KeyPath = ([regex]'\\').replace($TempKey,':\',1) + '\Software\Microsoft\Windows\CurrentVersion\Run'
+      $KeyPath = ([regex]'\\').replace($TempKey,':\',1) + '\Software\Microsoft\Windows\CurrentVersion\Run'
 
-   $ODrunValue = (Get-ItemProperty -Path $KeyPath).OneDriveSetup
-   if ($ODrunValue) {
-      Remove-ItemProperty -Path $KeyPath -Name 'OneDriveSetup' -Force
-      $BackedUpKey = "The default user registry file was loaded and the value`r`n`r`n" +
-                     "OneDriveSetup = $ODrunValue`r`n`r`n" +
-                     "was removed from \Software\Microsoft\Windows\CurrentVersion\Run`r`n" +
-                     "Do not alter this file or the key  will not be restored on`r`n" +
-                     'uninstallation of this package.'
-      $BackedUpKey | out-file -FilePath "$FolderOfPackage\RemovedKeyInfo.txt" -Force
-      Write-Verbose 'Registry key information for default user install of OneDrive is backed up.'
+      $ODrunValue = (Get-ItemProperty -Path $KeyPath).OneDriveSetup
+      if ($ODrunValue) {
+         Remove-ItemProperty -Path $KeyPath -Name 'OneDriveSetup' -Force
+         $BackedUpKey = "The default user registry file was loaded and the value`r`n`r`n" +
+                        "OneDriveSetup = $ODrunValue`r`n`r`n" +
+                        "was removed from \Software\Microsoft\Windows\CurrentVersion\Run`r`n" +
+                        "Do not alter this file or the key  will not be restored on`r`n" +
+                        'uninstallation of this package.'
+         $BackedUpKey | out-file -FilePath "$FolderOfPackage\RemovedKeyInfo.txt" -Force
+         Write-Verbose 'Registry key information for default user install of OneDrive is backed up.'
+      }
+      $null = Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements 'UNLOAD HKLM\DefaultUser'
+      [gc]::collect()   # remove any memory handles to the file.
+   } catch {
+      $Failed = $true
    }
-   $null = Start-ChocolateyProcessAsAdmin -ExeToRun $RegPath -Statements 'UNLOAD HKLM\DefaultUser'
-   [gc]::collect()   # remove any memory handles to the file.
-} catch {
-   $note = "Removal of default per-user install of OneDrive failed.`n" +
+} else { $Failed = $true }
+
+if ($Failed) {
+   $note = "Removal of default per-user install of OneDrive was unsuccessful.`n" +
             "This should not affect OneDrive function but could slow`n" +
             'down the login of new users.'
    Write-Warning $note
 }
-
