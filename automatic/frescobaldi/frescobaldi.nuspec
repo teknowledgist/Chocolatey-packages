@@ -21,7 +21,7 @@
     <bugTrackerUrl>https://github.com/frescobaldi/frescobaldi/issues</bugTrackerUrl>
     <tags>frescobaldi lilypond music score FOSS embedded</tags>
     <summary>An application to make editing LilyPond music scores faster and easier</summary>
-    <description>Frescobaldi is a light-weight, but powerful editor for LilyPond music files.  It aims to be powerful, yet lightweight and easy to use. Frescobaldi is [Free Software](http://www.gnu.org/philosophy/free-sw.html), freely available under the [General Public License](http://www.gnu.org/licenses/gpl.html).
+    <description>Frescobaldi is a lightweight, but powerful editor for [LilyPond](https://community.chocolatey.org/packages/lilypond) music files.  It aims to to make editing LilyPond music scores faster and easier. Frescobaldi is [Free Software](http://www.gnu.org/philosophy/free-sw.html), freely available under the [General Public License](http://www.gnu.org/licenses/gpl.html).
 
 ![main-editor](https://frescobaldi.org/images/frescobaldi1-small-en.png)
 
