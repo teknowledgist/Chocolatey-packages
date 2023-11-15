@@ -8,7 +8,7 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/zint</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Zint </title>
+    <title>Zint Barcode Generator</title>
     <authors>Robin Stuart, Zint contributors</authors>
     <projectUrl>https://www.zint.org.uk/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/frhun/flathub@d0b9f92de374ed4481418cf8a4b8a3a160965870/zint-128.png</iconUrl>
