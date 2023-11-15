@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>zint</id>
+    <version>2.12.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/zint</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Zint </title>
+    <authors>Robin Stuart, Zint contributors</authors>
+    <projectUrl>https://www.zint.org.uk/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/frhun/flathub@d0b9f92de374ed4481418cf8a4b8a3a160965870/zint-128.png</iconUrl>
+    <copyright>Copyright © 2008-2023 Robin Stuart</copyright>
+    <licenseUrl>https://github.com/zint/zint/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/zint/zint</projectSourceUrl>
+    <docsUrl>https://zint.org.uk/manual/</docsUrl>
+    <mailingListUrl>https://sourceforge.net/p/zint/mailman/zint-barcode/</mailingListUrl>
+    <bugTrackerUrl>https://sourceforge.net/p/zint/tickets/</bugTrackerUrl>
+    <tags>zint barcode QRcode symbology embedded FOSS</tags>
+    <summary>A barcode encoding library supporting over 50 symbologies.</summary>
+    <description>Zint is a suite of programs to allow easy encoding of data in any of the wide range of public domain barcode standards and to allow integration of this capability into your own programs.
+
+Zint is able to encode data in the following formats:
+
+* Australia Post variants
+* Aztec Code
+* Aztec Runes
+* Channel Code
+* Codabar
+* Codablock F
+* Code 11
+* Code 128 with automatic subset switching
+* Code 16k
+* Code 2 of 5 variants
+* Code 32 (Italian pharmacode)
+* Code 3 of 9 (Code 39)
+* Code 3 of 9 Extended (Code 39 Extended)
+* Code 49
+* Code 93
+* Code One
+* Data Matrix ECC200
+* DotCode
+* Dutch Post KIX Code
+* EAN variants
+* Grid Matrix
+* GS1 DataBar variants
+* Han Xin
+* Japan Post
+* Korea Post
+* LOGMARS
+* MaxiCode
+* MSI (Modified Plessey)
+* PDF417 variants
+* Pharmacode
+* Pharmacode Two-Track
+* Pharmazentralnummer
+* POSTNET / PLANET
+* QR Code
+* rMQR
+* Royal Mail 4-State (RM4SCC)
+* Royal Mail 4-State Mailmark
+* Telepen
+* UPC variants
+* UPNQR
+* USPS OneCode (Intelligent Mail)
+
+Output can be saved as BMP, EMF, EPS, GIF, PCX, PNG, SVG or TIF.
+
+ </description>
+    <releaseNotes>https://github.com/zint/zint/blob/master/ChangeLog</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
