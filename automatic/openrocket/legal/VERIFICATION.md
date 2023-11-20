@@ -6,9 +6,9 @@ The Open Rocket installer can be downloaded from the source releases page:
 - https://github.com/openrocket/openrocket/releases
 
 #### or directly:
-- Version : 22.02
-- URL     : https://github.com/openrocket/openrocket/releases/download/release-22.02/OpenRocket-22.02-Windows.exe
-- SHA256  : 7CCAFD16323A6703F2C2D105EC1EBE73F1C7C9BE846405EA6BB1692864520BBE
+- Version : 23.09
+- URL     : https://github.com/openrocket/openrocket/releases/download/release-23.09/OpenRocket-23.09-Windows.exe
+- SHA256  : 7C9E65111A73EF87AA81CA2147800BD40A470F3D7EF3DC31B9A0342FFAE05B2B
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
