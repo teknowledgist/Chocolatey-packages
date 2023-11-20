@@ -6,9 +6,9 @@ The LilyPond zip file for Windows can be downloaded from this page:
 - https://lilypond.org/download.html
 
 #### or directly:
-- Version : 2.24.2
-- URL     : https://gitlab.com/lilypond/lilypond/-/releases/v2.24.2/downloads/lilypond-2.24.2-mingw-x86_64.zip
-- SHA256  : 1CA027793D6BAFBF0E6CB3B7BD3AB571F0776EC3C846C493B3B62A80D9D7E5E0
+- Version : 2.24.3
+- URL     : https://gitlab.com/lilypond/lilypond/-/releases/v2.24.3/downloads/lilypond-2.24.3-mingw-x86_64.zip
+- SHA256  : 57AF039E15144339654488717F5737EAAD3D6051FF9EF75658CE33DDE35794BD
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
