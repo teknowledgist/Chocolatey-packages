@@ -3,11 +3,11 @@
 $packageArgs = @{
    packageName   = $env:ChocolateyPackageName
    fileType      = 'MSI'
-   url           = 'https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/21194/download?i_agree_to_tenable_license_agreement=true'
-   url64bit      = 'https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/21193/download?i_agree_to_tenable_license_agreement=true'
+   url           = 'https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/21343/download?i_agree_to_tenable_license_agreement=true'
+   url64bit      = 'https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/21342/download?i_agree_to_tenable_license_agreement=true'
    softwareName  = 'Nessus Agent*'
-   checksum      = 'd9f5c47d6983caba7c5c8d5bad1f47b65fb03b2df129f44fd1d4fafbc80fc299'
-   checksum64    = '42b3bb2f0ffa20ff1aed6c7d19213d7f4bbb2ee019396ad5c77ffafbdbf1478e'
+   checksum      = '95ff0b3372d5bab0e9c73ea76d642efe969f8f663d59fae3d8dd5bb1d5e8160f'
+   checksum64    = 'bc8ecb8bbf6f59e32eb709c0dd9d3fe5774c02d2b1b37494ad09124079d7f4f7'
    checksumType  = 'sha256' 
    silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($Env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" "
    validExitCodes= @(0, 3010, 1641)
