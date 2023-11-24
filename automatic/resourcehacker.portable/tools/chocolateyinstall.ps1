@@ -7,7 +7,7 @@ $packageArgs = @{
    packageName   = $env:ChocolateyPackageName
    unzipLocation = "$FolderOfPackage\v$env:ChocolateyPackageVersion"
    url           = 'http://www.angusj.com/resourcehacker/resource_hacker.zip'
-   checksum      = '8e56a5c84999f036355759e5cb759e3055df761b55d9ae6a72825d4199f328e9'
+   checksum      = 'f958db1d239e69051145777de9943b267a3230cc3d140599b48cf024e2c8b3a2'
    checksumType  = 'sha256'
 }
 
