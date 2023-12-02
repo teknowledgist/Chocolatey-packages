@@ -4,22 +4,22 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>opensans</id>
-    <version>2.010</version>
+    <version>3.003</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/opensans</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Open Sans (font)</title>
     <authors>Steve Matteson</authors>
-    <projectUrl>https://fonts.google.com/specimen/Open+Sans</projectUrl>
+    <projectUrl>https://github.com/googlefonts/opensans</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@840e8f921c8b6912d390f949c9d950de0b4b74e4/Icons/opensans_icon.png</iconUrl>
-    <copyright>copyright © 2010-2011, Google Corporation</copyright>
-    <licenseUrl>https://github.com/googlefonts/opensans/blob/master/LICENSE.txt</licenseUrl>
+    <copyright>Copyright 2020 The Open Sans Project Authors</copyright>
+    <licenseUrl>https://github.com/googlefonts/opensans/blob/main/OFL.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/googlefonts/opensans</projectSourceUrl>
     <bugTrackerUrl>https://github.com/googlefonts/opensans/issues</bugTrackerUrl>
     <tags>opensans font sans sanserif humanist unicode Google apache embedded</tags>
     <summary>A highly legible humanist font.</summary>
-    <description>Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Director of Ascender Corp. This version is hinted with ttfautohint and contains the complete 1033 character set, which includes the standard ISO Latin 1, Latin CE, Greek and Cyrillic character sets (support for 42 languages). Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms. 
+    <description>Open Sans is a humanist sans serif typeface designed by Steve Matteson, Type Director of Ascender Corp. This version is hinted with ttfautohint and contains the complete 897 character set, which includes the standard ISO Latin 1, Latin CE, Greek and Cyrillic character sets. Open Sans was designed with an upright stress, open forms and a neutral, yet friendly appearance. It was optimized for print, web, and mobile interfaces, and has excellent legibility characteristics in its letterforms.
 
 ![Open Sans sample](https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Open_Sans_sample.svg/203px-Open_Sans_sample.svg.png)
 
