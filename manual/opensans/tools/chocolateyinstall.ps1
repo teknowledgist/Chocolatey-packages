@@ -2,10 +2,7 @@
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 
-$FontFiles = Get-ChildItem $toolsDir -Include ('*.fon','*.otf','*.ttc','*.ttf') -Recurse | 
-                  Select-Object -ExpandProperty FullName
-
-$Installed = Add-Font $FontFiles -Multiple
+$Installed = Add-Font "$toolsDir\*.ttf" -Multiple
 
 If ($Installed -eq 0) {
    Throw 'All font installation attempts failed!'
