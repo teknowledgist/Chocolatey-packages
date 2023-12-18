@@ -13,8 +13,8 @@ $packageArgs = @{
    packageName   = $env:ChocolateyPackageName
    softwareName  = 'FastCopy' 
    fileType      = 'EXE'
-   url           = 'https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy5.4.2_installer.exe'
-   checksum      = '378b93f3d80a09b6f7f80423363bf8add13a1e40dc92862b5dfc260ab665c7f8'
+   url           = 'https://raw.githubusercontent.com/FastCopyLab/FastCopyDist2/main/FastCopy5.4.3_installer.exe'
+   checksum      = 'b309e5c857e950d72228313ca991134c5a9c7fc723e7a4e9c0e34b4027e6f939'
    checksumType  = 'sha256'
    silentArgs    = "/silent /Extract /dir=`"$FolderOfPackage`""
    validExitCodes= @(0)

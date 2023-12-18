@@ -6,9 +6,9 @@ The latest version can be downloaded from the official download page:
 - https://sourceforge.net/projects/zint/files/
 
 or directly:
-- Version : 2.12.0
-- URL     : https://sourceforge.net/projects/zint/files/zint/2.12.0/zint-2.12.0-win32.zip
-- Checksum: 974A3562A9564E29A5387880C7FEDA21C9BFEFFF5C06E0668E167DB9CF3417BB
+- Version : 2.13.0
+- URL     : https://sourceforge.net/projects/zint/files/zint/2.13.0/zint-2.13.0-win32.zip
+- Checksum: 7F3E1C60F61C8D78623D7CEE438C1F4FB7F1F7C49D16ECBE456C3545C8B2A87D
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
