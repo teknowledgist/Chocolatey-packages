@@ -2,13 +2,16 @@ import-module au
 
 function global:au_GetLatest {
    $MainPage = 'https://www.digimizer.com'
-   $download_page = Invoke-WebRequest -Uri "$MainPage/download.php"
+   $HistoryPage = Invoke-WebRequest -Uri "$MainPage/history.php"
 
-   $FooterString = $download_page.AllElements | Where-Object {$_.id -eq 'footer'} |Select-Object -ExpandProperty innertext
-   $Version = $FooterString.split(' ') | Where-Object {($_ -match '\.') -and ($_ -match '[0-9.]+')}
+   $VersionString = $HistoryPage.AllElements | 
+                        Where-Object {$_.tagname -eq 'h2' -and $_.innertext -match '^Version'} |
+                        Select-Object -ExpandProperty innertext -First 1
+   $Version = $VersionString.split(' ')[-1]
    if ($Version.length -eq 1) { $Version = "$Version.0.0" }
 
-   $urlstub = $download_page.links | Where-Object {$_.href -like '*.msi'} | Select-Object -ExpandProperty href -first 1
+   $DownloadPage = Invoke-WebRequest -Uri "$MainPage/download/"
+   $urlstub = $DownloadPage.links | Where-Object {$_.href -like '*.msi'} | Select-Object -ExpandProperty href -first 1
    $url = $MainPage + "/download/" + $urlstub
 
    return @{ Version = $version; URL = $url }

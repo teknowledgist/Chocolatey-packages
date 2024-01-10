@@ -5,8 +5,12 @@ function global:au_GetLatest {
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
    $version = $Release.Tag.trim('v.')
-   $URL32 = $Release.Assets | Where-Object {$_.FileName -match 'win32\.zip'} | Select-Object -First 1 -ExpandProperty DownloadURL
-   $URL64 = $Release.Assets | Where-Object {$_.FileName -match 'win64\.zip'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $URL32 = $Release.Assets | 
+               Where-Object {$_.FileName -match 'win(-intel)?32\.zip'} | 
+               Select-Object -First 1 -ExpandProperty DownloadURL
+   $URL64 = $Release.Assets | 
+               Where-Object {$_.FileName -match 'win(-intel)?64\.zip'} | 
+               Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
             AppVersion = $Version
