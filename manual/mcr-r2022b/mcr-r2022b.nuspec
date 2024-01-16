@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mcr-r2022b</id>
     <version>9.13.0.2399474</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mcr-r2022a</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mcr-r2022b</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>MATLAB Compiler Runtime R2022b</title>
