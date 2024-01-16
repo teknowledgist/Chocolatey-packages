@@ -7,8 +7,8 @@ $WorkSpace = Join-Path $env:TEMP "$env:ChocolateyPackageName.$Version"
 $WebFileArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = Join-Path $WorkSpace "$env:ChocolateyPackageName.zip"
-   Url64bit     = 'https://ssd.mathworks.com/supportfiles/downloads/R2022b/Release/4/deployment_files/installer/complete/win64/MATLAB_Runtime_R2022b_Update_4_win64.zip'
-   Checksum64   = 'CAFC0DF5ACFDA1DCF81387D660133F01FC7A52E8568466CFCEBA22FA01260B99'
+   Url64bit     = 'https://ssd.mathworks.com/supportfiles/downloads/R2022b/Release/7/deployment_files/installer/complete/win64/MATLAB_Runtime_R2022b_Update_7_win64.zip'
+   Checksum64   = 'c9e4cce3fa54e0097fa43f661f1c247fa7e361640453e3b854dfe24c16dc936f'
    ChecksumType = 'sha256'
    GetOriginalFileName = $true
 }

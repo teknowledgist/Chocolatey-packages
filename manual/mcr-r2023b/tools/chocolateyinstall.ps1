@@ -1,14 +1,14 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$Version     = '9.11'
+$Version     = '23.2'
 
 $WorkSpace = Join-Path $env:TEMP "$env:ChocolateyPackageName.$Version"
 
 $WebFileArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = Join-Path $WorkSpace "$env:ChocolateyPackageName.zip"
-   Url64bit     = 'https://ssd.mathworks.com/supportfiles/downloads/R2021b/Release/5/deployment_files/installer/complete/win64/MATLAB_Runtime_R2021b_Update_5_win64.zip'
-   Checksum64   = '7b0319d669a39b11608fdd183580e0f2c454d473e0364be99a55fc1cde67cf2a'
+   Url64bit     = 'https://ssd.mathworks.com/supportfiles/downloads/R2023b/Release/5/deployment_files/installer/complete/win64/MATLAB_Runtime_R2023b_Update_5_win64.zip'
+   Checksum64   = 'fe8ea8d184c9c38dc56d24ea3b5b067d5a8aa7dba81a6ed3dd72cb7b76b5e6c1'
    ChecksumType = 'sha256'
    GetOriginalFileName = $true
 }
