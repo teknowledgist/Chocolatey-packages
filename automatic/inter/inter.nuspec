@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>inter</id>
+    <version>4.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/inter</packageSourceUrl>
+    <owners>Teknowledgist,rahuliyer95,jozef.izso</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Inter Font</title>
+    <authors>The Inter UI Project Authors, Rasmus Andersson</authors>
+    <projectUrl>https://github.com/rsms/inter</projectUrl>
+    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/roboto.font.png</iconUrl>-->
+    <copyright>Copyright © 2016 The Inter Project Authors</copyright>
+    <licenseUrl>https://github.com/rsms/inter/blob/master/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/rsms/inter</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/rsms/inter/issues</bugTrackerUrl>
+    <tags>inter font text ttc ttf FOSS embedded</tags>
+    <summary>The Inter font family</summary>
+    <description>Inter is a typeface carefully crafted and designed for computer screens. Inter features a tall x-height to aid in readability of mixed-case and lower-case text. Inter is a variable font with several OpenType features, like contextual alternates that adjusts punctuation depending on the shape of surrounding glyphs, slashed zero for when you need to disambiguate "0" from "o", tabular numbers, etc.
+
+Inter can be classified as a geometric neo-grotesque, similar in style to Roboto, Apple San Francisco, Akkurat, Asap, Lucida Grande and more. Some trade-offs were made in order to make this typeface work really well at small sizes.
+
+[![Sample](misc/readme/intro.png)](https://rsms.me/inter/samples/)
+    </description>
+    <releaseNotes>https://github.com/rsms/inter/releases</releaseNotes>
+    <!-- =============================== -->
+
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.4" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
