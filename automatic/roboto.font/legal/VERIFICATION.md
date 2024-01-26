@@ -8,9 +8,9 @@ https://github.com/googlefonts/roboto-classic/releases/latest
 
 or directly:
 
-- Version : 3.008
-- URL     : https://github.com/googlefonts/roboto-classic/releases/download/v3.008/Roboto_v3.008.zip
-- SHA256  : 64C51D5D69C36C9A71DCA214CD80B699E637A57D1C19744EF46A23F91347BD24
+- Version : 3.009
+- URL     : https://github.com/googlefonts/roboto-classic/releases/download/v3.009/Roboto_v3.009.zip
+- SHA256  : E33ED54B1F9E23DF82B780C6C17043A49CAB46FA9C661DC48C56671AC6868864
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
