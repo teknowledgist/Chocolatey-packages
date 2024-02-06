@@ -21,4 +21,4 @@ You can use one of the following methods to obtain the checksum:
 ## License
 File 'LICENSE.txt' comes from:
 
-- https://github.com/googlefonts/roboto-classic/blob/master/LICENSE.txt
+- https://github.com/googlefonts/roboto-classic/blob/main/OFL.txt
