@@ -13,7 +13,7 @@
     <projectUrl>https://fonts.google.com/specimen/Roboto</projectUrl>
     <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/roboto.font.png</iconUrl>-->
     <copyright>Copyright © 2011 Google Inc.</copyright>
-    <licenseUrl>http://www.apache.org/licenses/LICENSE-2.0</licenseUrl>
+    <licenseUrl>https://github.com/googlefonts/roboto-classic/blob/main/OFL.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/googlefonts/roboto-classic</projectSourceUrl>
     <bugTrackerUrl>https://github.com/googlefonts/roboto-classic/issues</bugTrackerUrl>
