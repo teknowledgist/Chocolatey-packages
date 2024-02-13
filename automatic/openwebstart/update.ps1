@@ -1,18 +1,17 @@
 import-module au
 
 function global:au_GetLatest {
-   $Repo = 'https://github.com/karakun/OpenWebStart'
-   $Release = Get-LatestReleaseOnGitHub -URL $Repo
+   $Meta = Get-EvergreenApp openwebstart
 
-   $version = $Release.Tag.trim('v.')
-   $URL32 = $Release.Assets | Where-Object {$_.FileName -match 'x32.*\.exe'} | Select-Object -Last 1 -ExpandProperty DownloadURL
-   $URL64 = $Release.Assets | Where-Object {$_.FileName -match 'x64.*\.exe'} | Select-Object -Last 1 -ExpandProperty DownloadURL
+   $x86 = $Meta | Where-Object {$_.architecture -eq 'x86'}
+   $x64 = $Meta | Where-Object {$_.architecture -eq 'x64'}
 
    return @{ 
-      Version = $version
-      URL32   = $URL32
-      URL64   = $URL64
-   }
+            Version    = $x64.Version
+            URL64      = $x64.URI
+            URL32      = $x86.URI
+           }
+
 }
 
 
@@ -21,9 +20,9 @@ function global:au_SearchReplace {
       "legal\VERIFICATION.md" = @{
             "(^- Version +:).*"     = "`${1} $($Latest.Version)"
             "(^- x86 URL +:).*"     = "`${1} $($Latest.URL32)"
-            "(^- x86 SHA256 +:).*" = "`${1} $($Latest.Checksum32)"
+            "(^- x86 SHA256 +:).*"  = "`${1} $($Latest.Checksum32)"
             "(^- x64 URL +:).*"     = "`${1} $($Latest.URL64)"
-            "(^- x64 SHA256 +:).*" = "`${1} $($Latest.Checksum64)"
+            "(^- x64 SHA256 +:).*"  = "`${1} $($Latest.Checksum64)"
       }
    }
 }
