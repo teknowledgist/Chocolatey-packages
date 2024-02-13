@@ -1,38 +1,29 @@
 import-module au
 
 function global:au_GetLatest {
-   $Repo = 'https://github.com/praat/praat'
-   $Release = Get-LatestReleaseOnGitHub -URL $Repo
+   $Meta = Get-EvergreenApp praat | Where-Object {$_.architecture -eq 'x86'}
 
-   $version = $Release.Tag.trim('v.')
-   $URL32 = $Release.Assets | 
-               Where-Object {$_.FileName -match 'win(-intel)?32\.zip'} | 
-               Select-Object -First 1 -ExpandProperty DownloadURL
-   $URL64 = $Release.Assets | 
-               Where-Object {$_.FileName -match 'win(-intel)?64\.zip'} | 
-               Select-Object -First 1 -ExpandProperty DownloadURL
+   $x86 = $Meta | Where-Object {$_.uri -match '32\.zip$'}
+   $x64 = $Meta | Where-Object {$_.uri -match '64\.zip$'}
 
    return @{ 
-            AppVersion = $Version
-            Version    = $version
-            URL32      = $URL32
-            URL64      = $URL64
+            Version    = $x86.Version
+            URL32      = $x86.URI
+            URL64      = $x64.URI
            }
 }
 
-
 function global:au_SearchReplace {
     @{
-      "tools\VERIFICATION.txt" = @{
-         "(^Version\s+:).*"      = "`${1} $($Latest.AppVersion)"
-         "(^x86 URL\s+:).*"      = "`${1} $($Latest.URL32)"
-         "(^x86 Checksum\s+:).*" = "`${1} $($Latest.Checksum32)"
-         "(^x64 URL\s+:).*"      = "`${1} $($Latest.URL64)"
-         "(^x64 Checksum\s+:).*" = "`${1} $($Latest.Checksum64)"
+      "legal\VERIFICATION.md" = @{
+         "(^- Version\s+:).*"      = "`${1} $($Latest.Version)"
+         "(^- x86 URL\s+:).*"      = "`${1} $($Latest.URL32)"
+         "(^- x86 Checksum\s+:).*" = "`${1} $($Latest.Checksum32)"
+         "(^- x64 URL\s+:).*"      = "`${1} $($Latest.URL64)"
+         "(^- x64 Checksum\s+:).*" = "`${1} $($Latest.Checksum64)"
       }
     }
 }
-
 
 function global:au_BeforeUpdate() { 
    Write-host "Downloading Praat $($Latest.AppVersion) installer files"
