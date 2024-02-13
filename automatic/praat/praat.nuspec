@@ -44,5 +44,6 @@ Much of the "official" documentation is not designed to help linguists (who may 
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
