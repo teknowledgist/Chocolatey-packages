@@ -1,31 +1,27 @@
 $ErrorActionPreference = 'Stop'
-$packageName = 'siv' 
-$toolsDir    = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$bits        = Get-ProcessorBits
-$file        = Get-Item $toolsDir\siv*.zip
 
+$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
+$FolderOfPackage = Split-Path -Parent $toolsDir
+$fileLocation = (Get-ChildItem -Path $toolsDir -filter '*.zip' |
+                        Sort-Object lastwritetime | Select-Object -Last 1).FullName
 
-
-$packageArgs = @{
-  packageName    = $packageName
-  Destination    = $toolsDir
-  FileFullPath   = "$file"
+$UnZipArgs = @{
+   packageName    = $env:ChocolateyPackageName
+   FileFullPath   = $fileLocation
+   Destination    = Join-Path $FolderOfPackage "$($env:ChocolateyPackageName)_v$env:ChocolateyPackageVersion"
 }
+Get-ChocolateyUnzip @UnZipArgs
 
-Get-ChocolateyUnzip @packageArgs
+$bits = Get-OSArchitectureWidth
 
-if ($bits -eq 64)
-   {
-    Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\SIV.lnk" -targetPath "$toolsDir\SIV64X.exe" -WorkingDirectory "$toolsDir"
-    Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\SIV.lnk" -targetPath "$toolsDir\SIV64X.exe"    
-   } else {
-    Install-ChocolateyShortcut -shortcutFilePath "$env:Public\Desktop\SIV.lnk" -targetPath "$toolsDir\SIV32X.exe" -WorkingDirectory "$toolsDir"
-    Install-ChocolateyShortcut -shortcutFilePath "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\SIV.lnk" -targetPath "$toolsDir\SIV32X.exe"       
-   }
+$ShortcutArgs = @{
+   ShortcutFilePath = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs\SIV.lnk'
+   TargetPath       = (Get-ChildItem $UnZipArgs.Destination -Filter "*$($bits)X.exe").FullName
+}
+Install-ChocolateyShortcut @ShortcutArgs
    
-Remove-Item "$toolsDir\*.zip" | Out-Null
+Remove-Item $fileLocation
 
-Get-ChildItem -Path $toolsDir -Recurse | Where {
- $_.Extension -eq '.exe'} | % {
- New-Item $($_.FullName + '.ignore') -Force -ItemType file
-} | Out-Null
+Get-ChildItem -Path $UnZipArgs.Destination -filter *.exe -Recurse | ForEach-Object {
+      $null = New-Item $($_.FullName + '.ignore') -Force -ItemType file
+}

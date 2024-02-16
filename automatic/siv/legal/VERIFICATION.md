@@ -2,13 +2,18 @@
 Verification is intended to assist the Chocolatey moderators and community in verifying that this package's contents are trustworthy.
 
 ## Download
-The latest version can be downloaded from the official download page:
-- https://sourceforge.net/projects/zint/files/
+The latest version can be downloaded from the official homepage:
+- <http://rh-software.com/>
+
+or the official mirror:
+
+- <https://www.filecroco.com/download-system-information-viewer/download/>
 
 or directly:
-- Version : 2.13.0
-- URL     : https://sourceforge.net/projects/zint/files/zint/2.13.0/zint-2.13.0-win32.zip
-- Checksum: 7F3E1C60F61C8D78623D7CEE438C1F4FB7F1F7C49D16ECBE456C3545C8B2A87D
+- Version  : 5.75
+- URL      : https://www.filecroco.com/download-file/download-system-information-viewer/291/282/
+- Checksum : 59DFE9E45BA9092AEF2670950B880DE7B04631A43E6EC3BA9609ED019F6327BA
+
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
@@ -17,4 +22,4 @@ You can use one of the following methods to obtain the checksum:
 
 
 ## License
-File 'LICENSE.txt' is compiled from multiple sources identified in the file.
+File 'LICENSE.md' contains information about usage and redistribution statements.

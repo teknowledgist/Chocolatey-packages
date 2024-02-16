@@ -1,5 +1,7 @@
-$ErrorActionPreference = 'Stop'
-$packageName = 'siv' 
+$StartMenuFolder = Join-Path -Path $env:ProgramData -ChildPath 'Microsoft\Windows\Start Menu'
 
-remove-item "$env:Public\Desktop\SIV.lnk" -Force -ErrorAction SilentlyContinue
-remove-item "$env:ProgramData\Microsoft\Windows\Start Menu\Programs\SIV.lnk" -Force -ErrorAction SilentlyContinue
+$StartShortcuts = Get-ChildItem -Path $StartMenuFolder -Filter 'SIV.lnk' -Recurse
+
+Foreach ($Shortcut in $StartShortcuts) {
+   Remove-Item -Path $Shortcut.fullname -Force
+}
