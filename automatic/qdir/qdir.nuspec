@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>qdir</id>
+    <version>11.47</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qdir</packageSourceUrl>
+    <owners>Teknowledgist,zersh</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Q-Dir</title>
+    <authors>Nenad Hrg</authors>
+    <projectUrl>https://www.softwareok.com/?seite=Freeware/Q-Dir</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@c318d1e2838459abeecbe0bb72bd5313cac56545/Icons/qdir_icon.png</iconUrl>
+    <copyright>Coyright © Nenad Hrg (SoftwareOK.com) 2008-2024</copyright>
+    <licenseUrl>https://www.softwareok.com/?seite=Freeware/Q-Dir/Eula</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>http://www.softwareok.com/?seite=faq-Q-DIR</docsUrl>
+    <mailingListUrl>https://www.softwareok.com/?seite=News</mailingListUrl>
+    <bugTrackerUrl>https://www.softwareok.com/?seite=kontakt</bugTrackerUrl>
+    <tags>qdir q-dir quad directory explorer files folders freeware embedded</tags>
+    <summary>A great alternative file manager for Windows with Quadro-View.</summary>
+    <description>The Quad-Directory-Explorer makes your files and folders easy to manage, either installed or as a Portable Windows program as an alternative Freeware to Windows File Explorer.
+
+Fast and easy access to your hard disks ergo advanced file management for network folders, USB-sticks, floppy disks and other storage devices.
+
+![Screenshot of Q-Dir](http://www.softwareok.com/img/ss/g_en/Q-Dir2.jpg)
+
+### Key features
+* [File management in 4-window with tabs](https://www.softwareok.com/?page=Windows/Tip/Q-Dir/50)
+* [Folder size with extra information](https://www.softwareok.com/?seite=faq-Q-DIR&amp;faq=33)
+* [Color filter for files and folders](https://www.softwareok.com/?seite=faq-Q-DIR&amp;faq=6)
+* [Classic and modern address bar](https://www.softwareok.com/?page=Windows/Images/Q-Dir/3)
+* [Directory structure with visible tree branches](https://www.softwareok.com/?page=Windows/Images/Q-Dir/5)
+* [Print what you see in Explorer Views](https://www.softwareok.com/?page=Windows/Images/Q-Dir/10)
+* Based on the MS Windows OS File Manager
+* [Full Unicode Support  ](https://www.softwareok.com/?page=Windows/Info/Q-Dir/31)
+* [Save folder combinations as favorites](https://www.softwareok.com/?seite=faq-Q-DIR&amp;faq=12)
+* [Mark selected folders and files](https://www.softwareok.com/?seite=faq-Q-DIR&amp;faq=11)
+* [Multilingual](https://www.softwareok.com/?seite=Freeware/Q-Dir#ML)
+* [Low System Resource usage](https://www.softwareok.com/?page=Windows/10/Quick-Tip/49)
+
+### Language options
+By default, this package will install the English (US) language version.  Other language installations can be requested using the `Language` Package Parameter with a language code:
+
+* **ar** = Arabic
+* **bg** = Bulgarian
+* **zh-CN** = Chinese (Simplified)
+* **zh-TW** = Chinese (Traditional)
+* **hr** = Croatian
+* **cs** = Czech
+* **da** = Danish
+* **nl** = Dutch
+* **en** = English
+* **en-GB** = English (UK)
+* **et** = Estonian
+* **fil** = Filipino
+* **fi** = Finnish
+* **fr** = French
+* **de** = German
+* **el** = Greek
+* **hu** = Hungarian
+* **id** = Indonesian
+* **it** = Italian
+* **ja** = Japanese
+* **ko** = Korean
+* **ms** = Malay
+* **nb** = Norsk (Bokmål)
+* **fa** = Persian
+* **pl** = Polish
+* **pt-BR** = Portuguese (Brazil)
+* **ro** = Romanian
+* **ru** = Russian
+* **sr** = Serbian
+* **sk** = Slovak
+* **sl** = Slovenian
+* **es** = Spanish
+* **es-AR** = Spanish (Argentinean)
+* **es-CO** = Spanish (Columbian)
+* **sv** = Swedish
+* **tr** = Turkish
+* **uk** = Ukrainian
+
+Example:  `choco install qdir --params="'/Language:es'"`
+
+    </description>
+    <releaseNotes>https://www.softwareok.com/?seite=Freeware/Q-Dir/History</releaseNotes>
+    <!-- =============================== -->      
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
