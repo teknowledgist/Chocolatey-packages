@@ -1,0 +1,39 @@
+From:  application installation directory.
+=================================================
+
+DiskGenius End User License Agreement
+
+PLEASE READ THE FOLLOWING TERMS AND CONDITIONS CAREFULLY BEFORE USING THIS SOFTWARE, INCLUDING DISCLAIMERS AND RESTRICTIONS ON USERS' RIGHT. BY USING THIS APPLICATION, YOU AGREE TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT.
+
+THIS DISKGENIUS END USER LICENSE AGREEMENT (THE "AGREEMENT") IS A LEGALLY BINDING AGREEMENT BETWEEN YOU (EITHER AN INDIVIDUAL OR A SINGLE ENTITY) AND EASSOS TECH CO., LTD., THE DEVELOPER OF DISKGENIUS (THE "SOFTWARE"). PLEASE READ THESE TERMS CAREFULLY BEFORE USING THE SOFTWARE. ANY SOFTWARE, ELECTRONIC DOCUMENTS, ETC. RELATED TO THIS AGREEMENT SHALL BE GRANTED TO YOU IN ACCORDANCE WITH THE TERMS OF THIS AGREEMENT. THIS AGREEMENT SHALL APPLY TO ANY NEW RELEASES AND UPDATES RELATED TO THE SOFTWARE. INSTALLING AND USING THE SOFTWARE SIGNIFIES ACCEPTANCE OF THESE TERMS AND CONDITIONS OF THE AGREEMENT. IF YOU DO NOT AGREE TO THE TERMS OF THE AGREEMENT, DO NOT INSTALL OR USE THE SOFTWARE.
+
+1. LICENSE GRANT.  Eassos Tech. Co., Ltd. grants you a license to use one copy of the version of this software on any one system for as many licenses as you purchase.  "You" means the company, entity or individual whose funds are used to pay the license fee.  "Use" means storing, loading, installing, executing or displaying the software.  You may not modify the software or disable any licensing or control features of the software except as an intended part of the software's programming features.  This license is not transferable to any other system, or to another organization or individual.  You are expected to use the software on your system and to thoroughly evaluate its usefulness and functionality before making a purchase.  This "try before you buy" approach is the ultimate guarantee that the software will perform to your satisfaction, therefore, you understand and agree that there is no refund policy for any purchase of the software.
+
+2. OWNERSHIP. All titles, copyrights and other intellectual property rights in and to the Software product (including but not limited to any images, icons, buttons, artwork, design elements, photographs, animations, video, audio, text and "applets", incorporated into the Software), the accompanying materials, and any copies of the Software, are owned by Eassos. You must not copy and modify these materials publicly.
+
+3. THE SOFTWARE PRODUCT IS SHAREWARE. YOU CAN DOWNLOAD, INSTALL, COPY AND DISTRIBUTE THE UNREGISTERED VERSION OF THE SOFTWARE FOR NON-COMMERCIAL USE, BUT THE SOFTWARE INTEGRITY MUST BE GUARANTEED. NO COMMERCIAL SELLING, COPY AND DISTRIBUTION, AND COMMERCIAL USE OF THE REGISTERED VERSION, INCLUDING SOFTWARE PRE-INSTALLATION AND BUNDLING, IS ALLOWED WITHOUT PRIOR WRITTEN PERMISSION FROM THE COPYRIGHT HOLDER. YOU MUST NOT ADD THIS SOFTWARE TO ANY COMMERCIAL CAMPAIGNS OR PRODUCTS WITHOUT WRITTEN PERMISSION. THIS SOFTWARE CANNOT BE USED FOR COMMERCIAL PURPOSES.
+
+4. REVERSE ENGINEERING. You agree that you will not attempt to reverse compile, modify, translate, or disassemble the Software in whole or in part. You cannot modify the Software or disable any licensing or control features of the Software. The modified Software must not be included in devices like CD/DVD, disk, network, etc. or installed on computer. Otherwise, the software developer reserves the right to pursue legal and infringer will bear legal liability arising therefrom.
+
+5. WARRANTIES AND DISCLAIMERS. In view of the differences and complexity of computer hardware and software, the Software cannot guarantee all functions perform normally and achieve expected result under any circumstances. The software developer does not take any responsibility for any consequences caused by the use of the Software.
+
+6. The software developer is not responsible for damages caused by the use or installation of the Software. These damages may result from conflicts with other installed applications or inability to use the Software. The software develop is not liable for data loss, damages, loss of profits or any other kind of loss while using or misusing this Software.
+
+7. You may need to request registration from software developer or agent to facilitate usage of the Software and get technical support. Registering the Software may need your information or computer hardware information. The software developer does not track or monitor your computer, nor collects or reveals personal information. Besides, your information won't be provided to any third party. Meanwhile, the Software does not contain any malicious code to destroy or collect your privacy information or monitor computer.
+
+8. The Software has been thoroughly tested, but it is not guaranteed to be fully compatible with all hardware. If there is any incompatibility issue, you can report to the developer. If the issue cannot be solved, you can delete the software.
+
+9. Since the Software can be downloaded and distributed through the network, it is not possible to guarantee whether the software which is obtained from non-specified site or other media is infected with computer virus. The developer is not liable for damages caused therefrom. 
+
+10. THE SOFTWARE PROVIDES FUNCTIONS RELATED TO DISK, FILE SYSTEM, FILE OPERATIONS AND SO ON. ANY FUNCTION MAY CAUSE DAMAGE TO USERS' COMPUTER DUE TO PARTICULARITY OF THE SOFTWARE. USERS SHOULD USE THE SOFTWARE CORRECTLY. THE USE OF THE SOFTWARE MEANS THAT USERS ARE AWARE OF THE FUNCTIONAL FEATURES, HAVE MASTERED NECESSARY BACKGROUND KNOWLEDGE AND KNOW ALL POSSIBLE CONSEQUENCES CAUSED BY ALL OPERATIONS. NO WARRANTY OF ANY KIND IS EXPRESSED OR IMPLIED. YOU USE AT YOUR OWN RISK. EASSOS TECH. CO., LTD. WILL NOT BE LIABLE FOR DATA LOSS, DAMAGES, LOSS OF PROFITS OR ANY OTHER KIND OF LOSS WHILE USING OR MISUSING THIS SOFTWARE.
+
+11. The Software will keep updating based on needs of users. The software developer will provide information support such as user manuals, Emails, etc. but there is no guarantee that support content and functions do not change.
+
+12. The Software may collect information about your use of the software and feedback from time to time in order to improve functionality and service quality. We do not collect personal information such as name, address, and contact information as well as file content related to security. Any information will be kept strictly confidential.
+
+13. ONCE YOU PURCHASE AND REGISTER THE SOFTWARE, BECOMING A REGISTERED USER, THE SOFTWARE TURNS TO THE REGISTERED VERSION. YOU CAN USE THE REGISTERED SOFTWARE ON YOUR OWN COMPUTER ONLY, NOT ALLOWED TO SHARE IT WITH ANY THIRD PARTY. YOU MAY NOT PROVIDE LICENSE CODE, LICENSE KEY AND OTHER INFORMATION FOR ANY THIRD PARTY INCLUDING ALL KINDS OF INTERNET MEDIA. OTHERWISE, THE SOFTWARE DEVELOPER HAS THE RIGHT TO RESTRICT SOFTWARE USAGE THROUGH TECHNICAL METHOD AND THE USER SHALL BE INVESTIGATED FOR LEGAL RESPONSIBILITY.
+
+14. If you do not agree with or violate this Agreement, the Agreement terminates automatically and you must remove the Software.
+
+Website: https://www.diskgenius.com
+Email:  support@eassos.com
