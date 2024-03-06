@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>openboard</id>
+    <version>1.7.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/openboard</packageSourceUrl>
+    <owners>Teknowledgist, petervbeck</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>OpenBoard</title>
+    <authors>Open Education Foundation</authors>
+    <projectUrl>https://openboard.ch</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/OpenBoard-org/OpenBoard-Website@563642407f13fea118f092fcce37ac2d97c3c45d/images/openboard-logo.png</iconUrl>
+    <copyright>Copyright © 2013 Open Education Foundation</copyright>
+    <licenseUrl>https://github.com/OpenBoard-org/OpenBoard#GPL-3.0-1-ov-file</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://openboard.ch/documentation.en.html</docsUrl>
+    <bugTrackerUrl>https://github.com/OpenBoard-org/OpenBoard/issues</bugTrackerUrl>
+    <tags>openboard whiteboard education school university FOSS embedded</tags>
+    <summary>Interactive whiteboard for schools and universities</summary>
+    <description>OpenBoard is an open source cross-platform teaching software for interactive whiteboard designed primarily for use in schools and universities. It can be used both with interactive whiteboards or in a dual-screen setup with a pen-tablet display and a beamer. 
+
+![Screenshot of OpenBoard](https://cdn.jsdelivr.net/gh/OpenBoard-org/OpenBoard-Website@563642407f13fea118f092fcce37ac2d97c3c45d/images/openboard-screenshot-white-annoted.png)
+
+    </description>
+    <releaseNotes>https://github.com/OpenBoard-org/OpenBoard/releases</releaseNotes>
+    <dependencies>
+      <dependency id="vcredist140" version="14.30" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
