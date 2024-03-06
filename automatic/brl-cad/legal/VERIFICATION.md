@@ -6,9 +6,9 @@ BRL-CAD can be downloaded from:
 - https://github.com/BRL-CAD/brlcad/releases
 
 or directly:
-- Version  : 7.36.0
-- URL      : https://github.com/BRL-CAD/brlcad/releases/download/rel-7-36-0/BRL-CAD_7.36.0_win64.msi
-- Checksum : A5F3A1C5D1E0147C465266DC2500FD83BAAEA0F805C2EE3CE98FA7E785820CC0
+- Version  : 7.38.0
+- URL      : https://github.com/BRL-CAD/brlcad/releases/download/rel-7-38-0/BRL-CAD_7.38.0_win64.exe
+- Checksum : A0C76AACC8D553D1E9FD9E0F778F826A9A1523CC3BC5F405A1ED320ADD56A736
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

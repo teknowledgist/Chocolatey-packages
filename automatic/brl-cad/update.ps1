@@ -7,7 +7,7 @@ function global:au_GetLatest {
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
    $version = $Release.Tag.trim('rel-').replace('-','.')
-   $URL64 = $Release.Assets | Where-Object {$_.FileName -match '\.msi'} | Select-Object -Last 1 -ExpandProperty DownloadURL
+   $URL64 = $Release.Assets | Where-Object {$_.FileName -match '\.(msi|exe)'} | Select-Object -Last 1 -ExpandProperty DownloadURL
 
    return @{ 
       Version = $version
