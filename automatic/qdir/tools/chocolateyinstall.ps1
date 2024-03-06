@@ -57,13 +57,13 @@ if ($pp['Language']) {
    if ($LanguageTable."$($pp['Language'])") {
       $note = "Language code '{0}', '{1}' requested." -f $pp['Language'],$LanguageTable."$($pp['Language'])"[0]
       Write-Host $note -ForegroundColor Cyan
-      $SilentArgs = "/S langid={0}" -f $LanguageTable."$($pp['Language'])"[1]
+      $SilentArgs = "/silent admin nodesktop langid={0}" -f $LanguageTable."$($pp['Language'])"[1]
    } else {
       Throw "Language code '$($pp['Language'])' is not recognized."
    }
 } else {
    Write-Verbose 'Default English language will be installed.'
-   $SilentArgs = '/S langid=1'
+   $SilentArgs = '/S admin nodesktop langid=1'
 }
 
 $InstallArgs = @{
