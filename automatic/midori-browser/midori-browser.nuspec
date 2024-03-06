@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>midori-browser</id>
+    <version>11.2.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/midori-browser</packageSourceUrl>
+    <owners>Teknowledgist,adgillida,alexbh</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Midori</title>
+    <authors>Astian, Inc.</authors>
+    <projectUrl>https://astian.org/midori-browser</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@a8c4d5d22e7bd1cdd6502684772728ff27f8390f/Icons/midori_icon.png</iconUrl>
+    <copyright>Copyright 2022 Midori Browser &amp; Astian, Inc.</copyright>
+    <licenseUrl>https://github.com/goastian/midori-desktop?tab=License-1-ov-file#readme</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/goastian/midori-desktop</projectSourceUrl>
+    <mailingListUrl>https://github.com/goastian/midori-desktop/discussions</mailingListUrl>
+    <bugTrackerUrl>https://github.com/goastian/midori-desktop/issues</bugTrackerUrl>
+    <tags>midori-browser midori web browser privacy</tags>
+    <summary>A light, fast and secure browser that protects and loves to take care of your privacy and the security of your data.</summary>
+    <description>Midori Browser's motto is total privacy, because we don't spy on you, we don't sell invasive advertising, we don't generate profiles of you, because we provide you with tools like a VPN. We give you the best search engine focused on privacy because we don't know anything about you. We say total privacy because you are the owner of your information.
+
+### Features
+* **DNS Browsing** - DNS browsing allows safe and extremely fast browsing by blocking many trackers and advertisements. Midori has this option enabled by default.
+* **We do not spy on you** - Some browsers spy on your web activity, create profiles and sell user information to make money. Midori does not and never will. Thank you for trusting us.
+* **Tracker blocker** - Thanks to the integration of MidoriDNS we can block thousands of trackers in order to protect the privacy and security of our users while surfing the web.
+* **Private Tabs** - We have a strong focus on privacy and not only do you have private windows available, you also have private tabs. To guarantee a secure and private browsing experience on Midori.
+* **Password manager.** - Securely store your passwords and carry your access with you on your phone, tablets, computers and laptops Midori gives you the ability to fully control your information.
+* **Outside Cookie Dialogs** - The dialogs on cookies are tools that allow us to control our privacy on the web, but often becomes annoying, Midori solves this by automating the disappearance of banners.
+* **Themes** - Midori consists of thousands of themes that you can download, share and install, Midori gives you a complete customization experience.
+* **Toolbars** - Move, hide, delete, and you can edit all the toolbars, with Midori you can do this and much more. The sky is the limit
+* **Add-on support** - Extensions are small applications that allow you to extend the functions of the browser. With Midori you have thousands of extensions available.
+* **Integration with your OS** - Every operating system is different so Midori has options to change the appearance according to your operating system Windows, Linux &amp; Android soon MacOS and iOS.
+* **Augmented Reality** - To personalize your web browsing, with Midori you have the possibility to browse using augmented reality glasses.
+* **Total customization - Our commitment is to give you Midori, whatever you want to do you can do, Midori allows you to fully customize the entire browser.
+* **Workspaces** - Organize your tabs, divide your workspaces by categories and switch between spaces and environments quickly and instantly.
+* **Video pop-out** - With Midori you can play videos while doing other activities, from a floating window and from any position. 
+* **Reading mode** - With Midori you can eliminate any distractions while surfing and focus on what you need no advertising or pop-ups.
+* **Profile manager** - With Midori users have the possibility to separate their profile and separate all the characteristic information perfect for working environments.
+* **Suspended Tabs** - Midori has the ability to suspend hundreds of tabs that you are not using in order to improve resource and power consumption.
+* **Tab manager** - Organize all your tabs and get a more organized and efficient navigation, Midori has an advanced tab manager you can do whatever you want.
+* **Web Panels** - You can add any website to the sidebar, a great place for social networks, chats, music, videos and more.
+
+    </description>
+    <releaseNotes>https://github.com/goastian/midori-desktop/releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
