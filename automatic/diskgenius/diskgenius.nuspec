@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>diskgenius</id>
+    <version>5.5.1.1508</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/diskgenius</packageSourceUrl>
+    <owners>Teknowledgist,nonedotblue</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>DiskGenius (Free Edition)</title>
+    <authors>EASSOS Technology Co., Ltd.</authors>
+    <projectUrl>https://www.diskgenius.com/free.php</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@2002ce7777e445cf6b291b59d50bd59887a1c9f4/Icons/diskgenius_icon.png</iconUrl>
+    <copyright>Copyright © 1997-2024 Yizisoo Co., Ltd.</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/diskgenius/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.diskgenius.com/manual/</docsUrl>
+    <bugTrackerUrl>https://www.diskgenius.com/contactus.php</bugTrackerUrl>
+    <tags>diskgenius disk drive partition sector format recovery wipe Freeware</tags>
+    <summary>An all-in-one tool for data recovery, partition management, data backup, and disk utilities.</summary>
+    <description>With powerful capabilities and user-friendly interface, DiskGenius Free Edition provides a robust solution for individuals and organizations to seek efficient disk management.
+
+### Popular Features
+* **Partition HDD Rapidly** - Quickly partition/repartition a hard drive, SSD or USB drive into multiple partitions via simple steps to separate OS from user data or configure dual-boot on your computer.
+* **Wipe HDD/Partition** - Permanently and completely erase all data stored on the hard drive or partition so that data cannot be recovered by any data recovery software or experts.
+* **Migrate Windows OS** - Transfer the existing installation of Windows to a new HDD or SSD, including system files, personalized settings, installed applications, and data without reinstallation.
+* **Image Hard Drive** - Create a complete and exact copy of the disk and store everything into an image file. All files, partitions and boot sectors will be contained within the image file.
+* **Check HDD/SSD Health** - It can provide valuable insights into the health of your hard drives, external hard drives or SSDs by viewing the S.M.A.R.T. attributes or checking bad sectors.
+* **Clone HDD to SSD** - Cloning a hard drive to a smaller or larger SSD is convenient when you want to upgrade to a faster storage device or enhance overall system performance.
+* **Resize Partition** - Partition sizes on your disk no longer suit your needs? Easily resize/extend/split partitions without losing data to utilize the available disk space more effectively.
+* **Allocate Free Space** - Merge unallocated or unused disk space to an existing partition without losing data or create a new partition to make better use of the space.
+* **Permanently Delete Files** - Securely and completely delete files and overwrite the file data with zeros or random characters to ensure that sensitive or confidential data is not recoverable.
+* **Read Ext4/3/2 Drive** - View and open files stored on Ext4, Ext3 and Ext2 drives without installing any drivers, format a partition to Ext4/3/2, clone or resize Ext4/3/2 drives in Windows.
+
+
+    </description>
+    <releaseNotes>https://www.diskgenius.com/version-history.php</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
