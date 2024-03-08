@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qdir</id>
-    <version>11.47</version>
+    <version>11.48</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qdir</packageSourceUrl>
     <owners>Teknowledgist,zersh</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -18,7 +18,7 @@
     <docsUrl>http://www.softwareok.com/?seite=faq-Q-DIR</docsUrl>
     <mailingListUrl>https://www.softwareok.com/?seite=News</mailingListUrl>
     <bugTrackerUrl>https://www.softwareok.com/?seite=kontakt</bugTrackerUrl>
-    <tags>qdir q-dir quad directory explorer files folders freeware embedded</tags>
+    <tags>qdir q-dir quad directory explorer files folders freeware embedded notsilent</tags>
     <summary>A great alternative file manager for Windows with Quadro-View.</summary>
     <description>The Quad-Directory-Explorer makes your files and folders easy to manage, either installed or as a Portable Windows program as an alternative Freeware to Windows File Explorer.
 
@@ -83,7 +83,9 @@ By default, this package will install the English (US) language version.  Other 
 
 Example:  `choco install qdir --params="'/Language:es'"`
 
-    </description>
+---
+
+**NOTE:** *At this time, the Q-Dir **un**install is not silent and requires user interaction.*    </description>
     <releaseNotes>https://www.softwareok.com/?seite=Freeware/Q-Dir/History</releaseNotes>
     <!-- =============================== -->      
   </metadata>
