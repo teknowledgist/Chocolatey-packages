@@ -12,7 +12,7 @@ function global:au_GetLatest {
    if ($SPpage) {
       $SPlink = $SPpage.links | Where-Object {$_.innertext -match 'download megasync'} | 
                   Select-Object -ExpandProperty innertext -first 1
-      $SPversion = $SPlink -replace ".* ([0-9.]+) .*",'$1'
+      $SPversion = $SPlink -replace ".*? ([0-9.]+) .*",'$1'
    } else { $SPversion = '0.0' }
 
    $version = ([version]$GitVersion,[version]$SPversion | Measure-Object -Maximum).Maximum.ToString()

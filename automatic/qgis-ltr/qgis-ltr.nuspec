@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qgis-ltr</id>
-    <version>3.28.15</version>
+    <version>3.34.4</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qgis-ltr</packageSourceUrl>
     <owners>Snowflake, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -44,7 +44,7 @@ This parameter will be ignored if the newest version has the same major.minor va
 Uninstallation should remove only the installed, Chocolatey package version.
 
     </description>
-    <releaseNotes>https://qgis.org/en/site/forusers/visualchangelog328</releaseNotes>
+    <releaseNotes>https://qgis.org/en/site/forusers/visualchangelog334</releaseNotes>
     <dependencies>
       <dependency id="vcredist2008" version="9.0.30729" />
       <dependency id="vcredist2010" version="10.0.40219" />
