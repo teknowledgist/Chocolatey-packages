@@ -25,7 +25,7 @@
 
 MiKTeX comes with TeXworks, a TeX frontend which you can use it to edit and preview LaTeX documents. 
 
-![FancyLaTeXOutput](https://mathvault.ca/wp-content/uploads/fancy-latex-output.png)
+![FancyLaTeXOutput](https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@301db1311f91c822c45e341a0d5de9f75a58862c/automatic/miktex.install/latexoutput-transparencyoff.png)
 The sky is the limit when it comes to TeX/LaTeX, with drawings, chemical equations, syntax trees, circuit diagrams, mathematical expressions, proof systems, chessboards and more! ([Image source](https://mathvault.ca/latex-guide))
 
 MiKTeX's integrated package manager installs missing [components](https://miktex.org/packages) from the Internet, if required. 
