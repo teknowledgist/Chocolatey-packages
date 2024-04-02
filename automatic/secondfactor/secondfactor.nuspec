@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>secondfactor</id>
+    <version>1.4.4.2</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/secondfactor</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>SecondFactor</title>
+    <authors>Andrew Sachen</authors>
+    <projectUrl>https://realityripple.com/Software/Applications/SecondFactor/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@81b6f7396499de6b06ec5d42bd9bc7e9f1cce63c/Icons/secondfactor_icon.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://realityripple.com/license.php</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/RealityRipple/SecondFactor</projectSourceUrl>
+    <docsUrl>https://github.com/RealityRipple/SecondFactor#documentation</docsUrl>
+    <mailingListUrl>https://realityripple.com/comments.php?id=SF</mailingListUrl>
+    <bugTrackerUrl>https://github.com/RealityRipple/SecondFactor/issues</bugTrackerUrl>
+    <tags>secondfactor authentication MFA 2FA two-factor OTP otpauth qrcode FOSS embedded</tags>
+    <summary>A One-Time-Password Authenticator for Windows</summary>
+    <description>Need a two-factor authenticator for your computer? Tired of using your phone to log in to a website on your desktop? Introducing SecondFactor, a One-Time-Password Authenticator for Windows.
+
+SecondFactor supports Time-based One Time Passwords, which can be added directly, using a QR Code, or with an OTPAUTH URL. Your Secrets are stored securely for your local account, with the option to protect the program with a password for advanced security.
+
+The main window of SecondFactor provides quick access to multiple authentication profiles and lists not only the present code, but the last code and the next one as well, for ultimate convenience. Codes are copied automatically on click, saving you time and energy.
+
+Advanced support for SHA1, SHA256, and SHA512 is included by default, with either 6 or 8 digit codes, and a rolling time period of anywhere between one second to one day. Standard defaults are selected automatically, so if you just need the code to work, no worries!
+
+Profiles can be exported and imported using encrypted (AES-256) Zip files for easy backup and recovery of your authenticator secrets. Because Zip's AES implementation is not secure by modern standards, an enhanced encryption method is also available. 
+    </description>
+    <releaseNotes>https://realityripple.com/Software/Applications/SecondFactor/changes.php</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>

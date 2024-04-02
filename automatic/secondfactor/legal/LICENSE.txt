@@ -1,0 +1,23 @@
+From:  https://realityripple.com/license.php
+=============================================
+
+This is free and unencumbered software released into the public domain.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR 
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, 
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE 
+AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN 
+ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION 
+WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+Installing this application will also install the Root Certificate Authority 
+from RealityRipple Software in your computer's Trusted Root CA list.
+
+RealityRipple Root CA:
+Thumbprint (sha1): CB4D24D4 7385E3FA 2418FA60 5223CC8B 62F9E249
+
+RealityRipple Root CA (Legacy):
+Thumbprint (sha1): 901DEBD9 2572D0A1 58213129 80981E91 E754F276
+
+If you install these root certificates, Windows will automatically trust any 
+certificate issued by RealityRipple Software. See <http://ca.realityripple.com/>.
