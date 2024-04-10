@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>midori-browser</id>
-    <version>11.2.2</version>
+    <version>11.3.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/midori-browser</packageSourceUrl>
     <owners>Teknowledgist,adgillida,alexbh</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

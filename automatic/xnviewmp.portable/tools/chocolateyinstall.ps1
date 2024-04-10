@@ -16,7 +16,7 @@ $InstallArgs = @{
    Url           = 'https://download.xnview.com/XnViewMP-win.zip'
    Url64bit      = 'https://download.xnview.com/XnViewMP-win-x64.zip'
    Checksum      = '1fe75ba26f0b482f505387b42dbc65800dc96605171cbe77ddbe34e5cda83ee6'
-   Checksum64    = 'fe8ff249f48e4b31861f320f5f89bec2236d15bcde81632caf29699a20cd1f01'
+   Checksum64    = '9efcd535a865a5b7e4ed0575f7846588c72a36fcfb76918f63c70a90f4a4cf7e'
    ChecksumType  = 'SHA256'
 }
 

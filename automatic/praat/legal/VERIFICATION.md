@@ -10,11 +10,11 @@ or from the GitHub release page:
     https://github.com/praat/praat/releases/latest
 
 Direct download:   
-- Version      : 6.4.06
-- x86 URL      : https://github.com/praat/praat/releases/download/v6.4.06/praat6406_win-intel32.zip
-- x86 CheckSum : 31BCA9AEF421279DFBEDD3202DAB605B13CE63467FAD510489D27C38C1D6EC2F
-- x64 URL      : https://github.com/praat/praat/releases/download/v6.4.06/praat6406_win-intel64.zip
-- x64 CheckSum : 74AC76562D9C238310098F1D34A3B52FECBAA577FAE8DB84FC69D85335270787
+- Version      : 6.4.07
+- x86 URL      : https://github.com/praat/praat/releases/download/v6.4.07/praat6407_win-intel32.zip
+- x86 CheckSum : 8515B99C857D72ECB4D7CD4DF9BD8BFFF21967A7A2F81FA0F35702F27C0725F5
+- x64 URL      : https://github.com/praat/praat/releases/download/v6.4.07/praat6407_win-intel64.zip
+- x64 CheckSum : E3E5777DB5C23746E400F5F25A576FED01574F3D60D58DE6401AE0447C8CCC6B
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
