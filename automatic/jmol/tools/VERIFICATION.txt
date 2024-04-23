@@ -7,7 +7,7 @@ https://sourceforge.net/projects/jmol/files/Jmol-<Latest Version>-binary.zip
 
 Direct Download:
 
-Version  : 16.2.1
-URL      : https://sourceforge.net/projects/jmol/files/Jmol-16.2.1-binary.zip
-CheckSum : 29BB9A2FDD15C3AE9BA3979F40F3161E7E6C8333524F160B292BB1554F4F3C87
+Version  : 16.2.5
+URL      : https://sourceforge.net/projects/jmol/files/Jmol-16.2.5-binary.zip
+CheckSum : 299663B156B6B26DDC5CD983C0DE2052D46B7C882DD5B99EFFD5CF1FDC84C532
 

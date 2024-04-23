@@ -35,7 +35,7 @@ The Tableau Public installer has a some optional properties that can be utilized
 * `AUTOUPDATE=0` - To disable the default to install [maintenance upgrades (not release upgrades)](https://help.tableau.com/current/desktopdeploy/en-us/desktop_deploy_upgrade.htm#major_upgrade_vs_maintenance_upgrade).
 
 ##### Example install
-`choco install tableau-desktop --ia '"DESKTOPSHORTCUT=0 SENDTELEMETRY=0"'`
+`choco install tableau-public --ia '"DESKTOPSHORTCUT=0 SENDTELEMETRY=0"'`
 
 
     </description>
