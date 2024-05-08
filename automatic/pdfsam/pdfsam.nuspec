@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pdfsam</id>
-    <version>5.2.2</version>
+    <version>5.2.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdfsam</packageSourceUrl>
     <owners>Teknowledgist, CDuv</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -34,7 +34,7 @@
     </description>
     <releaseNotes>https://github.com/torakiki/pdfsam/releases/latest</releaseNotes>
     <dependencies>
-      <dependency id="pdfsam.install" version="[5.2.2]" />
+      <dependency id="pdfsam.install" version="[5.2.3]" />
     </dependencies>
   </metadata>
   <files>

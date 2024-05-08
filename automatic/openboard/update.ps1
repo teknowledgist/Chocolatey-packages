@@ -19,9 +19,9 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
    @{
       "legal\VERIFICATION.md" = @{
-            "(^- Version:).*" = "`${1} $($Latest.Version)"
-            "(^- URL:).*"     = "`${1} $($Latest.URL32)"
-            "(^- SHA256+:).*" = "`${1} $($Latest.Checksum32)"
+            "(^- Version\s*:).*" = "`${1} $($Latest.Version)"
+            "(^- URL\s*:).*"     = "`${1} $($Latest.URL32)"
+            "(^- Checksum\s*:).*" = "`${1} $($Latest.Checksum32)"
       }
    }
 }
