@@ -9,19 +9,19 @@ if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
 
-$ZipFile = 'Text-Grab-Self-Contained-2024-04-23.zip'
+$ZipFile = Get-ChildItem $toolsDir -filter '*.zip' | Select-Object -ExpandProperty fullname
 
 $UnZipArgs = @{
    packageName    = $env:ChocolateyPackageName
-   FileFullPath   = Join-Path $toolsDir $ZipFile
+   FileFullPath   = $ZipFile
    Destination    = Join-Path $FolderOfPackage "$($env:ChocolateyPackageName)_v$env:ChocolateyPackageVersion"
 }
 Get-ChocolateyUnzip @UnZipArgs
 
-Remove-Item (Join-Path $toolsDir $ZipFile) -Force 
+Remove-Item $ZipFile -Force 
 
 $ShortcutArgs = @{
-   ShortcutFilePath = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs\Text-Grab.lnk'
+   ShortcutFilePath = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs\Giada.lnk'
    TargetPath       = (Get-ChildItem $UnZipArgs.Destination -filter *.exe -Recurse).fullname
 }
 Install-ChocolateyShortcut @ShortcutArgs

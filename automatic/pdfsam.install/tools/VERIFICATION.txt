@@ -9,6 +9,6 @@ or:
 
 Direct download:
 
-Version  : 5.2.2
-URL      : https://github.com/torakiki/pdfsam/releases/download/v5.2.2/pdfsam-5.2.2.msi
-CheckSum : C6EBDC38668E6E919D389CDFCA29E7691EA66D8CD0781E5E67C1E09029C8704B
+Version  : 5.2.3
+URL      : https://github.com/torakiki/pdfsam/releases/download/v5.2.3/pdfsam-5.2.3.msi
+CheckSum : 62E082CC9BD2EAD4A17B88145DE489BA37A410C880C2BE368F17316A2CD37CD2

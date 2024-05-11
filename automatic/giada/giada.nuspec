@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>giada</id>
+    <version>1.0.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/giada</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Giada (portable)</title>
+    <authors>monocasual laboratories</authors>
+    <projectUrl>https://www.giadamusic.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/monocasual/giada@eb3c9f0137f35b0c2fab8fbc6171c1d797b63aa4/extras/giada-logo.png</iconUrl>
+    <!--<copyright>not found, GPL</copyright> -->
+    <licenseUrl>https://github.com/monocasual/giada/blob/master/COPYING</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/monocasual/giada</projectSourceUrl>
+    <docsUrl>https://www.giadamusic.com/documentation-index</docsUrl>
+    <mailingListUrl>https://github.com/monocasual/giada/discussions</mailingListUrl>
+    <bugTrackerUrl>https://github.com/monocasual/giada/issues</bugTrackerUrl>
+    <tags>giada music production DJ performance sample song record MIDI FOSS embedded</tags>
+    <summary>Your hardcore loop machine.</summary>
+    <description>Giada is an open source, minimalistic and hardcore music production tool. Designed for DJs, live performers and electronic musicians. 
+
+[➔ See it in action!](https://www.youtube.com/user/GiadaLoopMachine)
+
+![Example](https://www.giadamusic.com/images/giada-canvas.png)
+    </description>
+    <releaseNotes>https://github.com/monocasual/giada/releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>

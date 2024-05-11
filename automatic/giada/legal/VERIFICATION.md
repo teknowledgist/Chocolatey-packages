@@ -3,13 +3,13 @@ Verification is intended to assist the Chocolatey moderators and community in ve
 
 ## Download
 The latest version the the self-contained, zipped files can be downloaded from 
-the official GitHub page:
-- https://github.com/TheJoeFin/Text-Grab/releases/latest
+the official site:
+- https://www.giadamusic.com/index#download
 
 or directly:
-- Version: 4.4.2
-- URL: https://github.com/TheJoeFin/Text-Grab/releases/download/v4.4.2/Text-Grab-Self-Contained-2024-04-23.zip
-- SHA256: 94875E07E230084F490F99D1AA034E46F3DF598EAA7C25DB1BE901CC235C91A8
+- Version: 1.0.0
+- URL: https://www.giadamusic.com//data/giada-1.0.0-x86_64-windows.zip
+- SHA256: A7E20D60B293273946F1D008F8EEEC2EE15C4A57628E86912064BB3084772F20
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
@@ -18,5 +18,4 @@ You can use one of the following methods to obtain the checksum:
 
 
 ## License
-File 'LICENSE.txt' is obtained from:
-- https://github.com/TheJoeFin/Text-Grab/blob/main/LICENSE
+File 'LICENSE.txt' is obtained from https://github.com/monocasual/giada/blob/master/COPYING
