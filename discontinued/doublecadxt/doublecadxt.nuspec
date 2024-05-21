@@ -4,16 +4,16 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>doublecadxt</id>
-    <version>5.0.30.2</version>
+    <version>5.0.30.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/doublecadxt</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>DoubleCAD XT v5 (Trial)</title>
     <authors>IMSIDesign</authors>
-    <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/doublecadxt_icon.png</iconUrl>
+    <projectUrl>https://www.turbocad.com/content/doublecad-xt-v5</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@d4fa2cc11ffe5bda4884f7cc5686bfe7726dcc3a/Icons/doublecadxt_icon.png</iconUrl>
     <copyright>Copyright © 1985-2012 IMSIDesign</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/doublecadxt/tools/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/discontinued/doublecadxt/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <tags>doublecadxt doublecad autocad turbocad cad 2D DWG DXF DWF sketchup trial</tags>
     <summary>DoubleCAD™ XT is an AutoCAD LT® work-alike, but free.</summary>
