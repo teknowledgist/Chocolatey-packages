@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>ubuntu.font</id>
-    <version>0.83</version>
+    <version>0.83.0.20240521</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/ubuntu.font</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -21,7 +21,7 @@
 
 The Ubuntu typeface has been specially created to complement the Ubuntu tone of voice. It has a contemporary style and contains characteristics unique to the Ubuntu brand that convey a precise, reliable and free attitude.
 
-![Ubuntu sample](https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Ubuntu.svg/406px-Ubuntu.svg.png)
+![Ubuntu sample](https://wiki.ubuntu.com/UbuntuFontFamily?action=AttachFile&amp;do=get&amp;target=ubuntu-font.png)
 
     </description>
     <dependencies>
@@ -30,5 +30,6 @@ The Ubuntu typeface has been specially created to complement the Ubuntu tone of 
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

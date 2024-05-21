@@ -8,15 +8,11 @@ $UnzipArgs = @{
    packageName    = $env:ChocolateyPackageName
    FileFullPath   = $fileLocation
    Destination    = $UnzipDir
-   SpecificFolder = "ubuntu-font-family-$env:ChocolateyPackageVersion"
+   SpecificFolder = 'ubuntu-font-family-0.83'
 }
-
 Get-ChocolateyUnzip @UnzipArgs
 
-$FontFiles = Get-ChildItem $UnzipDir -Include ('*.fon','*.otf','*.ttc','*.ttf') -Recurse | 
-                  Select-Object -ExpandProperty FullName
-
-$Installed = Add-Font $FontFiles -Multiple
+$Installed = Add-Font $UnzipDir -Multiple
 
 If ($Installed -eq 0) {
    Throw 'All font installation attempts failed!'
