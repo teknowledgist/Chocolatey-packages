@@ -1,31 +1,16 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$DownloadArgs = @{
-   packageName         = $env:ChocolateyPackageName
-   url                 = 'http://media.accelrys.com/downloads/draw/2018/BIOVIADraw-2018_AE_32bit.zip'
-   url64               = 'http://media.accelrys.com/downloads/draw/2018/BIOVIADraw-2018_AE_64bit.zip'
-   Checksum            = 'c1fcb2ac0b00f2e5b86ffbcf3692d60a27085cc64de82015831ff78954c56870'
-   Checksum64          = 'c73744eebed778608fcc13068eb9497a86f5a3e753a8ddcd628e13ebd2db7154'
-   ChecksumType        = 'sha256'
-   GetOriginalFileName = $true
-   FileFullPath        = Join-Path $env:TEMP "$env:ChocolateyPackageName\download.zip"
-}
-$ZipFile = Get-ChocolateyWebFile @DownloadArgs
-
-$UnzipArgs = @{
-   packageName  = $env:ChocolateyPackageName
-   FileFullPath = $ZipFile
-   Destination  = Split-Path $DownloadArgs.FileFullPath
-}
-Get-ChocolateyUnzip @UnzipArgs
-
-$ShortTemp = (new-object -comobject scripting.filesystemobject).getfolder($env:TEMP).shortpath
-
 $InstallArgs = @{
-   packageName = $env:ChocolateyPackageName
-   FileType = 'exe'
-   File = (Get-ChildItem $UnzipArgs.Destination -Include '*.exe' -Recurse).FullName
-   silentArgs = "/s /v`"/qn /norestart /l*v $($ShortTemp)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+   packageName    = $env:ChocolateyPackageName
+   SoftwareName   = 'BIOVIA Draw*'
+   FileType       = 'exe'
+   url            = 'https://3ds-download-eu-west-1.s3.eu-west-1.amazonaws.com/public/BIOVIA/BIOVIA_Draw_2024_AE_32bit.exe'
+   url64          = 'https://3ds-download-eu-west-1.s3.eu-west-1.amazonaws.com/public/BIOVIA/BIOVIA_Draw_2024_AE_64bit.exe'
+   Checksum       = '7e6b4527835b153d40f7b6e205522edde318326ed6b6c51228ede3b5376a2bd6'
+   Checksum64     = '0f7a9ca41faa5abf6c41d7fd753b6e51bb84495c208904489a13ee8c3c8fecb6'
+   ChecksumType   = 'sha256'
+   silentArgs     = "/s /v`"/qn /norestart /l*v $($ShortTemp)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes = @(0,3010)  
 }
-Install-ChocolateyInstallPackage @InstallArgs
+
+Install-ChocolateyPackage @InstallArgs

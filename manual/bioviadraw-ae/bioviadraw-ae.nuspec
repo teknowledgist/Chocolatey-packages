@@ -4,18 +4,18 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>bioviadraw-ae</id>
-    <version>2018.0.0.20180925</version>
+    <version>2024.1.0.1870</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/bioviadraw-ae</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>BIOVIA Draw (Academic Edition)</title>
     <authors>Dassault Systèmes</authors>
-    <projectUrl>http://accelrys.com/products/collaborative-science/biovia-draw/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/bioviadraw-ae_icon.png</iconUrl>
-    <copyright>Copyright © 2016 Dassault Systèmes</copyright>
-    <licenseUrl>http://media.accelrys.com/downloads/draw/2016/drawuse.pdf</licenseUrl>
+    <projectUrl>https://www.3ds.com/products/biovia/draw</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@3d6b0040d50faf30eb87049ed5e72d729ece4bb2/Icons/bioviadraw-ae_icon.png</iconUrl>
+    <copyright>Copyright © 2024 Dassault Systèmes</copyright>
+    <licenseUrl>https://discover.3ds.com/sites/default/files/2022-08/biovia-draw-academic-end-user-license.pdf</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <mailingListUrl>https://community.3dsbiovia.com</mailingListUrl>
+    <mailingListUrl>https://www.3ds.com/products/biovia/user-communities</mailingListUrl>
     <tags>bioviadraw BIOVIA Accelrys Symyx chemistry molecular admin</tags>
     <summary>Draw and edit complex molecules, chemical reactions and biological sequences.</summary>
     <description>BIOVIA Draw enables scientists to draw and edit complex biologics, molecules and chemical reactions with ease, facilitating the collaborative searching, viewing, communicating and archiving of scientific information.
@@ -39,7 +39,6 @@ university) using Software for academic and/or teaching purposes only
 
     </description>
     <dependencies> 
-      <dependency id="dotnet4.5.2" version="4.5.2" />
     </dependencies>
   </metadata>
   <files>
