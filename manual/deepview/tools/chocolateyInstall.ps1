@@ -4,7 +4,7 @@ $InstallDir = Split-path (Split-path $MyInvocation.MyCommand.Definition)
 
 $InstallArgs = @{
    PackageName = $packageName
-   Url = 'http://spdbv.vital-it.ch/download/binaries/SPDBV_4.10_PC.zip' 
+   Url = 'https://spdbv.unil.ch/download/binaries/SPDBV_4.10_PC.zip' 
    UnzipLocation = $InstallDir
    checkSum = '369C0C9B6E058BB67C86DC24D711D6A655E5E023D639FCDA13EC2FE272DE1858'
    checkSumType = 'sha256'
