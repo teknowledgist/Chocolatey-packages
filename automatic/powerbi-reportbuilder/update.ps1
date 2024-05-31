@@ -1,7 +1,7 @@
 Import-module au
 
 function global:au_GetLatest {
-   $MainURL = 'https://www.microsoft.com/en-us/download/details.aspx?id=58158'
+   $MainURL = 'https://www.microsoft.com/en-us/download/details.aspx?id=105942'
    $MainPage = Invoke-WebRequest -Uri $MainURL
 
    $null = $mainpage.RawContent -split ',' | Where-Object {$_ -match '"version":"([0-9.]+)"'} | Select-Object -First 1
