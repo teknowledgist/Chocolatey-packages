@@ -8,7 +8,8 @@ function global:au_GetLatest {
 
    $Link = $download_page.links |Where-Object {$_.href -match '\.exe'} | Select-Object -First 1
    
-   $version = $Link.innerText.split() |Where-Object {$_ -match '[0-9.]+'}
+   $Release = $download_page.RawContent.split('><') | ? {$_ -match '^release'} | select -first 1
+   $version = $Release.split()[-1]
    
    if ($version -match '[a-z]') {
       $NumEquiv = ([byte][char]$matches[0])-96

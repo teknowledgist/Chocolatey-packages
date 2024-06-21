@@ -1,14 +1,23 @@
 import-module au
 
 function global:au_GetLatest {
-   $HomeURL = 'https://wiztreefree.com'
-   $PageText = Invoke-WebRequest -Uri "$HomeURL/download"
+   $NewURL = 'https://www.diskanalyzer.com/whats-new'
+   $PageText = Invoke-WebRequest -Uri "$NewURL" -UseBasicParsing
 
-   $Stub = $PageText.links | ? {$_.href -match 'wiztree.*\.exe'} |select -ExpandProperty href
+   $HTML = New-Object -Com "HTMLFile"
+   try {
+      $html.IHTMLDocument2_write($PageText)    # if MS Office installed
+   } catch {
+      $html.write([Text.Encoding]::Unicode.GetBytes($PageText))   # No MS Office
+   }
 
-   $URL = "$HomeURL/$Stub"
+   $Release = $HTML.getElementsByTagName('h4') | 
+                  Where-Object {$_.innertext -match '^wiztree'} | 
+                  Select-Object -ExpandProperty innertext -first 1
 
-   $Version = ($Stub -replace '.*?([0-9._]+).*?\.exe.*','$1' -replace '_','.').trim('.')
+   $Version = $Release.split()[1]
+
+   $URL = "https://www.diskanalyzer.com/files/wiztree_$($version.replace('.','_'))_setup.exe"
 
    return @{ 
             Version  = $Version

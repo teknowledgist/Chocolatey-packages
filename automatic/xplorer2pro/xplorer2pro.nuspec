@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xplorer2pro</id>
-    <version>5.5.0.1</version>
+    <version>6.0.0.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xplorer2pro</packageSourceUrl>
     <owners>Werner van Deventer, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -12,7 +12,7 @@
     <authors>Zabkat</authors>
     <projectUrl>http://zabkat.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@3d1d77f7351bd784da1b3ff3d9996e54c8bc6484/Icons/xplorer2_icon.png</iconUrl>
-    <copyright>©2002-2017 ZABKAT</copyright>
+    <copyright>©2002-2024 ZABKAT</copyright>
     <licenseUrl>http://zabkat.com/x2lic.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://zabkat.com/x2h_0.htm</docsUrl>
@@ -23,28 +23,27 @@
     <description>**xplorer² professional** is a desktop file manager combining the simplicity of Windows Explorer with the speed and efficiency of traditional dual pane orthodox file managers, helping you be **productive** with your documents, pictures, music, source code and other files. 
 
 ### Power at your fingertips:
-* Full shell namespace browser
-* Dual panes and folder tabs
-* Preview documents, images, music etc.
-* Fast desktop search using all file attributes
-* Folder sizes and disk space visualization
-* Compare and synchronize folders
-* Search for duplicate files to free space
+* Shell namespace explorer
+* Tabbed dual-pane interface
+* Instant preview of files
+* Browsing flexibility
+* View &amp; edit text files
+* Extended file information (metadata)
+* Search for files everywhere, using arbitrary criteria
+* Find text within office, Adobe PDF and other documents
 * Manage files from many folders at once
-* Advanced copy, delete and rename operations
-* Robust file transfers
-* Filename color coding
+* Compare and synchronize folders
+* Discover and cleanup duplicate files
 * Execute DOS commands and scripts
-* Macros to automate complex file management
-* Programable columns
-* Fully customizable user interface
-* Individual folder settings
+* Customizable user interface
 * Help and assistance where you need it
-* Modern ribbon UI or traditional menu bar
-* Everyday efficiency and control
-* Manage large folders with ease
-* Lightweight system resource use
-* Native 32/64 bit and Unicode versions 
+* Individual folder settings
+* Visual filters and selection engine
+* Advanced file management
+* Robust file transfers
+* Export folder listings
+* Extensible interface through shell plugins
+* Maxed-out usability
 
 ### Trial-ware
 This package installs a fully-functional, **21-day trial version** of *xplorer² professional*.
