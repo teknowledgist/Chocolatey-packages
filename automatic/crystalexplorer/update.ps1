@@ -9,7 +9,7 @@ function global:au_GetLatest {
                Where-Object {$_.href -like "*.exe" } |
                Select-Object -ExpandProperty href -First 1
 
-   $version = $URL64.split('-')[1]
+   $version = $URL64.split('-') | Where-Object {$_ -match '^[0-9.]+$'}
 
    return @{ Version = $version; URL64 = $URL64 }
 }

@@ -4,24 +4,24 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>crystalexplorer</id>
-    <version>21.5</version>
+    <version>21.5.0.20240622</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/crystalexplorer</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Crystal Explorer</title>
     <authors>P.R. Spackman, M.J. Turner, J.J. McKinnon, S.K. Wolff, D.J. Grimwood, D. Jayatilaka, M.A. Spackman</authors>
-    <projectUrl>https://www.crystalexplorer.net/</projectUrl>
+    <projectUrl>https://crystalexplorer.net/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@2068eefae74f456a971ad58a570eff15c35c2bc7/Icons/crystalexplorer_icon.png</iconUrl>
     <copyright>Copyright © 2005-2017 The University of Western Australia. </copyright>
     <licenseUrl>https://www.crystalexplorer.net/licence.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <docsUrl>https://wiki.crystalexplorer.net/</docsUrl>
-    <mailingListUrl>https://www.crystalexplorer.net/support.html</mailingListUrl>
+    <docsUrl>https://crystalexplorer.net/docs/intro</docsUrl>
+    <mailingListUrl>https://crystalexplorer.net/support.html</mailingListUrl>
     <tags>crystalexplorer crystallography chemistry molecular visualization admin</tags>
     <summary>A full-featured molecular crystal visualization tool. </summary>
     <description>CrystalExplorer is a versatile and powerful tool for investigating intermolecular interactions and packing in crystalline materials using the full suite of Hirshfeld surface tools and ab initio quantum mechanical calculations.  It can be used to investigate many areas of solid-state chemistry including:
 
-* Intermolecular interactions
+* [Intermolecular interactions](https://crystalexplorer.net/docs/manual/energies/interaction-energies)
 * Polymorphism
 * Effects of pressure and temperature on crystal structures
 * Single-crystal to Single-crystal reactions
@@ -34,14 +34,14 @@ A recent feature in this version is the ability to display and quantify voids in
 
 ### License required
 
-CrystalExplorer requires a license to run.  One will be provided free with [email sign-up](https://www.crystalexplorer.net/licence.html) under the following conditions:
+CrystalExplorer requires a license to run.  One will be provided free with [email sign-up](https://crystalexplorer.net/licence.html) under the following conditions:
 
 * You must be conducting research for peer-reviewed publication at a bone fide degree-granting institution to qualify.
-* You must **not** use the free version of CrystalExplorer to conduct commercial research, confidential research, or research that is not likely to be published in a peer-reviewed publication.
-* If you publish research including results from CrystalExplorer, you must cite CrystalExplorer as described [here](https://wiki.crystalexplorer.net/how-to-cite).
+* You **must not** use the free version of CrystalExplorer to conduct commercial research, confidential research, or research that is not likely to be published in a peer-reviewed publication.
+* If you publish research including results from CrystalExplorer, you must cite CrystalExplorer as described [here](https://crystalexplorer.net/docs/how-to-cite).
 * CrystalExplorer is provided as-is, and without warranty of any kind.
     </description>
-    <releaseNotes>https://wiki.crystalexplorer.net/en/news</releaseNotes>
+    <releaseNotes>https://crystalexplorer.net/docs/news</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
