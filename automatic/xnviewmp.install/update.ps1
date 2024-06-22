@@ -16,14 +16,13 @@ function global:au_GetLatest {
                      Select-Object -ExpandProperty innertext
    $Version = $VersionText -replace '.*?([0-9.]+).*','$1'
 
-   $URLs = $HTML.links |
-               Where-Object {$_.href -match '\.exe'} |
-               Select-Object -First 2 -ExpandProperty href
+   $URL = $HTML.links |
+               Where-Object {$_.href -match 'x64\.exe'} |
+               Select-Object -First 1 -ExpandProperty href
 
    return @{ 
             Version = $Version
-            URL32   = $URLs | Where-Object {$_ -notmatch 'x64'}
-            URL64   = $URLs | Where-Object {$_ -match 'x64'}
+            URL64   = $URL
            }
 }
 
@@ -32,8 +31,6 @@ function global:au_SearchReplace {
     @{
       'legal\VERIFICATION.md' = @{
          '(- Version\s+:).*'    = "`${1} $($Latest.Version)"
-         '(- x86 URL\s+:).*'    = "`${1} $($Latest.URL32)"
-         '(- x86 SHA256\s+:).*' = "`${1} $($Latest.Checksum32)"
          '(- x64 URL\s+:).*'    = "`${1} $($Latest.URL64)"
          '(- x64 SHA256\s+:).*' = "`${1} $($Latest.Checksum64)"
       }
@@ -44,7 +41,7 @@ function global:au_SearchReplace {
 #   (It is dot sourced in the meta-package.)
 if ($MyInvocation.InvocationName -ne '.') { 
    function global:au_BeforeUpdate() { 
-      Write-host "Downloading XnView MP $($Latest.Version) installer files"
+      Write-host "Downloading XnView MP $($Latest.Version) installer file"
       Get-RemoteFiles -Purge -NoSuffix
    }
 

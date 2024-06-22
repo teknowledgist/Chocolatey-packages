@@ -8,8 +8,6 @@ the homepage:
 
 or directly:
 - Version    : 1.7.2
-- x86 URL    : https://download.xnview.com/XnViewMP-win.exe
-- x86 SHA256 : 900E560671F96751F9F0D6E074B307555DAE058C09E2569CBF2ACEA1EE6CD330
 - x64 URL    : https://download.xnview.com/XnViewMP-win-x64.exe
 - x64 SHA256 : 03E9D9794AB3DFF3485CE8A0F9406F744E4BD2F7A43B5B135F5E8C9FB791FAA5
 
