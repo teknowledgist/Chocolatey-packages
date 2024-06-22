@@ -1,7 +1,8 @@
 Import-module au
 
 function global:au_GetLatest {
-   $MainURL = 'https://www.microsoft.com/en-us/download/details.aspx?id=105942'
+   $ProductID = '105942'
+   $MainURL = "https://www.microsoft.com/en-us/download/details.aspx?id=$ProductID"
    $MainPage = Invoke-WebRequest -Uri $MainURL
 
    $null = $mainpage.RawContent -split ',' | Where-Object {$_ -match '"version":"([0-9.]+)"'} | Select-Object -First 1
@@ -18,7 +19,7 @@ function global:au_GetLatest {
    $Languages = $Languages.split("`r`n") | Where-Object {$_ -and $_ -notmatch 'en-us'}
    foreach ($lang in $Languages) {
       Write-Host "Finding URL for:  $Lang"
-      $confirmURL = "https://www.microsoft.com/$($Lang.split(',')[0])/download/confirmation.aspx?id=58158"
+      $confirmURL = "https://www.microsoft.com/$($Lang.split(',')[0])/download/confirmation.aspx?id=$ProductID"
       $confirmpage = Invoke-WebRequest $confirmURL -UseBasicParsing
       $LangURL = $confirmpage.rawcontent.split('"') | Where-Object {$_ -match '\.msi$'} | Select-Object -first 1
       $CSV += "$([System.Net.WebUtility]::HtmlDecode($Lang)),$LangURL"
