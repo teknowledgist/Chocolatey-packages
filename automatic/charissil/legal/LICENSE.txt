@@ -1,4 +1,4 @@
-﻿From: https://scripts.sil.org/cms/scripts/render_download.php?format=file&media_id=OFL_plaintext&filename=OFL.txt
+﻿From: https://openfontlicense.org/documents/OFL.txt
 
 LICENSE
 

@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>charissil</id>
-    <version>5.0</version>
+    <version>6.200</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/charissil</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -12,14 +12,14 @@
     <authors>SIL International</authors>
     <projectUrl>https://software.sil.org/charis/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@f5df8275154486951e8b6876902a2a2dd7af5525/Icons/charissil_icon.png</iconUrl>
-    <copyright>Copyright © 1994-2014, SIL International</copyright>
-    <licenseUrl>https://scripts.sil.org/ofl</licenseUrl>
+    <copyright>Copyright © 1997-2023, SIL International</copyright>
+    <licenseUrl>https://openfontlicense.org/open-font-license-official-text/</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://software.sil.org/downloads/r/charis/CharisSIL-5.000-developer.zip</projectSourceUrl>
-    <docsUrl>http://software.sil.org/charis/support/character-set-support/</docsUrl>
-    <mailingListUrl>http://software.sil.org/lcgfonts/home/sil-font-news-announcement-list/</mailingListUrl>
-    <tags>charissil charis sil font unicode serif latin cyrillic readability publishing oss embedded</tags>
-    <summary>Complete support for the International Phonetic Alphabet</summary>
+    <projectSourceUrl>https://github.com/silnrsi/font-charis</projectSourceUrl>
+    <docsUrl>https://software.sil.org/charis/support/</docsUrl>
+    <bugTrackerUrl>https://github.com/silnrsi/font-charis/issues</bugTrackerUrl>
+    <tags>charissil charis sil font unicode serif latin cyrillic readability publishing FOSS embedded</tags>
+    <summary>A family of highly readable fonts for broad multilingual use</summary>
     <description>Charis SIL is a Unicode-based font family that supports the wide range of languages that use the Latin and Cyrillic scripts. It is specially designed to make long texts pleasant and easy to read, even in less than ideal reproduction and display environments.
 
 #### Highly legible design
@@ -30,10 +30,16 @@ This family of fonts is suitable for a wide range of publishing needs, from prin
 
 #### Complete character set
 The Latin and Cyrillic scripts are used to write thousands of languages around the world. Charis SIL provides comprehensive support for these writing systems, and includes a wide range of additional characters and symbols useful for linguistics and literacy work. 
+
+![TypePage](https://cdn.jsdelivr.net/gh/silnrsi/font-charis@38db792a32429173ad6146c12551a0b6f7507b9f/documentation/assets/images/CharisSILTypePage.png)
     </description>
-    <releaseNotes>http://software.sil.org/charis/release-5-000/</releaseNotes>
+    <releaseNotes>https://github.com/silnrsi/font-charis/blob/master/FONTLOG.txt</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.4" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
