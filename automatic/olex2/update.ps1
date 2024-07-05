@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $Release = 'http://www.olex2.org/olex2-distro/1.3/update/version.txt'
 

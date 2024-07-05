@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $InfoPage = 'https://docs.microsoft.com/en-us/sysinternals/downloads/psexec'

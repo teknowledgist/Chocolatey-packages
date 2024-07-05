@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $ReleasURL = 'https://www.tenable.com/downloads/nessus-agents'

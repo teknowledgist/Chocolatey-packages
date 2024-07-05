@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $HomeURL = 'https://www.softwareok.com/?Download=Q-Dir'

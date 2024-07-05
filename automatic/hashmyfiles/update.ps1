@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $releases = 'https://www.nirsoft.net/utils/hash_my_files.html'
 

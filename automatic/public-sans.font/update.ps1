@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $Release = 'https://github.com/uswds/public-sans/releases/latest'
 

@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $DownloadURI = 'https://www.qgis.org/en/site/forusers/download.html'
 

@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $Release = 'https://marcedit.reeset.net/software/update7.txt'
 

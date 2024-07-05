@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $ArchiveURL = 'https://www.babelstone.co.uk/Software/BabelPad_Versions.html'

@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $downloaduri = 'https://www.qgis.org/en/site/forusers/alldownloads.html'

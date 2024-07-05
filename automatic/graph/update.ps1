@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $Site = 'https://www.padowan.dk'
 

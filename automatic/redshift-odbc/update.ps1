@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownloadURI = 'https://docs.aws.amazon.com/redshift/latest/mgmt/configure-odbc-connection.html'

@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $Meta = Get-EvergreenApp praat | Where-Object {$_.architecture -eq 'x86'}

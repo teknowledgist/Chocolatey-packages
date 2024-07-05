@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $WhatsNew = 'https://helpx.adobe.com/camera-raw/using/whats-new.html'

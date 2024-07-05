@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $FilesPage = 'https://sourceforge.net/projects/brlcad/files/'
 

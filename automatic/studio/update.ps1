@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $Release = 'https://studio.bricklink.com/v2/build/studio.page'

@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $MainURL = 'https://www.nasm.us/'
 

@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownloadURI = 'https://www.postgresql.org/ftp/odbc/versions/msi/'

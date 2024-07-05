@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownURL = 'https://harzing.com/resources/publish-or-perish/windows'

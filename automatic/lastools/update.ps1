@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $MainPage = Invoke-WebRequest -Uri 'https://lastools.github.io/download/CHANGES.txt'

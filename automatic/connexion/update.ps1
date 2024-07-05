@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $Release = 'https://help.oclc.org/Librarian_Toolbox/Software_downloads/Download_cataloging_software?sl=en'
 

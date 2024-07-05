@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $Release = 'http://www.uoguelph.ca/~hydrogeo/Whitebox/download.shtml'
 

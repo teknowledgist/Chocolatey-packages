@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownloadURL = 'https://www.zhornsoftware.co.uk/stickies/download.html'

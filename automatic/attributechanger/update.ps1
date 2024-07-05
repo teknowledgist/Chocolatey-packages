@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $Global:au_NoCheckUrl = $true
 

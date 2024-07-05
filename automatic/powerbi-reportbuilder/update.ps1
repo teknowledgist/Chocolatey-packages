@@ -1,4 +1,4 @@
-Import-module au
+import-module chocolatey-au
 
 function global:au_GetLatest {
    $ProductID = '105942'
