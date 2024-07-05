@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>lastools</id>
-    <version>2024.02.26</version>
+    <version>2024.06.24</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/lastools</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -16,7 +16,7 @@
     <licenseUrl>https://github.com/LAStools/LAStools/blob/master/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/LAStools/LAStools</projectSourceUrl>
-    <docsUrl>https://rapidlasso.com/category/tutorials/</docsUrl>
+    <docsUrl>https://downloads.rapidlasso.de/doc/rapidlasso_web_tutorials.pdf</docsUrl>
     <mailingListUrl>https://groups.google.com/g/lastools</mailingListUrl>
     <bugTrackerUrl>https://github.com/LAStools/LAStools/issues</bugTrackerUrl>
     <tags>LAStools LiDAR LASzip geology mapping</tags>
