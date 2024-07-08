@@ -1,17 +1,22 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $DownloadURI = 'https://www.postgresql.org/ftp/odbc/versions/msi/'
-   $download_page = Invoke-WebRequest -Uri $DownloadURI
+   $ReleasesURL = 'https://www.postgresql.org/ftp/odbc/releases/'
+   $ReleasesPage = Invoke-WebRequest -Uri $ReleasesURL
 
-   $URLs = $download_page.links |
-               Where-Object {$_.innertext -match '\.zip$'} |
-               Select-Object -ExpandProperty href -last 3
+   $LatestDIR = $ReleasesPage.links |
+               Where-Object {$_.innertext -match '-[0-9_]+$'} |
+               Select-Object -ExpandProperty href -first 1
 
-   $url64 = $URLs | Where-Object {$_ -match '-x64'}
-   $url32 = $URLs | Where-Object {$_ -match '-x86'}
+   $LatestPage = Invoke-WebRequest -Uri "$ReleasesURL/$LatestDIR"
+   $URLs = $LatestPage.links | 
+               Where-Object {$_.innertext -match '\.msi$'} | 
+               Select-Object -ExpandProperty href
 
-   $Version = $urls[-1] -replace ".*?_([0-9_]+)\.zip",'$1' -replace '_','.'
+   $url64 = $URLs | Where-Object {$_ -match '_x64'}
+   $url32 = $URLs | Where-Object {$_ -match '_x86'}
+
+   $Version = $url64 -replace '.*/REL-([0-9_]+)/.*','$1' -replace '_','.'
 
    return @{ 
             Version  = $Version
