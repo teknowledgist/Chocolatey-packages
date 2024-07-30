@@ -1,28 +1,35 @@
 import-module chocolatey-au
 
-$DownloadURI = 'https://www.qgis.org/en/site/forusers/download.html'
-
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $DownloadURI
+   $BaseURL = "https://www.qgis.org"
+   $DownloadURI = "$BaseURL/en/site/forusers/download.html"
+   $PageText = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing
 
-   $null = $download_page.content.split("`n") | Where-Object {$_ -cmatch 'long-term repositories currently offer QGIS ([0-9.]*)'}
+   $HTML = New-Object -Com "HTMLFile"
+   try {
+      $html.IHTMLDocument2_write($PageText)    # if MS Office installed
+   } catch {
+      $html.write([Text.Encoding]::Unicode.GetBytes($PageText))   # No MS Office
+   }
+
+   $null = $PageText.content.split("`n") | Where-Object {$_ -cmatch 'long-term (repositories|builds) currently offer QGIS ([0-9.]*)'}
    
-   $LTRRelease = $Matches[1]
+   $LTRRelease = $Matches[2]
 
-   $url = $download_page.Links | 
+   $url = $PageText.Links | 
               Where-Object {$_.href -match "$LTRRelease.*\.msi`$"} | 
               Select-Object -ExpandProperty href
 
    $SumURL = $url -replace '\.msi$','.sha256sum'
    
    $SumFile = "$env:temp\QGIS$LTRRelease-SHA256.txt"
-   Invoke-WebRequest $SumURL -OutFile $SumFile
+   Invoke-WebRequest "$BaseURL$SumURL" -OutFile $SumFile
    $Checksum64 = (Get-Content $SumFile -ReadCount 1).split()[0]
 
    return @{ 
             Version      = $LTRRelease
             AppVersion   = $LTRRelease
-            URL64        = $url
+            URL64        = "$BaseURL$url"
             Checksum64   = $Checksum64
            }
 }

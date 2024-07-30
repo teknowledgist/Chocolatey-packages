@@ -4,15 +4,15 @@ $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 $FolderOfPackage = Split-Path -Parent $toolsDir
 
 $NewRelease = $env:ChocolateyPackageVersion
-$LTRversion = '3.34.8'
+$LTRversion = '3.34.9'
 
 $InstallArgs = @{
    packageName    = 'qgis'
    fileType       = 'MSI'
    softwareName   = "$env:ChocolateyPackageName $env:ChocolateyPackageVersion*"
-   url64bit       = 'https://qgis.org/downloads/QGIS-OSGeo4W-3.38.0-1.msi'
+   url64bit       = '/downloads/QGIS-OSGeo4W-3.38.1-1.msi'
    checksumType   = 'sha256'
-   checksum64     = '11be2b684c30fc99e5fc889e6d43c43bb44a462dbfc38cf89d91925da147efe3'
+   checksum64     = '9ed2530b07aebab30c824f5c02ef5a5eea93f84ad47fc7130e17e2eb1d16bee7'
    silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes = @(0)
 }
