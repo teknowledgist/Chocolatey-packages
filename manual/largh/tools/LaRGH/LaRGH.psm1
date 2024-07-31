@@ -23,7 +23,7 @@
    but if the API Key is needed and available as plain text this is how to provide
    it.  
    Default Value: <none>
-.Parameter Credential
+.Parameter TokenAsCred
    Script will open a credential request window to collect the API Key in the 
    password field (while ignoring any value provided in the username field).
    The value will be cached as an secure string for future use.
@@ -44,7 +44,7 @@
    The same query and results as above, but the provided access token will be 
    used and will not be stored anywhere.
 .Example
-   Get-LatestReleaseInfo -URL 'https://github.com/torakiki/pdfsam' -Credential
+   Get-LatestReleaseInfo -URL 'https://github.com/torakiki/pdfsam' -TokenAsCred
    This will first request credentials in which the user can provide any username
    and a GitHub Personal Access Token for the password.  The access token will be
    stored encrypted within the user profile, and information for the latest release
@@ -76,7 +76,7 @@ Function Get-LatestReleaseOnGitHub {
       [string]$AccessToken = $null,
 
       [Parameter(ParameterSetName='Creds',Position=1)]    
-      [Switch]$Credential
+      [Switch]$TokenAsCred
    )
 
    if ($URL -match '^https?://(?:www.)?github\.com/([^/]+)/?([^/]+)?(?:/.*)?$') {
@@ -97,7 +97,7 @@ Function Get-LatestReleaseOnGitHub {
 
 
    $accessTokenFilePath = Join-Path $env:LOCALAPPDATA 'LatestReleaseOnGH\accessToken.txt'
-   if ($PSBoundParameters.ContainsKey('Credential')) {
+   if ($PSBoundParameters.ContainsKey('TokenAsCred')) {
       # Collect the access token in a PSCredential object
       $CredMessage = 'Provide your GitHub API Token in the Password field.  The username field is required but will be ignored.' + 
                   '  ***The API Token will be cached across PowerShell sessions.  If the password is blank, any cached password will be erased. ***'
@@ -162,6 +162,7 @@ Function Get-LatestReleaseOnGitHub {
 
    if ($SaveNew) {
       # This comes after the query because only working tokens should be cached
+      If (-not (Test-Path $accessTokenFilePath)) { New-Item -Path $accessTokenFilePath -Force }
       $Credential.Password | ConvertFrom-SecureString | Set-Content -Path $accessTokenFilePath -Force
    }
 

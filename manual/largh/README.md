@@ -21,7 +21,7 @@ The GitHub API has a speed limit of 60 queries per hour.  If you have so many pa
 * `Get-LARGH -URL https://github.com/ownername/repositoryname -AccessToken a1b2c3d4e5f6g7h8i9j0`  
     This will use the token just one time.  Other than a quick test, this is not particularly helpful unless you are going to put your access token in plaintext in your code (not a good idea!), but you do things your way.
 
-* `Get-LARGH -URL https://github.com/ownername/repositoryname -Credential`  
+* `Get-LARGH -URL https://github.com/ownername/repositoryname -TokenAsCred`  
     This will request the token in a credential window and then store it encrypted within the user profile.  All future uses of the function will use the cached credential without needing the switch until the `-credential` switch is used again and an empty/blank password is provided. 
 
 #### Requirements
