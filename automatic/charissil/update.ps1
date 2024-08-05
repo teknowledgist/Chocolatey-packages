@@ -2,24 +2,17 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownURL = 'https://software.sil.org/charis/download/'
-   $DownPage = Invoke-WebRequest $DownURL -UseBasicParsing
+   $DownPage = Invoke-RestMethod $DownURL
 
-   $HTML = New-Object -Com "HTMLFile"
-   try {
-      $html.IHTMLDocument2_write($DownPage)    # if MS Office installed
-   } catch {
-      $html.write([Text.Encoding]::Unicode.GetBytes($DownPage))   # No MS Office
-   }
-
-   $link = $html.links | 
-            Where-Object {($_.href -like "*.zip") -and ($_.innertext -match 'Charis')} | 
-            Select-Object -First 1   
-
-   $version = ($link.href.split('/-') | ? {$_ -match '^[0-9.]+'}).trim('.zip')
+   $null = $DownPage -match 'href="([^"]+\.zip)"'
+   
+   $URL = $matches[1]
+   
+   $version = ($URL.split('/-') | ? {$_ -match '^[0-9.]+'}).trim('.zip')
 
    return @{ 
       Version     = $version
-      URL32       = $link.href
+      URL32       = $URL
    }
 }
 

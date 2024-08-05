@@ -6,6 +6,6 @@ Download via the "Download Now" button on this page:
 http://www.blacksunsoftware.com/colormania.html
 
 Direct Download:
-Version  : 12.1
+Version  : 14.0
 URL      : http://www.blacksunsoftware.com/downloads/ColorManiaSetup.exe
-CheckSum : 6A97B04E3FC2C5874EDFD794B98757287574E86D37F3F5F4FBBF31EBA51BA9CC
+CheckSum : E8524ECD479A443418BD4FE15022281EDC1E1A0D64E423CEE1321CAB397C8C12
