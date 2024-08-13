@@ -8,7 +8,7 @@ https://support.atlas-sys.com/hc/en-us/articles/360012037614-ILLiad-Downloads
 (Downloads do require a password at this time.)
 
 Direct Download:
-Version  : 9.2.5
-URL      : https://illiad-update.atlas-sys.com/install/9.2/ILLiadClientSetup_9.2.5.0.exe
-CheckSum : e0b7f8ef5d1561e9c6e7c4c0faa2a492c436f4a79b3eed7783730867a3a5bd4f
+Version  : 9.2.7
+URL      : https://illiad-update.atlas-sys.com/install/9.2/ILLiadClientSetup_9.2.7.0.exe
+CheckSum : 698e744874625abc11c2347594f79a0df2c2de965fda0cc26e44d2c52a875373
 
