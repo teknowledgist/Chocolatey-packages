@@ -17,14 +17,15 @@ function global:au_GetLatest {
    
    $NewVersion = $Matches[1]
 
-   $url = $PageText.Links | 
+   $urlstub = $PageText.Links | 
               Where-Object {$_.href -match "$NewVersion.*\.msi`$"} | 
               Select-Object -ExpandProperty href
+   $url = $BaseURL + $urlstub
 
    $SumURL = $url -replace '\.msi$','.sha256sum'
    
    $SumFile = "$env:temp\QGIS$NewVersion-SHA256.txt"
-   Invoke-WebRequest "$BaseURL$SumURL" -OutFile $SumFile
+   Invoke-WebRequest $SumURL -OutFile $SumFile
    $Checksum64 = (Get-Content $SumFile -ReadCount 1).split()[0]
 
    $null = $PageText.content.split("`n") | Where-Object {$_ -cmatch 'long-term (repositories|builds) currently offer QGIS ([0-9.]*)'}
