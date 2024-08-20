@@ -1,26 +1,14 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $BaseURL = "https://www.qgis.org"
-
-   $DownloadURI = "$BaseURL/en/site/forusers/download.html"
-   $PageText = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing
-
-   $HTML = New-Object -Com "HTMLFile"
-   try {
-      $html.IHTMLDocument2_write($PageText)    # if MS Office installed
-   } catch {
-      $html.write([Text.Encoding]::Unicode.GetBytes($PageText))   # No MS Office
-   }
-
-   $null = $PageText.content.split("`n") | Where-Object {$_ -cmatch 'current version is QGIS ([0-9.]*)'}
+   $Downloads = 'https://download.qgis.org/downloads/'
    
+   $PageText = Invoke-WebRequest -Uri $Downloads
+   
+   $file = $PageText.links | ? {$_.innertext -match '^QGIS.*-([0-9.]+)-.*\.msi'} | select -last 1 -exp href
    $NewVersion = $Matches[1]
-
-   $urlstub = $PageText.Links | 
-              Where-Object {$_.href -match "$NewVersion.*\.msi`$"} | 
-              Select-Object -ExpandProperty href
-   $url = $BaseURL + $urlstub
+   
+   $url = $Downloads + $file
 
    $SumURL = $url -replace '\.msi$','.sha256sum'
    
@@ -28,6 +16,8 @@ function global:au_GetLatest {
    Invoke-WebRequest $SumURL -OutFile $SumFile
    $Checksum64 = (Get-Content $SumFile -ReadCount 1).split()[0]
 
+   $News = 'https://www.qgis.org/download/'
+   $PageText = Invoke-WebRequest -Uri $News -UseBasicParsing
    $null = $PageText.content.split("`n") | Where-Object {$_ -cmatch 'long-term (repositories|builds) currently offer QGIS ([0-9.]*)'}
    $LTRversion = $Matches[2]
 
