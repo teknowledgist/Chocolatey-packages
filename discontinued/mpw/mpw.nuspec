@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mpw</id>
-    <version>2.7.12</version>
+    <version>2.7.12.20240903</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/mpw</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -52,11 +52,11 @@ Master Password is announcing a massive rewrite, modernizing the solution and cl
 
 The project is re-launching as [Spectre](https://spectre.app/), still fully open-source Free Software
 
-All development effort has moved to the [Spectre project](https://gitlab.com/spectre.app) which as of the creation of this package does not have a Windows desktop option.
+All development effort has moved to the [Spectre project](https://gitlab.com/spectre.app) and does not currently have a Windows desktop option.
 
     </description>
     <dependencies>
-      <dependency id="mpw.portable" version="[2.7.12]" />
+      <dependency id="mpw.portable" version="[2.7.12.20240903]" />
     </dependencies>
   </metadata>
   <files>
