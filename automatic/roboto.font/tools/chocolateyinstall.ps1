@@ -11,7 +11,7 @@ $UnzipArgs = @{
    FileFullPath   = $fileLocation
    Destination    = $UnzipDir
 #   SpecificFolder = "Roboto_v$RepoVersion\hinted\static"
-   SpecificFolder = 'hinted\static'
+   SpecificFolder = 'Roboto_v3.010\hinted\static'
 }
 Get-ChocolateyUnzip @UnzipArgs
 
