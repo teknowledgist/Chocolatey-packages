@@ -6,18 +6,16 @@ $target = Get-ChildItem $ToolsDir -filter *.jar |
                Sort-Object LastWriteTime | 
                Select-Object -ExpandProperty FullName -Last 1
 
-# If the Java dependency was just installed, the environment
-#   must be updated to access the 'JAVA_HOME' variable
-Update-SessionEnvironment
-$ErrorActionPreference = 'silentlycontinue'
-$JavaHome = (java -XshowSettings:properties -version 2>&1 | Where-Object {$_ -match 'java.home'}).tostring().split('=')[-1].trim()
-$ErrorActionPreference = 'Stop'
+# Need to find where 'javaw.exe' is installed
+$key = Get-UninstallRegistryKey -SoftwareName "*Temurin JRE*" | 
+         Where-Object {$_.DisplayVersion -match '^11'} | 
+         Sort-Object InstallDate | Select-Object -Last 1
+$JavaW = (Get-ChildItem $key.InstallLocation -Filter 'javaw.exe' -Recurse).FullName
 
 $StartPrograms = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs'
-
 $ShortcutArgs = @{
    ShortcutFilePath = Join-Path $StartPrograms 'Master Password.lnk'
-   TargetPath = (Get-ChildItem $JavaHome -Filter 'javaw.exe' -Recurse).fullname
+   TargetPath = $JavaW
    Arguments = "-jar `"$Target`""
    IconLocation = Join-Path $ToolsDir 'MasterPassword.ico'
 }

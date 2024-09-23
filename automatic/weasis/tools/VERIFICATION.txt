@@ -7,9 +7,9 @@ Weasis can be downloaded from the page
 by selecting the correct build for your operating system.
 
 Direct download:
-Version    : 4.5.0
+Version    : 4.5.1
 x86 URL    : https://github.com/nroduit/Weasis/releases/download/v3.6.2/Weasis-3.6.2-x86.msi
 x86 SHA256 : D11D3A170B987DD5D939092D0EDEBB9DC74FC2E22F4980F9F91FEBE299020823
-x64 URL    : https://github.com/nroduit/Weasis/releases/download/v4.5.0/Weasis-4.5.0-x86-64.msi
-x64 SHA256 : 61C3A2548E85C1B1655E4378A693E45B1CD62A81219969B92229CF916C4620E2
+x64 URL    : https://github.com/nroduit/Weasis/releases/download/v4.5.1/Weasis-4.5.1-x86-64.msi
+x64 SHA256 : 2B8579B2892788EE08614B0BA6ECACFD7536E695003D00B05A39F3FB69DD4649
 

@@ -5,7 +5,7 @@
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>rpgmapeditor</id>
     <version>16.2</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/rpgmapeditor</packageSourceUrl>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/local/rpgmapeditor</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>RPG Map Editor 2</title>

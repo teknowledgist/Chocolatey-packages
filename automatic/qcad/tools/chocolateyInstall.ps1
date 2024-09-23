@@ -1,10 +1,10 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $packageName = 'qcad'
-$url32 = 'https://www.qcad.org/archives/qcad/qcad-3.30.1-trial-win32-installer.msi'
-$url64 = 'https://www.qcad.org/archives/qcad/qcad-3.30.1-trial-win64-installer.msi'
-$checkSum32 = '5c0fa6f3f680b62fc8fe722af5d760c0cfc7a1bac6f1762a987159e7cd637815'
-$checkSum64 = 'df24a842202f2ba22046eb2eb24e4260f93987f303a1b54bfb8a60225ffd9caa'
+$url32 = 'https://www.qcad.org/archives/qcad/qcad-3.31.1-trial-win32-installer.msi'
+$url64 = 'https://www.qcad.org/archives/qcad/qcad-3.31.1-trial-win64-installer.msi'
+$checkSum32 = 'b39d75183ce4f0175c56d10d772927f10fdd051277d646aca5d8b78cd91e0372'
+$checkSum64 = '80532fa971234980738f6f884a58319a1d54ee44c54154efada48c2ce9144da6'
 
 $InstallArgs = @{
    packageName = $env:ChocolateyPackageName
