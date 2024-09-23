@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>mpw</id>
-    <version>2.7.12.20240903</version>
+    <version>2.7.12.20240923</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/mpw</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -56,7 +56,7 @@ All development effort has moved to the [Spectre project](https://gitlab.com/spe
 
     </description>
     <dependencies>
-      <dependency id="mpw.portable" version="[2.7.12.20240903]" />
+      <dependency id="mpw.portable" version="[2.7.12.20240923]" />
     </dependencies>
   </metadata>
   <files>
