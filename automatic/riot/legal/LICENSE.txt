@@ -1,6 +1,5 @@
-﻿From: inside installer download
-
-LICENSE
+﻿Source:  License.txt file in Riot directory once installed
+============================================
 
 A. Radical Image Optimization Tool End User License Agreement
 
@@ -40,5 +39,5 @@ Title: Title, ownership rights, and intellectual property rights in and to the P
 
 Warranty: The author provides no warranties for the Product, but if used as directed and in conjunction with the operating systems for which it was designed, the Product should substantially achieve the functionality described in the documentation. The author does not warrant that your use of the Product will be uninterrupted or that its operation will be error free. In no event shall The author or any Contributors be liable to the licensed user for any special, indirect, incidental, or consequential damages, including (but not limited to) loss of revenues or loss of profits.
 
-Copyright © 2004-2021 Lucian Sabo
-Rev: 21 Jan 2021
+Copyright © 2004-2022 Lucian Sabo
+Rev: 18 Mar 2022

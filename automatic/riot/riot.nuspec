@@ -4,19 +4,18 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>riot</id>
-    <version>1.0.1</version>
-    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/riot</packageSourceUrl>
+    <version>2024.1.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/riot</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>Radical Image Optimization Tool</title>
     <authors>Lucian Sabo</authors>
     <projectUrl>https://riot-optimizer.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@55825846816a3b6a46df0b5ddf3eea3ff7175adf/Icons/riot_icon.png</iconUrl>
-    <copyright>© 2004-2019 Lucian Sabo</copyright>
-    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/manual/riot/tools/LICENSE.txt</licenseUrl>
+    <copyright>© 2008-2023 Lucian Sabo</copyright>
+    <licenseUrl>https://raw.githubusercontent.com/teknowledgist/Chocolatey-packages/master/automatic/riot/legal/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://riot-optimizer.com/docs</docsUrl>
-    <mailingListUrl>http://luci.criosweb.ro/riot/bbpress</mailingListUrl>
     <tags>riot image optimization jpeg gif png compression embedded</tags>
     <summary>Lightweight, fast, simple, yet powerful image optimization</summary>
     <description>Radical Image Optimization Tool (RIOT for short) is a free image optimizer that will let you to visually adjust compression parameters while keeping minimum filesize.
@@ -46,10 +45,6 @@ It is lightweight, fast and simple to use, yet powerful for advanced users. You 
 * resize image by using well known resample filters (*ex: Lanczos3, Catmull Rom, Bicubic, and others*)
 * out-of-the-box support for external PNG optimizers (*optipng, pngout, etc*)
 * compression and results are comparable to those of commercial products, even higher.
-* Adaptive logarithmic tone mapping algorithm (*Drago*) used for HDR images
-
-### Breaking change
-There is no longer an installer for a 32-bit version of RIOT. Accordingly, this package will only install/upgrade on 64-bit systems.
 
 </description>
     <releaseNotes>https://riot-optimizer.com/changelog/</releaseNotes>
@@ -57,5 +52,6 @@ There is no longer an installer for a 32-bit version of RIOT. Accordingly, this 
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

@@ -11,8 +11,8 @@
     <title>Simple Concordance Program</title>
     <authors>Alan Reed</authors>
     <projectUrl>http://www.textworld.com/scp/</projectUrl>
-    <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/scp_icon.png</iconUrl>
-    <copyright>copyright © 1997-2019 Alan Reed</copyright>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@1a48fe70f0b51caeb3f59c473461d29f7eb488dd/Icons/scp_icon.png</iconUrl>
+    <copyright>Copyright © 1997-2023 Alan Reed</copyright>
     <licenseUrl>http://www.textworld.com/scp/copyrigh.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>http://www.textworld.com/scp/scphelp.pdf</docsUrl>
