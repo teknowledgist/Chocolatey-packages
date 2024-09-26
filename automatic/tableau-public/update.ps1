@@ -3,16 +3,7 @@ import-module chocolatey-au
 function global:au_GetLatest {
    $Version = Get-EvergreenApp TableauDesktop | Select-Object -ExpandProperty Version
 
-<#   $ReleasesURL = 'https://www.tableau.com/support/releases'
-   $ReleasesPage = Invoke-WebRequest -Uri $ReleasesURL
-   $innertext = $releasespage.links | 
-                     Where-Object {$_.innertext -match 'current version'} | 
-                     Select-Object -ExpandProperty innertext
-   $Version = $innertext.split()[-1]
-
-#   $URL64 = "https://downloads.tableau.com/public/TableauPublicDesktop-64bit-$($Version.replace('.','-')).exe"
-#>
-   $URL64 = "https://public.tableau.com/s/download/public/pc64"
+   $URL64 = "https://downloads.tableau.com/public/TableauPublicDesktop-64bit-$($Version.replace('.','-')).exe"
 
    return @{ 
             Version  = $Version
