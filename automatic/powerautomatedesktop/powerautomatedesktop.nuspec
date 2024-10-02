@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>powerautomatedesktop</id>
+    <version>2.48.153.24261</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/powerautomatedesktop</packageSourceUrl>
+    <owners>Teknowledgist,RalfEs</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Power Automate Desktop</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://www.microsoft.com/en-us/power-platform/products/power-automate/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@554ace641dda95ae363c115c8e70fc964c028bd8/Icons/powerautomatedesktop_icon.png</iconUrl>
+    <copyright>Copyright © Microsoft Corporation</copyright>
+    <licenseUrl>https://learn.microsoft.com/en-us/power-platform/admin/power-automate-licensing/types</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://learn.microsoft.com/en-us/power-automate/desktop-flows/introduction</docsUrl>
+    <mailingListUrl>https://powerusers.microsoft.com/t5/Microsoft-Power-Automate/ct-p/MPACommunity/</mailingListUrl>
+    <bugTrackerUrl>https://www.microsoft.com/en-us/power-platform/products/power-automate/support</bugTrackerUrl>
+    <tags>powerautomatedesktop power-automate microsoft m365 flow automation macro</tags>
+    <summary>Automate repetitive desktop processes without the need for coding knowledge.</summary>
+    <description>Power Automate Desktop is a tool that allows users to automate repetitive desktop processes without the need for coding knowledge. It is like a system-wide macro creator that comes with a drag and drop interface, making it easier to create "Flows" consisting of multiple actions, each leading to the next one. Automating is quicker and easier than ever with the new intuitive Power Automate desktop flow designer using the prebuilt drag-and-drop actions or recording your own desktop flows to run later.
+
+Desktop flows are addressed to essentially everyone who is performing simple or complex rule-based tasks on their workstations. Users at home, small businesses, enterprises, or larger companies can leverage automation capabilities in Power Automate to create flows, interact with everyday tools like email and Excel, or work with modern and legacy applications. Examples of simple and complex tasks you can automate are:
+
+* Quickly organize your documents using dedicated files and folders actions
+* Accurately extract data from websites and store them in Excel files using web and Excel automation
+* Apply desktop automation capabilities to put your work on autopilot
+
+If you're a home user who is accessing a weather website to see tomorrow's forecast or a self-employed businessperson extracting information from vendors' invoices or even an employee of a large enterprise who automates data entry on an ERP system, Power Automate is designed for you.
+
+    </description>
+    <releaseNotes>https://learn.microsoft.com/en-us/power-platform/released-versions/power-automate-desktop</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
