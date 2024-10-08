@@ -5,7 +5,7 @@ $AllVersions = 'https://creator.pdf24.org/listVersions.php'
 function global:au_GetLatest {
    $PageData = Invoke-WebRequest -Uri "$AllVersions" -UseBasicParsing
 
-   $latest = $PageData.RawContent -split '<tr>' | ? {$_ -match '<td>'} | select -first 4
+   $latest = $PageData.RawContent -split '<tr>' | ? {$_ -match '<td>'} | select -first 6
 
    $version = $latest -split '</?td>' | ? {$_ -match '^[0-9.]+'} | select -first 1
 
