@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>omniversesdk</id>
+    <version>106.1.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/local/omniversesdk</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <title>NVIDIA Omniverse Kit SDK</title>
+    <authors>NVIDIA</authors>
+    <projectUrl>https://www.nvidia.com/en-us/omniverse/</projectUrl>
+    <!--<iconUrl>http://rawcdn.githack.com/__REPLACE_YOUR_REPO__/master/icons/omniversesdk.png</iconUrl>-->
+    <copyright>Copyright © 2018-2024 NVIDIA Corporation </copyright>
+    <!-- If there is a license Url available, it is required for the community feed -->
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/local/omniversesdk/kit-sdk-public-LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://docs.omniverse.nvidia.com/</docsUrl>
+    <mailingListUrl>https://forums.developer.nvidia.com/c/omniverse/300</mailingListUrl>
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>omniversesdk openusd RTX 3d rendering</tags>
+    <summary>The platform for developing OpenUSD applications for industrial digitalization and physical AI simulation.</summary>
+    <description>NVIDIA Omniverse is a platform of APIs, services, and software development kits (SDKs) that enable developers to build generative AI-enabled tools, applications, and services for industrial digitalization workflows. Applications built on Omniverse core technologies fundamentally transform complex 3D workflows, allowing individuals and teams to build unified tool and data pipelines and simulate large-scale, physically accurate virtual worlds for industrial and scientific use cases.
+    </description>
+    <releaseNotes>https://catalog.ngc.nvidia.com/orgs/nvidia/teams/omniverse/resources/kit-sdk/version</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
