@@ -37,8 +37,8 @@ $StartPrograms = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Progr
 
 $ShortcutArgs = @{
    ShortcutFilePath = Join-Path $StartPrograms 'Omniverse Kit SDK.lnk'
-   TargetPath       = $EXE.fullname
-   Arguments        = Get-ChildItem $UnzipArgs.Destination -filter 'omni.app.editor.base.kit' -recurse
+   TargetPath       = $EXE.FullName
+   Arguments        = Join-Path (Split-Path $EXE.Directory) 'app\omni.app.editor.base.kit'
 }
 Install-ChocolateyShortcut @ShortcutArgs
 
