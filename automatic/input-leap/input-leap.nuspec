@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>input-leap</id>
+    <version>3.0.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/input-leap</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Input Leap</title>
+    <authors>Input Leap project contributors</authors>
+    <projectUrl>https://github.com/input-leap/input-leap</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/input-leap/input-leap@093f297127a458cb01c3ab8dbb1d641d5396ae87/res/input-leap.png</iconUrl>
+    <copyright>Copyright (c) 2021-2023 The InputLeap Developers, 
+Copyright (C) 2018 Debauchee Open Source Group, 
+Copyright (C) 2012-2016 Symless Ltd., 
+Copyright (C) 2008-2014 Nick Bolton, 
+Copyright (C) 2002-2014 Chris Schoeneman</copyright>
+    <licenseUrl>https://github.com/input-leap/input-leap/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://github.com/input-leap/input-leap/wiki</docsUrl>
+    <mailingListUrl>https://github.com/input-leap/input-leap/discussions</mailingListUrl>
+    <bugTrackerUrl>https://github.com/input-leap/input-leap/issues</bugTrackerUrl>
+    <tags>input-leap kvm Barrier Synergy keyboard mouse sharing FOSS embedded</tags>
+    <summary>Open-source KVM software</summary>
+    <description>Input Leap is software that mimics the functionality of a KVM switch, which historically would allow you to use a single keyboard and mouse to control multiple computers by physically turning a dial on the box to switch the machine you're controlling at any given moment. Input Leap does this in software, allowing you to tell it which machine to control by moving your mouse to the edge of the screen, or by using a keypress to switch focus to a different system.
+
+Input Leap was forked from Barrier in November 2021.  At the moment, Input Leap is not compatible with Synergy.
+
+### What's different?
+Whereas Synergy has moved beyond its goals from the 1.x era, Input Leap aims to maintain that simplicity. Input Leap will let you use your keyboard and mouse from one computer to control one or more other computers.
+
+Clipboard sharing is supported.
+
+### Project goals
+* **Hassle-free reliability.** We are users, too. Input Leap was created so that we could solve the issues we had with Synergy and then share these fixes with other users.
+* **Compatibility.** We use more than one operating system and you probably do, too. Windows, macOS, Linux, FreeBSD... Input Leap should "just work". We will also have our eye on Wayland when the time comes.
+* **Communication.** Everything we do is in the open. Our issue tracker will let you see if others are having the same problem you're having and will allow you to add additional information. You will also be able to see when progress is made and how the issue gets resolved.
+
+    </description>
+    <releaseNotes>https://github.com/input-leap/input-leap/releases</releaseNotes>
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
