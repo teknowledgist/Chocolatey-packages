@@ -17,4 +17,5 @@ You can use one of the following methods to obtain the checksum:
 
 
 ## License
-Contents of the file 'LICENSE.txt' is obtained from the installer License Agreement window
+Contents of the file 'LICENSE.txt' is obtained from:
+ - https://github.com/input-leap/input-leap/blob/master/LICENSE
