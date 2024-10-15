@@ -8,9 +8,9 @@ can be downloaded from the PostgreSQL download site:
 Click the "MSI" link and the version and bit-level to download.
 
 Direct Download:
-Version         : 16.00.0005
-32-bit URL      : https://ftp.postgresql.org/pub/odbc/releases/REL-16_00_0005/psqlodbc_x86.msi
-32-bit checksum : 92DF327F486B5B79EEDEC090DE0BFC730D6CD1258D1976BAE4D79971476FCE7C
-64-bit URL      : https://ftp.postgresql.org/pub/odbc/releases/REL-16_00_0005/psqlodbc_x64.msi
-64-bit checksum : 25C2E550042F132C75DD92E7C7E79FF9060B5F6CD6D363AA85F315B136F9E3BD
+Version         : 17.00.0002
+32-bit URL      : https://ftp.postgresql.org/pub/odbc/releases/REL-17_00_0002/psqlodbc_x86.msi
+32-bit checksum : E626F266F679A5840E92D7D859AC2F3A11FD08AE10F1933EE4E500E70F35C557
+64-bit URL      : https://ftp.postgresql.org/pub/odbc/releases/REL-17_00_0002/psqlodbc_x64.msi
+64-bit checksum : 1A40E11282B55EFAC329888AF837CCA5F567FF2AB0E272D386FAD4319DD915CD
 
