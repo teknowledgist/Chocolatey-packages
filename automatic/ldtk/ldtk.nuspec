@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>ldtk</id>
+    <version>1.5.3</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/ldtk</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <title>LDtk (Level Design Toolkit)</title>
+    <authors>Deepnight Games</authors>
+    <projectUrl>https://ldtk.io/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/deepnight/ldtk@e93f026080ff6d3bfed5df74e411a723e0224545/app/assets/appIcon.png</iconUrl>
+    <copyright>Copyright © 2024 Sébastien Bénard</copyright>
+    <licenseUrl>https://github.com/deepnight/ldtk/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://ldtk.io/docs/</docsUrl>
+    <mailingListUrl>https://ldtk.io/go/discord</mailingListUrl>
+    <bugTrackerUrl>https://github.com/deepnight/ldtk/issues</bugTrackerUrl>
+    <tags>ldtk game design development level editor 2d haxe FOSS embedded</tags>
+    <summary>A modern, lightweight and efficient 2D level editor.</summary>
+    <description>LDtk ("Level Design toolkit") is A modern 2D level editor by game devs with 20+ years of experience creating video games, for game devs.  It could become the backbone of your game dev life. It delivers all the important features in a modern and user-friendly interface.
+
+It is designed with user experience first in mind: do less, but do it right.
+
+## Features
+* Easy to use - Every UI details were carefully designed to make the process of creating levels as smooth as possible.
+* “Super Simple Export” - For every new tool out there, there is this moment when you need to write the importer for your fav engine. LDtk offers a Super Simple Export option. You will get a few PNGs per levels, a tiny JSON for your entity data and that’s it.
+* Auto-rendering - Define some simple rules in a visual editor and let LDtk do the boring part of the skinning job for you.
+* Worlds - Choose your world layout among “Grid-vania”, “linear”, or “free” and reorganize all your levels using plain old simple drag-n-drop. Switching between views is also just a mousewheel-roll away.
+* Customizable entities - Create your own game entities, with any custom (typed) properties, like “hit points”, a patrol path or an inventory of items.
+* Aseprite support - LDtk can load “*.aseprite” files directly, without any whatsoever intermediate PNG conversion. And with live-reloading support, you paint your tiles, save and LDtk updates everything accordingly, including image resizing.
+* Platformers &amp; top-downs - LDtk focuses on these perspectives to make sure the user experience feels just right. Sorry, no isometric 3D here!
+* Unity, Haxe, Playdate etc. - Load your LDtk project right in your favorite engine and programming language.
+* JSON - The app outputs a well documented JSON format that you can easily parse in your favorite game engine.
+* Tiled export - Tiled (TMX) optional export to try it out before implementing your own importer.
+* Backups - We know bad things can happen. LDtk offers a strong backup system and can even restore unsaved changes if the app crashes (which shouldn’t happen, but hey, we don’t live in a perfect world).
+* Pay what you want! - LDtk can be used for free without any limitation. But if you want to support my work, please [consider buying it](https://deepnight.itch.io/ldtk/purchase) or [becoming a direct sponsor](https://github.com/sponsors/deepnight).
+
+    </description>
+    <releaseNotes>https://ldtk.io/release-notes/</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
