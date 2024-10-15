@@ -39,6 +39,9 @@ function global:au_SearchReplace {
       "tools\chocolateyUninstall.ps1" = @{
          "(^   softwarename\s*=\s*)('.*')"   = "`$1'Slicer $($Latest.NamedVersion)*'"
       }
+      "tools\chocolateyBeforeModify.ps1" = @{
+         "(^   softwarename\s*=\s*)('.*')"   = "`$1'Slicer $($Latest.NamedVersion)*'"
+      }
    }
 }
 
