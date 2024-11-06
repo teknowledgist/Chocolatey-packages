@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>deskflow</id>
+    <version>1.17.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/deskflow</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Deskflow</title>
+    <authors>Deskflow contributors</authors>
+    <projectUrl>https://github.com/deskflow/deskflow</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/deskflow/deskflow@6bb1bcad8c58e15fd40a22a4e925a3f6518585ac/res/app.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://github.com/deskflow/deskflow/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/deskflow/deskflow</projectSourceUrl>
+    <docsUrl>https://github.com/deskflow/deskflow/wiki</docsUrl>
+    <bugTrackerUrl>https://github.com/deskflow/deskflow/issues</bugTrackerUrl>
+    <tags>deskflow keyboard mouse emulation network kvm share FOSS embedded</tags>
+    <summary>Deskflow lets you share one mouse and keyboard between multiple computers on Windows, macOS and Linux. It's like a software KVM (but without video). </summary>
+    <description>Deskflow is a free and open source keyboard and mouse sharing app. Use the keyboard, mouse, or trackpad of one computer to control nearby computers, and work seamlessly between them. It's like a software KVM (but without the video). TLS encryption is enabled by default. Wayland is supported. **Clipboard sharing is supported.**
+    
+[![Sponsored by: Synergy](https://raw.githubusercontent.com/deskflow/deskflow-artwork/b2c72a3e60a42dee793bd47efc275b5ee0bdaa5f/misc/synergy-sponsor.svg)](https://github.com/deskflow/deskflow/wiki/Relationship-with-Synergy)
+
+**Deskflow** is the official upstream project for [Synergy](https://symless.com/synergy).
+Purchasing a Synergy license is one way to support Deskflow’s growth and sustainability.
+
+The Deskflow project was established to cultivate community-driven development where everyone can collaborate.
+Synergy sponsors the Deskflow project by contributing code and providing financial support.
+
+More info: [Relationship with Synergy](https://github.com/deskflow/deskflow/wiki/Relationship-with-Synergy)
+
+### Is Deskflow compatible with Synergy, Input Leap, or Barrier?
+
+Yes, Deskflow has network compatibility with all forks:
+- Requires Deskflow >= v1.17.0.96
+- Deskflow will *just work* with Input Leap and Barrier (server or client).
+- Connecting a Deskflow client to a Synergy server will also *just work*.
+- To connect a Synergy client, you need to select the Synergy protocol in the Deskflow server settings.
+
+However, **Deskflow cannot be installed on the same computer as Barrier, Input Leap, or Synergy!**
+
+    </description>
+    <releaseNotes>https://github.com/deskflow/deskflow/releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
