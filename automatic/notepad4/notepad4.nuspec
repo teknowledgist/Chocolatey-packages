@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>notepad4</id>
-    <version>24.07.5332</version>
+    <version>24.09.5472</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/notepad4</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -53,6 +53,26 @@
 * Support text transliteration
 * Support drag and drop file from Visual Studio, Android Studio, IntelliJ IDEA, etc.
 * Other various major or minor changes and tweaks
+
+### Options
+By default, this package will install the embedded, multi-language build of Notepad4 best suited for your processor (Win32, x64, ARM, ARM64 and AVX2 available).  Other options can be requested as follows:
+
+##### Single-language
+Use the `\Language:` parameter with:
+
+* **hans** -- Chinese (Simplified)
+* **hant** -- Chinese (Traditional)
+* **en** -- English
+* **fr** -- French
+* **it** -- Italian
+* **ja** -- Japanese
+* **ko** -- Korean
+
+##### Low-resolution
+64-bit capable machines will get a build with high-definition images. If you would prefer a low-resolution install, use the `\LowRes` parameter.
+
+Example to download and install the Simplified-Chinese-only, Low-Resolution build:  
+`choco install notepad4 --params="'/Language:hans /LowRes'"`
 
     </description>
     <releaseNotes>https://github.com/zufuliu/notepad4/releases/latest</releaseNotes>

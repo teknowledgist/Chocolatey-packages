@@ -2,15 +2,24 @@
 Verification is intended to assist the Chocolatey moderators and community in verifying that this package's contents are trustworthy.
 
 ## Download
-The latest Notepad4 zip files can be downloaded from this page:
+The latest Notepad4 zip files embedded in this package can be downloaded from this page:
 
 https://github.com/zufuliu/notepad4/releases/latest
 
-- Version    : 24.07.5332
-- URL        : https://github.com/zufuliu/notepad4/releases/download/v24.07r5332/Notepad4_en_Win32_v24.07r5332.zip
-- Checksum   : 4D44C0866379CE9B0C5E597A2CE7EFF9641CE346CA8B0B73EC2A6F25E1A8EB66
-- URL64      : https://github.com/zufuliu/notepad4/releases/download/v24.07r5332/Notepad4_en_x64_v24.07r5332.zip
-- Checksum64 : 024DAF43BFD24B0C61515D543A2656E653CBF27E4F0AD5995BC0A4F9DFF7B1C5
+The files are for:
+
+- 32-bit build:  multi-language ("i18n"), Low-res, Win32
+- 64-bit build:  multi-language ("i18n"), Hi-definition, AXV2-capable-processor
+
+#### Direct Download
+- Version    : 24.09.5472
+- URL        : https://github.com/zufuliu/notepad4/releases/download/v24.09r5472/Notepad4_i18n_Win32_v24.09r5472.zip
+- Checksum   : 484DBE1FC188AF03915501FD3A6ECA60522BD0299D7B68A60F5A2352D6736812
+- URL64      : https://github.com/zufuliu/notepad4/releases/download/v24.09r5472/Notepad4_HD_i18n_AVX2_v24.09r5472.zip
+- Checksum64 : 55B4EE4879D29BA44D8A6FA546F3CE1E39D0ABE03B92F89EC00281333A75CE8E
+
+Other files available there are not embedded.
+
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
