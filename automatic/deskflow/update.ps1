@@ -2,11 +2,11 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $API = 'https://api.deskflow.org/version'
-   $Version = Get-LatestReleaseOnGitHub -URL $API | Select-Object -ExpandProperty Content
+   $Version = Invoke-WebRequest $API | Select-Object -ExpandProperty Content
 
    return @{ 
       Version = $version
-      URL64   = "https://github.com/deskflow/deskflow/releases/download/v$Version/deskflow-$($Version)_win64.msi"
+      URL64   = "https://github.com/deskflow/deskflow/releases/download/v$Version/deskflow-$($Version)-win-x64.msi"
    }
 }
 
@@ -16,7 +16,7 @@ function global:au_SearchReplace {
       "legal\VERIFICATION.md" = @{
             "(^- Version *:).*" = "`${1} $($Latest.Version)"
             "(^- URL *:).*"   = "`${1} $($Latest.URL64)"
-            "(^- SHA256 *:).*"  = "`${1} $($Latest.Checksum64)"
+            "(^- SHA256 Checksum *:).*"  = "`${1} $($Latest.Checksum64)"
       }
    }
 }
