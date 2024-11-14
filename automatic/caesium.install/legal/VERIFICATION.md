@@ -6,9 +6,9 @@ The extension can be downloaded from the GitHub releases page:
 - https://github.com/Lymphatus/caesium-image-compressor/releases
 
 or directly:
-Version : 2.7.1
-URL     : https://github.com/Lymphatus/caesium-image-compressor/releases/download/v2.7.1/caesium-image-compressor-2.7.1-win-setup.exe
-SHA256  : D7D8865048B7A82CC862B2BAEA40A458B7952082ED646DF34072C77175B08CC6
+Version : 2.8.2
+URL     : https://github.com/Lymphatus/caesium-image-compressor/releases/download/v2.8.2/caesium-image-compressor-2.8.2-win-setup.exe
+SHA256  : 248D13FB5DA989883DCBA5DCC32063C48C7A4AB3A7B31D9178E4341EB7A99F4F
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

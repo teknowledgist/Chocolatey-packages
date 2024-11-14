@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $BaseURL = "https://www.qgis.org"
-   $DownloadURI = "$BaseURL/en/site/forusers/download.html"
+   $DownloadURI = "$BaseURL/download/"
    $PageText = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing
 
    $HTML = New-Object -Com "HTMLFile"

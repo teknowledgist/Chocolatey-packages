@@ -3,12 +3,14 @@ Verification is intended to assist the Chocolatey moderators and community in ve
 
 ## Download
 The latest binary of Asymptote is available from SourceForge:
-https://sourceforge.net/projects/asymptote/files/<latest version>\
+
+- https://sourceforge.net/projects/asymptote/files/<latest version>\
 
 or directly:
-- Version      : 2.92
-- x64 URL      : https://sourceforge.net/projects/asymptote/files/2.92/asymptote-2.92-setup.exe
-- x64 CheckSum : D00B40C5D02DCFC8B702851F28A3F61A3667F61B981017CE9905A8B23AC20D2A
+
+- Version      : 2.94
+- x64 URL      : https://sourceforge.net/projects/asymptote/files/2.94/asymptote-2.94-setup.exe
+- x64 CheckSum : EC6BEF709A6A115BABAA995191643A5420799C1A7C5407230239FEB7D785AAC5
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
@@ -17,5 +19,5 @@ You can use one of the following methods to obtain the checksum:
 
 
 ## License
-Content in the file 'LICENSE.md' is obtained from:
+File 'LICENSE.md' is obtained from:
 - https://github.com/vectorgraphics/asymptote/blob/master/LICENSE

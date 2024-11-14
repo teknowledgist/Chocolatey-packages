@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xnviewmp.portable</id>
-    <version>1.8.2</version>
+    <version>1.8.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xnviewmp.portable</packageSourceUrl>
     <owners>Teknowledgist, Vaquero</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
