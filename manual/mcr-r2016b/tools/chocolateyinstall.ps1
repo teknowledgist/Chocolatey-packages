@@ -1,17 +1,15 @@
-﻿$ErrorActionPreference = 'Stop'; # stop on all errors
+﻿$ErrorActionPreference = 'Stop'  # stop on all errors
 
 $packageName = 'mcr-r2016b'
 $Version     = '9.1'
-$url64       = 'https://www.mathworks.com/supportfiles/downloads/R2016b/deployment_files/R2016b/installers/win64/MCR_R2016b_win64_installer.exe'
-$checkSum64  = 'A290F18CD3A21EB09181ED3B0D6A6C9857893FB2321D4F808EEF1F5659ABE20D'
 
 $WorkSpace = Join-Path $env:TEMP "$packageName.$Version"
 
 $WebFileArgs = @{
    packageName  = $packageName
    FileFullPath = Join-Path $WorkSpace 'installer.exe'
-   Url64bit     = $url64
-   Checksum64   = $checkSum64
+   Url64bit     = 'https://www.mathworks.com/supportfiles/downloads/R2016b/deployment_files/R2016b/installers/win64/MCR_R2016b_win64_installer.exe'
+   Checksum64   = 'A290F18CD3A21EB09181ED3B0D6A6C9857893FB2321D4F808EEF1F5659ABE20D'
    ChecksumType = 'sha256'
    GetOriginalFileName = $true
 }
@@ -40,3 +38,12 @@ $InstallArgs = @{
 
 Install-ChocolateyInstallPackage @InstallArgs
 
+$UpdateArgs = @{
+   PackageName    = "$Packagename-Updater"
+   URL64bit       = 'https://ssd.mathworks.com/supportfiles/downloads/R2016b/deployment_files/R2016b/installers/win64/MCR_R2016b_Update_6.exe'
+   FileType       = 'exe'
+   Checksum64     = '2bceb861f139ad47a0c23ac30d5da17040cab7f553b26d7546175895a466ef08'
+   ChecksumType64 = 'SHA256'
+   SilentArgs     = '/S'
+}
+Install-ChocolateyPackage @UpdateArgs
