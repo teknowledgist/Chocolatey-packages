@@ -8,9 +8,9 @@ https://github.com/rsms/inter/releases/latest
 
 or directly:
 
-- Version : 4.0
-- URL     : https://github.com/rsms/inter/releases/download/v4.0/Inter-4.0.zip
-- SHA256  : FF970A5D4561A04F102A7CB781ADBD6AC4E9B6C460914C7A101F15ACB7F7D1A4
+- Version : 4.1
+- URL     : https://github.com/rsms/inter/releases/download/v4.1/Inter-4.1.zip
+- SHA256  : 9883FDD4A49D4FB66BD8177BA6625EF9A64AA45899767DDE3D36AA425756B11E
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

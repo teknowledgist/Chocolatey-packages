@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>inter</id>
-    <version>4.0</version>
+    <version>4.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/inter</packageSourceUrl>
     <owners>Teknowledgist,rahuliyer95,jozef.izso</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

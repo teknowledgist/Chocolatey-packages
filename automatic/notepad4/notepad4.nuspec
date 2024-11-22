@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>notepad4</id>
-    <version>24.09.5472</version>
+    <version>24.11.5548</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/notepad4</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -60,13 +60,15 @@ By default, this package will install the embedded, multi-language build of Note
 ##### Single-language
 Use the `\Language:` parameter with:
 
-* **hans** -- Chinese (Simplified)
-* **hant** -- Chinese (Traditional)
+* *de* -- Deutsch
 * **en** -- English
-* **fr** -- French
-* **it** -- Italian
-* **ja** -- Japanese
-* **ko** -- Korean
+* **fr** -- Francais
+* **hans** -- 中文 (简体)
+* **hant** -- 中文 (繁體)
+* **it** -- Italiano
+* **ja** -- 日本語
+* **ko** -- 한국어
+* **ru** -- Русский
 
 ##### Low-resolution
 64-bit capable machines will get a build with high-definition images. If you would prefer a low-resolution install, use the `\LowRes` parameter.
