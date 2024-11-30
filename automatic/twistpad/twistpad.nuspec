@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>twistpad</id>
+    <version>3.3.0.20231019</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/twistpad</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Twistpad (free edition)</title>
+    <authors>Carthago Software</authors>
+    <projectUrl>https://www.carthagosoft.net/Twistpad.php</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@59a3bfdbabbab9a1dd95a3ca880629abb2dd1c30/Icons/twistpad_icon.png</iconUrl>
+    <copyright>Copyright © 1998-2024 Carthago Software</copyright>
+    <licenseUrl>https://www.carthagosoft.net/EULA.pdf</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <mailingListUrl>https://www.carthagosoft.net/forums/index.php?action=vtopic&amp;forum=8</mailingListUrl>
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>twistpad notepad text editor code freeware</tags>
+    <summary>A fully featured text and code editor</summary>
+    <description>Twistpad is a fully featured text and code editor for Windows. Twistpad can be used as a simple notepad replacer or a featured packed editor targeting web and software developers. Twistpad supports a full range of syntax highlighting (colored keywords) for the most popular formats out of the box (HTML, ASP, XML, C++, Java, Pascal, etc) but it's strength relies on the easy to create new highlighting schemes.
+
+This version is provided as freeware only for personal, non-commercial use. **THE USE OF THE FREE EDITION FOR BUSINESS OR COMMERCIAL PURPOSES IS PROHIBITED.** Home users, Open Source contributors, students, hobbyists and charity or humanitarian organizations can use the FREE EDITION for non-commercial activity **ONLY**.
+
+Written in native code (32 bit only for free edition), you can be sure that no system files are altered or large additional run-time libraries are required. Performance is also something we had in mind when designing Twistpad, so fast start up time and fast text parsing are guaranteed.
+
+## Features
+* [Syntax Highlight](https://www.carthagosoft.net/TwistpadSyn.php)
+* Unicode support
+* Modern Windows editions support
+* High DPI support
+* Integrated file compare
+* Tabbed interface
+* Multiple clipboard support
+* Integrated file browser
+* Itegrated file history
+* Search and replace in text files
+* Editor themes support
+* Enhanced file switch
+* Function list
+* Bookmarks
+* External tool support
+* Block selection
+* Print and Print Preview
+* Plug-in support
+* Text Snippets
+* Track changes
+* Templates
+* Auto complete
+* Formatting text tools
+* Document bar
+* Customization options
+* Guidelines and code helpers
+* Transparent selection
+* Binary file warning
+* Tool Windows
+* File Changed
+* Application themes
+* Export Syntax Highlight
+
+If you find this Free Edition useful, please consider [making a donation](https://www.paypal.com/donate/?hosted_button_id=7SP5W2578S764). A donation would not only demonstrate your appreciation for this software, but also help and encourage future developments. 
+
+    </description>
+    <releaseNotes>https://www.carthagosoft.net/TwistpadHv3x.php</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
