@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>twistpad</id>
-    <version>3.3.0.20231019</version>
+    <version>3.14</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/twistpad</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -14,7 +14,7 @@
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@59a3bfdbabbab9a1dd95a3ca880629abb2dd1c30/Icons/twistpad_icon.png</iconUrl>
     <copyright>Copyright © 1998-2024 Carthago Software</copyright>
     <licenseUrl>https://www.carthagosoft.net/EULA.pdf</licenseUrl>
-    <requireLicenseAcceptance>true</requireLicenseAcceptance>-->
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
     <mailingListUrl>https://www.carthagosoft.net/forums/index.php?action=vtopic&amp;forum=8</mailingListUrl>
     <!--<bugTrackerUrl></bugTrackerUrl>-->
