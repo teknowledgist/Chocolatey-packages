@@ -13,10 +13,9 @@ function global:au_GetLatest {
    $TYPage = Invoke-WebRequest -uri $TYURL
    $URL64 = $TYPage.links | Where-Object {$_.innertext -match 'direct'} | Select-Object -ExpandProperty href
 
-
    return @{ 
          Version = $version
-         URL64   = $URL64
+         URL64   = $URL64 -replace '&amp;','&'
    }
 }
 
