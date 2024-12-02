@@ -15,8 +15,8 @@ function global:au_GetLatest {
    $version = ($DloadVersion.split() | Where-Object {$_ -match '^v?[0-9.]+$'}) -replace 'v',''
 
    return @{ 
-            Version      = $version
-            URL32        = "https://www.carthagosoft.net/downloads/TwistpadSetup.zip"
+            Version = $version
+            URL32   = "https://www.carthagosoft.net/downloads/TwistpadSetup.zip"
            }
 }
 
@@ -24,7 +24,7 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
    @{
       "tools\chocolateyInstall.ps1" = @{
-         "(^   url\s*=\s*)('.*')"   = "`$1'$($Latest.URL32)'"
+         "(^   URL\s*=\s*)('.*')"   = "`$1'$($Latest.URL32)'"
          "(^   Checksum\s*=\s*)('.*')" = "`$1'$($Latest.Checksum32)'"
       }
    }
