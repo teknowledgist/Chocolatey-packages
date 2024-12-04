@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>traytoolbar</id>
-    <version>1.3.5</version>
+    <version>1.3.8</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/traytoolbar</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>TrayToolbar (portable)</title>
     <authors>Bron Davies</authors>
     <projectUrl>https://github.com/brondavies/TrayToolbar</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/traytoolbar_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@59dc1db66e556bda065e519e5bfb441b138dc196/Icons/traytoolbar_icon.png</iconUrl>
     <copyright>Copyright © 2024 Brontech, LLC</copyright>
     <licenseUrl>https://github.com/brondavies/TrayToolbar/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
