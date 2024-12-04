@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>traytoolbar</id>
+    <version>1.3.5</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/traytoolbar</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>TrayToolbar (portable)</title>
+    <authors>Bron Davies</authors>
+    <projectUrl>https://github.com/brondavies/TrayToolbar</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@/Icons/traytoolbar_icon.png</iconUrl>
+    <copyright>Copyright © 2024 Brontech, LLC</copyright>
+    <licenseUrl>https://github.com/brondavies/TrayToolbar/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/brondavies/TrayToolbar</projectSourceUrl>
+    <docsUrl>https://github.com/brondavies/TrayToolbar#customization</docsUrl>
+    <bugTrackerUrl>https://github.com/brondavies/TrayToolbar/issues</bugTrackerUrl>
+    <tags>traytoolbar Windows tray menu shortcuts quicklaunch</tags>
+    <summary>A replacement for the custom toolbar functionality that was removed in Windows 11</summary>
+    <description>Creates a menu with all your favorite shortcuts within easy reach just by putting them in a local folder.
+
+* Replaces the Windows 7-10 feature that no longer exists in Windows 11 for custom toolbars on the taskbar
+* Choose the folder(s) and customize the file filter
+* Launches links, files and apps from this menu which exist in the chosen folders and subfolders
+* Automatically updates the menu with changes in the folder
+* Choose your preference for icon and font sizes
+* Includes support for English, Spanish, French, German, Portuguese, Italian, Japanese, Chinese, Russian, and Korean
+
+💡 Can also be used in Windows 8 and 10! 
+    </description>
+    <releaseNotes>https://github.com/brondavies/TrayToolbar/releases/latest</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
