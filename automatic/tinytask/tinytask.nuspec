@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>tinytask</id>
+    <version>1.77</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/tinytask</packageSourceUrl>
+    <owners>Teknowledgist,Adgellida</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>TinyTask</title>
+    <authors>The TinyTask Author</authors>
+    <projectUrl>https://_Software_Location_REMOVE_OR_FILL_OUT_</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@5954ad1c90e4810748bb835f3d3551bb1c13db36/Icons/tinytask_icon.png</iconUrl>
+    <copyright>Copyright © 2019</copyright>
+    <licenseUrl>https://www.tinytask.net/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://www.tinytask.net/support.html</docsUrl>
+    <tags>tinytask mouse macro record automation freeware</tags>
+    <summary>Simple + Fast + Free: Automation for Everyone</summary>
+    <description>TinyTask is a minimalist PC automation app you can use to record and repeat actions. As the name implies, it's unbelievably small (only 36KB!), ultra compact, and 100% portable.
+
+No scripting is necessary - just press record, then play!
+
+![Screenshot](https://www.tinytask.net/images/app_lede.png)    
+###### Fun Fact: The graphics in TinyTask (icons, toolbars) take up half of the app size, the actual program itself is only 16 kB.
+
+TinyTask is developed when time and motivation permits. If you absolutely want to, [you can send feature ideas](mailto:info@tinytask.net?Subject=TinyTask%20comment,%20NOT%20a%20support%20question%20:) (not support requests!).  Encouraging feedback plus contributions are very effective motivators, and help to advance this project. 
+
+    </description>
+    <releaseNotes>https://www.tinytask.net/revision_history.html</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
