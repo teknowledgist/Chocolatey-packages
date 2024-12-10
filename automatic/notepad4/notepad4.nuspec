@@ -60,7 +60,7 @@ By default, this package will install the embedded, multi-language build of Note
 ##### Single-language
 Use the `\Language:` parameter with:
 
-* *de* -- Deutsch
+* **de** -- Deutsch
 * **en** -- English
 * **fr** -- Francais
 * **hans** -- 中文 (简体)
