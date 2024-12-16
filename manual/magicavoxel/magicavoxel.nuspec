@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>magicavoxel</id>
+    <version>0.99.7.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/magicavoxel</packageSourceUrl>
+    <owners>Teknowledgist,Sanshiro</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>MagicaVoxel</title>
+    <authors>ephtracy</authors>
+    <projectUrl>https://ephtracy.github.io/index.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@434858c87c3c1e84567e0730ec2fdc631dc32b5a/Icons/magicavoxel_icon.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://ephtracy.github.io/index.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/ephtracy/ephtracy.github.io</projectSourceUrl>
+    <docsUrl>https://www.youtube.com/playlist?list=PLHtmobOgsDvlikllA1MBk7pk_DWlmtR_S</docsUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/ephtracy/ephtracy.github.io/issues</bugTrackerUrl>
+    <tags>magicavoxel voxel art editor render 3D model freeware</tags>
+    <summary>A free, lightweight, GPU-based, voxel art editor and interactive path tracing renderer.</summary>
+    <description>MagicaVoxel is a free and user-friendly tool for building 3D scenes and models using voxels (i.e., blocks). MagicaVoxel makes modeling super easy, similar to building in Minecraft. It supports animation, denoiser, pattern library, layer, camera, and more features.
+    
+This tiny light-weighted software is the core of voxelart, since it is capable of many things: just edit, paint and move your voxels in a cubic grid, then animated them and render them with the powerful integrated renderer.
+
+### License
+Feel free to use it for any project, no commercial licences required, credits to Ephtracy are appreciated.
+
+![Screenshot](https://i.imgur.com/XYYXjIn.png)
+
+[Browse a gallery of creations here.](https://www.voxelmade.com/gallery/)
+    
+    </description>
+    <releaseNotes>https://github.com/ephtracy/ephtracy.github.io/releases</releaseNotes>
+    <!-- =============================== -->
+    <dependencies>
+      <dependency id="vcredist140" version="14.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
