@@ -4,20 +4,22 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>powerdimmer</id>
-    <version>1.0</version>
+    <version>1.0.0.20241218</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/powerdimmer</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <title>Power Dimmer Screensaver</title>
     <authors>Matt Whitlock</authors>
-    <projectUrl>http://www.whitsoftdev.com/powerdimmer/</projectUrl>
+    <projectUrl>https://web.archive.org/web/20221116050939/http://www.whitsoftdev.com/powerdimmer/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@a49cdf4ba756e0dc4a470ba35af40f59d3fe773d/Icons/powerdimmer_icon.png</iconUrl>
     <copyright>Copyright © 1999-2019 WhitSoft Development and Matt Whitlock</copyright>
-    <licenseUrl>http://www.whitsoftdev.com/help/about.php</licenseUrl>
+    <licenseUrl>https://web.archive.org/web/20220807153120/http://www.whitsoftdev.com/help/about.php</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <bugTrackerUrl>http://www.whitsoftdev.com/help/contact.php</bugTrackerUrl>
-    <tags>powerdimmer dimmer screensaver darken embedded</tags>
+    <tags>powerdimmer dimmer screensaver darken embedded discontinued</tags>
     <summary>Gradually dim your screen on inactivity.</summary>
     <description>Power Dimmer is a Windows screen saver application that, once activated, will gradually dim your screen, fading it from full brightness to a final brightness level that you set. While the screen is dimmed, you can still see all of your windows, as well as any on-screen activity. Move the mouse or press a key and your screen will be restored to full brightness. To install this screen saver, download and unzip the file to your Windows folder and then select WhitSoft Power Dimmer from the list of screen savers in your Display Options control panel. 
+    
+## Discontinued
+The site/company from which Power Dimmer originated (WhitSoft) has closed.  PowerDimmer is embedded here, so this package will still work, but reference links are necessarily to the Internet Archive ("Wayback Machine").
     </description>
   </metadata>
   <files>
