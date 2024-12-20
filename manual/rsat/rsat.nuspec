@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>rsat</id>
-    <version>2.1809.0.20210815</version>
+    <version>2.1809.1.20241220</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/rsat</packageSourceUrl>
     <owners>Teknowledgist, lowmach1ne</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -23,16 +23,13 @@
 ### Notes
 * RSAT will install *only* on Business, Ultimate, Professional, Education, or Enterprise (or LTSB/LTSC) editions of Windows.  You cannot install RSAT on computers that are running Home or Standard editions of Windows. 
 * Windows Vista and Windows 7 are no longer supported, the RSAT downloads are unavailable, and this package will fail for those operating system versions. 
-* This package will install the latest version of RSAT for the running Windows OS **unless** it is Windows 10 **AND** the `Server` package parameter is used as follows:
+* This package will install the latest version of RSAT for the running Windows OS.
 
-    `choco install rsat -params '"/Server:2016"'`
-
-##### Windows 10 (pre-1809) RSAT version recommendations:
-* use the latest (default) when managing Windows Server, version 1803 or 1709 (Both `1803` and `1709` are available if needed.)
-* use `2016` when managing Windows Server 2016 or previous versions
+##### Windows 10 pre-1809 (1803, 1607, etc.)
+* Previously, different installers were required for different Windows 10 releases and/or different Server architectures, but Microsoft provides only one installer now.  The documentation seems to indicate that it is valid for all pre-1809 releases, but this has not been verified.
 
 ### Windows 10 release 1809+
-With the September 2018 release of Windows, RSAT is no longer a single install nor is it associated with a specific server version.  Each of the RSAT features are separately available through Features on Demand.  This package should allow for download and installation of some or all of the RSAT features.  The `/server` parameter (above) is ignored here, and all the (20+) available RSAT features will be installed unless you choose one or more of the most common features using the following parameters:
+With the September 2018 release of Windows, RSAT is no longer a single install nor is it associated with a specific server version.  Each of the RSAT features are separately available through Features on Demand.  This package should allow for download and installation of some or all of the RSAT features.  All the (20+) available RSAT features will be installed unless you choose one or more of the most common features using the following parameters:
 
 * `/AD` - Install the Active Directory Management feature.
 * `/GP` - Install the Group Policy Management feature.
@@ -45,7 +42,12 @@ With the September 2018 release of Windows, RSAT is no longer a single install n
 * `/WSUS` - Install the WSUS Management feature.
 * `/BL` - Install the BitLocker Drive Encryption Administration Utilities feature.
       
-*Example:* `choco install rsat -params '"/AD /GP /DHCP"'`
+*Example:* `choco install rsat --params '"/AD /GP /DHCP"'`
+
+### Windows 11 
+Many enterprise users of Windows 11 have found that the "Features on Demand" method of installing RSAT does not work (Error 0x800f0954). However, the Win10 installer does appear to work for Windows 11. Thus, if this package fails (or claims to have installed despite the 0x800f0954 error) on a Windows 11 system, you can `uninstall` and then choose to use a `/Win10` switch to override the "official" means of installing RSAT on Windows 11. Unlike Features on Demand, you will not be able to select which of the RSAT features you want. 
+
+*Example:* `choco install rsate --params '"/Win10"'`  
 
     </description>
   </metadata>

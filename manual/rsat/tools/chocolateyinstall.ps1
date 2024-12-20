@@ -23,6 +23,8 @@ elseif ((1,4,6,16,27,28,48,49,70,72,84,103,121,122,125,126,129,130,133,161,162,1
    Throw 'The Remote System Administration Toolkit (RSAT) can only install on Professional, Enterprise, or Education editions of Windows.'
 }
 
+$pp = Get-PackageParameters
+
 $web = New-Object Net.WebClient
 if ($osInfo.Version.Major -eq 6) {
    switch ($osInfo.Version.Minor) {
@@ -40,30 +42,26 @@ if ($osInfo.Version.Major -eq 6) {
             $Checksum64 = 'dea5540a59e018e04e088afb2aa326fb690d27a983fd3cbffefbfcfdde20a47d' }
    }
 } elseif ($osInfo.Version.Major -eq 10) { # Windows 10
-   $pp = Get-PackageParameters
-   if ($osInfo.BuildNumber -lt $1809Build) {
-      switch ($pp.Server) {
-         '2016' { $WS = '2016'
-                  $Checksum = '6d46ef85cb63cf5c949706b7890bc1bb56a8c30506700262fe5ef4999b7380f3'
-                  $Checksum64 = '4aeb716f301783e56739f9b0a361e2aa4f1e1d6b947b76c1d61af70b0ff0b4c7' }
-         '1709' { $WS = '1709'
-                  $Checksum = 'b62f131993908e24f093c8d630b84d49a829d9f7922dab17aa2f42867b096c43'
-                  $Checksum64 = '72b34e1bef5c790081ffda24e18a5eb3cbe26944baee604aae0deddd8bfe6ebc' }
-         default { $WS = '1803'
-                  $Checksum = '968c20e6492b89fe72fe1cf496b90b7106492258a02d1333a6aa810be7cf5b49'
-                  $Checksum64 = '3908b653c8bc5567684ab2779ee110dc2c0d56d2a33a329fe5460ecce55aaebe' }
+   if (($osInfo.BuildNumber -lt $1809Build) -or ($pp.Win10)) {
+      # Documentation indicates that these work for all pre-1809 Win10 releases
+      $Checksum = '99ed8359fcd5927cb4dd1ff83ce909bda87c12c4092cf81b121853e5ca8dd7ec'
+      $Checksum64 = 'c01b90a7b79a4d5ac4ad89b404368e9053657d8e86bcbd60ee69fa1a6bc402c7'
+
+      $html = $web.DownloadString('https://www.microsoft.com/en-us/download/details.aspx?id=45520')
+      if ($pp.Win10) {
+         Write-Host 'You have requested to install the last Win10 download regardless of Windows version.' -ForegroundColor Cyan
+      } else {
+         Write-Host "Installing tools for managing Windows prior to 1809 release." -ForegroundColor Cyan
       }
-      $html = $web.DownloadString('https://www.microsoft.com/download/confirmation.aspx?id=45520')
-      Write-Host "Installing tools for managing Windows Server $WS." -ForegroundColor Cyan
    }
 }
 
-If (($osInfo.Version.Major -ne 10) -or ($osInfo.BuildNumber -lt $1809Build)) {
+
+If (($osInfo.Version.Major -ne 10) -or ($osInfo.BuildNumber -lt $1809Build) -or ($pp.Win10)) {
    $urls = select-string '"https[^"]*msu"' -input $html -AllMatches |
    ForEach-Object {$_.matches} | 
    ForEach-Object {$_.value.trim('"')} |
-   Select-Object -unique |
-   Where-Object {$_ -match "WS_?$WS"}
+   Select-Object -unique
 
    $url        = $urls | where-Object {$_ -match 'x86' }
    $url64      = $urls | where-Object {$_ -match 'x64' }
