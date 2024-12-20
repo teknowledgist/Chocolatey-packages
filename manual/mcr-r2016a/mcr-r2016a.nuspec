@@ -8,7 +8,7 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/mcr-r2016a</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>MATLAB Compiler Runtime R2016b</title>
+    <title>MATLAB Compiler Runtime R2016a</title>
     <authors>The Mathworks, Inc.</authors>
     <projectUrl>https://www.mathworks.com/products/compiler/matlab-runtime.html</projectUrl>
     <iconUrl>https://cdn.rawgit.com/teknowledgist/Chocolatey-packages/master/Icons/matlab_icon.png</iconUrl>

@@ -19,9 +19,9 @@ function global:au_GetLatest {
    $Languages = $Languages.split("`r`n") | Where-Object {$_ -and $_ -notmatch 'en-us'}
    foreach ($lang in $Languages) {
       Write-Host "Finding URL for:  $Lang"
-      $confirmURL = "https://www.microsoft.com/$($Lang.split(',')[0])/download/confirmation.aspx?id=$ProductID"
+      $confirmURL = "https://www.microsoft.com/$($Lang.split(',')[0])/download/details.aspx?id=$ProductID"
       $confirmpage = Invoke-WebRequest $confirmURL -UseBasicParsing
-      $LangURL = $confirmpage.rawcontent.split('"') | Where-Object {$_ -match '\.msi$'} | Select-Object -first 1
+      $LangURL = $confirmpage.rawcontent.split('"') | Where-Object {$_ -match '^https.*\.msi$'} | Select-Object -first 1
       $CSV += "$([System.Net.WebUtility]::HtmlDecode($Lang)),$LangURL"
    }
    $CSV | Out-File '.\tools\LanguageChecksums.csv' -Force

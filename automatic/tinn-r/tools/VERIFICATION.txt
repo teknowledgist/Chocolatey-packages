@@ -10,7 +10,7 @@ or by getting the same download from SourceForge:
 
 Direct Download:
 
-Version  : 9.0.3.1
-URL      : https://sourceforge.net/projects/tinn-r/files/Tinn-R%20setup/9.0.3.1/Tinn-R_9.00.03.01_setup.exe
-CheckSum : CF8F31D0C149CBAC39440ED7D9ECFD087012E0DBE118AC415FE3CF93644F7384
+Version  : 9.0.4.1
+URL      : https://sourceforge.net/projects/tinn-r/files/Tinn-R%20setup/9.0.4.1/Tinn-R_9.00.04.01_setup.exe
+CheckSum : E077E3F3677D2A9925C370271C64DE5DAC203629575199E1375E9B953611B4BB
 
