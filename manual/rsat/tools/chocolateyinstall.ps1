@@ -18,9 +18,16 @@ elseif ($osInfo.ProductType -ne 1 -and $osInfo.OperatingSystemSKU -ne 175) {
 }
 # See here for determining the edition of Windows via SKU:
 #   https://superuser.com/questions/1328506/windows-edition-on-non-english-systems
-# The list below are the valid SKUs for Windows editions that can have RSAT
-elseif ((1,4,6,16,27,28,48,49,70,72,84,103,121,122,125,126,129,130,133,161,162,175) -notcontains ($osInfo.OperatingSystemSKU)) {
+#   https://learn.microsoft.com/en-us/windows/win32/api/sysinfoapi/nf-sysinfoapi-getproductinfo
+# The list below are the valid SKUs for Windows editions believed to be capable of RSAT
+elseif ((1,4,6,16,27,28,48,49,70,72,84,103,121,122,125,126,129,130,133,161,162,175,188,191) -notcontains ($osInfo.OperatingSystemSKU)) {
    Throw 'The Remote System Administration Toolkit (RSAT) can only install on Professional, Enterprise, or Education editions of Windows.'
+}
+
+. "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)\helpers.ps1"
+$Features = Get-ProcessorFeatures
+if ($Features.'ARM_V8_INSTRUCTIONS') {
+   Throw 'The Remote System Administration Toolkit (RSAT) does not work on ARM processors at this time.'
 }
 
 $pp = Get-PackageParameters
