@@ -1,6 +1,6 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$PackageMileStone = '24.4'
+$PackageMileStone = '24.12'
 
 if (Get-ProcessorBits -compare 32) {
    Thow "MiKTeX for Windows no longer has a 32-bit option available."
