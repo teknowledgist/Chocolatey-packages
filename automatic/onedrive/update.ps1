@@ -1,4 +1,5 @@
-import-module chocolatey-au
+Import-Module -Name Evergreen
+Import-Module Chocolatey-AU
 
 function global:au_GetLatest {
    $Meta = Get-EvergreenApp microsoftonedrive | 

@@ -1,3 +1,4 @@
+Import-module evergreen
 import-module chocolatey-au
 
 function global:au_GetLatest {

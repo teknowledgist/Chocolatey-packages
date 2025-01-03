@@ -6,12 +6,12 @@ function global:au_GetLatest {
 
    $HTML = New-Object -Com "HTMLFile"
    try {
-      $html.IHTMLDocument2_write($download_page)    # if MS Office installed
+      $html.IHTMLDocument2_write($download_page.rawcontent)    # if MS Office installed
    } catch {
       $html.write([Text.Encoding]::Unicode.GetBytes($download_page))   # No MS Office
    }
    
-   $VersionText = $HTML.getElementsByClassName("h5") |
+   $VersionText = $HTML.getElementsByTagName("p") |
                      Where-Object {$_.innertext -match '^download'} | 
                      Select-Object -ExpandProperty innertext
    $Version = $VersionText -replace '.*?([0-9.]+).*','$1'

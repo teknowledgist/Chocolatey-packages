@@ -1,4 +1,5 @@
-import-module chocolatey-au
+#Requires -Modules ImportExcel
+Import-Module -Name Chocolatey-AU
 
 $moduleName  = 'importexcel'
 

@@ -6,7 +6,7 @@ function global:au_GetLatest {
 
    $HTML = New-Object -Com "HTMLFile"
    try {
-      $html.IHTMLDocument2_write($HistPage)    # if MS Office installed
+      $html.IHTMLDocument2_write($HistPage.rawcontent)    # if MS Office installed
    } catch {
       $html.write([Text.Encoding]::Unicode.GetBytes($HistPage))   # No MS Office
    }

@@ -1,17 +1,23 @@
-import-module au
-
-$Release = 'http://www.textworld.com/scp/'
+import-module chocolatey-au
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $Release
+   $Release = 'https://www.textworld.com/scp/'
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
-   $link = $download_page.links | 
+   $HTML = New-Object -Com "HTMLFile"
+   try {
+      $html.IHTMLDocument2_write($download_page.rawcontent)    # if MS Office installed
+   } catch {
+      $html.write([Text.Encoding]::Unicode.GetBytes($download_page))   # No MS Office
+   }
+
+   $link = $html.links | 
             Where-Object {$_.href -like "*.msi"} | 
             Select-Object -First 1   
             
-   $url = $Release + $link.href
+   $url = $Release + $link.href.replace('about:','')
 
-   $version = $url.split('-') | ? {$_ -match '^[0-9.]+$'}
+   $version = $url.split('-') | Where-Object {$_ -match '^[0-9.]+$'}
 
    return @{ Version = $version; URL32 = $url }
 }
