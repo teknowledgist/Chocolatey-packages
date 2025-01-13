@@ -7,7 +7,7 @@ http://www.abstractspoon.com/
 
 Direct Download:
 
-Version  : 9.0
+Version  : 9.0.2.1
 URL      : https://github.com/abstractspoon/ToDoList_Downloads/raw/master/Latest/todolist_exe.zip
-CheckSum : 43D70B7036993D442DF55CA80DC1CA321A7871596001D54CE85FE7EC2E5A0A25
+CheckSum : 3A3930D0C4177306DC11C343E5506F7FC8D2A545302DD4A6216FDC3F8A8A04F9
 

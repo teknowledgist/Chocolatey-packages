@@ -6,9 +6,9 @@ The latest version can be downloaded from the official download page:
 - https://realityripple.com/Software/Applications/SecondFactor/
 
 or directly:
-- Version  : 1.4.5
+- Version  : 2.0
 - URL      : https://realityripple.com/Software/Applications/SecondFactor/SF_Setup.exe
-- Checksum : DA8EE6AA890875CE6E4C0EB7AF245874F77E16B72F547E703E93904EFB87F6FC
+- Checksum : 418691AC5E00A66FB680368C200F8E0F6DFB7C27626EACC83451661B19D21EFC
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
