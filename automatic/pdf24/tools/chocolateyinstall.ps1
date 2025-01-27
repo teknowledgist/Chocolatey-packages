@@ -7,10 +7,10 @@ $InstallArgs = @{
    packageName   = $env:ChocolateyPackageName
    softwareName  = "$env:ChocolateyPackageName*"
    fileType      = 'MSI' 
-   url           = 'https://download.pdf24.org/pdf24-creator-11.22.0-x86.msi'
-   checksum      = ''
-   url64bit      = 'https://download.pdf24.org/pdf24-creator-11.22.0-x64.msi'
-   checksum64    = '11386FEE6B8E1FB581FCDA067AEE1CC6E302BBBE285B76A2AB1E011515451C9C'
+   url           = 'https://download.pdf24.org/pdf24-creator-11.23.0-x86.msi'
+   checksum      = '86F63D19A586C3E46A54BCF9EF75A9565D070C02A7EFC3AEBCA08F99049D7F45'
+   url64bit      = 'https://download.pdf24.org/pdf24-creator-11.23.0-x64.msi'
+   checksum64    = '474F7DE6ABC32D99DA397356878268DC5B13257B6436E39C27FFF832FB082F46'
    checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
    silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes= @(0, 3010, 1641)
@@ -35,6 +35,11 @@ try {
 }
 
 $pp = Get-PackageParameters
+
+if ($pp['Updates']) { 
+   Write-Host 'You have opted for PDF24 to automatically update itself.' -ForegroundColor Cyan
+   $I = ''
+} else { $I = ' AUTOUPDATE=No' } 
 
 if ($pp['Icon']) { 
    Write-Host 'You have opted for the Desktop Icon.' -ForegroundColor Cyan

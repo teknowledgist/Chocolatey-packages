@@ -1,7 +1,7 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $Release = 'https://docfetcher.sourceforge.net/en/download.html'
+   $Release = 'https://docfetcher.sourceforge.io/en/download.html'
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
    $download_page = Invoke-WebRequest -Uri $Release
 

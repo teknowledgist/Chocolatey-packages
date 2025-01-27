@@ -1,8 +1,7 @@
 import-module chocolatey-au
 
-$AllVersions = 'https://creator.pdf24.org/listVersions.php'
-
 function global:au_GetLatest {
+   $AllVersions = 'https://creator.pdf24.org/listVersions.php'
    $PageData = Invoke-WebRequest -Uri "$AllVersions" -UseBasicParsing
 
    $version = ($PageData.rawcontent -split '</?td>')[1]
@@ -10,7 +9,7 @@ function global:au_GetLatest {
    $x64row = $pagedata.rawcontent -split '</?tr>' | ? {$_ -match "$version-x64\.msi"}
    $SHA264x64 = $x64row -split '</?td>' | ? {$_ -match '^[0-9a-f]{64}$'}
 
-   $x86row = $pagedata.rawcontent -split '</?tr>' | ? {$_ -match '$version-x86\.msi'}
+   $x86row = $pagedata.rawcontent -split '</?tr>' | ? {$_ -match "$version-x86\.msi"}
    $SHA264x86 = $x86row -split '</?td>' | ? {$_ -match '^[0-9a-f]{64}$'}
 
    return @{ 

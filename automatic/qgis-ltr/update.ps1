@@ -12,9 +12,12 @@ function global:au_GetLatest {
       $html.write([Text.Encoding]::Unicode.GetBytes($PageText))   # No MS Office
    }
 
-   $null = $PageText.content.split("`n") | Where-Object {$_ -cmatch 'long-term (repositories|builds) currently offer QGIS ([0-9.]*)'}
+   if ($PageText.content.split("`n") | Where-Object {$_ -cmatch 'long-term (repositories|builds) currently (offer|provide) (QGIS)? ([0-9.]*)'}) {
+      $LTRRelease = $Matches[4]
+   } else {
+      $LTRRelease = $PageText.content.split("`n") | Where-Object {$_ -cmatch '^([0-9.]*)$'} | Select-Object -First 1
+   }
    
-   $LTRRelease = $Matches[2]
 
    $url = $PageText.Links | 
               Where-Object {$_.href -match "$LTRRelease.*\.msi`$"} | 
