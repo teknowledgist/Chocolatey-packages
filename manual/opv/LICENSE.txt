@@ -1,0 +1,31 @@
+Copied from installation directory
+===================================
+
+These terms of service (these “Terms”) apply to and govern your use of the software One Photo Viewer (the “Software”), provided by Jonas Selling (the “Developer”).
+ 
+1.	GENERAL
+1.1.	By installing the Software, you confirm that you have read, understood and agree to be bound by these Terms. If you accept these Terms on behalf of a company or other legal entity, or you represent that you have authority to bind such legal entity, the term “you” and/or “your” will refer to such entity.
+1.2.	The Software will be installed directly on your hard drive on your computer or other similar device. That means, inter alia, that you are fully responsible for the processing, storage or any other activities related to any data (such as but not limited to images), including personal data, created by your use of the Software (“Data”). 
+
+2.	REPRESENTATION AND WARRANTIES
+2.1.	The Software is provided, to the extent allowed under law, “as is” and “as available” without any representations or warranties of any kind, expressed or implied, including but not limited to merchantability, fitness for a particular purpose, or non-infringement. The Developer does not warrant that the Software will (i) meet your requirements or expectations; (ii) be available on an uninterrupted, secure or error-free basis; (iii) not cause any latency or processing delays; or (iv) not corrupt processed files.
+2.2.	Your use of the Software is at your own risk and account. By using the Software, to the extent allowed under law, you waive all rights to claim damages as result of your use of the Software or the Developer’s failure to provide the Software in a satisfying manner.
+
+3.	INTELLECTUAL PROPERTY RIGHTS
+3.1.	Any information, software, data or other materials developed or provided by the Developer or its licensors used by the Developer to provide the Software, including all intellectual property rights (such as but not limited to copyright, trademarks, trade names or trade dress) therein, shall remain the sole and exclusive property of the Developer or its licensors.
+3.2.	Unless explicitly allowed to do so by prior written permission by the Developer, you agree not to sell, license, rent, sublicense, modify, distribute, copy, reproduce, transmit, publicly display or perform, publish, adapt, edit, disassemble, decompile or create derivative works of the Software.
+
+4.	LIMITATION OF LIABILITY
+4.1.	The Developer is not responsible for any damage, loss, or injury resulting from hacking, tampering, or other unauthorized access or use of the Software.
+4.2.	The Developer is not responsible for your negligence or failure to take adequate measures to protect Data from inadvertent modification, deletion, destruction or disclosure or similar.
+4.3.	You agree that the Developer and its affiliates will not be liable to you or any third party for any direct, indirect, incidental, special, consequential or exemplary damages, including but not limited to, damages for loss of profits, goodwill, use, Data or other intangible losses resulting from (i) the use or inability to use the Software; (ii) unauthorized access to or alteration of your transmissions or Data; (iii) statements or conduct of anyone in connection with the use of Software; or (iv) any other matter relating to the Software.
+
+5.	INDEMNIFICATION
+5.1.	You agree to defend, indemnify, and hold the Developer and its affiliates and agents harmless from all liabilities, claims and expenses, including but not limited to, legal costs and attorneys’ fees, that are caused or can be related to your use or misuse of the Software, violation of these Terms, your gross negligence or infringement of any intellectual property or other right of any person or entity by you.
+
+6.	SEVERABILITY
+6.1.	If any provision of these Terms is held to be invalid or unenforceable, such provision shall be limited, modified or severed to the minimum extent necessary to eliminate its invalidity or unenforceability in order for these Terms to otherwise remain in full force, effect and enforceability.
+
+7.	GOVERNING LAW, DISPUTES
+7.1.	These Terms shall be construed in accordance with and governed by the substantive law of Sweden, excluding the applicability of the International Sale of Goods Act and the United Nations Convention on Contracts for the International Sale of Goods (CISG).
+7.2.	Any dispute, controversy or claim arising out of or in connection with your use of the Software or with these Terms, or the breach, termination or invalidity thereof, shall be settled by public Swedish courts.

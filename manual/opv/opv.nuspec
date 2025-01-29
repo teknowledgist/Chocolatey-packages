@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>opv</id>
+    <version>1.18.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/opv</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>One Photo Viewer</title>
+    <authors>Elliptic Phenomena</authors>
+    <projectUrl>https://onephotoviewer.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@eeda5a764dd722e37fa002ba36d5722768465d3d/Icons/onephotoviewer_icon.png</iconUrl>
+    <copyright>copyright © 2017-2024 Elliptic Phenomena</copyright>
+    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/opv/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://onephotoviewer.com/how-to/</docsUrl>
+    <mailingListUrl>https://onephotoviewer.com/contact/</mailingListUrl>
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>opv onephotoviewer photo viewer jpg jpeg png tiff bmp webp freeware</tags>
+    <summary>Easy to use photo viewer with a clean interface</summary>
+    <description> Available for free with no ads. One Photo Viewer is for those who don’t like the functionality of the Windows 10/11 default photo viewer. With a cleaner look and simpler functionality, it has many customization options and features such as slideshow, color adjustment, crop, resize, rotate, copy/paste clipboard, and more. All accessible by right click menu or keyboard shortcuts. It is also touchscreen compatible.
+
+## Features
+
+– Simple to use and customizable photo viewer
+– Scroll through images with arrow keys or mouse buttons
+– Select window border style Solid, Minimal or Auto hide
+– Switch between black, white or transparent background
+– Option to move and zoom entire window with mouse/touch
+– Start a slideshow of images in a folder or drag-and-droped files
+
+– Paste images from printscreen or other software
+– Option to view toolbar and thumbnail panel (Pro)
+– Crop, rotate, resize, adjust colors -> save or copy to clipboard
+– View RAW formats, HEIC, WEBP (not guaranteed, see How To)
+– View and convert to JPEG, PNG, TIFF or BMP
+– Make GIF animation from loaded files
+
+#### Microsoft Store app
+One Photo Viewer is also available as [a Pro version with additional features in the MS Store](https://www.microsoft.com/store/productid/9NQC7CFDL54P).
+ </description>
+    <releaseNotes>https://onephotoviewer.com/download/#:~:text=Release%20notes</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
