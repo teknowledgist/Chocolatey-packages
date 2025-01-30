@@ -13,7 +13,7 @@
     <projectUrl>https://onephotoviewer.com/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@eeda5a764dd722e37fa002ba36d5722768465d3d/Icons/onephotoviewer_icon.png</iconUrl>
     <copyright>copyright © 2017-2024 Elliptic Phenomena</copyright>
-    <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/opv/LICENSE.txt</licenseUrl>
+    <licenseUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@b756645575c3bca5126f71580a001208af7dd245/manual/opv/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <docsUrl>https://onephotoviewer.com/how-to/</docsUrl>
     <mailingListUrl>https://onephotoviewer.com/contact/</mailingListUrl>
