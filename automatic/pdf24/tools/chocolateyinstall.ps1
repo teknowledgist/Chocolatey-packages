@@ -1,8 +1,5 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$Installer = (Get-ChildItem $toolsDir -Filter '*.msi').FullName
-
 $InstallArgs = @{
    packageName   = $env:ChocolateyPackageName
    softwareName  = "$env:ChocolateyPackageName*"
@@ -11,7 +8,7 @@ $InstallArgs = @{
    checksum      = '86F63D19A586C3E46A54BCF9EF75A9565D070C02A7EFC3AEBCA08F99049D7F45'
    url64bit      = 'https://download.pdf24.org/pdf24-creator-11.23.0-x64.msi'
    checksum64    = '474F7DE6ABC32D99DA397356878268DC5B13257B6436E39C27FFF832FB082F46'
-   checksumType  = 'sha256' #default is md5, can also be sha1, sha256 or sha512
+   checksumType  = 'sha256'
    silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes= @(0, 3010, 1641)
 }
@@ -21,7 +18,7 @@ $InstallArgs = @{
 try {
    $serviceName = 'Spooler'
    $spoolerService = Get-WmiObject -Class Win32_Service -Property StartMode,State -Filter "Name='$serviceName'"
-   if ($spoolerService -eq $null) { 
+   if (-not $spoolerService) { 
       Write-Warning "The Print Spooler service must be running for PDF24 to install."
       Throw "Service $serviceName was not found" 
    }
@@ -37,9 +34,16 @@ try {
 $pp = Get-PackageParameters
 
 if ($pp['Updates']) { 
-   Write-Host 'You have opted for PDF24 to automatically update itself.' -ForegroundColor Cyan
-   $I = ''
-} else { $I = ' AUTOUPDATE=No' } 
+   if ($pp['Updates'] -eq 'auto') {
+      Write-Host 'You have opted for PDF24 to automatically update itself.' -ForegroundColor Cyan
+      $U = ' UPDATEMODE=0'
+   } elseif ($pp['Updates'] -eq 'off') {
+      Write-Host 'You have opted for PDF24 to not check for updates.' -ForegroundColor Cyan
+      $U = ' UPDATEMODE=2'
+   } else {
+      Write-Host 'Unrecognized "/Updates" option!  PDF24 will check and notify about updates only.' -ForegroundColor Cyan
+   }
+}
 
 if ($pp['Icon']) { 
    Write-Host 'You have opted for the Desktop Icon.' -ForegroundColor Cyan
@@ -75,7 +79,7 @@ if ($pp['Basic']) {
    }
 }
 
-$InstallArgs.silentArgs = "$($InstallArgs.silentArgs)$I$F"
+$InstallArgs.silentArgs = "$($InstallArgs.silentArgs)$I$F$U"
 
 Install-ChocolateyPackage @InstallArgs
 

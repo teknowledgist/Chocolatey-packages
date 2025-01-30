@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pdf24</id>
-    <version>11.23.0</version>
+    <version>11.23.0.20250130</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdf24</packageSourceUrl>
     <owners>freaky-m0,jberezanski,teknowledgist,chocolatey,pocki_c</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -46,9 +46,10 @@
 As a virtual printer, PDF24 requires the Print Spooler ("spooler") service to be running.  This package will start the spooler and configure it to auto-start.
 
 ### Install Options
-By default, this package will **not** install the automatic updater, will **not** install the Fax printer, and will **not** add a desktop icon, but you can change those through package parameters:
+By default, this package will **not** install the Fax printer, and will **not** add a desktop icon.  It will leave the default, "Notify when updates availble" option, but you can change all those options through package parameters:
 
-* `/Updates` - Enables the automatic update feature.
+* `/Updates=Auto` - Enables the automatic update feature (outside of Chocolatey).
+* `/Updates=Off` - Disables checking for updates.
 * `/Icon` - Installs the desktop icon.
 * `/Fax` - Installs the fax printer.
 * `/Basic` - Only the PDF24 virtual printer is enabled to start.  All "extra" features (shell context menu item, screen capture, mail, cloud print, tray icon) are disabled by default.  They can be manually re-enabled *per user* in the PDF24 settings.
