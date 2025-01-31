@@ -12,7 +12,7 @@
     <authors>Gougelet Pierre-Emmanuel</authors>
     <projectUrl>https://www.xnview.com/en/xnviewmp/</projectUrl>
     <iconUrl>http://www.xnview.com/assets/img/app-xnviewmp-512.png</iconUrl>
-    <copyright>Copyright © 1991-2022 Pierre-e Gougelet</copyright>
+    <copyright>Copyright © 1991-2024 by Pierre-e Gougelet</copyright>
     <licenseUrl>https://github.com/teknowledgist/Chocolatey-packages/blob/master/automatic/xnviewmp.install/legal/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <mailingListUrl>https://newsgroup.xnview.com/viewforum.php?f=68</mailingListUrl>

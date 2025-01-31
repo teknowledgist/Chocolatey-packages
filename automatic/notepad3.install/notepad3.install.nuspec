@@ -17,7 +17,7 @@
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/rizonesoft/Notepad3</projectSourceUrl>
     <bugTrackerUrl>https://github.com/rizonesoft/Notepad3/issues</bugTrackerUrl>
-    <tags>notepad3 notepad notepad2 text editor</tags>
+    <tags>notepad3 notepad notepad2 text editor FOSS embedded</tags>
     <summary>A light-weight Scintilla-based text editor for Windows.</summary>
     <description>Notepad3 is based on code from [Florian Balmer's Notepad2](http://www.flos-freeware.ch/notepad2.html) and [XhmikosR's Notepad2-mod](http://xhmikosr.github.io/notepad2-mod/). 
 MiniPath is based on code from [Florian Balmer's metapath](http://www.flos-freeware.ch/archive.html).
