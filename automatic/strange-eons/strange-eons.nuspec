@@ -10,7 +10,7 @@
     <title>Strange Eons</title>
     <authors>Christopher G. Jennings</authors>
     <projectUrl>https://strangeeons.cgjennings.ca/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/CGJennings/strange-eons@088384d30c1a4dd25a1e1cc081295bd15b67c724/src/main/resources/resources/icons/application/app@8x.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@f64e7201e10da3949ee01774adaf8ec11086446c/Icons/strange-eons_icon.png</iconUrl>
     <copyright>Copyright 2006-2024 Christopher G. Jennings</copyright>
     <licenseUrl>https://github.com/CGJennings/strange-eons/blob/main/LICENSE.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
