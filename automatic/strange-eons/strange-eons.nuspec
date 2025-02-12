@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>strange-eons</id>
+    <version>3.3.4241</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/strange-eons</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Strange Eons</title>
+    <authors>Christopher G. Jennings</authors>
+    <projectUrl>https://strangeeons.cgjennings.ca/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/CGJennings/strange-eons@088384d30c1a4dd25a1e1cc081295bd15b67c724/src/main/resources/resources/icons/application/app@8x.png</iconUrl>
+    <copyright>Copyright 2006-2024 Christopher G. Jennings</copyright>
+    <licenseUrl>https://github.com/CGJennings/strange-eons/blob/main/LICENSE.txt</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/CGJennings/strange-eons/</projectSourceUrl>
+    <docsUrl>https://cgjennings.github.io/se3docs/index.html</docsUrl>
+    <mailingListUrl>https://cgjennings.ca/contact/</mailingListUrl>
+    <bugTrackerUrl>https://github.com/CGJennings/strange-eons/issues</bugTrackerUrl>
+    <tags>strange-eons game design boardgame gaming </tags>
+    <summary>A design tool for paper-based games</summary>
+    <description>Strange Eons 3 is a free, open source tool for creating paper game components, such as cards, tokens, boards, and boxes. It is primarily intended to be used to create homebrew expansions for existing games, but it can also be used to create entirely new games from scratch.
+
+Strange Eons is designed to let you focus on the creative aspects of game design while it takes care of the technical aspects of layout and design. It also has tools to support creativity, such as "spinning off" designs, design guidance (where supported by the component type), and a philosophy of not starting you on a "blank page" but instead providing a starting point that you can modify to suit your needs.
+
+Strange Eons is scalable. You can create a single card, a whole deck, or even an entire board game. Collections of cards and other components can be laid out as printable decks, either manually or automatically. You can design each component individually, or use a factory to build a set of components from a template.
+
+Strange Eons is extensible. It has a built-in development environment and debugger for creating plug-ins. Plug-ins can be used to add support for new games, component type, tools, commands, and more.
+
+	</description>
+    <releaseNotes>https://se3docs.cgjennings.ca/um-release-notes.html</releaseNotes>
+    <!-- =============================== -->
+    <dependencies>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
