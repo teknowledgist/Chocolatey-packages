@@ -5,7 +5,7 @@ function global:au_GetLatest {
    
    $PageText = Invoke-WebRequest -Uri $Downloads
    
-   $file = $PageText.links | ? {$_.innertext -match '^QGIS.*-([0-9.]+)-.*\.msi'} | select -last 1 -exp href
+   $file = $PageText.links | ? {$_.innertext -match '^QGIS-.*-([0-9.]+)-.*\.msi'} | select -last 1 -exp href
    $NewVersion = $Matches[1]
    
    $url = $Downloads + $file
