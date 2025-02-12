@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <id>cytoscape</id>
+    <version>3.10.3</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/cytoscape</packageSourceUrl>
+    <owners>awatchanaman,teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Cytoscape</title>
+    <authors>Cytoscape Consortium</authors>
+    <projectUrl>http://www.cytoscape.org/index.html</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@157d12f2e0833e17757137d7090e3c8beaa14ab6/Icons/cytoscape_icon.png</iconUrl>
+    <copyright>Cytoscape Consortium</copyright>
+    <licenseUrl>https://cytoscape.org/download.html</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/cytoscape/cytoscape</projectSourceUrl>
+    <docsUrl>https://manual.cytoscape.org/en/stable/</docsUrl>
+    <mailingListUrl>https://bioinformatics.stackexchange.com/questions/tagged/cytoscape?sort=newest</mailingListUrl>
+    <bugTrackerUrl>https://cytoscape.org/bug-report.html</bugTrackerUrl>
+    <tags>cytoscape graph visualization complex network analysis</tags>
+    <summary>An open source platform for network analysis and visualization</summary>
+    <description>Cytoscape is an open source software platform for visualizing molecular interaction networks and biological pathways and integrating these networks with annotations, gene expression profiles and other state data. Although Cytoscape was originally designed for biological research, now it is a general platform for complex network analysis and visualization.   Cytoscape core distribution provides a basic set of features for data integration, analysis, and visualization.   Additional features are available as Apps (formerly called Plugins).   Apps are available for network and molecular profiling analyses, new layouts, additional file format support, scripting, and connection with databases.  
+
+## Core features
+* Supports many standards
+* Public Database clients
+* Interoperability
+* Session files
+* Layouts
+* Image export
+* VizMapper
+* Filters
+* Search
+* Browsing
+* Find modules/clusters
+* App manager and App store
+* Export to web
+* Multilingual
+
+	</description>
+    <releaseNotes>https://cytoscape.org/releasenotes.html</releaseNotes>
+    <!-- =============================== -->
+    <dependencies>
+      <dependency id="zulu17" version="17.0.2"></dependency>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
