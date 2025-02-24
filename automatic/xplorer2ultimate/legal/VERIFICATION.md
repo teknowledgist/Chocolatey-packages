@@ -9,9 +9,9 @@ for the "flavor" of interest on this page:
 
 A consistent direct download URL is not available:  
 
-- Version    : 6.0.0.3
-- x86 SHA256 : 25c6970fec3986fa1b31e091545e48e3729ebcff2d2ef7842fe7e73a6980b29b
-- x64 SHA256 : 5129329ea04ab4049358ad623cd909f7cb18a556a8613fa2507e928441341405
+- Version    : 6.1.0.1
+- x86 SHA256 : eebc2ad98aea28bdbd4cf7fb55c6a1d5e9d687b9151283cd22275cff95600b02
+- x64 SHA256 : e6904fb4002c3903dc9a4aa5528dcc7a38756026372e0165a91cfc1e504f14c7
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

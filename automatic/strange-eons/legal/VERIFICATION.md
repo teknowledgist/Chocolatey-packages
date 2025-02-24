@@ -7,9 +7,9 @@ The installer can be downloaded from the official download page:
 - https://cgjennings.ca/eons/download.html
 
 or directly:
-- Version: 3.3.4241
-- URL: https://github.com/CGJennings/strange-eons/releases/download/v3.3.4241/strange-eons-windows-x64.exe
-- SHA256: e2878268c24b9850b773d204aec3d142dd5fd2aec01eb9080462c52c8568a65f
+- Version: 3.4.4421-alpha
+- URL: https://github.com/CGJennings/strange-eons/releases/download/v3.4.4421-alpha/strange-eons-windows-x64-b4421a.exe
+- SHA256: 
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

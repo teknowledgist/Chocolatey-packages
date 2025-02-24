@@ -20,7 +20,8 @@ function global:au_GetLatest {
    
 
    $url = $PageText.Links | 
-              Where-Object {$_.href -match "$LTRRelease.*\.msi`$"} | 
+              Where-Object {($_.href -match "$LTRRelease.*\.msi`$") -and 
+                              ($_.href -notmatch "QT6")} | 
               Select-Object -ExpandProperty href
 
    $SumURL = $url -replace '\.msi$','.sha256sum'

@@ -6,6 +6,6 @@ Binaries can be downloaded here:
 https://github.com/rcaelers/workrave/releases
 
 Direct download:
-Version : 1.10.52
-URL     : https://github.com/rcaelers/workrave/releases/download/v1_10_52/workrave-win32-v1.10.52.exe
-SHA256  : 675E5CE334DEEE160C1F90F470CCF65A822F3CE669591A6708BB65D2C6F6F1DB
+Version : 1.10.53
+URL     : https://github.com/rcaelers/workrave/releases/download/v1_10_53/workrave-win32-v1.10.53.exe
+SHA256  : 91075497725247226B4325F12ED9AB657BB09640228FE82503FABA4BD42484E9
