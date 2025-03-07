@@ -11,6 +11,6 @@ https://github.com/garybentley/quollwriter/releases/latest
 
 
 Direct Download:
-Version  : 3.0.2
+Version  : 3.0.4
 URL      : http://quollwriter.com/download/windows/
-Checksum : 50D55C79933A8BA271F69F040381C99FB64849CD1E28C82A963946621875C272
+Checksum : B447656BA20DD64934FA8602689415133FF53D12C1FEA42AE4AC23F8600E4247

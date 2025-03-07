@@ -1,12 +1,18 @@
 import-module chocolatey-au
 
-$Release = 'https://help.oclc.org/Librarian_Toolbox/Software_downloads/Download_cataloging_software?sl=en'
-
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri "$Release"
+   $Release = 'https://help.oclc.org/Librarian_Toolbox/Software_downloads/Download_cataloging_software?sl=en'
+   $download_page = Invoke-WebRequest -Uri "$Release" -UseBasicParsing
 
-   $Link = $download_page.links |
-               Where-Object {($_.innertext -match '\.exe')} |
+   $HTML = New-Object -Com "HTMLFile"
+   try {
+      $HTML.IHTMLDocument2_write($download_page.rawcontent)    # if MS Office installed
+   } catch {
+      $HTML.write([Text.Encoding]::Unicode.GetBytes($download_page))   # No MS Office
+   }
+
+   $Link = $HTML.links |
+               Where-Object {($_.href -match 'connex.*\.exe')} |
                Select-Object -First 1
 
    $url = $Link.href
