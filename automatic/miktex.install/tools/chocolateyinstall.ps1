@@ -169,6 +169,8 @@ $MileStone = $MileStoneLine.split()[-1]
 Write-Verbose "Verified MiKTeX milestone $MileStone installed."
 If ([version]$MileStone -lt [version]$PackageMileStone) {
    Throw "Repository was unable to provide MiKTeX milestone $PackageMileStone"
+} else {
+   Write-Host "MiKTeX milestone $MileStone installed" -ForegroundColor Cyan
 }
 
 # configure MiKTeX to automatically install missing packages on the fly
