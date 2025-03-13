@@ -45,6 +45,9 @@ However, **Deskflow cannot be installed on the same computer as Barrier, Input L
     </description>
     <releaseNotes>https://github.com/deskflow/deskflow/releases</releaseNotes>
     <!-- =============================== -->
+    <dependencies>
+      <dependency id="vcredist140" version="14.20" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
