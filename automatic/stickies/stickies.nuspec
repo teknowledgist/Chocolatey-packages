@@ -40,6 +40,8 @@
 * API to allow integration with other applications
 * ...and Stickies is completely free!
 
+#### Malware free
+To save costs, the author of this freeware does not purchase a signing certificate for the compiled binaries which results in the occasional antimalware scanner flagging Stickies as "malware".  The author [attests that Stickies does not contain any virus or malware](https://www.zhornsoftware.co.uk/support/kb.pl?q=00097), and has been publishing the software for 25+ years. Ultimately, *you* have to decide for yourself whether to trust the author's claim.  Even so, your protection software could delete/quarantine the program without consultation, and there is nothing this package nor Chocolatey can do to prevent that.
     </description>
     <releaseNotes>https://www.zhornsoftware.co.uk/stickies/versions.html</releaseNotes>
     <!-- =============================== -->
