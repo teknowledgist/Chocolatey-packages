@@ -10,7 +10,7 @@ or the official mirror:
 - <https://www.filecroco.com/download-system-information-viewer/download/>
 
 or directly:
-- Version  : 5.79
+- Version  : 5.80
 - URL      : https://www.filecroco.com/download-file/download-system-information-viewer/291/282/
 - Checksum : D6CC68DDB8284DB0AE85F8B340E99B8B34B463ED36BF2B66FF0D820252977257
 
