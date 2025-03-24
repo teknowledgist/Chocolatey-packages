@@ -27,12 +27,12 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
    @{
-      "tools\VERIFICATION.txt" = @{
-         "(^Version\s+:).*"      = "`${1} $($Latest.Version)"
-         "(^32-bit URL\s+:).*"      = "`${1} $($Latest.URL32)"
-         "(^32-bit Checksum\s+:).*" = "`${1} $($Latest.Checksum32)"
-         "(^64-bit URL\s+:).*"      = "`${1} $($Latest.URL64)"
-         "(^64-bit Checksum\s+:).*" = "`${1} $($Latest.Checksum64)"
+      "legal\VERIFICATION.md" = @{
+         "(^- Version\s*:).*"      = "`${1} $($Latest.Version)"
+         "(^- x86 URL\s*:).*"      = "`${1} $($Latest.URL32)"
+         "(^- x86 SHA256\s*:).*" = "`${1} $($Latest.Checksum32)"
+         "(^- x64 URL\s*:).*"      = "`${1} $($Latest.URL64)"
+         "(^- x64 SHA256\s*:).*" = "`${1} $($Latest.Checksum64)"
       }
    }
 }

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>psqlodbc</id>
-    <version>17.00.0004</version>
+    <version>17.0.4.20250318</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/psqlodbc</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -12,8 +12,8 @@
     <authors>PostgreSQL Global Development Group</authors>
     <projectUrl>https://odbc.postgresql.org/</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@9d1223eb6b956c691a3482853a9d7277d4436369/Icons/psqlodbc_icon.png</iconUrl>
-    <copyright>Copyright © 1998  Insight Distribution Systems, Copyright © 1998 - 2020 The PostgreSQL Global Development Group</copyright>
-    <licenseUrl>https://opensource.org/licenses/LGPL-2.1</licenseUrl>
+    <copyright>Portions Copyright (c) 1996-2025, PostgreSQL Global Development Group; Portions Copyright (c) 1994, The Regents of the University of California</copyright>
+    <licenseUrl>https://github.com/postgres/postgres/blob/master/COPYRIGHT</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://git.postgresql.org/gitweb/?p=psqlodbc.git</projectSourceUrl>
     <docsUrl>https://odbc.postgresql.org/</docsUrl>
@@ -28,5 +28,6 @@
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
