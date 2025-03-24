@@ -12,13 +12,14 @@ function global:au_GetLatest {
    }
    
    $VersionText = $HTML.getElementsByTagName("p") |
-                     Where-Object {$_.innertext -match '^download'} | 
-                     Select-Object -ExpandProperty innertext
-   $Version = $VersionText -replace '.*?([0-9.]+).*','$1'
+                     Where-Object {$_.innertext -match 'Download XnView MP ([0-9.]+)'} | 
+                     Select-Object -ExpandProperty innertext -First 1
+   $Version = $Matches[1]
 
-   $URL = $HTML.links |
+   $DownStub = $HTML.links |
                Where-Object {$_.href -match 'x64\.exe'} |
-               Select-Object -First 1 -ExpandProperty href
+               Select-Object -First 1 -ExpandProperty nameprop
+   $URL = "https://www.xnview.com/$DownStub"
 
    return @{ 
             Version = $Version

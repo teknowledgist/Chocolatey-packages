@@ -5,7 +5,7 @@ $UnZipArgs = @{
    URL            = 'https://www.carthagosoft.net/downloads/TwistpadSetup.zip'
    UnzipLocation  = Join-Path $env:TEMP "$($env:ChocolateyPackageName)_v$env:ChocolateyPackageVersion"
    ChecksumType   = 'sha256'
-   Checksum       = '732a30a080168e23489fc0ee14236298583cd9d84018b4c63130d4a4aa35899a'
+   Checksum       = 'a05026c235e422ee2c8ea4b3752fe95b7e623e769db0204d28ce584d5f0aa5de'
 }
 Install-ChocolateyZipPackage @UnZipArgs
 

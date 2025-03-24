@@ -18,12 +18,16 @@ function global:au_GetLatest {
 
    $News = 'https://www.qgis.org/download/'
    $PageText = Invoke-WebRequest -Uri $News -UseBasicParsing
-   $null = $PageText.content.split("`n") | Where-Object {$_ -cmatch 'long-term (repositories|builds) currently offer QGIS ([0-9.]*)'}
-   $LTRversion = $Matches[2]
+   if ($PageText.content.split("`n") | Where-Object {$_ -cmatch 'long-term (repositories|builds) currently (offer|provide) (QGIS)? ([0-9.]*)'}) {
+      $LTRRelease = $Matches[4]
+   } else {
+      $LTRRelease = $PageText.content.split("`n") | Where-Object {$_ -cmatch '^([0-9.]*)$'} | Select-Object -First 1
+   }
+   Write-Host "LTR version: $LTRRelease"
 
    return @{ 
       Version    = $NewVersion
-      LTRVersion = $LTRversion
+      LTRVersion = $LTRRelease
       URL64      = $url
       Checksum64 = $Checksum64
    }

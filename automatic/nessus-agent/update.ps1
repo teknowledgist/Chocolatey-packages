@@ -6,8 +6,8 @@ function global:au_GetLatest {
 
    $Release_page = Invoke-WebRequest -Uri $ReleasURL
 
-   $null = $Release_page.links |
-               Where-Object {$_.innertext -match 'Nessus Agents ([0-9.]+)'} | 
+   $null = $Release_page.content.split('"') |
+               Where-Object {$_ -match '^NessusAgent-([0-9.]+)-x64\.msi$'} | 
                Select-Object -first 1
 
    $version = $Matches[1]
