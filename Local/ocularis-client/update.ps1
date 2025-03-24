@@ -1,4 +1,4 @@
-import-module au
+import-module chocolatey-au
 
 $LocalDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 if (Test-Path "$LocalDir\HostName.private") {
