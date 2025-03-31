@@ -6,8 +6,8 @@ $packageArgs = @{
    fileType       = 'EXE'
    url            = 'https://mega.nz/MEGAsyncSetup32.exe'
    url64          = 'https://mega.nz/MEGAsyncSetup64.exe'
-   checksum       = '2e6ff957db65870b8c5c95016c66937b2d1ca0ca52cf29a0645c7edc8a711e21'
-   checksum64     = '529b2a7a72eb532e309a57d0599a3552649082345f9c1e0353d487b4a7f6d771'
+   checksum       = 'ffaf01aba854aa75c83bae962443d8a253f2973c3ad04cb5288c770afb97e041'
+   checksum64     = 'ef420074d226f61c52e5a1e15310adf8b879b667c2e472eb2d5df69258e93b3a'
    checksumType   = 'sha256'
    silentArgs     = '/S /MULTIUSER=true'
    validExitCodes = @(0)
