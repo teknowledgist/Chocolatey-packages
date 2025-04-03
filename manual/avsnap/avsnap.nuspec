@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>avsnap</id>
+    <version>7.5.0.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/avsnap</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>AVSnap</title>
+    <authors>Altinex, Inc.</authors>
+    <projectUrl>https://avsnap.com/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@dd763b6ee39b561807740195541767153d94ec81/Icons/avsnap_icon.png</iconUrl>
+    <copyright>Copyright 2004-2025 Altinex, Inc.</copyright>
+    <licenseUrl>https://avsnap.com/license-agreement/</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <docsUrl>https://avsnap.com/tutorials/</docsUrl>
+    <mailingListUrl>https://avsnap.com/community/</mailingListUrl>
+    <!--<bugTrackerUrl></bugTrackerUrl>-->
+    <tags>avsnap SPACE_SEPARATED</tags>
+    <summary>Free, feature-rich, Audio Visual design environment that anyone can use.</summary>
+    <description>AVSnap is a free Audio Visual design environment that every small and large AV company can afford to use.
+
+### AVSnap 
+* is easy to learn
+* has intuitive shortcuts
+* has great support
+* has powerful features
+* includes a library editor
+* tried and tested for over 20 years
+
+![Project Mode Example](https://www.avsnap.com/images/AVSnap-Designx500.png)
+
+## Features
+* **Project Mode** Design any size project. Instantly square cable connections, generate materials lists, import product pricing, create cable list reports and more. Every function is only a shortcut away. Navigation through large projects with views from any page with an unlimited number of pages, any page size, and easily switched to different units of measure.
+* **Library Mode** Create a library of products for your next design. Draw outline, assign inputs and outputs and configure options. Drag and drop your symbols into the project page and make your symbols smarter by adding Related Products. Use custom fields to modify symbol parameters on the fly in the library editor or inside the project.
+* **Communication Mode** Test your equipment and get everything ready for the installation using Communication mode. Connect to other equipment using UDP, TCP or RS-232 protocols or add USB adapters to extend capability to MIDI or any other protocol. Assign custom buttons to simplify equipment control like a ping command, port assignment, auto characters capitalize, display hex data, send hex command and repeated transmission.
+* **PDF Mode** Manage PDF multiple PDF files at the same time with ease. Combine, move, rotate and delete pages with a click of a mouse. Exchange pages between files and insert separator pages. Detect empty pages to delete. Assign a password to secure the PDF document.
+ 
+AVSnap is more user-friendly, easier to learn and easier to use than D-Tools, Stardraw, or AutoCAD. Simple user interface, powerful editing and project features, easy collaborations – all make AVSnap the first choice for AV Design software.
+
+AVSnap is made available to the world, free of charge. It is our way of giving back to the AV community and to thousands of AV professionals. Enjoy.
+
+	 </description>
+    <releaseNotes>
+*********************************************************
+Version 7.5.0 January 10, 2025
+*********************************************************
+1. Added Copy/Paste buttons to Mini Editor
+2. Added Copy/Paste buttons to Full-Text Editor 
+3. Added the Recently Used Libraries tab to the library pane
+4. When an object is not selected, shortcut B does not open the proprty form
+5. Improved AVSnap version control
+6. Added ability to display the angle between two segments or any cable with a bend. Use the setting on the top bar to adjust the angle. 
+7. Added the ability to see up to 50 recent files and a search function if the file is not located in the original directory
+8. Recently used files can now display the full path to the file. 
+9. Added Special Symbols for a text object. Over 2000 special symbols are added.
+10. Added Text Flow Break shortcut #BP# to control text flow through multiple text objects.
+11. Improved smoothness of curved lines/cables
+12. Added a mouse click combination: Left Mouse Button Press and Hold and Right Mouse Button Click sets the page to 100%.
+13. Rectangle objects can now create barcodes or QR codes.
+14. Added ability to set a number of decimal points when using MATH functions with text numbers.
+15. Print buffer area can now be adjusted to any size.
+16. Objects alignment tools now respect the print buffer and align to print buffer edges when the print buffer is displayed.
+17. We depreciated the HTML editor and replaced it with a powerful Text+ editor. Now, you can have multiple fonts, text, headers, and images in the same text file. 
+18. The function to Make all selected objects the largest or smallest object now has a right mouse click option to adjust only the object's width or height.
+19. Ctrl+T creates a Text object and opens Mini Editor
+20. Added ability to snap symbols together using any snap point on the symbol. 
+21. You can now assign different color for each page tab.
+22. If the page is set to 100% and the WISIWIG function is enabled on the text object, the page tab color changes to green. 
+23. Improved printing accuracy: Now, what you see on the screen matches 100% of what is printed. Some scaling was adjusted, which may affect some drawings. 
+
+</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
