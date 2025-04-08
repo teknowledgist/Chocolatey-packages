@@ -6,9 +6,9 @@ The latest version can be downloaded from the official GitHub page:
 - https://github.com/deskflow/deskflow/releases
 
 or directly:
-- Version: 1.21.1
-- URL: https://github.com/deskflow/deskflow/releases/download/v1.21.1/deskflow-1.21.1-win-x64.msi
-- SHA256 Checksum: A69A81CC2EA3340417D38A4C17D905F03CFD26AFD277786D9EFE0850EC7FD444
+- Version: 1.21.2
+- URL: https://github.com/deskflow/deskflow/releases/download/v1.21.2/deskflow-1.21.2-win-x64.msi
+- SHA256 Checksum: E6C52120D780E5FADB037B9D38029C8714B5088A1DD92E658AE70DC98DAC6962
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
