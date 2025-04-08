@@ -1,3 +1,5 @@
+$ErrorActionPreference = 'Stop'
+
 $StartMenuFolder = Join-Path $env:ProgramData 'Microsoft\Windows\Start Menu'
 
 $StartShortcuts = Get-ChildItem $StartMenuFolder -Filter 'Stickies.lnk' -Recurse
