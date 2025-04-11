@@ -43,7 +43,7 @@ function global:au_SearchReplace {
 if ($MyInvocation.InvocationName -ne '.') { 
    function global:au_BeforeUpdate() { 
       Write-host "Downloading XnView MP $($Latest.Version) installer file"
-      Get-RemoteFiles -Purge -NoSuffix
+      Get-RemoteFiles -Purge -NoSuffix -FileNameBase 'XnViewMP-win-x64'
    }
 
    update -ChecksumFor none 

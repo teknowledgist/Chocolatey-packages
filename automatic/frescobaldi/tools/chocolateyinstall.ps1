@@ -1,18 +1,13 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 
-$toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$fileLocation = (Get-ChildItem -Path $toolsDir -filter '*.exe' |
-                        Sort-Object lastwritetime | Select-Object -Last 1).FullName
-
-$packageArgs = @{
+$InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
-   fileType       = 'EXE' 
-   file           = "$fileLocation"
-   softwareName   = "$env:ChocolateyPackageName*"
-   silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
-   validExitCodes = @(0, 3010, 1641)
+   installerType  = 'msi'
+   url            = 'https://github.com/frescobaldi/frescobaldi/releases/download/v4.0.1/Frescobaldi-4.0.1.msi'
+   Checksum       = '8d99b1850ff39667746476a740fba60c2dce9e5900ef190ede8ec5cf9161562e'
+   ChecksumType   = 'sha256'
+   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
+   validExitCodes = @(0)
 }
 
-Install-ChocolateyInstallPackage @packageArgs
-
-Remove-Item $fileLocation -ea 0 -force
+Install-ChocolateyPackage @InstallArgs
