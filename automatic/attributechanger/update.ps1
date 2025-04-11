@@ -23,7 +23,8 @@ function global:au_GetLatest {
             URL32    = $url32
             Options  = @{
                Headers = @{
-                  ContentType = 'application/octet-stream'
+                  'authority'='www.petges.lu'
+                  'referer' = 'https://www.petges.lu/download/'
                }
             }
          }
@@ -32,17 +33,16 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
    @{
-      "tools\VERIFICATION.txt" = @{
-         "(^Version\s+:).*"    = "`${1} $($Latest.Version)"
-         "(^URL\s+:).*"        = "`${1} $($Latest.URL32)"
-         "(^SHA-256\s+:).*"    = "`${1} $($Latest.Checksum32)"
+      "legal\VERIFICATION.md" = @{
+         "(^- Version:\s+).*"   = "`${1}$($Latest.Version)"
+         "(^- URL:\s+).*"       = "`${1}$($Latest.URL32)"
+         "(^- SHA256:\s+).*"    = "`${1}$($Latest.Checksum32)"
       }
    }
 }
 
 function global:au_BeforeUpdate() { 
    Write-host "Downloading Attribute Changer $($Latest.Version)"
-   Write-warning "The Attribute Changer site won't allow proper download.  It must be manually downloaded."
    Get-RemoteFiles -Purge -NoSuffix
 }
 
