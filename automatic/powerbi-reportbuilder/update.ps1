@@ -28,9 +28,4 @@ function global:au_SearchReplace {
    }
 }
 
-function global:au_BeforeUpdate() {
-   Write-host "Downloading $env:ChocolateyPackageName $($Latest.Version) zip file"
-   Get-RemoteFiles -Purge -NoSuffix
-}
-
 Update-Package -ChecksumFor all
