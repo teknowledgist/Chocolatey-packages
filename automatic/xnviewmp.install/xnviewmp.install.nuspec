@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xnviewmp.install</id>
-    <version>1.8.7</version>
+    <version>1.8.8</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xnviewmp.install</packageSourceUrl>
     <owners>Teknowledgist, Vaquero</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
