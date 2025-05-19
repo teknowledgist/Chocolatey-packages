@@ -3,12 +3,12 @@ Verification is intended to assist the Chocolatey moderators and community in ve
 
 ## Download
 The extension can be downloaded from the official download link:
-- https://mupdf.com/downloads
+- https://mupdf.com/releases
 
 or directly:
-- Version: 1.25.2
-- URL:     https://mupdf.com/downloads/archive/mupdf-1.25.2-windows.zip
-- SHA256 Checksum: 8CDD89AB8E638E7FD9E2AE3E75DD980AAFE507BEA63AD7A2EEAFF1BE403FFF8C
+- Version: 1.26.0
+- URL:     https://casper.mupdf.com/downloads/archive/mupdf-1.26.0-windows.zip
+- SHA256 Checksum: 9C24B35100A55A77799292B9D2232574090D905281371D0B6CE2FFACA6B436C6
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

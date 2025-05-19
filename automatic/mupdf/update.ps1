@@ -1,12 +1,13 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $releases = 'https://mupdf.com/releases/index.html'
+   $releases = 'https://mupdf.com/releases'
    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
-   $url  = $download_page.links | 
+   $DisplayURL  = $download_page.links | 
                Where-Object {$_.href -match 'windows.zip$'} | 
                Select-Object -First 1 -ExpandProperty href
+   $URL = $DisplayURL -replace 'mupdf.com','casper.mupdf.com'
 
    $version = $url.split('-')[1]
 
