@@ -1,18 +1,15 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $SiteURL = 'https://www.giadamusic.com/'
-   $DownPage =  Invoke-WebRequest "$SiteURL" -UseBasicParsing
+   $Repo = 'https://github.com/monocasual/giada'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $stub = $DownPage.Links | ? {$_.href -like '*windows.zip'} | Select-Object -ExpandProperty href
-
-   $URL = "$SiteURL/$stub"
-
-   $version = $stub.split('-')[1]
+   $version = $Release.Tag.trim('v.')
+   $Asset = $Release.Assets | Where-Object { $_.FileName -match 'windows\.zip$' } | Select-Object -First 1 
 
    return @{ 
       Version = $version
-      URL32   = $URL
+      URL32   = $Asset.DownloadURL
    }
 }
 
