@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>edit</id>
+    <version>1.1.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/edit</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Edit</title>
+    <authors>Microsoft</authors>
+    <projectUrl>https://github.com/microsoft/edit</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@1330687985ac22d589242a3fa8c43e6fdfbd5457/Icons/edit_icon.png</iconUrl>
+    <!-- <copyright>Year Software Vendor</copyright> -->
+    <licenseUrl>https://github.com/microsoft/edit/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/microsoft/edit</projectSourceUrl>
+    <!--<docsUrl>At what url are the software docs located?</docsUrl>-->
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/microsoft/edit/issues</bugTrackerUrl>
+    <tags>edit text editor CMD MS-DOS FOSS embedded</tags>
+    <summary>We all edit.</summary>
+    <description># ![Application Icon for Edit](https:/cdn.jsdelivr.net/gh/microsoft/edit@e8d40f6e7a95a6e19765ff19621cf0d39708f7b0/assets/edit.svg) Edit
+
+A simple editor for simple needs.
+
+This editor pays homage to the classic [MS-DOS Editor](https://en.wikipedia.org/wiki/MS-DOS_Editor), but with a modern interface and input controls similar to VS Code. The goal is to provide an accessible editor that even users largely unfamiliar with terminals can easily use.
+
+![Screenshot of Edit with the About dialog in the foreground](https:/cdn.jsdelivr.net/gh/microsoft/edit@bd992237010380cd24b7763ae95a23391190966a/assets/edit_hero_image.png)
+	 </description>
+    <releaseNotes>https://github.com/microsoft/edit/releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
