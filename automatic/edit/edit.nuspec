@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>edit</id>
-    <version>1.1.0</version>
+    <version>1.0.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/edit</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -21,13 +21,13 @@
     <bugTrackerUrl>https://github.com/microsoft/edit/issues</bugTrackerUrl>
     <tags>edit text editor CMD MS-DOS FOSS embedded</tags>
     <summary>We all edit.</summary>
-    <description># ![Application Icon for Edit](https:/cdn.jsdelivr.net/gh/microsoft/edit@e8d40f6e7a95a6e19765ff19621cf0d39708f7b0/assets/edit.svg) Edit
+    <description># ![Application Icon for Edit](https://cdn.jsdelivr.net/gh/microsoft/edit@e8d40f6e7a95a6e19765ff19621cf0d39708f7b0/assets/edit.svg) Edit
 
 A simple editor for simple needs.
 
 This editor pays homage to the classic [MS-DOS Editor](https://en.wikipedia.org/wiki/MS-DOS_Editor), but with a modern interface and input controls similar to VS Code. The goal is to provide an accessible editor that even users largely unfamiliar with terminals can easily use.
 
-![Screenshot of Edit with the About dialog in the foreground](https:/cdn.jsdelivr.net/gh/microsoft/edit@bd992237010380cd24b7763ae95a23391190966a/assets/edit_hero_image.png)
+![Screenshot of Edit with the About dialog in the foreground](https://cdn.jsdelivr.net/gh/microsoft/edit@bd992237010380cd24b7763ae95a23391190966a/assets/edit_hero_image.png)
 	 </description>
     <releaseNotes>https://github.com/microsoft/edit/releases</releaseNotes>
     <!-- =============================== -->
