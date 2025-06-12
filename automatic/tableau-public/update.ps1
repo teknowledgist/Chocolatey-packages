@@ -8,6 +8,16 @@ function global:au_GetLatest {
    return @{ 
             Version  = $Version
             URL64    = $URL64
+            Options  = @{
+               # Headers pared down from https://github.com/aaronparker/evergreen/blob/main/Evergreen/Manifests/TableauDesktop.json
+               Headers = @{
+                  'authority' = 'www.tableau.com'
+                  'sec-ch-ua' = '"Chromium";v="132", "Microsoft Edge";v="131", "Not-A.Brand";v="99"'
+                  'accept-encoding' = 'gzip, deflate, br, zstd'
+                  'priority' = 'u=0, i'
+                  'accept' = '*/*;q=0.8'
+               }
+            }
            }
 }
 
