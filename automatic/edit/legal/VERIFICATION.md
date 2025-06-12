@@ -6,9 +6,9 @@ The latest version can be downloaded from the GitHub releases page:
 - https://github.com/microsoft/edit/releases
 
 or directly:
-- Version : 1.0.0
-- URL     : https://github.com/microsoft/edit/releases/download/v1.0.0/edit-1.0.0-x86_64-windows.zip
-- Checksum: 6a1ef921ef28ee52ad775982c9c37505eb16eb80c14fa831d93f3ee502277dc8
+- Version : 1.1.0
+- URL     : https://github.com/microsoft/edit/releases/download/v1.1.0/edit-1.1.0-x86_64-windows.zip
+- Checksum: 622CB1E1A2D592AE705CE8E518E86AFBE2A269A4B223B7392F6C6E10E9F0913A
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

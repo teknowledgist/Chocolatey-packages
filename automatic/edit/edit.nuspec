@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>edit</id>
-    <version>1.0.0</version>
+    <version>1.1.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/edit</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -20,7 +20,7 @@
     <!--<mailingListUrl></mailingListUrl>-->
     <bugTrackerUrl>https://github.com/microsoft/edit/issues</bugTrackerUrl>
     <tags>edit text editor CMD MS-DOS FOSS embedded</tags>
-    <summary>We all edit.</summary>
+    <summary>We all edit. (A simple editor for the terminal)</summary>
     <description># ![Application Icon for Edit](https://cdn.jsdelivr.net/gh/microsoft/edit@e8d40f6e7a95a6e19765ff19621cf0d39708f7b0/assets/edit.svg) Edit
 
 A simple editor for simple needs.
