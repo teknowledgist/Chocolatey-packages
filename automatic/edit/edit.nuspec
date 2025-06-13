@@ -11,7 +11,7 @@
     <title>Edit</title>
     <authors>Microsoft</authors>
     <projectUrl>https://github.com/microsoft/edit</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@1330687985ac22d589242a3fa8c43e6fdfbd5457/Icons/edit_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@625109a8f3ed27a15c3314635c200759909a4fff/Icons/edit_icon.png</iconUrl>
     <!-- <copyright>Year Software Vendor</copyright> -->
     <licenseUrl>https://github.com/microsoft/edit/blob/main/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>

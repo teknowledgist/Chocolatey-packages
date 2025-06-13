@@ -23,5 +23,6 @@ Remove-Item $ZipFile -Force
 $ShortcutArgs = @{
    ShortcutFilePath = Join-Path $env:ProgramData '\Microsoft\Windows\Start Menu\Programs\Edit.lnk'
    TargetPath       = (Get-ChildItem $FolderOfPackage -filter edit.exe -Recurse).fullname
+   IconLocation     = (Get-ChildItem $FolderOfPackage -filter edit.ico -Recurse).fullname
 }
-Install-ChocolateyShortcut @ShortcutArgs
+Install-ChocolateyShortcut @ShortcutArgs 
