@@ -6,11 +6,11 @@ The latest version can be downloaded from the official download page:
 - https://www.softwareok.com/?Download=Q-Dir
 
 or directly:
-- Version      : 12.22
+- Version      : 12.23
 - x86 URL      : http://www.softwareok.com/Download/Q-Dir_Installer.zip
-- x86 CheckSum : 8486CE772E8A4AABF25AEF017942ED322FFA197B0F03A6B6DDE54762E564EC50
+- x86 CheckSum : 560772EDA9E939FFE8D562A3C9AC347000169700EC6D3F34D9880474368CF095
 - x64 URL      : http://www.softwareok.com/Download/Q-Dir_Installer_x64.zip
-- x64 CheckSum : 85A5AA6B816156C7185EDF75642BF111C169022A2EB502FA1981DFC392966C16
+- x64 CheckSum : 7E6370327C1A0F63855606F9839B9B8FBB7DD4EE7604754A04DA416DBB2F81B6
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

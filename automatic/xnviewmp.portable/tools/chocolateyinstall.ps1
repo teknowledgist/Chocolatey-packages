@@ -14,7 +14,7 @@ $InstallArgs = @{
    packageName   = $env:ChocolateyPackageName
    UnzipLocation = "$FolderOfPackage\v$env:ChocolateyPackageVersion"
    Url64bit      = 'https://www.xnview.com/download.php?file=XnViewMP-win-x64.zip'
-   Checksum64    = '6cb5dc91088620ac2969eb46cfaa8d129d0f4b4e82ed1fdbee9c14f1c7941c2c'
+   Checksum64    = '1c995234829da35d7f9633897fc25b2ba030d050bd6883107bdec5c2702f70d5'
    ChecksumType  = 'SHA256'
 }
 
