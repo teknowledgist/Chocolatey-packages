@@ -8,7 +8,7 @@ Maybe you use [AU](https://community.chocolatey.org/packages/au) or maybe you ha
     `$version = $Release.Tag.trim('v.')`
     `$URL = $Release.Assets | Where-Object {$_.FileName -match '\.exe'} | Select-Object -ExpandProperty DownloadURL`
 
-The `$Release` object will contain the name of the latest release, the principle tag (which usually contains the version), the description, the URLs for the "zipball" and "tarball" of the release code, and finally, information on each of the "assets" (i.e. files) for the release like the filename, date, size and full download URL.
+The `$Release` object will contain the name of the latest release, the principle tag (which usually contains the version), the description, the URLs for the "zipball" and "tarball" of the release code, and finally, information on each of the "assets" (i.e. files) for the release like the filename, date, size, full download URL, and the SHA256 checksum (if available).
 
 Sure, you can do this yourself by installing the [PowerShellForGitHub](https://github.com/microsoft/PowerShellForGitHub) module and reading the documentation, but that's overkill for what you need to do.  Install this package and **keep it simple**.  It even has a shortened alias:
 
