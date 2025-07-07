@@ -7,7 +7,7 @@ $InstallerFiles = Get-ChildItem -Path $toolsDir -Filter "*.msi" |
 
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
-   fileType       = '.msi'
+   fileType       = 'MSI'
    File           = $InstallerFiles | Where-Object {$_ -match 'x86'}
    File64         = $InstallerFiles | Where-Object {$_ -match 'x64'}
    silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" "
