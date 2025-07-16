@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>keyman</id>
+    <version>18.0.238</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/keyman</packageSourceUrl>
+    <owners>teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Keyman</title>
+    <authors>SIL Global</authors>
+    <projectUrl>https://keyman.com</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/keymanapp/keyman.com@c8d024a1beb9b09c5eccc79ac3af6cd057a2111d/cdn/dev/img/keyman-logo.png</iconUrl>
+    <copyright>Copyright (c) 2017-2025 SIL Global</copyright>
+    <licenseUrl>https://github.com/keymanapp/keyman/blob/master/LICENSE.md</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/keymanapp/keyman</projectSourceUrl>
+    <docsUrl>https://help.keyman.com/products/windows/current-version/</docsUrl>
+    <mailingListUrl>https://community.software.sil.org/c/keyman</mailingListUrl>
+    <bugTrackerUrl>https://github.com/keymanapp/keyman/issues</bugTrackerUrl>
+    <tags>keyman keyboard unicode language FOSS embedded</tags>
+    <summary>Type in any language.</summary>
+    <description>Originally created in 1993 to type Lao on Windows, Keyman is now a free and open source keyboarding platform which allows anyone to write a keyboard layout for their language.
+	 
+	 Keyman helps you type in over 2000 languages!
+	 
+	 Keyboard layouts are defined with a clear and easy to understand keyboard grammar. Keyman's contextual input model means keyboard layouts can be intelligent and make it simple to type even the most complex languages. Keyboard layouts are distributed through an open catalog to all major desktop and mobile platforms.
+	 </description>
+    <releaseNotes>https://help.keyman.com/products/windows/version-history/</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
