@@ -5,7 +5,7 @@ function global:au_GetLatest {
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
    $version = $Release.Tag.trim('v.')
-   $URL32 = $Release.Assets | Where-Object {$_.FileName -match '\.exe$'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $URL32 = $Release.Assets | Where-Object {$_.FileName -match '\.msi$'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
       Version = $version
@@ -16,17 +16,11 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
    @{
-      "legal\VERIFICATION.md" = @{
-            "(^- Version:).*"     = "`${1} $($Latest.Version)"
-            "(^- x86 URL:).*"     = "`${1} $($Latest.URL32)"
-            "(^- x86 SHA256:).*" = "`${1} $($Latest.Checksum32)"
+      "tools\chocolateyinstall.ps1" = @{
+            "(^ +URL +=).*"      = "`${1} '$($Latest.URL32)'"
+            "(^ +Checksum +=).*" = "`${1} '$($Latest.Checksum32)'"
       }
    }
 }
 
-function global:au_BeforeUpdate() { 
-   Write-host "Downloading Frescobaldi $($Latest.Version) installer."
-   Get-RemoteFiles -Purge -nosuffix
-}
-
-Update -ChecksumFor none
+Update-Package

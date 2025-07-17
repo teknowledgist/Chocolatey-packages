@@ -1,6 +1,6 @@
 import-module chocolatey-au
 
-$MainURL = 'https://www.nasm.us/'
+$MainURL = 'https://www.nasm.us'
 
 function global:au_GetLatest {
    $MainPage = Invoke-WebRequest -Uri $MainURL
@@ -8,11 +8,12 @@ function global:au_GetLatest {
    $FolderLink = $MainPage.links | 
                   Where-Object {$_.href -match '/([0-9.]+)/'} | 
                   Select-Object -First 1 -ExpandProperty href
-
+   $FolderLink = $FolderLink.trim('/')
+   
    $version = $Matches[1]
 
-   $url32 = "$FolderLink/win32/nasm-$version-installer-x86.exe"
-   $url64 = "$FolderLink/win64/nasm-$version-installer-x64.exe"
+   $url32 = "$MainURL/$FolderLink/win32/nasm-$version-installer-x86.exe"
+   $url64 = "$MainURL/$FolderLink/win64/nasm-$version-installer-x64.exe"
 
    return @{ 
       Version = $version

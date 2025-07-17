@@ -1,20 +1,21 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$InstallerFile = Get-ChildItem -Path $toolsDir -Filter "*.exe" |
+$InstallerFiles = Get-ChildItem -Path $toolsDir -Filter "*.msi" |
                      Sort-Object LastWriteTime | 
-                     Select-Object -ExpandProperty FullName -Last 1
+                     Select-Object -ExpandProperty FullName -Last 2
 
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
-   fileType       = 'exe'
-   File           = $InstallerFile
-   silentArgs     = "/SP- /VERYSILENT /SUPPRESSMSGBOXES /NORESTART /ALLUSERS /RESTARTEXITCODE=3010 /LOG=`"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).Install.log`""
+   fileType       = 'MSI'
+   File           = $InstallerFiles | Where-Object {$_ -match 'x86'}
+   File64         = $InstallerFiles | Where-Object {$_ -match 'x64'}
+   silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" "
    validExitCodes = @(0,3010)
 }
 Install-ChocolateyInstallPackage @InstallArgs
 
-$exes = Get-ChildItem $toolsDir -filter *.exe -Recurse |select -ExpandProperty fullname
-foreach ($exe in $exes) {
-   Remove-Item $exe -ea 0 -force
+$msis = Get-ChildItem $toolsDir -filter *.msi -Recurse |select -ExpandProperty fullname
+foreach ($msi in $msis) {
+   Remove-Item $msi -ea 0 -force
 }

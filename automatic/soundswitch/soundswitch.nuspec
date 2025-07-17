@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>soundswitch</id>
-    <version>6.12.0</version>
+    <version>6.14.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/soundswitch</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -48,10 +48,7 @@ Comes in English, French, German, Korean, Norwegian Bokmål, Polish and Russian.
     If you want to return to a silent Toast Notification, open the file selector, and just do Cancel. Doing that will remove the set sound.
     </description>
     <releaseNotes>https://github.com/Belphemur/SoundSwitch/releases/latest</releaseNotes>
-    <!-- =============================== -->      
-    <dependencies>
-      <dependency id="dotnet5-desktop-runtime" version="5.0" />
-    </dependencies>
+    <!-- =============================== -->
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

@@ -19,7 +19,14 @@ function global:au_GetLatest {
             Version  = $Version
             URL32    = $URL32
             URL64    = $URL64
-           }
+            Options  = @{
+               Headers = @{
+                  'authority' = 'repo.anaconda.com'
+                  'referer'   = 'https://repo.anaconda.com/archive/'
+                  'user-agent'= 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+               }
+            }
+   }
 }
 
 function global:au_SearchReplace {

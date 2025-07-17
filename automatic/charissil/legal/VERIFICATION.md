@@ -12,9 +12,9 @@ or the GitHub releases page:
 
 or directly:
 
-- Version : 6.200
-- URL     : https://software.sil.org/downloads/r/charis/CharisSIL-6.200.zip
-- SHA256  : 4B09AA75760B8AA697B762C34AFB995DDE0754C8F09256CB912DBFC478C97ADE
+- Version : 7.000
+- URL     : https://software.sil.org/downloads/r/charis/Charis-7.000.zip
+- SHA256  : E3237B1303C5D31AF8F59B1D1914886C5E873B77C71390E4742FB3BC1C187666
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

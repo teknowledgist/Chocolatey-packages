@@ -1,12 +1,11 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $ReleaseURL = 'https://www.pinta-project.com/releases/'
-   $PageText = Invoke-WebRequest -Uri $ReleaseURL
+   $Repo = 'https://github.com/PintaProject/Pinta'
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $URL = $PageText.links | Where-Object {$_.href -match '\.exe'} |Select-Object -ExpandProperty href
-
-   $Version = $URL.split('/') | Where-Object {$_ -match '^[0-9.]+$'}
+   $version = $Release.Tag.trim('v.').replace('_', '.')
+   $URL = $Release.Assets | Where-Object { $_.FileName -match '\.exe' } | Select-Object -First 1 -ExpandProperty DownloadURL
 
    return @{ 
             Version  = $Version

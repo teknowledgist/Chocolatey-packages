@@ -185,13 +185,15 @@ Function Get-LatestReleaseOnGitHub {
       ZipballURL    = "https://github.com/$ownerName/$repositoryName/archive/refs/tags/$($finalResult.tag_name | Select-Object -first 1).zip"
       AssetCount    = $finalResult.assets.count
       Assets        = foreach ($item in $finalResult.assets) {
-                     [PSCustomObject]@{
-                        FileName         = $item.name
-                        CreationDate = get-date $item.created_at
-                        Size         = $item.size
-                        DownloadURL  = $item.Browser_download_url
+                        [PSCustomObject]@{
+                           FileName     = $item.name
+                           CreationDate = get-date $item.created_at
+                           Size         = $item.size
+                           DownloadURL  = $item.Browser_download_url
+                           SHA256       = $item.digest | Where-Object {$_ -match '^sha256:'} | 
+                                                         ForEach-Object {$_ -replace '^sha256:',''}
+                        }
                      }
-               }
    }
    $InfoObject.PSObject.TypeNames.Insert(0,'Release.Information')
    $InfoObject | Add-Member MemberSet PSStandardMembers $PSStandardMembers

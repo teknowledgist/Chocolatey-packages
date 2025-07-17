@@ -8,6 +8,13 @@ function global:au_GetLatest {
       Version    = $Meta.Version
       URL64      = $Meta.URI
       Checksum64 = $Meta.Sha256
+      Options  = @{
+         Headers = @{
+            'authority' = 'repo.anaconda.com'
+            'referer'   = 'https://repo.anaconda.com/archive/'
+            'user-agent'= 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'
+         }
+      }
    }
 }
 

@@ -16,9 +16,9 @@ function global:au_GetLatest {
                Select-Object -ExpandProperty innerhtml
    $TData = $TRow -split '</?T[DH]>' | Where-Object {$_ -match 'revision'} | Select-Object -First 1
 
-   $HREF = $TData -replace '.*"/bitstream/([^"]+)".*','$1'
-   $version = $TData -replace '.*>([0-9.]+).*','$1'
-   $revision = $TData -replace '.*revision ([0-9.]+).*','$1'
+   $HREF = ($TData -replace '.*"/bitstream/([^"]+)".*','$1').trim()
+   $version = ($TData -replace '.*>([0-9.]+).*','$1').trim()
+   $revision = ($TData -replace '.*revision ([0-9.]+).*','$1').trim()
 
    $url64 = "https://slicer-packages.kitware.com/api/v1/item/$HREF/download"
 

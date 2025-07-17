@@ -6,11 +6,11 @@ The latest (and previous) versions of the PostgreSQL ODBC driver installer can b
 - https://www.postgresql.org/ftp/odbc/versions/
 
 or directly:
-- Version   : 17.0.4
-- x86 URL   : https://ftp.postgresql.org/pub/odbc/releases/REL-17_00_0004/psqlodbc_x86.msi
-- x64 URL   : https://ftp.postgresql.org/pub/odbc/releases/REL-17_00_0004/psqlodbc_x64.msi
-- x86 SHA256: C374C6240FA4EE3D8965F15292CC680233AD15729D91B8FA7F7B0C11F571C54E
-- x64 SHA256: 218A815B2385A2BCE83F606C868C5A563861E110C84CBD3911B6C213591A472A
+- Version   : 17.00.0006
+- x86 URL   : https://ftp.postgresql.org/pub/odbc/releases/REL-17_00_0006/psqlodbc_x86.msi
+- x64 URL   : https://ftp.postgresql.org/pub/odbc/releases/REL-17_00_0006/psqlodbc_x64.msi
+- x86 SHA256: 06CBED39C4C6048D1EB53E080A2BA9321E2733364808F4E0C5BDA580A4134594
+- x64 SHA256: 1670D5CA092793D89834E7BD2338547159BACC4AFBF55B3634590505D884758B
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

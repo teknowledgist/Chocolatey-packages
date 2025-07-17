@@ -7,9 +7,9 @@ the official GitHub page:
 - https://github.com/brondavies/TrayToolbar/releases/latest
 
 or directly:
-- Version: 1.3.9
-- URL: https://github.com/brondavies/TrayToolbar/releases/download/v1.3.9/TrayToolbar-win-x64-portable-1.3.9.zip
-- SHA256: 035F3A6B4BC1977F70315B684E90D044D728C23101C7A47F8DAF873FF8D31433
+- Version: 1.4.2
+- URL: https://github.com/brondavies/TrayToolbar/releases/download/v1.4.2/TrayToolbar-win-x64-portable-1.4.2.zip
+- SHA256: 0D05D9F3FC5C2CD6BF587E24F5A314658422EE80A525281F8BFAA3F7EA679762
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
