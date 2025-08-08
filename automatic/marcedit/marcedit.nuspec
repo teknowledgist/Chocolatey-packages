@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>marcedit</id>
-    <version>7.3.15</version>
+    <version>7.7.35</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/marcedit</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -20,29 +20,36 @@
     <bugTrackerUrl>https://marcedit.reeset.net/bug-report?version=MarcEdit7</bugTrackerUrl>
     <tags>marcedit MARC records OCLC worldcat xslt library catalog embedded</tags>
     <summary>Your complete, free, MARC editing utility</summary>
-    <description>MarcEdit is one of the more complete metadata edit suites available to librarians and is primarily used to create and manipulate MARC (MAchine-Readable Cataloging) records. 
+    <description>MarcEdit is one of the more complete metadata edit suites available to librarians and includes a very rich feature set targeted at making metadata translation and editing easier for both the beginner and advanced users.  
 
-MarcEdit edits more than simply MARC records and includes a very rich feature set targeted at making metadata translation and editing easier for both the beginner and advanced users.
+## Features include:
 
-* **MARC Editing**:  MarcEdit includes a MARC Breaker and Maker to move MARC data into a more friendly mnemonic file format.  
-* **MarcEditor**:  The MarcEditor is MarcEdit’s built in metadata editor.  It includes a number of global editing functions, full regular expression and UTF-8 support, the ability to edit MODS and MARCXML data (in a mnemonic format), as well as the ability to configure the editor to _utilize any characterset_ supported by the operating system.  
+* **MARC Editing**:  MarcEdit includes a MARC Breaker and Maker to move MARC data into a more friendly mnemonic file format and the ability to edit MODS and MARCXML data (in a mnemonic format) and integrate data from other data sources like OCLC, etc. into a batch set of MARC data.
+* **Automatic Normalization Support**: UTF8 data comes in many different normalizations — Libraries primarily utilize two.  Depending on the ILS, incorrect or mixed normalizations can cause indexing and display issues.  MarcEdit allows for automated data normalization.
+* **Metadata Translations**:  Includes built in translations for MARC to JSON, JSON to MARC, MARC to JSONLD, JSON to XML, BibFrame to MARC as well as multiple XSLT translations to convert between various Library and non-Library domain metadata frames to other metadata frameworks (and usually MARC).
+* **MarcEditor**:  The built-in metadata editor.  Includes a number of global editing functions, full regular expression and UTF-8 support, and can configure the editor to utilize any characterset supported by the operating system.  
+* **Link Data Framework**: Framework and tooling for supporting automatic data reconcillation
+* **BibFrame Workflows**: Built-in workflows for moving data into and out of bibframe for editing.
 * **Clustering**: MarcEdit supports the ability to cluster on fields or subfields and edit data in clusters.
-* **RDA Helper**:  The RDA Helper is both a stand alone and integrated tool that allows users to take a set of MARC data and automatically generate RDA specific data.  The RDA data is derived from the source recordset using available control data, variable field data, and RDA specific assumptions.
+* **RDA Helper**:  The RDA Helper is both a stand alone and integrated tool that allows users to take a set of MARC data and automatically generate RDA specific data.
 * **Delimited Text Translator**:  The Delimited Text Translator is a tool that allows users to translate data in Excel, Access, or any delimited format into MARC.
 * **Export as Tab Delimited**:  A tool that allows users to export their MARC data as delimited text.
-* **Harvest OAI Data**:  MarcEdit has the ability to harvest metadata from an OAI data provider and convert the data directly to MARC.  Supported formats are MARCXML, oaimarc, oai_dc, and MODS, but any format can be accommodated as the user is allowed to provide their own translation rules.
+* **Harvest OAI Data**:  MarcEdit has the ability to harvest metadata from an OAI data provider and convert the data directly to MARC.  Supported formats are MARCXML, oaimarc, oai_dc, and MODS.  However, the program allows the user to provide their own translation rules, so any format could be accommodated.
 * **XML Translations**:  MarcEdit supports the facilitation of metadata from XML and non-XML formats into various forms, including MARC.
+* **XML Profiler**: A wizard that allows users to profile XML and JSON files and create portable translations without having to write any XSLT or XQuery
+* **Characterset conversion**:  MarcEdit supports the ability to convert MARC records from one characterset to another.  This includes the traditional charactersets like MARC-8 (ANSEL) and UTF-8, but it also includes support for any characterset currently supported by the operating system.
 * **Z39.50/SRU Client**:  MarcEdit includes a built in Z39.50 and SRU client for interaction with other library systems.
 * **ILS and OCLC Integrations**: The tool provides ways to integrate directly with a number of ILS providers, as well as OCLC.
 * **MARC SQL Explorer**:  MarcEdit includes an SQL Explorer — a tool that allows users to export their data into either an SQLite or MySQL data and run SQL queries directly on the data to mine for information.
 * **MARCValidator**:  MarcEdit includes a number of tools to help users validate data and identify incorrectly structured MARC record data.
+* **XML Editor**: MarcEdit includes a built-in, light-weight hex editor to support quick editing of XML data.
+* **Hex Editor**: Trouble shoot binary data with a built-in hex editor.
 * **Many more features**:  Like the ability to split, join, sort, etc. data in various formats.
-
     </description>
     <releaseNotes>https://marcedit.reeset.net/software/update7.txt</releaseNotes>
     <!-- =============================== -->      
     <dependencies>
-      <dependency id="DotNet4.7.2" version="4.7.2" />
+      <dependency id="dotnet-desktopruntime" version="8.0" />
     </dependencies>
   </metadata>
   <files>

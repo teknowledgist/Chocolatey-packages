@@ -1,6 +1,4 @@
-﻿From:  https://marcedit.reeset.net/marcedit-end-user-license-agreement
-
-MarcEdit End User License Agreement
+﻿MarcEdit End User License Agreement
 
 Author:   Terry Reese
 Version:  5.1+; August 2007 to Present
