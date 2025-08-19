@@ -7,8 +7,8 @@ The Open Rocket installer can be downloaded from the source releases page:
 
 #### or directly:
 - Version : 24.12
-- URL     : https://github.com/openrocket/openrocket/releases/download/release-24.12/OpenRocket-24.12-installer-Windows-Arm64.exe
-- SHA256  : FA075D84E408EB72B46C648E3BD5AA919A8FD20C3ADCD6D7DEC13A3495CBF77B
+- URL     : https://github.com/openrocket/openrocket/releases/download/release-24.12/OpenRocket-24.12-installer-Windows-x86_64.exe
+- SHA256  : 49c630beef6d01f1d43a96da141c6a1918bb026cc68d19e68cc838a47ff238f9
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

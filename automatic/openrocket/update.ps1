@@ -4,7 +4,7 @@ function global:au_GetLatest {
    $Repo = 'https://github.com/openrocket/openrocket'
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.exe'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.exe' -and $_.FileName -notmatch 'arm'} | Select-Object -First 1 -ExpandProperty DownloadURL
 
    $version = $Release.Tag.trim('release-')
 

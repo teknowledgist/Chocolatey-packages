@@ -21,7 +21,7 @@
     <bugTrackerUrl>https://github.com/openrocket/openrocket/issues</bugTrackerUrl>
     <tags>openrocket rocketry simulator design FOSS embedded</tags>
     <summary>Everything you need to design, simulate and fly better rockets</summary>
-    <description>OpenRocket is a free, fully featured model rocket simulator that allows you to design and simulate your rockets before you build and flying them.
+    <description>OpenRocket is a free, fully featured model rocket simulator that allows you to design and simulate your rockets before you build and fly them.
 
 ![Main-Window](https://openrocket.info/screenshots/01.Main-Window.png)
 
