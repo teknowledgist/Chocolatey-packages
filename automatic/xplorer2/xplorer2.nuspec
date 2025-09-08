@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>xplorer2</id>
-    <version>6.1.0.2</version>
+    <version>6.2.0.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/xplorer2pro</packageSourceUrl>
     <owners>Werner van Deventer, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

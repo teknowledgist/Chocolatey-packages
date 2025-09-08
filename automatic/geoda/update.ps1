@@ -1,7 +1,7 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $Release = 'https://geodacenter.github.io/download_windows.html'
+   $Release = 'https://geodacenter.github.io/download-windows/'
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
    $download_page = Invoke-WebRequest -Uri $Release
 

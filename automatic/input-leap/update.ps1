@@ -9,6 +9,8 @@ function global:au_GetLatest {
    $version = $Release.Tag.trim('v.')
    $URL64 = $Release.Assets | Where-Object {$_.FileName -match 'qt6\.exe'} | Select-Object -ExpandProperty DownloadURL
 
+   if (-not $url64) {$version = '1.0'}
+   
    return @{ 
             Version  = $version
             URL64    = $url64

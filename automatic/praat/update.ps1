@@ -2,15 +2,26 @@ import-module evergreen
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $Meta = Get-EvergreenApp praat | Where-Object {$_.architecture -eq 'x86'}
+   Try {
+      $Meta = Get-EvergreenApp praat | Where-Object {$_.architecture -eq 'x86'} -ErrorAction SilentlyContinue
+      $x64 = $Meta | Where-Object {$_.uri -match '64\.zip$'}
+      $version = $x64.Version
+      $x64URL = $x64.URI
+      $x86URL = ($Meta | Where-Object {$_.uri -match '32\.zip$'}).URI
+   } 
+   Catch {
+      $Release = Get-LatestReleaseOnGitHub -URL 'https://github.com/praat/praat.github.io'
 
-   $x86 = $Meta | Where-Object {$_.uri -match '32\.zip$'}
-   $x64 = $Meta | Where-Object {$_.uri -match '64\.zip$'}
+      $version = $Release.Tag.trim('v.').replace('_', '.')
+      $Assets = $Release.Assets | Where-Object { $_.FileName -match '\.zip' } | Select-Object -First 2 -ExpandProperty DownloadURL
+      $x86URL = $Assets | Where-Object { $_ -match '32\.zip$' }
+      $x64URL = $Assets | Where-Object { $_ -match '64\.zip$' }
+   }
 
    return @{ 
-            Version    = $x86.Version
-            URL32      = $x86.URI
-            URL64      = $x64.URI
+            Version    = $version
+            URL32      = $x86URL
+            URL64      = $x64URL
            }
 }
 

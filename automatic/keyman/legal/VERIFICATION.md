@@ -9,9 +9,9 @@ button on the official site:
 
 Or Directly:
 
-- Version : 18.0.238
-- URL     : https://downloads.keyman.com/windows/stable/18.0.238/keyman-18.0.238.exe
-- SHA256  : 5ED5B13106A88D2E509D18E017AEE3549D506B39A68CA6A98DAFE23F2737A9E6
+- Version : 18.0.240
+- URL     : https://downloads.keyman.com/windows/stable/18.0.240/keyman-18.0.240.exe
+- SHA256  : F9F15BD28BBE4044D8047AF4CDA8C6CFD2F6679741DB0ADCD0B7FCF0AE5BA555
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
