@@ -12,11 +12,11 @@ The files are for:
 - 64-bit build:  multi-language ("i18n"), Hi-definition, AXV2-capable-processor
 
 #### Direct Download
-- Version    : 25.07.5738
-- URL        : https://github.com/zufuliu/notepad4/releases/download/v25.07r5738/Notepad4_i18n_Win32_v25.07r5738.zip
-- Checksum   : FA79517CE6FF0FCBF39B6FD0F03138C927F9F5BFC1AA92EFAE31E29E55DC7756
-- URL64      : https://github.com/zufuliu/notepad4/releases/download/v25.07r5738/Notepad4_HD_i18n_AVX2_v25.07r5738.zip
-- Checksum64 : A549DC60F6E061BD7167A07418785FBA0C8AB306265C27E9F43090C1994F734A
+- Version    : 25.09.5812
+- URL        : https://github.com/zufuliu/notepad4/releases/download/v25.09r5812/Notepad4_i18n_Win32_v25.09r5812.zip
+- Checksum   : 0A12B770C0CAB09E237DB72D52948B94264E0A0E0FF3BAD3658076562C3F6E02
+- URL64      : https://github.com/zufuliu/notepad4/releases/download/v25.09r5812/Notepad4_HD_i18n_AVX2_v25.09r5812.zip
+- Checksum64 : 48217A0398CDB39B083E44E438B08B02396072EB1F4E8475B062E620E94908D7
 
 Other files available there are not embedded.
 
