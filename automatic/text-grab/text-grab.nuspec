@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>text-grab</id>
-    <version>4.9.6</version>
+    <version>4.9.6.20250918</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/text-grab</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -27,6 +27,9 @@ Too often text is trapped within images, videos, or within parts of applications
 ![Full Screen Example](https://cdn.jsdelivr.net/gh/theJoeFin/Text-Grab@c8c1ca7fb15ba4e7e30999446e8720630e67c2b5/images/2-3-Full-Screen-Grab-med.gif)
 
 Text Grab is designed to have multiple modes, from minimal to fully featured; all focused on productivity. By using Windows 10’s OCR capabilities Text Grab can launch quickly without needing to run in the background. Pinning Text Grab to the Taskbar enables launching via keyboard shortcut. Now with version 2.4 when the background process is enabled Text Grab can be activated from anywhere using global hotkeys. The full-screen mode is designed to be used hundreds of times a day. Reducing clicks and menus means saving time, which is the primary focus of Text Grab. The Grab Frame tool can be positioned on top of any text content for quick OCR any time. When it comes to manipulating the text you've copied the Edit Text Window offers a wide range of tools to speed up common tasks and take the raw text into clean usable content.
+
+### Note
+Version 4.8.1 appears to be the last 32-bit version of Text-Grab, but does have an ARM64-specific build. If you have an ARM64 processor, this package will install it to get the best performance.
     </description>
     <releaseNotes>https://github.com/TheJoeFin/Text-Grab/releases</releaseNotes>
     <!-- =============================== -->      

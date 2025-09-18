@@ -5,12 +5,16 @@ function global:au_GetLatest {
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
    $version = $Release.Tag.trim('v.')
-   $Asset = $Release.Assets | Where-Object {$_.FileName -match '\.zip$'} | Select-Object -First 1 
+   $Asset = $Release.Assets | Where-Object {$_.FileName -match 'x64.*\.zip$'} | Select-Object -First 1 
+   $ARM64Asset = $Release.Assets | Where-Object { $_.FileName -match 'arm64.*\.zip$' } | Select-Object -First 1 
 
    return @{ 
-      Version = $version
-      URL32   = $Asset.DownloadURL
-      ZipFile = $Asset.FileName
+      Version       = $version
+      URL64         = $Asset.DownloadURL
+      Checksum64    = $Asset.SHA256
+      ZipFile       = $Asset.FileName
+      ARM64URL      = $ARM64Asset.DownloadURL
+      ARM64Checksum = $ARM64Asset.SHA256
    }
 }
 
@@ -18,19 +22,16 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
    @{
       "legal\VERIFICATION.md" = @{
-            "(^- Version:).*"     = "`${1} $($Latest.Version)"
-            "(^- URL:).*"     = "`${1} $($Latest.URL32)"
-            "(^- SHA256+:).*" = "`${1} $($Latest.Checksum32)"
+            "(^- Version:).*" = "`${1} $($Latest.Version)"
+            "(^- URL:).*"     = "`${1} $($Latest.URL64)"
+            "(^- SHA256+:).*" = "`${1} $($Latest.Checksum64)"
       }
       'tools\chocolateyinstall.ps1' = @{
             '^(\$ZipFile = ).*' = "`${1}'$($Latest.ZipFile)'"
+            '^(\s*URL64bit\s*= )' = "`${1}'$($Latest.ARM64URL)'"
+            '^(\s*Checksum64\s*= )'    = "`${1}'$($Latest.ARM64Checksum)'"
       }
    }
-}
-
-function global:au_BeforeUpdate() { 
-   Write-host "Downloading Text-Grab $($Latest.Version) zip file"
-   Get-RemoteFiles -Purge -nosuffix
 }
 
 update -ChecksumFor none
