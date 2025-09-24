@@ -3,8 +3,8 @@
 $packageArgs = @{
    packageName   = $env:ChocolateyPackageName
    fileType      = 'EXE'
-   url64bit      = 'https://downloads.tableau.com/public/TableauPublicDesktop-64bit-2025-1-2.exe'
-   checksum64    = ''
+   url64bit      = 'https://downloads.tableau.com/public/TableauPublicDesktop-64bit-2025-2-2.exe'
+   checksum64    = 'c5f29924c61c88c5d5d5700a9055c1b092f4f52a57050ac9abf1c0605effed39'
    checksumType  = 'sha256'
    silentArgs    = "/quiet /norestart /LOG `"$($env:TEMP)\TableauPublic-$($env:chocolateyPackageVersion)-InstallLogs\Install.log`" ACCEPTEULA=1"
    validExitCodes= @(0,3010)

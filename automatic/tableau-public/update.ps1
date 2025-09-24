@@ -11,11 +11,13 @@ function global:au_GetLatest {
             Options  = @{
                # Headers pared down from https://github.com/aaronparker/evergreen/blob/main/Evergreen/Manifests/TableauDesktop.json
                Headers = @{
+                  'dnt' = '1'
                   'authority' = 'www.tableau.com'
                   'sec-ch-ua' = '"Chromium";v="132", "Microsoft Edge";v="131", "Not-A.Brand";v="99"'
                   'accept-encoding' = 'gzip, deflate, br, zstd'
                   'priority' = 'u=0, i'
-                  'accept' = '*/*;q=0.8'
+                  'path' = '/downloads/desktop/pc64'
+                  'accept' = 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7'
                }
             }
            }
