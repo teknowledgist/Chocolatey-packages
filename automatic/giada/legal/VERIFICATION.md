@@ -7,9 +7,9 @@ the official site:
 - https://www.giadamusic.com/index#download
 
 or directly:
-- Version: 1.2.1
-- URL: https://github.com/monocasual/giada/releases/download/1.2.1/giada-1.2.1-x86_64-windows.zip
-- SHA256: DC30B634D00EEA663ADE1515B506342448416517EFEA5498116262FF9C1A8E5F
+- Version: 1.3.0
+- URL: https://github.com/monocasual/giada/releases/download/1.3.0/giada-1.3.0-x86_64-windows.zip
+- SHA256: 84E1B8A86AAC644D3A670800EFD51C94562A6642AE89C87CEDAA3ADBC6A7A903
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

@@ -17,15 +17,16 @@ function global:au_GetLatest {
    Foreach ($item in ($Release.Assets | Where-Object {$_.FileName -match '^Notepad4'}) ) {
       $split = $item.Filename.split('_')
       if ($split[1] -eq 'HD') { $HD = 'HD' } else { $HD = '' }
-      $CSV += ($split[-3],$HD,$split[-2],$item.DownloadURL,$Release.SHA256) -join ','
+      $CSV += ($split[-3],$HD,$split[-2],$item.DownloadURL,$item.SHA256) -join ','
    }
 
    $CSV | Out-File '.\tools\BuildChecksums.csv' -Force
 
-   return = @{
+Write-Host "got here"
+   return @{
       Version    = $Version
       URL32      = $x86build.DownloadURL
-      Checksum   = $x86build.SHA256
+      Checksum32 = $x86build.SHA256
       URL64      = $x64build.DownloadURL
       Checksum64 = $x64build.SHA256
    }

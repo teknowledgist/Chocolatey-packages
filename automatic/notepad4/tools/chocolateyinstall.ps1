@@ -32,7 +32,6 @@ if ($Features.'AVX2_INSTRUCTIONS') {
 
 $pp = Get-PackageParameters
 if ($pp['Language'] -or $pp['LowRes'] -or ($PC32 -ne 'Win32') -or ($PC64 -ne 'AVX2')) { 
-Write-host "PP = $pp"
    $Builds = Import-Csv "$toolsDir\BuildChecksums.csv" 
 
    if ($pp['LowRes']) { $HD = '' }

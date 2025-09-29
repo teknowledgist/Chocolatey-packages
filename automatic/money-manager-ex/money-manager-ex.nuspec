@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>money-manager-ex</id>
-    <version>1.9.0</version>
+    <version>1.9.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/money-manager-ex</packageSourceUrl>
     <owners>cole.mike, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

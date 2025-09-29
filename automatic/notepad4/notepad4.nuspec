@@ -55,7 +55,7 @@
 * Other various major or minor changes and tweaks
 
 ### Options
-By default, this package will install the embedded, multi-language build of Notepad4 best suited for your processor (Win32, x64, ARM, ARM64 and AVX2 available).  Other options can be requested as follows:
+By default, this package will install the multi-language build of Notepad4 best suited for your processor (Win32, x64, ARM, ARM64 and AVX2 available).  Other options can be requested as follows:
 
 ##### Single-language
 Use the `\Language:` parameter with:

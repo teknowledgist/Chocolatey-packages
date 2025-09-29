@@ -1,12 +1,11 @@
 import-module chocolatey-au
 
-$MainURL = 'https://www.nasm.us'
-
 function global:au_GetLatest {
+   $MainURL = 'https://www.nasm.us'
    $MainPage = Invoke-WebRequest -Uri $MainURL
 
    $FolderLink = $MainPage.links | 
-                  Where-Object {$_.href -match '/([0-9.]+)/'} | 
+                  Where-Object {$_.href -match '/([0-9.]+)'} | 
                   Select-Object -First 1 -ExpandProperty href
    $FolderLink = $FolderLink.trim('/')
    

@@ -7,6 +7,6 @@ https://sourceforge.net/projects/pydev/files/latest/download
 
 Direct Download:
 
-Version  : 13.0.2
-URL      : https://sourceforge.net/projects/pydev/files/pydev/PyDev%2013.0.2/PyDev%2013.0.2.zip
-CheckSum : 8FA3F0BE69F1FE829B80FECC52688BAF00032F98AB1E483508E86AF8CC53D7DE
+Version  : 13.1.0
+URL      : https://sourceforge.net/projects/pydev/files/pydev/PyDev%2013.1.0/PyDev%2013.1.0.zip
+CheckSum : 2B1CB0C1B9771D5F92FDB3B7AF35A65C07A084FDB15EE6CADA77A79325E661C5

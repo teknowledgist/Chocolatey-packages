@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>pdfsam.install</id>
-    <version>5.3.2</version>
+    <version>5.4.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/pdfsam.install</packageSourceUrl>
     <owners>Teknowledgist, CDuv</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
