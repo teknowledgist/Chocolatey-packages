@@ -9,15 +9,17 @@ function global:au_GetLatest {
 # Sometimes there is no Windows build
 if (-not $url64) { 
    $version = '1.0'
-   $URL64 = $Release.Assets | Select-Object -First 1 -ExpandProperty DownloadURL
+   $URL64,$CheckSum64 = $Release.Assets | Select-Object -First 1 -ExpandProperty DownloadURL,SHA256
 } else { 
    $version = $Release.Tag.trim('v.')
+   $CheckSum64 = $Release.SHA256
 }
 
 
    return @{ 
       Version = $version
       URL64   = $URL64
+      Checksum64 = $Checksum64
    }
 }
 
