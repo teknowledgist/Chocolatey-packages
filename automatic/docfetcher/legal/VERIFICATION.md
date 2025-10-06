@@ -6,7 +6,7 @@ The latest version can be downloaded from the official download page:
 - https://docfetcher.sourceforge.net/en/download.html
 
 or directly:
-- Version : 1.1.25
+- Version : 1.1.25.20251006
 - URL     : https://sourceforge.net/projects/docfetcher/files/docfetcher/1.1.25/docfetcher_1.1.25_win32_setup.exe
 - Checksum: 7C2AEE6BC3498363767274271B0C14C5288184F3A5FD27FD904F2B4315B53BF5
 
