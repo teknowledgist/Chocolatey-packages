@@ -6,8 +6,8 @@ The latest installers are available here:
    https://geodacenter.github.io/download_windows.html
 
 Direct Download:
-Version      : 1.22.0.20
-x86 URL      : https://github.com/GeoDaCenter/geoda/releases/download/v1.22.0.20/GeoDa-Windows7+-x86-installer.zip
-x86 CheckSum : 3C06BF4804AE193C8AA2B78F06782743F9161BAA19A65733E6278D0BD96F51E6
-x64 URL      : https://github.com/GeoDaCenter/geoda/releases/download/v1.22.0.20/GeoDa-Windows7+-x64-installer.zip
-x64 CheckSum : 302053D6AF79C19EF8A548C44F584F97B4B6F446447D64D744CE1AFE7E3FC0A9
+Version      : 1.22.0.21
+x86 URL      : https://github.com/GeoDaCenter/geoda/releases/download/v1.22.0.21/GeoDa-Windows7+-x86-installer.zip
+x86 CheckSum : 94CFA31E23C36B6FFC9B345644EC3E0B2A3897F33A605809D59E11FE355209D4
+x64 URL      : https://github.com/GeoDaCenter/geoda/releases/download/v1.22.0.21/GeoDa-Windows7+-x64-installer.zip
+x64 CheckSum : B58AC98D0FBDF3FE7520B004A256E3541AA6C81192853C85166698D3F4E40DC5

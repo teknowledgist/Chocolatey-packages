@@ -7,9 +7,9 @@ The latest version of MarcEdit can be downloaded from the official site:
 and clicking the "Windows Build Options" link and downloading the "Consolidated Build".
 
 Direct download:   
-- Version : 7.7.35
+- Version : 7.7.56
 - URL     : https://marcedit.reeset.net/software/marcedit75/MarcEdit_7_7_mixed.exe
-- SHA256  : 1F05308984BFCDF3A8E4643CFB5EF419AC9157B86C6DE36877D4E65710051E48
+- SHA256  : 0EF83F36C1B0C00721C56D77B3CB5EDF1604857A424C2B2A6C9FBEEFD7BD4659
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

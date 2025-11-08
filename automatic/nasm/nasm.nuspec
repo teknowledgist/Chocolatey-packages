@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>nasm</id>
-    <version>2.16.03</version>
+    <version>3.01</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/nasm</packageSourceUrl>
     <owners>Teknowledgist, dch, andyli</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
