@@ -27,11 +27,16 @@ function global:au_SearchReplace {
             "(^- SHA256+:).*" = "`${1} $($Latest.Checksum64)"
       }
       'tools\chocolateyinstall.ps1' = @{
-            '^(\$ZipFile = ).*' = "`${1}'$($Latest.ZipFile)'"
-            '^(\s*URL64bit\s*= )' = "`${1}'$($Latest.ARM64URL)'"
-            '^(\s*Checksum64\s*= )'    = "`${1}'$($Latest.ARM64Checksum)'"
+            '^(\$ZipFile = ).*'      = "`${1}'$($Latest.ZipFile)'"
+            '^(\s*URL64bit\s*= ).*'  = "`${1}'$($Latest.ARM64URL)'"
+            '^(\s*Checksum64\s*= ).*'= "`${1}'$($Latest.ARM64Checksum)'"
       }
    }
+}
+
+function global:au_BeforeUpdate() { 
+   Write-host "Downloading Text-Grab $($Latest.Version) zip file."
+   Get-RemoteFiles -Purge -NoSuffix
 }
 
 update -ChecksumFor none
