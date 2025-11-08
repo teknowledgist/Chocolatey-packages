@@ -1,15 +1,16 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $Release = 'https://docfetcher.sourceforge.io/en/download.html'
+   $Release = 'https://docfetcher.sourceforge.io/download/'
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
    $download_page = Invoke-WebRequest -Uri $Release
 
-   $Filename = $download_page.links | 
+   $DownLink = $download_page.links | 
                   Where-Object {$_.href -like '*.exe*'} | 
-                  Select-Object -ExpandProperty innertext
+                  Select-Object -ExpandProperty href
+   $Filename = $DownLink.split('/') | Where-Object {$_ -match '\.exe$'}
 
-   $version = $Filename -replace '.*_([0-9.]+)_.*','$1'
+   $version = $Filename -replace '.*[_-]([0-9.]+)[_-].*','$1'
 
    $url = "https://sourceforge.net/projects/docfetcher/files/docfetcher/$version/$FileName"
 

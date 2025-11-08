@@ -6,9 +6,9 @@ The latest version can be downloaded from the official download page:
 - https://docfetcher.sourceforge.net/en/download.html
 
 or directly:
-- Version : 1.1.25.20251006
-- URL     : https://sourceforge.net/projects/docfetcher/files/docfetcher/1.1.25/docfetcher_1.1.25_win32_setup.exe
-- Checksum: 7C2AEE6BC3498363767274271B0C14C5288184F3A5FD27FD904F2B4315B53BF5
+- Version : 1.1.26
+- URL     : https://sourceforge.net/projects/docfetcher/files/docfetcher/1.1.26/DocFetcher-1.1.26-Windows-64bit-Setup.exe
+- Checksum: 66E31A74DE45E65D090197E730928AAFB5D8A1411E20C11834A5926942412B55
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
