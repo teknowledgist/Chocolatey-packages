@@ -9,7 +9,7 @@ if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
 
-$ZipFile = 'TrayToolbar-win-x64-portable-1.5.5.zip'
+$ZipFile = 'TrayToolbar-win-x64-portable-1.6.0.zip'
 
 $UnZipArgs = @{
    packageName    = $env:ChocolateyPackageName

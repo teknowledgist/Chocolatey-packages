@@ -21,9 +21,11 @@ function global:au_GetLatest {
       $Version = $HistoryVersion
    } else { $Version = $DownloadVersion }
 
-   $DownloadPage = Invoke-WebRequest -Uri "$MainPage/download/"
    $urlstub = $DownloadPage.links | Where-Object {$_.href -like '*.msi'} | Select-Object -ExpandProperty href -first 1
-   $url = $MainPage + "/download/" + $urlstub
+   if (-not $urlstub) {
+      $urlstub = $DownloadPage.links | Where-Object { $_.href -like '*.exe' } | Select-Object -ExpandProperty href -first 1
+   }
+   $url = "$MainPage/download/$urlstub"
 
    return @{ Version = $version; URL = $url }
 }

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>onedrive</id>
-    <version>25.199.1012.0002</version>
+    <version>25.206.1021.0003</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/onedrive</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -24,7 +24,9 @@
 ### Note
 This package is for a machine-wide install of Microsoft OneDrive.  Installing this package will disable the default, per-user, first-login install of OneDrive for Windows 10, and uninstalling this package will re-enable that **for new users only**.
 
-Also, this package is only for Windows 10 or Server 2016 and up.  While it may be possible to manually install OneDrive Sync client on earlier OS versions, it is unsupported.
+Also, this package will now identify ARM64-based processors and install the ARM-oriented build of OneDrive.
+
+Finally, this package is only for Windows 10 or Server 2016 and up.  While it may be possible to manually install OneDrive Sync client on earlier OS versions, it is unsupported.
    </description>
     <releaseNotes>https://support.microsoft.com/en-us/office/onedrive-release-notes-845dcf18-f921-435e-bf28-4e24b95e5fc0</releaseNotes>
     <!-- =============================== -->
