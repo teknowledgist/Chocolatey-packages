@@ -6,10 +6,10 @@ $FolderOfPackage = Split-Path -Parent $toolsDir
 $packageArgs = @{
    packageName   = $env:chocolateyPackageName
    fileType      = 'exe'
-   url           = 'https://oneclient.sfx.ms/Win/Installers/25.206.1021.0003/OneDriveSetup.exe'
-   url64         = 'https://oneclient.sfx.ms/Win/Installers/25.206.1021.0003/amd64/OneDriveSetup.exe'
-   checksum      = 'cc42abac08bf6beb1c920e7cd521337dbd52b5523529ba2ebbbd256765f11db6'
-   checksum64    = 'a9dca04e5747e6df64b014f046e9f2de081e8731fd9e268dcb4f40d395cb260b'
+   url           = 'https://oneclient.sfx.ms/Win/Installers/25.222.1112.0002/OneDriveSetup.exe'
+   url64         = 'https://oneclient.sfx.ms/Win/Installers/25.222.1112.0002/amd64/OneDriveSetup.exe'
+   checksum      = '05d2340507709efbe977292092201aa2cdda1cc41872fa5565a2c6cf5d1e5878'
+   checksum64    = '393b52d3e81eaa7e5dc092338a974097c956af8c24fb7ac29ad61a1c29ed394e'
    checksumType  = 'sha256'
    silentArgs    = '/allusers /silent'
    validExitCodes= @(0)
@@ -19,8 +19,8 @@ $packageArgs = @{
 . $toolsDir\helpers.ps1
 if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {
    Write-Verbose 'ARM processor found.  Downloading ARM64 build.'
-   $packageArgs.url64 = 'https://oneclient.sfx.ms/Win/Installers/25.206.1021.0003/arm64/OneDriveSetup.exe'
-   $packageArgs.checksum64 = 'c54f0867398a03e825fadc39db344b7455a15fe5bcb55f3332b54fa44515fc52'
+   $packageArgs.url64 = 'https://oneclient.sfx.ms/Win/Installers/25.222.1112.0002/arm64/OneDriveSetup.exe'
+   $packageArgs.checksum64 = '54a1c3d4ed9fd9ae7f3adecba6efe5f49daaab9aa90262e6391d8034eb21b72f'
 }
 
 

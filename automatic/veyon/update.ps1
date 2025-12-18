@@ -18,12 +18,12 @@ function global:au_GetLatest {
 
 function global:au_SearchReplace {
    @{
-      "tools\VERIFICATION.txt" = @{
-            "(^Version\s+:).*"    = "`${1} $($Latest.Version)"
-            "(^URL\s+:).*"        = "`${1} $($Latest.URL32)"
-            "(^Checksum\s+:).*"   = "`${1} $($Latest.Checksum32)"
-            "(^URL64\s+:).*"      = "`${1} $($Latest.URL64)"
-            "(^Checksum64\s+:).*" = "`${1} $($Latest.Checksum64)"
+      "legal\VERIFICATION.md" = @{
+            "(^- Version\s+:).*"    = "`${1} $($Latest.Version)"
+            "(^- URL\s+:).*"        = "`${1} $($Latest.URL32)"
+            "(^- Checksum\s+:).*"   = "`${1} $($Latest.Checksum32)"
+            "(^- URL64\s+:).*"      = "`${1} $($Latest.URL64)"
+            "(^- Checksum64\s+:).*" = "`${1} $($Latest.Checksum64)"
       }
    }
 }

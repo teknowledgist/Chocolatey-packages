@@ -4,7 +4,7 @@ $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
 $fileLocation = (Get-ChildItem -Path $toolsDir -Filter '*.zip').FullName
 $UnzipDir = Join-Path $env:TEMP $env:ChocolateyPackageName
 
-$RepoVersion = '3.012'
+$RepoVersion = '3.014'
 
 $UnzipArgs = @{
    packageName    = $env:ChocolateyPackageName

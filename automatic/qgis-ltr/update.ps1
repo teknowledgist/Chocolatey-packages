@@ -1,39 +1,22 @@
-import-module chocolatey-au
+Import-Module -Name Evergreen
+Import-Module -Name Chocolatey-AU
 
 function global:au_GetLatest {
-   $BaseURL = "https://www.qgis.org"
-   $DownloadURI = "$BaseURL/download/"
-   $PageText = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing
+   $Meta = Get-EvergreenApp qgis
 
-   $HTML = New-Object -Com "HTMLFile"
-   try {
-      $html.IHTMLDocument2_write($PageText.rawcontent)    # if MS Office installed
-   } catch {
-      $html.write([Text.Encoding]::Unicode.GetBytes($PageText))   # No MS Office
-   }
+   $LTRQGIS = $Meta | Where-Object { $_.channel -eq 'ltr' }
 
-   if ($PageText.content.split("`n") | Where-Object {$_ -cmatch 'long-term (repositories|builds) currently (offer|provide) (QGIS)? ([0-9.]*)'}) {
-      $LTRRelease = $Matches[4]
-   } else {
-      $LTRRelease = $PageText.content.split("`n") | Where-Object {$_ -cmatch '^([0-9.]*)$'} | Select-Object -First 1
-   }
+   $Version = $LTRQGIS.version -replace '-1$', ''
+   $SumURL = $LTRQGIS.URI -replace '\.msi$', '.sha256sum'
    
-
-   $url = $PageText.Links | 
-              Where-Object {($_.href -match "$LTRRelease.*\.msi`$") -and 
-                              ($_.href -notmatch "QT6")} | 
-              Select-Object -ExpandProperty href
-
-   $SumURL = $url -replace '\.msi$','.sha256sum'
-   
-   $SumFile = "$env:temp\QGIS$LTRRelease-SHA256.txt"
-   Invoke-WebRequest "$BaseURL$SumURL" -OutFile $SumFile
+   $SumFile = "$env:temp\QGIS$Version-SHA256.txt"
+   Invoke-WebRequest $SumURL -OutFile $SumFile
    $Checksum64 = (Get-Content $SumFile -ReadCount 1).split()[0]
 
    return @{ 
-            Version      = $LTRRelease
-            AppVersion   = $LTRRelease
-            URL64        = "$BaseURL$url"
+            Version      = $Version
+            AppVersion   = $Version
+            URL64        = $LTRQGIS.URI
             Checksum64   = $Checksum64
            }
 }

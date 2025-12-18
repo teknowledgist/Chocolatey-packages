@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>veyon</id>
-    <version>4.9.7</version>
+    <version>4.9.8</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/veyon</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -46,9 +46,10 @@ This package will install the client components with default settings unless the
 _(note: add double-double quotes around the path if it contains spaces)_
 
     </description>
-    <releaseNotes>https://github.com/veyon/veyon/releases/tag/v4.0.8</releaseNotes>
+    <releaseNotes>https://github.com/veyon/veyon/releases</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>

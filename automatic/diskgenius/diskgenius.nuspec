@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>diskgenius</id>
-    <version>6.1.0.1725</version>
+    <version>6.1.1.1742</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/diskgenius</packageSourceUrl>
     <owners>Teknowledgist,nonedotblue</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

@@ -12,21 +12,23 @@ if (!$pp['Host']) {
 }
 
 if (!$pp['Source']) {
-   $DownloadServer = 'https://www.sassafras.com/links'
-   $CondensedVersion = ([version]$env:ChocolateyPackageVersion).tostring(2).replace('.','') + '-latest'
+   $URL = 'https://download.sassafras.com/software/release/current/Installers/Windows/Client/ksp-client-i386.exe'
+   $URL64 = 'https://download.sassafras.com/software/release/current/Installers/Windows/Client/ksp-client-x64.exe'
 } else {
    $DownloadServer = "https://$($pp['Source'])"
    $CondensedVersion = $env:ChocolateyPackageVersion.replace('.','')
+   $URL = "$DownloadServer/ksp-client-i386-$CondensedVersion.exe"
+   $URL64 = "$DownloadServer/ksp-client-x64-$CondensedVersion.exe"
 }
 
 $InstallArgs = @{
    packageName   = $env:ChocolateyPackageName
    softwareName  = 'Sassafras Keyserver Platform Client*'
    fileType      = 'EXE'
-   url           = "$DownloadServer/ksp-client-i386-$CondensedVersion.exe"
-   url64bit      = "$DownloadServer/ksp-client-x64-$CondensedVersion.exe"
-   checksum      = 'e0a7afe9b06bbb6dd6bce7d7f630a5406ac54a875ea117d3b714f250d9664ac2'
-   checksum64    = 'f7a32073ca845f92e63ef56c8cf4f3428e7006e113d31d836315b543c034b216'
+   url           = $URL
+   url64bit      = $URL64
+   checksum      = '30fda1f210d5699eeca6624ab07efd96ea09cb4cc3ce2ce5a59a418bfea21410'
+   checksum64    = '92474d69653cd7996381218f9a16552077d2d62f5b8f3091378042a061059e21'
    checksumType  = 'sha256'
    silentArgs    = "-q -platform $BitLevel -upg $HostSwitch -v PROP_REBOOT=0 -v PROP_SHORTCUTS=0"
    validExitCodes= @(0)

@@ -1,14 +1,28 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $DUrl = 'https://www.sassafras.com/client-download/'
+   $DUrl = 'https://solutions.teamdynamix.com/TDClient/1965/Portal/KB/ArticleDet?ID=169236'
    $download_page = Invoke-WebRequest -Uri "$DUrl"
 
-   $null = $download_page.AllElements | 
-         Where-Object {$_.tagname -eq 'h3' -and $_.innertext -match '([0-9.]+) for Windows'}
+   $VersionString = $download_page.AllElements | 
+         Where-Object {$_.tagname -eq 'p' -and $_.innertext -match 'Minor Version'}|
+         Select -exp innerText
+   $Version = $VersionString -replace '[^0-9.]',''
    
+   $SHA64 = ($download_page.AllElements | 
+               Where-Object { $_.tagname -eq 'a' -and $_.innertext -match 'client-x64\.exe' } |
+               Select-Object -ExpandProperty innerText).split(' ') | 
+               Where-Object { $_.length -eq 64 }
+   
+   $SHA86 = ($download_page.AllElements | 
+         Where-Object { $_.tagname -eq 'a' -and $_.innertext -match 'client-i386\.exe' } |
+         Select-Object -ExpandProperty innerText).split(' ') | 
+         Where-Object { $_.length -eq 64 }
+
    return @{ 
-      Version = $Matches[1]
+      Version = $Version
+      Checksum32 = $SHA86
+      checksum64 = $SHA64
    }
 }
 
@@ -21,4 +35,4 @@ function global:au_SearchReplace {
     }
 }
 
-Update-Package
+Update-Package -ChecksumFor none

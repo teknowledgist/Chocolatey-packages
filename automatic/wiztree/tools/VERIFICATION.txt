@@ -6,6 +6,6 @@ Download via the button on this page:
 https://wiztreefree.com/download
 
 Direct Download:
-Version  : 4.27
-URL      : https://www.diskanalyzer.com/files/wiztree_4_27_setup.exe
-CheckSum : 910049CF736D71AAC3B818D9E53FAE178D91C0FEC4D8DF8DE435417653BA960A
+Version  : 4.28
+URL      : https://www.diskanalyzer.com/files/wiztree_4_28_setup.exe
+CheckSum : F12A8D34825CDD85BF1314228B91CED1057F5A292A75FAB2061010E17B2667A0

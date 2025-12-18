@@ -1,34 +1,25 @@
-import-module chocolatey-au
+Import-Module -Name Evergreen
+Import-Module -Name Chocolatey-AU
 
 function global:au_GetLatest {
-   $Downloads = 'https://download.qgis.org/downloads/'
-   
-   $PageText = Invoke-WebRequest -Uri $Downloads
-   
-   $file = $PageText.links | ? {$_.innertext -match '^QGIS-.*-([0-9.]+)-.*\.msi'} | select -last 1 -exp href
-   $NewVersion = $Matches[1]
-   
-   $url = $Downloads + $file
+   $Meta = Get-EvergreenApp qgis
 
-   $SumURL = $url -replace '\.msi$','.sha256sum'
+   $LatestQGIS = $Meta | Where-Object {$_.channel -eq 'latest'}
+   $LTRQGIS = $Meta | Where-Object { $_.channel -eq 'ltr' }
+
+   $NewVersion = $LatestQGIS.version -replace '-1$',''
+   $SumURL = $LatestQGIS.URI -replace '\.msi$','.sha256sum'
    
    $SumFile = "$env:temp\QGIS$NewVersion-SHA256.txt"
    Invoke-WebRequest $SumURL -OutFile $SumFile
    $Checksum64 = (Get-Content $SumFile -ReadCount 1).split()[0]
 
-   $News = 'https://www.qgis.org/download/'
-   $PageText = Invoke-WebRequest -Uri $News -UseBasicParsing
-   if ($PageText.content.split("`n") | Where-Object {$_ -cmatch 'long-term (repositories|builds) currently (offer|provide) (QGIS)? ([0-9.]*)'}) {
-      $LTRRelease = $Matches[4]
-   } else {
-      $LTRRelease = $PageText.content.split("`n") | Where-Object {$_ -cmatch '^([0-9.]*)$'} | Select-Object -First 1
-   }
-   Write-Host "LTR version: $LTRRelease"
+   Write-Host "LTR version: $($LTRQGIS.version)"
 
    return @{ 
       Version    = $NewVersion
-      LTRVersion = $LTRRelease
-      URL64      = $url
+      LTRVersion = $LTRQGIS.version -replace '-1$', ''
+      URL64      = $LatestQGIS.URI
       Checksum64 = $Checksum64
    }
 }

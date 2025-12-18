@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>keyman</id>
-    <version>18.0.244</version>
+    <version>18.0.245</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/keyman</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

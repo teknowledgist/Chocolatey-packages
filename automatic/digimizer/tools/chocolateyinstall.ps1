@@ -10,7 +10,7 @@ $DownloadArgs = @{
 }
 $InstallerPath = Get-ChocolateyWebFile @DownloadArgs
 
-if ((Get-ChildItem $installpath).Extension -eq '.exe') {
+if ((Get-ChildItem $InstallerPath).Extension -eq '.exe') {
    $ExeArgs = @{
       PackageName    = $env:chocolateyPackageName
       FileType       = 'EXE'

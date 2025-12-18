@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>fastcopy</id>
-    <version>5.11.1</version>
+    <version>5.11.2</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/fastcopy</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -44,7 +44,7 @@
     <releaseNotes>https://fastcopy.jp/help/fastcopy_eng.htm#history</releaseNotes>
     <language>en-US</language>
     <dependencies>
-      <dependency id="fastcopy.portable" version="[5.11.1]" />
+      <dependency id="fastcopy.portable" version="[5.11.2]" />
     </dependencies>
   </metadata>
   <files>

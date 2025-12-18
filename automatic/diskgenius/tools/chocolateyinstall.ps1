@@ -3,8 +3,8 @@
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    installerType  = 'exe'
-   url            = 'https://www.diskgenius.com/dyna_download/?software=DGEngSetup6101725.exe'
-   Checksum       = 'daa6c44d2f1385eb3805ee8e3e21a8542ce242e42ae0e8ebbcd243f7f631caa7'
+   url            = 'https://www.diskgenius.com/dyna_download/?software=DGEngSetup6111742.exe'
+   Checksum       = 'be648b768d154230b8f9a7c8d7218d19b1308c6bd36be90d840807c96b54df37'
    ChecksumType   = 'sha256'
    silentArgs     = '/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP-'
    validExitCodes = @(0)
