@@ -10,5 +10,5 @@ https://pinta-project.com/pintaproject/pinta/releases
 
 Direct download:
 Version  : 3.1
-URL      : https://github.com/PintaProject/Pinta/releases/download/3.1/Pinta-arm64.exe
-Checksum : EC97DB322D1FAB80005487A4C1252FFEBD8D222208A190343900A5885346DEC1
+URL      : https://github.com/PintaProject/Pinta/releases/download/3.1/Pinta-x86_64.exe
+Checksum : 549E69303ED783CF4789BBA5EB77CD3C61D352BE9B6ACF82032309653C34DD1A

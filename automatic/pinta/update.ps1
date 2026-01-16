@@ -5,12 +5,16 @@ function global:au_GetLatest {
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
    $version = $Release.Tag.trim('v.').replace('_', '.')
-   $URL = $Release.Assets | Where-Object { $_.FileName -match '\.exe' } | Select-Object -First 1 -ExpandProperty DownloadURL
+   $Asset = $Release.Assets | Where-Object { $_.FileName -match 'x86_64.*\.exe$' } | Select-Object -First 1 
+   $ARM64Asset = $Release.Assets | Where-Object { $_.FileName -match 'arm64.*\.exe$' } | Select-Object -First 1 
 
    return @{ 
-            Version  = $Version
-            URL32    = $URL
-           }
+      Version       = $version
+      URL32         = $Asset.DownloadURL
+      Checksum64    = $Asset.SHA256
+      ARM64URL      = $ARM64Asset.DownloadURL
+      ARM64Checksum = $ARM64Asset.SHA256
+   }
 }
 
 function global:au_SearchReplace {
@@ -19,6 +23,10 @@ function global:au_SearchReplace {
          "(^Version\s+:).*"      = "`${1} $($Latest.Version)"
          "(^URL\s+:).*"          = "`${1} $($Latest.URL32)"
          "(^Checksum\s+:).*"     = "`${1} $($Latest.Checksum32)"
+      }
+      'tools\chocolateyinstall.ps1' = @{
+         '^(\s*URL64bit\s*= ).*'   = "`${1}'$($Latest.ARM64URL)'"
+         '^(\s*Checksum64\s*= ).*' = "`${1}'$($Latest.ARM64Checksum)'"
       }
    }
 }
