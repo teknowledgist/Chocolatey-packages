@@ -4,7 +4,7 @@ $FilesPage = 'https://sourceforge.net/projects/tinn-r/files'
 
 function global:au_GetLatest {
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-   $download_page = Invoke-WebRequest -Uri $FilesPage
+   $download_page = Invoke-WebRequest -Uri $FilesPage -UseBasicParsing
 
    $stub = ($download_page.links |
                  Where-Object {$_.href -match 'latest'} | 

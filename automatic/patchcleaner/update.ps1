@@ -3,7 +3,7 @@ import-module chocolatey-au
 function global:au_GetLatest {
    $Release = 'http://sourceforge.net/projects/patchcleaner/files'
 
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $URLstub = ($download_page.links |
                  Where-Object {$_.href -match 'latest'} | 

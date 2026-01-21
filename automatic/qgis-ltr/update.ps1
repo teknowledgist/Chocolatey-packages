@@ -10,7 +10,7 @@ function global:au_GetLatest {
    $SumURL = $LTRQGIS.URI -replace '\.msi$', '.sha256sum'
    
    $SumFile = "$env:temp\QGIS$Version-SHA256.txt"
-   Invoke-WebRequest $SumURL -OutFile $SumFile
+   Invoke-WebRequest $SumURL -OutFile $SumFile -UseBasicParsing
    $Checksum64 = (Get-Content $SumFile -ReadCount 1).split()[0]
 
    return @{ 

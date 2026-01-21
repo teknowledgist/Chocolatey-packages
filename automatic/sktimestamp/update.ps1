@@ -3,7 +3,7 @@ import-module chocolatey-au
 $Release = 'https://sourceforge.net/projects/stefanstools/files/SKTimeStamp/'
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $urls = $download_page.links |
                   ? {$_.innertext -match 'SKTimeStamp.*\.msi$'} | 

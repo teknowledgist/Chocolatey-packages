@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $Release = 'https://www.bricklink.com/v3/studio/download.page'
-   $download_page = Invoke-WebRequest -Uri "$Release"
+   $download_page = Invoke-WebRequest -Uri "$Release" -UseBasicParsing
 
    $list = $download_page.RawContent | Select-String '"strVersion":"[0-9._]+' -AllMatches
    $Version = $list.matches | Select-Object -exp value | 

@@ -2,22 +2,21 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $DUrl = 'https://solutions.teamdynamix.com/TDClient/1965/Portal/KB/ArticleDet?ID=169236'
-   $download_page = Invoke-WebRequest -Uri "$DUrl"
+   $download_page = Invoke-WebRequest -Uri "$DUrl" -UseBasicParsing
 
-   $VersionString = $download_page.AllElements | 
-         Where-Object {$_.tagname -eq 'p' -and $_.innertext -match 'Minor Version'}|
-         Select -exp innerText
-   $Version = $VersionString -replace '[^0-9.]',''
+   $VersionString = $download_page.rawcontent -split '<\/?p' | 
+         Where-Object {$_ -match 'Minor Version'}
+   $Version = ($VersionString -replace '.*([^0-9.])','$1').trim()
    
-   $SHA64 = ($download_page.AllElements | 
-               Where-Object { $_.tagname -eq 'a' -and $_.innertext -match 'client-x64\.exe' } |
-               Select-Object -ExpandProperty innerText).split(' ') | 
-               Where-Object { $_.length -eq 64 }
-   
-   $SHA86 = ($download_page.AllElements | 
-         Where-Object { $_.tagname -eq 'a' -and $_.innertext -match 'client-i386\.exe' } |
-         Select-Object -ExpandProperty innerText).split(' ') | 
-         Where-Object { $_.length -eq 64 }
+   $SHA64 = (($download_page.rawcontent -split '<\/?a' | 
+               Where-Object {$_ -match 'client-x64\.exe' }) -split '[<>]' | 
+               Where-Object {$_ -match 'sha256'}) -split '(\s|&nbsp;)' |
+               Where-Object {$_.length -eq 64}
+
+   $SHA86 = (($download_page.rawcontent -split '<\/?a' | 
+               Where-Object {$_ -match 'client-i386\.exe' }) -split '[<>]' | 
+               Where-Object {$_ -match 'sha256'}) -split '(\s|&nbsp;)' |
+               Where-Object {$_.length -eq 64}
 
    return @{ 
       Version = $Version

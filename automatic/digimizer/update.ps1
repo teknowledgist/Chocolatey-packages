@@ -3,17 +3,19 @@ import-module chocolatey-au
 function global:au_GetLatest {
    $MainPage = 'https://www.digimizer.com'
 
-   $HistoryPage = Invoke-WebRequest -Uri "$MainPage/history.php"
-   $VersionString = $HistoryPage.AllElements | 
-                        Where-Object {$_.tagname -eq 'h2' -and $_.innertext -match '^Version'} |
-                        Select-Object -ExpandProperty innertext -First 1
-   $HistoryVersion = $VersionString.split(' ')[-1]
+   $HistoryPage = Invoke-WebRequest -Uri "$MainPage/history.php" -UseBasicParsing
+
+   $null = $HistoryPage.rawcontent -split '<\/?h2' | 
+                  Where-Object {$_ -match '>Version ([0-9.]+)'} | 
+                  Select-Object -first 1
+   $HistoryVersion = $matches[1]
    if ($HistoryVersion.length -eq 1) { $HistoryVersion = "$Version.0.0" }
 
-   $DownloadPage = Invoke-WebRequest -Uri "$MainPage/download/"
-   $VersionString = $DownloadPage.AllElements | 
-                        Where-Object {$_.tagname -eq 'h1' -and $_.innertext -match 'Version ([0-9.]+)'} |
-                        Select-Object -ExpandProperty innertext -First 1
+   $DownloadPage = Invoke-WebRequest -Uri "$MainPage/download/" -UseBasicParsing
+
+   $null = $DownloadPage.rawcontent -split '<\/?h1' | 
+                        Where-Object {$_ -match '>Version ([0-9.]+)'} |
+                        Select-Object -First 1
    $DownloadVersion = $Matches[1]
    if (-not $DownloadVersion) { $DownloadVersion = '1.0' }
    

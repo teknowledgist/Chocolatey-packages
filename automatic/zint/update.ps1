@@ -3,7 +3,7 @@ import-module chocolatey-au
 function global:au_GetLatest {
    $Release = 'https://sourceforge.net/projects/zint/'
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $versionstring = ($download_page.links |
                  Where-Object {$_.href -match 'latest'} | 

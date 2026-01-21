@@ -3,7 +3,7 @@ import-module chocolatey-au
 $Site = 'https://www.padowan.dk'
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri "$Site/download/"
+   $download_page = Invoke-WebRequest -Uri "$Site/download/" -UseBasicParsing
 
    $urlstub = $download_page.links |? href -match '\.exe' | select -ExpandProperty href
    $url = $Site + $urlstub

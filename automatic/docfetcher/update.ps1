@@ -3,7 +3,7 @@ import-module chocolatey-au
 function global:au_GetLatest {
    $Release = 'https://docfetcher.sourceforge.io/download/'
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $DownLink = $download_page.links | 
                   Where-Object {$_.href -like '*.exe*'} | 

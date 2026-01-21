@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $ArchiveURL = 'https://repo.continuum.io/archive/'
-   $List = Invoke-WebRequest -Uri $ArchiveURL
+   $List = Invoke-WebRequest -Uri $ArchiveURL -UseBasicParsing
 
    $version = "1.0"
 

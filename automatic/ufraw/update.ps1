@@ -3,7 +3,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $Release = 'https://sourceforge.net/projects/ufraw/'
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $Title = $download_page.links |
                   Where-Object {$_.href -match 'latest'} |

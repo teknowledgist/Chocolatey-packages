@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $InfoPage = 'https://docs.microsoft.com/en-us/sysinternals/downloads/psexec'
-   $PageContent = Invoke-WebRequest -Uri $InfoPage
+   $PageContent = Invoke-WebRequest -Uri $InfoPage -UseBasicParsing
 
    $H1 = $PageContent.content -split "</?h1" | ? { $_ -match '\>psexec v'}
    

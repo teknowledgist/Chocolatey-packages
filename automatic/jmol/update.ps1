@@ -4,7 +4,7 @@ $Release = 'https://sourceforge.net/projects/jmol/'
 
 function global:au_GetLatest {
    [Net.ServicePointManager]::SecurityProtocol = "tls12, tls11, tls"
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $versionstring = ($download_page.links |
                  Where-Object {$_.href -match 'latest'} | 

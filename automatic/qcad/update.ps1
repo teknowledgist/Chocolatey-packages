@@ -4,7 +4,7 @@ $Release = 'http://www.qcad.org/en/qcad-downloads-trial'
 
 function global:au_GetLatest {
    [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $Stub32,$Stub64 = $download_page.links |
                      Where-Object {($_.href -match '\.msi$') -and ($_.innertext -NotMatch 'CAD\/CAM')} |

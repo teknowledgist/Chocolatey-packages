@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownloadURI = 'https://www.alexpage.de/usb-image-tool/download/'
-   $download_page = Invoke-WebRequest -Uri $DownloadURI
+   $download_page = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing
 
    $Link = $download_page.links | Where-Object {$_.href -match '\.zip$'} | Select-Object -first 1
 

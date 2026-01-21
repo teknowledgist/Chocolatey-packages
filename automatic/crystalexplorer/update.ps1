@@ -3,7 +3,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $DPageURL = 'https://crystalexplorer.net/download/'
-   $download_page = Invoke-WebRequest -Uri $DPageURL
+   $download_page = Invoke-WebRequest -Uri $DPageURL -UseBasicParsing
 
    $URL64 = $download_page.Links | 
                Where-Object {$_.href -like "*.exe" } |

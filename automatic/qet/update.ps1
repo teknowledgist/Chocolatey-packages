@@ -17,7 +17,7 @@ function global:au_GetLatest {
    $URL64 = "$Release$($Folder)Windows/$Stub64"
 #>
    $Repo = 'https://github.com/qelectrotech/qelectrotech-source-mirror'
-   $Release = Get-LatestReleaseOnGitHub -URL $Repo
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo -UseBasicParsing
 
    $SourceFile = $Release.Assets | Where-Object {$_.FileName -like '*.7z'} | Select-Object -ExpandProperty FileName
    $version = ($SourceFile.split('-') | ? { $_ -match '\d\.\d'}).replace('+git','.')

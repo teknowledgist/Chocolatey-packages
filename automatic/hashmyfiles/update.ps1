@@ -3,7 +3,7 @@ import-module chocolatey-au
 $releases = 'https://www.nirsoft.net/utils/hash_my_files.html'
 
 function global:au_GetLatest {
-    $download_page = Invoke-WebRequest -Uri $releases
+    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
     $download_page.RawContent -match 'HashMyFiles v([0-9.]+)' | Out-Null
 
     @{

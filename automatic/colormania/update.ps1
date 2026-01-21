@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $HomeURL = 'http://www.blacksunsoftware.com/colormania.html'
-   $PageText = Invoke-WebRequest -Uri $HomeURL
+   $PageText = Invoke-WebRequest -Uri $HomeURL -UseBasicParsing
 
    $PageText.RawContent -split "<|>" | 
                Where-Object {$_ -match "version ([0-9.]+)"} | 

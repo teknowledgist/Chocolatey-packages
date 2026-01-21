@@ -3,7 +3,7 @@ import-module chocolatey-au
 function global:au_GetLatest {
    $ProductID = '105942'
    $MainURL = "https://www.microsoft.com/en-us/download/details.aspx?id=$ProductID"
-   $MainPage = Invoke-WebRequest -Uri $MainURL
+   $MainPage = Invoke-WebRequest -Uri $MainURL -UseBasicParsing
 
    $null = $mainpage.RawContent -split ',' | Where-Object {$_ -match '"version":"([0-9.]+)"'} | Select-Object -First 1
    $version = $matches[1]

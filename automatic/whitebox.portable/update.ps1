@@ -3,7 +3,7 @@ import-module chocolatey-au
 $Release = 'http://www.uoguelph.ca/~hydrogeo/Whitebox/download.shtml'
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $Name = $download_page.allelements | Where-Object {
                                              ($_.tagname -match 'strong') -and 

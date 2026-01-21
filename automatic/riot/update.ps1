@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $ChangeURL = 'https://riot-optimizer.com/changelog/'
-   $ChangePage = Invoke-WebRequest -Uri $ChangeURL
+   $ChangePage = Invoke-WebRequest -Uri $ChangeURL -UseBasicParsing
 
    $VersionText = $ChangePage.AllElements | 
                      Where-Object {$_.tagname -eq 'strong' -and $_.innertext -match '^v\.'} | 

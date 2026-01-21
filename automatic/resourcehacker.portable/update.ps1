@@ -3,7 +3,7 @@ import-module chocolatey-au
 $Release = 'http://www.angusj.com/resourcehacker/'
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $VersionText = $download_page.AllElements |
                         Where-Object {$_.innertext -match '^version'} | 

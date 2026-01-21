@@ -4,7 +4,7 @@ import-module chocolatey-au
 function global:au_GetLatest {
    $ReleasURL = 'https://www.polleverywhere.com/app/releases/win'
 
-   $Release_page = Invoke-WebRequest -Uri $ReleasURL
+   $Release_page = Invoke-WebRequest -Uri $ReleasURL -UseBasicParsing
 
    $url = $Release_page.links |
                Where-Object {$_.innertext -eq 'Download'} |

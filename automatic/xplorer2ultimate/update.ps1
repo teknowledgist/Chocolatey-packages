@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $MainPage = 'https://www.zabkat.com'
-   $PageContent = Invoke-WebRequest -Uri "$MainPage/alldown.htm"
+   $PageContent = Invoke-WebRequest -Uri "$MainPage/alldown.htm"  -UseBasicParsing
    $section = $PageContent.RawContent -split 'green' | 
                   Where-Object {$_ -match 'ultimate'}
 

@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownURL = 'https://harzing.com/resources/publish-or-perish/windows'
-   $PageCode = Invoke-WebRequest -Uri $DownURL
+   $PageCode = Invoke-WebRequest -Uri $DownURL -UseBasicParsing
 
    $vline = $PageCode.AllElements | 
                   Where-Object {$_.tagname -eq 'p' -and $_.innertext -match '^version'} | 

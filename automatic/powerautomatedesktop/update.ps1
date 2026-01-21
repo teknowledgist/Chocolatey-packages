@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $Release = 'https://learn.microsoft.com/en-us/power-platform/released-versions/power-automate-desktop'
-   $ReleasePage = Invoke-WebRequest -Uri "$Release"
+   $ReleasePage = Invoke-WebRequest -Uri "$Release" -UseBasicParsing
 
    $tableHTML = $ReleasePage.AllElements | 
                   Where-Object {$_.tagname -eq 'table' -and $_.innertext -match 'worldwide'} | 
@@ -13,7 +13,7 @@ function global:au_GetLatest {
    $version = $Matches[1]
 
    $Install = 'https://learn.microsoft.com/en-us/power-automate/desktop-flows/install'
-   $InstallPage = Invoke-WebRequest -Uri $Install
+   $InstallPage = Invoke-WebRequest -Uri $Install -UseBasicParsing
    $URL =  $InstallPage.Links | 
                Where-Object {$_.outertext -match "Download the.*installer"} | 
                Select-Object -ExpandProperty href

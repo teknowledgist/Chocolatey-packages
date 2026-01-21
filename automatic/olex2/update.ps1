@@ -3,7 +3,7 @@ import-module chocolatey-au
 $Release = 'http://www.olex2.org/olex2-distro/1.3/update/version.txt'
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $Revision = $download_page.Content -replace "^.*?(\d+)$",'$1'
    $version = '1.3.0.' + $Revision

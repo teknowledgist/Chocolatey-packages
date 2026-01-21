@@ -2,11 +2,11 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $ArchiveURL = 'https://www.babelstone.co.uk/Software/BabelMap_Versions.html'
-   $List = Invoke-WebRequest -Uri $ArchiveURL
+   $List = Invoke-WebRequest -Uri $ArchiveURL -UseBasicParsing
 
-   $version = $list.AllElements | 
-                  Where-Object {$_.tagname -eq 'td' -and $_.innertext -match '^[0-9.]+$'} | 
-                  Select-Object -first 1 -ExpandProperty innertext
+   $null = $list.rawcontent -split '<\/?td' | 
+                  Where-Object {$_ -match '>([0-9.]+$)'} | select -first 1
+   $version = $matches[1]
 
    $URL32 = 'https://www.babelstone.co.uk/Software/Download/BabelMap.zip'
 

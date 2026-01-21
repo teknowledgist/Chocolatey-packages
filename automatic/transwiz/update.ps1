@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $Release = 'https://www.forensit.com/downloads.html'
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $main = $download_page.links |
                   where-object {$_.innertext -match 'transwiz'} | 

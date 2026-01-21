@@ -4,7 +4,7 @@ $Global:au_NoCheckUrl = $true
 
 function global:au_GetLatest {
    $DownloadURI = 'https://www.petges.lu/download/'
-   $download_page = Invoke-WebRequest -Uri $DownloadURI
+   $download_page = Invoke-WebRequest -Uri $DownloadURI -useBasicParsing
 
    $Link = $download_page.links |Where-Object {$_.href -match '\.exe'} | Select-Object -First 1
    

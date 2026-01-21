@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownloadPage = 'https://www.vosviewer.com/download'
-   $PageData = Invoke-WebRequest -Uri $DownloadPage
+   $PageData = Invoke-WebRequest -Uri $DownloadPage -UseBasicParsing
 
    $URL = $PageData.Links | 
             Where-Object {$_.href -match 'exe\.zip'} | 

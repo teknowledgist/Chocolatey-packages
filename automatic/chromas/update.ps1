@@ -2,11 +2,14 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownloadURI = 'http://technelysium.com.au/wp/chromas/'
-   $download_page = Invoke-WebRequest -Uri $DownloadURI
+   $download_page = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing
 
-   $Link = $download_page.links |? {($_.href -match '\.exe') -and ($_.outertext -match 'free')}
+   $Link = $download_page.links | Where-Object {
+                        ($_.href -match '\.exe') -and 
+                        ($_.outerHTML -match 'free')
+                        }
    
-   $version = $Link.innerText.split() | ? {$_ -match '^[0-9.]+$'}
+   $version = $Link.outerHTML.split(' ') | Where-Object {$_ -match '^[0-9.]+$'}
 
    $url32 = $Link.href
 

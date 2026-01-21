@@ -7,7 +7,7 @@ function global:au_GetLatest {
    $GitVersion = ($Release.Tag -replace '.*?([0-9.]+).*','$1').trim('.')
 
    $SPurl = 'https://www.softpedia.com/get/Internet/File-Sharing/MEGAsync.shtml'
-   try { $SPpage = Invoke-WebRequest -Uri $SPurl }
+   try { $SPpage = Invoke-WebRequest -Uri $SPurl  -UseBasicParsing}
    catch {}
    if ($SPpage) {
       $SPlink = $SPpage.links | Where-Object {$_.innertext -match 'download megasync'} | 
@@ -17,12 +17,12 @@ function global:au_GetLatest {
 
    $version = ([version]$GitVersion,[version]$SPversion | Measure-Object -Maximum).Maximum.ToString()
 
-   $URL32 = 'https://mega.nz/MEGAsyncSetup32.exe'
+#   $URL32 = 'https://mega.nz/MEGAsyncSetup32.exe'  # 32-bit stopped being updated many versions ago
    $URL64 = 'https://mega.nz/MEGAsyncSetup64.exe'
 
    return @{ 
       Version = $version
-      URL32 = $URL32
+#      URL32 = $URL32
       URL64 = $URL64
    }
 }
@@ -31,12 +31,12 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
     @{
         "tools\chocolateyInstall.ps1" = @{
-            "^(   url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-            "^(   Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
+#            "^(   url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
+#            "^(   Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
             "^(   url64\s*=\s*)('.*')"      = "`$1'$($Latest.URL64)'"
             "^(   Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
         }
     }
 }
 
-Update-Package
+Update-Package -ChecksumFor 64

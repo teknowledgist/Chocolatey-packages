@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $API = 'https://api.deskflow.org/version'
-   $Version = Invoke-WebRequest $API | Select-Object -ExpandProperty Content
+   $Version = Invoke-WebRequest $API  -UseBasicParsing | Select-Object -ExpandProperty Content
 
    return @{ 
       Version = $version

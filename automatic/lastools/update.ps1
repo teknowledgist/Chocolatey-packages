@@ -1,7 +1,7 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $MainPage = Invoke-WebRequest -Uri 'https://lastools.github.io/download/CHANGES.txt'
+   $MainPage = Invoke-WebRequest -Uri 'https://lastools.github.io/download/CHANGES.txt' -UseBasicParsing
 
    $version = get-date ($mainpage.content.split('-')[0]) -format yyyy.MM.dd
 

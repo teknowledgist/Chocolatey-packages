@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownloadURI = 'https://docs.aws.amazon.com/redshift/latest/mgmt/configure-odbc-connection.html'
-   $download_page = Invoke-WebRequest -Uri $DownloadURI
+   $download_page = Invoke-WebRequest -Uri $DownloadURI -UseBasicParsing
 
    $URLs = $download_page.links |
                Where-Object {$_.href -match '\.msi$'} |

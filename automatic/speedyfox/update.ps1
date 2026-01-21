@@ -3,7 +3,7 @@ import-module chocolatey-au
 $Release = 'https://www.crystalidea.com/speedyfox/release-notes'
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $VerstionText = $download_page.AllElements | ? {$_.tagname -eq 'h2'} |select -First 1 -ExpandProperty innertext
    $Version = $VerstionText.trim().split()[-1]

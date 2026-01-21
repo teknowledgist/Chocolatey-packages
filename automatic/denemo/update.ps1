@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownloadsPage = 'https://denemo.org/downloads-page/'
-   $PageContent = Invoke-WebRequest -Uri $DownloadsPage
+   $PageContent = Invoke-WebRequest -Uri $DownloadsPage -UseBasicParsing
 
    $URL = $PageContent.links | Where-Object {$_.href -like '*.zip'} | Select-Object -First 1 -ExpandProperty href
 

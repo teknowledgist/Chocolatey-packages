@@ -1,15 +1,14 @@
 import-module chocolatey-au
 
-$Release = 'http://www.intusoft.com/demos.php'
-
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $Release
+   $Release = 'http://www.intusoft.com/demos.php'
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $link = $download_page.links | ? {$_.href -like '*ICAP4Demo.zip'}
 
    $url = "http://www.intusoft.com/demos/ICAP4Demo.zip"
 
-   $Versiontext = $link.innerText -replace '.*\sV([0-9x.]+)\sBuild\s(\d+)$','$1.$2'
+   $Versiontext = $link.outerHTML -replace '(?s).*\sV([0-9x.]+)\sBuild\s(\d+)<.*','$1.$2'
 
    # It's not clear why they use "X" for the minor version.  
    #   With build 4444, x=3.  Might change in the future.  

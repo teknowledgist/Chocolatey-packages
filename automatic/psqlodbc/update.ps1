@@ -2,13 +2,13 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $ReleasesURL = 'https://www.postgresql.org/ftp/odbc/releases/'
-   $ReleasesPage = Invoke-WebRequest -Uri $ReleasesURL
+   $ReleasesPage = Invoke-WebRequest -Uri $ReleasesURL -UseBasicParsing
 
    $LatestDIR = $ReleasesPage.links |
                Where-Object {$_.innertext -match '-[0-9_]+$'} |
                Select-Object -ExpandProperty href -first 1
 
-   $LatestPage = Invoke-WebRequest -Uri "$ReleasesURL/$LatestDIR"
+   $LatestPage = Invoke-WebRequest -Uri "$ReleasesURL/$LatestDIR" -UseBasicParsing
    $URLs = $LatestPage.links | 
                Where-Object {$_.innertext -match '\.msi$'} | 
                Select-Object -ExpandProperty href

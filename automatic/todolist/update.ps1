@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $HomeURL = 'https://www.abstractspoon.com/phpBB/viewforum.php?f=5'
-   $PageText = Invoke-WebRequest -Uri $HomeURL
+   $PageText = Invoke-WebRequest -Uri $HomeURL -UseBasicParsing
 
    $null = $PageText.links | 
                Where-Object {$_.innertext -match "([0-9][0-9.]+)( \(Stable Release\))? is available"} | 

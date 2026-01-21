@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $Release = 'https://marcedit.reeset.net/software/update75.txt'
-   $download_page = Invoke-WebRequest -Uri "$Release"
+   $download_page = Invoke-WebRequest -Uri "$Release" -UseBasicParsing
 
    $download_page -match "^7\.[0-9]+\.[0-9]+"
    

@@ -1,17 +1,15 @@
 import-module chocolatey-au
 
-$Release = 'http://code.kliu.org/cmdopen/'
-
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $Release
+   $Release = 'http://code.kliu.org/cmdopen/'
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
-   $AppVersion = $download_page.AllElements | 
-                  Where-Object {($_.tagname -eq 'li') -and ($_.innertext -match 'Current version')} | 
-                  select -ExpandProperty innertext
-   $AppVersion = $AppVersion.split(':')[-1].trim()
+   $null = $download_page.rawcontent -split '<\/?li' | 
+                  Where-Object {$_ -match '>([0-9.]+)<'} | select -first 1
+   $AppVersion = $matches[1]
 
    $URLstub = $download_page.links | 
-                  Where-Object {$_.innertext -match 'download installer'} |
+                  Where-Object {$_.OuterHTML -match 'download installer'} |
                   select -ExpandProperty href
 
    $url = "$Release$URLstub" -replace 'latest',"$AppVersion"

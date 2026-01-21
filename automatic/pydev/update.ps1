@@ -3,7 +3,7 @@ import-module chocolatey-au
 $Release = 'https://sourceforge.net/projects/pydev/'
 
 function global:au_GetLatest {
-   $download_page = Invoke-WebRequest -Uri $Release
+   $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $version = ($download_page.links |
                  Where-Object {$_.href -match 'latest'} | 

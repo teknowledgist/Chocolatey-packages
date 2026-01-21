@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $DownloadURL = 'https://www.zhornsoftware.co.uk/stickies/download.html'
-   $DownloadPage = Invoke-WebRequest -Uri $DownloadURL
+   $DownloadPage = Invoke-WebRequest -Uri $DownloadURL -UseBasicParsing
 
    $File = $DownloadPage.links |
                 Where-Object {$_.href -match '\.exe'} | 

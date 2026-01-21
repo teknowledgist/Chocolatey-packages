@@ -2,11 +2,11 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $AnnounceURI = 'http://latexdraw.sourceforge.net/index.html'
-   $announce_page = Invoke-WebRequest -Uri $AnnounceURI
+   $announce_page = Invoke-WebRequest -Uri $AnnounceURI -UseBasicParsing
 
    $Link = $announce_page.links | 
-               Where-Object {$_.innerText -eq 'download'} | 
-               Select-Object -ExpandProperty href
+               Where-Object {$_.OuterHTML -match 'download'} | 
+               Select-Object -ExpandProperty href -first 1
    
    $version = $Link.split('/')[-2]
 

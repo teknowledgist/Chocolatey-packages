@@ -3,7 +3,7 @@ import-module chocolatey-au
 $MainPage = 'http://psydk.org'
 
 function global:au_GetLatest {
-   $PageContents = Invoke-WebRequest -Uri "$MainPage/pngoptimizer"
+   $PageContents = Invoke-WebRequest -Uri "$MainPage/pngoptimizer" -UseBasicParsing
 
    $stub32 = $PageContents.links |? {$_.href -like "*x86.zip"} | select -ExpandProperty href -First 1
    $stub64 = $PageContents.links |? {$_.href -like "*x64.zip"} | select -ExpandProperty href -First 1

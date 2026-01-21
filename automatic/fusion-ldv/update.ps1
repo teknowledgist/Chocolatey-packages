@@ -2,7 +2,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $Release = 'http://forsys.sefs.uw.edu'
-   $PageText = Invoke-WebRequest -Uri "$Release/fusion/fusionlatest.html"
+   $PageText = Invoke-WebRequest -Uri "$Release/fusion/fusionlatest.html" -UseBasicParsing
 
    $HREF = $PageText.links |
                Where-Object {($_.href -match '\.exe') -and ($_.href -notmatch 'example')} |

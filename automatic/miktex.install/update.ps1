@@ -3,7 +3,7 @@ import-module chocolatey-au
 function global:au_GetLatest {
    $DownloadPageURL = 'https://miktex.org/download'
 
-   $DownloadPage = Invoke-WebRequest -Uri $DownloadPageURL
+   $DownloadPage = Invoke-WebRequest -Uri $DownloadPageURL -UseBasicParsing
 
    $URLstub = $DownloadPage.links | 
                   Where-Object {$_.href -match 'zip'} | 
@@ -13,7 +13,7 @@ function global:au_GetLatest {
    # The version number in the url is the version of the setup utility, but not
    #   the "milestone" of the MiKTeX core run-time library.
    $Repo = 'https://github.com/MiKTeX/miktex'
-   $Release = Get-LatestReleaseOnGitHub -URL $Repo
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo -UseBasicParsing
 
    $milestone = $Release.Tag.trim('v.')
 
