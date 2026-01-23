@@ -1,27 +1,13 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $DUrl = 'https://solutions.teamdynamix.com/TDClient/1965/Portal/KB/ArticleDet?ID=169236'
-   $download_page = Invoke-WebRequest -Uri "$DUrl" -UseBasicParsing
-
-   $VersionString = $download_page.rawcontent -split '<\/?p' | 
-         Where-Object {$_ -match 'Minor Version'}
-   $Version = ($VersionString -replace '.*([^0-9.])','$1').trim()
-   
-   $SHA64 = (($download_page.rawcontent -split '<\/?a' | 
-               Where-Object {$_ -match 'client-x64\.exe' }) -split '[<>]' | 
-               Where-Object {$_ -match 'sha256'}) -split '(\s|&nbsp;)' |
-               Where-Object {$_.length -eq 64}
-
-   $SHA86 = (($download_page.rawcontent -split '<\/?a' | 
-               Where-Object {$_ -match 'client-i386\.exe' }) -split '[<>]' | 
-               Where-Object {$_ -match 'sha256'}) -split '(\s|&nbsp;)' |
-               Where-Object {$_.length -eq 64}
+   $Manifest = 'https://download.sassafras.com/software/release/img-manifest.json'
+   $KSPdata = Invoke-RestMethod $Manifest
 
    return @{ 
-      Version = $Version
-      Checksum32 = $SHA86
-      checksum64 = $SHA64
+      Version    = $KSPdata.version
+      Checksum32 = $KSPdata.'ksp-client-i386.exe'.digest
+      checksum64 = $KSPdata.'ksp-client-x64.exe'.digest
    }
 }
 
