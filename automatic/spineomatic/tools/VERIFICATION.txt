@@ -9,6 +9,6 @@ https://github.com/ExLibrisGroup/SpineOMatic/releases/latest
 
 Direct Download:
 
-Version : 8.1.2
-URL     : https://github.com/ExLibrisGroup/SpineOMatic/releases/download/v8.1.2/SpineLabeler.exe
-SHA256  : 2D55F7C0BC9D99E47D4D038AC7A4EB2F4E4BB0D9F9A1040A78BBCB859AEB1756
+Version : 8.1.4
+URL     : https://github.com/ExLibrisGroup/SpineOMatic/releases/download/8.1.4/SpineLabeler.exe
+SHA256  : EB2214327F711CDAFA243524454B728ADB7C46CF96B63BDF3B9A204D2E969ED3
