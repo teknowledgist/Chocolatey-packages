@@ -8,7 +8,7 @@
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/extensions/chocolatey-processor-features.extension</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
-    <title>Chocolatey Processor Features Extension</title>
+    <title>(unofficial) Chocolatey Processor Features Extension</title>
     <authors>Teknowledgist</authors>
     <projectUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/extensions/chocolatey-processor-features.extension</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-Packages@f78b69d1d5005847a5d494ed53f7bdd548756795/Icons/chocolateyprocessor_icon.png</iconUrl>
