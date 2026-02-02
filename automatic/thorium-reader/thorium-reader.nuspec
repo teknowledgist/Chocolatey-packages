@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>thorium-reader</id>
+    <version>3.3.0</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/thorium-reader</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Thorium Reader</title>
+    <authors>Thorium Reader contributors</authors>
+    <projectUrl>https://thorium.edrlab.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/edrlab/thorium-reader@c1b26f6805ec067a408654e86b0b422882bb7d21/resources/icon.png</iconUrl>
+    <!-- <copyright></copyright> -->
+    <licenseUrl>https://github.com/edrlab/thorium-reader-doc?tab=CC-BY-4.0-1-ov-file#readme</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/edrlab/thorium-reader-doc</projectSourceUrl>
+    <docsUrl>https://thorium.edrlab.org/en/onlinedoc</docsUrl>
+    <bugTrackerUrl>https://github.com/edrlab/thorium-reader/issues</bugTrackerUrl>
+    <tags>thorium-reader thorium library epub ebook comic audiobook PDF DRM Readium LCP accessible FOSS</tags>
+    <summary>For enjoying digital books, comics, audiobooks, and PDF documents.</summary>
+    <description>Thorium Reader is an eBook reader designed to work with Digital Rights Management and for accessibility.
+
+Besides the expected functionality of being able to navigate through an e-book, digital comic, or PDF document, Thorium Reader offers the following:
+* Note taking
+* Highlighting
+* Bookmarking
+* Changing background color, font type, point size, spacing, and layout
+* Text to speech
+* Progress indicator
+* Searching within the e-book
+* Light and dark modes
+* Opening any LCP-DRM-encrypted e-book and DRM-free e-books from any provider
+* A libre and gratis app, with no advertising or leakage of private data
+* [Accessibile for anyone with visual impairment](https://thorium.edrlab.org/en/th3/500_accessibility/), even blind people. 
+* Availability in many languages
+    
+*Not all functionality is available for eBooks in PDF format.*
+
+    </description>
+    <releaseNotes>https://github.com/edrlab/thorium-reader/releases</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-processor-features.extension" version="0.0.1" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
