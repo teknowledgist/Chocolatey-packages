@@ -33,6 +33,9 @@ Version 4.8.1 appears to be the last 32-bit version of Text-Grab, but does have 
     </description>
     <releaseNotes>https://github.com/TheJoeFin/Text-Grab/releases</releaseNotes>
     <!-- =============================== -->      
+    <dependencies>
+          <dependency id="chocolatey-processor-features.extension" version="0.0.1" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
