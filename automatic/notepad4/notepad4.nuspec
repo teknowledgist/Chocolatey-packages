@@ -80,6 +80,7 @@ Example to download and install the Simplified-Chinese-only, Low-Resolution buil
     <releaseNotes>https://github.com/zufuliu/notepad4/releases/latest</releaseNotes>
     <!-- =============================== -->
     <dependencies>
+          <dependency id="chocolatey-processor-features.extension" version="0.0.1" />
     </dependencies>
   </metadata>
   <files>
