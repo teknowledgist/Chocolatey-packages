@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>chocolatey-processor-features.extension</id>
+    <version>0.0.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/extensions/chocolatey-processor-features.extension</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Chocolatey Processor Features Extension</title>
+    <authors>Teknowledgist</authors>
+    <projectUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/extensions/chocolatey-processor-features.extension</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-Packages@f78b69d1d5005847a5d494ed53f7bdd548756795/Icons/chocolateyprocessor_icon.png</iconUrl>
+    <copyright>Public Domain</copyright>
+    <licenseUrl>https://wiki.creativecommons.org/wiki/Public_domain</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/extensions/chocolatey-processor-features.extension</projectSourceUrl>
+    <tags>chocolatey-processor-features processor features ARM AVX unofficial extension FOSS</tags>
+    <summary>Determine certain processor features/instruction sets.</summary>
+    <description>Applications binaries are increasingly compiled to take advantage of specific features of a processor.  This is especially true for super-efficient, ARM64 processors.
+
+Why install the X64 flavor of a software package if the ARM64 flavor is available and more efficient?
+
+This extension will allow Chocolatey package managers to identify all the [processor features listed here](https://learn.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-isprocessorfeaturepresent) (up to ID=89 as of last update). For most Chocolatey package maintainers, only the `ARM_V8_INSTRUCTIONS` will be of interest for a more optimal flavor of their application.
+
+## Usage
+`$URL = 'https://example.com/downloads/x86installer.exe'`
+`$Features = Get-ProcessorFeatures`
+`if ($Features.'ARM_V8_INSTRUCTIONS') {`
+`   Write-Verbose 'ARM processor found.  Downloading ARM64 build.'`
+`   $URL = 'https://example.com/downloads/ARM64installer.exe'`
+`}`
+
+    </description>
+    <releaseNotes>###CHANGE LOG:
+* 0.0.1 - initial release
+    </releaseNotes>
+    <bugTrackerUrl>https://github.com/teknowledgist/Chocolatey-packages/issues</bugTrackerUrl>
+  </metadata>
+</package>
