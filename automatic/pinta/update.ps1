@@ -11,7 +11,7 @@ function global:au_GetLatest {
    return @{ 
       Version       = $version
       URL32         = $Asset.DownloadURL
-      Checksum64    = $Asset.SHA256
+      Checksum32    = $Asset.SHA256
       ARM64URL      = $ARM64Asset.DownloadURL
       ARM64Checksum = $ARM64Asset.SHA256
    }
