@@ -35,9 +35,11 @@
     </description>
     <releaseNotes>https://github.com/PintaProject/Pinta/releases</releaseNotes>
     <dependencies>
+          <dependency id="chocolatey-processor-features.extension" version="0.0.1" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
