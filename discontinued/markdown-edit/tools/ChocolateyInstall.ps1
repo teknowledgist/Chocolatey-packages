@@ -12,7 +12,7 @@ $packageArgs = @{
    packageName   = $env:chocolateyPackageName
    fileType      = 'msi'
    File64         = $Installer.fullname
-   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
+   silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
    validExitCodes= @(0, 3010, 1641)
 }
 

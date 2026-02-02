@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>markdown-edit</id>
-    <version>1.35.0.20210920</version>
+    <version>1.35.0.20260129</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/discontinued/markdown-edit</packageSourceUrl>
     <owners>Mike Ward, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
