@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>deskflow</id>
-    <version>1.25.0</version>
+    <version>1.26.0.20260216</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/deskflow</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -42,11 +42,14 @@ Yes, Deskflow has network compatibility with all forks:
 
 However, **Deskflow cannot be installed on the same computer as Barrier, Input Leap, or Synergy!**
 
+#### Note
+Deskflow is 64-bit only, but this package will identify an x64 or ARM64 processor and install the correct build.
     </description>
     <releaseNotes>https://github.com/deskflow/deskflow/releases</releaseNotes>
     <!-- =============================== -->
     <dependencies>
       <dependency id="vcredist140" version="14.20" />
+      <dependency id="chocolatey-processor-features.extension" version="0.0.1" />
     </dependencies>
   </metadata>
   <files>

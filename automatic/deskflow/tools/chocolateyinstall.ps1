@@ -16,16 +16,26 @@ If ($Incompatible) {
 }
 
 $toolsDir = "$(Split-Path -parent $MyInvocation.MyCommand.Definition)"
-$Installer = Get-ChildItem $toolsDir -filter '*.msi' | Sort-Object LastWriteTime | Select-Object -Last 1
+
+# Check for ARM64 processor
+$Features = Get-ProcessorFeatures
+if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {
+   Write-Verbose 'ARM processor found.  Installing ARM64 build.'
+   $Filter = 'ARM64\.msi'
+} else {
+   $Filter = 'x64\.msi'
+}
+
+$Installers = Get-ChildItem $toolsDir -filter '*.msi' | Sort-Object LastWriteTime | Select-Object -Last 2
 
 $packageArgs = @{
    packageName   = $env:chocolateyPackageName
    fileType      = 'msi'
-   File64         = $Installer.fullname
+   File64         = $Installers | Where-Object {$_.fullname -match $Filter} | Select-Object -ExpandProperty fullname
    silentArgs    = "/qn /norestart /l*v `"$($env:TEMP)\$($env:chocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`""
    validExitCodes= @(0, 3010, 1641)
 }
 
 Install-ChocolateyInstallPackage @packageArgs 
 
-remove-item $Installer.fullname -Force
+$Installers | ForEach-Object {remove-item $_.fullname -Force}
