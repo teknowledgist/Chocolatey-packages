@@ -14,7 +14,6 @@ $packageArgs = @{
 }
 
 # Check for ARM64 processor
-. $toolsDir\helpers.ps1
 $Features = Get-ProcessorFeatures
 if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {
    Write-Verbose 'ARM processor found.  Downloading ARM64 build.'

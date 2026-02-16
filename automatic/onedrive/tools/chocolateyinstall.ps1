@@ -16,7 +16,6 @@ $packageArgs = @{
 }
 
 # Check for ARM64 processor
-. $toolsDir\helpers.ps1
 if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {
    Write-Verbose 'ARM processor found.  Downloading ARM64 build.'
    $packageArgs.url64 = 'https://oneclient.sfx.ms/Win/Installers/25.238.1204.0001/arm64/OneDriveSetup.exe'

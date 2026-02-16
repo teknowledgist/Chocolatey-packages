@@ -14,7 +14,6 @@ $ZipFiles = Get-ChildItem $toolsDir -filter *.zip |
 
 $Destination = (Join-path $FolderOfPackage ($env:ChocolateyPackageName + '_' + $env:ChocolateyPackageVersion))
 
-. $toolsDir\helpers.ps1
 $Features = Get-ProcessorFeatures
 
 # Set defaults
