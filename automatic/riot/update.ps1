@@ -4,14 +4,14 @@ function global:au_GetLatest {
    $ChangeURL = 'https://riot-optimizer.com/changelog/'
    $ChangePage = Invoke-WebRequest -Uri $ChangeURL -UseBasicParsing
 
-   $VersionText = $ChangePage.AllElements | 
-                     Where-Object {$_.tagname -eq 'strong' -and $_.innertext -match '^v\.'} | 
-                     Select-Object -first 1 -expand innertext
+   $VersionText = $ChangePage.rawcontent -split '</?strong>' | 
+                     Where-Object {$_ -match '^v\.'} | 
+                     Select-Object -first 1
    $Version = $VersionText.split()[1]
 
    $TYURL = 'https://riot-optimizer.com/thank-you-for-downloading-riot/'
-   $TYPage = Invoke-WebRequest -uri $TYURL
-   $URL64 = $TYPage.links | Where-Object {$_.innertext -match 'direct'} | Select-Object -ExpandProperty href
+   $TYPage = Invoke-WebRequest -uri $TYURL -usebasicparsing
+   $URL64 = $TYPage.links | Where-Object {$_.outerhtml -match 'direct'} | Select-Object -ExpandProperty href
 
    return @{ 
          Version = $version

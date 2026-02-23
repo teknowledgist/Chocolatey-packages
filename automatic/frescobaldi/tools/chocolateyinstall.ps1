@@ -3,8 +3,8 @@
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    installerType  = 'msi'
-   url            = 'https://github.com/frescobaldi/frescobaldi/releases/download/v4.0.4/Frescobaldi-4.0.4.msi'
-   Checksum       = '596937154057e48612b25f9d3ce3cba98d0c56dcd715d330baefe63f3b501556'
+   url            = 'https://github.com/frescobaldi/frescobaldi/releases/download/v4.0.5/Frescobaldi-4.0.5.msi'
+   Checksum       = 'd02ffcee1b25aa2a7657eb962c1fb9f028e5414f36b5b22eb180e6ee2095b669'
    ChecksumType   = 'sha256'
    silentArgs     = "/qn /norestart /l*v `"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).MsiInstall.log`" ALLUSERS=1"
    validExitCodes = @(0)

@@ -9,6 +9,6 @@ Click on the .exe link to download.
 
 Direct Download:
 
-Version    : 0.90.7758
-x64 URL    : https://github.com/qelectrotech/qelectrotech-source-mirror/releases/download/0.9/Installer_QElectroTech-0.90_x86_64-win64%2Bgit7758-1.exe
-x64 SHA256 : 44003A665D1162093A6E81475E8B2D8E93D44A0D7920B0CF188ECCC36A818E53
+Version    : 0.100.0.8590
+x64 URL    : https://github.com/qelectrotech/qelectrotech-source-mirror/releases/download/0.100/Installer_QElectroTech-0.100.0_x86_64-win64%2Bgit8590-1.exe
+x64 SHA256 : 14A830E391B78FD7D69D793D13F5F4D24696628B7A682077D3F7332FA41AAA80

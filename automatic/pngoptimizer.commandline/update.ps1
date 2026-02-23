@@ -6,10 +6,10 @@ function global:au_GetLatest {
    $PageContents = Invoke-WebRequest -Uri "$MainPage/pngoptimizer" -UseBasicParsing
 
    $stub32 = $PageContents.links |
-               Where-Object {($_.innertext -match 'pngoptimizercl') -and ($_.href -like "*x86.zip")} | 
+               Where-Object {($_.outerHTML -match 'pngoptimizercl') -and ($_.href -like "*x86.zip")} | 
                Select-Object -ExpandProperty href -First 1
    $stub64 = $PageContents.links |
-               Where-Object {($_.innertext -match 'pngoptimizercl') -and ($_.href -like "*x64.zip")} | 
+               Where-Object {($_.outerHTML -match 'pngoptimizercl') -and ($_.href -like "*x64.zip")} | 
                Select-Object -ExpandProperty href -First 1
 
    $version = ($stub64 -split '-' | Where-Object {$_ -match '^[0-9.]+$'})

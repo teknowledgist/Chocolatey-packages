@@ -5,12 +5,12 @@ function global:au_GetLatest {
    $ReleasesPage = Invoke-WebRequest -Uri $ReleasesURL -UseBasicParsing
 
    $LatestDIR = $ReleasesPage.links |
-               Where-Object {$_.innertext -match '-[0-9_]+$'} |
+               Where-Object {$_.outerhtml -match '-[0-9_]+<'} |
                Select-Object -ExpandProperty href -first 1
 
    $LatestPage = Invoke-WebRequest -Uri "$ReleasesURL/$LatestDIR" -UseBasicParsing
    $URLs = $LatestPage.links | 
-               Where-Object {$_.innertext -match '\.msi$'} | 
+               Where-Object {$_.outerhtml -match '\.msi<'} | 
                Select-Object -ExpandProperty href
 
    $url64 = $URLs | Where-Object {$_ -match '_x64'}

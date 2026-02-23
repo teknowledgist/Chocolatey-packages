@@ -4,8 +4,8 @@ function global:au_GetLatest {
    $Release = 'https://www.horstmuc.de/wrem.htm'
    $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
-   $null = $download_page.AllElements | 
-               Where-Object {$_.tagname -eq 'b' -and $_.innertext -match '^Reminder ([0-9.]+)$'}
+   $null = $download_page.rawcontent -split '</?b>' |
+               Where-Object {$_ -match '^Reminder ([0-9.]+)$'}
 
    $version = $Matches[1]
 

@@ -3,7 +3,7 @@ import-module chocolatey-au
 
 function global:au_GetLatest {
    $Repo = 'https://github.com/henrypp/timevertor'
-   $Release = Get-LatestReleaseOnGitHub -URL $Repo -UseBasicParsing
+   $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
    $version = $Release.Tag.trim('v.')
    $URL = $Release.Assets | Where-Object {$_.FileName -match 'bin\.zip'} | Select-Object -First 1 -ExpandProperty DownloadURL

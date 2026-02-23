@@ -7,7 +7,7 @@ function global:au_GetLatest {
    $Link = $download_page.links | Where-Object {$_.href -match '\.zip$'} | Select-Object -first 1
 
    $url = $Link.href
-   $version = $Link.innerText.split() | Where-Object {$_ -match '^[0-9.]+$'} | Select-Object -First 1
+   $version = $Link.outerhtml.split() | Where-Object {$_ -match '^[0-9.]+$'} | Select-Object -First 1
 
    return @{ 
             Version = "$version"

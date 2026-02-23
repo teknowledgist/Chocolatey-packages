@@ -4,11 +4,11 @@ $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    fileType       = 'EXE'
    softwareName   = "$env:ChocolateyPackageName*"
-   url            = 'https://github.com/synfig/synfig/releases/download/v1.5.3/SynfigStudio-1.5.3-2024.08.23-win32-3b7c5.exe'
-   url64bit       = 'https://github.com/synfig/synfig/releases/download/v1.5.3/SynfigStudio-1.5.3-2024.08.23-win64-3b7c5.exe'
+   url            = 'https://github.com/synfig/synfig/releases/download/v1.5.4/SynfigStudio-1.5.4-2026.01.18-win32-79417.exe'
+   url64bit       = 'https://github.com/synfig/synfig/releases/download/v1.5.4/SynfigStudio-1.5.4-2026.01.18-win64-79417.exe'
    checksumType   = 'sha256'
-   checksum       = 'c1dfd2954605607e4ed5062ae860d5ad53513d87105501b191ff010957f03af7'
-   checksum64     = 'b037a78e45ae5272f095412f51b7634fd7a4226291d82a135d0e0459b8340d92'
+   checksum       = '0cc0801db36f783732486410c8e742d1b048f078c82b1520d12396aad45c026c'
+   checksum64     = 'e057e7722f04b7f45fa8a01f35b5eb618f5c0962e9dc536d283cc46aba610528'
    silentArgs     = '/S'
    validExitCodes = @(0)
 }

@@ -5,9 +5,9 @@ function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $main = $download_page.links |
-                  where-object {$_.innertext -match 'transwiz'} | 
-                  select -ExpandProperty innertext -First 1
-   $version = $main.split()[-1]
+                  where-object {$_.outerhtml -match 'transwiz'} | 
+                  select -First 1
+   $version = $main -replace '.* ([0-9.]+).*','$1'
 
    return @{ 
       Version = $version

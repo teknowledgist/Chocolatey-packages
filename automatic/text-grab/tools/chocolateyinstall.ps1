@@ -13,7 +13,7 @@ if ($Previous) {
    $Previous | ForEach-Object { Remove-Item $_.FullName -Recurse -Force }
 }
 
-$ZipFile = 'Text-Grab-x64-Self-Contained-2025-12-18.zip'
+$ZipFile = 'Text-Grab-x64-Self-Contained-2026-01-31.zip'
 $DestinationFolder = Join-Path $FolderOfPackage "$($env:ChocolateyPackageName)_v$env:ChocolateyPackageVersion"
 
 # Check for ARM64 processor
@@ -22,9 +22,9 @@ if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {
    Write-Verbose 'ARM processor found.  Downloading ARM64 build.'
    $UnZipArgs = @{
       packageName   = $env:ChocolateyPackageName
-      URL64bit      = 'https://github.com/TheJoeFin/Text-Grab/releases/download/v4.11.2/Text-Grab-Arm64-Self-Contained-2025-12-18.zip'
+      URL64bit      = 'https://github.com/TheJoeFin/Text-Grab/releases/download/v4.12.0/Text-Grab-Arm64-Self-Contained-2026-01-31.zip'
       UnzipLocation = $DestinationFolder
-      Checksum64    = 'd25ad92e4bd0bb7bb51d135da3be799ad37ac1652a0ae449443172f999269169'
+      Checksum64    = '49c45baac3f9024a13ab02106f73c7c16d67d453cc9ef1077062be1bad9c9bf1'
    }
    Get-ChocolateyUnzip @downloadArgs
 }

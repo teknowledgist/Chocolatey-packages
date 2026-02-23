@@ -1,22 +1,17 @@
 import-module chocolatey-au
 
-$Release = 'https://sourceforge.net/projects/stefanstools/files/SKTimeStamp/'
-
 function global:au_GetLatest {
+   $Release = 'https://sourceforge.net/projects/stefanstools/files/SKTimeStamp/'
    $download_page = Invoke-WebRequest -Uri $Release -UseBasicParsing
 
    $urls = $download_page.links |
-                  ? {$_.innertext -match 'SKTimeStamp.*\.msi$'} | 
+                  Where-Object {$_.outerhtml -match 'SKTimeStamp.*\.msi<'} | 
                   select -ExpandProperty href -First 2
 
-   $version = $download_page.links |
-                  ? {$_.innertext -match 'SKTimeStamp.*\.msi$'} | 
-                  select -ExpandProperty innertext -First 1
-   $version = $version.split('-')[-1].trim('.msi')
+   $version = $urls[0] -replace '.*-([0-9.]+)\.msi.*','$1'
 
    return @{ Version = $version; URL = $urls[1]; URL64 = $urls[0] }
 }
-
 
 function global:au_SearchReplace {
     @{

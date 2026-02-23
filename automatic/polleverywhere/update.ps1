@@ -7,7 +7,7 @@ function global:au_GetLatest {
    $Release_page = Invoke-WebRequest -Uri $ReleasURL -UseBasicParsing
 
    $url = $Release_page.links |
-               Where-Object {$_.innertext -eq 'Download'} |
+               Where-Object {$_.outerhtml -match 'Download'} |
                Select-Object -First 1 -ExpandProperty href
 
    $version = $url -replace '.*/([0-9.]+)/.*$','$1'

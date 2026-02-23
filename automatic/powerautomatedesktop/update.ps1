@@ -4,9 +4,8 @@ function global:au_GetLatest {
    $Release = 'https://learn.microsoft.com/en-us/power-platform/released-versions/power-automate-desktop'
    $ReleasePage = Invoke-WebRequest -Uri "$Release" -UseBasicParsing
 
-   $tableHTML = $ReleasePage.AllElements | 
-                  Where-Object {$_.tagname -eq 'table' -and $_.innertext -match 'worldwide'} | 
-                  Select-Object -ExpandProperty innerhtml
+   $tableHTML = $ReleasePage.rawcontent -split '</?table' | 
+                  Where-Object {$_ -match 'worldwide'} 
    $null = $tableHTML.split() | 
                   Where-Object {$_ -match '^<TD>([0-9]+\.[0-9.]+)</TD>'} | 
                   Select-Object -first 1
@@ -15,7 +14,7 @@ function global:au_GetLatest {
    $Install = 'https://learn.microsoft.com/en-us/power-automate/desktop-flows/install'
    $InstallPage = Invoke-WebRequest -Uri $Install -UseBasicParsing
    $URL =  $InstallPage.Links | 
-               Where-Object {$_.outertext -match "Download the.*installer"} | 
+               Where-Object {$_.outerhtml -match "Download the.*installer"} | 
                Select-Object -ExpandProperty href
 
    return @{ 
