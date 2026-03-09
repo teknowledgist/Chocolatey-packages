@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>powerautomatedesktop</id>
-    <version>2.65.145.26040</version>
+    <version>2.66.152.26064</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/powerautomatedesktop</packageSourceUrl>
     <owners>Teknowledgist,RalfEs</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

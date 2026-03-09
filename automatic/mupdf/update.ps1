@@ -8,6 +8,13 @@ function global:au_GetLatest {
                         Where-Object { $_ -match '^mupdf' } | Select-Object -first 1
    $version = $versionstring.split() | Where-Object { $_ -match '^[0-9.]+$' }
 
+   $Downloads = 'https://mupdf.com/releases?product=MuPDF'
+   $Download_page = Invoke-WebRequest -Uri $Downloads -UseBasicParsing
+   
+   if (-not ($Downloads_page.rawcontent -match "mupdf-$version-windows.zip")) {
+      # Need an installer, not just source code
+      $version = '1.0'
+   }
    return @{
       URL32   = "https://mupdf.com/downloads/archive/mupdf-$version-windows.zip"
       Version = $version

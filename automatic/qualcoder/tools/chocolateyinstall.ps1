@@ -14,8 +14,8 @@ $WorkSpace = Join-Path $env:TEMP "$env:ChocolateyPackageName.$env:chocolateyPack
 $WebFileArgs = @{
    packageName  = $env:ChocolateyPackageName
    FileFullPath = Join-Path $FolderOfPackage "$env:ChocolateyPackageName.exe"
-   Url          = 'https://github.com/ccbogel/QualCoder/releases/download/3.8/QualCoder_3_8_Win_Portable.exe'
-   Checksum     = 'c5c26bc72a6d52a8580689dabe59063ace84182129bbfebca88a869eeac4a1d5'
+   Url          = 'https://github.com/ccbogel/QualCoder/releases/download/3.8.2/QualCoder_3_8_2_Win_Portable.exe'
+   Checksum     = 'ca399c7917345a98ff7d86aba1991d030c43eee45ef4ef2ffd6cf66df3cd2ed5'
    ChecksumType = 'sha256'
    GetOriginalFileName = $true
 }
