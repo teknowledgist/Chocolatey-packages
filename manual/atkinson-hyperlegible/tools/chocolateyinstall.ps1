@@ -1,19 +1,21 @@
 ﻿$ErrorActionPreference = 'Stop'
 
 $toolsDir   = Split-Path -parent $MyInvocation.MyCommand.Definition
-$ZipFile = Get-ChildItem -Path $toolsDir -Filter '*.zip' | 
+$ZipFiles = Get-ChildItem -Path $toolsDir -Filter '*.zip' | 
                Sort-Object LastWriteTime | 
-               Select-Object -ExpandProperty FullName -Last 1
+               Select-Object -ExpandProperty FullName -Last 2
 
 $UnzipDir = Join-Path $env:TEMP $env:ChocolateyPackageName
 
-$UnzipArgs = @{
-   packageName    = $env:ChocolateyPackageName
-   FileFullPath   = $ZipFile
-   Destination    = $UnzipDir
+foreach ($File in $zipfiles) {
+   $UnzipArgs = @{
+      packageName    = $env:ChocolateyPackageName
+      FileFullPath   = $File
+      Destination    = $UnzipDir
+      SpecificFolder = $File.split('_\')[-2]
+   }
+   Get-ChocolateyUnzip @UnzipArgs
 }
-
-Get-ChocolateyUnzip @UnzipArgs
 
 $FontFiles = Get-ChildItem $UnzipDir -Include '*.ttf' -Recurse | 
                   Select-Object -ExpandProperty FullName
@@ -29,4 +31,4 @@ If ($Installed -eq 0) {
    Write-Host "$Installed fonts were installed."
 }
 
-$null = Remove-Item -Path $ZipFile -Force
+$null = Remove-Item -Path $ZipFiles -Force

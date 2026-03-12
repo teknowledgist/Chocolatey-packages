@@ -1,12 +1,9 @@
-﻿From: https://github.com/googlefonts/atkinson-hyperlegible/blob/main/OFL.txt
-
-LICENSE
-
-Copyright 2020 Braille Institute of America, Inc.
+﻿Copyright 2020-2024 The Atkinson Hyperlegible Next Project Authors (https://github.com/googlefonts/atkinson-hyperlegible-next)
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
+https://openfontlicense.org
+
 
 -----------------------------------------------------------
 SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007

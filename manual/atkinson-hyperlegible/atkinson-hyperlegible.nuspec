@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>atkinson-hyperlegible</id>
-    <version>1.006</version>
+    <version>2.001</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/atkinson-hyperlegible</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -13,42 +13,46 @@
     <projectUrl>https://brailleinstitute.org/freefont</projectUrl>
     <copyright>Copyright © 2020 Braille Institute of America, Inc.</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
-    <licenseUrl>https://raw.githubusercontent.com/googlefonts/atkinson-hyperlegible/main/OFL.txt</licenseUrl>
+    <licenseUrl>https://raw.githubusercontent.com/googlefonts/atkinson-hyperlegible-next/main/OFL.txt</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/googlefonts/atkinson-hyperlegible</projectSourceUrl>
-    <bugTrackerUrl>https://github.com/googlefonts/atkinson-hyperlegible/issues</bugTrackerUrl>
+    <projectSourceUrl>https://github.com/googlefonts/atkinson-hyperlegible-next</projectSourceUrl>
+    <bugTrackerUrl>https://github.com/googlefonts/atkinson-hyperlegible-next/issues</bugTrackerUrl>
     <tags>atkinson-hyperlegible font blind low-vision braille OSS embedded</tags>
     <summary>Award-winning font designed specifically to help with legibility and improve readability for people with low vision</summary>
-    <description>Atkinson Hyperlegible is a new typeface, offering greater legibility and readability for low vision readers. The font is named after Braille Institute founder, J. Robert Atkinson. What makes it different from traditional typography design is that it focuses on letterform distinction to increase character recognition, ultimately improving readability.
+    <description>Atkinson Hyperlegible is a typeface, carefully crafted to improve legibility and readability for individuals with low vision. The font is named after Braille Institute founder, J. Robert Atkinson. What makes it different from traditional typography design is that it focuses on letterform distinction to increase character recognition, ultimately improving readability.
 
 The Braille Institute has made this free for anyone to use, under the SIL Open Font License.
 
-The typeface was a Winner of Fast Company’s 2019 Innovation By Design Award.
+Atkinson Hyperlegible Next, a refined version of Atkinson Hyperlegible, improves on the original in every way. It features new weights, improved kerning, refined curves, added symbols, and additional language support.
+Atkinson Hyperlegible Mono, a monospace version of Atkinson Hyperlegible, offers new opportunities for developers with low vision. 
 
-* Four fonts, including two weights (regular, bold, italics, italics bold)
-* 1,340 total glyphs across all fonts, 335 per font
-* Accent characters supporting 27 languages
+* Seven weights — Light to Extrabold — in both upright and italic styles and for both Next and Mono.
+* A variable font for both Next and Mono
+* 370+ glyphs per font style
+* Accent characters [supporting over 150 languages](https://braileinstitute.box.com/s/7iwrt350qau7dzsl19n3d9n73czz2zww)
 * For designers and anyone interested in making written materials easier to read across the entire visual-ability spectrum
-* Improve legibility and readability for low vision readers
+* Free for personal use and all commercial applications!
+
+![Sample of Atkinson Hyperlegible Next font characters to show concepts of Recognizable Footprints and Differentiated Letterforms](https://lh3.googleusercontent.com/Z1idzrzJh-qUyp4LA4Yd2wLaLf6Jc0b2eS7TH37bMGCKEri0A46OAeBL3Q=w800)
+![Example comparison of Monospaced font and Proportional font](https://lh3.googleusercontent.com/z500LleKJx3HyvNQzzQIj3-Vx4Jfwqs9_d4gypDutXCAAWe-A0tYlQJ_AEg=w800)
 
 ## Unique design features
-* Differentiates common misinterpreted letters and numbers using various design techniques:   
-![Sample of Atkinson Hyperlegible font characters to show concepts of Recognizable Footprints and Differentiated Letterforms](https://brailleinstitute.org/wp-content/uploads/2020/02/BIA_AtkinsonHyerlegible-recognizable-footprints-differentiated-letterforms-transparent.png)
-* **Recognizable Footprints** - Character boundaries clearly defined, ensuring understanding across the visual-ability spectrum
-* **Differentiated letterforms** - similar letter pairs are differentiated from each other to dramatically increase legibility
-* **Unambiguous Characters** - designed to increase legibility and distinction
-* **Exaggerated forms** - shaping of letters is exaggerated to provide better clarity
-* **Opened Counterspace** - open areas of certain letters are expanded to provide greater distinction
-* **Angled spurs and differentiated tails** - increase recognition and define distinctive style
+* **Unambiguous Letterforms** Letters have received special care to ensure they’re legible and clear.
+* **Clear Uprights** Similarly-shaped upright letters are distinctly different.
+* **Distinct Pairs** Matching letter pairs are clearer and easier to identify.
+* **Open Counters** Large areas inside letters, called counters, keep characters clear.
+* **Spurs and Tails** Angled spurs and longer tails help increase differentiation.
+* **Special Circles** Circular elements reflect the heritage of the Braille Institute.
 
-Informational sheet about Atkinson Hyperlegible font, with samples of informational brochures, business card, and more with text in the font: [Download Summary Document [.pdf]](https://github.com/googlefonts/atkinson-hyperlegible/blob/main/docs/BIA_AtkinsonHyerlegible-Specimen_2020-02-10.pdf)
+Informational sheet about the original Atkinson Hyperlegible font, with samples of informational brochures, business card, and more with text in the font: [Download Summary Document [.pdf]](https://github.com/googlefonts/atkinson-hyperlegible/blob/main/docs/BIA_AtkinsonHyerlegible-Specimen_2020-02-10.pdf)
     </description>
     <!-- =============================== -->      
     <dependencies>
-      <dependency id="chocolatey-font-helpers.extension" version="0.0.3.1" />
+      <dependency id="chocolatey-font-helpers.extension" version="0.0.4" />
     </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
   </files>
 </package>
