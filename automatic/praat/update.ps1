@@ -2,37 +2,38 @@ import-module evergreen
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   Try {
-      $Meta = Get-EvergreenApp praat | Where-Object {$_.architecture -eq 'x86'} -ErrorAction SilentlyContinue
-      $x64 = $Meta | Where-Object {$_.uri -match '64\.zip$'}
-      $version = $x64.Version
-      $x64URL = $x64.URI
-      $x86URL = ($Meta | Where-Object {$_.uri -match '32\.zip$'}).URI
-   } 
-   Catch {
-      $Release = Get-LatestReleaseOnGitHub -URL 'https://github.com/praat/praat.github.io'
+   $Release = Get-LatestReleaseOnGitHub -URL 'https://github.com/praat/praat.github.io'
 
-      $version = $Release.Tag.trim('v.').replace('_', '.')
-      $Assets = $Release.Assets | Where-Object { $_.FileName -match '\.zip' } | Select-Object -First 2 -ExpandProperty DownloadURL
-      $x86URL = $Assets | Where-Object { $_ -match '32\.zip$' }
-      $x64URL = $Assets | Where-Object { $_ -match '64\.zip$' }
-   }
+   $version = $Release.Tag.trim('v.').replace('_', '.')
+
+   $x86Build   = $Release.Assets | Where-Object { $_.DownloadURL -match 'intel32\.zip$'}
+   $x64Build   = $Release.Assets | Where-Object { $_.DownloadURL -match 'intel64\.zip$' }
+   $ARM64Build = $Release.Assets | Where-Object { $_.DownloadURL -match 'arm64\.zip$' }
+   
 
    return @{ 
-            Version    = $version
-            URL32      = $x86URL
-            URL64      = $x64URL
+            Version       = $version
+            URL32         = $x86Build.DownloadURL
+            Checksum32    = $x86Build.sha256
+            URL64         = $x64Build.DownloadURL
+            Checksum64    = $x64Build.sha256
+            ARM64URL      = $ARM64Build.DownloadURL
+            ChecksumARM64 = $ARM64Build.sha256
            }
 }
 
 function global:au_SearchReplace {
     @{
       "legal\VERIFICATION.md" = @{
-         "(^- Version\s+:).*"      = "`${1} $($Latest.Version)"
-         "(^- x86 URL\s+:).*"      = "`${1} $($Latest.URL32)"
-         "(^- x86 Checksum\s+:).*" = "`${1} $($Latest.Checksum32)"
-         "(^- x64 URL\s+:).*"      = "`${1} $($Latest.URL64)"
-         "(^- x64 Checksum\s+:).*" = "`${1} $($Latest.Checksum64)"
+         "(^- Version\s+:).*"        = "`${1} $($Latest.Version)"
+         "(^- x86 URL\s+:).*"        = "`${1} $($Latest.URL32)"
+         "(^- x86 Checksum\s+:).*"   = "`${1} $($Latest.Checksum32)"
+         "(^- x64 URL\s+:).*"        = "`${1} $($Latest.URL64)"
+         "(^- x64 Checksum\s+:).*"   = "`${1} $($Latest.Checksum64)"
+      }
+      'tools\chocolateyinstall.ps1' = @{
+         '^(\s*URL64bit\s*= ).*'   = "`${1}'$($Latest.ARM64URL)'"
+         '^(\s*Checksum64\s*= ).*' = "`${1}'$($Latest.ChecksumARM64)'"
       }
     }
 }

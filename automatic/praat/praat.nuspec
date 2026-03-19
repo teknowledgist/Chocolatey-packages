@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>praat</id>
-    <version>6.4.61</version>
+    <version>6.4.62</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/praat</packageSourceUrl>
     <owners>Doc, Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -41,6 +41,9 @@ For best results with phonetic characters in the TextGrid and Picture windows, y
 Much of the "official" documentation is not designed to help linguists (who may not have a strong phonetics background) get the measurements and make the changes that they need for research.  Thus, be sure to also look at the regularly-updated guidebook, [*Using Praat for Linguistic Research* by Will Styler](http://savethevowels.org/praat/) or [*Welcome to SWPhonetics* by Sidney Wood](https://swphonetics.com/praat/introduction/).
     </description>
     <releaseNotes>http://www.fon.hum.uva.nl/praat/manual/What_s_new_.html</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-processor-features.extension" version="0.0.1" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
