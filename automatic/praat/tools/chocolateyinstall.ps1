@@ -2,15 +2,19 @@
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 $FolderOfPackage = Split-Path -Parent $toolsDir
-$BitLevel = Get-ProcessorBits
+
+if ($env:PROCESSOR_ARCHITECTURE -eq "ARM64") {
+    $arch = "arm64"
+} else {
+    $arch = "intel32"
+}
 
 # Remove old versions
 $null = Get-ChildItem $FolderOfPackage -Filter *.exe | Remove-Item -Force
 
 $ZipFile = Get-ChildItem $toolsDir -filter "*.zip" |
-               Where-Object {$_.basename -match "$BitLevel`$"} | 
-               Sort-Object LastWriteTime | 
-               Select-Object -ExpandProperty FullName -Last 1
+    Where-Object { $_.basename -match $arch } |
+    Select-Object -ExpandProperty FullName -First 1
 
 Get-ChocolateyUnzip -FileFullPath $ZipFile -Destination $FolderOfPackage
 
