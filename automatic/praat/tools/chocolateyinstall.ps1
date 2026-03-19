@@ -44,4 +44,4 @@ foreach ($exe in $exes) {
    $null = New-Item "$exe.gui" -Type file -Force
 }
 
-Get-ChildItem $toolsDir -filter '*.zip' | ForEach-Object {Remove-Item $_ -force}
+Get-ChildItem $toolsDir -filter '*.zip' | ForEach-Object {Remove-Item $_.fullname -force}
