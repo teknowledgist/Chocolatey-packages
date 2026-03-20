@@ -6,34 +6,35 @@ function global:au_GetLatest {
 
    $Release_page = Invoke-WebRequest -Uri $ReleasURL -UseBasicParsing
 
-   $null = $Release_page.content.split('"') |
-               Where-Object {$_ -match '^NessusAgent-([0-9.]+)-x64\.msi$'} | 
-               Select-Object -first 1
+   $JSONstring = $Release_page.content.split('[]') | 
+                  Where-Object {($_ -match '"version"') -and ($_ -match '\.msi')} | 
+                  Select-Object -First 1
+   $Agents = ConvertFrom-Json "[$JSONstring]"
 
-   $version = $Matches[1]
+   $x64agent = $Agents | Where-Object { $_.file -like '*x64.msi' }
+   $ARM64agent = $Agents | Where-Object { $_.file -like '*arm64.msi' }
 
-   $metadata = $Release_page.content.split('{}') | ? {$_ -match $version -and $_ -match 'msi"'} | select -First 1
-
-   $x64ID = ($metadata | ? {$_ -match 'x64'}) -replace '.*"id":([0-9]+),.*','$1'
-# No more 32-bit? 
-#   $x32ID = ($metadata | ? {$_ -match 'Win32'}) -replace '.*"id":([0-9]+),.*','$1'
+   $x64ID = $x64agent.id
+   $ARM64ID = $ARM64agent.id
 
    return @{ 
-      Version = $version
-#      URL32 = "https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/$x32ID/download?i_agree_to_tenable_license_agreement=true"
-      URL64 = "https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/$x64ID/download?i_agree_to_tenable_license_agreement=true"
+      Version  = $x64agent.meta_data.version
+      URL64    = "https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/$x64ID/download?i_agree_to_tenable_license_agreement=true"
+      Checksum64 = $x64agent.meta_data.sha256
+      URLARM64 = "https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/$ARM64ID/download?i_agree_to_tenable_license_agreement=true"
+      ChecksumARM64 = $x64agent.meta_data.sha256
    }
 }
 
 function global:au_SearchReplace {
    @{
       "tools\chocolateyInstall.ps1" = @{
-#         "(^   url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-         "(^   url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
-#         "(^   Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-         "(^   Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+         "([$]x64url = )('.*')"       = "`$1'$($Latest.URL64)'"
+         "([$]x64Checksum = )('.*')"  = "`$1'$($Latest.Checksum64)'"
+         "([$]ARM64url = )('.*')"     = "`$1'$($Latest.URLARM64)'"
+         "([$]ARM64Checksum = )('.*')" = "`$1'$($Latest.ChecksumARM64)'"
       }
    }
 }
 
-Update-Package -ChecksumFor 64
+Update-Package -ChecksumFor none

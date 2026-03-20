@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>nessus-agent</id>
-    <version>11.0.3</version>
+    <version>11.1.2</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/nessus-agent</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -58,6 +58,7 @@ If Nessus Agent is installed without the server and/or key values, they can be a
     </description>
     <releaseNotes>https://docs.tenable.com/releasenotes/Content/nessusagent/nessusagent.htm</releaseNotes>
     <dependencies>
+          <dependency id="chocolatey-processor-features.extension" version="0.0.1" />
     </dependencies>
   </metadata>
   <files>
