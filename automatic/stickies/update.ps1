@@ -11,11 +11,13 @@ function global:au_GetLatest {
    $URL32 = "https://www.zhornsoftware.co.uk/stickies/$File"
 
    $versionURL = 'https://www.zhornsoftware.co.uk/stickies/versions.html'
-   $versionPage = Invoke-WebRequest -Uri $versionURL
-   $VersionString = $versionPage.AllElements | 
-                     Where-Object {$_.tagname -eq 'p' -and $_.outerhtml -match 'versionheading'} | 
-                     Select-Object  -ExpandProperty InnerText -first 1
-   $Version = $VersionString.split(' ')[0].trim('v')
+   $versionPage = Invoke-WebRequest -Uri $versionURL -UseBasicParsing
+   $VersionString = $versionPage.RawContent -split '</?p>' | 
+                     Where-Object {$_ -match 'versionheading'} | 
+                     Select-Object -first 1
+   $Null = $VersionString.trim().split(' >') | 
+                  Where-Object {$_ -match '^v([0-9.]+[a-z]?)$'}
+   $Version = $Matches[1]
    if ($Version -match '[a-z]') {
       $NumEquiv = ([byte][char]$matches[0])-96
       $Version = $Version -replace '[a-z]',".$NumEquiv"
