@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Do not remove this test for UTF-8: if “Ω” doesn’t appear as greek uppercase omega letter enclosed in quotation marks, you should use an editor that supports UTF-8, not this one. -->
+<package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>keyviz</id>
+    <version>2.1.1</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/keyviz</packageSourceUrl>
+    <owners>Teknowledgist</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>Keyviz</title>
+    <authors>Rahul Mula</authors>
+    <projectUrl>https://keyviz.org/</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/mulaRahul/keyviz@5dee4d6acf8d08562c1f9abb25c07de0e7040b93/src-tauri/icons/icon.png</iconUrl>
+    <copyright>Copyright © 2026 Rahul Mula</copyright>
+    <licenseUrl>https://github.com/mulaRahul/keyviz/blob/main/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <projectSourceUrl>https://github.com/mulaRahul/keyviz</projectSourceUrl>
+    <!--<mailingListUrl></mailingListUrl>-->
+    <bugTrackerUrl>https://github.com/mulaRahul/keyviz/issues</bugTrackerUrl>
+    <tags>keyviz keystroke keypress mouse visualizer presentation FOSS embedded</tags>
+    <summary>Visualize your keystrokes and mouse actions</summary>
+    <description>Keyviz is a **free and open-source** tool that visualizes your keypresses and mouse actions in real-time. Let your audience know what handy shortcuts you're pressing during tutorials, presentations, collaborations, or whenever you need.
+
+## ⌨️ Keypress and 🖱️ Mouse Actions
+Along with normal keys, you can also visualize mouse actions like `CMD` + `Click`, `ALT` + `Drag`, etc.
+![Keystroke Visualization](https://cdn.jsdelivr.net/gh/mulaRahul/keyviz@9ba77af6f27aa9ceb579361fb9357d625a9c0e8c/previews/visualization.png)
+Display mouse clicks and scroll wheel movements alongside your cursor.
+![Mouse Indicator](https://cdn.jsdelivr.net/gh/mulaRahul/keyviz@9ba77af6f27aa9ceb579361fb9357d625a9c0e8c/previews/mouse-indicator.gif)
+
+## ⚙️ Full Customization
+Don't settle for defaults. Every aspect of the visualization is under your control:
+- **Styling:** Change colors (modifier vs. regular keys), size, layout, border, and background.
+- **Filtering:** Control which keys are shown using hotkey or custom filters.
+- **History:** Keep a visual trail of your recent inputs.
+- **Position:** Move the visualization to any part of your screen.
+- **Animations:** Customize how inputs appear and disappear with preset entry and exit animations.
+    </description>
+    <releaseNotes>https://github.com/mulaRahul/keyviz/releases</releaseNotes>
+    <!-- =============================== -->
+  </metadata>
+  <files>
+    <!-- this section controls what actually gets packaged into the Chocolatey package -->
+    <file src="tools\**" target="tools" />
+    <file src="legal\**" target="legal" />
+  </files>
+</package>
