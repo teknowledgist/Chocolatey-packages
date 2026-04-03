@@ -11,6 +11,7 @@
     <title>Atkinson Hyperlegible (font)</title>
     <authors>Braille Institute</authors>
     <projectUrl>https://brailleinstitute.org/freefont</projectUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@3c2b96655c5ab4f0de76fdeb31eff121d48f8f5e/Icons/atkinson-hyperlegible_icon.png</iconUrl>
     <copyright>Copyright © 2020 Braille Institute of America, Inc.</copyright>
     <!-- If there is a license Url available, it is required for the community feed -->
     <licenseUrl>https://raw.githubusercontent.com/googlefonts/atkinson-hyperlegible-next/main/OFL.txt</licenseUrl>
