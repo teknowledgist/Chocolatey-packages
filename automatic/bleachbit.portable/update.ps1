@@ -4,23 +4,31 @@ $releases = 'https://www.bleachbit.org/download/windows'
 
 function global:au_GetLatest {
    $download_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
-   $filename = ($download_page.links | Where-Object href -match 'portable.zip$' | 
+   $Link = ($download_page.links | Where-Object href -match 'portable.zip$' | 
                   Select-Object -First 1 -expand href) -Replace '.*file=', ''
+   if ($Link -match '^http') {
+      $filename = $Link.split('/')[-1]
+   } else { $filename = $Link }
+   
    $version = $filename -split '-' | Select-Object -First 1 -Skip 1
 
-   # figure out if this is a beta release or a normal release.
-   $BetasPage = Invoke-WebRequest -UseBasicParsing "https://download.bleachbit.org/beta"
-   $IsBeta = $BetasPage.links | Where-Object {$_.innertext -eq "$version/"}
+   $SumFile = Invoke-WebRequest "https://download.bleachbit.org/bleachbit-$version-sha256sum.txt" -UseBasicParsing
+   $Checksum = ($SumFile.content -split '\n' | 
+                  Where-Object {$_ -match 'portable\.zip'}).split()[0]
 
+   # figure out if this is a beta release or a normal release.
+   $BetasPage = Invoke-WebRequest "https://download.bleachbit.org/beta" -UseBasicParsing 
+   $IsBeta = $BetasPage.links | Where-Object {$_.innertext -eq "$version/"}
    if ($IsBeta) {
       $filename = "beta/$version/$filename"
       $version = $version + "-beta"
    }
 
    @{
-      Version = $version
-      URL32   = "https://download.bleachbit.org/$filename"
-      SumURL  = "https://download.bleachbit.org/bleachbit-$version-sha256sum.txt"
+      Version     = $version
+      URL32       = "https://download.bleachbit.org/$filename"
+      Checksum32 = $Checksum
+      SumURL      = "https://download.bleachbit.org/bleachbit-$version-sha256sum.txt"
    }
 }
 

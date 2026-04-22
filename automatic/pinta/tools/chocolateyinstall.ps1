@@ -19,9 +19,9 @@ if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {
    Write-Verbose 'ARM processor found.  Downloading ARM64 build.'
    $DLArgs = @{
       packageName         = $env:ChocolateyPackageName
-      URL64bit            = 'https://github.com/PintaProject/Pinta/releases/download/3.1.1/Pinta-arm64.exe'
+      URL64bit            = 'https://github.com/PintaProject/Pinta/releases/download/3.1.2/Pinta-arm64.exe'
       FileFullPath        = "$env:Temp\$($env:ChocolateyPackageName)_v$env:ChocolatepPackageVersion\Arm64Installer.exe"
-      Checksum64          = 'c6df43b52f26045280f416bbe20b15abad8d314d7cfa7e72bc761e46798ca5fc'
+      Checksum64          = '86e8804f6199aaa83674945b098133a5608a661224fa17df0edc89b984c6203e'
       GetOriginalFileName = $true
    }
    $PackageArgs.file = Get-ChocolateyWebFile @DLArgs

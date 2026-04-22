@@ -14,9 +14,9 @@ if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {
    # This is required until Chocolatey-AU "Get-RemoteFiles" also gets ARM64 files.
    $DLArgs = @{
       packageName         = $env:ChocolateyPackageName
-      URL64bit            = 'https://github.com/praat/praat.github.io/releases/download/v6.4.62/praat6462_win-arm64.zip'
+      URL64bit            = 'https://github.com/praat/praat.github.io/releases/download/v6.4.64/praat6464_win-arm64.zip'
       FileFullPath        = "$toolsDir\Praat_ARM64.zip"
-      Checksum64          = '4ec90be7af1e59dfc40cff87470a63fc030933fc0f48f9d820cb215feda3a3e9'
+      Checksum64          = '305cb74f638953c9fc828e1f1e70f3a4adc18ce7edb282d5e9e3d3baa1e69f87'
       GetOriginalFileName = $true
    }
    $null = Get-ChocolateyWebFile @DLArgs

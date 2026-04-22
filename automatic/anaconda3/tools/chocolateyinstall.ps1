@@ -10,9 +10,45 @@ $InstallArgs = @{
    validExitCodes= @(0)
 }
 
-$ToolsDir   = Get-ToolsLocation
-
 $pp = Get-PackageParameters
+
+$ToolsDir = Get-ToolsLocation
+if (test-path "$ToolsDir\Anaconda3\condabin\conda") {
+   # Anaconda is/was installed already. Have it update itself, or start fresh?
+   if ($pp['Fresh']) {
+      # If starting fresh, need to uninstall (possibly non-Chocolatey installed)
+      [array]$key = Get-UninstallRegistryKey -SoftwareName 'Anaconda3*'
+
+      if ($key.Count -eq 1) {
+         $UninstallArgs = @{
+            ExeToRun       = $key[0].UninstallString
+            Statements     = $Switches
+            ValidExitCodes = @(0)
+         }
+         $null = Start-ChocolateyProcessAsAdmin @UninstallArgs
+         # The uninstaller starts another process and immediately returns.  
+         Write-Warning "Uninstalling Anaconda v$($key[0].DisplayVersion) in preparation for a requested 'Fresh' install."
+         Get-Process | Where-Object { $_.path -match '\\Un\.exe' } | wait-process
+      }
+      elseif ($key.Count -eq 0) {
+         Write-Warning "Anaconda is not installed, but installation/config files remain in $ToolsDir.\r\n   Reinstallation will be attempted."
+      }
+      elseif ($key.Count -gt 1) {
+         Write-Warning "$($key.Count) matches found!"
+         Write-Warning "To prevent accidental data loss, no programs will be uninstalled."
+         Throw "A 'Fresh' install is not possible with multiple existing installs."
+      }
+   } else {
+      
+   }
+
+
+}
+
+
+}
+# c:\tools\Anaconda3\condabin\conda update --all -y
+# 
 
 if (!$pp['JustMe']) { $T = 'AllUsers' } 
 else { 

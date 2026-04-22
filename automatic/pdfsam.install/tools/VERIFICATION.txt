@@ -9,6 +9,6 @@ or:
 
 Direct download:
 
-Version  : 5.4.5
-URL      : https://github.com/torakiki/pdfsam/releases/download/v5.4.5/pdfsam-basic-5.4.5-windows-x64.msi
-CheckSum : F3215EAAD4B22AC8E0B75F098CD4061E5997D32B73F7FDB4CDFF1801BD7B8BD7
+Version  : 6.0.0
+URL      : https://github.com/torakiki/pdfsam/releases/download/v6.0.0/pdfsam-basic-6.0.0-windows-x64.msi
+CheckSum : 33D51701C9B6C5654E6619BD5FF9A08368A530C678A058D111F6E630EC1F84DE

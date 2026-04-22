@@ -1,9 +1,9 @@
 ﻿$ErrorActionPreference = 'Stop'
 
-$x86URL = 'https://github.com/edrlab/thorium-reader/releases/download/v3.3.0/Thorium.Setup.3.3.0.exe'
-$x86Checksum = 'ac1a60804fbe98dc76a0cf73de6c49c3a2dc283d0866597b1acb600ccb775eb4'
-$ARM64URL = 'https://github.com/edrlab/thorium-reader/releases/download/v3.3.0/Thorium.Setup.3.3.0-arm64.exe'
-$ARM64Checksum = '3d119cfb044550b8a9e01053e820bd57d8c89754063c82989c7146a18e1b177a'
+$x86URL = 'https://github.com/edrlab/thorium-reader/releases/download/v3.4.0/Thorium.Setup.3.4.0.exe'
+$x86Checksum = '4f8eb97e3572602f27372125e300246db2cf9281f670b0f844b853c9c1340b67'
+$ARM64URL = 'https://github.com/edrlab/thorium-reader/releases/download/v3.4.0/Thorium.Setup.3.4.0-arm64.exe'
+$ARM64Checksum = '99f2ebc3db4c4f416157d456427ee2d0b545cbb2fb0aaccb31966ddf2abe8273'
 
 # Check for ARM64 processor
 if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {

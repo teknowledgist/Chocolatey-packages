@@ -4,10 +4,10 @@ $packageArgs = @{
    packageName   = $env:ChocolateyPackageName
    softwareName  = 'Studio 2.0*' 
    fileType      = 'EXE'
-   url           = 'https://studio.download.bricklink.info/Studio2.0/Archive/2.26.2_1/Studio+2.0_32.exe'
-   url64bit      = 'https://studio.download.bricklink.info/Studio2.0/Archive/2.26.2_1/Studio+2.0.exe'
-   checksum      = 'd5b19fd07b42024800dfb999e827274a7225c2a6186a8f3754fe1512b909e2fd'
-   checksum64    = 'e921b29f9d9f728a3824a6c4220b29173e874cefdce0c7bd0530fe22897a4604'
+   url           = 'https://studio.download.bricklink.info/Studio2.0/Archive/2.26.3_1/Studio+2.0_32.exe'
+   url64bit      = 'https://studio.download.bricklink.info/Studio2.0/Archive/2.26.3_1/Studio+2.0.exe'
+   checksum      = '74602da392214d7afa0569102d54fb6b687d119a3135c6ae1864048aaf807bf5'
+   checksum64    = 'f81e990910d09888b1710ebcf8264cae2a6327850aa21aac1d357bed48a51eb5'
    checksumType  = 'sha256'
    silentArgs    = "/VERYSILENT /SUPPRESSMSGBOXES /NORESTART /SP- /LOG=`"$($env:TEMP)\$($env:ChocolateyPackageName).$($env:chocolateyPackageVersion).Install.log`""
    validExitCodes= @(0)

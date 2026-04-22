@@ -11,9 +11,9 @@ or from the GitHub release page:
     https://github.com/OpenBoard-org/OpenBoard/releases
 
 Direct download:   
-- Version  : 1.7.6
-- URL      : https://github.com/OpenBoard-org/OpenBoard/releases/download/v1.7.6/OpenBoard_Installer_1.7.6.exe
-- CheckSum : 3D0E3F2C60C9B8C0B9ADCAAB1CAE0E622880E7E04382F61FD952F2CE4BEEC99C
+- Version  : 1.7.7
+- URL      : https://github.com/OpenBoard-org/OpenBoard/releases/download/v1.7.7/OpenBoard_Installer_1.7.7.exe
+- CheckSum : 0B3E703F5D2971CA2CE68BF7203428D74426D4EB7C1447C728F590B4EFAAFAC9
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
