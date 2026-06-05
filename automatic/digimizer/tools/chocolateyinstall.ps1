@@ -3,7 +3,7 @@
 $DownloadArgs = @{
    PackageName  = $env:chocolateyPackageName
    Url          = 'https://www.digimizer.com/download/digimizersetup.exe'
-   Checksum     = '797011a5ab3369c9a8da988304eefcb3e4434842f890e60ec37bf20d8f13b1ef'
+   Checksum     = '799b377500675908245445632bb8dbbe5dd5ef4130f448cc222d7967180c15f7'
    ChecksumType = 'sha256'
    FileFullPath = Join-Path $env:TEMP "$env:chocolateyPackageName.$env:chocolateyPackageVersion/DigimizerSetup.exe"
    GetOriginalFileName = $true

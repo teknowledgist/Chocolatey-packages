@@ -4,10 +4,10 @@ if ((Get-ProcessorBits) -ne '64') {
    Throw 'This package requires a 64-bit processor!'
 }
 
-$x64URL = 'https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/27830/download?i_agree_to_tenable_license_agreement=true'
-$x64Checksum = '5a5e8a496098daf0a044885264d2eb78020abe4846fe9cbca21c56c4a627ce92'
-$ARM64URL = 'https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/27831/download?i_agree_to_tenable_license_agreement=true'
-$ARM64Checksum = '5a5e8a496098daf0a044885264d2eb78020abe4846fe9cbca21c56c4a627ce92'
+$x64URL = 'https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/28809/download?i_agree_to_tenable_license_agreement=true'
+$x64Checksum = 'a2a7e6356e34d75c9ce3a5c05cb19da0d3b8f1678950097c83db554ff0453a52'
+$ARM64URL = 'https://www.tenable.com/downloads/api/v1/public/pages/nessus-agents/downloads/28810/download?i_agree_to_tenable_license_agreement=true'
+$ARM64Checksum = 'a2a7e6356e34d75c9ce3a5c05cb19da0d3b8f1678950097c83db554ff0453a52'
 
 # Check for ARM64 processor
 if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {

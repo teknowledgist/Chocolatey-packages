@@ -7,9 +7,9 @@ the homepage:
 - https://www.xnview.com/en/xnviewmp/#downloads
 
 or directly:
-- Version    : 1.10.5
+- Version    : 1.11.2
 - x64 URL    : https://www.xnview.com/download.php?file=XnViewMP-win-x64.exe
-- x64 SHA256 : AEFE30E67EB63B3C8A2035DD8DC57B03E2E4363976BAF5D2BBDC880EB1D3A5F1
+- x64 SHA256 : B98DE5AD8B3D02E9D92496420CC290196540970B8A8FEFA1B0394B129A31E594
 
 
 ## Verify
