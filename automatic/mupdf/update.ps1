@@ -5,13 +5,14 @@ function global:au_GetLatest {
    $History_page = Invoke-WebRequest -Uri $releases -UseBasicParsing
 
    $versionstring = $History_page.rawcontent -split '</?h2>' | 
-                        Where-Object { $_ -match '^mupdf' } | Select-Object -first 1
+                        Where-Object { ($_ -match '^mupdf') -and
+										($_ -notmatch '-rc\d')} | Select-Object -first 1
    $version = $versionstring.split() | Where-Object { $_ -match '^[0-9.]+$' }
 
    $Downloads = 'https://mupdf.com/releases?product=MuPDF'
    $Download_page = Invoke-WebRequest -Uri $Downloads -UseBasicParsing
    
-   if (-not ($Downloads_page.rawcontent -match "mupdf-$version-windows.zip")) {
+   if (-not ($Download_page.rawcontent.contains("mupdf-$version-windows.zip"))) {
       # Need an installer, not just source code
       $version = '1.0'
    }
