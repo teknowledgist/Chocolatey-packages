@@ -13,8 +13,9 @@ $DownArgs = @{
 }
 Get-Webfile @DownArgs 
 
-# Stop the script if running as part of Automatic Updates to prevent install
-if ($MyInvocation.scriptname -match '\\au\\') { throw "au_break: $Destination" }
+# if running as part of Chocolatey Automatic package Updater (NOT application updates!),
+#    stop the altered script to prevent attempted install.
+if ($MyInvocation.scriptname -match '\\chocolatey-au\\') { throw "au_break: $Destination" }
 
 Get-ChecksumValid -File $Destination -Checksum $Checksum -ChecksumType 'sha256'
 
