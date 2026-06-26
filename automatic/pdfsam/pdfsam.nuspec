@@ -13,13 +13,13 @@
     <projectUrl>http://www.pdfsam.org</projectUrl>
     <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@867d7a88b8b782f68a8c3ccd65bc82bfacb0e39a/Icons/pdfsam_icon.png</iconUrl>
     <copyright>©2017 Sober Lemur S.a.s di Vacondio Andrea</copyright>
-    <licenseUrl>http://www.gnu.org/licenses/agpl-3.0.html</licenseUrl>
+    <licenseUrl>https://github.com/torakiki/pdfsam/blob/master/LICENSE</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
     <projectSourceUrl>https://github.com/torakiki/pdfsam</projectSourceUrl>
     <docsUrl>http://www.pdfsam.org/documentation</docsUrl>
     <bugTrackerUrl>https://github.com/torakiki/pdfsam/issues</bugTrackerUrl>
     <mailingListUrl>https://pdfsam.org/contact/</mailingListUrl>
-    <tags>pdfsam pdf split merge meta</tags>
+    <tags>pdfsam pdf split merge meta FOSS</tags>
     <summary>The open source software to split, merge and rotate PDF files</summary>
     <description>Split, merge, rotate, mix and extract pages from PDF files with **PDFsam Basic** at home or at work. 
 
