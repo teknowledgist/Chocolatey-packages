@@ -10,17 +10,16 @@ function global:au_GetLatest {
 
    return @{ 
       Version = $version
-      URL32 = 'https://marcedit.reeset.net/software/marcedit75/MarcEdit_7_7_mixed.exe'
+      URL32 = 'https://marcedit.reeset.net/software/marcedit75/MarcEdit_7_8_mixed.exe'
    }
 }
 
 
 function global:au_SearchReplace {
    @{
-      "legal\VERIFICATION.md" = @{
-         "(^- Version *:).*" = "`${1} $($Latest.Version)"
-         "(^- URL *:).*"     = "`${1} $($Latest.URL32)"
-         "(^- SHA256 *:).*"  = "`${1} $($Latest.Checksum32)"
+      "tools\chocolateyinstall.ps1" = @{
+         "(^\s+URL\s*=).*"      = "`${1} '$($Latest.URL32)'"
+         "(^\s+Checksum\s*=).*" = "`${1} '$($Latest.Checksum32)'"
       }
    }
 }
@@ -41,4 +40,4 @@ function global:au_BeforeUpdate() {
                            Select-Object -ExpandProperty Hash
 }
 
-Update-Package -ChecksumFor none
+Update-Package -ChecksumFor 32

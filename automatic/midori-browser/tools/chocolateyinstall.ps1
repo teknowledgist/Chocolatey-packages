@@ -5,10 +5,10 @@ $InstallArgs = @{
    fileType       = 'EXE'
    softwareName   = "$env:ChocolateyPackageName*"
 #   url            = 'https://github.com/goastian/midori-desktop/releases/download/v11.3.3/midori-11.3.3.win32.installer.exe'
-   url64bit       = 'https://github.com/goastian/midori-desktop/releases/download/v11.8.1/midori-11.8.1.win64.installer.exe'
+   url64bit       = 'https://github.com/goastian/midori-desktop/releases/download/v11.8.2/midori-11.8.2.win64.installer.exe'
    checksumType   = 'sha256'
 #   checksum       = 'be8f251a4cbb3e1c2e84c6b27db832e3df96093dbeed68b7ecab9209fb8da02f'
-   checksum64     = '7b5e637ef896078bf71842a331d19493526ed5ac4b35f24f430b750ea7c81330'
+   checksum64     = '455d6dc64c404ecd8af1d37f5f10a7bc480e4413df65b626ed346dc323610984'
    silentArgs     = '/S'
    validExitCodes = @(0)
 }

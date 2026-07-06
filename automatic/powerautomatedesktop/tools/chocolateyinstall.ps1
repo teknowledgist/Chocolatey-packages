@@ -4,7 +4,7 @@ $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    installerType  = 'exe'
    url            = 'https://go.microsoft.com/fwlink/?linkid=2102613'
-   Checksum       = '5905fd9f8be19548b503b4b3d3ced91bdff7e375b22ef37be2cb6b929e9e0395'
+   Checksum       = 'dae55b10d0ed7b8ef5ef531c3d1b615c729b53f11e29ddd86cf8ffa04ce2ceb5'
    ChecksumType   = 'sha256'
    silentArgs    = "-Install -ACCEPTEULA -DISABLETURNONRDP -Silent"
    validExitCodes = @(0)

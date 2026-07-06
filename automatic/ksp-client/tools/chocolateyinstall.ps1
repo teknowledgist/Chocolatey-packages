@@ -27,8 +27,8 @@ $InstallArgs = @{
    fileType      = 'EXE'
    url           = $URL
    url64bit      = $URL64
-   checksum      = '2dca595451df8d9cc7dfdf43d6abf0a3c7125b2856031c9517c7c1426ca4819d'
-   checksum64    = '82f748c20652b70f4d187b181a09c1202926922c1f7c0e0d439bc252d7e7dc8d'
+   checksum      = '4181811b8242e560546d25dd64341329c89505ada2a91d1637b18c578177d0fc'
+   checksum64    = '94abe81894c5b86152dab529327838d1e4417ccfe33d6c8e9e5083fc8d6591f2'
    checksumType  = 'sha256'
    silentArgs    = "-q -platform $BitLevel -upg $HostSwitch -v PROP_REBOOT=0 -v PROP_SHORTCUTS=0"
    validExitCodes= @(0)

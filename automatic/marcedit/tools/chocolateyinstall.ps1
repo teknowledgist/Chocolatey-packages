@@ -25,20 +25,16 @@ if (($key.Count -ge 2) -and (-not $SameID)) {
    Write-Warning 'Multiple, previous installs found!  This package will attempt to install the latest version, but no previous installs will be removed.'
 }
 
-$toolsDir = Split-Path -parent $MyInvocation.MyCommand.Definition
-$File = Get-ChildItem $toolsDir -Filter '*.exe' |
-         Sort-Object LastWriteTime | 
-         Select-Object -Last 1 -ExpandProperty fullname
-
 $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
-   fileType       = 'EXE'
-   File           = $File
    softwareName   = "$env:ChocolateyPackageName*"
+   fileType       = 'EXE'
+   URL            = 'https://marcedit.reeset.net/software/marcedit75/MarcEdit_7_8_mixed.exe'
+   Checksum       = '98B93796E6A745D934EB8D6C00330BFB176FBB08CDB3F703D165E993F6365A02'
+   ChecksumType   = 'sha256'
    silentArgs    = " /exenoui /noprereqs /q NOAUTOUPDATE=1"
    validExitCodes= @(0, 3010, 1641)
 }
 
-Install-ChocolateyInstallPackage @packageArgs 
+Install-ChocolateyPackage @packageArgs 
 
-Remove-Item $File -ea 0 -force

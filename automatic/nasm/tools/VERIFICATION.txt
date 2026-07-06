@@ -14,8 +14,8 @@ in this package.
 
 Direct Download:
 
-Version      : 3.01
-x86 URL      : https://www.nasm.us/pub/nasm/releasebuilds/3.01/win32/nasm-3.01-installer-x86.exe
-x86 CheckSum : 2E3041DD2ABE36CB7E9938057C3CF090DD2EAC42D3280957359F87C4D83B9ED0
-x64 URL      : https://www.nasm.us/pub/nasm/releasebuilds/3.01/win64/nasm-3.01-installer-x64.exe
-x64 CheckSum : 7881E9FEBC8B6558581041019B7890F109BEF0694D93ED82C9589794C7B5A600
+Version      : 3.02
+x86 URL      : https://www.nasm.us/pub/nasm/releasebuilds/3.02/win32/nasm-3.02-installer-x86.exe
+x86 CheckSum : 97CBCAEF6A01430AC413EAD0B0E82878A258FAC1C4B37B544A8D96BC21F8136A
+x64 URL      : https://www.nasm.us/pub/nasm/releasebuilds/3.02/win64/nasm-3.02-installer-x64.exe
+x64 CheckSum : 0DDB40310861EB29F4D649FEB9466779982A2D251C0DB2B9CF0D21CF591171F3
