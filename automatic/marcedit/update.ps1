@@ -38,6 +38,7 @@ function global:au_BeforeUpdate() {
    
    $Latest.Checksum32 = Get-FileHash $Installer -Algorithm SHA256 |
                            Select-Object -ExpandProperty Hash
+   Remove-Item $Installer -force
 }
 
 Update-Package -ChecksumFor 32

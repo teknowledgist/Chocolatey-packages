@@ -30,7 +30,7 @@ $packageArgs = @{
    softwareName   = "$env:ChocolateyPackageName*"
    fileType       = 'EXE'
    URL            = 'https://marcedit.reeset.net/software/marcedit75/MarcEdit_7_8_mixed.exe'
-   Checksum       = '98B93796E6A745D934EB8D6C00330BFB176FBB08CDB3F703D165E993F6365A02'
+   Checksum       = '85285CE5B7F47CB3A05805C541D59A6AACC59C91EDDFE2F30221ADAB5F4FADA6'
    ChecksumType   = 'sha256'
    silentArgs    = " /exenoui /noprereqs /q NOAUTOUPDATE=1"
    validExitCodes= @(0, 3010, 1641)
