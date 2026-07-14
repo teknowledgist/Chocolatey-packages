@@ -18,7 +18,7 @@ function global:au_GetLatest {
    $mirror = 'https://www.filecroco.com/download-system-information-viewer/download/'
    $downpage = Invoke-WebRequest $mirror -UseBasicParsing
 
-   $URL = $downpage.links | Where-Object {$_.OuterHTML -match 'download now'} | select -ExpandProperty href
+   $URL = $downpage.links | Where-Object {$_.OuterHTML -match 'start_download'} | select -ExpandProperty href
 
    return @{ 
          Version  = $version
