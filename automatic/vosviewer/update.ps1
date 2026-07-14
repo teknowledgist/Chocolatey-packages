@@ -6,11 +6,14 @@ function global:au_GetLatest {
 
    $URL = $PageData.Links | 
             Where-Object {$_.href -match 'exe\.zip'} | 
-            Select-Object -ExpandProperty href
+            Select-Object -ExpandProperty href -first 1
 
    $version = $URL -replace ".*_([0-9.]+)_.*",'$1'
 
-   return @{ Version = $version; URL32 = $url }
+   return @{ 
+      Version = $version
+      URL32 = $url
+   }
 }
 
 
