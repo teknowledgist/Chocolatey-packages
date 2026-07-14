@@ -22,6 +22,7 @@ if ($Features.'ARM_V8_INSTRUCTIONS') {
       URL64bit            = $ARM64url
       FileFullPath        = "$toolsDir\Praat_ARM64.zip"
       Checksum64          = $ARM64sha
+      ChecksumType        = 'SHA256'
       GetOriginalFileName = $true
    }
    $null = Get-ChocolateyWebFile @DLArgs
@@ -37,6 +38,7 @@ elseif (-not $Features.'PF_AVX2_INSTRUCTIONS_AVAILABLE') {
       URL64bit            = $X64v1url
       FileFullPath        = "$toolsDir\Praat_x64v1.zip"
       Checksum64          = $X64v1sha
+      ChecksumType        = 'SHA256'
       GetOriginalFileName = $true
    }
    $null = Get-ChocolateyWebFile @DLArgs
@@ -44,7 +46,7 @@ elseif (-not $Features.'PF_AVX2_INSTRUCTIONS_AVAILABLE') {
    $LookFor = 'x64v1'
 }
 else { 
-   # Almost all production systems will benefit from the v3 architecture build 
+   # Almost all semi-modern systems will benefit from the v3 architecture build 
    #    See: https://en.wikipedia.org/wiki/X86-64#Microarchitecture_levels
    $LookFor = 'x64v3' 
 }
