@@ -10,8 +10,8 @@ function global:au_GetLatest {
                      Where-Object {($_.href -match '\.msi$') -and ($_.innertext -NotMatch 'CAD\/CAM')} |
                      Select-Object -ExpandProperty href -First 2
    
-   $url32 = "https://www.qcad.org$Stub32"
-   $url64 = "https://www.qcad.org$Stub64"
+   $url32 = "$Stub32"
+   $url64 = "$Stub64"
    $newversion = ($stub64 -split '-')[1]
 
    $FakeURL = 'https://cdn.jsdelivr.net/gh/qcad/qcad@120b14d6d2f79d4332f528d5dcd908137dc60f14/support/doc/api/qcad_icon.png'
