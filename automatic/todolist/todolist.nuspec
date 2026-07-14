@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>todolist</id>
-    <version>9.1.12</version>
+    <version>9.2.3</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/todolist</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -34,7 +34,7 @@ What differentiates ToDoList from most other task management packages is the opt
     <releaseNotes>https://www.abstractspoon.com/phpBB/viewtopic.php?f=5&amp;t=842</releaseNotes>
     <!-- =============================== -->      
     <dependencies>
-      <dependency id="vcredist2010" version="10.0" />
+      <dependency id="vcredist140" version="14.0" />
     </dependencies>
   </metadata>
   <files>
