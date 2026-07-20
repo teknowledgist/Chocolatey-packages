@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <!-- == PACKAGE SPECIFIC SECTION == -->
+    <id>setacl-studio</id>
+    <version>1.2.4.20260720</version>
+    <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/manual/setacl-studio</packageSourceUrl>
+    <owners>Teknowledgist,sippi</owners>
+    <!-- == SOFTWARE SPECIFIC SECTION == -->
+    <title>setACL Studio</title>
+    <authors>Helge Klein</authors>
+    <projectUrl>https://helgeklein.com/setacl-studio</projectUrl>
+    <iconUrl>https://raw.githubusercontent.com/sippi90/chocolateyautomaticpackages/master/icons/setacl-studio.png</iconUrl>
+    <copyright>Helge Klein</copyright>
+    <licenseUrl>https://helgeklein.com/terms-conditions</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>set acl studio freeware admin</tags>
+    <summary>Intuitive permission management with the power of SetACL. Less clicks, no more UAC prompts, increased productivity.</summary>
+    <description>##Feature Set
+
+SetACL Studio is a management tool for Windows permissions. It combines powerful features with an extremely intuitive user interface.
+
+###Description
+
+- Manage everything from one application
+An Explorer-like tree view lets you browse the entire system. It shows files and folders, registry keys, services, printers, network shares and WMI objects. Owner and either DACL or SACL are displayed for the currently selected object.
+- Local and remote computers
+SetACL Studio not only manages the local system, but remote computers, too. Install it on your administrator PC and manage the entire network.
+- Full replacement for Windows ACL Editor
+SetACL Studio manages security descriptors: owner, permissions (DACL) and auditing configuration (SACL). Permission and auditing lists (ACLs) can be freely edited: entries can be added or removed, users and groups can be changed, permissions and inheritance can be set. Inheritance from the parent object can be enabled or disabled.
+- Multi-level undo
+Because nobody is perfect, every action can be undone – without limits.
+- Bypassing security
+Given administrative permissions, SetACL Studio displays everything regardless of current permissions. Never again take ownership just to view which permissions are set. And of course you can peek into the remotest corners of the system.
+- Create, delete and rename anywhere
+SetACL Studio not only lets you inspect any directory regardless of current permissions, it can also create, delete and rename directories anywhere. Whether you have roaming profile directories, normally inaccessible to administrators, or users “protecting” folders: SetACL Studio ignores ordinary restrictions and gives you the kind of access you need to do your work. Security bypassing works in the registry, too, for creating and deleting keys.
+- Long paths
+Unlike Windows Explorer, SetACL Studio fully supports very long paths with a length of more than 260 characters (the infamous MAX_PATH constant).
+
+###System Requirements
+
+Windows XP / Server 2003 or newer (e.g. Windows 7 or Server 2008 R2) with .NET framework 4.0 client profile (a version of .NET that is slightly smaller than the full framework).
+
+SetACL Studio runs as a 64-bit process on 64-bit Windows and as a 32-bit process on 32-bit Windows so there are no hidden areas in the system it cannot get to.
+
+####Supported Languages
+
+SetACL Studio works on all Windows languages. It comes with English and German localization and adapts to the operating system language automatically.</description>
+  </metadata>
+  <files>
+    <file src="tools\**" target="tools" />
+  </files>
+</package>
