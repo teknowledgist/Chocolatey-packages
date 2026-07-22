@@ -44,6 +44,9 @@ The KSPclient has [additional options ](https://www.sassafras.com/hrl/7.6/deploy
 
     </description>
     <releaseNotes>https://www.sassafras.com/release-history/</releaseNotes>
+    <dependencies>
+      <dependency id="chocolatey-processor-features.extension" version="0.0.1" />
+    </dependencies>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />

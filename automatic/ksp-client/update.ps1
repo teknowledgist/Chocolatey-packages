@@ -7,15 +7,18 @@ function global:au_GetLatest {
    return @{ 
       Version    = $KSPdata.version
       Checksum32 = $KSPdata.'ksp-client-i386.exe'.digest
-      checksum64 = $KSPdata.'ksp-client-x64.exe'.digest
+      Checksum64 = $KSPdata.'ksp-client-x64.exe'.digest
+      ChecksumARM64 = $KSPdata.'ksp-client-arm64.exe'.digest
+
    }
 }
 
 function global:au_SearchReplace {
     @{
        "tools\chocolateyInstall.ps1" = @{
-          "(^\s*Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
-          "(^\s*Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
+          "(^\s*Checksum\s*=\s*)('.*')"         = "`$1'$($Latest.Checksum32)'"
+          "(^\s*Checksum64\s*=\s*)('.*')"       = "`$1'$($Latest.Checksum64)'"
+          "(^\s*[$]ARM64Checksum\s*=\s*)('.*')" = "`$1'$($Latest.ChecksumARM64)'"
        }
     }
 }
