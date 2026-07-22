@@ -6,9 +6,9 @@ function global:au_GetLatest {
 
    return @{ 
       Version    = $KSPdata.version
-      Checksum32 = $KSPdata.'ksp-client-i386.exe'.digest
-      Checksum64 = $KSPdata.'ksp-client-x64.exe'.digest
-      ChecksumARM64 = $KSPdata.'ksp-client-arm64.exe'.digest
+      URL        = 'https://download.sassafras.com/software/release/current/Installers/Windows/Client/ksp-client-i386.exe'
+      URL64      = 'https://download.sassafras.com/software/release/current/Installers/Windows/Client/ksp-client-x64.exe'
+      ARM64URL   = 'https://download.sassafras.com/software/release/current/Installers/Windows/Client/ksp-client-arm64.exe'
 
    }
 }
@@ -23,4 +23,26 @@ function global:au_SearchReplace {
     }
 }
 
-Update-Package -ChecksumFor none
+function global:au_BeforeUpdate() { 
+   # Need to trick AU to get hash of ARM64 file. This will download the 32-bit installer twice.
+   $TempURL64 = $Latest.URL64
+   $TempSha = $Latest.Checksum64
+   $Latest.URL64 = $Latest.ARM64URL
+   $Latest.Checksum64 = $Latest.ChecksumARM64
+
+   Get-RemoteFiles -NoSuffix
+
+   $Latest.ChecksumARM64 = $Latest.checksum64
+   $Latest.URL64 = $TempURL64
+   $Latest.checksum64 = $TempURL64
+
+   Get-RemoteFiles -NoSuffix
+
+   # This isn't an embedded package, so delete all the installers.
+   $toolsDir = Resolve-Path tools
+   $Installers = Get-ChildItem $toolsDir -filter '*.exe'
+   Foreach ($exe in $Installers) { Remove-Item $exe.FullName }
+}
+
+
+Update-Package -ChecksumFor all
