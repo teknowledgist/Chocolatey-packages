@@ -16,11 +16,9 @@
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>set acl studio freeware admin</tags>
     <summary>Intuitive permission management with the power of SetACL. Less clicks, no more UAC prompts, increased productivity.</summary>
-    <description>##Feature Set
+    <description>SetACL Studio is a management tool for Windows permissions. It combines powerful features with an extremely intuitive user interface. It works with files, folders, registry keys, printers, network shares, services, and WMI objects. It supports very long file system paths and bypasses security to display information about the remotest corner of the system. And it has undo.
 
-SetACL Studio is a management tool for Windows permissions. It combines powerful features with an extremely intuitive user interface.
-
-###Description
+### Description
 
 - Manage everything from one application
 An Explorer-like tree view lets you browse the entire system. It shows files and folders, registry keys, services, printers, network shares and WMI objects. Owner and either DACL or SACL are displayed for the currently selected object.
@@ -37,13 +35,13 @@ SetACL Studio not only lets you inspect any directory regardless of current perm
 - Long paths
 Unlike Windows Explorer, SetACL Studio fully supports very long paths with a length of more than 260 characters (the infamous MAX_PATH constant).
 
-###System Requirements
+### System Requirements
 
 Windows XP / Server 2003 or newer (e.g. Windows 7 or Server 2008 R2) with .NET framework 4.0 client profile (a version of .NET that is slightly smaller than the full framework).
 
 SetACL Studio runs as a 64-bit process on 64-bit Windows and as a 32-bit process on 32-bit Windows so there are no hidden areas in the system it cannot get to.
 
-####Supported Languages
+#### Supported Languages
 
 SetACL Studio works on all Windows languages. It comes with English and German localization and adapts to the operating system language automatically.</description>
   </metadata>
