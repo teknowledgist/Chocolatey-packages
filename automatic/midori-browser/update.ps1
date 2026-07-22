@@ -4,7 +4,9 @@ function global:au_GetLatest {
    $Repo = 'https://github.com/goastian/midori-desktop'
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $URL64 = $Release.Assets | Where-Object {$_.FileName -match 'win64\.installer\.exe'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $URL64 = $Release.Assets | 
+               Where-Object {$_.FileName -match '\.exe'} | 
+               Select-Object -First 1 -ExpandProperty DownloadURL
 
 # Sometimes there is no Windows build
 if (-not $url64) { 
