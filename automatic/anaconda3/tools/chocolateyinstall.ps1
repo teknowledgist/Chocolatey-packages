@@ -46,7 +46,6 @@ if (test-path "$ToolsDir\Anaconda3\condabin\conda") {
 }
 
 
-}
 # c:\tools\Anaconda3\condabin\conda update --all -y
 # 
 
