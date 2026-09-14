@@ -22,9 +22,9 @@ if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {
    Write-Verbose 'ARM processor found.  Downloading ARM64 build.'
    $UnZipArgs = @{
       packageName   = $env:ChocolateyPackageName
-      URL64bit      = 'https://github.com/TheJoeFin/Text-Grab/releases/download/v4.14.2/Text-Grab-arm64-self-contained.zip'
+      URL64bit      = 'https://github.com/TheJoeFin/Text-Grab/releases/download/v4.15.0/Text-Grab-arm64-Self-Contained.zip'
       UnzipLocation = $DestinationFolder
-      Checksum64    = '287aa527d805e5b07ada443f03c7d740983453445d64e89a21cd47d49cd2fa9c'
+      Checksum64    = '43391393bce325f950e783fb6bf8645d6bd27c37f382ed95c51a017a4782545a'
    }
    Get-ChocolateyUnzip @downloadArgs
 }

@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qdir</id>
-    <version>12.72</version>
+    <version>12.77</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qdir</packageSourceUrl>
     <owners>Teknowledgist,zersh</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

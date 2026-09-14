@@ -7,9 +7,9 @@ the official GitHub page:
 - https://github.com/TheJoeFin/Text-Grab/releases/latest
 
 or directly:
-- Version: 4.14.2
-- URL: https://github.com/TheJoeFin/Text-Grab/releases/download/v4.14.2/Text-Grab-x64-Self-Contained.zip
-- SHA256: A8922B1FF0C64ED06A05C84D596F49FBF7F42FAD7C75FCD1C3807B53823FBE8F
+- Version: 4.15.0
+- URL: https://github.com/TheJoeFin/Text-Grab/releases/download/v4.15.0/Text-Grab-x64-Self-Contained.zip
+- SHA256: 71FB477A3DD74F1E1600B3A69B35DE377F20D7DF15026A075AC22B9F819ED8B6
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

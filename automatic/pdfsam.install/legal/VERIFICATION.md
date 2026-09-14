@@ -10,9 +10,9 @@ or:
 - https://github.com/torakiki/pdfsam/releases/latest
 
 or directly:
-- Version: 6.0.4
-- URL:     https://github.com/torakiki/pdfsam/releases/download/v6.0.4/pdfsam-basic-6.0.4-windows-x64.msi
-- SHA256:  EBA4B434C3732F103EC7CBFD731A33A502C6CA5C35A9EE200FE1B3ABE0D39242
+- Version: 6.0.5
+- URL:     https://github.com/torakiki/pdfsam/releases/download/v6.0.5/pdfsam-basic-6.0.5-windows-x64.msi
+- SHA256:  956C37E2BBB1AC8AF73F6AA2BC1DC651D457274221522E27E512D725B703F002
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

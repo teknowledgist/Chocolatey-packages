@@ -8,9 +8,9 @@ The latest binary of Asymptote is available from SourceForge:
 
 or directly:
 
-- Version      : 3.13
-- x64 URL      : https://sourceforge.net/projects/asymptote/files/3.13/asymptote-3.13-setup.exe
-- x64 CheckSum : 77C4021EE435AE790E591D8BAF562B5F7EAFC2C8967D09373B517EF22967AE02
+- Version      : 3.14
+- x64 URL      : https://sourceforge.net/projects/asymptote/files/3.14/asymptote-3.14-setup.exe
+- x64 CheckSum : 76EF2BA3CC3B7D55011E5E08609C511F743A8703D945AD831DDB40E043C6F8BB
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

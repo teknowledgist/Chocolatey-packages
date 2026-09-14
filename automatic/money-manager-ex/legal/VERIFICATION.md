@@ -6,11 +6,11 @@ The extension can be downloaded from the source releases page:
 - https://github.com/moneymanagerex/moneymanagerex/releases
 
 or directly:
-Version      : 1.9.2
-x86 URL      : https://github.com/moneymanagerex/moneymanagerex/releases/download/v1.9.2/mmex-1.9.2-win32.exe
-x86 Checksum : F1C4261C788B9AA25FBA8A3DB4B2AFE8F64AFA50833B7158D52EF95EF9658A55
-x64 URL      : https://github.com/moneymanagerex/moneymanagerex/releases/download/v1.9.2/mmex-1.9.2-win64.exe
-x64 Checksum : A7DECDCF63CCC2E25EB4B5CA31B8E5D910F0FB473EF21D569D74D3D7E0FC59D6
+Version      : 1.9.4
+x86 URL      : https://github.com/moneymanagerex/moneymanagerex/releases/download/v1.9.4/mmex-1.9.4-win32.exe
+x86 Checksum : 3638D4EE5CE9E0EAB8DBED44D63CA2453C12CC5A0E4ED6A451734834F06B9201
+x64 URL      : https://github.com/moneymanagerex/moneymanagerex/releases/download/v1.9.4/mmex-1.9.4-win64.exe
+x64 Checksum : 95DAA954201C834C6EEAFF1D03AA41D50D3E7F1C5466CD79C98F28C1A5949F74
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
