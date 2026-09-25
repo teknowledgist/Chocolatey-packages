@@ -10,9 +10,10 @@ function global:au_GetLatest {
    try { $SPpage = Invoke-WebRequest -Uri $SPurl  -UseBasicParsing}
    catch {}
    if ($SPpage) {
-      $SPlink = $SPpage.links | Where-Object {$_.innertext -match 'download megasync'} | 
-                  Select-Object -ExpandProperty innertext -first 1
-      $SPversion = $SPlink -replace ".*? ([0-9.]+) .*",'$1'
+      $SPlink = $SPpage.links | Where-Object {
+                                 $_.title -match 'Download MEGA' -and 
+                                 $_.outerhtml -match ' [0-9]\.[0-9]{1,3}\.[0-9.]+? '}
+      $SPversion = $matches[0].trim()
    } else { $SPversion = '0.0' }
 
    $version = ([version]$GitVersion,[version]$SPversion | Measure-Object -Maximum).Maximum.ToString()
