@@ -29,8 +29,8 @@ $InstallArgs = @{
    fileType      = 'EXE'
    url           = $URL
    url64bit      = $URL64
-   checksum      = '4438de311c918b73368544762d43fa76d74621f05e108737edf10ed108ac47ea'
-   checksum64    = '206360ED354867DFAFC28CCB85519C413384DE870E95AC156415A789C510A001'
+   checksum      = '1ebc675eaa0bd8b4e110990effe7479d098b439f8e0f7fc207538132713535de'
+   checksum64    = '0641BE9E17E164396F1A6AF20688BB1C9FA08434B7A49E22B01C28301DE692C3'
    checksumType  = 'sha256'
    silentArgs    = "-q -platform $BitLevel -upg $HostSwitch -v PROP_REBOOT=0 -v PROP_SHORTCUTS=0"
    validExitCodes= @(0)
@@ -40,7 +40,7 @@ $InstallArgs = @{
 $Features = Get-ProcessorFeatures
 if ($Features.'ARM_V8_INSTRUCTIONS') {
    Write-Verbose 'ARM processor found.  Downloading ARM64 build.'
-   $ARM64Checksum = '02B2128A1026634C2EE74157E912DCF9A8A241E9626BAEC31E535837CFA4FEE1'
+   $ARM64Checksum = '27C3FDE31D94AAE19FD230CF72528C453E512AA9682045608658FB01E97AF3F9'
    $packageArgs.url64 = $ARM64URL
    $packageArgs.checksum64 = $ARM64Checksum
 }
