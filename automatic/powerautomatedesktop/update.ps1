@@ -15,7 +15,8 @@ function global:au_GetLatest {
    $InstallPage = Invoke-WebRequest -Uri $Install -UseBasicParsing
    $URL =  $InstallPage.Links | 
                Where-Object {$_.outerhtml -match "Download the.*installer"} | 
-               Select-Object -ExpandProperty href
+               Select-Object -ExpandProperty href |
+               Select-Object -first 1
 
    return @{ 
       Version = $Version
