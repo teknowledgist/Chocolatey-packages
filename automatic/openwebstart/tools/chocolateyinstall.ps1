@@ -21,7 +21,6 @@ if (!$pp['config']) {
 $InstallArgs = @{
    packageName    = $env:ChocolateyPackageName
    fileType       = 'exe'
-   File           = $Installers | Where-Object {$_ -match 'x32'}
    File64         = $Installers | Where-Object {$_ -match 'x64'}
    silentArgs     = "-q -varfile $VarFile"
    validExitCodes = @(0)
