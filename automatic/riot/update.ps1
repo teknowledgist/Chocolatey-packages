@@ -1,28 +1,30 @@
 import-module chocolatey-au
 
 function global:au_GetLatest {
-   $ChangeURL = 'https://riot-optimizer.com/changelog/'
-   $ChangePage = Invoke-WebRequest -Uri $ChangeURL -UseBasicParsing
+   $DownURL = 'https://riot-optimizer.com'
+   $DownPage = Invoke-WebRequest -Uri "$DownURL/download/" -UseBasicParsing
 
-   $VersionText = $ChangePage.rawcontent -split '</?strong>' | 
-                     Where-Object {$_ -match '^v\.'} | 
-                     Select-Object -first 1
-   $Version = $VersionText.split()[1]
+   $VersionString = $DownPage.links | 
+                     Where-Object {$_.href -match 'setup\.exe/?$'} | 
+                     Select-Object -first 1 -Expand href
+    
+    $Version = $VersionString.split('-') | Where-Object {$_ -match '^[0-9.]+$'}
+    $Installer = $VersionString.split('/') | Where-Object {$_ -match '\.exe'}
 
-   $TYURL = 'https://riot-optimizer.com/thank-you-for-downloading-riot/'
-   $TYPage = Invoke-WebRequest -uri $TYURL -usebasicparsing
-   $URL64 = $TYPage.links | Where-Object {$_.outerhtml -match 'direct'} | Select-Object -ExpandProperty href
+   $ThanksURL = 'https://riot-optimizer.com/download/thanks'
+   $TYPage = Invoke-WebRequest -uri "$ThanksURL/$Installer" -usebasicparsing
+   $URL64 = $TYPage.links | Where-Object {$_.href -match '\.exe$'} | Select-Object -ExpandProperty href
 
    return @{ 
          Version = $version
-         URL64   = $URL64 -replace '&amp;','&'
+         URL64   = $URL64
    }
 }
 
 
 function global:au_SearchReplace {
    @{
-      "tools\VERIFICATION.md" = @{
+      "legal\VERIFICATION.md" = @{
          "^(- Version:\s+).*" = "`${1} $($Latest.Version)"
          "^(- URL:\s+).*"     = "`${1} $($Latest.URL64)"
          "^(- SHA256:\s+).*"  = "`${1} $($Latest.Checksum64)"
