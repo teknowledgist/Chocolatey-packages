@@ -10,7 +10,7 @@ function global:au_GetLatest {
 
    $DownPage.allelements | ? {$_}
 
-   $null = $downpage.RawContent.split('>') | where {$_ -match '^v([0-9.]+) '}
+   $null = $downpage.RawContent.split('< >') | where {$_ -match '^v([0-9.]+)'}
    $version = $matches[1]
 
    return @{ 
