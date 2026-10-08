@@ -3,7 +3,7 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2015/06/nuspec.xsd">
   <metadata>
     <id>anaconda3</id>
-    <version>2026.07</version>
+    <version>2026.07.0.20261008</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/anaconda3</packageSourceUrl>
     <owners>Teknowledgist, Chantisnake</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -46,6 +46,13 @@ You can change any of the defaults with package parameters:
 
 ### 64-bit only
 The 2022.05 release is the last of Anaconda Distribution that will support Windows 32-bit (win-32).
+
+## Note on updating Anaconda3
+In order to protect customized configurations, the Anaconda3 distribution installer will not install over existing installs making upgrading via Chocolatey more complicated. This package allows for two options:
+
+1. Uninstall Anaconda3 completely and re-install from the distribution installer as a new install. If you just use the base environment and do not create any additional environments the Anaconda3 directory, this should be safe. **This option will take a long time!** Use the package parameter `/Fresh` for this option. E.G. `choco upgrade anaconda3 --params '"/Fresh"'`
+2. **[Default]** Use the `Conda` integrated package manager to update Anaconda3 internal packages **in the base environment** to the [distribution installer equivalent metapackage](https://www.anaconda.com/docs/getting-started/anaconda/advanced-install/install-metapackage). The assumption of this Chocolatey package is that users advanced enough to create additional environments will also be knowledgeable enough to update those environments as needed using `Conda` directly and outside of Chocolatey.
+
     </description>
     <releaseNotes>https://docs.anaconda.com/anaconda/reference/release-notes/</releaseNotes>
     <dependencies>
