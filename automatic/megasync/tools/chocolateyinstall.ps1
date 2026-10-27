@@ -4,10 +4,10 @@ $packageArgs = @{
    packageName    = $env:ChocolateyPackageName
    softwareName   = 'MEGAsync*'
    fileType       = 'EXE'
-#   url            = 'https://mega.nz/MEGAsyncSetup32.exe'
+   url            = 'https://mega.nz/MEGAsyncSetup32.exe'
    url64          = 'https://mega.nz/MEGAsyncSetup64.exe'
-#   checksum       = 'e2fc364dcdceec0ed246c87f04a0278df30d06b0e1fc6c06f2768c97209ebfa7'
-   checksum64     = '2d6622e81c7819f82e110740c7677b576fb6ac5a3caf4f8df03c9a941f3f4b21'
+   checksum       = '959e0f126caa4b2ac3f0728fff99a7d8d5e72c3b79bd0ca07ac7babdf69f0bca'
+   checksum64     = '00a187a43d11fc2e6bf9156e967af8913426b0b41d3f5fc972fc409b79ca4986'
    checksumType   = 'sha256'
    silentArgs     = '/S /MULTIUSER=true'
    validExitCodes = @(0)

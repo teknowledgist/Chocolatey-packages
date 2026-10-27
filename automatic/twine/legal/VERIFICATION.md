@@ -7,9 +7,9 @@ Twine can be downloaded from the GitHub site:
     https://github.com/klembot/twinejs/releases/latest
 
 Direct download:   
-- Version : 2.12.0
-- URL     : https://github.com/klembot/twinejs/releases/download/2.12.0/Twine-2.12.0-Windows.exe
-- SHA256  : 1292D6DDDC64B89583CCA6E17123215E5D7CD35C32CDEA1C14EDFFF7599E6EBC
+- Version : 2.12.1
+- URL     : https://github.com/klembot/twinejs/releases/download/2.12.1/Twine-2.12.1-Windows.exe
+- SHA256  : 0E6F772064F40AF5514DB78B0384D317491BF068291769252566C3DFDA8094F5
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

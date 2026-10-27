@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>riot</id>
-    <version>2026.9.2</version>
+    <version>2026.10</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/riot</packageSourceUrl>
     <owners>teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->

@@ -6,9 +6,9 @@ The installer can be downloaded from the official download page:
 - https://riot-optimizer.com/download/
 
 or directly:
-- Version:  2026.9.2
-- URL:      https://downloads.riot-optimizer.com/2026.9/RIOT-2026.9.2-setup.exe
-- SHA256:   3CA01D7419CEAC66BF993B3360A046BE102AB1E4C2CB959D89E0746B1B196EB9
+- Version:   2026.10
+- URL:       https://downloads.riot-optimizer.com/2026.10/RIOT-2026.10-setup.exe
+- SHA256:    9C5366ACABF4C9EE6A616BF3A6B55BECD98F34E6C5DA49E3F20A8D42BDAD023C
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

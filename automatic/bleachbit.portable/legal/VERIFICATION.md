@@ -8,16 +8,16 @@ the official website:
 - https://www.bleachbit.org/download/windows
 
 or directly:
-- Version: 6.0.4
-- URL: https://download.bleachbit.org/BleachBit-6.0.4-portable.zip
-- SHA256: 3425195570E4D191695C45537065DC007A51EFD4FD675A47F7B6DA6D686A4660
+- Version: 6.0.6
+- URL: https://download.bleachbit.org/BleachBit-6.0.6-portable.zip
+- SHA256: 285A53C01F95CF859250C1B612F27C2FF1247C5AF53EB8E8C6744B374F1ED19E
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
 1. Use powershell function 'Get-Filehash'
 2. Use chocolatey utility 'checksum.exe'
 3. View the checksums at:  
-    https://download.bleachbit.org/bleachbit-6.0.4-sha256sum.txt
+    https://download.bleachbit.org/bleachbit-6.0.6-sha256sum.txt
 
 ## License
 File 'LICENSE.txt' is obtained from:

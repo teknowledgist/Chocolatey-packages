@@ -6,11 +6,11 @@ The latest version can be downloaded from the official GitHub page:
 https://github.com/veyon/veyon/releases
 
 or directly:
-- Version    : 4.11.3
-- URL        : https://github.com/veyon/veyon/releases/download/v4.11.3/veyon-4.11.3.0-win32-setup.exe
-- CheckSum   : 6A194340C1417A40417F43C661A94B7EA07E39B1CE2AB9612BECEB33772D181B
-- URL64      : https://github.com/veyon/veyon/releases/download/v4.11.3/veyon-4.11.3.0-win64-setup.exe
-- CheckSum64 : 6ACAD4FC310E915A631477373F7649D51B74FBE8C41C5B0AB38D2FA852876B73
+- Version    : 4.11.4
+- URL        : https://github.com/veyon/veyon/releases/download/v4.11.4/veyon-addons-4.11.4.0-win32-setup.exe
+- CheckSum   : 496019DA0F0325F1513E20E3CE0B7C0A171356A4F73DA27D320703B4188E78A9
+- URL64      : https://github.com/veyon/veyon/releases/download/v4.11.4/veyon-addons-4.11.4.0-win64-setup.exe
+- CheckSum64 : 621008B05881908DE5BE4BBDE0674699A80EF1B71F2E0CF17EABD94476634F67
 
 ## Verify
 You can use one of the following methods to obtain the checksum:

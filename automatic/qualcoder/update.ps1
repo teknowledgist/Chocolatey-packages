@@ -5,11 +5,14 @@ function global:au_GetLatest {
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
    $version = $Release.Tag.trim('v.')
-   $URL = $Release.Assets | Where-Object {$_.FileName -match '\.exe'} | Select-Object -First 1 -ExpandProperty DownloadURL
+   $Target = $Release.Assets | 
+                  Where-Object {$_.FileName -match '\.exe'} | 
+                  Select-Object -First 1
 
    return @{ 
-      Version = $Version
-      URL32   = $URL
+      Version    = $Version
+      URL32      = $Target.DownloadURL
+      Checksum32 = $Target.SHA256
    }
 }
 
@@ -23,5 +26,5 @@ function global:au_SearchReplace {
    }
 }
 
-Update-Package
+Update-Package -checksumfor none
 

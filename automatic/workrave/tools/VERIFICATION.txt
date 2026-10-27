@@ -6,6 +6,6 @@ Binaries can be downloaded here:
 https://github.com/rcaelers/workrave/releases
 
 Direct download:
-Version : 1.11.4
-URL     : https://github.com/rcaelers/workrave/releases/download/v1_11_4/workrave-windows-1.11.4.exe
-SHA256  : 040BC71C659CB389A7B39573FBA8B2B586C9009A200CF049EF43C67885726636
+Version : 1.11.5
+URL     : https://github.com/rcaelers/workrave/releases/download/v1_11_5/workrave-windows-1.11.5.exe
+SHA256  : B254EA3C43E337F1296290B7DA273ED29B1A7E381F53A12F5397B0635776AA9C
