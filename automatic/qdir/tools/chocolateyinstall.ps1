@@ -75,7 +75,7 @@ $InstallArgs = @{
    validExitCodes= @(0,1)
 }
 Install-ChocolateyInstallPackage @InstallArgs
-Remove-Item $UnZipArgs.Destination -Recurse -Force
+Remove-Item $UnZipArgs.Destination -Recurse -Force -ea silentlycontinue
 
 $ZipFiles | ForEach-Object {Remove-Item $_ -Force}
 
