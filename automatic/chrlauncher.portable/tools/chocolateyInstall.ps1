@@ -2,14 +2,23 @@
 
 $toolsDir = "$(Split-Path -Parent $MyInvocation.MyCommand.Definition)"
 $FolderOfPackage = Split-Path -Parent $toolsDir
-$BitLevel = Get-ProcessorBits
+
+if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {
+   Write-Verbose 'ARM processor found.  Using ARM64 build.'
+   $ArchType = 'ARM64'
+} else {
+   $ArchType = Get-OSArchitectureWidth
+   If ($ArchType -eq '32') {
+      Throw "CHRLauncher no longer has a 32-bit option."
+   }
+}
 
 # Capture the newest, previous version's settings
 $INIs = Get-ChildItem $FolderOfPackage -Filter '*.ini' -Recurse | 
-               Where-Object {$_.Directory -match "\\$BitLevel\\"}
+               Where-Object {$_.Directory -match "\\$ArchType\\"}
 if ($INIs) {
    $NewestVersion = $INIs | ForEach-Object {
-                     [version]($_.directory.tostring().trim("$BitLevel\") -replace '.*?([0-9]\.[0-9.]+).*','$1')} | 
+                     [version]($_.directory.tostring().trim("$ArchType\") -replace '.*?([0-9]\.[0-9.]+).*','$1')} | 
                      Sort-Object | Select-Object -Last 1
    $oldINI = Get-Content -Path ($INIs | 
                                  Where-Object {$_.fullname -match $NewestVersion.tostring()} |
@@ -26,14 +35,14 @@ if ($Previous) {
 
 $InstallArgs = @{
    packageName  = $env:ChocolateyPackageName
-   FileFullPath = (Get-ChildItem $ToolsDir -Filter "*.zip").FullName
+   FileFullPath = (Get-ChildItem $ToolsDir -Filter "*.7z").FullName
    Destination  = (Join-path $FolderOfPackage  "v$env:ChocolateyPackageVersion")
+   SpecificFolder = "chrlauncher\$ArchType"
 }
 
 Get-ChocolateyUnzip @InstallArgs
 
-$target   = (Get-ChildItem $InstallArgs.Destination -filter "*.exe" -Recurse |
-               Where-Object {$_.Directory -match "$BitLevel`$"}).FullName
+$target   = (Get-ChildItem $InstallArgs.Destination -filter "*.exe" -Recurse).FullName
 $shortcut = Join-Path ([System.Environment]::GetFolderPath('Desktop')) 'Chromium Launcher.lnk'
 
 Install-ChocolateyShortcut -ShortcutFilePath $shortcut -TargetPath $target
@@ -44,8 +53,8 @@ $UserArguments = Get-PackageParameters
 if ($UserArguments['Default']) {
    $msgtext = 'You want chrlauncher as the system default browser.'
    Write-Host $msgtext -ForegroundColor Cyan
-   $Bat = Join-Path $InstallArgs.unzipLocation "$BitLevel\SetDefaultBrowser.bat"
-   $NoPauseBat = Join-Path (Split-Path $Bat) 'NoPauseSetDefaultBrowser.bat'
+   $Bat = (Get-ChildItem (Split-Path $target) -filter "SetDefaultBrowser.bat" -Recurse).FullName
+   $NoPauseBat = $Bat -replace '\\Set','\NoPauseSet'
    (Get-Content $Bat) -ne 'pause' | Out-File $NoPauseBat -Encoding ascii -Force
    & $NoPauseBat
 }
