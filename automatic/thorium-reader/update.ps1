@@ -6,7 +6,7 @@ function global:au_GetLatest {
 
    $version = $Release.Tag.trim('v.')
    if ($version -match '^[0-9.]+$') {
-      $Asset = $Release.Assets | Where-Object { $_.FileName -match "setup\.$version\.exe$" } | Select-Object -First 1 
+      $Asset = $Release.Assets | Where-Object { $_.FileName -match "x64\.exe$" } | Select-Object -First 1 
       $ARM64Asset = $Release.Assets | Where-Object { $_.FileName -match 'arm64\.exe$' } | Select-Object -First 1 
    } else {
       Return @{ $version = '1.0.0' }
