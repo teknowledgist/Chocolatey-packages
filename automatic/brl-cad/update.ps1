@@ -1,13 +1,11 @@
 import-module chocolatey-au
 
-$FilesPage = 'https://sourceforge.net/projects/brlcad/files/'
-
 function global:au_GetLatest {
-   $Repo = 'https://github.com/BRL-CAD/brlcad'
-   $Release = Get-LatestReleaseOnGitHub -URL $Repo
+   $DownURL = 'https://brlcad.org/download/'
+   $DownPage = Invoke-WebRequest $DownURL -UseBasicParsing
 
-   $version = $Release.Tag.trim('rel-').replace('-','.')
-   $URL64 = $Release.Assets | Where-Object {$_.FileName -match '\.(msi|exe)'} | Select-Object -Last 1 -ExpandProperty DownloadURL
+   $URL64 = $DownPage.links | Where-Object {$_.href -match '\.(msi|exe)'} | Select-Object -Last 1 -ExpandProperty href
+   $version = $URL64.split('_') | Where-Object {$_ -match '^[0-9.]+$'}
 
    return @{ 
       Version = $version

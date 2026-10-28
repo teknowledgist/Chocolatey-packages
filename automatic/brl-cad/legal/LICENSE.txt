@@ -1,8 +1,8 @@
 ﻿The Copying Statement, LPGL text, and BSD license text come from (respectively):
 
-- https://github.com/BRL-CAD/brlcad/blob/main/COPYING
-- https://github.com/BRL-CAD/brlcad/blob/main/doc/legal/lgpl.txt
-- https://github.com/BRL-CAD/brlcad/blob/main/doc/legal/bsd.txt
+- https://git.brlcad.org/BRL-CAD/brlcad/src/branch/main/COPYING
+- https://git.brlcad.org/BRL-CAD/brlcad/blob/main/doc/legal/lgpl.txt
+- https://git.brlcad.org/BRL-CAD/brlcad/blob/main/doc/legal/bsd.txt
 
 
 ================================
@@ -35,7 +35,7 @@ License for more details.
 You should have received a copy of the GNU Lesser General Public
 License along with this file.  If you did not, please contact one of
 the BRL-CAD project administrators listed at the Github project
-site https://github.com/BRL-CAD/brlcad/ or listed in the AUTHORS file
+site https://git.brlcad.org/BRL-CAD/brlcad/ or listed in the AUTHORS file
 included as part of the distribution.
 
 Overview

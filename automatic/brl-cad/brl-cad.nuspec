@@ -15,10 +15,10 @@
     <copyright>Copyright (c) 1984-2023 United States Government as represented by the U.S. Army Research Laboratory.</copyright>
     <licenseUrl>https://github.com/BRL-CAD/brlcad/blob/main/COPYING</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
-    <projectSourceUrl>https://github.com/BRL-CAD/brlcad</projectSourceUrl>
+    <projectSourceUrl>https://git.brlcad.org/BRL-CAD/brlcad</projectSourceUrl>
     <docsUrl>https://brlcad.org/wiki/</docsUrl>
     <mailingListUrl>https://brlcad.org/wiki/Forums</mailingListUrl>
-    <bugTrackerUrl>https://github.com/BRL-CAD/brlcad/issues</bugTrackerUrl>
+    <bugTrackerUrl>https://git.brlcad.org/BRL-CAD/brlcad/issues</bugTrackerUrl>
     <tags>brl-cad cad solid modeling raytrace dwg dwf FOSS embedded</tags>
     <summary>BRL-CAD is a powerful cross-platform open source solid modeling system.</summary>
     <description>BRL-CAD is a powerful cross-platform open source combinatorial solid modeling system that includes an interactive 3D solid geometry editor, a network-distributed symmetric multiprocessing (SMP) high-performance ray-tracer with support for rendering and geometric analysis, image and signal-processing tools, a system performance analysis benchmark suite, a flexible geometry scripting interface, and a high-performance geometric representation and analysis library.
@@ -31,7 +31,7 @@ BRL-CAD supports a great variety of geometric representations including an exten
 
 Actively developed since 1979, BRL-CAD is a collection of more than 400 tools, utilities, and applications comprising more than a million lines of source code.  It's actively developed for many operating systems including BSD, IRIX, Linux, Solaris, Mac OS X, Windows, and more.
     </description>
-    <releaseNotes>https://github.com/BRL-CAD/brlcad/releases</releaseNotes>
+    <releaseNotes>https://brlcad.org/news/#releases</releaseNotes>
   </metadata>
   <files>
     <file src="tools\**" target="tools" />
