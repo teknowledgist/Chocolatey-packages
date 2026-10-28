@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>studio</id>
-    <version>2.26.6.1</version>
+    <version>2.26.10.1</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/studio</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -29,6 +29,9 @@
 * **Photorealistic rederer** -- When your designs need that icing on the cake, the photorealistic renderer will export breathtaking, exceptional quality images for your creations. With just a few clicks, your designs never looked more vivid.
 * **Integrated instructions maker** -- Creating building instructions just got easier! Studio 2.0 offers an in-app instructions maker that helps you create custom instructions for your designs. From editing steps to designing pages, you can do it all.
 * **Integrated with BrickLink** -- Studio 2.0 supports direct integration with BrickLink’s catalog, marketplace, and gallery. You can check parts information, order your designs, and browse others’ designs to get inspired.
+
+### 64-bit only
+There is no public announcement, but Studio v2.26.6 appears to be the final 32-bit installer. 
 
     </description>
     <releaseNotes>[Bottom of this page](https://studio.bricklink.com/v2/build/studio.page)</releaseNotes>

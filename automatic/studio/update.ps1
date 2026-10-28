@@ -11,12 +11,12 @@ function global:au_GetLatest {
 
    $VersionString = $Version.ToString() -replace '(.*)\.(.*)','$1_$2'
    
-   $url32 = "https://studio.download.bricklink.info/Studio2.0/Archive/$versionString/Studio+2.0_32.exe"
+#   $url32 = "https://studio.download.bricklink.info/Studio2.0/Archive/$versionString/Studio+2.0_32.exe"
    $url64 = "https://studio.download.bricklink.info/Studio2.0/Archive/$versionString/Studio+2.0.exe"
 
    return @{ 
       Version = $Version.ToString()
-      URL32   = $url32
+#      URL32   = $url32
       URL64   = $url64
    }
 }
@@ -25,12 +25,12 @@ function global:au_GetLatest {
 function global:au_SearchReplace {
     @{
        "tools\chocolateyInstall.ps1" = @{
-          "(^\s*Url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
-          "(^\s*Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
+#          "(^\s*Url\s*=\s*)('.*')"        = "`$1'$($Latest.URL32)'"
+#          "(^\s*Checksum\s*=\s*)('.*')"   = "`$1'$($Latest.Checksum32)'"
           "(^\s*Url64bit\s*=\s*)('.*')"   = "`$1'$($Latest.URL64)'"
           "(^\s*Checksum64\s*=\s*)('.*')" = "`$1'$($Latest.Checksum64)'"
        }
     }
 }
 
-Update-Package
+Update-Package -ChecksumFor 64
