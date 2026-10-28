@@ -4,7 +4,7 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>qcad</id>
-    <version>3.33.1</version>
+    <version>27.0.0</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/qcad</packageSourceUrl>
     <owners>Teknowledgist,petervbeck</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
@@ -44,6 +44,9 @@ Main Features:
 
 [A complete list of features is here](http://www.qcad.org/en/qcad-documentation/qcad-features)
     
+#### 64-bit only
+It appears that v3.33.1 is the last 32-bit build of QCAD.
+
 #### Trial-ware
 This package is for the open source QCAD, *bundled with a free trial of QCAD Professional*. The trial runs 15min at a time and can then be restarted. You can order QCAD Professional from the [Online Shop](https://www.qcad.org/online-shop). Alternatively, you can choose to remove the trial and use the reduced free QCAD Community Edition instead.
 
