@@ -2,9 +2,9 @@
 
 $packageName = 'qcad'
 #$url32 = 'https://www.qcad.org/archives/qcad/qcad-27.0.0-trial-win32-installer.msi'
-$url64 = 'https://www.qcad.org/archives/qcad/qcad-27.0.0-trial-win64-qt6-installer.msi'
+$url64 = 'https://www.qcad.org/archives/qcad/qcad-27.0.3-trial-win64-qt6-installer.msi'
 #$checkSum32 = ''
-$checkSum64 = '502d9988df1787030d1d426a8f1b7c280d4463008475559e8ea4daa7dd3e4530'
+$checkSum64 = 'f70f6d41a6e360a1ee93a0998d494ee445273e48da816cbc360a14397dd8019d'
 
 $InstallArgs = @{
    packageName = $env:ChocolateyPackageName
