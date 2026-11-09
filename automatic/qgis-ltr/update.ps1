@@ -6,7 +6,7 @@ function global:au_GetLatest {
 
    $LTRQGIS = $Meta | Where-Object { $_.channel -eq 'ltr' }
 
-   $Version = $LTRQGIS.version -replace '-1$', ''
+   $Version = $LTRQGIS.version -replace '-[123]$', ''
    $SumURL = $LTRQGIS.URI -replace '\.msi$', '.sha256sum'
    
    $SumFile = "$env:temp\QGIS$Version-SHA256.txt"
