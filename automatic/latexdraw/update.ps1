@@ -10,7 +10,7 @@ function global:au_GetLatest {
    
    $version = $Link.split('/')[-2]
 
-   $URL = "https://sourceforge.net/projects/latexdraw/files/latexdraw/$version/latexdraw-$version-win-binaries.zip"
+   $URL = "https://sourceforge.net/projects/latexdraw/files/latexdraw/$version/latexdraw-$version.exe"
 
    return @{ 
             Version  = $version

@@ -7,5 +7,5 @@ of the homepage:  http://latexdraw.sourceforge.net/
 
 Direct Download:
 Version: 4.0.3
-URL: https://sourceforge.net/projects/latexdraw/files/latexdraw/4.0.3/latexdraw-4.0.3-win-binaries.zip
-CheckSum: 836CE47C2FA540BD4F670859E2E1053BC13E9F4F335852DA199A8086927D8F23
+URL: https://sourceforge.net/projects/latexdraw/files/latexdraw/4.0.3/latexdraw-4.0.3.exe
+CheckSum: 6b8f254f535b03d41c13ef367ff1eb33691dcfd512b32e0f1346a11cfcf35234

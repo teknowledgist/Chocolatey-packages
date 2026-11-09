@@ -4,14 +4,14 @@
   <metadata>
     <!-- == PACKAGE SPECIFIC SECTION == -->
     <id>latexdraw</id>
-    <version>4.0.3</version>
+    <version>4.0.3.20261029</version>
     <packageSourceUrl>https://github.com/teknowledgist/Chocolatey-packages/tree/master/automatic/latexdraw</packageSourceUrl>
     <owners>Teknowledgist</owners>
     <!-- == SOFTWARE SPECIFIC SECTION == -->
     <title>LaTeXDraw</title>
     <authors>arnobl</authors>
     <projectUrl>http://latexdraw.sourceforge.net/</projectUrl>
-    <iconUrl>https://cdn.jsdelivr.net/gh/teknowledgist/Chocolatey-packages@99c949e4cda77f6ece410d0c4f2404e4da863d41/Icons/latexdraw_icon.png</iconUrl>
+    <iconUrl>https://cdn.jsdelivr.net/gh/latexdraw/latexdraw@3793025436e8a3c6ec9a5160dabf9ba1a5736543/src/main/resources/res/LaTeXDrawIcon.png</iconUrl>
     <copyright>Copyright (c) 2005-2018 Arnaud BLOUIN</copyright>
     <licenseUrl>https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html</licenseUrl>
     <requireLicenseAcceptance>true</requireLicenseAcceptance>
@@ -38,7 +38,6 @@ The PSTricks code corresponding to the current drawing is automatically generate
     </description>
     <releaseNotes>http://latexdraw.sourceforge.net/index.html</releaseNotes>
     <dependencies>
-      <dependency id="jre8" version="8.0" />
     </dependencies>
   </metadata>
   <files>
