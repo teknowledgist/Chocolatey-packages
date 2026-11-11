@@ -4,9 +4,12 @@ function global:au_GetLatest {
    $Repo = 'https://github.com/veyon/veyon'
    $Release = Get-LatestReleaseOnGitHub -URL $Repo
 
-   $version = $Release.Tag.trim('v.')
-   $URL32 = $Release.Assets | Where-Object {$_.FileName -match 'win32-setup\.exe'} | Select-Object -Last 1 -ExpandProperty DownloadURL
-   $URL64 = $Release.Assets | Where-Object {$_.FileName -match 'win64-setup\.exe'} | Select-Object -Last 1 -ExpandProperty DownloadURL
+   $URL32 = $Release.Assets | Where-Object {$_.FileName -match 'win32-setup\.exe' -and $_.FileName -notmatch 'addons'} | 
+                              Sort-Object 'CreationDate' | Select-Object -Last 1 -ExpandProperty DownloadURL
+   $URL64 = $Release.Assets | Where-Object {$_.FileName -match 'win64-setup\.exe' -and $_.FileName -notmatch 'addons'} | 
+                              Sort-Object 'CreationDate' | Select-Object -Last 1 -ExpandProperty DownloadURL
+
+   $Version = $URL64.split('-') | Where-Object {$_ -match '^[0-9.]+$'}
 
    return @{ 
       Version = $version
