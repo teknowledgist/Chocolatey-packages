@@ -10,9 +10,9 @@ restricts lettered versions to beta status.  This package converts the
 letter into a numbered version as needed.
 
 or directly:
-- Version: 11.50.1
-- URL:     https://pubfiles.petges.lu/ac-11_50a.exe
-- SHA256:  4C2B6CD09E6CACC4733A45A9D2AE41D7B1342C44AF03374BFF7EC8E97C393E5C
+- Version: 11.51
+- URL:     https://pubfiles.petges.lu/ac-11_51.exe
+- SHA256:  3DDF679B385D281BB4C169CEB9B0AD48DD62871334E8D7B9AD5D1B9BD67DE2D5
 
 ## Verify
 You can use one of the following methods to obtain the checksum:
