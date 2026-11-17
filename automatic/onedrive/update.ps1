@@ -3,11 +3,6 @@ Import-Module Chocolatey-AU
 
 function global:au_GetLatest {
    $Meta = Get-EvergreenApp microsoftonedrive | 
-            Where-Object {$_.ring -eq 'production' -and 
-                           $_.architecture -eq 'x86' -and
-                           $_.throttle -eq '100'
-                         }
-   $Meta = Get-EvergreenApp microsoftonedrive | 
       Where-Object { $_.ring -eq 'production' -and 
          $_.throttle -eq '100'
       }
