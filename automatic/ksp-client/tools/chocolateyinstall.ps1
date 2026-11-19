@@ -36,13 +36,12 @@ $InstallArgs = @{
    validExitCodes= @(0)
 }
 
-# Check for ARM64 processor
-$Features = Get-ProcessorFeatures
-if ($Features.'ARM_V8_INSTRUCTIONS') {
-   Write-Verbose 'ARM processor found.  Downloading ARM64 build.'
-   $ARM64Checksum = '840237B4BE9C2C68D25528B8C4047955773E722C7B48B16F98CC5DD7F446190B'
-   $packageArgs.url64 = $ARM64URL
-   $packageArgs.checksum64 = $ARM64Checksum
+# Check for ARM64 processor. 
+if ((Get-ProcessorFeatures).'ARM_V8_INSTRUCTIONS') {
+   Write-Verbose 'ARM processor found.  Installing ARM64 build.'
+   # Chocolatey uses the x86 installer for ARM64 installs. See: https://github.com/chocolatey/choco/issues/1800
+   $PackageArgs.url = $ARM64URL
+   $PackageArgs.Checksum = $ARM64Checksum
 }
 
 Install-ChocolateyPackage @InstallArgs
